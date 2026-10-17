@@ -25,7 +25,8 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon-dark.svg', media: '(prefers-color-scheme: dark)' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
-    ['meta', { property: 'og:image', content: '/og.png' }]
+    ['meta', { property: 'og:image', content: '/og.png' }],
+    ['script', { defer: '', src: '/s/a.js', 'data-website-id': '6c2386ea-c82d-468a-bfa7-9651eea59ab9', 'data-host-url': '/s' }]
   ],
   themeConfig: {
     nav: [
