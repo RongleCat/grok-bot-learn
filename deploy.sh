@@ -2,9 +2,11 @@
 set -euo pipefail
 set -a
 source "$HOME/.agents/secrets/cloudflare.env"
+[ -f "$HOME/.agents/secrets/seo.env" ] && source "$HOME/.agents/secrets/seo.env"
 set +a
 PROJECT="${PROJECT:-tiezhu-grokbot}"
 DOMAIN="${DOMAIN:-bot.tiezhu.si}"
+python3 "$(dirname "$0")/tools/info-webp.py"
 cd "$(dirname "$0")/site"
 npm run build
 if ! npx -y wrangler@3 pages project list 2>/dev/null | grep -q "│ $PROJECT "; then

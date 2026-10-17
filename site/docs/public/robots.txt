@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /s/
+
+Sitemap: https://bot.tiezhu.si/sitemap.xml
