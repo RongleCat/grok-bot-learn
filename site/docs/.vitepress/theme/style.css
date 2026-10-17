@@ -380,3 +380,32 @@
 .vp-doc blockquote a:hover {
   text-decoration-color: #2563eb;
 }
+.tz-join {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 16px 0;
+}
+.tz-join-text {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+.tz-join-text p {
+  margin: 8px 0;
+}
+.vp-doc .tz-join-qr {
+  width: 168px;
+  height: 168px;
+  flex: none;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+}
+@media (max-width: 560px) {
+  .tz-join {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

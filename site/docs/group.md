@@ -26,6 +26,15 @@ next: false
 
 ## 怎么加入
 
+<div class="tz-join">
+<div class="tz-join-text">
+
 加我个人微信 `AI_Tiezhu`。
 
 **微信加上后，我拉你进群**。
+
+也可以直接扫码加我。
+
+</div>
+<img class="tz-join-qr" src="/qr-wechat.png" width="168" height="168" alt="铁柱的个人微信二维码" />
+</div>
