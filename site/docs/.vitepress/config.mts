@@ -17,7 +17,7 @@ const sidebar = [
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: 'Grok Bot 学习站',
+  title: 'Grok Bot 新手指南',
   description: 'Grok Bot 从 0 到 1 中文教程',
   appearance: false,
   head: [

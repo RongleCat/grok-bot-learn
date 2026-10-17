@@ -1,7 +1,7 @@
 ---
 layout: page
 sidebar: false
-title: Grok Bot 学习站
+title: Grok Bot 新手指南
 ---
 
 <Home />
