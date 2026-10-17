@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>好请求的五要素</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#fbf6ec;color:#20211e;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.page{width:1200px;height:760px;padding:40px 52px 38px;position:relative}
+.head{height:128px;border:1px solid #ded7ca;border-radius:26px;background:#fffdf8;display:flex;align-items:center;padding:18px 36px;position:relative}
+.head h1{font-size:38px;line-height:1;margin:0;font-weight:760;letter-spacing:1px}
+.bot{position:absolute;width:108px;height:108px;object-fit:contain;right:42px;top:10px}
+.layout{margin-top:22px;height:532px;display:grid;grid-template-columns:260px 1fr;gap:22px}
+.rail{border:1px solid #ded7ca;border-radius:24px;background:#fffdf8;padding:27px 24px}
+.rail h2{font-size:21px;margin:0 0 26px;font-weight:730}
+.rail ol{padding:0;margin:0;list-style:none;display:grid;gap:15px}
+.rail li{height:64px;border-radius:16px;background:#f7efe1;display:flex;align-items:center;padding:0 13px;font-size:16px;font-weight:650;line-height:1.25}
+.num{width:28px;height:28px;margin-right:11px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#e97543;color:#fff;font-size:15px;font-weight:750;flex:0 0 auto}
+.cards{display:grid;grid-template-rows:repeat(5,1fr);gap:10px}
+.card{border:1px solid #ded7ca;border-radius:22px;background:#fffdf8;display:grid;grid-template-columns:216px 1fr;align-items:center;padding:14px 22px}
+.tag{font-size:21px;font-weight:760;color:#16766e;line-height:1.25;padding-right:18px;border-right:1px solid #ded7ca}
+.detail{font-size:17px;line-height:1.55;margin-left:22px;color:#383933}
+.detail strong{font-weight:760;color:#20211e}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head">
+<div>
+<h1>好请求的五要素</h1>
+</div>
+<img class="bot" src="bots/capsule-vert.png" alt="">
+</header>
+<section class="layout" aria-label="五要素清单">
+<aside class="rail">
+<h2>明确目标与工具范围</h2>
+<ol>
+<li><span class="num">1</span>动作具体单一</li>
+<li><span class="num">2</span>限定数据来源</li>
+<li><span class="num">3</span>划清审批红线</li>
+<li><span class="num">4</span>锁定交付形态</li>
+<li><span class="num">5</span>定好报错规则与事实边界</li>
+</ol>
+</aside>
+<div class="cards">
+<article class="card"><div class="tag">动作具体单一</div><div class="detail">写明「抓取比对」或「起草外信」，别用「研究一下」，路径越短越省步数。</div></article>
+<article class="card"><div class="tag">限定数据来源</div><div class="detail">指定 Notion 页面、Slack #sales-leads 频道或网址，防全网乱搜。</div></article>
+<article class="card"><div class="tag">划清审批红线</div><div class="detail">读取比对自动跑；<strong>涉及发外信、在线支付或删改数据，必须暂停等审批</strong>。</div></article>
+<article class="card"><div class="tag">锁定交付形态</div><div class="detail"><strong>拒收口头汇报</strong>，要求在 /workspace/leads/ 生成带链接的 Markdown 报告或 CSV 表格。</div></article>
+<article class="card"><div class="tag">定好报错规则<br>与事实边界</div><div class="detail">区分推测与客观事实；遇到登录失效跳过并记录，<strong>禁止死循环重试</strong>。</div></article>
+</div>
+</section>
+</main>
+</body>
+</html>

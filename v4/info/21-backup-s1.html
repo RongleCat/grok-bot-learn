@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>更新、恢复与重置</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#f8f2e8;color:#20201d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.page{width:1200px;height:760px;padding:36px 48px;display:flex;flex-direction:column;gap:18px}
+.hero{height:118px;display:flex;align-items:center;justify-content:space-between;padding:0 8px 0 12px}
+h1{margin:0;font-size:40px;line-height:1.18;letter-spacing:-1.5px;font-weight:760}
+.bot{width:108px;height:108px;object-fit:contain;display:block}
+.lead{height:78px;border:1px solid #d9cdbd;border-radius:22px;background:#fffdf9;padding:17px 22px;display:flex;align-items:center;gap:16px}
+.lead-mark{width:10px;height:38px;border-radius:99px;background:#df7c42;flex:none}
+.lead p{margin:0;font-size:17px;line-height:1.55;font-weight:600}
+.cards{height:279px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{border:1px solid #d9cdbd;border-radius:22px;background:#fffdf9;padding:20px 21px 18px;display:flex;flex-direction:column}
+.card.update{border-top:5px solid #df7c42}
+.card.recover{border-top:5px solid #5f8f84}
+.card.reset{border-top:5px solid #df7c42}
+.card h2{margin:0 0 12px;font-size:25px;line-height:1.15;letter-spacing:-.4px}
+.mechanism{margin:0 0 14px;font-size:16px;line-height:1.48;min-height:48px;color:#4b4943}
+.rule{height:1px;background:#e6ddd1;margin:0 0 12px}
+.pair{display:grid;gap:10px}
+.line{display:grid;grid-template-columns:62px 1fr;gap:8px;align-items:start}
+.key{font-size:15px;line-height:1.5;color:#6a655d;font-weight:700}
+.value{font-size:15px;line-height:1.5;font-weight:600}
+.notice{height:157px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.panel{border:1px solid #d9cdbd;border-radius:22px;background:#fffdf9;padding:17px 21px}
+.panel h3{font-size:17px;line-height:1.2;margin:0 0 10px;color:#5f8f84}
+.panel.warn h3{color:#c76030}
+.panel p{margin:0;font-size:15px;line-height:1.5;font-weight:600}
+.panel p+p{margin-top:7px}
+.strong{font-weight:800}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="hero">
+    <h1>更新、恢复与重置</h1>
+    <img class="bot" src="bots/galet-encre.png" alt="">
+  </header>
+  <section class="lead">
+    <span class="lead-mark"></span>
+    <p>同一账号下所有 Bot 共用同一台虚拟机，共享 /workspace 目录与系统进程。</p>
+  </section>
+  <section class="cards" aria-label="三种操作的区别">
+    <article class="card update">
+      <h2>更新（Update）</h2>
+      <p class="mechanism">升级环境镜像。分软件更新和计算机更新两类</p>
+      <div class="rule"></div>
+      <div class="pair">
+        <div class="line"><span class="key">保留</span><span class="value">软件更新保留全部；计算机更新保留机器人、文件与登录信息</span></div>
+        <div class="line"><span class="key">丢失</span><span class="value">软件更新无丢失；计算机更新移除全局应用和软件包</span></div>
+      </div>
+    </article>
+    <article class="card recover">
+      <h2>Recover</h2>
+      <p class="mechanism">基于已存数据在最新镜像建新机，先尝试连接旧机存数据</p>
+      <div class="rule"></div>
+      <div class="pair">
+        <div class="line"><span class="key">保留</span><span class="value">已保存的机器人、文件与登录信息</span></div>
+        <div class="line"><span class="key">丢失</span><span class="value">全局应用和软件包；旧机连不上时，未同步的修改会丢</span></div>
+      </div>
+    </article>
+    <article class="card reset">
+      <h2>Reset</h2>
+      <p class="mechanism">直接按最近保存的数据建新机，中断正在运行的工作</p>
+      <div class="rule"></div>
+      <div class="pair">
+        <div class="line"><span class="key">保留</span><span class="value">已保存的机器人、文件与登录信息</span></div>
+        <div class="line"><span class="key">丢失</span><span class="value">全局应用和软件包；未同步的修改会丢</span></div>
+      </div>
+    </article>
+  </section>
+  <section class="notice">
+    <article class="panel">
+      <h3>对话记录存在云端</h3>
+      <p>对话记录存在云端，机器重置或误删文件都不影响。</p>
+      <p>全局安装的应用包、node_modules 与 Python 虚拟环境不会被官方保存。</p>
+    </article>
+    <article class="panel warn">
+      <h3>虚拟机卡死或响应异常时</h3>
+      <p>属于网络波动，稍等后点 Retry。<span class="strong">重连期间文件不丢，严禁在这个阶段点 Reset。</span></p>
+      <p>重启客户端。检查更新。尝试恢复。前四步无效再点 Reset。</p>
+    </article>
+  </section>
+</main>
+</body>
+</html>

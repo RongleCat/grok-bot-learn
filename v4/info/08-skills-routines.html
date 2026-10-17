@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技能与例程：把一次成功变成每天自动跑</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { width: 1200px; height: 760px; margin: 0; overflow: hidden; }
+  body { background: #f8f7f3; color: #20211e; font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; }
+  .page { width: 1200px; height: 760px; padding: 48px 64px 40px; }
+  .top { height: 108px; display: flex; align-items: flex-start; justify-content: space-between; }
+  h1 { margin: 5px 0 0; font-size: 31px; line-height: 1.25; letter-spacing: -0.7px; font-weight: 750; }
+  .lead { margin: 14px 0 0; font-size: 17px; line-height: 1.5; color: #595b54; }
+  .bot { width: 108px; height: 108px; object-fit: contain; margin: -10px 10px 0 0; }
+  .flow { display: grid; grid-template-columns: 472px 72px 528px; align-items: stretch; height: 530px; }
+  .card { border: 1px solid #deded8; border-radius: 25px; background: #fffefa; overflow: hidden; }
+  .skill-head, .routine-head { height: 109px; padding: 23px 29px; }
+  .skill-head { background: #edf3ef; border-bottom: 1px solid #d5e1d8; }
+  .routine-head { background: #f4eee4; border-bottom: 1px solid #e3d8c8; }
+  .kicker { font-size: 15px; font-weight: 700; letter-spacing: .8px; color: #5b7060; }
+  .routine-head .kicker { color: #866941; }
+  h2 { margin: 7px 0 0; font-size: 25px; line-height: 1; letter-spacing: -.4px; }
+  .skill-body { padding: 20px 25px 22px; }
+  .label { font-size: 16px; font-weight: 700; color: #4c514b; margin: 0 0 12px 2px; }
+  .blocks { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .block { min-height: 91px; padding: 14px 16px; border: 1px solid #dce6de; border-radius: 17px; background: #fbfdfb; }
+  .block b { display: block; font-size: 17px; margin-bottom: 7px; }
+  .block span { display: block; font-size: 15px; color: #5c625b; line-height: 1.38; }
+  .boundary { margin-top: 13px; padding: 12px 17px; border-radius: 17px; border: 1px solid #cfded2; background: #f0f7f1; font-size: 16px; line-height: 1.45; }
+  .boundary b { display: block; font-size: 17px; margin-bottom: 2px; }
+  .arrow { position: relative; display: flex; justify-content: center; align-items: center; }
+  .arrow:before { content: ""; width: 42px; height: 2px; background: #ac8050; }
+  .arrow:after { content: ""; position: absolute; margin-left: 37px; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 11px solid #ac8050; }
+  .routine-body { padding: 20px 24px 22px; }
+  .trigger-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .trigger { padding: 15px 16px; min-height: 93px; border: 1px solid #e4d9c8; border-radius: 17px; background: #fffdf9; }
+  .trigger b { display: block; font-size: 17px; margin-bottom: 8px; }
+  .trigger span { font-size: 15px; color: #635e55; line-height: 1.35; }
+  .run { margin-top: 14px; padding: 16px 19px; border: 1px solid #e4d9c8; border-radius: 17px; background: #fffdf9; display: flex; align-items: center; gap: 15px; }
+  .run strong { font-size: 17px; white-space: nowrap; }
+  .run p { margin: 0; font-size: 15px; line-height: 1.38; color: #625d54; }
+  .result { margin-top: 14px; padding: 15px 18px; border-radius: 17px; background: #f4eee4; font-size: 16px; line-height: 1.43; }
+  .result b { font-size: 17px; }
+  .bottom { height: 34px; display: flex; align-items: flex-end; justify-content: center; color: #65675f; font-size: 16px; }
+  .bottom span { padding: 0 14px; }
+  .bottom i { width: 6px; height: 6px; border-radius: 50%; background: #ac8050; display: inline-block; }
+  .bottom strong { color: #20211e; font-weight: 700; }
+</style>
+</head>
+<body>
+  <main class="page">
+    <header class="top">
+      <div>
+        <h1>技能与例程：把一次成功变成每天自动跑</h1>
+        <p class="lead">技能定义“怎么做”，例程定义“什么时候做”。</p>
+      </div>
+      <img class="bot" src="bots/squircle-brun.png" alt="">
+    </header>
+    <section class="flow" aria-label="技能与例程的关系">
+      <article class="card">
+        <div class="skill-head">
+          <div class="kicker">可复用操作指令</div>
+          <h2>技能 Skill：怎么做</h2>
+        </div>
+        <div class="skill-body">
+          <p class="label">固定标准作业程序</p>
+          <div class="blocks">
+            <div class="block"><b>输入来源</b><span>插件、API、文件或数据视图</span></div>
+            <div class="block"><b>分析步骤</b><span>完成特定工作的操作</span></div>
+            <div class="block"><b>决策规则</b><span>数据缺失立即中断并报错</span></div>
+            <div class="block"><b>交付格式</b><span>字段列表、Markdown 表格或落盘路径</span></div>
+          </div>
+          <div class="boundary"><b>人工批准边界</b>未经人工明确批准，严禁直接调用接口。</div>
+        </div>
+      </article>
+      <div class="arrow" aria-hidden="true"></div>
+      <article class="card">
+        <div class="routine-head">
+          <div class="kicker">工作流触发器</div>
+          <h2>例程 Routine：什么时候做</h2>
+        </div>
+        <div class="routine-body">
+          <div class="trigger-row">
+            <div class="trigger"><b>计划调度</b><span>按计划时间推进</span></div>
+            <div class="trigger"><b>事件驱动</b><span>Webhook 或 Slack 触发器被动唤醒</span></div>
+          </div>
+          <div class="run"><strong>挂载在具体 Bot 名下</strong><p>运行在独立的持久化云端 Linux 计算机上。</p></div>
+          <div class="result"><b>稳定交付结果</b><br>最终的执行成败和产出内容，回到 Bot 的聊天窗口或工作区落盘文件中查看。</div>
+        </div>
+      </article>
+    </section>
+    <div class="bottom"><strong>清晰的输入</strong><span><i></i></span><strong>明确的输出</strong><span><i></i></span><strong>边界和拦截规则</strong></div>
+  </main>
+</body>
+</html>

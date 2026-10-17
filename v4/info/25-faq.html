@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>常见问题与排错</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#faf8f4;color:#20201e;font-family:"PingFang SC","Noto Sans CJK SC",system-ui,sans-serif}
+.page{width:1200px;height:760px;padding:46px 60px 42px;position:relative}
+.head{height:96px;display:flex;align-items:flex-start;justify-content:space-between;border-bottom:1px solid #dedad2}
+h1{font-size:38px;line-height:1.15;letter-spacing:-1.5px;margin:3px 0 0;font-weight:750}
+.bot{width:108px;height:108px;object-fit:contain;margin-top:-22px;margin-right:5px}
+.intro{position:absolute;top:118px;left:60px;font-size:17px;color:#66625b;letter-spacing:.2px}
+.flow{position:absolute;top:174px;left:60px;width:1080px;height:510px;display:grid;grid-template-columns:247px 48px 247px 48px 1fr;align-items:center}
+.card{background:#fffefd;border:1px solid #dedad2;border-radius:24px;padding:22px 22px;position:relative}
+.start{height:164px;border-color:#bdb5a8;padding-top:30px}
+.step{height:220px;background:#f1ece3;border-color:#d8cfc1}
+.answer{height:468px;padding:18px}
+.big{font-size:27px;line-height:1.25;font-weight:750;letter-spacing:-.8px}
+.small{font-size:16px;line-height:1.55;color:#5e5a53;margin-top:12px}
+.arrow{height:2px;background:#777168;position:relative;margin:0 11px}
+.arrow:after{content:"";width:11px;height:11px;border-top:2px solid #777168;border-right:2px solid #777168;position:absolute;right:0;top:-5px;transform:rotate(45deg)}
+.answer-title{font-size:20px;font-weight:750;margin:1px 0 10px;letter-spacing:-.4px}
+.status{border-radius:14px;background:#e7f0eb;border:1px solid #bcd2c3;padding:10px 12px;margin-bottom:8px}
+.status strong{font-size:16px;display:block;margin-bottom:3px}
+.status span{font-size:14px;line-height:1.35;display:block;color:#42604c}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.topic{min-height:65px;border:1px solid #e1ddd5;border-radius:14px;padding:9px 10px;background:#fff}
+.topic b{font-size:15px;line-height:1.2;display:block}
+.topic span{font-size:13px;line-height:1.3;color:#67625a;display:block;margin-top:3px}
+.recover{border-radius:14px;border:1px solid #d8cfc1;padding:10px 12px;background:#f7f3ed}
+.recover b{font-size:15px;display:block;margin-bottom:4px}
+.chain{font-size:13px;line-height:1.4;color:#4d4a44;word-spacing:1px}
+.warn{position:absolute;left:60px;bottom:43px;width:542px;border-left:4px solid #b46d45;padding-left:14px;font-size:16px;line-height:1.45;color:#57473e}
+.warn strong{color:#7c4228}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="head">
+    <h1>常见问题与排错</h1>
+    <img class="bot" src="bots/squircle-brun.png" alt="">
+  </header>
+  <div class="intro">遇到卡顿、报错或配置失效时，对照本章步骤逐步排查。</div>
+  <section class="flow" aria-label="故障排查流程">
+    <div class="card start">
+      <div class="big">卡顿、报错<br>或配置失效</div>
+      <div class="small">Bot 停下脚步</div>
+    </div>
+    <div class="arrow"></div>
+    <div class="card step">
+      <div class="big">先看服务状态</div>
+      <div class="small">查看 Grok Bot 的实时状态；一切以状态页为准。</div>
+    </div>
+    <div class="arrow"></div>
+    <div class="card answer">
+      <div class="answer-title">按故障主题梳理</div>
+      <div class="status">
+        <strong>当状态页标注故障时</strong>
+        <span>耐心等待官方修复后重新发信</span>
+      </div>
+      <div class="grid">
+        <div class="topic"><b>登录与身份验证</b><span>账户关联与登录异常</span></div>
+        <div class="topic"><b>云端电脑与环境恢复</b><span>连接故障、崩溃甚至被清空</span></div>
+        <div class="topic"><b>例程管理与自动化排错</b><span>未触发或执行异常</span></div>
+        <div class="topic"><b>用量异常与配额控制</b><span>用量瓶颈与防范异常支出</span></div>
+        <div class="topic"><b>插件与外部应用连接</b><span>授权中断与多账号冲突</span></div>
+        <div class="topic"><b>群聊、协作与辅助 Bot 治理</b><span>通知噪音与审批超时</span></div>
+      </div>
+      <div class="recover">
+        <b>云端电脑：五步渐进式排错法</b>
+        <div class="chain">等待与重试　→　彻底退出应用　→　检查计算机更新　→　Recover　→　谨慎使用 Reset</div>
+      </div>
+    </div>
+  </section>
+  <div class="warn"><strong>排查故障需要建立清晰的诊断梯度。</strong>盲目重装应用或者随手点击重置，可能把刚刚写好的工作环境和临时脚本冲刷干净。</div>
+</main>
+</body>
+</html>

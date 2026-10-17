@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>两段式检查架构</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fbf7ef;color:#211f1b;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:42px 52px 40px}.head{height:116px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ddd5c7}.head h1{margin:0;font-size:42px;letter-spacing:-1.4px;font-weight:750;line-height:1.1}.bot{width:104px;height:104px;object-fit:contain;display:block}.intro{height:86px;display:flex;align-items:center;gap:20px}.intro p{margin:0;font-size:21px;line-height:1.5;font-weight:550}.pill{flex:none;border:1px solid #e06b32;background:#fff0e7;color:#a8471f;border-radius:999px;padding:9px 15px;font-size:16px;font-weight:700}.flow{height:392px;display:grid;grid-template-columns:1fr 78px 1fr;align-items:stretch}.card{border:1px solid #dcd3c5;border-radius:24px;background:#fffdf9;padding:25px 27px;position:relative}.num{width:34px;height:34px;border-radius:12px;background:#ef7138;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;margin-bottom:13px}.card h2{font-size:27px;margin:0 0 14px;letter-spacing:-.5px}.card p{font-size:17px;line-height:1.65;margin:0}.card strong{font-weight:750}.rules{margin-top:21px;border-top:1px solid #ebe3d8;padding-top:18px;display:grid;gap:11px}.rule{display:flex;gap:10px;align-items:flex-start;font-size:16px;line-height:1.45}.dot{width:8px;height:8px;margin-top:8px;border-radius:50%;background:#ef7138;flex:none}.connector{position:relative;display:flex;align-items:center;justify-content:center}.line{height:2px;background:#ef7138;width:58px}.arrow{position:absolute;right:9px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:12px solid #ef7138}.trigger{position:absolute;top:155px;left:-20px;background:#ef7138;color:#fff;border-radius:15px;padding:8px 12px;font-size:15px;white-space:nowrap;font-weight:700}.outcome{height:74px;margin-top:20px;border-radius:20px;background:#24211c;color:#fff;display:flex;align-items:center;padding:0 27px;gap:20px}.outcome strong{font-size:19px;white-space:nowrap}.outcome span{width:1px;height:28px;background:#6e6961}.outcome p{margin:0;font-size:16px;line-height:1.45;color:#f5eee4}.em{color:#c55527;font-weight:750}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head">
+<h1>两段式检查架构</h1>
+<img class="bot" src="bots/squircle-orange.png" alt="">
+</header>
+<section class="intro">
+<span class="pill">巡检每次都跑大模型太费额度</span>
+<p>直接拆成两段：<span class="em">数据变了</span>再调 Webhook 叫醒 Bot 处理。</p>
+</section>
+<section class="flow">
+<article class="card">
+<div class="num">1</div>
+<h2>机械检查</h2>
+<p>用 Linux 自带 cron 做机械巡检。</p>
+<div class="rules">
+<div class="rule"><i class="dot"></i><span>用 cron 跑脚本对比数据</span></div>
+<div class="rule"><i class="dot"></i><span><strong>绝对不要调用任何大模型</strong></span></div>
+<div class="rule"><i class="dot"></i><span>几秒退出不耗用量</span></div>
+</div>
+</article>
+<div class="connector">
+<div class="line"></div><div class="arrow"></div>
+<div class="trigger">有变动</div>
+</div>
+<article class="card">
+<div class="num">2</div>
+<h2>增量唤醒</h2>
+<p>有变动发 POST 到本机 Webhook。</p>
+<div class="rules">
+<div class="rule"><i class="dot"></i><span>唤醒 Bot 分析总结</span></div>
+<div class="rule"><i class="dot"></i><span>把判断交给模型</span></div>
+<div class="rule"><i class="dot"></i><span>数据变了再调 Webhook 叫醒 Bot 处理</span></div>
+</div>
+</article>
+</section>
+<section class="outcome">
+<strong>闹钟与大脑分工</strong><span></span>
+<p>每周少 8 到 10 次空转，延迟从一天降到半小时内。</p>
+</section>
+</main>
+</body>
+</html>

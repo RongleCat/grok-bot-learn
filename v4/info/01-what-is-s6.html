@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>第一个专职 Bot</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#fff9f1;color:#211d19;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.page{width:1200px;height:760px;padding:42px 52px 38px;position:relative}
+.top{height:104px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e8ddd0}
+h1{margin:0;font-size:40px;letter-spacing:-1.5px;line-height:1.15;font-weight:750}
+.bot{width:106px;height:106px;object-fit:contain;display:block;margin-right:17px}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:29px;height:508px;position:relative}
+.card{position:relative;background:#fffdf9;border:1px solid #e6dbce;border-radius:24px;padding:23px 20px 18px;min-width:0;box-shadow:0 6px 18px rgba(75,50,28,.045)}
+.card:not(:last-child)::after{content:"";position:absolute;width:18px;height:2px;background:#d58649;right:-19px;top:75px;z-index:2}
+.card:not(:last-child)::before{content:"";position:absolute;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:7px solid #d58649;right:-20px;top:71px;z-index:3}
+.num{width:34px;height:34px;border-radius:12px;background:#f4dfcc;color:#9d541d;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:750;margin-bottom:17px}
+h2{font-size:23px;line-height:1.2;margin:0 0 18px;letter-spacing:-.5px}
+.rule{height:1px;background:#ede2d6;margin-bottom:16px}
+.item{font-size:16px;line-height:1.48;margin:0 0 14px;padding-left:15px;position:relative;word-break:keep-all}
+.item::before{content:"";position:absolute;width:6px;height:6px;border-radius:50%;background:#d58649;left:0;top:9px}
+.item strong{font-weight:750;color:#9d541d}
+.note{position:absolute;left:20px;right:20px;bottom:18px;padding:12px 13px;border-radius:14px;background:#f7eee4;font-size:15px;line-height:1.45;color:#51473e}
+.secure .num,.routine .num{background:#dcece6;color:#277969}
+.secure .item::before,.routine .item::before{background:#3c9581}
+.secure strong,.routine strong{color:#277969}
+.secure .note,.routine .note{background:#e8f3ef}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="top">
+    <div>
+      <h1>第一个专职 Bot</h1>
+    </div>
+    <img class="bot" src="bots/squircle-orange.png" alt="Bot">
+  </header>
+  <section class="flow" aria-label="从开通到第一个专职 Bot">
+    <article class="card">
+      <div class="num">01</div>
+      <h2>确认订阅档位<br>安装客户端</h2>
+      <div class="rule"></div>
+      <p class="item"><strong>Premium 档</strong>：个人日常起步选这档。</p>
+      <p class="item"><strong>Plus 档不含 Bot 功能</strong>，千万别选错。</p>
+      <p class="item">装好后登录账号。</p>
+      <div class="note">桌面端支持 macOS、Windows、Linux，移动端支持 iPhone。</div>
+    </article>
+    <article class="card">
+      <div class="num">02</div>
+      <h2>创建 Bot<br>派发测试任务</h2>
+      <div class="rule"></div>
+      <p class="item">侧边栏点 <strong>New → Create new agent</strong>。</p>
+      <p class="item">起名「竞品情报员」。</p>
+      <p class="item">在 Description 填入标准六行工作合同。</p>
+      <p class="item">写明目标、来源、限制、格式及确认点五要素。</p>
+      <div class="note">观察右侧云电脑窗口。</div>
+    </article>
+    <article class="card secure">
+      <div class="num">03</div>
+      <h2>配置安全审批</h2>
+      <div class="rule"></div>
+      <p class="item">进 <strong>Settings → General → Auto-review</strong>。</p>
+      <p class="item"><strong>高危操作必须全部开启 Ask first</strong>。</p>
+      <p class="item">发信、发帖、扣费、删文件与改权限。</p>
+      <div class="note">触发后会弹卡片暂停，等你人工点批准。</div>
+    </article>
+    <article class="card routine">
+      <div class="num">04</div>
+      <h2>沉淀 Skill<br>配置 Routine 定时</h2>
+      <div class="rule"></div>
+      <p class="item">抓取任务连续两次执行稳定后，保存为一个 Skill。</p>
+      <p class="item">换个竞品网址，输入 <strong>/</strong> 调这个 Skill 测试。</p>
+      <p class="item">确认无误后<strong>配置 Routine 定时</strong>。</p>
+      <div class="note">每周一早晨 9:00 自动运行；结果汇报发在当前对话。</div>
+    </article>
+  </section>
+</main>
+</body>
+</html>

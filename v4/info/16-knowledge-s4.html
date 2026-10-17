@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>微信双向调度</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fffaf2;color:#20211f;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:42px 52px 38px}.head{height:128px;display:flex;align-items:center;border-bottom:1px solid #e7ded0}.head h1{font-size:38px;line-height:1.15;letter-spacing:-1px;margin:0;font-weight:750}.head img{width:105px;height:auto;object-fit:contain;margin-left:22px}.lead{margin-left:auto;width:470px;font-size:18px;line-height:1.55;color:#4d514d}.flow{height:298px;padding-top:34px;display:grid;grid-template-columns:300px 98px 300px 98px 300px;align-items:center}.card{height:218px;border:1px solid #ded7cb;border-radius:24px;background:#fffdf9;padding:24px 22px}.card h2{margin:0 0 17px;font-size:23px;line-height:1.15;letter-spacing:-.4px}.card p{margin:0;font-size:16px;line-height:1.65}.card .strong{font-weight:700;color:#16726c}.arrow{display:flex;flex-direction:column;align-items:center;gap:9px;font-size:15px;line-height:1.25;color:#5e625d;text-align:center}.shaft{width:70px;height:2px;background:#e18145;position:relative}.shaft:after{content:"";position:absolute;right:-1px;top:-4px;width:9px;height:9px;border-top:2px solid #e18145;border-right:2px solid #e18145;transform:rotate(45deg)}.reverse{transform:rotate(180deg)}.notes{height:206px;display:grid;grid-template-columns:1.15fr 1fr .9fr;gap:18px}.note{border:1px solid #ded7cb;border-radius:22px;background:#fffdf9;padding:19px 21px}.note h3{font-size:17px;margin:0 0 10px;color:#c56329;letter-spacing:.1px}.note p{font-size:15px;line-height:1.55;margin:0}.note strong{color:#16726c}.mini{display:flex;gap:8px;align-items:flex-start;margin-top:8px}.dot{width:8px;height:8px;background:#e18145;border-radius:50%;margin-top:8px;flex:none}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="head">
+    <h1>微信双向调度</h1>
+    <img src="bots/capsule-vert.png" alt="Grok Bot">
+    <p class="lead">手机发消息即可遥控云端 Bot<br>通信全是出站请求，无需开放公网端口</p>
+  </header>
+  <section class="flow" aria-label="双向调度流程">
+    <article class="card">
+      <h2>微信ClawBot</h2>
+      <p>在“我”→“设置”→“插件”启用<br><span class="strong">微信主动发第一句话</span><br>截获 <span class="strong">context_token</span> 建连</p>
+    </article>
+    <div class="arrow"><span>消息</span><i class="shaft"></i><span>轮询拉取消息</span></div>
+    <article class="card">
+      <h2>云端转发程序</h2>
+      <p>后台调 <span class="strong">getupdates</span> 轮询拉取消息<br>收到微信消息后 <span class="strong">POST</span> 给例程<br>处理完以后，用 reply 脚本发回微信</p>
+    </article>
+    <div class="arrow"><span>Webhook</span><i class="shaft"></i><span>交接</span></div>
+    <article class="card">
+      <h2>Grok Bot</h2>
+      <p>建一个由 webhook 触发的 routine<br>「微信下旨入口」<br><span class="strong">各专职 Bot 协同执行</span><br>主聊天里同步一份</p>
+    </article>
+  </section>
+  <section class="notes" aria-label="关键规则">
+    <article class="note">
+      <h3>微信扫码授权</h3>
+      <p>微信扫码授权，二维码 <strong>5 分钟有效</strong>，超时用备用链接。发完第一句话，通道即正式就绪。</p>
+    </article>
+    <article class="note">
+      <h3>只认绑定的这一个人</h3>
+      <p>只认绑定的这一个人，别人的消息不处理；回复一律用<strong>纯文本</strong>，不要用 Markdown。</p>
+    </article>
+    <article class="note">
+      <h3>严禁在对话框发明文</h3>
+      <p>复制例程的 URL 和 key。<strong>严禁在对话框发明文</strong>，填入机密卡片。</p>
+    </article>
+  </section>
+</main>
+</body>
+</html>

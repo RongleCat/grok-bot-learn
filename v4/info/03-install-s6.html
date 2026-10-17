@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>共享底座与第一个 Bot</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#f8f3ea;color:#1d211f;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.page{width:1200px;height:760px;padding:38px 48px 40px}
+.head{height:126px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d9d1c4}
+.head-copy{padding-bottom:10px}
+h1{margin:0;font-size:36px;line-height:1.18;letter-spacing:-.04em}
+.bot{width:108px;height:108px;object-fit:contain;display:block;margin:0 14px 8px 0}
+.layout{display:grid;grid-template-columns:1.03fr .97fr;gap:22px;padding-top:22px;height:556px}
+.card{background:#fffdf9;border:1px solid #d9d1c4;border-radius:24px;overflow:hidden}
+.shared{padding:24px 26px}
+.card-title{margin:0;font-size:21px;line-height:1.25;letter-spacing:-.02em}
+.machine{margin:18px 0 16px;padding:16px 18px;background:#eaf3fb;border:1px solid #b8d3ea;border-radius:18px}
+.machine strong{display:block;font-size:20px;line-height:1.3;color:#1d4f7d}
+.machine span{display:block;margin-top:6px;font-size:16px;line-height:1.35}
+.boundary{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:12px 0;border-top:1px solid #e5ded4}
+.num{display:flex;width:28px;height:28px;align-items:center;justify-content:center;border-radius:50%;background:#276fb7;color:#fff;font-size:15px;font-weight:700}
+.boundary h3{margin:1px 0 5px;font-size:17px;line-height:1.3}
+.boundary p{margin:0;font-size:15px;line-height:1.45;color:#454945}
+.create{padding:24px 26px}
+.intro{margin:10px 0 14px;font-size:15px;line-height:1.4;color:#454945}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.step{min-height:132px;padding:14px 15px;border:1px solid #d9d1c4;border-radius:18px;background:#fff}
+.step-index{margin:0 0 8px;color:#276fb7;font-size:15px;font-weight:700}
+.step h3{margin:0 0 7px;font-size:17px;line-height:1.25}
+.step p{margin:0;font-size:15px;line-height:1.4;color:#454945}
+.rule{margin-top:14px;padding:13px 16px;border-radius:16px;background:#1d211f;color:#fff;font-size:16px;line-height:1.4}
+.rule b{color:#9ed0ff}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="head">
+    <div class="head-copy">
+      <h1>共享底座与第一个 Bot</h1>
+    </div>
+    <img class="bot" src="bots/cercle-bleu.png" alt="">
+  </header>
+  <section class="layout">
+    <article class="card shared">
+      <h2 class="card-title">每个付费用户都有一台常驻云端虚拟机</h2>
+      <div class="machine">
+        <strong>独立 Linux、浏览器、终端与持久磁盘</strong>
+        <span>所有 Bot 共享同一台机器</span>
+      </div>
+      <div class="boundary">
+        <div class="num">1</div>
+        <div><h3>共用 /workspace 与一套浏览器登录态</h3><p>分设 Bot 只是划分岗位，没有安全隔离。</p></div>
+      </div>
+      <div class="boundary">
+        <div class="num">2</div>
+        <div><h3>跨 Bot 协作必须文件落盘</h3><p>聊天记录互不相通，Bot A 必须把产物写进 /workspace 文件，Bot B 才能读取接力。</p></div>
+      </div>
+      <div class="boundary">
+        <div class="num">3</div>
+        <div><h3>支持随时查看与实时接管</h3><p>右侧可展开云电脑画面，遇到密码、人机验证或支付认证随时接管。</p></div>
+      </div>
+    </article>
+    <article class="card create">
+      <h2 class="card-title">创建第一个 Bot</h2>
+      <p class="intro">首次登录会自动生成默认的 Grok Bot</p>
+      <div class="steps">
+        <div class="step"><p class="step-index">01 新建</p><h3>点侧边栏顶部 +</h3><p>选 创建新 Bot<br>（Create new Bot）</p></div>
+        <div class="step"><p class="step-index">02 改名与标签</p><h3>右键选 重命名机器人</h3><p>下方可设职务标签<br>（Label）</p></div>
+        <div class="step"><p class="step-index">03 换头像</p><h3>点击顶部名称进详情</h3><p>支持选择内置几何图形、输入描述词生成，或上传本地图片</p></div>
+        <div class="step"><p class="step-index">04 设职责</p><h3>长期规则直接在首条消息说明</h3><p>并要求它记住</p></div>
+      </div>
+      <div class="rule"><b>个人 Bot 已取消独立设置页</b>，长期规则直接在首条消息说明并要求它记住。</div>
+    </article>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>同一账号下的 Bot 共享什么</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#f8f3e9;color:#22211e;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:36px 48px 42px}.head{height:114px;display:flex;align-items:center;gap:26px;border-bottom:1px solid #d8d0c1}.head img{width:104px;height:104px;object-fit:contain;flex:none}.head h1{margin:0;font-size:37px;line-height:1.18;letter-spacing:-1.2px;font-weight:760}.layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding-top:26px}.card{border:1px solid #d8d0c1;border-radius:24px;background:#fffdfa;padding:22px 24px}.card h2{margin:0 0 17px;font-size:20px;line-height:1.25}.physical{height:226px;grid-column:1}.shared{height:226px;grid-column:2;border-color:#b9cbc5}.shared h2{color:#23625a}.rule{height:271px;grid-column:1 / -1;padding:21px 24px 20px;display:grid;grid-template-columns:225px 1fr;column-gap:25px}.rule h2{margin:0;font-size:22px;line-height:1.35}.rule .note{margin:10px 0 0;font-size:16px;line-height:1.45;color:#555149}.item{display:flex;align-items:flex-start;gap:12px;margin:0 0 13px;font-size:17px;line-height:1.38}.item:last-child{margin-bottom:0}.dot{width:10px;height:10px;border-radius:50%;margin-top:7px;background:#d56b45;flex:none}.shared .dot{background:#337b70}.rulelist{display:grid;grid-template-columns:1fr 1fr;gap:11px 20px;align-content:start}.ruleitem{border-radius:15px;background:#f3eee4;padding:10px 14px;font-size:16px;line-height:1.34}.ruleitem strong{font-weight:750;color:#a64d31}.ruleitem.wide{grid-column:1 / -1}.clean{color:#23625a;font-weight:750}.end{font-size:15px;line-height:1.4;color:#555149;margin-top:2px}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head">
+<img src="bots/galet-encre.png" alt="">
+<h1>同一账号下的 Bot 共享什么</h1>
+</header>
+<section class="layout">
+<article class="card physical">
+<h2>用户间</h2>
+<div class="item"><span class="dot"></span><span>Grok Bot 跑在 Cursor 专属的 Firecracker microVM 上</span></div>
+<div class="item"><span class="dot"></span><span>用户间是底层硬件级物理隔离</span></div>
+<div class="item"><span class="dot"></span><span>OAuth token 保存在后端，不落盘</span></div>
+</article>
+<article class="card shared">
+<h2>同一账号下的所有 Bot</h2>
+<div class="item"><span class="dot"></span><span>共享同一台云电脑</span></div>
+<div class="item"><span class="dot"></span><span>共用 <b>/workspace</b> 目录</span></div>
+<div class="item"><span class="dot"></span><span>共用浏览器的 Cookie 和登录态</span></div>
+</article>
+<article class="card rule">
+<div>
+<h2>多 Bot 无法实现环境隔离</h2>
+<p class="note">一个 Bot 登录了后台，别的 Bot 也能直接操作。</p>
+</div>
+<div class="rulelist">
+<div class="ruleitem"><strong>强隔离</strong>：必须单独开一个 Cursor 账号</div>
+<div class="ruleitem">调队友建的团队 Bot，也是跑在你自己的云电脑上</div>
+<div class="ruleitem wide"><strong>同一账号</strong>绝不混跑高危操作与不可信外部抓取</div>
+<div class="ruleitem wide"><span class="clean">项目收尾必须手动清理</span>：在云电脑浏览器中退出登录；到第三方平台撤销 OAuth 授权；清理 <b>/workspace</b> 内的敏感文件</div>
+<div class="end">客户端删 Bot 不会清空本地文件与登录态；项目结束后不留孤儿会话。</div>
+</div>
+</article>
+</section>
+</main>
+</body>
+</html>

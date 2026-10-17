@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>记忆：让 Bot 越用越懂你</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#f8f7f3;color:#20201e;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:46px 58px 42px}.top{height:105px;display:flex;align-items:flex-start;justify-content:space-between}.eyebrow{margin:0 0 10px;color:#93621b;font-size:16px;font-weight:700;letter-spacing:1.4px}.top h1{margin:0;font-size:35px;line-height:1.18;letter-spacing:-.6px}.bot{width:106px;height:106px;object-fit:contain;margin:-11px 12px 0 0}.lead{height:76px;border:1px solid #dedbd3;border-radius:22px;background:#fffefa;display:flex;align-items:center;padding:0 28px;font-size:19px;line-height:1.55}.lead strong{color:#93621b;margin-right:14px;white-space:nowrap}.middle{height:393px;display:grid;grid-template-columns:248px 1fr;gap:22px;margin-top:19px}.rule{border-radius:24px;background:#20201e;color:#fffdf8;padding:27px 25px}.rule h2{font-size:21px;margin:0 0 17px;line-height:1.35}.rule p{margin:0;font-size:16px;line-height:1.65;color:#e7e3da}.rule .split{height:1px;background:#50504c;margin:19px 0}.rule b{color:#e0ae52;font-size:17px}.grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:186px 186px;gap:18px}.card{background:#fffefa;border:1px solid #dedbd3;border-radius:22px;padding:21px 20px;position:relative}.card h3{margin:0 0 10px;font-size:20px;line-height:1.25}.card p{margin:0;font-size:15.5px;line-height:1.52;color:#565550}.num{position:absolute;right:18px;top:16px;color:#93621b;font-size:15px;font-weight:700}.card.live{border-color:#b8cad7;background:#fbfdff}.card.live h3,.card.live .tag{color:#315e78}.tag{font-size:15px;font-weight:700;color:#93621b;margin-bottom:9px}.wide{grid-column:span 2}.bottom{margin-top:19px;height:70px;display:grid;grid-template-rows:32px 32px;gap:6px}.clock{border-radius:16px;border:1px solid #dedbd3;background:#fffefa;display:flex;align-items:center;padding:0 22px;font-size:16px;white-space:nowrap}.clock strong{font-size:17px;margin-right:15px;color:#93621b}.clock.fast strong{color:#315e78}.arrow{color:#aaa79e;margin:0 8px}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="top">
+    <div>
+      <p class="eyebrow">第 6 章</p>
+      <h1>记忆：让 Bot 越用越懂你</h1>
+    </div>
+    <img class="bot" src="bots/hexagone-ambre.png" alt="">
+  </header>
+  <section class="lead"><strong>记忆的本质</strong><span>不是存下一切，而是建立一条从有用观察到可复用上下文的受控通路。</span></section>
+  <section class="middle">
+    <aside class="rule">
+      <h2>先分清：</h2>
+      <p><b>记忆</b>是 Bot「知道什么」</p>
+      <div class="split"></div>
+      <p><b>技能</b>是 Bot「知道怎么做」</p>
+      <div class="split"></div>
+      <p>变动数据必须实时回源，记忆只保留业务常识与纠偏规则。</p>
+    </aside>
+    <section class="grid" aria-label="上下文的五类容器">
+      <article class="card live"><span class="num">01</span><div class="tag">当前事实</div><h3>实时数据源</h3><p>Linear、Datadog、CRM 等系统中的当前事实</p></article>
+      <article class="card"><span class="num">02</span><div class="tag">重复流程</div><h3>团队技能</h3><p>由 Bot 所有者维护的标准化、可重复执行的操作流程</p></article>
+      <article class="card"><span class="num">03</span><div class="tag">共享规则</div><h3>团队记忆</h3><p>经过核准的全员共享决策与<br>稳定业务定义</p></article>
+      <article class="card"><span class="num">04</span><div class="tag">个人上下文</div><h3>私人便签</h3><p>个人专属偏好与单人工作上下文</p></article>
+      <article class="card wide"><span class="num">05</span><div class="tag">临时工作</div><h3>任务状态</h3><p>当前正在执行的任务进度与临时上下文</p></article>
+    </section>
+  </section>
+  <section class="bottom" aria-label="快慢时钟分流机制">
+    <div class="clock"><strong>慢时钟数据</strong><span>语气风格</span><span class="arrow">·</span><span>业务名词统一定义</span><span class="arrow">·</span><span>稳定的业务流程</span><span class="arrow">→</span><b>可以写入记忆</b></div>
+    <div class="clock fast"><strong>快时钟数据</strong><span>任务状态</span><span class="arrow">·</span><span>账户余额</span><span class="arrow">·</span><span>权限配置</span><span class="arrow">→</span><b>必须实时从源头系统查询</b></div>
+  </section>
+</main>
+</body>
+</html>

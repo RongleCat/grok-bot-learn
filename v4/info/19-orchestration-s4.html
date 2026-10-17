@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#f7f1e8;color:#20211f;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:34px 42px 40px}.header{height:126px;display:flex;align-items:center;border-bottom:1px solid #d8d0c5}.titlewrap{flex:1}.title{margin:0;font-size:39px;letter-spacing:-1.4px;font-weight:800;line-height:1.15}.rule{margin-top:13px;font-size:18px;line-height:1.45;font-weight:650}.rule strong{color:#b54a35}.bot{width:112px;height:112px;object-fit:contain;margin-left:28px;align-self:flex-start}.safety{height:160px;display:grid;grid-template-columns:1.04fr .96fr;gap:18px;padding-top:19px}.panel{border:1px solid #d8d0c5;border-radius:22px;background:#fffaf3;padding:16px 20px}.panel h2{font-size:17px;margin:0 0 10px;font-weight:800}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{font-size:15px;line-height:26px;padding:0 11px;border-radius:14px;background:#f5e0d8;color:#8a3d2d;font-weight:700}.allow .chip{background:#dcece5;color:#255e50}.note{font-size:15px;line-height:1.5;margin:0}.note b{color:#b54a35}.timeline{position:relative;margin-top:19px;height:342px;border:1px solid #d8d0c5;border-radius:24px;background:#fffaf3;padding:22px 20px 18px}.timeline h2{font-size:20px;margin:0 0 18px;font-weight:800}.line{position:absolute;left:86px;right:86px;top:85px;height:3px;background:#b54a35}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative}.step{min-height:236px;border:1px solid #d8d0c5;border-radius:20px;background:#fffdf9;padding:16px 16px 13px}.num{width:35px;height:35px;border-radius:50%;background:#b54a35;color:#fffaf3;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;margin-bottom:14px;position:relative}.week{font-size:19px;font-weight:800;margin:0 0 8px;line-height:1.25}.phase{font-size:16px;color:#b54a35;font-weight:800;margin:0 0 12px}.item{font-size:15px;line-height:1.5;margin:0 0 9px;padding-left:12px;position:relative}.item:before{content:"";width:5px;height:5px;border-radius:50%;background:#255e50;position:absolute;left:0;top:9px}.final{margin-top:10px;font-size:15px;text-align:center;color:#625d56;font-weight:650}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="header">
+<div class="titlewrap"><h1 class="title">放权分级</h1><div class="rule">只认<strong>一分钟可逆性</strong>：不能单键彻底撤销的操作，全算高危，必须设人闸弹窗确认。</div></div>
+<img class="bot" src="bots/goutte-rose.png">
+</header>
+<section class="safety">
+<article class="panel"><h2>Ask first 必留</h2><div class="chips"><span class="chip">send</span><span class="chip">post</span><span class="chip">buy</span><span class="chip">transfer</span><span class="chip">delete</span><span class="chip">permissions</span></div></article>
+<article class="panel allow"><h2>Always allow 放行</h2><div class="chips"><span class="chip">公共网页只读检索</span><span class="chip">读授权文件</span><span class="chip">向 /workspace 写草稿与中间数据</span></div><p class="note">发信前必须在草稿卡片经人工批准。</p></article>
+</section>
+<section class="timeline">
+<h2>新团队：四周逐步过渡</h2><div class="line"></div>
+<div class="steps">
+<article class="step"><div class="num">1</div><h3 class="week">第 1 周</h3><p class="phase">起草与核对期</p><p class="item">仅产出方案与文档草稿，不触碰任何执行按钮。</p><p class="item">人工逐字通读，校验信息源与格式。</p></article>
+<article class="step"><div class="num">2</div><h3 class="week">第 2 周</h3><p class="phase">单步确认期</p><p class="item">允许触发具体执行动作。</p><p class="item">每个步骤必须通过弹窗人工逐项点击确认。</p><p class="item">集中核对最终执行动作与参数。</p></article>
+<article class="step"><div class="num">3</div><h3 class="week">第 3 周</h3><p class="phase">异常上报期</p><p class="item">常规例行事务开启自主流转。</p><p class="item">外部报错、数据缺失或触发 Ask first 时主动弹窗挂起。</p></article>
+<article class="step"><div class="num">4</div><h3 class="week">第 4 周</h3><p class="phase">巡检抽查期</p><p class="item">跑通的例行任务完全实现后台自动执行。</p><p class="item">人工仅在每周固定时间抽查运行日志与交付成果。</p></article>
+</div>
+<div class="final">严禁第一天就开夜间无人值守</div>
+</section>
+</main>
+</body>
+</html>

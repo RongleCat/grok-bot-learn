@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>单岗单责</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fffaf4;color:#201d1a;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:30px 48px 36px;position:relative}.head{height:112px;display:flex;align-items:center;border-bottom:1px solid #e2d9cf}.head h1{font-size:34px;letter-spacing:.5px;line-height:1;margin:0;font-weight:800}.head img{width:108px;height:108px;object-fit:contain;margin-left:23px}.principle{margin-top:18px;display:flex;gap:12px;align-items:center}.pill{height:36px;padding:8px 17px;border:1px solid #d9cec2;border-radius:20px;background:#fffdf9;font-size:15px;white-space:nowrap}.pill.strong{border-color:#b95c45;color:#9b402d;background:#fff4ee;font-weight:700}.section-label{font-size:16px;font-weight:800;margin:21px 0 11px}.flow{display:grid;grid-template-columns:1fr 26px 1fr 26px 1fr 26px 1fr;align-items:stretch}.card{height:168px;border:1px solid #d9cec2;border-radius:22px;background:#fffdf9;padding:17px 17px 14px;display:flex;flex-direction:column}.card .role{font-size:20px;font-weight:800;line-height:1.2}.path{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:15px;line-height:1.3;color:#2d7b73;margin-top:10px;white-space:nowrap}.duty{font-size:15px;line-height:1.48;margin-top:auto}.arrow{align-self:center;text-align:center;color:#b95c45;font-size:27px;font-weight:500}.lower{display:grid;grid-template-columns:1.42fr .98fr;gap:18px;margin-top:16px}.after{height:166px;border:1px solid #2d7b73;border-radius:22px;background:#f2fbf8;padding:15px 18px}.after-title{font-size:16px;color:#21675f;font-weight:800;margin-bottom:10px}.roles{display:flex;gap:12px}.mini{background:#fffdf9;border:1px solid #c7ded9;border-radius:16px;padding:12px 14px;width:50%;height:98px}.mini b{font-size:18px;display:block}.mini span{font-size:15px;line-height:1.35;display:block;margin-top:7px}.rules{height:166px;border:1px solid #d9cec2;border-radius:22px;background:#fffdf9;padding:16px 19px}.rules h2{font-size:18px;margin:0 0 10px;font-weight:800}.rule{font-size:15px;line-height:1.55;padding-left:14px;position:relative}.rule:before{content:"";width:6px;height:6px;border-radius:50%;background:#b95c45;position:absolute;left:0;top:8px}.gate{position:absolute;bottom:36px;left:48px;right:48px;height:46px;border-radius:15px;background:#241f1b;color:#fffaf4;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;letter-spacing:.1px}.gate span{color:#f1b8a7;margin:0 10px}.small{font-size:15px}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head"><h1>单岗单责</h1><img src="bots/goutte-rose.png" alt=""></header>
+<div class="principle"><div class="pill strong">主 Bot 统筹派工</div><div class="pill">共享同一台云电脑</div><div class="pill">独立的窗口、记忆与设定</div><div class="pill">共享文件夹读写 Markdown 文件交接任务</div></div>
+<div class="section-label">工作顺序固定为</div>
+<section class="flow">
+<article class="card"><div class="role">情报侦察员</div><div class="path">01-inbox/</div><div class="duty">搜集一手线索<br>严禁把二手言论当事实</div></article><div class="arrow">→</div>
+<article class="card"><div class="role">选题策划师</div><div class="path">02-briefs/</div><div class="duty">评估线索出 Brief<br>未获人工批准不得推进到主笔</div></article><div class="arrow">→</div>
+<article class="card"><div class="role">内容主笔</div><div class="path">03-drafts/</div><div class="duty">依 voice.md 写作<br>严禁捏造事实与通用公关腔</div></article><div class="arrow">→</div>
+<article class="card"><div class="role">事实编辑</div><div class="path">04-review/</div><div class="duty">核验一手信源<br>无发布权限，证据冲突列出待确认</div></article>
+</section>
+<section class="lower">
+<div class="after"><div class="after-title">内容发布后</div><div class="roles"><div class="mini"><b>数据复盘师</b><span>分析内容数据<br>严禁将相关性写成因果</span></div><div class="mini"><b>网站工程师</b><span>提炼画像建站<br>严禁伪造经历</span></div></div></div>
+<div class="rules"><h2>标准共享目录</h2><div class="rule">00-profile/：账号定位、目标读者、范文、禁用表达</div><div class="rule">所有中间文件放到对应目录</div><div class="rule">全员确认输入输出路径与人闸边界</div></div>
+</section>
+<div class="gate">登录、外发、发布、点赞、回复、关注、私信、购买、删除、连接器授权或权限修改<span>·</span>必须先获得用户明确批准</div>
+</main>
+</body>
+</html>

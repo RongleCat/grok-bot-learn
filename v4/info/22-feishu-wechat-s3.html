@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>微信 ClawBot 插件直连</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fffaf3;color:#1f211e;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{position:relative;width:1200px;height:760px;padding:46px 58px 42px}h1{margin:0;font-size:37px;line-height:1.14;letter-spacing:-1px;font-weight:760}.bot{position:absolute;top:28px;right:72px;width:106px;height:106px;object-fit:contain}.intro{position:absolute;top:102px;left:58px;margin:0;font-size:17px;line-height:1.5;color:#52534e}.flow{position:absolute;top:166px;left:58px;right:58px;display:grid;grid-template-columns:1fr 46px 1fr 46px 1fr;align-items:center}.card{height:276px;border:1px solid #ddd8cf;border-radius:24px;background:#fffdf9;padding:25px 26px 22px}.num{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#e7604f;color:#fff;font-size:17px;font-weight:700;margin-bottom:15px}.card:nth-child(3) .num{background:#187f7b}.card h2{font-size:22px;line-height:1.25;margin:0 0 14px;font-weight:720;letter-spacing:-.3px}.card p{font-size:16px;line-height:1.58;margin:0;color:#4d4f49}.card strong{color:#1f211e;font-weight:720}.arrow{height:2px;background:#d5cec4;position:relative;margin:0 11px}.arrow:after{content:"";position:absolute;right:-1px;top:-5px;width:10px;height:10px;border-top:2px solid #d5cec4;border-right:2px solid #d5cec4;transform:rotate(45deg)}.band{position:absolute;left:58px;right:58px;bottom:42px;height:204px;border:1px solid #ddd8cf;border-radius:24px;background:#f7f1e8;padding:24px 28px}.band h2{margin:0 0 17px;font-size:19px;line-height:1.25;font-weight:730}.checks{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.check{min-height:106px;border-radius:17px;background:#fffdf9;border:1px solid #e2dbd2;padding:17px 18px}.check h3{margin:0 0 8px;font-size:17px;line-height:1.25;font-weight:720}.check p{margin:0;font-size:15px;line-height:1.5;color:#4d4f49}.mark{display:inline-flex;align-items:center;justify-content:center;width:19px;height:19px;margin-right:7px;border-radius:50%;background:#187f7b;color:#fff;font-size:13px;vertical-align:1px}
+</style>
+</head>
+<body>
+<main class="page">
+<h1>微信 ClawBot 插件直连</h1>
+<img class="bot" src="bots/capsule-vert.png" alt="">
+<p class="intro">走官方 iLink 接口（ilinkai.weixin.qq.com），纯出站长轮询，不开放公网端口。</p>
+<section class="flow" aria-label="三步完成接入">
+<article class="card">
+<div class="num">1</div>
+<h2>发送提示词</h2>
+<p>电脑端向主 Bot 发送指令，等待自动生成通信组件。</p>
+<p><strong>getupdates</strong> 长轮询收消息，<strong>sendmessage</strong> 回消息。</p>
+</article>
+<div class="arrow"></div>
+<article class="card">
+<div class="num">2</div>
+<h2>配置密钥</h2>
+<p>打开主 Bot 的「微信下旨入口」例程，复制 Webhook 的 <strong>POST to</strong> 和 <strong>key</strong> 提交到加密框。</p>
+</article>
+<div class="arrow"></div>
+<article class="card">
+<div class="num">3</div>
+<h2>绑定与激活</h2>
+<p>在「设置-插件」启用「微信ClawBot」。</p>
+<p>微信扫码授权，必须主动向微信 ClawBot 发首条消息，获取 <strong>context_token</strong> 激活回包。</p>
+</article>
+</section>
+<section class="band">
+<h2>验收标准</h2>
+<div class="checks">
+<article class="check"><h3><span class="mark">✓</span>双向同步</h3><p>微信端秒级回复，电脑端实时存档。</p></article>
+<article class="check"><h3><span class="mark">✓</span>子 Agent 调度</h3><p>在微信直接派发推特检索、视频转录任务。</p></article>
+<article class="check"><h3><span class="mark">✓</span>安全隔离</h3><p>未绑定的微信号无法唤醒。</p></article>
+</div>
+</section>
+</main>
+</body>
+</html>

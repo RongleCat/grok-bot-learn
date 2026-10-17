@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>工程 Harness</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fbf7f0;color:#201f23;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:34px 42px 36px;position:relative}.top{height:112px;display:flex;align-items:center;border-bottom:1px solid #ded8cf}.title{font-size:35px;letter-spacing:-1.4px;line-height:1.12;margin:0;font-weight:760}.bot{width:108px;height:108px;object-fit:contain;margin-left:22px}.chief{margin-left:auto;min-width:254px;border:1px solid #d7cde9;border-radius:22px;background:#f3eefb;padding:15px 20px;display:flex;align-items:center;gap:12px}.chief strong{display:block;font-size:19px;line-height:1.25}.chief span{display:block;font-size:15px;color:#5d536d;margin-top:4px}.chief-dot{width:14px;height:14px;border-radius:50%;background:#7357b6;flex:0 0 auto}.main{display:grid;grid-template-columns:240px 1fr 265px;gap:22px;padding-top:23px;height:526px}.card{border:1px solid #ded8cf;border-radius:22px;background:#fffdf9}.workspace{padding:20px 18px;height:428px}.card h2{font-size:19px;margin:0 0 14px;line-height:1.25}.path{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:15px;color:#624d91;background:#f2edf9;border-radius:11px;padding:10px;line-height:1.35;margin-bottom:13px}.files{list-style:none;padding:0;margin:0}.files li{font-size:15px;line-height:1.52;padding:5px 0;border-top:1px solid #eee8df}.files b{font-weight:700}.evidence{margin-top:13px;border-radius:15px;padding:11px 14px;background:#fff0e7;color:#663a25;font-size:15px;line-height:1.42}.flow{padding:17px 16px;height:500px}.flow-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:8px}.flow-head h2{margin:0}.flow-head span{font-size:15px;color:#5d536d}.states{display:grid;gap:0}.state{min-height:31px;border:1px solid #ded8cf;border-radius:11px;display:flex;align-items:center;padding:5px 12px;font-size:15px;background:#fffdf9}.state b{font-size:15px;letter-spacing:.2px}.arrow{height:5px;margin:auto;border-left:2px solid #7357b6;position:relative}.arrow:after{content:"";position:absolute;left:-5px;bottom:-1px;width:7px;height:7px;border-right:2px solid #7357b6;border-bottom:2px solid #7357b6;transform:rotate(45deg)}.em{border-color:#bca9dd;background:#f3eefb}.review-row{display:grid;grid-template-columns:1fr 94px;gap:10px;align-items:center}.fail{border:1px solid #e6c0aa;background:#fff0e7;border-radius:11px;padding:5px 8px;text-align:center;font-size:15px;line-height:1.2;color:#663a25}.fail b{display:block;font-size:14px}.final{background:#201f23;color:#fffdf9;border-color:#201f23}.roles{margin-top:9px;display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.role{border-radius:10px;padding:6px 3px;text-align:center;background:#f2edf9;color:#4d3b73;font-size:14px;font-weight:700}.right{display:flex;flex-direction:column;gap:12px}.guard{padding:18px;height:245px}.guard h2{margin-bottom:12px}.rule{padding:8px 10px;border-radius:12px;font-size:15px;line-height:1.3}.rule+ .rule{margin-top:8px}.go{background:#f3eefb;color:#4d3b73}.stop{background:#fff0e7;color:#663a25}.board{padding:16px 18px;height:202px}.board h2{margin-bottom:11px}.fields{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:15px;line-height:1.48;color:#4d3b73}.status{margin-top:8px;font-size:15px;line-height:1.4}.skill{padding:12px 17px;border-radius:18px;background:#201f23;color:#fffdf9;font-size:15px;line-height:1.38}.skill b{color:#d8c9f5}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="top">
+    <h1 class="title">状态机与多 Bot 协作</h1>
+    <img class="bot" src="bots/triangle-violet.png" alt="">
+    <div class="chief"><i class="chief-dot"></i><div><strong>1 名总管协调 4 名专员</strong><span>端到端修复管线</span></div></div>
+  </header>
+  <section class="main">
+    <aside>
+      <div class="card workspace">
+        <h2>每个 Issue 进独立目录</h2>
+        <div class="path">/workspace/devdesk/<br>issues/&lt;issue-id&gt;/</div>
+        <ul class="files">
+          <li><b>task.md</b> 原始输入与完成验收标准</li>
+          <li><b>status.json</b> 当前机器可读状态及负责人</li>
+          <li><b>evidence/</b> 失败日志、复现脚本与截图</li>
+          <li><b>implementation.md</b> 改动文件清单与最小实现方案</li>
+          <li><b>review.md</b> 独立审查结论</li>
+          <li><b>handoff.md</b> 放行报告</li>
+        </ul>
+      </div>
+      <div class="evidence"><b>上一步没存测试证据，下一步绝不启动。</b></div>
+    </aside>
+    <section class="card flow">
+      <div class="flow-head"><h2>状态机转移契约</h2><span>严禁跳步</span></div>
+      <div class="states">
+        <div class="state"><b>NEW</b></div><div class="arrow"></div>
+        <div class="state"><b>TRIAGED</b></div><div class="arrow"></div>
+        <div class="state em"><b>REPRODUCED</b>&nbsp; 稳定复现步骤和失败用例</div><div class="arrow"></div>
+        <div class="state"><b>BUILDING</b>&nbsp; 新分支改代码</div><div class="arrow"></div>
+        <div class="state em"><b>TESTED</b>&nbsp; 原回归用例跑通</div><div class="arrow"></div>
+        <div class="review-row"><div class="state"><b>REVIEWING</b>&nbsp; 独立看 Diff 与日志给评级</div><div class="fail"><b>FAIL</b>退回 BUILDING<br>最多重试 2 轮</div></div><div class="arrow"></div>
+        <div class="state em"><b>REVIEW_PASSED</b></div><div class="arrow"></div>
+        <div class="state"><b>DRAFT_PR_READY</b></div><div class="arrow"></div>
+        <div class="state final"><b>HUMAN_APPROVAL</b>&nbsp; 提交带完整凭证的 Draft PR</div>
+      </div>
+      <div class="roles"><div class="role">Triage</div><div class="role">Builder</div><div class="role">Reviewer</div><div class="role">Release</div></div>
+    </section>
+    <aside class="right">
+      <div class="card guard">
+        <h2>动作可逆性分级</h2>
+        <div class="rule go"><b>可逆动作 · 自主执行</b><br>代码分析、本地分支编写补丁与跑单测、生成失败用例、提 Draft PR、输出日志报告</div>
+        <div class="rule stop"><b>不可逆动作 · 停机等人审</b><br>合并代码、部署上线、修改线上数据库、变更环境变量或密钥、调用收费外部服务</div>
+      </div>
+      <div class="card board">
+        <h2>六字段任务看板</h2>
+        <div class="fields">Task | Owner | Source<br>Status | Deliverable<br>Next action</div>
+        <div class="status">任务状态严格限定：<br>ready · working · blocked<br>awaiting approval · complete</div>
+      </div>
+      <div class="skill">某类任务只要走通一次，<b>就执行命令固化为私有 Skill</b>，方便定时 Routine 重复调用。</div>
+    </aside>
+  </section>
+</main>
+</body>
+</html>

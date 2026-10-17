@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>长期规则与单次任务</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#f8f3ea;color:#1d1c1b;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{height:100%;padding:42px 54px 38px;display:flex;flex-direction:column}.top{height:150px;position:relative;padding-top:12px}.eyebrow{font-size:16px;font-weight:700;letter-spacing:.08em;color:#675b7d;margin-bottom:14px}.title{font-size:42px;line-height:1.12;letter-spacing:-1.4px;font-weight:800;margin:0}.title em{font-style:normal;color:#7255a3}.bot{position:absolute;right:23px;top:0;width:112px;height:112px;object-fit:contain}.rule{height:3px;width:100%;background:#1d1c1b;border-radius:3px;margin-bottom:24px}.lead{height:62px;border-left:5px solid #7255a3;padding:4px 0 0 18px;font-size:20px;line-height:1.45;font-weight:650}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:22px;flex:1}.card{border:1.5px solid #d8cec1;border-radius:24px;background:#fffdf9;padding:25px 27px 23px;min-height:0}.card.long{border-top:7px solid #7255a3}.card.once{border-top:7px solid #d07a4c}.card-title{display:flex;align-items:center;gap:12px;font-size:27px;font-weight:800;letter-spacing:-.5px;margin:0 0 18px}.mark{width:33px;height:33px;border-radius:50%;display:inline-grid;place-items:center;color:#fff;font-size:19px;background:#7255a3}.once .mark{background:#d07a4c}.line{height:1px;background:#e5ddd2;margin:16px 0}.label{font-size:15px;font-weight:750;letter-spacing:.08em;color:#766d65;margin-bottom:7px}.value{font-size:21px;line-height:1.4;font-weight:700}.small{font-size:17px;line-height:1.5;font-weight:600}.examples{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px}.chip{border:1px solid #d9cedf;background:#f4eef9;color:#46385c;border-radius:999px;padding:6px 11px;font-size:16px;line-height:1.25;font-weight:650;white-space:nowrap}.once .chip{border-color:#ecd1c2;background:#fff1e9;color:#7b432b}.memory{margin-top:20px;border:1.5px solid #d8cec1;border-radius:20px;background:#f0eadf;padding:16px 22px;display:grid;grid-template-columns:155px 1fr;gap:12px;align-items:center}.memory-title{font-size:18px;font-weight:800;color:#7255a3}.memory-text{font-size:17px;line-height:1.45;font-weight:650}.memory strong{color:#1d1c1b}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="top">
+
+<h1 class="title">别把<em>家规</em>当家务</h1>
+<img class="bot" src="bots/triangle-violet.png" alt="">
+</header>
+<div class="rule"></div>
+<div class="lead">分清长期规则与单次任务，别把临时参数写进长期设定，也别每次重打底线。</div>
+<section class="comparison" aria-label="长期规则与单次任务对比">
+<article class="card long">
+<h2 class="card-title"><span class="mark">长</span>长期规则</h2>
+<div class="label">周期</div>
+<div class="value">跨会话生效</div>
+<div class="line"></div>
+<div class="label">设定</div>
+<div class="small">Bot Details 配置<br>或输入“请将这条作为你的长期规则记入你的记忆区”</div>
+<div class="line"></div>
+<div class="label">示例</div>
+<div class="examples"><span class="chip">权限红线</span><span class="chip">日期 YYYY-MM-DD</span></div>
+</article>
+<article class="card once">
+<h2 class="card-title"><span class="mark">单</span>单次任务</h2>
+<div class="label">周期</div>
+<div class="value">单轮生效不沉淀</div>
+<div class="line"></div>
+<div class="label">设定</div>
+<div class="value">直接下达</div>
+<div class="line"></div>
+<div class="label">示例</div>
+<div class="examples"><span class="chip">处理 12 个账户或 3 个音频</span><span class="chip">提取十点会议清单</span></div>
+</article>
+</section>
+<aside class="memory"><div class="memory-title">共同边界</div><div class="memory-text">所有 Bot 共用 <strong>/workspace</strong>。<strong>记忆不能替代业务系统</strong>，余额与库存必须回源拉取，严禁脑补。</div></aside>
+</main>
+</body>
+</html>

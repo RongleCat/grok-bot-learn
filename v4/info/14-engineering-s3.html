@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>24/7 仓库值班台</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#f8f2e8;color:#20201d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:34px 42px 40px}.top{height:112px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d8cfc1}.title{font-size:38px;line-height:1.1;letter-spacing:-1.5px;font-weight:800}.bot{width:108px;height:108px;object-fit:contain;display:block}.content{height:574px;padding-top:22px;display:grid;grid-template-columns:300px 1fr 290px;gap:18px}.card{border:1px solid #d8cfc1;border-radius:24px;background:#fffdf9}.roles{padding:20px 18px}.head{font-size:17px;font-weight:800;margin:0 0 14px}.role-list{display:grid;gap:8px}.role{min-height:61px;padding:10px 12px;border:1px solid #e0d7ca;border-radius:15px;background:#fbf7f0}.role b{display:block;font-size:16px;line-height:1.15}.role span{display:block;font-size:15px;line-height:1.35;margin-top:3px;color:#5a554e}.flow{padding:18px}.event{height:55px;border-radius:15px;background:#20201d;color:#fffdf9;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700}.arrow{height:25px;position:relative}.arrow:before{content:"";position:absolute;left:50%;top:2px;width:2px;height:15px;background:#cc5b37}.arrow:after{content:"";position:absolute;left:calc(50% - 5px);top:13px;width:10px;height:10px;border-right:2px solid #cc5b37;border-bottom:2px solid #cc5b37;transform:rotate(45deg)}.triage{height:70px;border:2px solid #cc5b37;border-radius:18px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:17px;font-weight:800;background:#fff7f2}.branch{height:44px;position:relative}.branch:before{content:"";position:absolute;top:12px;left:25%;right:25%;border-top:2px solid #cc5b37}.branch:after{content:"";position:absolute;top:12px;left:25%;height:18px;border-left:2px solid #cc5b37;box-shadow:calc(100% * 2) 0 #cc5b37}.lanes{display:grid;grid-template-columns:1fr 1fr;gap:16px}.lane{border:1px solid #e0d7ca;border-radius:18px;padding:12px 10px;background:#fbf7f0;text-align:center}.lane h3{margin:0;min-height:43px;font-size:15px;line-height:1.38}.botbox{margin:9px 0;padding:9px 5px;border-radius:13px;background:#e8f2ee;color:#234638;font-size:16px;font-weight:800}.lane p{margin:7px 0;font-size:15px;line-height:1.35}.lane .last{margin-bottom:0;font-weight:700;color:#9d4428}.rules{padding:20px 18px}.rule{padding:15px 13px;margin-bottom:11px;border:1px solid #e0d7ca;border-radius:16px;background:#fffdf9}.rule:last-child{margin-bottom:0}.rule b{display:block;color:#9d4428;font-size:16px;line-height:1.25}.rule span{display:block;margin-top:5px;font-size:15px;line-height:1.42;color:#514c45}.note{margin-top:14px;padding:11px 12px;border-radius:14px;background:#e8f2ee;font-size:15px;line-height:1.4;color:#234638}.note b{font-size:16px}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="top"><h1 class="title">24/7 仓库值班台</h1><img class="bot" src="bots/squircle-brun.png" alt=""></header>
+  <section class="content">
+    <aside class="card roles">
+      <h2 class="head">6 个专职 Bot</h2>
+      <div class="role-list">
+        <div class="role"><b>Triage Bot</b><span>按严重程度和类型归类 Issue</span></div>
+        <div class="role"><b>Fix Bot</b><span>接管轻度 Bug，写补丁并提 Draft PR</span></div>
+        <div class="role"><b>Test Bot</b><span>跑测试抓 Flaky test</span></div>
+        <div class="role"><b>Dependency Bot</b><span>监控 CVE 漏洞与过期依赖</span></div>
+        <div class="role"><b>Release Bot</b><span>按指令整理变更日志并打包</span></div>
+        <div class="role"><b>Alert Bot</b><span>需人工介入时即时发通知</span></div>
+      </div>
+    </aside>
+    <section class="card flow">
+      <div class="event">GitHub 事件 / CI 报警</div>
+      <div class="arrow"></div>
+      <div class="triage">Triage Bot<br>识别严重度与类别</div>
+      <div class="branch"></div>
+      <div class="lanes">
+        <div class="lane"><h3>偶发测试 / 格式问题</h3><div class="botbox">Fix Bot</div><p>生成修复 Patch</p><p class="last">提交 Draft PR<br>严禁合并</p></div>
+        <div class="lane"><h3>业务逻辑缺陷 / CVE 安全问题</h3><div class="botbox">Dependency / Alert Bot</div><p>严重漏洞即时呼叫人类</p><p class="last">其余汇总至<br>次日晨报</p></div>
+      </div>
+      <div class="note"><b>自动化值班台</b> 能同时监控多仓库的数百个改动点</div>
+    </section>
+    <aside class="card rules">
+      <h2 class="head">三条硬性红线</h2>
+      <div class="rule"><b>绝不碰业务逻辑</b><span>auto-fix 改动仅限失败测试文件本身或直接引用，严禁改核心代码。</span></div>
+      <div class="rule"><b>绝不自动合并</b><span>Fix Bot 只开带 auto-fix 标签的 Draft PR，绝不自动 Merge。</span></div>
+      <div class="rule"><b>灰度试跑一周</b><span>先在单个低风险边缘仓库跑一周，看采纳率，稳定后再推主仓。</span></div>
+    </aside>
+  </section>
+</main>
+</body>
+</html>

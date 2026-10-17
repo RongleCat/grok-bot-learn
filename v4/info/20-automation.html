@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>可靠的自动化</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { width: 1200px; height: 760px; margin: 0; overflow: hidden; }
+  body {
+    background: #faf9f6;
+    color: #1d2422;
+    font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  }
+  .canvas { width: 1200px; height: 760px; padding: 46px 58px 44px; position: relative; }
+  .heading { height: 100px; display: flex; align-items: flex-start; justify-content: space-between; }
+  h1 { margin: 0; font-size: 34px; line-height: 1.25; letter-spacing: .3px; font-weight: 760; }
+  .lead { margin: 10px 0 0; font-size: 17px; line-height: 1.45; color: #56605d; }
+  .bot { width: 108px; height: 108px; object-fit: contain; margin: -14px 14px 0 0; }
+  .decision { display: grid; grid-template-columns: 1fr 92px 1fr; align-items: stretch; height: 170px; }
+  .question, .trigger, .stage, .rule {
+    background: #fff;
+    border: 1px solid #dfdfd8;
+    border-radius: 24px;
+  }
+  .question { padding: 27px 30px; background: #f1f6f4; border-color: #bbd2c9; }
+  .question .eyebrow, .trigger .eyebrow, .stage .eyebrow, .rule .eyebrow {
+    color: #24735f; font-size: 15px; line-height: 1; font-weight: 700; letter-spacing: .5px;
+  }
+  .question h2 { margin: 13px 0 7px; font-size: 25px; line-height: 1.25; }
+  .question p, .trigger p, .stage p, .rule p { margin: 0; font-size: 16px; line-height: 1.5; color: #4f5956; }
+  .arrow { position: relative; }
+  .arrow::before { content: ""; position: absolute; left: 18px; right: 18px; top: 84px; height: 2px; background: #24735f; }
+  .arrow::after { content: ""; position: absolute; top: 78px; right: 17px; width: 12px; height: 12px; border-top: 2px solid #24735f; border-right: 2px solid #24735f; transform: rotate(45deg); }
+  .trigger { padding: 23px 27px; }
+  .trigger h3 { font-size: 22px; margin: 11px 0 7px; line-height: 1.2; }
+  .trigger.scheduled h3 { color: #b85c24; }
+  .trigger .eyebrow { color: #b85c24; }
+  .trigger.event { border-color: #bbd2c9; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 20px; }
+  .stage { height: 212px; padding: 23px 27px; position: relative; }
+  .stage h3 { margin: 11px 0 7px; font-size: 22px; line-height: 1.2; }
+  .stage .small { font-size: 15px; margin-top: 10px; color: #707875; }
+  .stage.brain { border-color: #bbd2c9; background: #f1f6f4; }
+  .stage.brain .eyebrow { color: #24735f; }
+  .stage.clock .eyebrow { color: #b85c24; }
+  .connector { position: absolute; right: -24px; top: 104px; width: 24px; height: 2px; background: #24735f; z-index: 2; }
+  .connector::after { content: ""; position: absolute; right: -1px; top: -5px; width: 9px; height: 9px; border-top: 2px solid #24735f; border-right: 2px solid #24735f; transform: rotate(45deg); }
+  .bottom { display: grid; grid-template-columns: 1.45fr 1fr; gap: 24px; margin-top: 20px; }
+  .rule { min-height: 112px; padding: 20px 25px; }
+  .rule h3 { margin: 9px 0 0; font-size: 18px; line-height: 1.35; }
+  .rule.safe { background: #fff8f3; border-color: #edc8ae; }
+  .rule.safe .eyebrow { color: #b85c24; }
+  .rule.safe h3 { color: #4b3930; }
+</style>
+</head>
+<body>
+  <main class="canvas">
+    <section class="heading">
+      <div>
+        <h1>可靠的自动化：定时、Webhook 与事件触发</h1>
+        <p class="lead">先分清任务属于“到点必须交付”还是“等待变化发生”</p>
+      </div>
+      <img class="bot" src="bots/galet-encre.png" alt="">
+    </section>
+
+    <section class="decision">
+      <article class="question">
+        <div class="eyebrow">触发器选型</div>
+        <h2>到点必须交付还是等待变化发生</h2>
+        <p>这是决定触发器选型和额度消耗的根本依据。</p>
+      </article>
+      <div class="arrow"></div>
+      <article class="trigger scheduled">
+        <div class="eyebrow">到点必须交付</div>
+        <h3>定时例程</h3>
+        <p>定期产出的 SEO 日报、周度汇总、月度财务核算</p>
+      </article>
+    </section>
+
+    <section class="split">
+      <article class="stage clock">
+        <div class="eyebrow">等待变化发生</div>
+        <h3>机械检查（闹钟）</h3>
+        <p>Linux cron 定时跑一个纯 Python 或 Shell 脚本。</p>
+        <p class="small">只做机械对比。绝对不要调用任何大模型。</p>
+        <span class="connector"></span>
+      </article>
+      <article class="stage brain">
+        <div class="eyebrow">发现数据变化</div>
+        <h3>智能判断（大脑）</h3>
+        <p>脚本向本台机器上绑定的 Webhook 发送 POST 请求，唤醒 Bot。</p>
+        <p class="small">读取增量数据，做内容分析、归纳总结并生成通知。</p>
+      </article>
+    </section>
+
+    <section class="bottom">
+      <article class="rule">
+        <div class="eyebrow">选型原则</div>
+        <h3>只有出现新数据才需要处理的任务，一律改用 Webhook 或第三方事件驱动。</h3>
+      </article>
+      <article class="rule safe">
+        <div class="eyebrow">安全人闸</div>
+        <h3>对于不可逆动作，必须强制设为手动审批。</h3>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

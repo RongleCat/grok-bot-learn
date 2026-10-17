@@ -1,0 +1,128 @@
+{
+ "part1": [
+  [
+   "1. Grok Bot 是什么",
+   "/part1/01-what-is"
+  ],
+  [
+   "2. 方案与订阅",
+   "/part1/02-plans"
+  ],
+  [
+   "3. 安装登录与第一个 Bot",
+   "/part1/03-install"
+  ],
+  [
+   "4. 交代任务",
+   "/part1/04-handoff"
+  ],
+  [
+   "5. 共享云电脑",
+   "/part1/05-computer"
+  ],
+  [
+   "6. 记忆",
+   "/part1/06-memory"
+  ],
+  [
+   "7. 连接应用",
+   "/part1/07-apps"
+  ],
+  [
+   "8. 技能与例程",
+   "/part1/08-skills-routines"
+  ],
+  [
+   "9. 群聊与团队 Bot",
+   "/part1/09-group-team"
+  ],
+  [
+   "10. 额度与成本",
+   "/part1/10-usage"
+  ],
+  [
+   "11. 权限、安全与人闸",
+   "/part1/11-safety"
+  ]
+ ],
+ "part2": [
+  [
+   "12. 自媒体与内容团队",
+   "/part2/12-content"
+  ],
+  [
+   "13. 在 X 上做内容与运营",
+   "/part2/13-x-ops"
+  ],
+  [
+   "14. 工程与研发团队",
+   "/part2/14-engineering"
+  ],
+  [
+   "15. 电商与生活实操",
+   "/part2/15-ecommerce"
+  ],
+  [
+   "16. 知识自动入库与微信打通",
+   "/part2/16-knowledge"
+  ],
+  [
+   "17. GTM、销售与幕僚长",
+   "/part2/17-gtm"
+  ],
+  [
+   "18. 一人公司与 AI 团队",
+   "/part2/18-solo"
+  ]
+ ],
+ "part3": [
+  [
+   "19. 团队编排",
+   "/part3/19-orchestration"
+  ],
+  [
+   "20. 可靠的自动化",
+   "/part3/20-automation"
+  ],
+  [
+   "21. 备份与恢复",
+   "/part3/21-backup"
+  ],
+  [
+   "22. 接入飞书与微信",
+   "/part3/22-feishu-wechat"
+  ]
+ ],
+ "part4": [
+  [
+   "23. 团队版与企业落地",
+   "/part4/23-enterprise"
+  ],
+  [
+   "24. 按岗位组建你的 AI 团队",
+   "/part4/24-roles"
+  ],
+  [
+   "25. 常见问题与排错",
+   "/part4/25-faq"
+  ]
+ ],
+ "cases": [
+  [
+   "中文长文精选",
+   "/cases/cn"
+  ],
+  [
+   "英文长文精选（上）",
+   "/cases/en1"
+  ],
+  [
+   "英文长文精选（下）",
+   "/cases/en2"
+  ],
+  [
+   "铁柱的实战长文与推文",
+   "/cases/tiezhu"
+  ]
+ ]
+}

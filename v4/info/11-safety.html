@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>权限、安全与人闸</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#faf9f6;color:#1d2020;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{position:relative;width:1200px;height:760px;padding:46px 64px 42px}.hero{height:108px;display:flex;align-items:flex-start;justify-content:space-between;border-bottom:1px solid #d9d8d2}.hero h1{font-size:34px;line-height:1.2;letter-spacing:.5px;margin:4px 0 0;font-weight:750}.hero p{font-size:18px;line-height:1.5;margin:13px 0 0;color:#555b59}.bot{width:104px;height:auto;object-fit:contain;margin:-17px 18px 0 0}.rule{position:absolute;top:174px;left:64px;width:1072px;height:78px;border:1px solid #b8d6ce;border-radius:23px;background:#edf7f4;display:flex;align-items:center;padding:0 28px;gap:20px}.rule strong{font-size:24px;color:#166a60;white-space:nowrap}.rule span{height:30px;width:1px;background:#b8d6ce}.rule p{font-size:18px;margin:0;line-height:1.45}.levels{position:absolute;top:280px;left:64px;width:1072px;height:354px;display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.level{border:1px solid #d8d8d2;border-radius:22px;background:#fff;padding:21px 18px 18px;display:flex;flex-direction:column;min-width:0}.level.low{border-top:5px solid #4d9c91}.level.high{border-top:5px solid #d66b55}.num{font-size:15px;font-weight:700;letter-spacing:1px;color:#777;margin-bottom:13px}.level h2{font-size:20px;line-height:1.3;margin:0 0 14px;font-weight:750}.level p{font-size:15px;line-height:1.55;margin:0;color:#454a48}.action{margin-top:auto;padding-top:15px;border-top:1px solid #e7e6e1}.action b{display:block;font-size:16px;line-height:1.35;color:#166a60}.high .action b{color:#ad4937}.flow{position:absolute;top:663px;left:64px;width:1072px;height:56px;border-radius:18px;background:#252a29;color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px;letter-spacing:.2px}.flow i{font-style:normal;color:#97d3c8;padding:0 18px;font-size:22px}.flow .stop{color:#ffab97}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="hero">
+<div>
+<h1>权限、安全与人闸</h1>
+<p>动作分级：按一分钟可逆性划分权限</p>
+</div>
+<img class="bot" src="bots/capsule-vert.png" alt="">
+</header>
+<section class="rule">
+<strong>一分钟撤回红线</strong><span></span><p>无法在一分钟内撤销的操作必须停下来问我</p>
+</section>
+<section class="levels">
+<article class="level low">
+<div class="num">01</div><h2>只读与检索</h2><p>抓取公开网页<br>检索知识库<br>读取本地文档</p><div class="action"><b>完全自主运行</b><p>无需审批，直接放行</p></div>
+</article>
+<article class="level low">
+<div class="num">02</div><h2>本地试错修改</h2><p>生成代码草稿<br>改写本地临时文件<br>运行本地测试</p><div class="action"><b>自主执行</b><p>限制在工作目录</p></div>
+</article>
+<article class="level high">
+<div class="num">03</div><h2>外部通信</h2><p>发送客户邮件<br>发消息<br>发布社交媒体动态</p><div class="action"><b>强制人闸</b><p>仅允许生成草稿</p></div>
+</article>
+<article class="level high">
+<div class="num">04</div><h2>资产与契约</h2><p>转账付款<br>同意用户协议<br>购买域名或服务</p><div class="action"><b>严禁自主执行</b><p>严禁 Bot 触碰结账按钮</p></div>
+</article>
+<article class="level high">
+<div class="num">05</div><h2>系统与权限</h2><p>删除非垃圾文件<br>更改线上生产配置<br>修改安全策略</p><div class="action"><b>强制人闸</b><p>Ask first，必须单次确认</p></div>
+</article>
+</section>
+<div class="flow">可逆 <i>→</i> 自主执行 <i>→</i> 不可逆 <i class="stop">→</i> 暂停并请求批准</div>
+</main>
+</body>
+</html>

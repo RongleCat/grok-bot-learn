@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>知识自动入库流水线</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fffaf2;color:#20201d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:36px 46px 38px}.top{height:98px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e6ded1}.title{font-size:38px;line-height:1.18;letter-spacing:-1px;font-weight:800}.bot{width:100px;height:100px;object-fit:contain;flex:none}.flow{height:138px;padding-top:15px;display:grid;grid-template-columns:1fr 38px 1fr 38px 1fr;align-items:center}.flow-card{height:106px;border:1px solid #e5dccd;border-radius:23px;background:#fffdf9;padding:18px 23px}.flow-card strong{display:block;font-size:21px;line-height:1.25;font-weight:750}.flow-card span{display:block;margin-top:8px;font-size:16px;line-height:1.35;color:#655f57}.arrow{color:#d96922;text-align:center;font-size:31px;font-weight:400}.lower{display:grid;grid-template-columns:480px 1fr;gap:24px;height:394px}.card{border:1px solid #e5dccd;border-radius:24px;background:#fffdf9;padding:24px 26px}.section-title{font-size:23px;line-height:1.2;font-weight:800;margin-bottom:18px}.step{display:grid;grid-template-columns:33px 1fr;gap:10px;margin:0 0 15px}.num{width:28px;height:28px;border-radius:14px;background:#e9722b;color:#fffdf9;text-align:center;font-size:16px;line-height:28px;font-weight:700}.step p{margin:2px 0 0;font-size:16px;line-height:1.38}.step p b{font-weight:750}.config{margin:2px 0 14px 43px;border:1px solid #eee5d9;border-radius:14px;overflow:hidden;font-size:15px;line-height:1.25}.row{display:grid;grid-template-columns:70px 1fr;border-bottom:1px solid #eee5d9}.row:last-child{border-bottom:0}.row div{padding:7px 10px}.row div:first-child{background:#fff6ea;color:#8a4a20;font-weight:700}.accept{display:flex;flex-direction:column}.accept-head{padding-bottom:18px;border-bottom:1px solid #e9e0d5}.accept-head p{font-size:17px;line-height:1.45;margin:9px 0 0}.result{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px;padding-top:20px}.item{min-height:76px;border:1px solid #eee5d9;border-radius:16px;padding:14px 16px;background:#fffaf3;font-size:16px;line-height:1.35;font-weight:650;display:flex;align-items:center}.last{grid-column:1 / -1;min-height:48px;padding:12px 16px}.highlight{color:#c85719;font-weight:800}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="top">
+<div class="title">Webhook 与快捷指令：知识自动入库</div>
+<img class="bot" src="bots/squircle-orange.png" alt="">
+</header>
+<section class="flow">
+<div class="flow-card"><strong>手机只发 URL 触发</strong><span>点分享后，发请求即刻启动</span></div>
+<div class="arrow">→</div>
+<div class="flow-card"><strong>Grok Bot 云端</strong><span>抓取、音视频转录与总结</span></div>
+<div class="arrow">→</div>
+<div class="flow-card"><strong>知识库</strong><span>自动生成标准化条目</span></div>
+</section>
+<section class="lower">
+<article class="card">
+<div class="section-title">搭建步骤</div>
+<div class="step"><div class="num">1</div><p>桌面端 Details 找到 Routines<br>让 Bot 建立解析任务<br><b>妥善保存生成的 Webhook URL 与 key</b></p></div>
+<div class="step"><div class="num">2</div><p>新建快捷指令“发送给知识库 Bot”<br>添加“获取 URL 内容”并按表配置参数</p></div>
+<div class="config">
+<div class="row"><div>URL</div><div>Webhook 地址</div></div>
+<div class="row"><div>方法</div><div>POST</div></div>
+<div class="row"><div>头部</div><div>Authorization · Bearer &lt;key&gt;</div></div>
+<div class="row"><div>请求体</div><div>JSON · “快捷指令输入”</div></div>
+</div>
+<div class="step"><div class="num">3</div><p><b>针对封闭应用加装辅助输入框</b><br>绑定到 iPhone 操作按钮，按键即可粘贴发送</p></div>
+</article>
+<article class="card accept">
+<div class="accept-head">
+<div class="section-title">验收标准</div>
+<p>点分享后，<span class="highlight">几秒内桌面端状态会转为运行中</span><br>任务完成后，知识库会自动生成标准化条目</p>
+</div>
+<div class="result">
+<div class="item">视频 ID 或网页原始短链</div>
+<div class="item">云端存储路径与关联知识页</div>
+<div class="item">核心提炼要点与作者标签</div>
+<div class="item">单次解析消耗的积分成本</div>
+<div class="item last">收录《2026 我的 Obsidian 完整分享》等长文时能自动回链</div>
+</div>
+</article>
+</section>
+</main>
+</body>
+</html>

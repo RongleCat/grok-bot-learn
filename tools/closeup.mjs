@@ -1,0 +1,11 @@
+import { chromium } from 'playwright'
+const b = await chromium.launch()
+const p = await b.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 3 })
+await p.goto('http://127.0.0.1:5173/', { waitUntil: 'networkidle' })
+await p.mouse.move(1300, 120)
+await p.waitForTimeout(1800)
+const o = await p.locator('.gh-orb').boundingBox()
+await p.screenshot({ path: '/workspace/grok-bot-learn/shots/v2-logo-closeup.png', clip: { x: o.x - 30, y: o.y - 20, width: o.width + 60, height: o.height + 40 } })
+const n = await p.locator('.nav-orb').boundingBox()
+await p.screenshot({ path: '/workspace/grok-bot-learn/shots/v2-logo-nav.png', clip: { x: n.x - 10, y: n.y - 10, width: 200, height: n.height + 20 } })
+await b.close()

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>1+N 主 Bot 派活模式</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { width: 1200px; height: 760px; margin: 0; overflow: hidden; }
+  body { background: #f8f7f4; color: #171715; font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; }
+  .canvas { position: relative; width: 1200px; height: 760px; padding: 48px 64px 46px; }
+  .head { height: 112px; display: flex; align-items: flex-start; justify-content: space-between; border-bottom: 1px solid #dedbd4; }
+  h1 { margin: 3px 0 0; font-size: 34px; line-height: 1.25; letter-spacing: -1px; font-weight: 760; }
+  .intro { margin: 14px 0 0; font-size: 17px; line-height: 1.5; color: #5b5954; }
+  .bot-image { width: 108px; height: 108px; object-fit: contain; margin: -14px 4px 0 0; }
+  .flow { position: relative; display: grid; grid-template-columns: 174px 1fr 174px; gap: 28px; height: 432px; padding-top: 36px; align-items: center; }
+  .card { position: relative; background: #fff; border: 1px solid #dedbd4; border-radius: 24px; padding: 22px 22px; box-shadow: 0 2px 0 rgba(23,23,21,.025); }
+  .user { min-height: 154px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+  .kicker { margin: 0 0 8px; font-size: 15px; line-height: 1.2; color: #77736c; font-weight: 650; }
+  .name { margin: 0; font-size: 23px; line-height: 1.25; font-weight: 740; }
+  .small { margin: 10px 0 0; font-size: 15px; line-height: 1.55; color: #5b5954; }
+  .arrow { position: absolute; top: 50%; right: -29px; width: 29px; height: 2px; background: #e36f2d; }
+  .arrow::after { content: ""; position: absolute; right: 0; top: -5px; width: 10px; height: 10px; border-top: 2px solid #e36f2d; border-right: 2px solid #e36f2d; transform: rotate(45deg); }
+  .center { height: 390px; display: grid; grid-template-rows: 150px 1fr; gap: 22px; }
+  .chief { padding: 22px 26px; border-color: #e36f2d; background: #fffaf6; }
+  .chief-top { display: flex; align-items: baseline; gap: 14px; }
+  .chief .kicker { margin: 0; color: #bd5720; }
+  .chief .name { font-size: 26px; }
+  .duties { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
+  .duty { border-left: 2px solid #e36f2d; padding-left: 10px; font-size: 15px; line-height: 1.35; font-weight: 650; }
+  .specialists { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .specialist { min-height: 218px; padding: 20px 18px; }
+  .specialist .name { font-size: 19px; }
+  .specialist ul { margin: 16px 0 0; padding: 0; list-style: none; }
+  .specialist li { margin: 0 0 10px; padding-left: 12px; position: relative; font-size: 15px; line-height: 1.4; color: #4e4b46; }
+  .specialist li::before { content: ""; position: absolute; width: 5px; height: 5px; left: 0; top: 8px; border-radius: 50%; background: #e36f2d; }
+  .return { min-height: 154px; text-align: center; display: flex; flex-direction: column; justify-content: center; background: #171715; color: #fff; border-color: #171715; }
+  .return .kicker, .return .small { color: #ddd9d1; }
+  .return .arrow { right: auto; left: -29px; transform: scaleX(-1); }
+  .bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 14px; }
+  .rule { border-radius: 18px; padding: 14px 20px; border: 1px solid #dedbd4; background: #fff; font-size: 15px; line-height: 1.45; color: #4e4b46; }
+  .rule strong { color: #171715; }
+</style>
+</head>
+<body>
+<main class="canvas">
+  <header class="head">
+    <div>
+      <h1>1+N 主 Bot 派活模式</h1>
+      <p class="intro">用户只与一个统筹 Bot 对话，由它负责拆解需求、向专职 Bot 派发任务、收集成果，并最终向用户汇总汇报。</p>
+    </div>
+    <img class="bot-image" src="bots/squircle-orange.png" alt="">
+  </header>
+  <section class="flow">
+    <article class="card user">
+      <p class="kicker">单一入口</p>
+      <h2 class="name">用户指令</h2>
+      <p class="small">跨模块业务指令</p>
+      <span class="arrow"></span>
+    </article>
+    <div class="center">
+      <article class="card chief">
+        <div class="chief-top">
+          <p class="kicker">统筹主 Bot</p>
+          <h2 class="name">路由与监督</h2>
+        </div>
+        <div class="duties">
+          <div class="duty">统一拆解</div>
+          <div class="duty">分派</div>
+          <div class="duty">汇总与五行简报汇报</div>
+        </div>
+      </article>
+      <div class="specialists">
+        <article class="card specialist">
+          <h2 class="name">专职 Bot A</h2>
+          <ul>
+            <li>一次性任务</li>
+            <li>写入指定文件路径</li>
+            <li>仅返回文件绝对路径</li>
+          </ul>
+        </article>
+        <article class="card specialist">
+          <h2 class="name">专职 Bot B</h2>
+          <ul>
+            <li>读取文件绝对路径</li>
+            <li>开始下一步分析</li>
+            <li>写入最终产物</li>
+          </ul>
+        </article>
+        <article class="card specialist">
+          <h2 class="name">待批清单</h2>
+          <ul>
+            <li>结构化清单</li>
+            <li>所有操作必须等待人工审批</li>
+            <li>不可逆动作始终被人闸拦截</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+    <article class="card return">
+      <span class="arrow"></span>
+      <p class="kicker">交付呈现</p>
+      <h2 class="name">汇总简报</h2>
+      <p class="small">附上云文档或本地文件的链接供用户审查</p>
+    </article>
+  </section>
+  <section class="bottom">
+    <div class="rule"><strong>主 Bot：</strong>绝不直接编写业务代码，不擅自修改生产配置。</div>
+    <div class="rule"><strong>Bot 间交接：</strong>对话框中传输的只有状态提示与文件绝对路径。</div>
+  </section>
+</main>
+</body>
+</html>

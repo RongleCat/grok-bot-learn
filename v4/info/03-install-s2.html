@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>桌面端下载与安装</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#f7f1e7;color:#20201d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.page{width:1200px;height:760px;padding:38px 52px 40px;position:relative}
+.hero{height:126px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d9d0c2}
+.hero-copy{padding-bottom:14px}
+h1{margin:0;font-size:38px;line-height:1.18;letter-spacing:.02em;font-weight:750}
+.bot{width:112px;height:112px;object-fit:contain;display:block;margin:0 27px 12px 0}
+.flow{height:320px;padding-top:30px;display:grid;grid-template-columns:1fr 48px 1fr 48px 1fr;align-items:stretch}
+.step{border:1px solid #d9d0c2;border-radius:24px;background:#fffdf9;padding:23px 24px 21px;position:relative}
+.step-no{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#db5839;color:#fffdf9;font-size:17px;font-weight:700;margin-bottom:18px}
+.step h2{margin:0 0 12px;font-size:24px;line-height:1.25;font-weight:720}
+.step p{margin:0;font-size:16px;line-height:1.62;color:#45423d}
+.strong{font-weight:700;color:#20201d}
+.arrow{display:flex;align-items:center;justify-content:center;color:#427c77;font-size:33px;font-weight:400}
+.check{margin-top:22px;height:174px;border:1px solid #d9d0c2;border-radius:24px;background:#eee8dc;padding:18px 24px 20px;display:grid;grid-template-columns:213px 1fr 1fr 1.08fr;column-gap:0;align-items:stretch}
+.check-title{padding:8px 20px 0 0;border-right:1px solid #d4cab9}
+.check-title h2{margin:0;font-size:22px;line-height:1.25}
+.check-title p{margin:10px 0 0;font-size:15px;line-height:1.5;color:#5b5852}
+.system{padding:8px 24px 0;border-right:1px solid #d4cab9}
+.system:last-child{border:0}
+.system h3{margin:0 0 13px;color:#427c77;font-size:18px;line-height:1.2;font-weight:750}
+.system p{margin:0;font-size:15px;line-height:1.55;color:#45423d}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="hero">
+<div class="hero-copy">
+<h1>桌面端下载与安装</h1>
+</div>
+<img class="bot" src="bots/galet-rouge.png" alt="">
+</header>
+<section class="flow" aria-label="安装流程">
+<article class="step">
+<div class="step-no">1</div>
+<h2>下载安装包</h2>
+<p>登录 <span class="strong">cursor.com/dashboard/bot</span><br>或直接去 <span class="strong">x.ai/bot</span> 下载。</p>
+<p style="margin-top:12px">若公司设备无权限，找管理员索取。</p>
+</article>
+<div class="arrow" aria-hidden="true">→</div>
+<article class="step">
+<div class="step-no">2</div>
+<h2>按系统安装</h2>
+<p>macOS 把下载的应用拖进 <span class="strong">Applications</span> 文件夹。</p>
+<p style="margin-top:12px">Windows 和 Linux 跑安装向导。</p>
+</article>
+<div class="arrow" aria-hidden="true">→</div>
+<article class="step">
+<div class="step-no">3</div>
+<h2>启动客户端</h2>
+<p>启动客户端看到登录界面就成了。</p>
+</article>
+</section>
+<section class="check" aria-label="系统支持">
+<div class="check-title">
+<h2>系统支持</h2>
+</div>
+<article class="system">
+<h3>macOS</h3>
+<p>Apple silicon<br>（M 系列）</p>
+<p style="margin-top:8px">Intel</p>
+</article>
+<article class="system">
+<h3>Windows</h3>
+<p>x64 与 Arm64</p>
+<p style="margin-top:8px">建议开硬件加速</p>
+</article>
+<article class="system">
+<h3>Linux</h3>
+<p>x64 与 Arm64</p>
+</article>
+</section>
+</main>
+</body>
+</html>

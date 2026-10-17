@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>Grok Bot 是什么</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#faf9f6;color:#1d2428;font-family:"PingFang SC","Noto Sans CJK SC",Arial,sans-serif}
+.page{width:1200px;height:760px;padding:44px 58px 38px;position:relative}
+.top{height:108px;position:relative}
+h1{margin:0;font-size:36px;letter-spacing:-1.2px;line-height:1.2;font-weight:760}
+.lead{margin:12px 0 0;font-size:17px;line-height:1.5;color:#5c6568;font-weight:500}
+.bot{position:absolute;right:16px;top:-12px;width:108px;height:auto;object-fit:contain}
+.flow{height:522px;display:grid;grid-template-columns:310px 52px 310px 52px 1fr;align-items:center}
+.stage{height:410px;border:1px solid #deded9;border-radius:25px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.stage-head{padding:25px 26px 19px;border-bottom:1px solid #ebeae6}
+.num{display:inline-flex;align-items:center;justify-content:center;width:31px;height:31px;border-radius:50%;background:#e7f1ef;color:#17655f;font-size:15px;font-weight:800;margin-bottom:12px}
+.stage:nth-child(3) .num{background:#f8ebe3;color:#b94e2b}
+.stage:nth-child(5) .num{background:#e7f1ef;color:#17655f}
+h2{font-size:23px;line-height:1.15;margin:0;font-weight:760;letter-spacing:-.5px}
+.body{padding:22px 26px;display:flex;flex:1;flex-direction:column;gap:12px}
+.item{border-radius:15px;background:#f7f8f7;padding:13px 15px;font-size:16px;line-height:1.35;font-weight:600}
+.item b{color:#17655f;font-weight:800}
+.stage:nth-child(3) .item b{color:#b94e2b}
+.note{margin-top:auto;padding-top:7px;font-size:15px;line-height:1.45;color:#687173}
+.arrow{height:2px;background:#ccd4d2;position:relative;margin:0 17px}
+.arrow:after{content:"";position:absolute;right:-1px;top:-5px;width:11px;height:11px;border-right:2px solid #17655f;border-top:2px solid #17655f;transform:rotate(45deg)}
+.final{height:410px;border:1px solid #17655f;border-radius:25px;background:#f4faf8;padding:25px 26px;display:flex;flex-direction:column}
+.final h2{color:#17655f}
+.result{margin-top:25px;font-size:20px;line-height:1.35;font-weight:760}
+.checks{display:grid;gap:10px;margin-top:20px}
+.check{font-size:16px;line-height:1.35;padding:11px 14px;background:#fff;border:1px solid #d8e9e5;border-radius:14px;font-weight:600}
+.guard{margin-top:auto;border-top:1px solid #cfe1dd;padding-top:16px;color:#17655f;font-size:16px;line-height:1.45;font-weight:760}
+.bottom{height:48px;border:1px solid #deded9;border-radius:17px;background:#fff;display:flex;align-items:center;padding:0 22px;font-size:16px;color:#3c474a;font-weight:600}
+.bottom strong{color:#b94e2b;margin-right:12px}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="top">
+<h1>Grok Bot：一个自带电脑的 AI 同事</h1>
+<p class="lead">核心设计：把环境底座与思考模型拆分，围绕具备长期职责的岗位组织工作。</p>
+<img class="bot" src="bots/capsule-vert.png" alt="">
+</header>
+<section class="flow" aria-label="Grok Bot 运行结构">
+<article class="stage">
+<div class="stage-head"><div class="num">1</div><h2>环境底座<br>Harness</h2></div>
+<div class="body">
+<div class="item"><b>常驻在云端</b>的虚拟计算机</div>
+<div class="item">可视化浏览器<br>持久化文件系统<br>Linux 终端环境</div>
+<p class="note">关闭桌面客户端、退出手机应用或合上笔记本盖子，后台任务和定时例程依然会继续执行。</p>
+</div>
+</article>
+<div class="arrow" aria-hidden="true"></div>
+<article class="stage">
+<div class="stage-head"><div class="num">2</div><h2>思考模型<br>Brain</h2></div>
+<div class="body">
+<div class="item"><b>系统按需调度</b></div>
+<div class="item">理解指令<br>规划步骤<br>调用工具</div>
+<p class="note">底座负责提供运行环境、记忆沉淀与定时调度。</p>
+</div>
+</article>
+<div class="arrow" aria-hidden="true"></div>
+<article class="final">
+<div class="num">3</div>
+<h2>长期岗位</h2>
+<div class="result">跨浏览器、跨系统协作的多步骤业务</div>
+<div class="checks">
+<div class="check">高频、重复、流程固定</div>
+<div class="check">中间文件或最终报告可由人工直接核验</div>
+</div>
+<div class="guard">共享同一台后台电脑和同一个文件系统；跨 Bot 协同依赖文件落盘。</div>
+</article>
+</section>
+<div class="bottom"><strong>人工审批闸门</strong>遇到登录密码、两步验证码、Passkey 认证或账单支付等高敏感环节，由人工接管操作。</div>
+</main>
+</body>
+</html>

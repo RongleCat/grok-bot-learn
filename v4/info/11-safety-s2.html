@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>一分钟可逆性</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#f8f3e9;color:#24221f;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:34px 48px 40px}.head{height:112px;display:flex;align-items:center;gap:24px;border-bottom:1px solid #d7cfc0}.head img{width:106px;height:106px;object-fit:contain;flex:none}.head h1{margin:0;font-size:40px;line-height:1.15;letter-spacing:-1.5px;font-weight:750}.content{display:grid;grid-template-columns:322px 1fr;gap:22px;padding-top:24px}.card{background:#fffdfa;border:1px solid #d7cfc0;border-radius:24px}.decision{height:386px;padding:27px 26px;background:#fdf9f2}.decision h2{margin:0;font-size:23px;line-height:1.3}.minute{height:153px;margin:20px 0 18px;border-radius:20px;background:#e7f0ed;display:flex;align-items:center;justify-content:center;gap:16px;color:#17675e}.clock{width:72px;height:72px;border:4px solid #17675e;border-radius:50%;position:relative;flex:none}.clock:before{content:"";position:absolute;width:4px;height:23px;left:30px;top:11px;border-radius:3px;background:#17675e;transform-origin:bottom;transform:rotate(40deg)}.clock:after{content:"";position:absolute;width:4px;height:26px;left:32px;top:33px;border-radius:3px;background:#17675e;transform-origin:top;transform:rotate(-85deg)}.minute strong{font-size:34px;letter-spacing:-1px}.question{font-size:19px;font-weight:700;line-height:1.42}.answer{margin-top:10px;font-size:16px;line-height:1.5;color:#59554e}.paths{height:386px;display:grid;grid-template-columns:1fr 1fr;gap:14px}.path{padding:22px 22px 18px}.path h2{margin:0 0 15px;font-size:21px;line-height:1.25}.path.allow{border-color:#aac7c0}.path.allow h2{color:#17675e}.path.ask{border-color:#e3b6a7}.path.ask h2{color:#a7472d}.entry{padding:12px 13px;margin-top:9px;border-radius:15px;background:#f3eee5;font-size:16px;line-height:1.4}.allow .entry{background:#edf5f2}.ask .entry{background:#fbeee9}.entry b{display:block;font-size:17px;margin-bottom:2px;color:#24221f}.bottom{height:151px;margin-top:20px;padding:19px 22px;display:grid;grid-template-columns:1.15fr 1fr 1.05fr;gap:19px}.rule{padding-left:16px;border-left:4px solid #17675e}.rule:nth-child(2){border-left-color:#a7472d}.rule h2{margin:0 0 7px;font-size:17px;line-height:1.3}.rule p{margin:0;font-size:15px;line-height:1.48;color:#514d46}.rule strong{color:#24221f}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head">
+<img src="bots/cercle-bleu.png" alt="">
+<h1>一分钟可逆性</h1>
+</header>
+<section class="content">
+<article class="card decision">
+<h2>放权标准只有一条</h2>
+<div class="minute"><span class="clock"></span><strong>1 分钟<br>60 秒</strong></div>
+<div class="question">动作能否在 1 分钟内撤回？</div>
+<div class="answer">能轻松还原的操作直接放行；无法快速撤回的操作必须卡审批。</div>
+</article>
+<div class="paths">
+<article class="card path allow">
+<h2>可逆：自主运行</h2>
+<div class="entry"><b>只读与检索</b>读 /workspace、查 API 余额<br>直接放行</div>
+<div class="entry"><b>本地试错修改</b>改临时文件、跑 git status<br>限制在工作目录</div>
+</article>
+<article class="card path ask">
+<h2>不可逆：必须审批</h2>
+<div class="entry"><b>外部通信</b>发邮件、发私信<br>仅允许生成草稿</div>
+<div class="entry"><b>资产与契约</b>转账付款、改订阅套餐<br>严禁自主执行，严禁碰结账</div>
+<div class="entry"><b>系统与权限</b>删非垃圾文件、改生产配置<br>强制人闸，Ask first 单次确认</div>
+</article>
+</div>
+</section>
+<section class="card bottom">
+<div class="rule">
+<h2>写进全局规则</h2>
+<p>“无法在一分钟内撤销的操作必须停下来问我”。模型越聪明，越必须焊死权限边界。</p>
+</div>
+<div class="rule">
+<h2>夜间 Routine</h2>
+<p>绝不能挂起发信审批。输出终点设为“保存为本地文件”或“生成草稿卡片”。</p>
+</div>
+<div class="rule">
+<h2>验收标准</h2>
+<p>沙盒及工作目录内自主完成准备；不可逆动作触发前<strong>主动挂起等待人工卡片确认</strong>；夜间自动化任务不因超时中断。</p>
+</div>
+</section>
+</main>
+</body>
+</html>

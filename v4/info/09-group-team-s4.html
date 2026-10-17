@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>1+N 主 Bot 派活模式</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#f8f2e9;color:#191714;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.canvas{width:1200px;height:760px;padding:32px 42px 38px;display:flex;flex-direction:column}.top{height:132px;display:flex;align-items:center;border-bottom:1px solid #d9d0c4}.title{font-size:40px;line-height:1.12;letter-spacing:-1.5px;font-weight:800;flex:1}.bot{width:112px;height:112px;object-fit:contain;margin-left:24px}.content{display:grid;grid-template-columns:350px 1fr;gap:24px;flex:1;padding-top:24px;min-height:0}.card{background:#fffdfa;border:1px solid #d9d0c4;border-radius:24px}.left{padding:24px 22px;display:flex;flex-direction:column;gap:16px}.left h2,.right h2{font-size:19px;line-height:1.2;margin:0;font-weight:800}.entry{border:1px solid #e3dbd0;border-radius:17px;padding:13px 15px;background:#fff}.entry strong{display:block;font-size:16px;line-height:1.25;margin-bottom:5px}.entry p{margin:0;font-size:15px;line-height:1.4}.accent{color:#a94e24}.right{padding:20px 22px;display:flex;flex-direction:column;gap:13px}.flow{display:grid;grid-template-columns:1fr 34px 1.15fr 34px 1fr;align-items:stretch;min-height:140px}.step{border-radius:18px;padding:15px 15px;background:#fff7ec;border:1px solid #e6c8a1;display:flex;flex-direction:column;justify-content:center}.step.center{background:#28332e;color:#fff;border-color:#28332e}.step strong{font-size:18px;line-height:1.25}.step span{font-size:15px;line-height:1.38;margin-top:7px}.arrow{font-size:27px;text-align:center;align-self:center;color:#a94e24}.line{height:1px;background:#ddd3c7;margin:2px 0}.rule-title{font-size:18px;font-weight:800;margin:0}.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.rule{border-radius:16px;border:1px solid #e3dbd0;padding:12px 13px;min-height:88px}.rule b{display:block;font-size:15px;line-height:1.25;margin-bottom:5px}.rule span{font-size:15px;line-height:1.35;display:block}.checks{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.check{padding:11px 13px;border-left:4px solid #a94e24;background:#f3eee7;border-radius:0 14px 14px 0;font-size:15px;line-height:1.35}.check b{display:block;font-size:15px;margin-bottom:3px}
+</style>
+</head>
+<body>
+<main class="canvas">
+  <header class="top">
+    <div class="title">1+N 主 Bot 派活模式</div>
+    <img class="bot" src="bots/hexagone-ambre.png" alt="Bot">
+  </header>
+  <section class="content">
+    <aside class="card left">
+      <h2>主 Bot 六行章程</h2>
+      <div class="entry"><strong>Own</strong><p>统一拆解、分派、汇总与五行简报汇报。</p></div>
+      <div class="entry"><strong>Output</strong><p>纯文本状态摘要，超出五行时输出为指定文件路径。</p></div>
+      <div class="entry"><strong>Approval</strong><p>任何对外通信、采购、删除操作必须暂停等待确认。</p></div>
+      <div class="entry"><strong>Never</strong><p>永远不直接编写业务代码，不擅自修改生产配置。</p></div>
+    </aside>
+    <section class="card right">
+      <h2>你只跟统筹主 Bot 沟通</h2>
+      <div class="flow">
+        <div class="step"><strong>人工</strong><span>下发指令<br>确认建议或批注修改</span></div>
+        <div class="arrow">→</div>
+        <div class="step center"><strong>统筹主 Bot</strong><span>只负责路由与监督<br>拆解、派活与汇总</span></div>
+        <div class="arrow">→</div>
+        <div class="step"><strong>专职 Bot</strong><span>各司其职<br>只输出结构化待批清单</span></div>
+      </div>
+      <div class="line"></div>
+      <p class="rule-title">专职边界：只产出，不直接执行</p>
+      <div class="rules">
+        <div class="rule"><b>广告投手 Bot</b><span>分析数据并出具待批清单；绝不碰后台与出价。</span></div>
+        <div class="rule"><b>文案创作 Bot</b><span>只出草稿文件，严禁调接口直接上线公开内容。</span></div>
+        <div class="rule"><b>竞品调研 Bot</b><span>前台只看不动，严禁下单加购，也不留评或向卖家提问。</span></div>
+      </div>
+      <div class="line"></div>
+      <p class="rule-title">三项验收</p>
+      <div class="checks">
+        <div class="check"><b>交互与主 Bot</b>单入口清晰运行；主 Bot 不写长代码、不写长文章</div>
+        <div class="check"><b>专职 Bot</b>各司其职，只产出结构化清单</div>
+        <div class="check"><b>高风险动作</b>不可逆操作均有明确人工确认卡点</div>
+      </div>
+    </section>
+  </section>
+</main>
+</body>
+</html>

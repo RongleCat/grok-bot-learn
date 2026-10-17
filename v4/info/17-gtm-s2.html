@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>五个工作例程</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#f8f3ea;color:#1f201c;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.page{width:1200px;height:760px;padding:36px 44px 40px}
+header{height:135px;display:flex;align-items:center;border-bottom:1px solid #d9d2c6}
+h1{margin:0;font-size:42px;line-height:1.12;letter-spacing:-1.6px;font-weight:750}
+.bot{width:112px;height:112px;object-fit:contain;margin-left:auto;margin-right:30px}
+.routines{padding-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{height:245px;border:1px solid #d9d2c6;border-radius:23px;background:#fffdfa;padding:21px 22px 18px;position:relative;overflow:hidden}
+.num{position:absolute;right:21px;top:16px;font-size:40px;line-height:1;color:#276d88;font-weight:720;letter-spacing:-1px}
+.card h2{margin:0 47px 7px 0;font-size:21px;line-height:1.3;font-weight:720;letter-spacing:-.4px}
+.time{display:inline-block;margin:0 0 17px;padding:5px 10px;border-radius:999px;background:#e3f0f2;color:#276d88;font-size:15px;line-height:1.25;font-weight:650}
+.card ul{margin:0;padding:0;list-style:none;font-size:15px;line-height:1.56;color:#44443f}
+.card li{position:relative;padding-left:13px;margin:3px 0}.card li:before{content:"";position:absolute;left:0;top:.69em;width:5px;height:5px;border-radius:50%;background:#d47d53}
+.wide{grid-column:span 1}
+.bottom{grid-column:span 1}
+.card:nth-child(4){grid-column:1 / span 1}.card:nth-child(5){grid-column:2 / span 1}
+</style>
+</head>
+<body>
+<main class="page">
+<header>
+<div>
+<h1>五个工作例程</h1>
+</div>
+<img class="bot" src="bots/cercle-bleu.png" alt="">
+</header>
+<section class="routines">
+<article class="card">
+<div class="num">01</div>
+<h2>晨间简报</h2>
+<div class="time">工作日 07:00</div>
+<ul><li>今天的会议</li><li>昨天挂起、仍未回答的事项</li><li>建议优先做的三件事，以及原因</li><li>除非我要求，不起草回复</li></ul>
+</article>
+<article class="card">
+<div class="num">02</div>
+<h2>静默待办捕获</h2>
+<div class="time">挂起动作超过 24 小时无人工答复</div>
+<ul><li>动作是什么</li><li>不处理会怎样</li><li>YES 执行，NO 终止，DEFER {hours} 延后</li><li>提醒后 24 小时未回复，终止并记录</li></ul>
+</article>
+<article class="card">
+<div class="num">03</div>
+<h2>下班交接</h2>
+<div class="time">每日 18:00</div>
+<ul><li>仍在隔夜运行的事项及预计完成时间</li><li>明早简报前需要回答的事项</li><li>无待办时：Nothing pending. Handoff clear.</li><li>除 STOP 或需要审批，否则次日 7:00 前不再发送</li></ul>
+</article>
+<article class="card">
+<div class="num">04</div>
+<h2>周度复盘</h2>
+<div class="time">每周五 16:00</div>
+<ul><li>已完成：本周批准的事项</li><li>未回答的挂起事项</li><li>已终止的例程或草稿，以及原因</li><li>成本检查：周度额度与消耗最多的三项任务</li><li>下周会改变的一件事</li></ul>
+</article>
+<article class="card">
+<div class="num">05</div>
+<h2>健康度巡检</h2>
+<div class="time">每月第一个周一 09:00</div>
+<ul><li>列出运行的每个例程</li><li>本月触发次数、获批准结果次数</li><li>静默失败或被忽略的次数</li><li>说明建议终止的例程及原因</li><li>终止任何事项前，等待我的确认</li></ul>
+</article>
+</section>
+</main>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>触发器选型</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#fbf7f0;color:#20201e;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.page{width:1200px;height:760px;padding:40px 56px 38px}
+.head{height:88px;display:flex;align-items:center;justify-content:space-between}
+h1{margin:0;font-size:38px;line-height:1.15;letter-spacing:-1.1px;font-weight:760}
+.bot{width:108px;height:108px;object-fit:contain;display:block;margin-right:12px}
+.context{height:74px;border:1px solid #ded8cd;border-radius:22px;background:#fffdf9;display:flex;align-items:center;padding:0 26px;font-size:20px;line-height:1.45;letter-spacing:.1px}
+.context strong{color:#207f77;font-weight:750}
+.compare{height:352px;margin-top:18px;display:grid;grid-template-columns:1fr 64px 1fr;gap:16px;align-items:stretch}
+.card{border:1px solid #ddd6ca;border-radius:24px;background:#fffdf9;padding:24px 26px}
+.scheduled{border-top:6px solid #e29443}
+.event{border-top:6px solid #2d8c83}
+.card h2{margin:0 0 14px;font-size:25px;line-height:1.2;letter-spacing:-.4px}
+.scheduled h2{color:#a95d1f}.event h2{color:#207f77}
+.rule{height:1px;background:#e6e0d6;margin-bottom:15px}
+.row{display:grid;grid-template-columns:106px 1fr;gap:12px;align-items:start;margin:11px 0;font-size:17px;line-height:1.45}
+.term{font-weight:730;color:#3b3935}.desc{color:#4c4943}
+.key{margin-top:16px;padding:12px 14px;border-radius:14px;background:#f8eee4;color:#7c4a26;font-weight:680;font-size:16px;line-height:1.42}
+.event .key{background:#e8f4f0;color:#166a64}
+.divider{display:flex;align-items:center;justify-content:center}
+.divider span{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:#292a28;color:#fff;font-size:16px;font-weight:700}
+.bottom{height:112px;margin-top:18px;display:grid;grid-template-columns:1.55fr 1fr;gap:18px}
+.decision{border:1px solid #bddbd5;border-radius:22px;background:#edf7f4;padding:20px 24px;display:flex;align-items:center;font-size:20px;line-height:1.45;font-weight:720;color:#185e59}
+.limits{border:1px solid #ded8cd;border-radius:22px;background:#fffdf9;padding:15px 22px;display:flex;flex-direction:column;justify-content:center;gap:4px;font-size:15px;line-height:1.38;color:#49463f}
+.limits strong{font-size:16px;color:#2e2d29}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="head">
+    <h1>到点交付，还是等待变化？</h1>
+    <img class="bot" src="bots/capsule-vert.png" alt="">
+  </header>
+  <section class="context">先分清是<strong>到点交差</strong>还是<strong>等新数据</strong>。Bot 与 Grok、Cursor 共享每周额度池，高频轮询几天就耗尽。</section>
+  <section class="compare" aria-label="触发方式对比">
+    <article class="card scheduled">
+      <h2>到点交差</h2>
+      <div class="rule"></div>
+      <div class="row"><div class="term">定时例程</div><div class="desc">到点无论有无数据均计费</div></div>
+      <div class="row"><div class="term">适合</div><div class="desc">固定日报</div></div>
+      <div class="key">定时最短间隔 5 分钟</div>
+    </article>
+    <div class="divider"><span>或</span></div>
+    <article class="card event">
+      <h2>等新数据</h2>
+      <div class="rule"></div>
+      <div class="row"><div class="term">Webhook</div><div class="desc">平时零消耗；仅限带 Bearer 密钥的 POST 请求</div></div>
+      <div class="row"><div class="term">第三方事件</div><div class="desc">GitHub、Slack 等；有事件才唤醒</div></div>
+      <div class="key">繁忙频道易刷爆额度</div>
+    </article>
+  </section>
+  <section class="bottom">
+    <div class="decision">等新数据才处理，一律改用 Webhook 或第三方事件。</div>
+    <div class="limits"><strong>单 Bot 限 50 个 Routine，记录留 20 次</strong><span>X 互动：回复 @bot；无法解析视频帖，同时 @grok 与 @bot 不触发。</span></div>
+  </section>
+</main>
+</body>
+</html>

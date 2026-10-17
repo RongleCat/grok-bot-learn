@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The X Subscription</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#fffaf1;color:#1d1b18;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.page{width:1200px;height:760px;padding:30px 36px 36px}
+.header{height:106px;border-bottom:1px solid #e6ded1;display:flex;align-items:center;position:relative}
+.eyebrow{font-size:15px;font-weight:700;letter-spacing:.08em;color:#a85e17;margin-bottom:8px}
+h1{font-size:32px;line-height:1.18;margin:0;font-weight:800;letter-spacing:-.03em}
+.mark{position:absolute;right:14px;top:0;width:108px;height:108px;object-fit:contain}
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:22px}
+.card{height:373px;border:1px solid #ded7cc;border-radius:22px;background:#fffdf8;padding:18px 16px 16px;display:flex;flex-direction:column}
+.card.free{background:#f6f1e8}
+.tier{font-size:21px;font-weight:800;line-height:1.1;margin:0 0 8px}
+.price{font-size:15px;line-height:1.5;min-height:48px;font-weight:700;color:#a85e17}
+.metric{border-top:1px solid #e5ddd1;border-bottom:1px solid #e5ddd1;padding:11px 0 10px;margin:3px 0 13px}
+.metric b{display:block;font-size:23px;line-height:1.05;letter-spacing:-.03em}
+.metric span{font-size:15px;color:#5b554d;line-height:1.4}
+.benefit{font-size:15px;line-height:1.55;margin:0;color:#39342e}
+.bot{margin-top:auto;padding-top:12px;font-size:15px;font-weight:800;line-height:1.35;color:#1d1b18}
+.bot.yes{color:#a85e17}
+.bottom{height:154px;margin-top:18px;border:1px solid #ded7cc;border-radius:22px;background:#1d1b18;color:#fffaf1;display:grid;grid-template-columns:216px 1fr;align-items:stretch;overflow:hidden}
+.bottom-label{padding:22px 18px;border-right:1px solid #514b43;display:flex;flex-direction:column;justify-content:center}
+.bottom-label strong{font-size:20px;line-height:1.25}
+.bottom-label span{font-size:15px;color:#e0d6c7;margin-top:7px;line-height:1.4}
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:18px 12px}
+.rule{padding:4px 16px;border-right:1px solid #514b43;font-size:15px;line-height:1.55}
+.rule:last-child{border-right:0}
+.rule b{display:block;color:#f0b666;font-size:16px;margin-bottom:5px}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="header">
+<div>
+<div class="eyebrow">2026 年 10 月 12 日起</div>
+<h1>The X Subscription：四档与免费档</h1>
+</div>
+<img class="mark" src="bots/hexagone-ambre.png" alt="">
+</header>
+<section class="cards" aria-label="订阅档位对比">
+<article class="card free">
+<h2 class="tier">免费档</h2>
+<div class="price">$0</div>
+<div class="metric"><b>仅试用额度</b><span>基础网页对话与轻量体验</span></div>
+<p class="benefit">7 天额度试用</p>
+<div class="bot">Grok Bot：7 天额度试用</div>
+</article>
+<article class="card">
+<h2 class="tier">Plus</h2>
+<div class="price">$8/月（折合约$7）<br>$80/年</div>
+<div class="metric"><b>1 倍</b><span>用量倍数</span></div>
+<p class="benefit">Grok 对话、图片生成、API、Build、Cursor、认证、部分免广告</p>
+<div class="bot">Grok Bot：不包含</div>
+</article>
+<article class="card">
+<h2 class="tier">Premium</h2>
+<div class="price">$30/月<br>$300/年</div>
+<div class="metric"><b>4 倍</b><span>用量倍数</span></div>
+<p class="benefit">含 Plus、Cloud agents、视频、Origin、Bugbot、大多数免广告</p>
+<div class="bot yes">Grok Bot：包含（准入门槛）</div>
+</article>
+<article class="card">
+<h2 class="tier">Super</h2>
+<div class="price">$100/月<br>$1000/年</div>
+<div class="metric"><b>15 倍</b><span>用量倍数</span></div>
+<p class="benefit">含 Premium、高峰时段优先访问</p>
+<div class="bot yes">Grok Bot：包含</div>
+</article>
+<article class="card">
+<h2 class="tier">Ultra</h2>
+<div class="price">$200/月<br>$2000/年</div>
+<div class="metric"><b>50 倍</b><span>用量倍数</span></div>
+<p class="benefit">含 Super、新产品新模型早期访问</p>
+<div class="bot yes">Grok Bot：包含（最高配额）</div>
+</article>
+</section>
+<section class="bottom" aria-label="选择关键点">
+<div class="bottom-label"><strong>跑自动化任务<br>从 Premium 起步</strong><span>每月 30 美元</span></div>
+<div class="rules">
+<div class="rule"><b>Plus 不包含</b>Grok Bot 与 Cloud agents</div>
+<div class="rule"><b>免费试用</b>7 天有效期；额度按任务规模、步骤和 token 扣除</div>
+<div class="rule"><b>重度任务</b>可能一次耗尽，用完不恢复</div>
+</div>
+</section>
+</main>
+</body>
+</html>

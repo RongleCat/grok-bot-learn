@@ -1,0 +1,669 @@
+{
+ "jobs": [
+  [
+   "part1/01-what-is",
+   "第 1 章 Grok Bot 是什么：一个自带电脑的 AI 同事",
+   "产品机制、和普通聊天助手的区别、共享云电脑的边界、适合与不适合的任务、和 Muse/Hermes/dots/Cue 的选型对比表",
+   [
+    "docs_grok-bot.md",
+    "docs_grok-bot_use-cases.md",
+    "fs02.md",
+    "fs03.md",
+    "fs21.md",
+    "fs24.md"
+   ]
+  ],
+  [
+   "part1/02-plans",
+   "第 2 章 方案与订阅：先选对档位",
+   "以 2026-10-12 起的 The X Subscription 为准讲四档与免费档、每周共享用量池、哪些档含 Grok Bot、Cursor 方案与 SuperGrok 关联、团队版与按需、老订阅切换注意、如何查看用量；不要写任何开发者积分或旧资费",
+   [
+    "help_grok-bot_plans.md",
+    "help_grok-bot_supergrok.md",
+    "help_grok-bot_mobile-purchase.md",
+    "help_grok-bot_models.md",
+    "fs16.md",
+    "fs18.md"
+   ]
+  ],
+  [
+   "part1/03-install",
+   "第 3 章 安装登录与第一个 Bot",
+   "下载安装、登录、iOS、创建第一个 Bot、写职责（六行合同）、第一条任务、验收清单、常见登录问题",
+   [
+    "docs_grok-bot_get-started.md",
+    "help_grok-bot_onboarding.md",
+    "help_grok-bot_sign-in.md",
+    "help_grok-bot_mobile.md",
+    "help_grok-bot_edit-bot.md",
+    "fs02.md",
+    "fs24.md",
+    "fs30.md"
+   ]
+  ],
+  [
+   "part1/04-handoff",
+   "第 4 章 交代任务：消息、附件与一次好的交接",
+   "好请求的五要素、附件限制表、提示词示例多条、长期规则 vs 任务、停止与插话、语音、常见失败写法对照",
+   [
+    "docs_grok-bot.md",
+    "docs_grok-bot_work.md",
+    "help_grok-bot_how-to.md",
+    "help_grok-bot_voice-chat.md",
+    "fs33.md",
+    "fs37.md",
+    "fs49.md"
+   ]
+  ],
+  [
+   "part1/05-computer",
+   "第 5 章 共享云电脑：文件、浏览器与接管",
+   "共享电脑机制、各 Bot 屏幕、接管登录、文件交接约定、本地网络出口、重建与恢复、实操步骤与坑",
+   [
+    "docs_grok-bot_computers.md",
+    "docs_grok-bot_settings.md",
+    "help_grok-bot_computer-recovery.md",
+    "fs69.md",
+    "fs14.md"
+   ]
+  ],
+  [
+   "part1/06-memory",
+   "第 6 章 记忆：让 Bot 越用越懂你",
+   "官方记忆说明、记忆分层、什么该记什么不该记、记忆与技能的边界、团队记忆、记忆备份流程、提示词",
+   [
+    "docs_grok-bot_work.md",
+    "fs57.md",
+    "fs69.md",
+    "fs46.md"
+   ]
+  ],
+  [
+   "part1/07-apps",
+   "第 7 章 连接应用：插件、邮箱与 Secrets",
+   "先界面后连接器的接入顺序、插件连接步骤、Bot 专属邮箱、Secrets、X 检索、安装开源 Skill 与 CLI、坑点",
+   [
+    "help_grok-bot_connect-plugins.md",
+    "help_grok-bot_agent-email.md",
+    "help_grok-bot_secrets.md",
+    "fs68.md",
+    "fs42.md"
+   ]
+  ],
+  [
+   "part1/08-skills-routines",
+   "第 8 章 技能与例程：把一次成功变成每天自动跑",
+   "技能的生成与引用、例程设置/查看/测试、时区、webhook 字段与 200 含义、Slack 触发器、例程排错、示例例程若干",
+   [
+    "help_grok-bot_routines.md",
+    "help_grok-bot_how-to.md",
+    "docs_grok-bot_work.md",
+    "fs66.md",
+    "fs12.md",
+    "fs06.md"
+   ]
+  ],
+  [
+   "part1/09-group-team",
+   "第 9 章 群聊与团队 Bot：从一个 Bot 到一组 Bot",
+   "群聊规则、Bot 互发消息、团队 Bot 与 Slack 对照表、主 Bot 派活模式、交接文件约定、用量影响",
+   [
+    "help_grok-bot_group-chats.md",
+    "help_grok-bot_team-bots.md",
+    "fs53.md",
+    "fs35.md",
+    "fs65.md"
+   ]
+  ],
+  [
+   "part1/10-usage",
+   "第 10 章 额度与成本：让一周用量撑满一周",
+   "扣费原理、高耗操作清单、省额度四步、例程与轮询优化、群聊回复控制、用量审计、直接发给 Bot 的省额度指令",
+   [
+    "help_grok-bot_plans.md",
+    "help_grok-bot_routines.md",
+    "fs64.md",
+    "fs09.md",
+    "fs12.md",
+    "fs13.md",
+    "fs54.md"
+   ]
+  ],
+  [
+   "part1/11-safety",
+   "第 11 章 权限、安全与人闸",
+   "批准与 Auto Review、按可逆性分级放权、网络策略、日志、凭证处理、对外发信审批、安全 FAQ 要点、配置清单",
+   [
+    "docs_grok-bot_security.md",
+    "docs_grok-bot_security-faq.md",
+    "fs67.md",
+    "fs45.md"
+   ]
+  ],
+  [
+   "part2/12-content",
+   "第 12 章 案例：自媒体与内容团队",
+   "以多篇案例为素材讲内容团队的岗位设计、选题-起草-配图-分发流程、提示词、坑点，每个案例写清做法与可借鉴点",
+   [
+    "fs26.md",
+    "fs28.md",
+    "fs32.md",
+    "fs36.md",
+    "fs20.md"
+   ]
+  ],
+  [
+   "part2/13-x-ops",
+   "第 13 章 案例：在 X 上做内容与运营",
+   "X 检索、自动化 X 内容、微信一句话运营 X、5 个 Bot 模板、只出草稿的审批设计",
+   [
+    "fs34.md",
+    "fs41.md",
+    "fs66.md",
+    "fs19.md"
+   ]
+  ],
+  [
+   "part2/14-engineering",
+   "第 14 章 案例：工程与研发团队",
+   "PR 巡检、仓库值班台、工程 harness、与本地 CLI agent 分工、九类工作清单、提示词与坑",
+   [
+    "fs25.md",
+    "fs31.md",
+    "fs50.md",
+    "fs51.md",
+    "fs58.md",
+    "fs62.md",
+    "fs59.md"
+   ]
+  ],
+  [
+   "part2/15-ecommerce",
+   "第 15 章 案例：电商与生活实操",
+   "闲鱼上架、小红书做图、找工具、做短视频、整理收藏、亚马逊团队搭建",
+   [
+    "fs27.md",
+    "fs38.md"
+   ]
+  ],
+  [
+   "part2/16-knowledge",
+   "第 16 章 案例：知识自动入库与微信打通",
+   "Webhook+快捷指令入库流水线、微信聊天记录打通、接入微信、步骤与提示词",
+   [
+    "fs06.md",
+    "fs11.md",
+    "fs29.md"
+   ]
+  ],
+  [
+   "part2/17-gtm",
+   "第 17 章 案例：GTM、销售与幕僚长",
+   "GTM 用法、Chief of Staff 章程与例程、销售外联只出草稿",
+   [
+    "fs40.md",
+    "fs45.md",
+    "fs56.md",
+    "docs_grok-bot_use-cases.md"
+   ]
+  ],
+  [
+   "part2/18-solo",
+   "第 18 章 案例：一人公司与 AI 团队",
+   "一人公司、AI agency、从零到运转的公司、29 个 Agent、第一个 AI 员工，如何逐步扩编",
+   [
+    "fs44.md",
+    "fs47.md",
+    "fs48.md",
+    "fs52.md",
+    "fs55.md",
+    "fs60.md",
+    "fs61.md",
+    "fs43.md"
+   ]
+  ],
+  [
+   "part3/19-orchestration",
+   "第 19 章 团队编排：章程、岗位与放权",
+   "主 Bot 与专职 Bot、章程模板、岗位拆分方法、放权分级、交接规范、扩编节奏",
+   [
+    "fs65.md",
+    "fs45.md",
+    "fs35.md",
+    "fs36.md",
+    "fs44.md"
+   ]
+  ],
+  [
+   "part3/20-automation",
+   "第 20 章 可靠的自动化：定时、Webhook 与事件触发",
+   "触发器选型、例程设计模板、Webhook 接入、增量判断避免空跑、失败兜底、监控",
+   [
+    "fs66.md",
+    "fs06.md",
+    "fs12.md",
+    "help_grok-bot_routines.md"
+   ]
+  ],
+  [
+   "part3/21-backup",
+   "第 21 章 备份与恢复：电脑重置也不慌",
+   "服务总账、restore.sh、私有仓库、记忆管家、恢复提示词、百万撤离方案",
+   [
+    "fs10.md",
+    "fs14.md",
+    "fs69.md",
+    "help_grok-bot_computer-recovery.md"
+   ]
+  ],
+  [
+   "part3/22-feishu-wechat",
+   "第 22 章 接入飞书与微信",
+   "团队接入飞书步骤与飞书管家模板、微信接入、权限与坑",
+   [
+    "fs15.md",
+    "fs29.md",
+    "fs11.md"
+   ]
+  ],
+  [
+   "part4/23-enterprise",
+   "第 23 章 团队版与企业落地",
+   "团队版管理控制、身份与 SSO、私有网络与环境脚本、代理、桌面端分发、管理 Bot 电脑、推广建议",
+   [
+    "docs_grok-bot_teams.md",
+    "docs_grok-bot_identity.md",
+    "docs_grok-bot_private-networks.md",
+    "docs_grok-bot_proxies.md",
+    "docs_grok-bot_deployment.md",
+    "docs_grok-bot_computers.md"
+   ]
+  ],
+  [
+   "part4/24-roles",
+   "第 24 章 按岗位组建你的 AI 团队",
+   "按岗位（内容、工程、销售、研究、运营、个人助理、管理者）给出 Bot 编制、首个任务、例程、提示词",
+   [
+    "docs_grok-bot_use-cases.md",
+    "fs56.md",
+    "fs49.md",
+    "fs43.md",
+    "fs52.md"
+   ]
+  ],
+  [
+   "part4/25-faq",
+   "第 25 章 常见问题与排错",
+   "按主题分组的问答：登录、电脑、例程、用量、群聊、插件、删除账号、获取帮助",
+   [
+    "help_grok-bot_faqs.md",
+    "help_grok-bot_how-to.md",
+    "help_grok-bot_get-help.md",
+    "help_grok-bot_delete-account.md",
+    "help_grok-bot_computer-recovery.md",
+    "help_grok-bot_routines.md"
+   ]
+  ],
+  [
+   "cases/cn",
+   "中文长文精选",
+   "按主题分成几个二级标题（入门、自媒体、工程、电商、团队与组织等）。为每一篇文章写一段人工化的摘要卡：三级标题用文章标题，下一行写作者和适合谁读，然后 150 到 250 字讲清作者做了什么、怎么做的、最值得借鉴的一两个做法，最后一行是「[阅读原文](链接)」。不要写成套话，不要所有卡片同一句式开头。本页不需要「容易踩的坑」「做完怎么验收」小节，也不需要「延伸阅读」，3000 字下限不适用",
+   [
+    "fs24.md",
+    "fs25.md",
+    "fs26.md",
+    "fs27.md",
+    "fs28.md",
+    "fs29.md",
+    "fs30.md",
+    "fs31.md",
+    "fs32.md",
+    "fs33.md",
+    "fs34.md",
+    "fs35.md",
+    "fs36.md",
+    "fs37.md",
+    "fs38.md"
+   ]
+  ],
+  [
+   "cases/en1",
+   "英文长文精选（上）",
+   "按主题分成几个二级标题。摘要用中文写。为每一篇文章写一段人工化的摘要卡：三级标题用文章标题，下一行写作者和适合谁读，然后 150 到 250 字讲清作者做了什么、怎么做的、最值得借鉴的一两个做法，最后一行是「[阅读原文](链接)」。不要写成套话，不要所有卡片同一句式开头。本页不需要「容易踩的坑」「做完怎么验收」小节，也不需要「延伸阅读」，3000 字下限不适用",
+   [
+    "fs40.md",
+    "fs41.md",
+    "fs42.md",
+    "fs43.md",
+    "fs44.md",
+    "fs45.md",
+    "fs46.md",
+    "fs47.md",
+    "fs48.md",
+    "fs49.md",
+    "fs50.md"
+   ]
+  ],
+  [
+   "cases/en2",
+   "英文长文精选（下）",
+   "按主题分成几个二级标题。摘要用中文写。为每一篇文章写一段人工化的摘要卡：三级标题用文章标题，下一行写作者和适合谁读，然后 150 到 250 字讲清作者做了什么、怎么做的、最值得借鉴的一两个做法，最后一行是「[阅读原文](链接)」。不要写成套话，不要所有卡片同一句式开头。本页不需要「容易踩的坑」「做完怎么验收」小节，也不需要「延伸阅读」，3000 字下限不适用。素材里的每一篇文章都必须单独写一张摘要卡，一篇都不能漏；开头导语里写的篇数必须等于实际卡片数",
+   [
+    "fs51.md",
+    "fs52.md",
+    "fs53.md",
+    "fs54.md",
+    "fs55.md",
+    "fs56.md",
+    "fs57.md",
+    "fs58.md",
+    "fs59.md",
+    "fs60.md",
+    "fs61.md",
+    "fs62.md"
+   ]
+  ],
+  [
+   "cases/tiezhu",
+   "铁柱的实战长文与推文",
+   "铁柱本人的长文与四篇推文合集，按主题分组。为每一篇文章写一段人工化的摘要卡：三级标题用文章标题，下一行写作者和适合谁读，然后 150 到 250 字讲清作者做了什么、怎么做的、最值得借鉴的一两个做法，最后一行是「[阅读原文](链接)」。不要写成套话，不要所有卡片同一句式开头。本页不需要「容易踩的坑」「做完怎么验收」小节，也不需要「延伸阅读」，3000 字下限不适用",
+   [
+    "fs06.md",
+    "fs09.md",
+    "fs10.md",
+    "fs11.md",
+    "fs12.md",
+    "fs13.md",
+    "fs14.md",
+    "fs15.md",
+    "fs16.md",
+    "fs18.md",
+    "fs19.md",
+    "fs20.md",
+    "fs21.md"
+   ]
+  ]
+ ],
+ "urls": {
+  "fs00": [
+   "Grok Bot 焚诀",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/UcHLwMAMVifnLrkd7yacTWihnne"
+  ],
+  "fs01": [
+   "01 入门与概念",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/OFP9wYURVi8TK9k5uRFc64OXnfh"
+  ],
+  "fs02": [
+   "1.1 Grok Bot 是什么：一页看懂",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/I04Gw3wEaisftUkBikxcg43rnpc"
+  ],
+  "fs03": [
+   "1.2 Grok Bot 和 Muse、Hermes、dots、Cue 怎么选",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/BnH9wLTmyiQZ03kJhsecOrffnAd"
+  ],
+  "fs04": [
+   "02 铁柱实战与心得",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/L64Iw5x4KipjAnkNdw8ca9cTnxc"
+  ],
+  "fs05": [
+   "2.1 铁柱长文",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/IjJTwPNVwieyhQk851kc3l12n2y"
+  ],
+  "fs06": [
+   "Grok Bot Webhook + 快捷指令：知识自动入库流水线搭建",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/Kxtxw9gLBiqi0nkhZpCc7le5nrh"
+  ],
+  "fs07": [
+   "马斯克又撒钱了：Grok Bot 绑定 X 送开发者积分，坑我帮你踩好了",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/DyADwei3ziJwyOkuNKscNv2ungf"
+  ],
+  "fs08": [
+   "同样 $100 X 开发者积分，为什么我能用一年",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/Kk0rwj9b6iTavAkCanCcAofjnib"
+  ],
+  "fs09": [
+   "杭州线下活动回看：我是怎么让 Grok Bot 额度更耐用的",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/D04JwEvL7iss9UkDBvLcLuvyncf"
+  ],
+  "fs10": [
+   "Grok Bot 百万撤离：一套完善的 Agent 系统备份方案",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/W0TCwnTmbiIJ9KkF4S4cV6ifnCh"
+  ],
+  "fs11": [
+   "微信聊天记录打通 Grok Bot：快捷指令进阶版",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/IwrfwYt1ti0aDWk3YEdcGyQRnUb"
+  ],
+  "fs12": [
+   "Grok Bot 额度再省一点：定时任务极限优化",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/SDr3wRrG5iGmz1kejdTcss0Rned"
+  ],
+  "fs13": [
+   "Grok Bot 额度超长续航保姆级新手指南（直接发给 Bot！）",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/OPMJw2EgtiWMiJkcrzFc6gJ8nlf"
+  ],
+  "fs14": [
+   "Grok Bot 虚拟机重置后工具全没了？备份恢复教程（附提示词）",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/Q6ZdwzjO5i6z0pkdMfyca8Cbnye"
+  ],
+  "fs15": [
+   "Grok Bot 团队接入飞书保姆级教程（附飞书管家模板）",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/F2VXw4hVbirRUjk5QgFcWS0jnJg"
+  ],
+  "fs16": [
+   "大一统 X 订阅解读：新用户怎么选，老订阅要不要切换？一文讲清楚",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/Myw6wFW8EicOiRkoEAXcVJqinee"
+  ],
+  "fs17": [
+   "2.2 铁柱推文合集",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/GhstwwS8oiZWrlk0Hk1cvLPxnNg"
+  ],
+  "fs18": [
+   "铁柱推文合集①：开通、套餐与额度",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/PCZIw5IqgiZLjTkXqNncpxannpc"
+  ],
+  "fs19": [
+   "铁柱推文合集②：产品功能与版本观察",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/ZRFQwIlNgiuJTVkGcJgcrZhsnKd"
+  ],
+  "fs20": [
+   "铁柱推文合集③：实战玩法与案例",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/SMztw0FlBilqx5k1tXzc9kFjndb"
+  ],
+  "fs21": [
+   "铁柱推文合集④：社区、生态与竞品对照",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/RMRTwk3MqiUqEwk0TzTchA4LnDg"
+  ],
+  "fs22": [
+   "03 他人长文收录",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/ZshhwTD7aigKoCkQvuRc01tPnyv"
+  ],
+  "fs23": [
+   "3.1 中文长文",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/UyzNwQanpi2LDCkYpQKcn74Zncg"
+  ],
+  "fs24": [
+   "万字长文｜Grok Bot 从入门到精通｜金尘马",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/MIKpwiUXpiE9mWkyG8ccFM6Znee"
+  ],
+  "fs25": [
+   "工程师如何用好 Grok bot?｜Kin",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/H576wlwF3i3si7kVUJZckeFfn3g"
+  ],
+  "fs26": [
+   "用Grok Bot搭建自媒体团队：保姆级教程｜Adrian Punk",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/TGF0wLSNFiL6A8kDHZAcXL2bnGd"
+  ],
+  "fs27": [
+   "Grok Bot 应用指南实操案例：闲鱼上架、小红书做图、找工具、做短视频、整理收藏｜Miles Ma",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/TV5UwDLTIiTT4vkpY8qcm33fnSf"
+  ],
+  "fs28": [
+   "做自媒体怎么用好 Grok bot｜Kin",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/FzlswUo4GiBJYuk9xO7cyIIWnRf"
+  ],
+  "fs29": [
+   "如何把 Grok Bot 接入你的微信？保姆级新手指南来了（附详细提示词）｜Kin",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/LehUwOhxAijkigkkVlDclVVunQg"
+  ],
+  "fs30": [
+   "万文长｜Grok Bot 从零入门第一次上",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/Zs1JwANRgiOvJ4klrADcMxJ9nzg"
+  ],
+  "fs31": [
+   "一天几百个 PR 有什么意义？我照着 SpaceXAI 工程师 Lauren（@poteto）的九类清单，把自己的活拆了一遍",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/VznKwUNQyi7RBJkih15cmjGhnSd"
+  ],
+  "fs32": [
+   "把自己的推文做成个人画像网站,  用 Grok Bot 从分析特点到上线分享保姆级教程",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/BgFKwIqQSiGyWzk1r5rcsTcTnFh"
+  ],
+  "fs33": [
+   "如何在一个小时内深入使用 Grok Bot",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/GBV8wdZOaijukikjO0pcYFWKnbg"
+  ],
+  "fs34": [
+   "微信里说一句，就能运营X：我的 5 个 Bot 模板公开了",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/DJwawbQxeiUcIjkKbekcVkHRnye"
+  ],
+  "fs35": [
+   "从一个 Bot 到一整个组织，Grok Bot 的进阶用法分享：本地电脑、AI 分工和知识库怎么接起来",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/DdqFwLmn7i8cV1kYtDwc840enLg"
+  ],
+  "fs36": [
+   "零基础搭建全自动化Agent团队，Grok Bot从开通到多AI协作全流程【万字长文】",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/XLjCwUT8AiRWFVktR9wcUFJYnMd"
+  ],
+  "fs37": [
+   "10 条必备经验，让你的 Grok Bot 变得更好用",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/Hfqxwy3zQiWkRPkVjRZcVCuHnbc"
+  ],
+  "fs38": [
+   "用 Grok Bot 做跨境电商的实战分享，从 0 到 1 搭建起一整个亚马逊团队",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/LG1twK03uiO00JkPk1ncQQNUnvt"
+  ],
+  "fs39": [
+   "3.2 英文长文",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/JzGiwg7WIiuG4ekF5lgc76HCnCg"
+  ],
+  "fs40": [
+   "Grok Bot for GTM｜Krista Letz",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/NcWow1eSZiJIu9kAcR0c4wHunKc"
+  ],
+  "fs41": [
+   "Grok Bot vs Hermes vs OpenClaw vs Buzz + How I fully automated my X content with Grok Bot｜SCOTTY BEAM",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/RuhbwzhViiB3FwkYaylc8Uv7nLb"
+  ],
+  "fs42": [
+   "Grok Bot Masterclass｜Avi Chawla",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/Qw17wVBhJibhkpkAK6zceiMvned"
+  ],
+  "fs43": [
+   "Grok Bot Agents: how to automate your life in 10 Steps (Full-tutorial)｜Codez",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/PPKGwdkOkiGsxRkSInucbrNgnAg"
+  ],
+  "fs44": [
+   "From Zero to a Running Company: The Grok Bot Agent Team Playbook｜NO1ennn",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/VGJmwyYrmiXLSSkdU3ackk1gnMd"
+  ],
+  "fs45": [
+   "Grok Bot Chief of Staff: the charter, 10 rules and 5 routines I run｜kocer",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/BquAwgIC8iWFQlkPZFxc7uOsnSh"
+  ],
+  "fs46": [
+   "Every Grok Bot Hack I Know (Aug 2026)｜Matt Van Horn",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/UGCCwisktiOC1Wk9adWcwN7env2"
+  ],
+  "fs47": [
+   "How to Build an $18K/Month AI Agency on Grok (Exact Setup Inside)｜maestro",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/MtKDwMe0FiNf4wkxwj7cgnnAndf"
+  ],
+  "fs48": [
+   "One-Computer Company: A Real Playbook For Running Solo On Grok Bot｜ZER",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/VcevwDlGGimAvjkEGGPceItanNg"
+  ],
+  "fs49": [
+   "How to master Grok Bot in 16 minutes - Full Course｜CyrilXBT",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/WGaCwZU71iHAGPkzjkLcahN2nHd"
+  ],
+  "fs50": [
+   "Grok Bot for Engineering｜Lingxi Li",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/G2YNwaSvpixAhFkjL4xcVm0tn5d"
+  ],
+  "fs51": [
+   "How to Build a 24/7 Repo Ops Desk on Grok Bot + Kimi K3 (Complete Guide)｜Gipp 🦅",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/Lw4rwhHVNi3gECk0KH5cRl0znJh"
+  ],
+  "fs52": [
+   "GrokBot Agents: build a team that works for you 24/7 in 10 steps (Full-Course)｜Movez",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/LSfqwAew5i4h3mkuQT9cgw3jn54"
+  ],
+  "fs53": [
+   "Meet your Team Bots｜n2parko",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/KS9Cwan52idy1xkLbnTcSC3xnxb"
+  ],
+  "fs54": [
+   "How to Stop Your Grok Bot From Eating a Week of Usage in a Day｜Fan Grok Bot Radar",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/HO20w5OQQiNtNuk92mhcdQEynOi"
+  ],
+  "fs55": [
+   "Grok Bot: How to Hire Your First AI Employee (Full Guide)｜distort",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/KGhnwWY0QiQrhgkKy2FcgECtnnc"
+  ],
+  "fs56": [
+   "Top 10 Grok Bot Prompts That Replace an Entire Team｜maestro",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/MKHywsPUNinwvEkIF9icQgj2nJg"
+  ],
+  "fs57": [
+   "Grok Bot Memory Engineering: How One Agent Learns With a Team｜rari",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/FW0Ww6c4nivdMgkK7YncWmBent0"
+  ],
+  "fs58": [
+   "Grok Bot Engineering: Set Up a Harness for Your One-Person Company｜beamnxw ./",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/NYakw8hzLiScECkQ1b5ctWBmnvm"
+  ],
+  "fs59": [
+   "Grok Bot + Opus 5.5: The Ultimate Agent Harness in 10 Steps｜Morlex",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/A7BxwdM4QicxNZkmAWzcIt13nTh"
+  ],
+  "fs60": [
+   "Grok Bot: How to Build Your First AI Team (Full Guide)",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/MRhNwTEH8i0PrDkSp5uce2V7nKe"
+  ],
+  "fs61": [
+   "How I use Grok Bot: My team of 29 AI agents",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/YBjswa1rnivPkjk5BpscN6mcnDh"
+  ],
+  "fs62": [
+   "Grok Bot + Opus 5.5: Build a 24/7 AI Engineering Team in 12 Steps",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/PxkpwzPFgi4NgCktD8NcfCpmnYf"
+  ],
+  "fs63": [
+   "04 技巧与配置",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/EgNSw3iYWiA8ePk8gT2cjDQrnTd"
+  ],
+  "fs64": [
+   "4.1 额度与成本：省额度清单",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/KFbzwPhAliezlBkkvIuc1Abgn4h"
+  ],
+  "fs65": [
+   "4.2 团队编排：章程、岗位与放权",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/POTrwwThoiQxIakFDIDcUcKjnmh"
+  ],
+  "fs66": [
+   "4.3 触发器与自动化：定时、Webhook、在 X 上派活",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/HHmpwgN4qi86e0kgBvAc1156nkg"
+  ],
+  "fs67": [
+   "4.4 权限、安全与人闸",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/Fxfiwuf4TiCqHTkTzFgcosQ7nzd"
+  ],
+  "fs68": [
+   "4.5 连接器、Skill、模板与对外入口",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/XDkUwLJZxih7Dok0SKqcajKQn4e"
+  ],
+  "fs69": [
+   "4.6 虚拟机、记忆与备份",
+   "https://jcng5q8n0f3z.feishu.cn/wiki/KUggwkhqqiRyxZkwTLhcrCU2ncg"
+  ]
+ }
+}

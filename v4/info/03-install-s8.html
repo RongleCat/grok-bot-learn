@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fbf6ed;color:#25231f;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:40px 48px 38px}.top{height:112px;display:flex;align-items:center;border-bottom:1px solid #d9d0c4}.bot{width:104px;height:104px;object-fit:contain;flex:none;margin-right:22px}.title{font-size:36px;letter-spacing:.5px;font-weight:750;line-height:1.15}.lead{margin-left:auto;width:486px;color:#554f46;font-size:17px;line-height:1.65}.lead b{color:#a84b2a;font-weight:700}.main{height:548px;padding-top:22px;display:grid;grid-template-columns:254px 1fr;gap:22px}.start{border:1px solid #d9d0c4;background:#fffdf9;border-radius:24px;padding:24px 20px;display:flex;flex-direction:column}.start h2{font-size:22px;margin:0 0 22px;line-height:1.35}.start p{font-size:16px;line-height:1.65;margin:0 0 17px}.pill{border-radius:16px;background:#f4e1d5;color:#8a391e;padding:13px 14px;font-size:16px;line-height:1.48;margin-top:auto}.grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:280px 250px;gap:18px}.card{border:1px solid #d9d0c4;background:#fffdf9;border-radius:24px;padding:20px 22px}.card h2{font-size:21px;margin:0 0 12px;color:#a84b2a;letter-spacing:.5px}.card p{font-size:15.5px;line-height:1.55;margin:0}.card p+p{margin-top:8px}.goal{grid-column:1}.boundary{grid-column:2}.delivery{grid-column:1 / span 2;background:#f8eee5;display:grid;grid-template-columns:1.17fr .83fr;gap:24px}.delivery h2{grid-column:1 / span 2;margin-bottom:-4px}.delivery p{font-size:15px;line-height:1.45}.pause{border-left:1px solid #d8bfb0;padding-left:22px}.pause h3{font-size:17px;line-height:1.35;margin:0 0 9px;color:#a84b2a}.pause p{font-size:15px;line-height:1.55}.strong{font-weight:700;color:#25231f}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="top">
+    <img class="bot" src="bots/squircle-brun.png" alt="">
+    <h1 class="title">派发第一条真实任务</h1>
+    <p class="lead"><b>先从小任务上手</b>。写任务记好 5 要素：讲清目标与输入，严格只读，定好落盘规格，标明接管节点。</p>
+  </header>
+  <section class="main">
+    <aside class="start">
+      <h2>附件总结发：</h2>
+      <p>用五个要点总结这份文档。</p>
+      <p>在单独的部分列出每个日期、决策和未解决的问题，并为每项注明对应章节出处。</p>
+      <div class="pill">不要更改源文件。</div>
+    </aside>
+    <section class="grid">
+      <article class="card goal">
+        <h2>【目标】</h2>
+        <p>调研 3 款主流代码编辑器（Cursor、VS Code、Zed）在 2026 年的最新公开定价方案与核心 AI 功能，产出一份选型对比参考材料。</p>
+        <h2 style="margin-top:15px">【材料】</h2>
+        <p>仅限使用上述三款产品官方网站的定价页、功能介绍页与官方文档；第三方博客仅作为辅助索引，必须找到官方页面核实。</p>
+      </article>
+      <article class="card boundary">
+        <h2>【边界】</h2>
+        <p>纯只读检索，严禁注册任何账号，严禁开启任何试用，严禁输入任何支付信息。</p>
+        <p>遇到需要登录才能查看的页面，直接跳过并记录在未核实清单中。</p>
+        <p>严禁改动 /workspace 下已有的其他项目文件。</p>
+      </article>
+      <article class="card delivery">
+        <h2>【交付规格】</h2>
+        <div>
+          <p>在 <span class="strong">/workspace/editor-research/</span> 目录下生成对比报告文件 <span class="strong">comparison.md</span>。</p>
+          <p>报告内包含一张 Markdown 数据表格，表头列定义为：产品名称、方案档位、月付价格、年付价格、核心功能特征、官网来源链接、核对日期。</p>
+          <p>表格下方附带一份 400 字以内的中文总结，指出各产品主要差异，并单独开辟一节列出“未核实或存在矛盾的信息”。</p>
+        </div>
+        <div class="pause">
+          <h3>【暂停确认节点】</h3>
+          <p>遇到必须登录、验证码拦截或点击付费的操作时，立刻停下并提示我接管。</p>
+          <p>官网信息前后出现明显矛盾且无法核实时，停下说明情况由我判断。</p>
+        </div>
+      </article>
+    </section>
+  </section>
+</main>
+</body>
+</html>

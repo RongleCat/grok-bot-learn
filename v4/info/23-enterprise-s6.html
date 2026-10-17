@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:1200px;height:760px;overflow:hidden}body{background:#fffaf2;color:#20201d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}main{width:1200px;height:760px;padding:36px 48px 40px;position:relative}h1{font-size:34px;line-height:1.15;letter-spacing:-1px;margin:18px 0 24px;font-weight:800}.bot{position:absolute;right:58px;top:28px;width:108px;height:108px;object-fit:contain}.topline{height:4px;width:74px;border-radius:4px;background:#12a99a}.actions{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:18px}.card{height:258px;background:#fffefd;border:1px solid #e7dfd2;border-radius:24px;padding:21px 22px;position:relative}.num{display:flex;align-items:center;justify-content:center;width:32px;height:32px;background:#d9f2ef;border-radius:50%;color:#087e73;font-weight:800;font-size:16px;margin-bottom:13px}.card h2{font-size:21px;line-height:1.25;margin:0 0 13px;font-weight:800}.card p{font-size:15px;line-height:1.55;margin:0}.rule{height:1px;background:#e8e1d7;margin:9px 0 7px}.retain{font-size:16px;font-weight:800;color:#087e73;margin-bottom:5px}.scenario{font-size:15px;line-height:1.35}.scenario b{font-weight:800}.flow{display:grid;grid-template-columns:1.12fr 1.53fr 1.12fr;gap:18px}.panel{height:185px;border:1px solid #e7dfd2;border-radius:24px;background:#fffefd;padding:20px 22px}.panel h2{font-size:19px;margin:0 0 14px;font-weight:800}.steps{display:flex;align-items:center;gap:9px}.step{height:68px;flex:1;border-radius:15px;background:#f5f0e7;padding:10px 9px;font-size:15px;line-height:1.35;font-weight:700;text-align:center;display:flex;align-items:center;justify-content:center}.arrow{color:#0c9c8d;font-size:23px;font-weight:800;flex:0}.done{margin-top:12px;font-size:15px;line-height:1.35}.done b{color:#087e73}.auto{background:#eaf7f5;border-color:#b9e3dd}.auto h2{margin-bottom:10px}.auto p{font-size:16px;line-height:1.5;margin:0}.api p{font-size:15px;line-height:1.5;margin:0}.api b{color:#087e73}.lock{display:inline-flex;align-items:center;gap:7px;margin-top:9px;font-size:15px;font-weight:800}.dot{width:9px;height:9px;border-radius:50%;background:#12a99a}
+</style>
+</head>
+<body>
+<main>
+<div class="topline"></div>
+<h1>Bot 电脑：批量运维与生命周期</h1>
+<img class="bot" src="bots/nuage-turquoise.png" alt="">
+<section class="actions">
+<article class="card">
+<div class="num">1</div>
+<h2>重建 VMs</h2>
+<p>用最新镜像重装并重跑环境脚本</p>
+<div class="rule"></div>
+<div class="retain">保留</div>
+<div class="scenario"><b>磁盘完好</b>，Bot、个人文件与 Cookie 均保留；仅清除自装系统软件</div>
+<div class="rule"></div>
+<div class="scenario">环境脚本变更生效、灰度新镜像</div>
+</article>
+<article class="card">
+<div class="num">2</div>
+<h2>终止 VMs</h2>
+<p>立即销毁运行或休眠实例，中断当前计算</p>
+<div class="rule"></div>
+<div class="retain">保留</div>
+<div class="scenario">保留磁盘；下次在客户端发消息会重新拉起干净虚拟机</div>
+<div class="rule"></div>
+<div class="scenario">解决实例卡死、释放云端占用</div>
+</article>
+<article class="card">
+<div class="num">3</div>
+<h2>删除虚拟机和数据</h2>
+<p>销毁虚拟机并彻底删除底层绑定的持久存储</p>
+<div class="rule"></div>
+<div class="retain" style="color:#20201d">不保留</div>
+<div class="scenario">数据彻底清空；下次使用重新初始化为空白电脑</div>
+<div class="rule"></div>
+<div class="scenario">员工离职清理、数据损坏彻底重置</div>
+</article>
+</section>
+<section class="flow">
+<article class="panel">
+<h2>控制台批量操作</h2>
+<div class="steps"><div class="step">管理<br>搜索成员</div><div class="arrow">→</div><div class="step">Manage selected<br>选择目标操作</div><div class="arrow">→</div><div class="step">确认人数<br>开始执行</div></div>
+<div class="done"><b>执行完毕必须点击 Done</b>；每个团队同一时间只能运行一项批量操作。</div>
+</article>
+<article class="panel auto">
+<h2>闲置自动终止</h2>
+<p>打开 <b>Terminate Inactive Computers</b> 开关</p>
+<p>成员电脑连续 <b>30 天无活动</b>会自动终止</p>
+<p>只释放计算实例且保留磁盘，系统按滚动周期清理</p>
+</article>
+<article class="panel api">
+<h2>多团队批量运维</h2>
+<p>调用组织 Admin API</p>
+<p>提供 <b>admin:*</b> 权限的组织 API 密钥</p>
+<p>传入团队 ID、成员邮箱数组和动作类型，并轮询进度</p>
+<div class="lock"><span class="dot"></span>同样受单团队单并发限制</div>
+</article>
+</section>
+</main>
+</body>
+</html>

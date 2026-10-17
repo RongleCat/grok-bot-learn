@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>从七步验证到落地持久 Bot</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#fbf6ed;color:#20201d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.page{width:1200px;height:760px;padding:34px 36px 40px}
+.top{height:112px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d9d0c2}
+h1{margin:0;font-size:38px;line-height:1.15;letter-spacing:-1.4px;font-weight:760}
+.bot{width:104px;height:104px;object-fit:contain;display:block;margin-right:10px}
+.intro{height:88px;margin:18px 0 16px;padding:18px 22px;border:1px solid #d9d0c2;border-radius:22px;background:#fffdf8;display:flex;align-items:center;gap:18px}
+.intro strong{display:block;color:#176b73;font-size:21px;line-height:1.25;white-space:nowrap}
+.intro span{font-size:17px;line-height:1.55}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:190px 190px;gap:16px}
+.card{border:1px solid #d9d0c2;border-radius:22px;background:#fffdf8;padding:17px 18px 15px;position:relative;overflow:hidden}
+.card:nth-child(5){grid-column:1 / 2}.card:nth-child(6){grid-column:2 / 3}.card:nth-child(7){grid-column:3 / 5}
+.step{width:30px;height:30px;border-radius:10px;background:#176b73;color:#fffdf8;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:750;margin-bottom:10px}
+.card:nth-child(4n+2) .step,.card:nth-child(7) .step{background:#c35a32}
+h2{font-size:19px;line-height:1.25;letter-spacing:-.2px;margin:0 0 8px;font-weight:760}
+p{margin:0;font-size:15px;line-height:1.52;color:#47443e}
+.line{width:32px;height:3px;border-radius:3px;background:#176b73;margin:10px 0}
+.card:nth-child(4n+2) .line,.card:nth-child(7) .line{background:#c35a32}
+.wide{display:grid;grid-template-columns:1fr 1fr;column-gap:24px}.wide p{font-size:16px}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="top">
+<h1>从七步验证到落地持久 Bot</h1>
+<img class="bot" src="bots/galet-rouge.png" alt="">
+</header>
+<section class="intro">
+<strong>刚建好 Bot 别急着挂定时</strong>
+<span>先按官方路径手动跑通</span>
+</section>
+<section class="grid">
+<article class="card">
+<div class="step">1</div>
+<h2>描述栏立规矩</h2>
+<p>写明职责、数据源与红线。</p>
+<div class="line"></div>
+<p>描述栏规则对所有任务永久生效，聊天框指令只管单次。</p>
+</article>
+<article class="card">
+<div class="step">2</div>
+<h2>安全范围跑单次</h2>
+<p>限定输入源，手动跑真实业务。</p>
+</article>
+<article class="card">
+<div class="step">3</div>
+<h2>修正到可评审</h2>
+<p>对话调整直到免干预<br>达到可评审标准。</p>
+</article>
+<article class="card">
+<div class="step">4</div>
+<h2>存为技能</h2>
+<p>直接保存步骤。</p>
+<div class="line"></div>
+<p>复杂网页：Teach a task 演示<br>补齐分支审批。</p>
+</article>
+<article class="card">
+<div class="step">5</div>
+<h2>第二组独立输入验证</h2>
+<p>换数据测试，排查过度适配初始样例。</p>
+</article>
+<article class="card">
+<div class="step">6</div>
+<h2>设 Routine 策略</h2>
+<p>建 Schedule 或 Trigger 前定好<br>超时重试与报错。</p>
+<div class="line"></div>
+<p>断网断数据绝不能凭空编造。</p>
+</article>
+<article class="card wide">
+<div>
+<div class="step">7</div>
+<h2>关键操作留审批闸</h2>
+</div>
+<div>
+<p>发送、支付保留人工确认<br>（Allow once/Deny）。</p>
+<div class="line"></div>
+<p>极低风险才配 Auto Review。</p>
+</div>
+</article>
+</section>
+</main>
+</body>
+</html>

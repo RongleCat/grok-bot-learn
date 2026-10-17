@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#f8f3ea;color:#1e252b;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}main{width:1200px;height:760px;padding:38px 52px 42px;display:grid;grid-template-rows:112px 290px 238px;gap:20px}.top{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d9d2c7}.top h1{font-size:39px;letter-spacing:-1.5px;line-height:1;margin:0 0 16px;font-weight:750}.bot{width:105px;height:105px;object-fit:contain;align-self:flex-start}.core{display:grid;grid-template-columns:265px 1fr 265px;gap:20px;align-items:stretch}.card{border:1px solid #d8d1c5;border-radius:24px;background:#fffdf9}.side{padding:28px 25px}.side h2{font-size:20px;line-height:1.25;margin:0 0 19px;font-weight:720}.side ul{margin:0;padding:0;list-style:none;display:grid;gap:11px}.side li{font-size:16px;line-height:1.36;padding-left:16px;position:relative}.side li:before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:#3478c6}.hub{background:#eaf3ff;border:1px solid #9cc3eb;border-radius:26px;padding:18px 22px;display:grid;grid-template-rows:76px 45px 76px;align-content:center;gap:12px;text-align:center}.chief{margin:auto;min-width:310px;background:#3478c6;color:#fff;border-radius:20px;padding:13px 20px}.chief strong{font-size:23px;display:block;line-height:1.2}.chief span{font-size:15px;display:block;margin-top:4px}.arrow{height:45px;position:relative;margin:auto;width:2px;background:#3478c6}.arrow:after{content:"";position:absolute;left:-5px;bottom:-1px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:9px solid #3478c6}.workers{display:flex;justify-content:center;gap:12px}.worker{background:#fffdf9;border:1px solid #9cc3eb;border-radius:16px;width:126px;padding:12px 8px;font-size:17px;font-weight:680;line-height:1.25}.worker span{font-weight:400;font-size:15px;display:block;margin-top:4px}.bottom{display:grid;grid-template-columns:1fr 1fr;gap:20px}.compare{padding:23px 27px}.compare h2{font-size:20px;margin:0 0 17px;line-height:1.2}.rows{display:grid;gap:11px}.row{display:grid;grid-template-columns:87px 1fr;gap:13px;align-items:start;font-size:16px;line-height:1.35}.row b{font-size:16px;color:#3478c6}.rule{background:#fffdf9;border:1px solid #d8d1c5;border-radius:24px;padding:23px 27px}.rule h2{font-size:20px;margin:0 0 17px;line-height:1.2}.rule p{font-size:17px;line-height:1.5;margin:0 0 10px}.rule p:last-child{margin:0}.em{font-weight:740}
+</style>
+</head>
+<body>
+<main>
+  <header class="top"><h1>1+N 星标中枢架构</h1><img class="bot" src="bots/cercle-bleu.png" alt=""></header>
+  <section class="core">
+    <article class="card side"><h2>共享</h2><ul><li>虚拟机、/workspace</li><li>连接器及 Skill</li><li>私聊与 Routine 独立</li></ul></article>
+    <section class="hub"><div class="chief"><strong>主 Bot（星标）</strong><span>独占对话入口 · 任务中枢</span></div><div class="arrow"></div><div class="workers"><div class="worker">专职 Bot<span>专项执行</span></div><div class="worker">专职 Bot<span>专项执行</span></div><div class="worker">专职 Bot<span>专项执行</span></div></div></section>
+    <article class="card side"><h2>交互</h2><ul><li>需求只发给幕僚长</li><li>下游回传五行内简报</li><li>平时静默</li></ul></article>
+  </section>
+  <section class="bottom">
+    <article class="compare"><h2>主 Bot 与专职 Bot</h2><div class="rows"><div class="row"><b>主 Bot</b><span>不写业务代码；只负责拆解派发</span></div><div class="row"><b>专职 Bot</b><span>可写代码附测试；不主动私聊用户</span></div><div class="row"><b>主 Bot</b><span>每天主动发简报</span></div></div></article>
+    <article class="rule"><h2>核心原则</h2><p class="em">严禁主 Bot 编写业务代码</p><p>调度者动手会导致失焦。</p></article>
+  </section>
+</main>
+</body>
+</html>

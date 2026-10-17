@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#fffaf1;color:#1f2928;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.page{width:1200px;height:760px;padding:30px 44px 52px}
+.top{height:116px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ded8cc}
+.eyebrow{margin:0 0 7px;color:#287f7b;font-size:16px;font-weight:700;letter-spacing:.08em}
+h1{margin:0;font-size:34px;line-height:1.15;letter-spacing:.01em}
+.lead{margin:9px 0 0;font-size:16px;color:#59615e}
+.bot{width:108px;height:108px;object-fit:contain;display:block;margin-right:13px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 18px;padding-top:18px}
+.card{height:265px;background:#fffdf8;border:1px solid #e3ddd2;border-radius:22px;padding:19px 20px 17px;overflow:hidden}
+.card.strong{background:#f0faf8;border-color:#b9dcd7}
+.card.warn{background:#fff7e7;border-color:#e9d2a6}
+.head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+h2{margin:0;font-size:22px;line-height:1.1;letter-spacing:.01em}
+.type{font-size:15px;color:#287f7b;font-weight:700;white-space:nowrap}
+.warn .type{color:#a66b17}.strong .type{color:#287f7b}
+.row{border-top:1px solid #e5e1d8;padding-top:7px;margin-top:6px}
+.label{display:block;font-size:15px;font-weight:700;color:#59615e;line-height:1.1;margin-bottom:4px}
+.value{display:block;font-size:16px;line-height:1.35;letter-spacing:.005em}
+.compact .value{font-size:15px;line-height:1.32}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="top">
+<div>
+
+<h1>云电脑生命周期</h1>
+
+</div>
+<img class="bot" src="bots/nuage-turquoise.png" alt="">
+</header>
+<section class="grid" aria-label="云电脑状态操作对比">
+<article class="card strong">
+<div class="head"><h2>软件更新</h2><span class="type">安全点暂停</span></div>
+<div class="row"><span class="label">触发</span><span class="value">更新 Bot 的计算机</span></div>
+<div class="row"><span class="label">任务</span><span class="value">当前回合暂停并恢复</span></div>
+<div class="row"><span class="label">保留</span><span class="value">全部保留，包括已安装的应用和工具</span></div>
+</article>
+<article class="card">
+<div class="head"><h2>计算机更新</h2><span class="type">切换到新镜像</span></div>
+<div class="row"><span class="label">触发</span><span class="value">更新 Bot 的计算机</span></div>
+<div class="row"><span class="label">保留</span><span class="value">持久磁盘、已同步的 Bot、文件与浏览器登录态</span></div>
+<div class="row compact"><span class="label">清除</span><span class="value">自行安装的应用、软件包、node_modules 与 Python 虚拟环境</span></div>
+</article>
+<article class="card warn">
+<div class="head"><h2>Recover</h2><span class="type">工作会被中断</span></div>
+<div class="row"><span class="label">触发</span><span class="value">重新连接界面，或更新卡住时</span></div>
+<div class="row"><span class="label">保留</span><span class="value">尽可能先做一次快照保存</span></div>
+<div class="row compact"><span class="label">注意</span><span class="value">若无法连上机器保存，最近更改会丢失</span></div>
+</article>
+<article class="card warn">
+<div class="head"><h2>Reset</h2><span class="type">工作会被中断</span></div>
+<div class="row"><span class="label">触发</span><span class="value">重置 Bot 的计算机</span></div>
+<div class="row"><span class="label">保留</span><span class="value">最近一次成功保存的数据、文件与登录态</span></div>
+<div class="row compact"><span class="label">清除</span><span class="value">自行安装的应用与软件包；最近更改可能丢失</span></div>
+</article>
+<article class="card">
+<div class="head"><h2>重建 VMs</h2><span class="type">企业管理员</span></div>
+<div class="row"><span class="label">任务</span><span class="value">在安全点暂停，新机就绪后切换</span></div>
+<div class="row"><span class="label">保留</span><span class="value">持久磁盘、已同步的 Bot、文件与登录态</span></div>
+<div class="row compact"><span class="label">清除</span><span class="value">自行安装的应用与软件包；团队环境设置脚本会自动重跑</span></div>
+</article>
+<article class="card warn">
+<div class="head"><h2>终止 VMs</h2><span class="type">立即停止</span></div>
+<div class="row"><span class="label">触发</span><span class="value">管理员触发，或闲置 30 天自动终止</span></div>
+<div class="row"><span class="label">保留</span><span class="value">持久磁盘；文件和登录态仍在</span></div>
+<div class="row compact"><span class="label">清除</span><span class="value">自行安装的应用与软件包；正在运行的一轮任务进度</span></div>
+</article>
+</section>
+</main>
+</body>
+</html>

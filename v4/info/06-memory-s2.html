@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>五类容器与快慢时钟</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#f7f1e7;color:#1e201f;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.page{width:1200px;height:760px;padding:32px 42px 36px;position:relative}
+.head{height:112px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ded6c9}
+.eyebrow{font-size:16px;letter-spacing:.12em;color:#88641c;font-weight:700;margin:0 0 9px}
+h1{font-size:34px;line-height:1.1;letter-spacing:-.04em;margin:0;font-weight:800}
+.bot{width:108px;height:108px;object-fit:contain;display:block;margin-right:14px}
+.intro{height:72px;display:flex;align-items:center;font-size:18px;font-weight:650;letter-spacing:.01em}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;height:190px}
+.card{border:1px solid #d9d1c3;border-radius:22px;background:#fffdf9;padding:18px 16px 15px;position:relative}
+.card.shared{border-top:5px solid #d59a1b}
+.card.private{border-top:5px solid #527b75}
+.num{font-size:15px;color:#7f776d;font-weight:700;margin-bottom:12px}
+.name{font-size:19px;line-height:1.25;font-weight:800;margin:0 0 12px;white-space:nowrap;letter-spacing:-.03em}
+.desc{font-size:15px;line-height:1.52;margin:0;color:#4d4c48;font-weight:520}
+.divider{height:50px;display:flex;align-items:center;justify-content:center;gap:13px;font-size:16px;font-weight:750}
+.divider:before,.divider:after{content:"";height:1px;background:#d9d1c3;flex:1}
+.clock{height:231px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.panel{border:1px solid #d9d1c3;border-radius:24px;background:#fffdf9;padding:20px 24px;position:relative}
+.panel.slow{border-left:7px solid #d59a1b}
+.panel.fast{border-left:7px solid #527b75}
+.clock-title{font-size:22px;font-weight:800;margin:0 0 9px;letter-spacing:-.03em}
+.clock-note{font-size:16px;line-height:1.45;margin:0 0 15px;color:#4d4c48;font-weight:600}
+.rule{font-size:17px;line-height:1.45;margin:0;padding-top:14px;border-top:1px solid #e5ddd2;font-weight:750}
+.fast .rule{color:#285c56}
+.slow .rule{color:#815d12}
+.safety{position:absolute;right:26px;bottom:17px;font-size:15px;color:#625e58;white-space:nowrap;margin:0}
+.safety.second{bottom:43px}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="head">
+    <div>
+      
+      <h1>五类容器与快慢时钟</h1>
+    </div>
+    <img class="bot" src="bots/hexagone-ambre.png" alt="">
+  </header>
+  <section class="intro">日志随跑随丢，流程入技能，习惯记便签，P0 定义才进团队记忆。</section>
+  <section class="grid" aria-label="五类容器">
+    <article class="card shared"><div class="num">01</div><h2 class="name">实时数据源</h2><p class="desc">当前事实<br>存在于 Linear、CRM、代码库或知识库</p></article>
+    <article class="card shared"><div class="num">02</div><h2 class="name">团队技能</h2><p class="desc">Bot 所有者维护的<br>标准化、可重复执行的操作流程</p></article>
+    <article class="card shared"><div class="num">03</div><h2 class="name">团队记忆</h2><p class="desc">经过核准的<br>全员共享决策与稳定业务定义</p></article>
+    <article class="card private"><div class="num">04</div><h2 class="name">私人便签</h2><p class="desc">个人专属偏好<br>与单人工作上下文</p></article>
+    <article class="card private"><div class="num">05</div><h2 class="name">任务状态</h2><p class="desc">当前正在执行的<br>任务进度与临时上下文</p></article>
+  </section>
+  <div class="divider">防污染用快慢时钟分流</div>
+  <section class="clock" aria-label="快慢时钟">
+    <article class="panel slow">
+      <h2 class="clock-title">慢时钟</h2>
+      <p class="clock-note">风格与定义以月年计</p>
+      <p class="rule">写入记忆</p>
+    </article>
+    <article class="panel fast">
+      <h2 class="clock-title">快时钟</h2>
+      <p class="clock-note">余额随时变</p>
+      <p class="rule">行动前必须回源查询</p>
+      <p class="safety second">密码与 Token 绝不入记忆，文档只存指针</p>
+      <p class="safety">实时状态查 API，别凭记忆放行权限</p>
+    </article>
+  </section>
+</main>
+</body>
+</html>

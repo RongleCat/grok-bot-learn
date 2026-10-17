@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fbf7ef;color:#1e2023;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:36px}.top{height:72px;display:flex;align-items:center;justify-content:space-between}.top h1{margin:0;font-size:34px;letter-spacing:-1.5px;line-height:1.1;font-weight:800}.bot{width:108px;height:108px;object-fit:contain;position:absolute;right:46px;top:17px}.intro{height:74px;border:1px solid #e6ddd1;border-radius:22px;background:#fffdf9;display:flex;align-items:center;padding:16px 22px;font-size:17px;line-height:1.55;font-weight:600}.grid{display:grid;grid-template-columns:748px 344px;gap:36px;margin-top:16px;height:420px}.flow{border:1px solid #e6ddd1;border-radius:24px;background:#fffdf9;padding:17px 18px}.flow-title{font-size:17px;font-weight:800;margin:0 0 13px}.steps{display:grid;grid-template-columns:1fr 28px 1fr 28px 1fr;align-items:center}.card{min-height:89px;border:1px solid #ddd4c9;border-radius:20px;background:#fffdfa;padding:13px 15px;display:flex;flex-direction:column;justify-content:center}.card strong{font-size:17px;line-height:1.35}.card span{font-size:15px;line-height:1.4;margin-top:4px;color:#55575a}.arrow{height:2px;background:#e46452;position:relative;margin:0 7px}.arrow:after{content:"";position:absolute;right:-1px;top:-4px;border-left:8px solid #e46452;border-top:5px solid transparent;border-bottom:5px solid transparent}.down{height:24px;width:2px;background:#e46452;margin:0 auto;position:relative}.down:after{content:"";position:absolute;bottom:-1px;left:-4px;border-top:8px solid #e46452;border-left:5px solid transparent;border-right:5px solid transparent}.row2{display:grid;grid-template-columns:1fr 28px 1fr;align-items:center;margin-top:3px}.row2 .card{min-height:83px}.merge{width:2px;height:17px;background:#e46452;margin:0 auto}.final{border-color:#e46452;background:#fff4ef}.guard{border:1px solid #e46452;border-radius:24px;background:#fff4ef;padding:22px}.guard h2{font-size:22px;margin:0 0 10px;letter-spacing:-.5px}.guard p{font-size:16px;line-height:1.52;margin:0 0 17px}.locks{display:grid;grid-template-columns:1fr 1fr;gap:9px}.lock{border:1px solid #efb8ae;border-radius:15px;background:#fffdf9;padding:10px 12px;font-size:16px;font-weight:750;text-align:center}.lock:last-child{grid-column:1/3}.guard .only{margin-top:17px;border-top:1px solid #efb8ae;padding-top:15px;color:#b54537;font-size:18px;font-weight:800}.review{height:102px;margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:16px}.review-card{border:1px solid #c7ddd5;border-radius:22px;background:#f2faf6;padding:16px 20px}.review-card strong{display:block;font-size:18px;margin-bottom:7px}.review-card span{font-size:16px;line-height:1.42}.review-card:last-child{background:#fffdf9;border-color:#e6ddd1}.review-card:last-child strong{color:#b54537}.ask{font-weight:800;color:#b54537}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="top"><h1>只出草稿的人闸</h1><img class="bot" src="bots/galet-rouge.png"></header>
+<section class="intro">自动化发帖一旦出现模型幻觉、错误日期或冒犯回复，会造成不可逆损害。</section>
+<section class="grid">
+<div class="flow">
+<p class="flow-title">默认只起草</p>
+<div class="steps">
+<div class="card"><strong>微信一句话</strong><span>定时触发</span></div><i class="arrow"></i>
+<div class="card"><strong>主 Bot 调度中心</strong><span>情报总监 / AI新闻雷达 抓取素材</span></div><i class="arrow"></i>
+<div class="card"><strong>推文二创 / 短推成稿</strong><span>编写草稿</span></div>
+</div>
+<div class="merge"></div><div class="down"></div>
+<div class="row2">
+<div class="card"><strong>主 Bot 事实与长度校验</strong></div><i class="arrow"></i>
+<div class="card final"><strong>推送到手机微信 / 客户端对话框</strong><span>停住：系统不具备自动发帖权限</span></div>
+</div>
+</div>
+<aside class="guard">
+<h2>安全人闸</h2>
+<p>流水线末端必须加一道安全人闸，彻底锁死：</p>
+<div class="locks"><div class="lock">发布</div><div class="lock">点赞</div><div class="lock">关注</div><div class="lock">私信</div><div class="lock">删除</div></div>
+<div class="only">只让模型起草</div>
+</aside>
+</section>
+<section class="review">
+<div class="review-card"><strong>人工审阅：修改、定夺</strong><span>来源和说明文字必须放在草稿外，便于人工阅读与一键复制正文</span></div>
+<div class="review-card"><strong>人工手动复制到 X 发布</strong><span>没有你的明确点击，底层绝不执行。<b class="ask">Ask first</b></span></div>
+</section>
+</main>
+</body>
+</html>

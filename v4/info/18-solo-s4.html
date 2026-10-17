@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:1200px;height:760px;overflow:hidden}body{background:#f8f4ed;color:#1e1b1d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:38px 48px 40px}.header{height:102px;display:flex;align-items:center;justify-content:space-between;padding:0 18px 0 8px}.header h1{font-size:34px;letter-spacing:-1.3px;margin:0;font-weight:800}.header img{width:108px;height:108px;object-fit:contain}.context{height:128px;display:grid;grid-template-columns:1.18fr 1fr .92fr;gap:16px}.card{background:#fffdfa;border:1px solid #dfd8cf;border-radius:22px;padding:18px 20px}.card h2{font-size:17px;line-height:1.2;margin:0 0 11px;font-weight:800}.card ul{list-style:none;padding:0;margin:0;display:grid;gap:5px}.card li{font-size:15px;line-height:1.25;padding-left:16px;position:relative}.card li:before{content:"";width:6px;height:6px;background:#7656b8;border-radius:50%;position:absolute;left:0;top:7px}.cost{background:#f2edff;border-color:#d2c5ef}.cost strong{font-size:25px;letter-spacing:-.5px;color:#5f3d9f;display:block;line-height:1.1;margin:2px 0 8px}.cost p{font-size:15px;line-height:1.35;margin:0}.models{font-size:15px;line-height:1.45;margin:0}.flow{height:405px;margin-top:18px;border:1px solid #d8d0c7;border-radius:26px;background:#fffdfa;padding:21px 22px 20px;position:relative}.flow-title{font-size:18px;font-weight:800;margin:0 0 15px}.lane{height:139px;display:grid;grid-template-columns:1.08fr 38px 1.12fr 38px 1fr;align-items:stretch}.step{border:1px solid #d8d0c7;border-radius:19px;padding:16px 17px;background:#fff}.step .num{font-size:15px;font-weight:800;color:#6a47a9;margin-bottom:7px}.step h3{font-size:19px;margin:0 0 8px;line-height:1.2}.step p{font-size:15px;line-height:1.35;margin:0}.review{background:#f2edff;border-color:#cdbfeb}.arrow{align-self:center;height:2px;background:#7656b8;position:relative;margin:0 10px}.arrow:after{content:"";position:absolute;right:-1px;top:-5px;border-left:9px solid #7656b8;border-top:6px solid transparent;border-bottom:6px solid transparent}.branches{height:155px;margin-top:20px;display:grid;grid-template-columns:1.08fr 38px 1.12fr 38px 1fr;align-items:center}.return{grid-column:1/4;grid-row:1;border:1px solid #d8d0c7;border-radius:18px;min-height:100px;padding:15px 17px;background:#fff7f2}.return h3,.pass h3,.human h3{font-size:18px;margin:0 0 7px;line-height:1.2}.return p,.pass p,.human p{font-size:15px;line-height:1.33;margin:0}.return strong{color:#a24828}.branch-arrow{grid-column:4;grid-row:1;align-self:center;height:2px;background:#7656b8;position:relative;margin:0 10px}.branch-arrow:after{content:"";position:absolute;right:-1px;top:-5px;border-left:9px solid #7656b8;border-top:6px solid transparent;border-bottom:6px solid transparent}.human{grid-column:5;grid-row:1;border:1px solid #d6b7a7;background:#fff7f2;border-radius:19px;padding:15px 16px;min-height:100px}.pass{position:absolute;right:22px;top:203px;width:294px;border:1px solid #b9d7c8;background:#f0faf4;border-radius:19px;padding:14px 16px}.pass h3{color:#216845}.pass p{font-size:15px}.tiny{font-size:15px;color:#6a47a9;font-weight:800}.connector{position:absolute;right:169px;top:186px;height:17px;border-left:2px solid #7656b8}.connector:after{content:"";position:absolute;bottom:-1px;left:-6px;border-top:9px solid #7656b8;border-left:6px solid transparent;border-right:6px solid transparent}
+ .human{position:absolute;right:22px;bottom:6px;width:307px}.branches .human{grid-column:auto;grid-row:auto}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="header"><h1>月交付流水线与质检人闸</h1><img src="bots/triangle-violet.png" alt=""></header>
+<section class="context">
+<article class="card"><h2>业务进自动交付菜单得过三关</h2><ul><li>Brief 能写成结构化清单</li><li>交付物有第三方客观验收标准</li><li>此前纯手工交付至少 10 次</li></ul></article>
+<article class="card"><h2>模型按活分配，别全上旗舰</h2><p class="models">Grok 4.1 Fast：跑清洗初筛<br>Grok Build 0.1：负责 80% 开发物料<br>Grok 4.6：跑长程 Agent 与推理</p></article>
+<article class="card cost"><h2>19.5 万 Token 硬拦截</h2><strong>195,000 Token</strong><p>输入超 200,000 Token 费率直接翻倍<br>超限报错截断或剪枝</p></article>
+</section>
+<section class="flow">
+<h2 class="flow-title">单任务自动化生产循环</h2>
+<div class="lane">
+<article class="step"><div class="num">01</div><h3>生产 Bot</h3><p>基于需求与声音规范<br>生成第 1 版草稿</p></article><div class="arrow"></div>
+<article class="step review"><div class="num">02</div><h3>独立审核 Bot</h3><p>只输入原始 Brief、客户规范和产物<br>不给中间推理；严格只读</p></article><div class="arrow"></div>
+<article class="step"><div class="num">03</div><h3>审查结果</h3><p><span class="tiny">PASS 或 FAIL</span><br>发现缺陷只报 FAIL 绝不代笔</p></article>
+</div>
+<div class="connector"></div>
+<div class="pass"><h3>PASS</h3><p>记录日志并进入待交付队列</p></div>
+<div class="branches">
+<article class="return"><h3>FAIL：针对性修复重试</h3><p>将审查不通过的具体原因拼接入下一轮 Brief，由生产 Bot 修复重试。<strong>MAX_ATTEMPTS 严格设定为 3 次。</strong></p></article><div class="branch-arrow"></div>
+<article class="human"><h3>连续 3 次 FAIL</h3><p>终止自动重试，触发报警<br>人工兜底接管</p></article>
+</div>
+</section>
+</main>
+</body>
+</html>

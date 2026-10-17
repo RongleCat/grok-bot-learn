@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>可替换容器</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fbf6ed;color:#20201d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.canvas{width:1200px;height:760px;padding:32px 44px 38px;position:relative}.top{height:116px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d9d2c5}.title-wrap{display:flex;align-items:center;gap:22px}.bot{width:104px;height:104px;object-fit:contain;display:block}.kicker{font-size:16px;color:#6b6258;letter-spacing:1px;margin:0 0 7px}.title{font-size:34px;line-height:1.15;letter-spacing:-1px;font-weight:750;margin:0}.reset{width:338px;background:#f2e6d7;border:1px solid #d8c2aa;border-radius:22px;padding:16px 20px}.reset strong{font-size:18px;display:block;color:#9d4e28;margin-bottom:5px}.reset span{font-size:15px;line-height:1.45;display:block}.main{display:grid;grid-template-columns:250px 1fr 278px;gap:20px;margin-top:22px;height:512px;position:relative}.card{background:#fffdf9;border:1px solid #ddd6cb;border-radius:24px}.step{padding:24px 22px}.step-no{width:33px;height:33px;border-radius:50%;background:#255f61;color:white;display:grid;place-items:center;font-size:16px;font-weight:700;margin-bottom:15px}.step h2{font-size:21px;margin:0 0 12px;letter-spacing:-.4px}.step p{font-size:16px;line-height:1.65;margin:0;color:#49463f}.arrow{position:absolute;top:246px;color:#255f61;font-size:30px;z-index:2}.arrow.a1{left:257px}.arrow.a2{right:285px}.center{padding:20px 22px}.center-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e4ddd3;padding-bottom:13px}.center h2{font-size:21px;margin:0}.routine{font-size:15px;color:#255f61;border:1px solid #9db8b5;background:#edf5f3;border-radius:14px;padding:7px 10px}.tree{margin:17px 0 14px;padding:15px 17px;background:#f7f3eb;border-radius:17px;font-size:15px;line-height:1.48;color:#34332f}.tree b{font-weight:700}.tree .indent{padding-left:20px}.tree .indent2{padding-left:40px}.push{border-top:1px solid #e4ddd3;padding-top:14px;font-size:16px;line-height:1.52;color:#3c3b36}.push strong{color:#9d4e28}.right{display:grid;grid-template-rows:208px 1fr;gap:18px}.safe{padding:21px 21px;background:#fff9f0}.safe h2,.recover h2{font-size:20px;margin:0 0 12px}.safe p,.recover p{font-size:16px;line-height:1.55;margin:0 0 12px;color:#49463f}.safe p:last-child,.recover p:last-child{margin-bottom:0}.safe strong{color:#9d4e28}.recover{padding:21px;background:#edf5f3;border-color:#afc8c4}.recover h2{color:#255f61}.restore{font-size:16px;background:white;border:1px solid #bed3cf;border-radius:14px;padding:12px 13px;color:#255f61;margin:13px 0}
+</style>
+</head>
+<body>
+<main class="canvas">
+  <header class="top">
+    <div class="title-wrap">
+      <img class="bot" src="bots/galet-encre.png" alt="">
+      <div>
+        <p class="kicker">/workspace 共享给同账号所有 Bot</p>
+        <h1 class="title">把云电脑当成可替换容器</h1>
+      </div>
+    </div>
+    <div class="reset"><strong>云电脑随时会被官方重置</strong><span>装好的包和未提交状态全会清空，本地数据丢了找不回来</span></div>
+  </header>
+  <section class="main" aria-label="备份与恢复流程">
+    <article class="card step">
+      <div class="step-no">1</div>
+      <h2>记忆管家</h2>
+      <p>新建 Bot<br>负责定期导出所有 Bot 的章程、规则与记忆</p>
+    </article>
+    <div class="arrow a1">→</div>
+    <article class="card center">
+      <div class="center-head"><h2>每周定时 Routine</h2><span class="routine">存为 Markdown</span></div>
+      <div class="tree">
+        <b>/workspace/bots-backup/</b><br>
+        <span class="indent">├─ <b>charters/</b>　各 Bot 的长期规则</span><br>
+        <span class="indent">├─ <b>memories/</b>　团队共用决策与业务定义</span><br>
+        <span class="indent">└─ <b>environment/</b></span><br>
+        <span class="indent2">├─ services-ledger.md　服务总账</span><br>
+        <span class="indent2">└─ restore.sh　虚拟机一键重置恢复脚本</span>
+      </div>
+      <div class="push"><strong>自动：</strong>检查文件更新 → Git 提交并推送远端私有仓库</div>
+    </article>
+    <div class="arrow a2">→</div>
+    <div class="right">
+      <article class="card safe">
+        <h2>凭据安全</h2>
+        <p><strong>严禁</strong>把明文 Token 提交到 Git</p>
+        <p>自动化脚本只读本地 <b>~/.env</b> 取密钥</p>
+        <p>登录、两步验证或 CAPTCHA 时人工接管屏幕</p>
+      </article>
+      <article class="card recover">
+        <h2>重置后恢复</h2>
+        <p>环境与恢复脚本已在私有 Git 留存</p>
+        <div class="restore">environment/restore.sh</div>
+        <p>Bot 只继承 Cookie，碰不到明文密码</p>
+      </article>
+    </div>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fbf6ed;color:#20201d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:36px 48px 40px}.head{height:115px;display:flex;align-items:center;border-bottom:1px solid #ded7cb}.head h1{font-size:31px;letter-spacing:-1px;margin:0;font-weight:750;line-height:1.15}.head p{font-size:16px;margin:11px 0 0;color:#5e5a53;letter-spacing:.2px}.bot{width:108px;height:108px;object-fit:contain;margin-left:auto;margin-right:18px}.flow{height:150px;display:grid;grid-template-columns:1fr 42px 1.3fr 42px 1fr;align-items:center;padding:22px 0 14px}.card{background:#fffdf9;border:1px solid #ded7cb;border-radius:22px}.flowcard{height:110px;padding:20px 22px;display:flex;flex-direction:column;justify-content:center}.flowcard strong{font-size:21px;line-height:1.25;letter-spacing:-.5px}.flowcard span{font-size:15px;line-height:1.5;margin-top:7px;color:#605c55}.arrow{height:2px;background:#36a89b;margin:0 10px;position:relative}.arrow:after{content:"";position:absolute;right:-1px;top:-4px;width:9px;height:9px;border-top:2px solid #36a89b;border-right:2px solid #36a89b;transform:rotate(45deg)}.shared{border-color:#36a89b;background:#f4fcfa}.shared strong{color:#16756d}.settlement{height:190px;display:grid;grid-template-columns:216px 1fr 1fr;gap:14px;padding:16px}.settle-label{border-radius:18px;background:#20201d;color:#fffdf9;padding:23px 20px;display:flex;flex-direction:column;justify-content:center}.settle-label b{font-size:20px;line-height:1.3}.settle-label span{font-size:15px;line-height:1.55;margin-top:8px;color:#e7e2da}.rule{border-radius:18px;padding:19px 20px;background:#f4fcfa;border:1px solid #a7d9d1}.rule.third{background:#fff8ef;border-color:#e8cda8}.rule h2{font-size:18px;margin:0 0 11px;line-height:1.2}.rule p{font-size:15px;line-height:1.55;margin:0;color:#3c3a35}.rule.third h2{color:#a85e21}.plan-title{font-size:17px;font-weight:700;margin:19px 0 10px}.plans{height:177px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}.plan{padding:17px 19px;position:relative}.num{display:block;color:#16877d;font-size:15px;font-weight:700;margin-bottom:6px}.plan b{font-size:17px;line-height:1.35;display:block}.plan p{font-size:15px;line-height:1.48;margin:5px 0 0;color:#57534c}.goal{grid-column:span 3;background:#20201d;border-color:#20201d;color:#fffdf9;display:flex;align-items:center;padding:0 24px;gap:28px}.goal b{font-size:18px;white-space:nowrap}.goal span{font-size:15px;color:#e8e3db;line-height:1.45}.goal em{font-style:normal;color:#82d7ca;font-weight:700}
+.settle-label,.rule{border-radius:20px}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="head">
+    <div><h1>每周共享用量池</h1><p>The X Subscription：固定额度池，到期自动刷新</p></div>
+    <img class="bot" src="bots/nuage-turquoise.png" alt="">
+  </header>
+  <section class="flow" aria-label="共享机制">
+    <div class="card flowcard"><strong>每周固定额度池</strong><span>到期自动刷新</span></div>
+    <div class="arrow"></div>
+    <div class="card flowcard shared"><strong>Grok 网页端、Bot 与 Cursor 补全问答</strong><span>共用这个池子</span></div>
+    <div class="arrow"></div>
+    <div class="card flowcard"><strong>Mac 与 iPhone 登录同账号</strong><span>额度实时同步，换设备不重复扣额</span></div>
+  </section>
+  <section class="card settlement" aria-label="结算规则">
+    <div class="settle-label"><b>模型类别<br>结算规则</b><span>消耗快慢只看<br>任务量与步数</span></div>
+    <article class="rule"><h2>官方模型</h2><p>计入共享池，网页端与 Bot 都在此扣额。</p></article>
+    <article class="rule third"><h2>第三方模型</h2><p>不计入共享池，在 Cursor 中按 API 标价单独扣费。</p></article>
+  </section>
+  <div class="plan-title">日常分三步规划</div>
+  <section class="plans" aria-label="用量规划">
+    <article class="card plan"><span class="num">01</span><b>周初先跑核心重任务</b><p>优先处理核心代码编写、架构搭建与复杂逻辑调试。</p></article>
+    <article class="card plan"><span class="num">02</span><b>避开高消耗操作</b><p>批量做视频、高频轮询与多 Bot 联动消耗最快。</p></article>
+    <article class="card plan"><span class="num">03</span><b>关注重置周期</b><p>临近重置还有富余时，再集中做数据整理或深度审查。</p></article>
+    <div class="card goal"><b>节奏刚好</b><span>常规自动化把日均消耗稳在 <em>10% 到 15%</em>；每周重置前一天留约 <em>20%</em> 缓冲，且没收到额度告急弹窗。</span></div>
+  </section>
+</main>
+</body>
+</html>

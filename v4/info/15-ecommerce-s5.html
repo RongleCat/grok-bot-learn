@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>收藏整理员</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fbf6ee;color:#20201e;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:42px 52px 38px;position:relative}.top{height:108px;position:relative;border-bottom:1px solid #d8d0c5}.title{font-size:42px;line-height:1.1;font-weight:800;letter-spacing:-1.5px;margin:8px 0 0}.bot{position:absolute;right:42px;top:-23px;width:108px;height:108px;object-fit:contain}.flow{height:278px;padding-top:30px;display:grid;grid-template-columns:250px 1fr 250px;gap:35px;align-items:center;position:relative}.card{background:#fffdfa;border:1px solid #d9d1c6;border-radius:24px;box-shadow:0 3px 0 rgba(39,35,29,.035)}.start,.end{min-height:174px;padding:26px 25px}.start h2,.end h2{font-size:22px;line-height:1.35;margin:0 0 16px;font-weight:750}.start p,.end p{font-size:16px;line-height:1.7;margin:0}.prompt{height:214px;padding:23px 30px;background:#f4e5cf;border-color:#d6b98f;position:relative}.prompt h2{font-size:19px;line-height:1.35;margin:0 0 13px;font-weight:800}.prompt p{font-size:16px;line-height:1.62;margin:0;font-weight:500}.arrow{position:absolute;top:137px;height:2px;background:#d2824e;width:28px}.arrow:after{content:"";position:absolute;right:0;top:-4px;width:8px;height:8px;border-right:2px solid #d2824e;border-top:2px solid #d2824e;transform:rotate(45deg)}.a1{left:259px}.a2{right:258px}.outputs{height:244px;display:grid;grid-template-columns:1.12fr .88fr;gap:24px}.out-card,.check-card{padding:25px 29px}.out-card{background:#e6f0e9;border-color:#a7bfae}.out-card h2,.check-card h2{font-size:22px;line-height:1.35;margin:0 0 16px;font-weight:800}.files{display:flex;gap:14px}.file{background:#fffdfa;border:1px solid #b8cfbd;border-radius:16px;padding:13px 16px;flex:1;font-size:18px;font-weight:700;line-height:1.35}.file span{display:block;margin-top:4px;font-size:15px;font-weight:500;color:#444841}.check-card{background:#fffdfa}.row{display:flex;align-items:flex-start;gap:12px;font-size:16px;line-height:1.48;margin:0 0 12px}.mark{width:20px;height:20px;flex:0 0 20px;border-radius:50%;margin-top:2px;background:#d2824e;color:#fffdfa;text-align:center;font-size:14px;line-height:20px;font-weight:800}.limit{border-top:1px solid #ddd4c9;padding-top:12px;margin-top:2px;color:#342821}.limit .mark{background:#20201e;font-size:15px}.check-card h3{font-size:16px;margin:0 0 8px;font-weight:800}@media print{body{print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="top">
+    <h1 class="title">收藏整理员</h1>
+    <img class="bot" src="bots/capsule-vert.png" alt="">
+  </header>
+  <section class="flow">
+    <article class="card start">
+      <h2>挑 5 类代表链接</h2>
+      <p>如 115 期播客、图文转换</p>
+    </article>
+    <div class="arrow a1"></div>
+    <article class="card prompt">
+      <h2>整理这几条 X 收藏链接</h2>
+      <p>按主题分类，每条留下作者、原链接、核心观点和可以借鉴的写法。</p>
+      <p>再围绕“给新手的 AI 实操教程”提出三个具体选题，做成 Markdown 素材库和选题清单。</p>
+    </article>
+    <div class="arrow a2"></div>
+    <article class="card end">
+      <h2>两份 Markdown 文件</h2>
+      <p>收藏素材库</p>
+      <p>选题建议</p>
+    </article>
+  </section>
+  <section class="outputs">
+    <article class="card out-card">
+      <h2>收藏素材库</h2>
+      <div class="files">
+        <div class="file">按主题分类<span>作者 · 原链接</span></div>
+        <div class="file">核心观点<span>可以借鉴的写法</span></div>
+        <div class="file">三个具体选题<span>单次任务可直接做</span></div>
+      </div>
+    </article>
+    <article class="card check-card">
+      <h2>验收与限制</h2>
+      <div class="row"><span class="mark">✓</span><span>保留原作者与原链接</span></div>
+      <div class="row"><span class="mark">✓</span><span>拆解行文逻辑</span></div>
+      <div class="row limit"><span class="mark">×</span><span>严禁将他人实操与数据捏造成亲历，只学结构思路。</span></div>
+    </article>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#faf6ef;color:#20201e;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:32px 44px 38px}.top{height:105px;display:flex;align-items:center;border-bottom:1px solid #dcd6cd}.top h1{font-size:34px;line-height:1.2;letter-spacing:-1px;margin:0;font-weight:750}.top img{width:102px;height:102px;object-fit:contain;margin-left:auto}.rule{height:76px;display:flex;align-items:center;gap:20px}.rule strong{font-size:18px;line-height:1.45;max-width:760px}.rule .arrow{font-size:31px;color:#694ea0;font-weight:500}.rule span{font-size:16px;line-height:1.45;color:#5e5a54;max-width:285px}.signals{height:251px;border:1px solid #dcd6cd;background:#fffdfa;border-radius:24px;padding:19px 22px 20px}.signals h2{font-size:20px;margin:0 0 15px;font-weight:750}.signal-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.signal{height:154px;border:1px solid #e1dbd2;border-radius:18px;padding:15px 14px;background:#fffdfa}.signal b{display:block;font-size:18px;color:#694ea0;margin-bottom:10px}.signal p{font-size:15px;line-height:1.48;margin:0;color:#3d3a36}.compare{margin-top:14px;height:210px;display:grid;grid-template-columns:224px 1fr 1fr;border:1px solid #dcd6cd;border-radius:22px;overflow:hidden;background:#fffdfa}.compare>div{padding:12px 18px;border-right:1px solid #dcd6cd}.compare>div:last-child{border-right:0}.head{font-size:17px;font-weight:750;background:#f1ece4;display:flex;align-items:center}.side{display:grid;grid-template-rows:50px 1fr 1fr 1fr}.side div{font-size:16px;font-weight:700;display:flex;align-items:center;border-bottom:1px solid #e5dfd7}.side div:last-child{border-bottom:0}.col{display:grid;grid-template-rows:50px 1fr 1fr 1fr}.col .cell{font-size:15px;line-height:1.35;display:flex;align-items:center;border-bottom:1px solid #e5dfd7}.col .cell:last-child{border-bottom:0}.team .cell{background:#faf8ff}.team .head{color:#503889;background:#eee8fa}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="top">
+    <h1>岗位切分的五条信号与组织原则</h1>
+    <img src="bots/triangle-violet.png" alt="">
+  </header>
+  <section class="rule">
+    <strong>工作只要出现以下任一特征，就该设立独立专职 Bot。</strong>
+    <div class="arrow">→</div>
+    <span>以可逆性为核心的人闸规则</span>
+  </section>
+  <section class="signals">
+    <h2>五条信号</h2>
+    <div class="signal-grid">
+      <article class="signal"><b>目标不同</b><p>发现系统缺陷<br>优化文案转化率</p></article>
+      <article class="signal"><b>工具不同</b><p>连接代码仓库<br>连接 CRM 电子表格</p></article>
+      <article class="signal"><b>工作风格不同</b><p>客服温和克制<br>数据分析严苛客观<br>只列数字</p></article>
+      <article class="signal"><b>审批边界不同</b><p>起草内部备忘<br>拥有外部发信权限<br>必须分开</p></article>
+      <article class="signal"><b>日程安排不同</b><p>每小时巡检工单<br>每周一汇总财务报表</p></article>
+    </div>
+  </section>
+  <section class="compare">
+    <div class="side"><div class="head">对比维度</div><div>上下文</div><div>权限与排查</div><div>例程拓展</div></div>
+    <div class="col"><div class="head">通用助手（容易踩坑）</div><div class="cell">杂糅多项业务，易产生记忆混淆与幻觉</div><div class="cell">权限泛滥易误触高风险，冲突难定位</div><div class="cell">定时任务互相干扰，排期容易堵塞</div></div>
+    <div class="col team"><div class="head">专职 Bot 团队</div><div class="cell">独立线程维护专属记忆，运行稳定</div><div class="cell">细粒度审批，失败归因直接</div><div class="cell">独立时间表或事件触发器异步执行</div></div>
+  </section>
+</main>
+</body>
+</html>

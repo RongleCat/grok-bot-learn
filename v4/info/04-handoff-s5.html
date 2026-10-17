@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#f7f1e7;color:#252521;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}main{width:1200px;height:760px;padding:30px 48px 38px}header{height:118px;display:flex;align-items:center;border-bottom:1px solid #d9d0c2}h1{font-size:38px;line-height:1.15;letter-spacing:-1px;margin:0;font-weight:750}header p{font-size:17px;line-height:1.5;margin:12px 0 0;color:#625e55}header img{width:108px;height:108px;object-fit:contain;margin-left:auto;margin-right:13px}.grid{height:508px;padding-top:20px;display:grid;grid-template-columns:1.02fr 1.08fr;gap:22px}.card{border:1px solid #d9d0c2;border-radius:24px;background:#fffdf8}.stop{padding:25px 27px}.card h2{font-size:22px;line-height:1.2;margin:0 0 17px;font-weight:750}.label{font-size:15px;font-weight:700;color:#147c78;letter-spacing:.04em;margin-bottom:7px}.interject{padding:16px 18px;border-radius:16px;background:#e6f4f1;font-size:17px;line-height:1.52}.arrow{height:29px;margin-left:27px;border-left:2px solid #1e9690}.arrow:after{content:"";display:block;width:8px;height:8px;border-right:2px solid #1e9690;border-bottom:2px solid #1e9690;transform:translate(-5px,20px) rotate(45deg)}.stopbox{border:1.5px solid #1e9690;border-radius:17px;padding:15px 18px}.stopword{font-size:24px;font-weight:750;color:#147c78;margin-bottom:6px}.note{font-size:16px;line-height:1.45}.note strong{font-weight:750}.steps{margin-top:18px;padding-top:18px;border-top:1px solid #e6ded1}.steps h3{font-size:17px;margin:0 0 10px}.steps ol{list-style:none;margin:0;padding:0;counter-reset:s}.steps li{font-size:16px;line-height:1.45;margin:7px 0;padding-left:27px;position:relative}.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:1px;width:19px;height:19px;border-radius:50%;background:#252521;color:#fffdf8;font-size:12px;text-align:center;line-height:19px}.approval{padding:25px 27px}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:3px}.choice{min-height:100px;padding:13px 12px;border:1px solid #d9d0c2;border-radius:16px;background:#fffdf8}.choice b{display:block;font-size:17px;color:#147c78;margin-bottom:8px}.choice span{font-size:15px;line-height:1.35;display:block}.timing{margin-top:20px;padding-top:19px;border-top:1px solid #e6ded1}.timing h3{font-size:17px;margin:0 0 10px}.rows{border:1px solid #d9d0c2;border-radius:16px;overflow:hidden}.row{display:grid;grid-template-columns:118px 1fr 1.3fr;font-size:15px;line-height:1.35}.row>*{padding:11px 10px;border-right:1px solid #d9d0c2}.row>*:last-child{border-right:0}.row.head{background:#e6f4f1;font-weight:700}.row:not(.head){border-top:1px solid #d9d0c2}.em{font-weight:750}.takeover{margin-top:22px;padding:15px 18px;border-radius:18px;background:#252521;color:#fffdf8;display:flex;align-items:center;gap:18px}.takeover b{font-size:17px;white-space:nowrap;color:#8fe0d8}.takeover span{font-size:15px;line-height:1.4}.takeover strong{font-weight:750}
+</style>
+</head>
+<body>
+<main>
+<header>
+<div><h1>任务进行时的干预</h1><p>停止、插话与审批</p></div>
+<img src="bots/nuage-turquoise.png" alt="">
+</header>
+<section class="grid">
+<article class="card stop">
+<h2>插话与停止</h2>
+<div class="label">Bot 偏离目标时</div>
+<div class="interject">发普通消息就能即时插话<br>“换成 2026 年 10 月更新后的新版规范再查”</div>
+<div class="arrow"></div>
+<div class="label">操作出错或遇高风险调用</div>
+<div class="stopbox"><div class="stopword">立即停止</div><div class="note"><strong>停止只阻断未执行动作</strong><br>绝不回滚已保存的文件或发出的 API 请求</div></div>
+<div class="steps"><h3>停下后按三步排查</h3><ol><li>打开云电脑预览面板看状态</li><li>清理半成品或错误写入</li><li>缩小范围并明确边界后再重启</li></ol></div>
+</article>
+<article class="card approval">
+<h2>审批与超时</h2>
+<div class="label">开启 Auto-review 或触发高风险操作</div>
+<div class="choices"><div class="choice"><b>允许一次</b><span>仅批准本次，后续同类继续询问</span></div><div class="choice"><b>始终允许</b><span>加入白名单并不再提醒</span></div><div class="choice"><b>拒绝</b><span>彻底拦截该操作</span></div></div>
+<div class="timing"><h3>等待机制与超时结果</h3><div class="rows"><div class="row head"><span>场景</span><span>等待机制</span><span>超时结果</span></div><div class="row"><span>实时交互</span><span>挂起等待</span><span>持续等待直到点击处理</span></div><div class="row"><span>后台无人值守</span><span>约 10 分钟自动过期（Expired）</span><span class="em">不执行操作并结束任务</span></div></div></div>
+<div class="takeover"><b>凭据接管<br>Action needed</b><span>点击 <strong>Take over</strong> 在云电脑手动输入<br>完成后点击 <strong>I'm done</strong> 交还控制权<br><strong>切勿在普通对话框输入明文密码</strong></span></div>
+</article>
+</section>
+</main>
+</body>
+</html>

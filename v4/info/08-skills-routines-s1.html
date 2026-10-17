@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fff9ef;color:#20201d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{height:760px;padding:42px 54px 38px}.head{height:116px;position:relative}.head h1{margin:0;font-size:38px;line-height:1.25;letter-spacing:-1px;font-weight:760}.definition{margin:16px 160px 0 0;max-width:820px;font-size:19px;line-height:1.55;color:#4f4c45}.bot{position:absolute;right:18px;top:-8px;width:110px;height:110px;object-fit:contain}.grid{height:564px;display:grid;grid-template-columns:1.1fr .82fr 1.08fr;gap:18px}.card{border:1px solid #ded7ca;border-radius:24px;background:#fffdf8;padding:20px 24px;min-width:0}.card h2{font-size:24px;line-height:1.2;margin:0 0 12px;letter-spacing:-.4px}.num{display:inline-flex;width:30px;height:30px;border-radius:10px;background:#e7673d;color:white;align-items:center;justify-content:center;font-size:16px;font-weight:700;margin-right:9px;vertical-align:2px}.rule{height:1px;background:#e8e1d5;margin:12px 0}.list{display:grid;gap:7px}.item{border-radius:14px;background:#fff4e9;padding:8px 12px;font-size:15px;line-height:1.34}.item strong{display:block;font-size:15px;margin-bottom:2px}.method{border-left:4px solid #e7673d;padding-left:12px;margin:0 0 12px}.method b{font-size:17px}.method p{margin:5px 0 0;font-size:15px;line-height:1.34;color:#565149}.tip{background:#fff0e9;border:1px solid #f3c7b9;border-radius:14px;padding:11px;font-size:15px;line-height:1.42;color:#4b403a}.slash{font-size:28px;font-weight:700;color:#e7673d;line-height:1}.permission{margin-top:12px;background:#f1f8f4;border:1px solid #bcdacf;border-radius:16px;padding:14px;font-size:15px;line-height:1.48}.permission b{color:#256b55}.check{display:grid;gap:8px}.check-row{border:1px solid #e7dfd2;border-radius:15px;padding:8px 12px}.check-row h3{margin:0 0 4px;font-size:16px;color:#256b55}.bad{font-size:15px;line-height:1.3;color:#8a573e}.good{font-size:15px;line-height:1.34;margin-top:3px;color:#33332e}.good span,.bad span{font-weight:700;margin-right:7px}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head">
+<h1>固定你的标准作业程序</h1>
+<p class="definition">技能是保存在账号里的操作指令，名下所有 Bot 都能直接调用。</p>
+<img class="bot" src="bots/squircle-brun.png" alt="">
+</header>
+<section class="grid">
+<article class="card">
+<h2><span class="num">1</span>怎么沉淀技能</h2>
+<div class="method"><b>方式一：对话后文本总结</b><p>提示词要明确输入源、异常处理与越界限制。</p></div>
+<div class="list">
+<div class="item"><strong>决策规则</strong>若工单包含退款申请且金额大于 500 元，标记为一级风险。</div>
+<div class="item"><strong>交付格式</strong>生成 Markdown 表格。</div>
+<div class="item"><strong>异常处理</strong>输出明确说明，严禁使用历史缓存或伪造数据。</div>
+<div class="item"><strong>安全边界</strong>未经人工明确批准，严禁直接调用接口回复客户或变更工单状态。</div>
+</div>
+<div class="rule"></div>
+<div class="method"><b>方式二：演示教会（Teach task）</b><p>界面操作复杂时，直接演示更省事。</p></div>
+</article>
+<article class="card">
+<h2><span class="num">2</span>如何引用与管理</h2>
+<div class="slash">/</div>
+<p style="font-size:18px;line-height:1.5;margin:10px 0 0">输入框输入斜杠即可选择技能载入。</p>
+<div class="rule"></div>
+<div class="permission"><b>开启权限</b><br>列表中找不到时，去桌面侧边栏“连接应用”（Connected Apps）点已连数量，在“私有技能”里打开开关。</div>
+</article>
+<article class="card">
+<h2><span class="num">3</span>做到什么程度算合格</h2>
+<div class="check">
+<div class="check-row"><h3>输入来源</h3><div class="bad"><span>不合格</span>“分析一下最近的数据”</div><div class="good"><span>合格</span>明确指定插件、API 端点、文件路径或数据库视图</div></div>
+<div class="check-row"><h3>边界控制</h3><div class="bad"><span>不合格</span>“遇到问题看着办”</div><div class="good"><span>合格</span>数据缺失立即中断报错，严禁编造数据</div></div>
+<div class="check-row"><h3>动作权限</h3><div class="bad"><span>不合格</span>“帮我把报表发给客户”</div><div class="good"><span>合格</span>生成草稿并在聊天停留，等人工允许后再发送</div></div>
+<div class="check-row"><h3>输出结构</h3><div class="bad"><span>不合格</span>自由发挥的大段文本</div><div class="good"><span>合格</span>固定字段列表、Markdown 表格或落盘路径</div></div>
+</div>
+</article>
+</section>
+</main>
+</body>
+</html>

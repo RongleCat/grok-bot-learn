@@ -1,0 +1,2213 @@
+{
+ "fs00": {
+  "file": "../sources/feishu/00_Grok_Bot_焚诀.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs01": {
+  "file": "../sources/feishu/01_01_入门与概念.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs02": {
+  "file": "../sources/feishu/02_1.1_Grok_Bot_是什么：一页看懂.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs03": {
+  "file": "../sources/feishu/03_1.2_Grok_Bot_和_Muse、Hermes、dots、Cue_怎么选.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs04": {
+  "file": "../sources/feishu/04_02_铁柱实战与心得.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs05": {
+  "file": "../sources/feishu/05_2.1_铁柱长文.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs06": {
+  "file": "../sources/feishu/06_Grok_Bot_Webhook_+_快捷指令：知识自动入库流水线搭建.md",
+  "title": "Grok Bot Webhook + 快捷指令：知识自动入库流水线搭建",
+  "url": "https://x.com/cgnot996/status/2097487429104197688",
+  "author": "铁柱AGI",
+  "handle": "cgnot996",
+  "imgs": [
+   [
+    "",
+    "TBYMbdlHJojPUjxwh9UctO9KnUc"
+   ],
+   [
+    "",
+    "DdLPbgrLooJvMJxa7qlcWhTOn0e"
+   ],
+   [
+    "",
+    "MDUNbPaHpoA3wDxufhkcvZIqnVg"
+   ],
+   [
+    "",
+    "QhH2bVVFmoOtgZx6341cATcKneg"
+   ],
+   [
+    "",
+    "GsEXbaTe0ocoEgx5t7AccS3unKh"
+   ],
+   [
+    "",
+    "DqPRbJQzkoR8aHxAObPcR4LAnDf"
+   ],
+   [
+    "",
+    "PLXwbh85toUhGrxTfIDcj5pWnph"
+   ],
+   [
+    "",
+    "J0LXbrMWaoEIq2xd7hvcCketnsJ"
+   ],
+   [
+    "",
+    "OmenbtOGko9zxDxDkh2cQfirnWv"
+   ],
+   [
+    "",
+    "Ahrzb4bLYomHlzx8IjbcynqXneP"
+   ],
+   [
+    "",
+    "RJ0RbkIxqojRWdxZW0Scam6rnuf"
+   ]
+  ]
+ },
+ "fs07": {
+  "file": "../sources/feishu/07_马斯克又撒钱了：Grok_Bot_绑定_X_送开发者积分，坑我帮你踩好了.md",
+  "title": "马斯克又撒钱了：Grok Bot 绑定 X 送开发者积分，坑我帮你踩好了",
+  "url": "https://x.com/cgnot996/status/2094000213681930353",
+  "author": "铁柱AGI",
+  "handle": "cgnot996",
+  "imgs": [
+   [
+    "",
+    "BcB4bGdqbojlhUxp0NucjVNcnZc"
+   ],
+   [
+    "",
+    "TlXkbo6bpouRB3xaiugcmkefnog"
+   ],
+   [
+    "",
+    "BZm2bOV5kohlHyxkApxcO2pDn7f"
+   ],
+   [
+    "",
+    "HciVbtaQZoQgGMxGaTRciHBVnsg"
+   ]
+  ]
+ },
+ "fs08": {
+  "file": "../sources/feishu/08_同样_$100_X_开发者积分，为什么我能用一年.md",
+  "title": "同样 $100 X 开发者积分，为什么我能用一年",
+  "url": "https://x.com/cgnot996/status/2094220949340185078",
+  "author": "铁柱AGI",
+  "handle": "cgnot996",
+  "imgs": [
+   [
+    "",
+    "LwHNbr8a7oxfCdxzj3ZciU3bnWd"
+   ],
+   [
+    "",
+    "MMW7bdtyXoBdRDxagSfcvJmwnRg"
+   ],
+   [
+    "",
+    "UZ8Jbphx6oQxqbxiYPyckp18nFe"
+   ],
+   [
+    "",
+    "LrSDbzcnHohwK8xYjN1cpKjHnLh"
+   ],
+   [
+    "",
+    "KIsMbjC45o1o41xxhCMczyn4nVg"
+   ],
+   [
+    "",
+    "GmWBboOVUo0vtUxg94UcXP6lnjc"
+   ],
+   [
+    "",
+    "BWOtbOBcvoKp5YxFtevchWGVn0e"
+   ],
+   [
+    "",
+    "W7tPbScyloy6cJxBsotc7RN2nid"
+   ],
+   [
+    "",
+    "R4tVbs48vo5nxsxMgblcWn6nnNc"
+   ],
+   [
+    "",
+    "CZpxbkWymoWwdzxHmgjchGc1n9f"
+   ],
+   [
+    "",
+    "OvU2bOeSEohE5lxnA2dcXa3YnEf"
+   ],
+   [
+    "",
+    "ZJZibYNj9owcmkx3SHmck9TrnCh"
+   ],
+   [
+    "",
+    "MUyRb1C4xonO12xjc7gclknun0c"
+   ],
+   [
+    "",
+    "O3jRbhZqLoMzpRx5ltwcMdHRnmc"
+   ],
+   [
+    "",
+    "YxTjbWUxooH90yxjVk2c1akgnVd"
+   ],
+   [
+    "",
+    "TI5cbJzjuogThzx8uKZcIv3znfb"
+   ],
+   [
+    "",
+    "ZgarbqC5kozAAMxuvcScaG4LnFe"
+   ],
+   [
+    "",
+    "FRodbWxpCoL9pKxklp0c1bASneC"
+   ],
+   [
+    "",
+    "BuJ5bTwaqoqjUExDdwBc2mO0nTd"
+   ]
+  ]
+ },
+ "fs09": {
+  "file": "../sources/feishu/09_杭州线下活动回看：我是怎么让_Grok_Bot_额度更耐用的.md",
+  "title": "杭州线下活动回看：我是怎么让 Grok Bot 额度更耐用的",
+  "url": "https://x.com/cgnot996/status/2096415217710461078",
+  "author": "铁柱AGI",
+  "handle": "cgnot996",
+  "imgs": [
+   [
+    "",
+    "ZBHtbOXaSo29T5xfvd6cZdIPnze"
+   ],
+   [
+    "",
+    "KtMRb0Jo0oy6ACxWmMrcy4aBnKe"
+   ],
+   [
+    "",
+    "JdNDbRMkpoZQYRxNgxecmI3hnKc"
+   ],
+   [
+    "",
+    "CbkPb6V4monMfDxzcV9cwI4onrd"
+   ],
+   [
+    "",
+    "OaxFbPfwXorT8jxmNRkcGUyHnfc"
+   ],
+   [
+    "",
+    "MFQDbZEJVo68GdxZzkQc3s3anIb"
+   ],
+   [
+    "",
+    "JouqbpHOWoY85rxRi5JcNOi4nMc"
+   ],
+   [
+    "",
+    "OiDYbc70ZoBbNGx7EGJcUxABnXd"
+   ],
+   [
+    "",
+    "LAptbLCbIoz3Y0xlt2gcuBRenoh"
+   ]
+  ]
+ },
+ "fs10": {
+  "file": "../sources/feishu/10_Grok_Bot_百万撤离：一套完善的_Agent_系统备份方案.md",
+  "title": "Grok Bot 百万撤离：一套完善的 Agent 系统备份方案",
+  "url": "https://x.com/cgnot996/status/2098222795847315967",
+  "author": "铁柱AGI",
+  "handle": "cgnot996",
+  "imgs": [
+   [
+    "",
+    "WguGbJAMuoIIz6xiozxcVQN9nVf"
+   ],
+   [
+    "",
+    "GBK6bsDfCo90T8xSJFyctf41nSh"
+   ],
+   [
+    "",
+    "IyTdbhrRyoQeU9xIdxDcBk6Onyh"
+   ],
+   [
+    "",
+    "WsN2b0jeGomrDBxkJvZcH1bBnBd"
+   ],
+   [
+    "",
+    "J7MWbWFOsobo0JxM556cQRjBn5c"
+   ],
+   [
+    "",
+    "DwV7bcM1QosRQDx5K0RcsPTEnob"
+   ],
+   [
+    "",
+    "YDqtbCQXLoIZQkxlBobcpVRpnmn"
+   ],
+   [
+    "",
+    "EvhZbcAUgo9CNwxnEsjcgonTn2e"
+   ],
+   [
+    "",
+    "CmKSbUW7zoOIJFx9LJIcPGkNn6P"
+   ],
+   [
+    "",
+    "BTH2bRKzuopEjDxAzbkcL1zfnpc"
+   ],
+   [
+    "",
+    "KbKAbYxDlovs5ExMVzoc8rZknCd"
+   ],
+   [
+    "",
+    "WnBsbrL1FoCYs6xXxD3c71J5nKd"
+   ]
+  ]
+ },
+ "fs11": {
+  "file": "../sources/feishu/11_微信聊天记录打通_Grok_Bot：快捷指令进阶版.md",
+  "title": "微信聊天记录打通 Grok Bot：快捷指令进阶版",
+  "url": "https://x.com/cgnot996/status/2107039351519707602",
+  "author": "铁柱AGI",
+  "handle": "cgnot996",
+  "imgs": [
+   [
+    "",
+    "XLZkbhaS6oIzgzxpZdGc6cc9nGy"
+   ],
+   [
+    "",
+    "WYlXbR35Ioi4PbxDHgEcxedPn3c"
+   ],
+   [
+    "",
+    "Q7DfbssKNozhD1xQE5Jc5ubmn7d"
+   ],
+   [
+    "",
+    "Jf7ibK0AKo0dp7x5TP1c3L9Snpd"
+   ],
+   [
+    "",
+    "PfwqbRALnoYHrQx4AHFcTTegnXg"
+   ],
+   [
+    "",
+    "OyWQbpIjdo9LxvxzvtOcoLZBnyb"
+   ],
+   [
+    "",
+    "HwVnb5QkqoyVtlxxKoxch3oQnfb"
+   ],
+   [
+    "",
+    "F16vb3aJdo2yuFxVK5Fc0JzTnjd"
+   ],
+   [
+    "",
+    "VXy8bCSuSoX4mrxClFXc2n9VnVe"
+   ],
+   [
+    "",
+    "OzyAbs1HqoSIQbxSOmScnixCncc"
+   ],
+   [
+    "",
+    "VkARbDULvoRdhAxa8mMcB8mLnfe"
+   ],
+   [
+    "",
+    "Mqbsb5rj2oTOBUxVuvVcTl7jnJg"
+   ],
+   [
+    "",
+    "DMiKbfSQVo04SaxA5oPcd9KxnQd"
+   ],
+   [
+    "",
+    "G2OCb3JnDottB2xsliOcPZOnnGd"
+   ],
+   [
+    "",
+    "JMEIbIuXuoovefxv8RncoxJwn2e"
+   ],
+   [
+    "",
+    "EwErbNFGtooZsMx6YC8c7KO7nec"
+   ],
+   [
+    "",
+    "PhnUbIAYkozLS1xoyFDcx4uanPV"
+   ],
+   [
+    "",
+    "VF9jbWPRDo0XQGxc7ddczcgfndI"
+   ],
+   [
+    "",
+    "NxOdbedx2ot01mxtw24cwfdJnPg"
+   ],
+   [
+    "",
+    "NcQJbhEeqobd73xHsM4ckQPKnGD"
+   ],
+   [
+    "",
+    "JEUIbH35OogNi5xBQJgc9b71nWh"
+   ],
+   [
+    "",
+    "IMNlbjQVQoQbqPxaLOEcYLH6nad"
+   ]
+  ]
+ },
+ "fs12": {
+  "file": "../sources/feishu/12_Grok_Bot_额度再省一点：定时任务极限优化.md",
+  "title": "Grok Bot 额度再省一点：定时任务极限优化",
+  "url": "https://x.com/cgnot996/status/2107418115412046064",
+  "author": "铁柱AGI",
+  "handle": "cgnot996",
+  "imgs": [
+   [
+    "",
+    "LhvQbiku2okmGTxNfodcFmxPnzd"
+   ],
+   [
+    "",
+    "RnIlbubAVo4iVmxegi1cNFNrn4J"
+   ],
+   [
+    "",
+    "Vt5gbbxeqoyEZKxKf3rcuWVYnNg"
+   ],
+   [
+    "",
+    "Jp6QbASDIo1cWKxrlupc4gWhnvh"
+   ],
+   [
+    "",
+    "O8jvb7mRJoP9FaxhlcHctRSinfG"
+   ],
+   [
+    "",
+    "LI8jbo8M7obaNYxPHBGcemphn8d"
+   ],
+   [
+    "",
+    "UgbobIbBdo86AJxrXPbcELhInVh"
+   ]
+  ]
+ },
+ "fs13": {
+  "file": "../sources/feishu/13_Grok_Bot_额度超长续航保姆级新手指南（直接发给_Bot！）.md",
+  "title": "Grok Bot 额度超长续航保姆级新手指南（直接发给 Bot！）",
+  "url": "https://x.com/cgnot996/status/2108504325609984233",
+  "author": "铁柱AGI",
+  "handle": "cgnot996",
+  "imgs": [
+   [
+    "",
+    "XelDbTosYob160xV6JJc6fzrnTb"
+   ],
+   [
+    "",
+    "K5mUbU1WBo5Q1txWRercgRUUnjb"
+   ],
+   [
+    "",
+    "ATVubQueIocUsqxF0tbcomGhnUe"
+   ],
+   [
+    "",
+    "Zb18bsczwoZWATxjEorcVrtJnCd"
+   ],
+   [
+    "",
+    "WYoKbL9ZnoxBTYxIUn0c0C5Snpd"
+   ],
+   [
+    "",
+    "VOEFb1p4SoUM1yxx2IechQMrneh"
+   ],
+   [
+    "",
+    "SfVUbbsWUohM9ixuw0acO6Esnaf"
+   ],
+   [
+    "",
+    "LZqnboKuwobWBoxEchHcXRuun4b"
+   ],
+   [
+    "",
+    "KtwvbB7YnogAV8xt9tzcdepjn1d"
+   ]
+  ]
+ },
+ "fs14": {
+  "file": "../sources/feishu/14_Grok_Bot_虚拟机重置后工具全没了？备份恢复教程（附提示词）.md",
+  "title": "Grok Bot 虚拟机重置后工具全没了？备份恢复教程（附提示词）",
+  "url": "https://x.com/cgnot996/status/2108874629163229628",
+  "author": "铁柱AGI",
+  "handle": "cgnot996",
+  "imgs": [
+   [
+    "",
+    "KppYb75Owo83yexElZbcB4Q1nbc"
+   ],
+   [
+    "",
+    "KalzbOD0coP14dxwcBJc8NpcnDe"
+   ],
+   [
+    "",
+    "TyppbfBmWoAhkNx1g2nco262nYb"
+   ],
+   [
+    "",
+    "Ik8wbNf3EoCRJZxCe5wcGpIsn1g"
+   ],
+   [
+    "",
+    "YoENbL12yomQAEx3KAbcLdBSnZf"
+   ],
+   [
+    "",
+    "XLfXbP9hOors5VxwMuuc6t4anC7"
+   ],
+   [
+    "",
+    "XM45bThAhoBkF9xc0M5cDpQRn9c"
+   ],
+   [
+    "",
+    "OExJbcnELohhyCxyF9ccGABInsh"
+   ],
+   [
+    "",
+    "D22CbTLgooXjhwxdCOwcfEThngb"
+   ]
+  ]
+ },
+ "fs15": {
+  "file": "../sources/feishu/15_Grok_Bot_团队接入飞书保姆级教程（附飞书管家模板）.md",
+  "title": "Grok Bot 团队接入飞书保姆级教程（附飞书管家模板）",
+  "url": "https://x.com/cgnot996/status/2109247903785198076",
+  "author": "铁柱AGI",
+  "handle": "cgnot996",
+  "imgs": [
+   [
+    "",
+    "EEsJbFXWhoniAFxuP6EcewF7nMe"
+   ],
+   [
+    "",
+    "PV90b9j76o2zcHxXdm2cSNn9nrd"
+   ],
+   [
+    "",
+    "AJm6b2RGoo3jeRxV3p6c4ozSnyg"
+   ],
+   [
+    "",
+    "BnrdbBUjWoPhX9xTtzqcxdYPndf"
+   ],
+   [
+    "",
+    "WD7XbMKfooV0XMx0Gs0c6RtLn2c"
+   ],
+   [
+    "",
+    "HvCfbfnwSoIVWExK1Dtc884bnRe"
+   ],
+   [
+    "",
+    "C2EGbMlt1oY7yNxDOLrct5r6nJe"
+   ],
+   [
+    "",
+    "PYbwb6awYoc7vCx1efgcpWAznug"
+   ],
+   [
+    "",
+    "MhVRbGiHZoK6WyxOmurcmACBndc"
+   ],
+   [
+    "",
+    "YfA7bEuQfoMdEIxxU2NcwW3An3b"
+   ],
+   [
+    "",
+    "DB6cbILpJo89sExuAnXceMS2nIf"
+   ],
+   [
+    "",
+    "Hf0nbzKYHoqtd2xMMfDcdel3nGg"
+   ],
+   [
+    "",
+    "RO6xbYClgoHXcuxzWaFc1OKMnid"
+   ],
+   [
+    "",
+    "TDR8bo2oqobrTjxSrWZcCMxSn7d"
+   ],
+   [
+    "",
+    "Ib2xbdvp6oYhlVxGB5AcHgN5nld"
+   ],
+   [
+    "",
+    "UpZRbVrLfoz9ImxirCGc6KPSnM9"
+   ],
+   [
+    "",
+    "SpQ2biNgRoKY5SxLMzhcN339nah"
+   ],
+   [
+    "",
+    "A8F9bOQxpo4YTLxPoJacIGz2nJD"
+   ]
+  ]
+ },
+ "fs16": {
+  "file": "../sources/feishu/16_大一统_X_订阅解读：新用户怎么选，老订阅要不要切换？一文讲清楚.md",
+  "title": "大一统 X 订阅解读：新用户怎么选，老订阅要不要切换？一文讲清楚",
+  "url": "https://x.com/cgnot996/status/2109834012193898509",
+  "author": "铁柱AGI",
+  "handle": "cgnot996",
+  "imgs": [
+   [
+    "",
+    "ZHImbdWJdo2P0vx3MURcKGOYndg"
+   ],
+   [
+    "",
+    "HV9ObFzzro62BLxm0gQcrg9pngc"
+   ],
+   [
+    "",
+    "I3JPbL3ufoArtCxyKA7cmewZnHF"
+   ]
+  ]
+ },
+ "fs17": {
+  "file": "../sources/feishu/17_2.2_铁柱推文合集.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs18": {
+  "file": "../sources/feishu/18_铁柱推文合集①：开通、套餐与额度.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs19": {
+  "file": "../sources/feishu/19_铁柱推文合集②：产品功能与版本观察.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs20": {
+  "file": "../sources/feishu/20_铁柱推文合集③：实战玩法与案例.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs21": {
+  "file": "../sources/feishu/21_铁柱推文合集④：社区、生态与竞品对照.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs22": {
+  "file": "../sources/feishu/22_03_他人长文收录.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs23": {
+  "file": "../sources/feishu/23_3.1_中文长文.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs24": {
+  "file": "../sources/feishu/24_万字长文_Grok_Bot_从入门到精通_金尘马.md",
+  "title": "万字长文｜Grok Bot 从入门到精通",
+  "url": "https://x.com/jinchenma_ai/status/2094984812251746424",
+  "author": "金尘马",
+  "handle": "jinchenma_ai",
+  "imgs": [
+   [
+    "",
+    "XCkabhLdKofVKjxf7bqcBrbmnJc"
+   ],
+   [
+    "",
+    "SYzYb633hoxzuOxBcvkcWxjeneg"
+   ],
+   [
+    "",
+    "WffxbEyMkoBVTixh6J1c9XFmnDf"
+   ],
+   [
+    "",
+    "NttHbsExUopXuYxnqYbc0KL0nNe"
+   ],
+   [
+    "",
+    "FrapbkhHsoLBa6xohyZcKrPen2e"
+   ],
+   [
+    "",
+    "LfL0bYoXioRVwjxaNIvc25i2nlc"
+   ]
+  ]
+ },
+ "fs25": {
+  "file": "../sources/feishu/25_工程师如何用好_Grok_bot_Kin.md",
+  "title": "工程师如何用好 Grok bot?",
+  "url": "https://x.com/KinGao476942/status/2096232745538334913",
+  "author": "Kin",
+  "handle": "KinGao476942",
+  "imgs": [
+   [
+    "",
+    "Vf2EbjL3johoNcxRGlbct70snjb"
+   ],
+   [
+    "",
+    "DwppbW5vZoMsDlxsXyNc12BHnMd"
+   ],
+   [
+    "",
+    "InjJbs8wGo29DXx3yXbcDmXsnvb"
+   ],
+   [
+    "",
+    "MdYhbdp14o80SixT1qvcxLjDndf"
+   ],
+   [
+    "",
+    "QxHAbKLUGoBivDxrDKec0hVBnAh"
+   ],
+   [
+    "",
+    "P906bqlnxoedIJxtVMoc7WsCn8e"
+   ],
+   [
+    "",
+    "LApGb6Z42oMUE1xrm1tcCl7VnMn"
+   ]
+  ]
+ },
+ "fs26": {
+  "file": "../sources/feishu/26_用Grok_Bot搭建自媒体团队：保姆级教程_Adrian_Punk.md",
+  "title": "用Grok Bot搭建自媒体团队：保姆级教程",
+  "url": "https://x.com/AdrianPunk115/status/2097311704547987756",
+  "author": "Adrian Punk",
+  "handle": "AdrianPunk115",
+  "imgs": [
+   [
+    "",
+    "BzIibo3P2oLVJyxdEF4cOaXjnyL"
+   ],
+   [
+    "",
+    "IrPfbhdpco2ZP4xUu6fcXDOznWw"
+   ],
+   [
+    "",
+    "CbgMbpU7po0Ib1xoDW0caQHQnLg"
+   ],
+   [
+    "",
+    "UOaSb42Tgo8Rhoxwsiwcw2ADnAh"
+   ],
+   [
+    "",
+    "TwpWbKDu3o0XKVxYYCDccO3SnZd"
+   ],
+   [
+    "",
+    "DubKbV54GoclIrxEhaUcAsmynog"
+   ],
+   [
+    "",
+    "Sz5ybqaCBoutTfxtnY4cmpbdnzh"
+   ],
+   [
+    "",
+    "LxQWbueNgoTaOxxnHHAcY78knAe"
+   ],
+   [
+    "",
+    "HyPZbtmJQofobexCzbFcD7CDn1d"
+   ],
+   [
+    "",
+    "VyYybjgcfoJJcYxdl91c4xtunKh"
+   ],
+   [
+    "",
+    "HpMrbuqCmoocpcxcTMPcxxn5nye"
+   ],
+   [
+    "",
+    "Fr5jbKkBEoSVgvxPVp4cOsQSnAb"
+   ],
+   [
+    "",
+    "RCK9bCXPboHUQBxvSWEcdUPunPd"
+   ],
+   [
+    "",
+    "WyX8bz23oopfYRxL42IckCLWnwe"
+   ],
+   [
+    "",
+    "IhOpb9iaLoMAhWxFFDKciS71ncg"
+   ],
+   [
+    "",
+    "S2nybXtD9okvcaxCQrTcYKrsn2f"
+   ],
+   [
+    "",
+    "Eh5Tbz7h8ovSLvxuhZwc9Z8RnAg"
+   ],
+   [
+    "",
+    "Q5KtbSIKHoisiTxIZHccHgvPnDg"
+   ]
+  ]
+ },
+ "fs27": {
+  "file": "../sources/feishu/27_Grok_Bot_应用指南实操案例：闲鱼上架、小红书做图、找工具、做短视频、整理收藏_Miles_Ma.md",
+  "title": "Grok Bot 应用指南实操案例：闲鱼上架、小红书做图、找工具、做短视频、整理收藏",
+  "url": "https://x.com/miles_mazy/status/2098708209095819605",
+  "author": "Miles Ma",
+  "handle": "miles_mazy",
+  "imgs": [
+   [
+    "",
+    "A4LNbhCJEodiHfxvr1gcAkDCnDh"
+   ],
+   [
+    "",
+    "Ii2WbwvPao1fwPxkN4scLlMDnkd"
+   ],
+   [
+    "",
+    "OzjMbgzOvoRbGcxcbzGcMWWYnTg"
+   ],
+   [
+    "",
+    "DGbTbaIPkoZJfDx417CcPmQQnQd"
+   ],
+   [
+    "",
+    "UbtjbiQgBojDznxNtihcVKZvn7b"
+   ],
+   [
+    "",
+    "CY2NbwB3Uoz6J1xlC0GcSyzEnFb"
+   ],
+   [
+    "",
+    "V0fCbxCT8ocACfxqjyUc8tJanTZ"
+   ],
+   [
+    "",
+    "Wd4RbUAWFoMk5jxiufPcia8pnkM"
+   ],
+   [
+    "",
+    "BgA6bdllNozvibxcjKfc8V9Znad"
+   ],
+   [
+    "",
+    "GoaJbNIyto5Piax6q5Ecx3cInId"
+   ]
+  ]
+ },
+ "fs28": {
+  "file": "../sources/feishu/28_做自媒体怎么用好_Grok_bot_Kin.md",
+  "title": "做自媒体怎么用好 Grok bot",
+  "url": "https://x.com/KinGao476942/status/2099736121781764594",
+  "author": "Kin",
+  "handle": "KinGao476942",
+  "imgs": []
+ },
+ "fs29": {
+  "file": "../sources/feishu/29_如何把_Grok_Bot_接入你的微信？保姆级新手指南来了（附详细提示词）_Kin.md",
+  "title": "如何把 Grok Bot 接入你的微信？保姆级新手指南来了（附详细提示词）",
+  "url": "https://x.com/KinGao476942/status/2108132811635032316",
+  "author": "Kin",
+  "handle": "KinGao476942",
+  "imgs": [
+   [
+    "",
+    "QILcba84uoxvLZxYAwZcf5Lenbm"
+   ],
+   [
+    "",
+    "CIJdbrgVWoCg1rxB6dNcITfIn5e"
+   ],
+   [
+    "",
+    "UJdpbfl3BoGDcTxWuy7ceRK4nVg"
+   ],
+   [
+    "",
+    "Z0E2bDkaeo7JNLx4Cr8csRARnef"
+   ],
+   [
+    "",
+    "Tk01bnQ3woC6qpxuNPMc7PKQnYd"
+   ],
+   [
+    "",
+    "KIJ0bQtouo7ob4xm4SOcps2fn2d"
+   ],
+   [
+    "",
+    "HHRYbcobroROPXx6Dqqc9ZhEnGr"
+   ],
+   [
+    "",
+    "SkHEbTZWQoxDebx5oXDcY86WnHe"
+   ],
+   [
+    "",
+    "UxVgbPMAeoWqmkxQDQBcgqZZn2B"
+   ],
+   [
+    "",
+    "Whx9bLCguoia5BxvyQ1cIRflnQb"
+   ]
+  ]
+ },
+ "fs30": {
+  "file": "../sources/feishu/30_万文长_Grok_Bot_从零入门第一次上.md",
+  "title": "万文长｜Grok Bot 从零入门第一次上",
+  "url": "https://x.com/TodayKan/status/2104789484277473522",
+  "author": "Today🦘",
+  "handle": "TodayKan",
+  "imgs": [
+   [
+    "",
+    "MBU5bSPVJo44VRxBx3KcJGohn4g"
+   ],
+   [
+    "",
+    "Rxx4b8lIKowBCHx5AMzcGUZYnJc"
+   ],
+   [
+    "",
+    "ViMhbOazUomofKxM5kDc6TgmnUe"
+   ],
+   [
+    "",
+    "AnNvb8sg3oOmKdxwCLycyWAHn2f"
+   ],
+   [
+    "",
+    "WK0MbH3glopOXLxacjxcn6HHnub"
+   ],
+   [
+    "",
+    "BZvgbKmBQo4F1mxZ7qTcpWJMnKb"
+   ],
+   [
+    "",
+    "HEKXboK2qoVYL8xdfwRcjyDsnTb"
+   ],
+   [
+    "",
+    "TYbgbXePloNqslxmMchcAgI8neg"
+   ],
+   [
+    "",
+    "CuHibs4odoxZ7fxrbgEcz93dnRe"
+   ],
+   [
+    "",
+    "DEyrbaswYoefV5xcHjTchrzKn3d"
+   ],
+   [
+    "",
+    "D9oLbNI69op4Hhx7uXGcWWbynEf"
+   ],
+   [
+    "",
+    "Tqpibn8fromJ9NxK2lDcqlywn0c"
+   ],
+   [
+    "",
+    "SspPbgX4DopE70xOwBmcY2htn2d"
+   ],
+   [
+    "",
+    "CAZ9bI1Mfo6umJx39dRcD3rDnhd"
+   ],
+   [
+    "",
+    "EgyabVPDDoKON9xLcfccGgzPnTT"
+   ],
+   [
+    "",
+    "U0NQbfgIBogMk4xcZ0Xc5IK1nyd"
+   ],
+   [
+    "",
+    "GhZxbWHDOohRemx922JczW4enSh"
+   ],
+   [
+    "",
+    "QJIhbQuWWoqvk8xCcBxcQJzSnVe"
+   ]
+  ]
+ },
+ "fs31": {
+  "file": "../sources/feishu/31_一天几百个_PR_有什么意义？我照着_SpaceXAI_工程师_Lauren（@poteto）的九类清单，把自己的活拆了.md",
+  "title": "一天几百个 PR 有什么意义？我照着 SpaceXAI 工程师 Lauren（@poteto）的九类清单，把自己的活拆了一遍",
+  "url": "https://x.com/MaiYangAI/status/2108519046446727633",
+  "author": "Mai Yang",
+  "handle": "MaiYangAI",
+  "imgs": []
+ },
+ "fs32": {
+  "file": "../sources/feishu/32_把自己的推文做成个人画像网站,_用_Grok_Bot_从分析特点到上线分享保姆级教程.md",
+  "title": "把自己的推文做成个人画像网站,  用 Grok Bot 从分析特点到上线分享保姆级教程",
+  "url": "https://x.com/0xlangeai/status/2109115005069341175",
+  "author": "蓝哥AI",
+  "handle": "0xlangeai",
+  "imgs": [
+   [
+    "",
+    "H1BDbn9D7oZ76uxtXALcvvubn7e"
+   ],
+   [
+    "",
+    "FJaSblLZ9oTM1Lxb4j1cn9RHnlf"
+   ],
+   [
+    "",
+    "PeG4bDHcvogNLLxjunfcBVyinjz"
+   ],
+   [
+    "",
+    "YZQab9eOhooE7ux9PbFcZIf4nYf"
+   ],
+   [
+    "",
+    "GaJ2bs3hcoPqvkx35GLc1mSUnIf"
+   ],
+   [
+    "",
+    "JHflbh6wCokZFuxtgsyc1ogenPd"
+   ],
+   [
+    "实操: 4 位 Bot 在侧位",
+    "RtJebzGBnoxxEgxMR2rcVnNdnGc"
+   ],
+   [
+    "",
+    "RjlcbhARGopQkrxQlrucKBAHnme"
+   ],
+   [
+    "实操：设计师给的两个方向（最后选了右边作品集式）",
+    "Fjq4bsxwYobTtAxFz9Yco7BZnYg"
+   ],
+   [
+    "实操：设计师给的两个方向（最后选了右边作品集式）",
+    "PdKLbf933ozUJkxMd1NcNceAnZf"
+   ],
+   [
+    "实操：手机预览",
+    "M3T8bS1duo9nxQxZJHPcf0GgnBb"
+   ],
+   [
+    "",
+    "RUWib0pGNoIpAixRPQOcWuIMnFh"
+   ]
+  ]
+ },
+ "fs33": {
+  "file": "../sources/feishu/33_如何在一个小时内深入使用_Grok_Bot.md",
+  "title": "如何在一个小时内深入使用 Grok Bot",
+  "url": "https://x.com/tspy/status/2109440690862342187",
+  "author": "yishan",
+  "handle": "tspy",
+  "imgs": [
+   [
+    "图 1 同一账号下的多个 Bot，共享一套底层工作环境。",
+    "XHPnbKwcAoEcB0x40KGc37pznDc"
+   ],
+   [
+    "图 2 连接方式要跟着任务选，不必一开始就开放所有入口。",
+    "HlzfbFR5uo6RDZxHF84c0A8Ynwb"
+   ],
+   [
+    "图 3 先验证工作方法，再安排重复执行。",
+    "UVExbaCiXoXHLbxmAkJcBo27nif"
+   ],
+   [
+    "图 4 个人使用、分享模板和团队共用，解决的是三种不同需求。",
+    "ARE2b2jBpokBDixiLgjc1vlDnye"
+   ],
+   [
+    "图 5 每一步留下文件和交接说明，下一个 Bot 才能接着做。",
+    "Ye4AbadrWosiPmxGBwgcg2NGnXf"
+   ],
+   [
+    "图 6 把可自动完成的准备工作，与需要确认的外部操作分开。",
+    "WQxLbo3MooRRV8xsgzfcxzPgnEc"
+   ]
+  ]
+ },
+ "fs34": {
+  "file": "../sources/feishu/34_微信里说一句，就能运营X：我的_5_个_Bot_模板公开了.md",
+  "title": "微信里说一句，就能运营X：我的 5 个 Bot 模板公开了",
+  "url": "https://x.com/Chchenhao0129/status/2109258247790313478",
+  "author": "Hardy Chen",
+  "handle": "Chchenhao0129",
+  "imgs": [
+   [
+    "",
+    "XAzgbgrJVouxsuxL070cqEv2nzf"
+   ],
+   [
+    "",
+    "Jq3cbdREJo2eJUxb5lBclLD2nHl"
+   ],
+   [
+    "",
+    "HN8XbtJy8onA51xsMkqczWBnnce"
+   ],
+   [
+    "",
+    "XEoGbIsNXoHdySxR020cr7vXnad"
+   ],
+   [
+    "",
+    "ApAgb9O1UoLPJSx0yaRc38cQnwe"
+   ]
+  ]
+ },
+ "fs35": {
+  "file": "../sources/feishu/35_从一个_Bot_到一整个组织，Grok_Bot_的进阶用法分享：本地电脑、AI_分工和知识库怎么接起来.md",
+  "title": "从一个 Bot 到一整个组织，Grok Bot 的进阶用法分享：本地电脑、AI 分工和知识库怎么接起来",
+  "url": "https://x.com/1999Zach22/status/2109607405696983158",
+  "author": "Zach",
+  "handle": "1999Zach22",
+  "imgs": [
+   [
+    "",
+    "PnqDbJJqaoD9vvxmFZ7cBr2Rn5b"
+   ],
+   [
+    "",
+    "WQydbFXHcoe8oJxdbnXcj5fJnbh"
+   ],
+   [
+    "",
+    "CQD3b3XreopWqbxNfU5csNIlnJf"
+   ],
+   [
+    "",
+    "MDy8bADKkoAdATxgClxcgx2wnke"
+   ],
+   [
+    "",
+    "GEwxbZQ1qonrSlxHptIcTA9Gnqe"
+   ],
+   [
+    "",
+    "MDbgbDMmgoW00dxDHyfcsj8Bnob"
+   ]
+  ]
+ },
+ "fs36": {
+  "file": "../sources/feishu/36_零基础搭建全自动化Agent团队，Grok_Bot从开通到多AI协作全流程【万字长文】.md",
+  "title": "零基础搭建全自动化Agent团队，Grok Bot从开通到多AI协作全流程【万字长文】",
+  "url": "https://x.com/xilo2991/status/2109613437215293905",
+  "author": "xilo",
+  "handle": "xilo2991",
+  "imgs": [
+   [
+    "",
+    "Zk3qb570IomG4sxwrzQcJCGUnqd"
+   ],
+   [
+    "",
+    "CNm5blZI4oeUrex9dqGcWPrKn0e"
+   ],
+   [
+    "",
+    "LWFWb2L1Koq6SzxASpvcqSF6nzc"
+   ],
+   [
+    "",
+    "DtYRb0ltHoo3NUx8PZjcXZ2inuc"
+   ],
+   [
+    "",
+    "IDrkbI5pYojwY3xATUIc2zoFn1b"
+   ],
+   [
+    "",
+    "MHxabY0UJoynV8xly9Hculfdnzc"
+   ],
+   [
+    "",
+    "YmLZbq9HKoELnixk4Hlcj9RPnic"
+   ],
+   [
+    "",
+    "FCOvbeFCso3YCfxbKWYcLGS3nCh"
+   ],
+   [
+    "",
+    "T1NCbUELxo2U9yxihMecdTVVnvI"
+   ],
+   [
+    "",
+    "Ymqibj83korSupxK8POcXjjUnhf"
+   ],
+   [
+    "",
+    "S06VbuAKtooIekxGnOucxAwFneg"
+   ],
+   [
+    "",
+    "TqQvbfU72odNewxLU2bc6fpSnQf"
+   ],
+   [
+    "",
+    "Y2HIb8SQloIszQxutaAch2Tnned"
+   ],
+   [
+    "",
+    "BwlGbdW0PoAaZtxZKKjc8Jy3nzb"
+   ],
+   [
+    "",
+    "DVWibWblHofPp1x7kxzcRuIKntd"
+   ],
+   [
+    "",
+    "TmNTbGn6ToLpe6xp27tcEo8onRd"
+   ],
+   [
+    "",
+    "WtS5b5nB4o2iWrxNJRpcmVOynfb"
+   ]
+  ]
+ },
+ "fs37": {
+  "file": "../sources/feishu/37_10_条必备经验，让你的_Grok_Bot_变得更好用.md",
+  "title": "10 条必备经验，让你的 Grok Bot 变得更好用",
+  "url": "https://x.com/eze_is_1/status/2109850538045264151",
+  "author": "一泽Eze",
+  "handle": "eze_is_1",
+  "imgs": [
+   [
+    "",
+    "L83MbflGPoOGl4x43udcD2DSnDe"
+   ],
+   [
+    "",
+    "KiXYbaTsAog2ycxkENQcct6YnMb"
+   ],
+   [
+    "",
+    "HvTUb7WFIokQhkxSWjrchg3gnFc"
+   ],
+   [
+    "",
+    "W4qHbTI6AolRqjxRxG5cZfWfnmf"
+   ],
+   [
+    "",
+    "IuJZbk1g2oQ6rjxtqFdcc8LInye"
+   ],
+   [
+    "",
+    "BNTlbUodGoL25KxgTS0c2ZjDnee"
+   ],
+   [
+    "",
+    "WUzibIbfco1X7yxLKKdcD8NsnHh"
+   ],
+   [
+    "",
+    "A87Cb6aqmoYDEGxQT3ncQ5NHnvb"
+   ],
+   [
+    "",
+    "JoGgbjRUQoDHlhxe6BvcTJrVnel"
+   ],
+   [
+    "",
+    "FGRhbY2IGor3QLxVp9Lc21XrnOd"
+   ],
+   [
+    "",
+    "PqMMboAUKoWyNXxtew8cmjg7nBc"
+   ],
+   [
+    "",
+    "TOUxbLvKno5pHUxNcEmcXEhwnuh"
+   ],
+   [
+    "",
+    "TDgkbY4RNoEl6yxzFQKcZi54nFf"
+   ],
+   [
+    "",
+    "MnkqbN0jroNHclxY8rxc9BC0nVp"
+   ],
+   [
+    "",
+    "X5Nlby2ArobGTwxH0zMc8UwgnGs"
+   ],
+   [
+    "",
+    "I4tVbJCf2o91VgxcEUOcR1unnzb"
+   ]
+  ]
+ },
+ "fs38": {
+  "file": "../sources/feishu/38_用_Grok_Bot_做跨境电商的实战分享，从_0_到_1_搭建起一整个亚马逊团队.md",
+  "title": "用 Grok Bot 做跨境电商的实战分享，从 0 到 1 搭建起一整个亚马逊团队",
+  "url": "https://x.com/1999Zach22/status/2110078772225667115",
+  "author": "Zach",
+  "handle": "1999Zach22",
+  "imgs": [
+   [
+    "",
+    "DSzebyw9zo8TOXxdO6dc67AEnLc"
+   ],
+   [
+    "",
+    "SW6FbaWtro4aSSxEcnMcEZrEngb"
+   ],
+   [
+    "",
+    "Z88cbaCbmoEQJsxNgHScSwPvn4R"
+   ],
+   [
+    "",
+    "Epmtb5mLMov4hOxwHZMc4njpnre"
+   ],
+   [
+    "",
+    "XxYCbBvPQo4N7DxCxrBcojytnrf"
+   ]
+  ]
+ },
+ "fs39": {
+  "file": "../sources/feishu/39_3.2_英文长文.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs40": {
+  "file": "../sources/feishu/40_Grok_Bot_for_GTM_Krista_Letz.md",
+  "title": "Grok Bot for GTM",
+  "url": "https://x.com/kristaletz/status/2089103618121314689",
+  "author": "Krista Letz",
+  "handle": "kristaletz",
+  "imgs": [
+   [
+    "",
+    "M2zNbs5Heo6eSWxz50PcLKDlnjh"
+   ],
+   [
+    "",
+    "XrwBby9pjovDT3xe2YXcCzzYnSd"
+   ],
+   [
+    "",
+    "Fz7PbWEmLobzPqxw7w2c7JHKnHe"
+   ],
+   [
+    "",
+    "THkrbyQWhojdM1xJk9NcLqPonWb"
+   ],
+   [
+    "",
+    "T78XbkYcQopAUoxBQRBc5SgfnSh"
+   ]
+  ]
+ },
+ "fs41": {
+  "file": "../sources/feishu/41_Grok_Bot_vs_Hermes_vs_OpenClaw_vs_Buzz_+_How_I_fully_automat.md",
+  "title": "Grok Bot vs Hermes vs OpenClaw vs Buzz + How I fully automated my X content with Grok Bot",
+  "url": "https://x.com/ScottyBeamIO/status/2089417013647073753",
+  "author": "SCOTTY BEAM",
+  "handle": "ScottyBeamIO",
+  "imgs": [
+   [
+    "",
+    "V6M2bHDtnoWvblxQd52cRLh2nSd"
+   ],
+   [
+    "",
+    "InTrbmzK6oLmgPxNFBtcKlz9nMg"
+   ],
+   [
+    "",
+    "WlvFbTnbKoXYPfxN0Dmc3Am0nPb"
+   ],
+   [
+    "",
+    "Ujxhbv3zuolOWVxhqEPcqUoFnKh"
+   ],
+   [
+    "",
+    "XcaKbsLzBoqY3dxZoE4ciM5vnsf"
+   ]
+  ]
+ },
+ "fs42": {
+  "file": "../sources/feishu/42_Grok_Bot_Masterclass_Avi_Chawla.md",
+  "title": "Grok Bot Masterclass",
+  "url": "https://x.com/_avichawla/status/2089657097244024858",
+  "author": "Avi Chawla",
+  "handle": "_avichawla",
+  "imgs": [
+   [
+    "",
+    "A91BbFvecoFlVbxKhRgcXKTVnKb"
+   ],
+   [
+    "",
+    "KSZIbDAWVoCeyPxr4aXcuC2jnag"
+   ],
+   [
+    "",
+    "G5pQblQaxo3Vdmx8x9mcR2AcnEc"
+   ],
+   [
+    "",
+    "RwGsbmDnfo6odLxwRlPcMivRnib"
+   ],
+   [
+    "",
+    "ZVvObN4DLoNxlCxyRK9cZPMqnHh"
+   ],
+   [
+    "",
+    "OnHsbJCjCoNj2fxkM2Zc41yqnjZ"
+   ],
+   [
+    "",
+    "SKJDbTkr8o1F3VxS577cdMYhnSe"
+   ],
+   [
+    "",
+    "M70Fb0zXBozqeUxLQI7c4Bcgndg"
+   ],
+   [
+    "",
+    "IpaEbYGlqo4dasxljaDcGWUhnuf"
+   ],
+   [
+    "",
+    "GulUb6B1PopKrmxIRzucEhOonCe"
+   ],
+   [
+    "",
+    "HGsfbV3vCovrSJxLeCqcWUkLnPf"
+   ],
+   [
+    "",
+    "Z9pWbc9sBozZN1xvnBtcwoD7n8b"
+   ],
+   [
+    "",
+    "P5C3bDxvjo44QWxBFeVcmHZqnFk"
+   ],
+   [
+    "",
+    "GPzPbo6KKoCUvjxlfnbc9WP0nVa"
+   ],
+   [
+    "",
+    "QYdWbZYX3o3rmtxgp0gc8XUznUh"
+   ],
+   [
+    "",
+    "Tb04bNhUYohGImxKomOc2s7Anyd"
+   ],
+   [
+    "",
+    "DLUBbCKG0oH443xJdb8cupC6nrf"
+   ],
+   [
+    "",
+    "FdP1bx8rgondXqxHAGVc4xyXnHe"
+   ],
+   [
+    "",
+    "Umjsbe9gAopDcsxZr4zcvbhSngh"
+   ],
+   [
+    "",
+    "ZeknbVn5nop0THxOR5RcfhlxnEe"
+   ],
+   [
+    "",
+    "DXVKbAMQXokVkIxWAJUcfOkznrg"
+   ]
+  ]
+ },
+ "fs43": {
+  "file": "../sources/feishu/43_Grok_Bot_Agents_how_to_automate_your_life_in_10_Steps_(Full-.md",
+  "title": "Grok Bot Agents: how to automate your life in 10 Steps (Full-tutorial)",
+  "url": "https://x.com/0xCodez/status/2089676836619878567",
+  "author": "Codez",
+  "handle": "0xCodez",
+  "imgs": [
+   [
+    "",
+    "MmAMbBf4noMlEyxzPDwcVSyAn5g"
+   ],
+   [
+    "",
+    "SoflbdB8lonDjwxTGmHcnC4anlh"
+   ],
+   [
+    "",
+    "W6aabFQLto8wY8xIl6PcbRc7noc"
+   ],
+   [
+    "",
+    "Cg6qbEaAToo2dhx0AKrcpFounhd"
+   ],
+   [
+    "",
+    "E425bxRtIomALmxYyp0clfmnnbb"
+   ],
+   [
+    "",
+    "BrU8bY2fiomOjXxIFn1czt6cnkh"
+   ],
+   [
+    "",
+    "TMAzbUxw0oSY80xQwOmcfny1ngh"
+   ],
+   [
+    "",
+    "BQRPbcSg3oHiGsx63ufcVrOEnId"
+   ],
+   [
+    "",
+    "Qz5YbPWcgoaLiUxkIMscnmGwnLg"
+   ],
+   [
+    "",
+    "I5nRbikRTo89ZFxGprLceQN4nOh"
+   ],
+   [
+    "",
+    "MyVVbhG58ooRKfxthORcWTgTnLh"
+   ],
+   [
+    "",
+    "JqrCbS6OmoWbI2x0UgscVDbsnsA"
+   ],
+   [
+    "",
+    "FQxDbopQyoaaibxy6FIcsXg7nqf"
+   ],
+   [
+    "",
+    "VHUgbjAmfoZKnzx76XEchn5RnEV"
+   ],
+   [
+    "",
+    "IlAsbh0pIoZALHxBDoBcappInLg"
+   ]
+  ]
+ },
+ "fs44": {
+  "file": "../sources/feishu/44_From_Zero_to_a_Running_Company_The_Grok_Bot_Agent_Team_Playb.md",
+  "title": "From Zero to a Running Company: The Grok Bot Agent Team Playbook",
+  "url": "https://x.com/N01ennn/status/2091534159088959967",
+  "author": "NO1ennn",
+  "handle": "N01ennn",
+  "imgs": [
+   [
+    "",
+    "AaXTbQu4goONGqxnmb1c1o3pnNb"
+   ],
+   [
+    "",
+    "BgcmbgPujo98aBxbF2RcUJJKnLd"
+   ],
+   [
+    "",
+    "PsvebUZ9EopcKaxR400c6UtinXe"
+   ],
+   [
+    "",
+    "KHR3bVMOgoUJvUxBEGocvGM4nTg"
+   ],
+   [
+    "",
+    "ARyWbrcNhoWiLxxAXGacpBMAn6f"
+   ],
+   [
+    "",
+    "Ff2HbgpLooZcO2xQ9jRcmeuYnhe"
+   ],
+   [
+    "",
+    "AgAAbYTTtocIGbxkEAYcsdNwnGb"
+   ],
+   [
+    "",
+    "SnWKblz63ozuk8xkAUhcgphbnmd"
+   ],
+   [
+    "",
+    "CzFnbq4AxozAd7x1IDKc5IbHnLe"
+   ],
+   [
+    "",
+    "IKd7bQSZxoInJ6xc8mZcDmgqnPh"
+   ],
+   [
+    "",
+    "WzcVbbHqro4GyWxwH8KcNzVinug"
+   ]
+  ]
+ },
+ "fs45": {
+  "file": "../sources/feishu/45_Grok_Bot_Chief_of_Staff_the_charter,_10_rules_and_5_routines.md",
+  "title": "Grok Bot Chief of Staff: the charter, 10 rules and 5 routines I run",
+  "url": "https://x.com/kocer_eth/status/2092216029816472002",
+  "author": "kocer",
+  "handle": "kocer_eth",
+  "imgs": []
+ },
+ "fs46": {
+  "file": "../sources/feishu/46_Every_Grok_Bot_Hack_I_Know_(Aug_2026)_Matt_Van_Horn.md",
+  "title": "Every Grok Bot Hack I Know (Aug 2026)",
+  "url": "https://x.com/mvanhorn/status/2092629365045559547",
+  "author": "Matt Van Horn",
+  "handle": "mvanhorn",
+  "imgs": [
+   [
+    "",
+    "PWMkb4f2coOuIcxXaP1cTSGlnHe"
+   ],
+   [
+    "",
+    "B0INbRdUNoq2nfxrcI5cGbuzn9b"
+   ]
+  ]
+ },
+ "fs47": {
+  "file": "../sources/feishu/47_How_to_Build_an_$18K_Month_AI_Agency_on_Grok_(Exact_Setup_In.md",
+  "title": "How to Build an $18K/Month AI Agency on Grok (Exact Setup Inside)",
+  "url": "https://x.com/maestrooth/status/2092658066714177657",
+  "author": "maestro",
+  "handle": "maestrooth",
+  "imgs": [
+   [
+    "",
+    "IJnfbiE4po3JfpxtqcPcQ6b4nWe"
+   ],
+   [
+    "",
+    "Me4ub3QfHoSxjDxgmJGcwMnJneO"
+   ],
+   [
+    "",
+    "EdK1birF7oQzB3xcKGvcFJlDneb"
+   ],
+   [
+    "",
+    "J607bD8zVoesfRxJhsdcf1v1nre"
+   ],
+   [
+    "",
+    "MnlUb0p37oFOl3xMqnEcL5CVndb"
+   ]
+  ]
+ },
+ "fs48": {
+  "file": "../sources/feishu/48_One-Computer_Company_A_Real_Playbook_For_Running_Solo_On_Gro.md",
+  "title": "One-Computer Company: A Real Playbook For Running Solo On Grok Bot",
+  "url": "https://x.com/zerqfer/status/2093299037705236540",
+  "author": "ZER",
+  "handle": "zerqfer",
+  "imgs": []
+ },
+ "fs49": {
+  "file": "../sources/feishu/49_How_to_master_Grok_Bot_in_16_minutes_-_Full_Course_CyrilXBT.md",
+  "title": "How to master Grok Bot in 16 minutes - Full Course",
+  "url": "https://x.com/cyrilXBT/status/2094077928204083678",
+  "author": "CyrilXBT",
+  "handle": "cyrilXBT",
+  "imgs": []
+ },
+ "fs50": {
+  "file": "../sources/feishu/50_Grok_Bot_for_Engineering_Lingxi_Li.md",
+  "title": "Grok Bot for Engineering",
+  "url": "https://x.com/lingxi/status/2094493172516966781",
+  "author": "Lingxi Li",
+  "handle": "lingxi",
+  "imgs": [
+   [
+    "",
+    "SqsublZV6okTJqxSINtcIilXnpc"
+   ],
+   [
+    "",
+    "EIYPbbYFTocwkAx9JjlcuaG1n2f"
+   ],
+   [
+    "",
+    "FFkMbmShxo87y0xacmAcZ6XinRh"
+   ],
+   [
+    "",
+    "MSkxbKLWao8y5XxgAJscCRw4nth"
+   ],
+   [
+    "",
+    "NQoTbekkYofp4yxkqPsckUJNn5d"
+   ],
+   [
+    "",
+    "UOlVbe6IKoLhKzxyu7fcsIihned"
+   ],
+   [
+    "",
+    "JcpKbpaSBo04Fzx5GsgcGEXGnqc"
+   ]
+  ]
+ },
+ "fs51": {
+  "file": "../sources/feishu/51_How_to_Build_a_24_7_Repo_Ops_Desk_on_Grok_Bot_+_Kimi_K3_(Com.md",
+  "title": "How to Build a 24/7 Repo Ops Desk on Grok Bot + Kimi K3 (Complete Guide)",
+  "url": "https://x.com/gippp69/status/2095088203690570191",
+  "author": "Gipp 🦅",
+  "handle": "gippp69",
+  "imgs": [
+   [
+    "",
+    "IG9xbg3ZaoUP0sxDgF2cCNjMnjb"
+   ],
+   [
+    "",
+    "VsY1bhhZgo5xqExtH6Scl67WnKF"
+   ],
+   [
+    "",
+    "T4c6b8Mr1oQTkSxQVrrcsHwynhe"
+   ]
+  ]
+ },
+ "fs52": {
+  "file": "../sources/feishu/52_GrokBot_Agents_build_a_team_that_works_for_you_24_7_in_10_st.md",
+  "title": "GrokBot Agents: build a team that works for you 24/7 in 10 steps (Full-Course)",
+  "url": "https://x.com/0xMovez/status/2100261918896169259",
+  "author": "Movez",
+  "handle": "0xMovez",
+  "imgs": [
+   [
+    "",
+    "MQtObCrMxoVnpKxImpRcdtO7nIh"
+   ],
+   [
+    "https://docs.x.ai/grok-bot/bots",
+    "C3vLb7RHqoJXqCxtjMLcydHBn0e"
+   ],
+   [
+    "",
+    "KdYHba313oRzRsxVWRychu2ynkg"
+   ],
+   [
+    "",
+    "Nt8qbVB6LoLY0XxLFGwcy87Znsh"
+   ],
+   [
+    "",
+    "AXR1bgm4ioNkc5xMZ2TcgUmUnag"
+   ],
+   [
+    "",
+    "PfhubHH9yofBpix8Lz4ctDIAnBc"
+   ],
+   [
+    "",
+    "V1BBbH3GGoPGhPxZTnxcBeymn0e"
+   ],
+   [
+    "",
+    "ZSCsbaZRtoGP4bxWubGcmOvMnsg"
+   ],
+   [
+    "",
+    "InmebaUVnobR7hx0e28cqGDGnVc"
+   ],
+   [
+    "",
+    "ZL5tbweVQonl1IxZru6c76hynKM"
+   ],
+   [
+    "",
+    "VcFSbXtLfoPbvQxNkBbc4JLhnEN"
+   ],
+   [
+    "",
+    "L3UsbJ9SSokFrrxhFS3cUIAVngb"
+   ],
+   [
+    "",
+    "HChubRIIwoYth8xlQggclXyXn5d"
+   ],
+   [
+    "",
+    "S1QrbBxzeoZJP1xw0HucmuCZnBg"
+   ],
+   [
+    "",
+    "XN1ubqEDmouz6rxibzacf5uVnSh"
+   ],
+   [
+    "",
+    "EIU4bK4OEo4hbzxFOFTcbwD0nDg"
+   ],
+   [
+    "",
+    "KFi3bBduZowDrVxnmFncf9djnFb"
+   ],
+   [
+    "",
+    "HGc4bomaloF265xSIHvcojStnSd"
+   ],
+   [
+    "",
+    "MkBBbn3ntoP2yqxR6eFcnQ7tnGd"
+   ],
+   [
+    "",
+    "BiyobDVQXoFlO7xJAZzcSBn0nze"
+   ],
+   [
+    "",
+    "A2pjbqycBoE0LsxoQuJc7ELCnEb"
+   ],
+   [
+    "",
+    "JatHbLFlGoria1xleCNc41wCnch"
+   ],
+   [
+    "",
+    "G2vSb6DncoZp6fxVfqCcx5AJnke"
+   ]
+  ]
+ },
+ "fs53": {
+  "file": "../sources/feishu/53_Meet_your_Team_Bots_n2parko.md",
+  "title": "Meet your Team Bots",
+  "url": "https://x.com/n2parko/status/2104663299485020568",
+  "author": "n2parko",
+  "handle": "n2parko",
+  "imgs": [
+   [
+    "",
+    "RdhcbimCyo8vKex1mI3cwipnnLf"
+   ],
+   [
+    "",
+    "Q3X4b7uXFo2yZHxtMr3cffnxnia"
+   ],
+   [
+    "",
+    "FNsObQfBXoBPqkxFLgIcPe9Hn7g"
+   ]
+  ]
+ },
+ "fs54": {
+  "file": "../sources/feishu/54_How_to_Stop_Your_Grok_Bot_From_Eating_a_Week_of_Usage_in_a_D.md",
+  "title": "How to Stop Your Grok Bot From Eating a Week of Usage in a Day",
+  "url": "https://x.com/GrokBotRadar/status/2105065358038360334",
+  "author": "Fan Grok Bot Radar",
+  "handle": "GrokBotRadar",
+  "imgs": [
+   [
+    "",
+    "K1zIbzgiKoChS2xik7zce3DHnFb"
+   ],
+   [
+    "",
+    "VEJobwfv9ow3AGxIUIBcbmain6A"
+   ],
+   [
+    "",
+    "G3wvbRnQLovDdxxAYSWcYimDnpd"
+   ]
+  ]
+ },
+ "fs55": {
+  "file": "../sources/feishu/55_Grok_Bot_How_to_Hire_Your_First_AI_Employee_(Full_Guide)_dis.md",
+  "title": "Grok Bot: How to Hire Your First AI Employee (Full Guide)",
+  "url": "https://x.com/distortgeekin/status/2105275395901726845",
+  "author": "distort",
+  "handle": "distortgeekin",
+  "imgs": [
+   [
+    "",
+    "PtbsbeKAbokpVDxJhDFcPR2qn4e"
+   ],
+   [
+    "",
+    "ZyopbhkeOo093Jx5meYcLKsinob"
+   ],
+   [
+    "",
+    "Uj1ibArXaoxXVLxav8mcyd8jnrg"
+   ],
+   [
+    "",
+    "PKvvbAiLFouQ8pxgRPeccPDqn0b"
+   ]
+  ]
+ },
+ "fs56": {
+  "file": "../sources/feishu/56_Top_10_Grok_Bot_Prompts_That_Replace_an_Entire_Team_maestro.md",
+  "title": "Top 10 Grok Bot Prompts That Replace an Entire Team",
+  "url": "https://x.com/maestrooth/status/2105288063391875450",
+  "author": "maestro",
+  "handle": "maestrooth",
+  "imgs": [
+   [
+    "",
+    "YR1YbvCSHoUxllxYWv3c21iUnKf"
+   ],
+   [
+    "",
+    "UfrNbCcGyoLg3VxElO7cdpc0nHd"
+   ]
+  ]
+ },
+ "fs57": {
+  "file": "../sources/feishu/57_Grok_Bot_Memory_Engineering_How_One_Agent_Learns_With_a_Team.md",
+  "title": "Grok Bot Memory Engineering: How One Agent Learns With a Team",
+  "url": "https://x.com/0xwhrrari/status/2107093781807775896",
+  "author": "rari",
+  "handle": "0xwhrrari",
+  "imgs": [
+   [
+    "",
+    "YgFUbUngZok59Wx2U1ScHhrXn7d"
+   ],
+   [
+    "",
+    "A2q2b4Pgio1hocxpRzWcv1wNn9d"
+   ],
+   [
+    "",
+    "PczOboOvGoQhIVxboSsclh3Enxc"
+   ],
+   [
+    "",
+    "A6tvbr8Q2oano9x7mCOc3byPnHZ"
+   ]
+  ]
+ },
+ "fs58": {
+  "file": "../sources/feishu/58_Grok_Bot_Engineering_Set_Up_a_Harness_for_Your_One-Person_Co.md",
+  "title": "Grok Bot Engineering: Set Up a Harness for Your One-Person Company",
+  "url": "https://x.com/beamnxw/status/2107143806546002398",
+  "author": "beamnxw ./",
+  "handle": "beamnxw",
+  "imgs": [
+   [
+    "",
+    "SGQiboDsBoaf4ZxZhfGcVWspnwh"
+   ],
+   [
+    "",
+    "DwXvbYG4eo1wXhxp8Wyc5lkgnxd"
+   ],
+   [
+    "",
+    "TXDtbGZ3ZoE0uuxmtKrc1r2Qn1g"
+   ],
+   [
+    "",
+    "GZBsbcAdporoPdxXceLciQShnAf"
+   ],
+   [
+    "",
+    "Cfxsbz5QHosrv8x1sKDcwXgtnNc"
+   ],
+   [
+    "",
+    "QSnRbisW8o3cVRx2djtcB9FJn4c"
+   ],
+   [
+    "",
+    "Ghwgb8ImeooinzxpXN5cMGqinmg"
+   ],
+   [
+    "",
+    "Ms9ebGPXHo4bPzxkCIKclI4jnkb"
+   ]
+  ]
+ },
+ "fs59": {
+  "file": "../sources/feishu/59_Grok_Bot_+_Opus_5.5_The_Ultimate_Agent_Harness_in_10_Steps_M.md",
+  "title": "Grok Bot + Opus 5.5: The Ultimate Agent Harness in 10 Steps",
+  "url": "https://x.com/0xMorlex/status/2108171726412464173",
+  "author": "Morlex",
+  "handle": "0xMorlex",
+  "imgs": [
+   [
+    "",
+    "RSUgbgfrQokvlrxYTz1cq3jhnsf"
+   ],
+   [
+    "",
+    "QuGPbsbtIoG58txT5m6c6CREnsg"
+   ],
+   [
+    "",
+    "D1IpbwTGOo8IUPxismvcnH1ynud"
+   ],
+   [
+    "",
+    "NJJpbibPpo2WU7xlttGcsjgsnBg"
+   ],
+   [
+    "",
+    "AyTGb7cz4onX5nxmueaczdfkn9g"
+   ],
+   [
+    "",
+    "E2DLbQmZSohI12xRz7cc8zO4nrf"
+   ],
+   [
+    "",
+    "BL1Tbm01EoqbdJx2m6scePQGnwb"
+   ],
+   [
+    "",
+    "Rt3vbwdNBoBtX6xgu0OcvrPhnrh"
+   ]
+  ]
+ },
+ "fs60": {
+  "file": "../sources/feishu/60_Grok_Bot_How_to_Build_Your_First_AI_Team_(Full_Guide).md",
+  "title": "Grok Bot: How to Build Your First AI Team (Full Guide)",
+  "url": "https://x.com/distortgeekin/status/2108897917729738810",
+  "author": "distort",
+  "handle": "distortgeekin",
+  "imgs": [
+   [
+    "",
+    "WPQsb14Pwo2AomxWs9kcnlaVnhd"
+   ],
+   [
+    "",
+    "UJyIbgHSJoh0BqxHR9uc89ZDnLN"
+   ],
+   [
+    "",
+    "TpwgbFmxPo92UoxRwETc1wz7n4f"
+   ],
+   [
+    "",
+    "I9ENbDY7DooWCYxmTxvcrGZhnwc"
+   ]
+  ]
+ },
+ "fs61": {
+  "file": "../sources/feishu/61_How_I_use_Grok_Bot_My_team_of_29_AI_agents.md",
+  "title": "How I use Grok Bot: My team of 29 AI agents",
+  "url": "https://x.com/melvindvivas/status/2109480575421808962",
+  "author": "Melvin Vivas",
+  "handle": "melvindvivas",
+  "imgs": []
+ },
+ "fs62": {
+  "file": "../sources/feishu/62_Grok_Bot_+_Opus_5.5_Build_a_24_7_AI_Engineering_Team_in_12_S.md",
+  "title": "Grok Bot + Opus 5.5: Build a 24/7 AI Engineering Team in 12 Steps",
+  "url": "https://x.com/0xjmori/status/2109648700897116554",
+  "author": "Mori",
+  "handle": "0xjmori",
+  "imgs": [
+   [
+    "",
+    "LelTb0iOyoHfbhxMa6sc8Lx1nad"
+   ],
+   [
+    "",
+    "Vb6TbE6SpoiCirxEJ9NcYgUMnmc"
+   ],
+   [
+    "",
+    "TEiPbIAL0ov1Emx3kLxckOZkneb"
+   ],
+   [
+    "",
+    "AHvYblvIqoLbVXxMRHKcHi2sn2g"
+   ],
+   [
+    "",
+    "Sb9DbMygTo4eZ3xcOlMctvMhnSg"
+   ],
+   [
+    "",
+    "Mz9QbpXYDoi3h7xji8AcdYnrnid"
+   ],
+   [
+    "",
+    "V7aFbd5twosAkgxCwcJcmK8gndg"
+   ],
+   [
+    "",
+    "QL6lbwcx5oPCD1xTG32cCf0qnUb"
+   ],
+   [
+    "",
+    "EvSabLNuRooGANxE2L7c29l5nXT"
+   ],
+   [
+    "",
+    "A3qTb1EWZoAwLqx543mcLXXcngc"
+   ]
+  ]
+ },
+ "fs63": {
+  "file": "../sources/feishu/63_04_技巧与配置.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs64": {
+  "file": "../sources/feishu/64_4.1_额度与成本：省额度清单.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs65": {
+  "file": "../sources/feishu/65_4.2_团队编排：章程、岗位与放权.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs66": {
+  "file": "../sources/feishu/66_4.3_触发器与自动化：定时、Webhook、在_X_上派活.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs67": {
+  "file": "../sources/feishu/67_4.4_权限、安全与人闸.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs68": {
+  "file": "../sources/feishu/68_4.5_连接器、Skill、模板与对外入口.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ },
+ "fs69": {
+  "file": "../sources/feishu/69_4.6_虚拟机、记忆与备份.md",
+  "title": null,
+  "url": null,
+  "author": null,
+  "handle": null,
+  "imgs": []
+ }
+}

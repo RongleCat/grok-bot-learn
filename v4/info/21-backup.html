@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>备份与恢复：电脑重置也不慌</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { width: 1200px; height: 760px; margin: 0; overflow: hidden; }
+  body { background: #f8f7f3; color: #20211f; font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; }
+  main { width: 1200px; height: 760px; padding: 46px 68px 42px; position: relative; }
+  h1 { margin: 0; font-size: 31px; line-height: 1.18; letter-spacing: -0.8px; font-weight: 760; }
+  .lead { margin: 13px 0 0; color: #5c605a; font-size: 17px; line-height: 1.5; }
+  .bot { position: absolute; width: 110px; height: auto; right: 73px; top: 31px; object-fit: contain; }
+  .flow { margin-top: 34px; display: grid; grid-template-columns: 228px 72px 1fr; align-items: stretch; height: 475px; }
+  .shock { border: 1px solid #d9d8d1; border-radius: 24px; background: #fffefa; padding: 29px 24px; display: flex; flex-direction: column; justify-content: center; }
+  .eyebrow { color: #c8583d; font-size: 15px; font-weight: 700; letter-spacing: 0.06em; }
+  .shock h2 { font-size: 25px; line-height: 1.28; margin: 13px 0 18px; letter-spacing: -0.5px; }
+  .shock p { color: #62655f; font-size: 16px; line-height: 1.7; margin: 0; }
+  .arrow { display: flex; align-items: center; justify-content: center; position: relative; }
+  .arrow::before { content: ""; width: 38px; height: 2px; background: #c8583d; }
+  .arrow::after { content: ""; border-left: 9px solid #c8583d; border-top: 6px solid transparent; border-bottom: 6px solid transparent; }
+  .destination { border: 1px solid #d9d8d1; border-radius: 26px; background: #fffefa; padding: 24px 26px 22px; }
+  .destination > h2 { margin: 0 0 17px; font-size: 21px; line-height: 1.35; }
+  .lanes { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .lane { border: 1px solid #dfddd5; border-radius: 21px; overflow: hidden; min-height: 348px; }
+  .lane-head { background: #e8f0eb; padding: 17px 20px 14px; border-bottom: 1px solid #d5e0d9; }
+  .lane:nth-child(2) .lane-head { background: #f9e9e4; border-bottom-color: #ead5cd; }
+  .lane h3 { margin: 0; font-size: 21px; letter-spacing: -0.3px; }
+  .lane-head p { margin: 6px 0 0; color: #59655d; font-size: 15px; }
+  .lane:nth-child(2) .lane-head p { color: #775d56; }
+  .steps { padding: 16px 18px 18px; display: grid; gap: 10px; }
+  .step { min-height: 64px; border: 1px solid #e4e2db; border-radius: 14px; padding: 11px 13px; background: #fff; display: flex; gap: 11px; align-items: flex-start; }
+  .num { flex: 0 0 25px; height: 25px; border-radius: 50%; background: #456c5b; color: #fff; display: grid; place-items: center; font-size: 14px; font-weight: 700; }
+  .lane:nth-child(2) .num { background: #c8583d; }
+  .step strong { display: block; font-size: 16px; line-height: 1.3; }
+  .step span { display: block; margin-top: 3px; color: #676963; font-size: 15px; line-height: 1.32; }
+  .principle { margin-top: 19px; border-radius: 16px; background: #20211f; color: #fffefa; padding: 13px 20px; font-size: 17px; line-height: 1.35; text-align: center; }
+</style>
+</head>
+<body>
+<main>
+  <h1>备份与恢复：把脆弱系统变成可随时重建的硬资产</h1>
+  <p class="lead">云电脑环境和 Bot 记忆，拆成两条并行的灾备流水线</p>
+  <img class="bot" src="bots/galet-rouge.png" alt="">
+  <section class="flow" aria-label="备份与恢复流程">
+    <article class="shock">
+      <div class="eyebrow">系统重置</div>
+      <h2>所有 Bot 共享<br>同一台云端虚拟机</h2>
+      <p>已安装的应用和软件包、项目目录里的 node_modules 或 Python 虚拟环境，都会被移除。</p>
+    </article>
+    <div class="arrow" aria-hidden="true"></div>
+    <section class="destination">
+      <h2>私有 Git 仓库：两条备份流水线</h2>
+      <div class="lanes">
+        <article class="lane">
+          <header class="lane-head">
+            <h3>虚机服务</h3>
+            <p>服务总账与自动化恢复脚本</p>
+          </header>
+          <div class="steps">
+            <div class="step"><b class="num">1</b><div><strong>服务总账</strong><span>REGISTRY.md 与 registry.json</span></div></div>
+            <div class="step"><b class="num">2</b><div><strong>自写源码</strong><span>service-src/ 单独抽离存入</span></div></div>
+            <div class="step"><b class="num">3</b><div><strong>恢复入口</strong><span>restore-all.sh 按依赖顺序执行</span></div></div>
+            <div class="step"><b class="num">4</b><div><strong>健康检查与汇总</strong><span>失败记录错误日志并继续下一项</span></div></div>
+          </div>
+        </article>
+        <article class="lane">
+          <header class="lane-head">
+            <h3>Bot 记忆</h3>
+            <p>记忆管家写成纯文本 Markdown</p>
+          </header>
+          <div class="steps">
+            <div class="step"><b class="num">1</b><div><strong>枚举 Bot 名单</strong><span>圈定参与持久化备份的核心名单</span></div></div>
+            <div class="step"><b class="num">2</b><div><strong>调度下发指令</strong><span>提炼并写入对应的 Markdown 文件</span></div></div>
+            <div class="step"><b class="num">3</b><div><strong>抓取验证并入库</strong><span>敏感信息扫描后统一 Git 提交</span></div></div>
+            <div class="step"><b class="num">4</b><div><strong>全量快照</strong><span>Git 负责增量追踪与历史回溯</span></div></div>
+          </div>
+        </article>
+      </div>
+      <div class="principle">留路径，不留明文</div>
+    </section>
+  </section>
+</main>
+</body>
+</html>

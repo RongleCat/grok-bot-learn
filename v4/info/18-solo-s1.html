@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#f7f1e7;color:#1f211e;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:34px 42px 38px}.head{height:122px;position:relative;display:flex;align-items:center}.head h1{font-size:38px;letter-spacing:-1.4px;line-height:1.1;margin:0;font-weight:780}.bot{position:absolute;right:30px;top:0;width:116px;height:116px;object-fit:contain}.compare{height:132px;display:grid;grid-template-columns:1fr 1fr;border:1px solid #d8d0c2;border-radius:24px;overflow:hidden;background:#fffaf1}.compare>div{padding:22px 28px}.compare>div+div{border-left:1px solid #d8d0c2;background:#eef3ed}.compare h2,.route h2,.fields h2{font-size:19px;line-height:1.2;margin:0 0 11px;font-weight:750}.compare p{font-size:16px;line-height:1.5;margin:0;color:#505149}.route{height:170px;margin-top:18px;border:1px solid #d8d0c2;border-radius:24px;background:#fffaf1;padding:19px 25px}.route h2{margin-bottom:14px}.steps{display:grid;grid-template-columns:1.02fr 1.05fr 1.25fr;gap:14px}.step{height:84px;border-radius:17px;padding:14px 17px;background:#f4e5ce}.step:nth-child(2){background:#e5eee7}.step:nth-child(3){background:#f1ddd3}.step strong{display:block;font-size:16px;line-height:1.25;margin-bottom:7px}.step span{display:block;font-size:15px;line-height:1.4}.fields{height:212px;margin-top:18px;border:1px solid #d8d0c2;border-radius:24px;background:#fffaf1;padding:19px 25px}.fields h2{margin-bottom:14px}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:11px}.field{height:116px;border:1px solid #dfd6c7;border-radius:17px;padding:15px 13px;background:#fffdf8}.field:nth-child(4){background:#f4e5ce;border-color:#e7c486}.field b{display:block;font-size:16px;line-height:1.15;margin-bottom:10px}.field p{font-size:15px;line-height:1.35;margin:0;color:#4b4c46}.field:nth-child(4) p{color:#5e4020}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head"><h1>第一个 AI 员工</h1><img class="bot" src="bots/squircle-brun.png"></header>
+<section class="compare">
+<div><h2>临时提示词</h2><p>单次对话，关注单次动作</p><p>口头交代易越权，出错重跑</p></div>
+<div><h2>岗位设定</h2><p>长期配置，交付业务产物</p><p>可逆自理，不可逆等审批，硬设人闸</p></div>
+</section>
+<section class="route">
+<h2>岗位定义与准入测试</h2>
+<div class="steps">
+<div class="step"><strong>先别给不可逆权限</strong><span>从枯燥、高频且易撤销的杂事切入</span></div>
+<div class="step"><strong>一句话职责测试</strong><span>一句讲清交付什么</span></div>
+<div class="step"><strong>纯文字推演</strong><span>先汇报步骤、预访网址与存疑判断</span></div>
+</div>
+</section>
+<section class="fields">
+<h2>岗位描述拆成五个字段划清边界</h2>
+<div class="grid">
+<article class="field"><b>Owns</b><p>交付固定产物</p></article>
+<article class="field"><b>Inputs</b><p>允许读取的渠道</p></article>
+<article class="field"><b>May</b><p>可自理的操作</p></article>
+<article class="field"><b>Must ask before</b><p>花钱或改配置等高危动作，必须等人工审批</p></article>
+<article class="field"><b>Done when</b><p>客观核对的验收清单</p></article>
+</div>
+</section>
+</main>
+</body>
+</html>

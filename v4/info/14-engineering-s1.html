@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>Harness、模型大脑与本地 CLI Agent 分工</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#fbf6ed;color:#1f211e;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.canvas{width:1200px;height:760px;padding:38px 52px 42px;position:relative}
+.top{height:126px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ded7cc}
+h1{font-size:32px;line-height:1.18;letter-spacing:-1px;margin:0;font-weight:760}
+.bot{width:108px;height:108px;object-fit:contain;display:block;margin-right:20px}
+.flow{display:flex;align-items:center;gap:13px;margin-top:30px;height:282px}
+.role{height:282px;background:#fffdf8;border:1px solid #ded7cc;border-radius:24px;padding:25px 24px 22px;flex:1;min-width:0;position:relative}
+.role.cloud{border-top:6px solid #2574a9}
+.role.local{border-top:6px solid #d77650}
+.role.human{border-top:6px solid #2574a9}
+.role h2{font-size:22px;line-height:1.2;margin:0 0 11px;font-weight:750}
+.host{font-size:16px;line-height:1.35;margin:0 0 20px;color:#5c5d57}
+.role p{font-size:17px;line-height:1.65;margin:0}
+.role strong{font-weight:750}
+.arrow{width:23px;height:23px;flex:none;position:relative}
+.arrow:before{content:"";position:absolute;top:10px;left:0;width:15px;border-top:2px solid #8a8a83}
+.arrow:after{content:"";position:absolute;top:6px;right:1px;width:8px;height:8px;border-top:2px solid #8a8a83;border-right:2px solid #8a8a83;transform:rotate(45deg)}
+.base{margin-top:29px;height:173px;border:1px solid #ded7cc;border-radius:24px;background:#f2eadc;display:grid;grid-template-columns:235px 1fr;overflow:hidden}
+.base-title{padding:26px 24px;border-right:1px solid #d8cebf;display:flex;flex-direction:column;justify-content:center}
+.base-title h2{font-size:22px;line-height:1.25;margin:0 0 8px;font-weight:750}
+.base-title p{font-size:16px;line-height:1.5;margin:0;color:#5c5d57}
+.rules{padding:22px 27px;display:grid;grid-template-columns:1fr 1fr;gap:15px 28px;align-content:center}
+.rule{font-size:16px;line-height:1.4;min-width:0;padding-left:15px;position:relative}
+.rule:before{content:"";position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:#2574a9}
+.rule.coral:before{background:#d77650}
+</style>
+</head>
+<body>
+<main class="canvas">
+<header class="top">
+<h1>Harness、模型大脑与本地 CLI Agent 分工</h1>
+<img class="bot" src="bots/cercle-bleu.png" alt="">
+</header>
+<section class="flow" aria-label="三方分工">
+<article class="role cloud">
+<h2>Grok Bot</h2>
+<p class="host">云端电脑（/workspace 共享存储）</p>
+<p>跑巡检与派发任务<br><strong>只生成 Draft PR</strong><br>严禁直接推默认分支或上线</p>
+</article>
+<div class="arrow" aria-hidden="true"></div>
+<article class="role local">
+<h2>本地 CLI Agent</h2>
+<p class="host">本地终端或临时容器</p>
+<p>独立分支拉依赖改代码<br>跑构建</p>
+</article>
+<div class="arrow" aria-hidden="true"></div>
+<article class="role human">
+<h2>人类主管</h2>
+<p class="host">个人工作站</p>
+<p><strong>手握发布密钥与生产写权限</strong><br>负责架构决策与审批合并</p>
+</article>
+</section>
+<section class="base" aria-label="运行约束">
+<div class="base-title">
+<h2>共享环境，状态留痕</h2>
+<p>流程要靠状态文件和自动化校验卡死</p>
+</div>
+<div class="rules">
+<div class="rule">系统自动调度模型，不提供手动单次选择器</div>
+<div class="rule coral">给 Bot 改名起不到权限隔离的作用</div>
+<div class="rule">只有 /workspace 目录会持久保留</div>
+<div class="rule coral">敏感登录必须用 Take Control 在远程屏幕人工认证</div>
+<div class="rule">所有核心状态都要用 Git 同步到远端或存进结构化文件</div>
+</div>
+</section>
+</main>
+</body>
+</html>

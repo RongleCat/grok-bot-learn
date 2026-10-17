@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:1200px;height:760px;overflow:hidden}body{background:#fbf7ef;color:#1f2525;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.board{width:1200px;height:760px;padding:34px 44px 38px;display:grid;grid-template-rows:134px 1fr;gap:22px}.hero{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d9d4c9;padding:0 12px 18px 8px}.hero h1{margin:0;font-size:39px;line-height:1.18;letter-spacing:-1.5px;font-weight:800}.hero p{margin:12px 0 0;font-size:18px;line-height:1.45;color:#515958}.bot{width:108px;height:108px;object-fit:contain;flex:none}.content{display:grid;grid-template-columns:360px 1fr;gap:22px;min-height:0}.card{border:1px solid #d9d4c9;border-radius:24px;background:#fffdf9}.principle{padding:27px 27px 22px;display:flex;flex-direction:column}.principle h2,.flow h2{font-size:21px;line-height:1.2;margin:0;font-weight:800}.path{margin:22px 0 16px;padding:16px 17px;border-radius:16px;background:#e1f3ef;color:#0c6e68;font-size:18px;line-height:1.35;font-weight:800;word-break:break-all}.principle p{margin:0;font-size:16px;line-height:1.6}.rule{margin-top:auto;border-top:1px solid #e5e0d7;padding-top:16px;font-size:16px;line-height:1.55;font-weight:700}.right{display:grid;grid-template-rows:292px 1fr;gap:18px;min-height:0}.flow{padding:24px 27px 20px}.steps{display:grid;grid-template-columns:1fr 30px 1fr 30px 1fr 30px 1fr;align-items:center;margin-top:22px}.step{height:151px;border:1px solid #d9d4c9;border-radius:18px;padding:15px 14px;background:#fffdf9}.num{display:block;color:#0c6e68;font-size:15px;font-weight:800;margin-bottom:10px}.step strong{display:block;font-size:17px;line-height:1.35;margin-bottom:8px}.step span{display:block;font-size:15px;line-height:1.45;color:#515958}.arrow{text-align:center;font-size:24px;color:#d8724d;font-weight:700}.deliver{display:grid;grid-template-columns:1.22fr .96fr;gap:18px;min-height:0}.meta{padding:21px 25px}.meta h2,.outcome h2{font-size:20px;line-height:1.2;margin:0 0 13px;font-weight:800}.meta-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;padding-top:13px;border-top:1px solid #e5e0d7}.meta-grid div{font-size:15px;line-height:1.35}.meta-grid b{display:block;color:#0c6e68;font-size:14px;margin-bottom:3px}.outcome{padding:21px 24px;background:#fdf4ea;border-color:#ead2c0}.outcome ul{margin:9px 0 0;padding:0;list-style:none}.outcome li{position:relative;padding:0 0 11px 20px;font-size:16px;line-height:1.45}.outcome li:before{content:"";position:absolute;left:0;top:7px;width:8px;height:8px;border-radius:50%;background:#d8724d}.outcome li:last-child{padding-bottom:0}
+.right{grid-template-rows:264px minmax(0,1fr)}.flow{padding:20px 27px}.steps{margin-top:16px}.step{height:135px;padding:13px 14px}.num{margin-bottom:7px}.step strong{margin-bottom:6px}.step span{line-height:1.4}.meta{padding:17px 25px;min-height:0}.meta h2,.outcome h2{margin-bottom:10px}.meta-grid{gap:4px 18px;padding-top:10px}.meta-grid div{line-height:1.3}.meta-grid b{display:inline;font-size:15px;margin:0 5px 0 0}.outcome{padding:18px 24px;min-height:0}.outcome ul{margin-top:7px}.outcome li{padding-bottom:9px;line-height:1.4}
+</style>
+</head>
+<body>
+<main class="board">
+  <header class="hero">
+    <div><h1>文件交接，状态落盘</h1><p>业务交接必须全走 <strong>/workspace</strong> 绝对文件路径</p></div>
+    <img class="bot" src="bots/nuage-turquoise.png" alt="">
+  </header>
+  <section class="content">
+    <article class="card principle">
+      <h2>同一工作区，协作 Bot 统一读写</h2>
+      <div class="path">/workspace/project-alpha/</div>
+      <p>别在群聊里发长文本。对话历史成倍吃 Token，格式乱了还会导致下游 Bot 误读。</p>
+      <div class="rule">只认文件路径，无人肉搬运</div>
+    </article>
+    <section class="right">
+      <article class="card flow">
+        <h2>操作流程</h2>
+        <div class="steps">
+          <div class="step"><i class="num">01</i><strong>建专属目录</strong><span>协作 Bot 统一在此读写</span></div><div class="arrow">→</div>
+          <div class="step"><i class="num">02</i><strong>生成成果文件</strong><span>research.md<br>data.json</span></div><div class="arrow">→</div>
+          <div class="step"><i class="num">03</i><strong>传递文件路径</strong><span>仅向幕僚长返回绝对路径</span></div><div class="arrow">→</div>
+          <div class="step"><i class="num">04</i><strong>决策留痕落盘</strong><span>/workspace/state/<br>chief_log.md</span></div>
+        </div>
+      </article>
+      <section class="deliver">
+        <article class="card meta">
+          <h2>上游交付文件必须包含标准元数据头</h2>
+          <div class="meta-grid">
+            <div><b>task_id</b>TASK-20261015-01</div><div><b>owner</b>market_scout_bot</div>
+            <div><b>timestamp</b>2026-10-15T08:30:00+08:00</div><div><b>source_inputs</b>数据源链接</div>
+            <div><b>output_deliverable</b>交付文件路径</div><div><b>review_point</b>Human approval required</div>
+            <div><b>status</b>completed</div><div><b>交付正文内容</b>...</div>
+          </div>
+        </article>
+        <article class="card outcome">
+          <h2>交接后</h2>
+          <ul>
+            <li>下游 Bot 依据文件路径就能独立解析并启动后续</li>
+            <li>无需人工在对话框二次补充背景</li>
+            <li>专职 Bot 只出待批建议，绝不越权</li>
+          </ul>
+        </article>
+      </section>
+    </section>
+  </section>
+</main>
+</body>
+</html>

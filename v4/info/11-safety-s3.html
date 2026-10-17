@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>批准机制与 Auto Review</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#f7f2e9;color:#24221f;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.canvas{width:1200px;height:760px;padding:36px 48px 42px;position:relative}
+.top{height:118px;display:flex;align-items:center;border-bottom:1px solid #d8d0c4}
+h1{font-size:35px;line-height:1.14;letter-spacing:-1.2px;margin:0;font-weight:800}
+.bot{width:108px;height:108px;object-fit:contain;margin-left:auto;margin-right:7px}
+.layout{display:grid;grid-template-columns:1.03fr 1.31fr 1.03fr;gap:18px;margin-top:24px;height:540px}
+.card{background:#fffdf9;border:1px solid #d9d0c4;border-radius:24px;padding:24px;min-width:0}
+.card h2{font-size:19px;line-height:1.25;margin:0 0 17px;font-weight:800}
+.intro{font-size:16px;line-height:1.55;margin:0 0 18px;color:#4c4841}
+.options{display:grid;gap:10px}
+.option{border:1px solid #e1d8cd;border-radius:16px;padding:13px 14px;font-size:16px;line-height:1.15;font-weight:700;background:#fff}
+.option.allow{border-color:#9ec8b3;background:#eff8f2;color:#255d42}
+.option.ask{border-color:#b8a7e3;background:#f3effd;color:#47307c}
+.option.deny{color:#4d4840}
+.muted{font-size:15px;line-height:1.55;margin:18px 0 0;color:#625d55}
+.middle{display:flex;flex-direction:column;padding:24px 26px}
+.steps{display:grid;gap:12px}
+.step{border:1px solid #ded5c9;border-radius:17px;padding:13px 15px;display:grid;grid-template-columns:28px 1fr;gap:10px;background:#fff}
+.num{width:28px;height:28px;border-radius:50%;background:#7256ca;color:#fff;display:grid;place-items:center;font-size:15px;font-weight:800}
+.step p{margin:2px 0 0;font-size:15px;line-height:1.42;font-weight:650}
+.rule{margin-top:14px;border-radius:17px;background:#f3effd;border:1px solid #b8a7e3;padding:14px 15px}
+.rule strong{display:block;font-size:16px;line-height:1.2;color:#47307c;margin-bottom:7px}
+.rule p{margin:0;font-size:15px;line-height:1.45;color:#47307c;font-weight:650}
+.words{margin-top:auto;border-top:1px solid #e1d9ce;padding-top:16px;font-size:15px;line-height:1.45;color:#4f4941;word-spacing:4px}
+.right{display:flex;flex-direction:column}
+.right h2{margin-bottom:15px}
+.check{border-radius:17px;border:1px solid #dcd3c7;background:#fff;padding:15px 15px 14px;margin-bottom:11px}
+.check strong{display:block;font-size:16px;line-height:1.35;margin-bottom:5px}
+.check p{font-size:15px;line-height:1.43;color:#595349;margin:0}
+.note{margin-top:auto;border-radius:17px;background:#eff8f2;border:1px solid #9ec8b3;padding:15px}
+.note strong{display:block;font-size:16px;line-height:1.25;color:#255d42;margin-bottom:6px}
+.note p{margin:0;font-size:15px;line-height:1.45;color:#255d42;font-weight:650}
+</style>
+</head>
+<body>
+<main class="canvas">
+  <header class="top">
+    <h1>批准机制与 Auto Review</h1>
+    <img class="bot" src="bots/triangle-violet.png" alt="">
+  </header>
+  <section class="layout">
+    <article class="card">
+      <h2>Bot 执行受控操作会弹卡</h2>
+      <p class="intro">提供三个选项（iPhone 端一致）</p>
+      <div class="options">
+        <div class="option allow">Allow once</div>
+        <div class="option allow">Always allow</div>
+        <div class="option deny">Deny</div>
+      </div>
+      <p class="muted">底层的 Auto Review 会预审 shell 命令与插件调用，也管控计算机使用、自动化写入及 Agent 委派。</p>
+      <p class="muted">写入记忆和大部分配置更改不经评审，不能替代逐项批准。</p>
+    </article>
+    <article class="card middle">
+      <h2>怎么做</h2>
+      <div class="steps">
+        <div class="step"><span class="num">1</span><p>企业版在 Cursor 仪表盘开启 Enforce Auto-review 模式锁定，群组设 Don't enforce for this group 除外。</p></div>
+        <div class="step"><span class="num">2</span><p>个人在客户端进入 设置 &gt; General &gt; Auto-review &gt; Custom Rules</p></div>
+      </div>
+      <div class="rule"><strong>规则冲突以 Ask first 为准</strong><p>Ask first：强制拦截弹卡<br>Allow automatically：无风险时自动放行</p></div>
+      <div class="words">send, post, buy, transfer, delete,<br>permissions, production, terms</div>
+    </article>
+    <article class="card right">
+      <h2>验收标准</h2>
+      <div class="check"><strong>高危动作 100% 弹出确认卡片</strong></div>
+      <div class="check"><strong>日常低危读写不被误拦截</strong></div>
+      <div class="check"><strong>冲突时执行最严拦截方案</strong></div>
+      <div class="note"><strong>规则须绑定具体行为</strong><p>如“发外部邮件前先询问”</p></div>
+      <div class="note"><strong>严禁宽泛规则</strong><p>“允许所有 shell 脚本”</p></div>
+    </article>
+  </section>
+</main>
+</body>
+</html>

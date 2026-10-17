@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#f7f1e8;color:#20201e;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.board{width:1200px;height:760px;padding:42px 48px 38px}.top{height:128px;display:flex;align-items:flex-start;border-bottom:1px solid #d9d0c4}.title{margin:19px 0 0;font-size:38px;line-height:1.18;letter-spacing:-1.3px;font-weight:750}.bot{width:108px;height:auto;object-fit:contain;margin-left:auto;margin-right:24px;margin-top:0}.flow{height:552px;padding-top:32px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}.card{background:#fffdfa;border:1px solid #d9d0c4;border-radius:24px;padding:23px 20px 19px;min-width:0;position:relative}.card:nth-child(1),.card:nth-child(3){border-top:5px solid #d4774e}.card:nth-child(2),.card:nth-child(4){border-top:5px solid #477f78}.step{font-size:16px;line-height:1.25;color:#a65435;font-weight:700;margin:0 0 14px}.card:nth-child(2) .step,.card:nth-child(4) .step{color:#397068}.heading{font-size:23px;line-height:1.28;letter-spacing:-.5px;font-weight:750;margin:0 0 20px}.rule{height:1px;background:#e5ddd3;margin:0 0 17px}.item{font-size:16px;line-height:1.55;margin:0 0 15px;letter-spacing:-.1px}.item:last-child{margin-bottom:0}.strong{font-weight:720}.path{font-size:15px;line-height:1.45;word-break:break-word}.arrow{position:absolute;top:270px;right:-13px;width:8px;height:8px;background:#f7f1e8;border-top:1px solid #b8ada0;border-right:1px solid #b8ada0;transform:rotate(45deg);z-index:3}.card:last-child .arrow{display:none}
+</style>
+</head>
+<body>
+<main class="board">
+<header class="top"><h1 class="title">省额度四步工作流</h1><img class="bot" src="bots/capsule-vert.png" alt=""></header>
+<section class="flow">
+<article class="card"><p class="step">01</p><h2 class="heading">锁定计费与<br>安全底线</h2><div class="rule"></div><p class="item">Settings &gt; Usage &amp; Billing<br>核对套餐、用量与倒计时；<br>卡住点 Stop 强制结束。</p><p class="item"><span class="strong">调试时关 Additional Usage / On-demand</span></p><p class="item">send、post、buy、transfer、delete、permissions<br><span class="strong">设为 Ask first 人工批准</span></p><i class="arrow"></i></article>
+<article class="card"><p class="step">02</p><h2 class="heading">规范会话与<br>交互</h2><div class="rule"></div><p class="item"><span class="strong">单任务单会话</span>，做完立即归档。</p><p class="item">日志长文存进 <span class="path">/workspace/</span>，<br>只回结论和路径，严禁贴回。</p><p class="item">X 搜索限每分 30 次、<br>每天 1000 次（不扣周额度）</p><p class="item"><span class="strong">提取核心事实，以 3 到 5 条要点输出</span></p><p class="item">会话臃肿时用 Duplicate 重置</p><i class="arrow"></i></article>
+<article class="card"><p class="step">03</p><h2 class="heading">能力路由与<br>分流</h2><div class="rule"></div><p class="item">主 Bot 只负责拆解、派发与汇总，不写长代码或转大文件。</p><p class="item"><span class="strong">写代码走 Cursor 云端 Agent</span><br>（走 Cursor 额度不扣周额度）</p><p class="item">或在虚拟机无头跑 Grok Build CLI / Codex CLI。</p><p class="item">截图与音视频由云电脑命令行处理，或用免费模型转文字再喂给 Bot。</p><i class="arrow"></i></article>
+<article class="card"><p class="step">04</p><h2 class="heading">定时任务<br>改造</h2><div class="rule"></div><p class="item">Details &gt; Routines 里，<br><span class="strong">暂停或删除过去一周天天报「没有变化」的例程</span></p><p class="item">换 Linux 脚本低成本轮询，<br>有变动再发 Webhook 唤醒 Bot。</p><p class="item"><span class="strong">保留例程写入静默指令</span></p><p class="item">「检查后若无变化，直接结束任务，严禁输出任何文字」。</p></article>
+</section>
+</main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#f8f3ea;color:#20201d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:42px 60px}.head{height:104px;position:relative;display:flex;align-items:flex-start}.head h1{font-size:42px;line-height:1.14;letter-spacing:-1.6px;margin:14px 0 0;font-weight:780}.bot{position:absolute;right:15px;top:-11px;width:112px;height:112px;object-fit:contain}.principle{height:52px;border:1px solid #d8cfc2;border-radius:22px;background:#fffaf2;display:flex;align-items:center;padding:0 22px;font-size:17px;line-height:1.35;color:#393832}.principle strong{color:#b45d2b;font-weight:750;margin-right:12px;white-space:nowrap}.stages{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px;height:236px}.stage{background:#fffdf9;border:1px solid #dcd4c9;border-radius:24px;padding:20px 18px;position:relative}.stage:not(:last-child):after{content:"›";position:absolute;right:-12px;top:97px;width:22px;height:38px;border-radius:12px;background:#b45d2b;color:#fffaf2;text-align:center;font-size:29px;line-height:34px;font-family:Arial,sans-serif;z-index:2}.stage-num{font-size:15px;color:#8d8275;font-weight:650}.stage h2{font-size:25px;letter-spacing:-.5px;line-height:1.16;margin:10px 0 14px}.count{display:inline-block;border-radius:12px;background:#efe0ce;color:#944819;padding:4px 10px;font-size:16px;font-weight:750;line-height:1.2;margin-bottom:14px}.stage p{font-size:16px;line-height:1.5;margin:0;color:#45433d}.stage.emma{border-color:#cb8a59;background:#fff9f1}.emma h2{color:#9c4e1f}.bottom{display:grid;grid-template-columns:42% 1fr;gap:16px;margin-top:18px;height:214px}.panel{background:#fffdf9;border:1px solid #dcd4c9;border-radius:24px;padding:16px 20px}.panel h2{font-size:19px;line-height:1.2;margin:0 0 10px;font-weight:750}.signal-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}.signal{font-size:15px;line-height:1.2;padding:8px 10px;border-radius:12px;background:#f3ede4;color:#3e3d37;white-space:nowrap}.signal:last-child{grid-column:1/-1}.steps{display:grid;grid-template-columns:repeat(12,1fr);gap:6px}.step{min-height:0;border:1px solid #eadfd2;border-radius:14px;padding:7px 8px;font-size:15px;line-height:1.18;background:#fffaf4}.step:nth-child(-n+4){grid-column:span 3}.step:nth-child(n+5){grid-column:span 4}.step b{display:block;color:#b45d2b;font-size:15px;margin-bottom:2px}.note{font-size:15px;line-height:1.25;margin:9px 0 0;color:#4f4c45}.note strong{color:#9c4e1f}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="head">
+    <h1>从单兵到军团</h1>
+    <img class="bot" src="bots/hexagone-ambre.png" alt="">
+  </header>
+  <section class="principle"><strong>按需长出来</strong>平时遇到重复事务就建专职角色，角色多了再由幕僚长 Emma 统管。</section>
+  <section class="stages">
+    <article class="stage"><div class="stage-num">阶段 1</div><h2>单兵</h2><div class="count">1 Bot</div><p>全量人闸验证闭环<br>需时刻盯盘</p></article>
+    <article class="stage"><div class="stage-num">阶段 2</div><h2>小组</h2><div class="count">2–3 Bot</div><p>生产与审核分离<br>日维护压进 15 分钟</p></article>
+    <article class="stage emma"><div class="stage-num">阶段 3</div><h2>幕僚长</h2><div class="count">4–6 Bot</div><p>分发与看板<br>杜绝幕僚长干杂活</p></article>
+    <article class="stage"><div class="stage-num">阶段 4</div><h2>军团</h2><div class="count">10–30 Bot</div><p>多线 standup<br>定期修剪无效例程</p></article>
+  </section>
+  <section class="bottom">
+    <article class="panel"><h2>何时拆分独立 Bot</h2><div class="signal-list"><div class="signal">考核目标不同</div><div class="signal">调用工具不同</div><div class="signal">工作风格不同</div><div class="signal">审批边界不同</div><div class="signal">调度周期不同</div></div><p class="note">草稿与对外沟通绝不能混</p></article>
+    <article class="panel"><h2>自动化七步法</h2><div class="steps"><div class="step"><b>1</b>写清目标、数据源、格式与停机边界</div><div class="step"><b>2</b>挑受控真实任务单次运行</div><div class="step"><b>3</b>人工调优到免检</div><div class="step"><b>4</b>沉淀为复用 Skill</div><div class="step"><b>5</b>换新数据复测泛化</div><div class="step"><b>6</b>定好重试上限与缺失报警，才开 Routine</div><div class="step"><b>7</b>发信、付款或改动，强绑 Require Approval 人闸</div></div></article>
+  </section>
+</main>
+</body>
+</html>

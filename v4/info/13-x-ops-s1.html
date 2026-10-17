@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fbf6ec;color:#1d1b18;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{height:760px;padding:32px 42px 36px;display:flex;flex-direction:column;gap:17px}.head{height:111px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d9d1c4;padding:0 14px 14px 2px}.head h1{margin:0;font-size:36px;letter-spacing:-1.5px;line-height:1.15;font-weight:750}.head img{width:106px;height:106px;object-fit:contain;display:block}.capabilities{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;height:212px}.card{border:1px solid #d9d1c4;border-radius:24px;background:#fffdf8;padding:20px 22px;display:flex;flex-direction:column;min-width:0}.num{font-size:15px;color:#b24d2e;font-weight:700;margin-bottom:6px}.card h2{font-size:23px;margin:0 0 13px;letter-spacing:-.5px}.card p{font-size:16px;line-height:1.55;margin:0}.card .rule{margin-top:auto;padding-top:11px;border-top:1px solid #e6ded2;font-size:16px;line-height:1.45;font-weight:650}.blue{color:#246a7c}.orange{color:#b24d2e}.work{display:grid;grid-template-columns:1.2fr 1.1fr;gap:18px;min-height:0;flex:1}.panel{border:1px solid #d9d1c4;border-radius:24px;background:#fffdf8;padding:18px 22px}.panel h2{margin:0 0 13px;font-size:21px}.steps{display:flex;align-items:stretch;gap:9px}.step{border-radius:17px;background:#edf5f5;padding:13px 14px;flex:1;font-size:16px;line-height:1.42}.arrow{align-self:center;font-size:22px;color:#b24d2e}.accept{display:grid;grid-template-columns:1fr 1fr;gap:11px}.check{border-radius:17px;background:#fff3e8;padding:13px 14px;font-size:16px;line-height:1.43}.check b{display:block;font-size:17px;margin-bottom:4px}.note{font-size:15px;line-height:1.35;margin-top:10px;color:#4b4740}.nowrap{white-space:nowrap}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head">
+<h1>X 平台：从只读检索到评论区派活</h1>
+<img src="bots/galet-encre.png" alt="">
+</header>
+<section class="capabilities">
+<article class="card">
+<div class="num">原生只读</div>
+<h2>搜帖、单帖解析、7天热度</h2>
+<p class="rule blue">走订阅池，无封号风险</p>
+</article>
+<article class="card">
+<div class="num">外部触发</div>
+<h2>评论区 @bot 提取归档</h2>
+<p class="rule orange">路由至星标主 Bot<br>严禁自动回推</p>
+</article>
+<article class="card">
+<div class="num">账号写入</div>
+<h2>发推、私信、读收藏、点赞</h2>
+<p class="rule blue">走官方 API<br>严禁用无头浏览器发帖</p>
+</article>
+</section>
+<section class="work">
+<article class="panel">
+<h2>怎么做</h2>
+<div class="steps">
+<div class="step">对话框<br><span class="nowrap">「帮我搜过去 3 天</span><br>大家怎么评价 XX 话题」</div>
+<div class="arrow">→</div>
+<div class="step">贴链接交代<br>「提取这条推文的核心观点<br>与读者互动争议点」</div>
+<div class="arrow">→</div>
+<div class="step">评论区<br><span class="nowrap">@bot 提取本帖核心逻辑</span><br>并存入选题库</div>
+</div>
+</article>
+<article class="panel">
+<h2>验收标准</h2>
+<div class="accept">
+<div class="check"><b>提取完整</b>带回原始来源、发布时间与讨论脉络。</div>
+<div class="check"><b>响应边界</b>派活后 30 秒内出日志，只起草不代发。</div>
+</div>
+<div class="note">绝不自动点赞或发帖。</div>
+</article>
+</section>
+</main>
+</body>
+</html>

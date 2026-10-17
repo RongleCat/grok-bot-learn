@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Secrets 的只写机制与团队隔离</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#faf6ef;color:#20201e;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.page{width:1200px;height:760px;padding:32px 44px 42px;display:flex;flex-direction:column}
+.top{height:112px;display:flex;align-items:center;border-bottom:1px solid #dfd8ce}
+.title{font-size:34px;font-weight:750;letter-spacing:-1px;line-height:1.2;flex:1}
+.bot{width:108px;height:108px;object-fit:contain;display:block;margin-left:28px}
+.content{flex:1;display:grid;grid-template-columns:310px 1fr;gap:24px;padding-top:22px;min-height:0}
+.left{display:grid;grid-template-rows:1.15fr 1fr;gap:16px;min-height:0}
+.right{display:grid;grid-template-rows:1.35fr .85fr;gap:16px;min-height:0}
+.card{background:#fffdf9;border:1px solid #ded7cc;border-radius:24px;padding:20px 22px;overflow:hidden}
+.warn{background:#fff8ed;border-color:#e8c993}
+.check{background:#f4faf5;border-color:#b9d4c0}
+.kicker{font-size:15px;font-weight:700;letter-spacing:1px;color:#b65636;margin-bottom:10px}
+.heading{font-size:22px;font-weight:750;line-height:1.25;margin:0 0 13px}
+.body{font-size:16px;line-height:1.55;margin:0}
+.prohibit{display:grid;gap:9px;margin-top:14px}
+.prohibit div{font-size:16px;line-height:1.35;padding-left:18px;position:relative}
+.prohibit div:before{content:"";position:absolute;left:0;top:6px;width:9px;height:9px;border-radius:50%;background:#c86441}
+.note{font-size:15px;line-height:1.45;color:#5f5a53;margin-top:13px}
+.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;height:calc(100% - 34px)}
+.step{border:1px solid #e4ddd3;border-radius:17px;padding:15px 15px 12px}
+.num{width:28px;height:28px;border-radius:50%;background:#c86441;color:#fffdf9;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;margin-bottom:9px}
+.step h3{font-size:17px;margin:0 0 7px;line-height:1.25}
+.step p{font-size:15px;line-height:1.45;margin:0;color:#45413b}
+.replace{display:inline-block;color:#b65636;font-weight:700;white-space:nowrap}
+.accept{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center;height:100%}
+.accept-title{font-size:21px;font-weight:750;line-height:1.25;margin:0}
+.accept-list{display:grid;gap:10px}
+.accept-item{font-size:16px;line-height:1.35;padding-left:25px;position:relative}
+.accept-item:before{content:"✓";position:absolute;left:0;top:-1px;color:#368050;font-size:20px;font-weight:800}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="top">
+    <div class="title">Secrets 的只写机制</div>
+    <img class="bot" src="bots/galet-rouge.png" alt="">
+  </header>
+  <section class="content">
+    <div class="left">
+      <article class="card warn">
+        <div class="kicker">绝不能</div>
+        <h2 class="heading">敏感凭证绝不能</h2>
+        <div class="prohibit">
+          <div>发在对话框</div>
+          <div>写进 Shell 配置</div>
+          <div>录入「Teach a task」</div>
+        </div>
+        <p class="note">输入框保存后变空白，是进入了保护状态。</p>
+      </article>
+      <article class="card">
+        <div class="kicker">网页填入</div>
+        <h2 class="heading" style="font-size:18px"><span style="white-space:nowrap">Could not fill into the page</span></h2>
+        <p class="body">若提示 <span style="white-space:nowrap">Could not fill into the page</span>，走 Takeover flow 手动接管登录。</p>
+        <p class="note">切忌在对话框发账号密码。</p>
+      </article>
+    </div>
+    <div class="right">
+      <article class="card">
+        <div class="kicker">提交与更新</div>
+        <div class="steps">
+          <section class="step">
+            <div class="num">1</div>
+            <h3>聊天提交</h3>
+            <p>Bot 索取凭据时弹出安全卡片；输入框显示掩码；点「Save securely」；显示「Saved」即完成。</p>
+          </section>
+          <section class="step">
+            <div class="num">2</div>
+            <h3>团队 Bot</h3>
+            <p>在设置的「Secrets」点「Add secret」，填名称、描述与密钥后点「Save secret」。</p>
+            <p style="font-size:15px;line-height:1.4;margin:8px 0 0"><span class="replace">更新点「Replace」与「Replace value」</span>；系统不支持找回旧值。</p>
+          </section>
+          <section class="step">
+            <div class="num">3</div>
+            <h3>云电脑执行</h3>
+            <p>云电脑执行 <span style="white-space:nowrap">Recover</span> 或 <span style="white-space:nowrap">Reset</span> 不会丢失凭证。</p>
+          </section>
+        </div>
+      </article>
+      <article class="card check">
+        <div class="accept">
+          <h2 class="accept-title">验收标准</h2>
+          <div class="accept-list">
+            <div class="accept-item">面板仅显示名称与描述，密钥值完全隐藏。</div>
+            <div class="accept-item">对话中要明文 Bot 读不到，但 CLI 或请求鉴权正常通过。</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+</body>
+</html>

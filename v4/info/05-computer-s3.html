@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>移交屏幕，不交密码</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fffaf2;color:#171716;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:34px 48px 38px}.head{height:132px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ded9d0}.headcopy{padding-left:8px}.eyebrow{margin:0 0 8px;color:#196c87;font-size:17px;font-weight:700;letter-spacing:.08em}.head h1{margin:0;font-size:41px;line-height:1.15;letter-spacing:-1.5px}.bot{width:110px;height:110px;object-fit:contain;margin:0 21px 8px 0}.content{display:grid;grid-template-columns:311px 1fr;gap:28px;padding-top:26px;height:556px}.rule{border:1px solid #d9d4cc;border-radius:24px;background:#fffdf8;padding:25px 24px;height:492px}.rule h2{font-size:22px;line-height:1.25;margin:0 0 24px}.bad{padding:16px;border-radius:16px;background:#fff0ec;border:1px solid #efcfc5;color:#a44131;font-size:18px;font-weight:700;line-height:1.45}.rule p{font-size:16px;line-height:1.65;margin:21px 0}.principle{border-top:1px solid #ded9d0;padding-top:18px}.principle strong{display:block;color:#196c87;font-size:23px;line-height:1.35;margin-bottom:7px}.principle span{font-size:16px;line-height:1.5}.flow{position:relative;padding-top:2px}.flowtitle{font-size:22px;font-weight:700;line-height:1.2;margin:0 0 15px}.steps{display:grid;grid-template-columns:1fr 1fr;gap:16px;position:relative}.steps:before{content:"";position:absolute;left:50%;top:50%;height:1px;width:26px;background:#196c87;transform:translate(-50%,-50%)}.step{min-height:182px;border:1px solid #d9d4cc;border-radius:22px;background:#fffdf8;padding:20px 21px}.n{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#196c87;color:#fff;font-size:17px;font-weight:700;margin-bottom:13px}.step h3{font-size:20px;line-height:1.2;margin:0 0 9px}.step p{font-size:16px;line-height:1.58;margin:0;color:#383733}.arrow{height:35px;display:flex;align-items:center;justify-content:center;color:#196c87;font-size:25px;font-weight:700}.outcome{border:1px solid #b9d6df;border-radius:20px;background:#eff9fb;padding:16px 22px;display:flex;align-items:center;gap:18px;min-height:72px}.outcome b{font-size:19px;color:#196c87;white-space:nowrap}.outcome span{font-size:16px;line-height:1.45}.focus{font-weight:700}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head">
+<div class="headcopy"><h1>移交屏幕，不交密码</h1></div>
+<img class="bot" src="bots/cercle-bleu.png" alt="">
+</header>
+<section class="content">
+<aside class="rule">
+<h2>登录授权是一个高频场景</h2>
+<div class="bad">不要把网站账号、密码或 API Token 发进聊天框</div>
+<p>这种做法有极大的安全隐患，会把凭据暴露给模型的推理上下文与外部传输链路。</p>
+<div class="principle"><strong>Bot 与你使用同一个浏览器环境</strong><span>处理服务登录的铁律是「移交屏幕，不交密码」。</span></div>
+</aside>
+<section class="flow">
+<h2 class="flowtitle">浏览器接管标准步骤</h2>
+<div class="steps">
+<article class="step"><div class="n">1</div><h3>触发暂停</h3><p>打开目标登录页；遇到输入密码、扫码或双重验证（2FA）时主动暂停，交出控制权。</p></article>
+<article class="step"><div class="n">2</div><h3>接管输入</h3><p>在客户端点击全屏或通过实时画面接管鼠标与键盘。</p></article>
+<article class="step"><div class="n">3</div><h3>人工登录</h3><p>由你本人在云端浏览器内直接敲入账号密码，或者使用手机扫描屏幕上的二维码完成二次验证。</p></article>
+<article class="step"><div class="n">4</div><h3>移交执行</h3><p>登录成功并进入操作页面后，通知 Bot 恢复运行。</p></article>
+</div>
+<div class="arrow">↓</div>
+<div class="outcome"><b>恢复运行</b><span>Bot 会直接复用浏览器当前已有的会话 Cookie，<span class="focus">自始至终接触不到你的明文密码。</span></span></div>
+</section>
+</section>
+</main>
+</body>
+</html>

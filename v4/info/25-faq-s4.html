@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fff9ef;color:#201d1a;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:34px 48px 42px}.head{height:126px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #dfd6c8}.head h1{margin:0;font-size:40px;letter-spacing:-1.8px;line-height:1.15;font-weight:800}.head img{width:108px;height:108px;object-fit:contain;display:block}.grid{display:grid;grid-template-columns:1.02fr 1.12fr 1.12fr;gap:18px;margin-top:25px;height:533px}.card{border:1px solid #dfd6c8;border-radius:24px;background:#fffdf8;padding:24px 25px;overflow:hidden}.accent{background:#f7eee0;border-color:#e5cda8}.blue{background:#eef5f4;border-color:#bbd8d3}.card h2{margin:0 0 19px;font-size:23px;line-height:1.2;letter-spacing:-.5px}.step{border-top:1px solid #e6ded1;padding:15px 0 0;margin-top:15px}.step:first-of-type{border-top:0;padding-top:0;margin-top:0}.step b{display:block;font-size:17px;line-height:1.35;margin-bottom:5px}.step p{margin:0;font-size:15px;line-height:1.58;color:#514b43}.pill{display:inline-block;background:#d86d4b;color:#fffaf3;border-radius:14px;padding:5px 10px;font-size:15px;font-weight:700;line-height:1.2;margin-bottom:18px}.notice{border:1px solid #e5cda8;border-radius:15px;padding:14px 15px;background:#fffaf2;font-size:16px;font-weight:700;line-height:1.48}.row{padding:14px 0;border-top:1px solid #d7e5e2}.row:first-of-type{border-top:0;padding-top:0}.row strong{display:block;font-size:17px;line-height:1.35;margin-bottom:5px}.row span{display:block;font-size:15px;line-height:1.5;color:#514b43}.bottom{margin-top:18px;border:1px solid #d7e5e2;border-radius:15px;padding:13px 14px;background:#fbfefd;font-size:15px;line-height:1.5;color:#514b43}.bottom b{color:#201d1a}.tiny{font-size:15px;line-height:1.52;color:#514b43;margin:0}.cap{font-size:16px;line-height:1.45;font-weight:750;margin:0 0 9px}.split{height:1px;background:#e6ded1;margin:16px 0}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head"><h1>用量异常与配额控制</h1><img src="bots/goutte-rose.png"></header>
+<section class="grid">
+<article class="card accent">
+<h2>配额熔断</h2>
+<div class="pill">Grok Bot 配额按周重置</div>
+<div class="notice">基础额度用完会中断回复<br>这属于正常的配额熔断</div>
+<div class="split"></div>
+<p class="cap">一次性试用额度</p>
+<p class="tiny">跑复杂任务耗尽后无法恢复</p>
+<div class="split"></div>
+<p class="cap">查用量</p>
+<p class="tiny">Bot 内部设置查实时剩余</p>
+<p class="tiny" style="margin-top:8px">外部 Grok 看板不互通</p>
+</article>
+<article class="card">
+<h2>操作与防坑</h2>
+<div class="step"><b>恢复额度</b><p>等每周刷新，或在 设置 &gt; 用量和计费 开按需用量，也可升订阅。</p></div>
+<div class="step"><b>设定封顶</b><p>客户端或网页 cursor.com/dashboard 设限。</p><p style="margin-top:6px">在跑任务不强切，扣费微超几个百分点属正常。</p></div>
+<div class="step"><b>额度对齐</b><p>外部账号不叠加取高者</p><p style="margin-top:5px">Pro 对应 SuperGrok/X Premium+</p><p>Pro+ 对应 SuperGrok Plus</p><p>Ultra 对应 SuperGrok Heavy</p></div>
+</article>
+<article class="card blue">
+<h2>验收标准</h2>
+<div class="row"><strong>防超额</strong><span>客户端或控制台设月度限额</span><span style="margin-top:5px">封顶拒新请求，在跑任务跑完才停</span></div>
+<div class="row"><strong>查用量</strong><span>Bot 内部设置查实时剩余</span><span style="margin-top:5px">外部 Grok 看板不互通</span></div>
+<div class="row"><strong>试用清零</strong><span>排查大工程扫描或重构</span><span style="margin-top:5px">一次性耗尽不恢复</span></div>
+<div class="bottom"><b>移动端退订</b><br>多端共享订阅。商店付款需在 Apple ID 或 Google Play 退，官方不直退。</div>
+</article>
+</section>
+</main>
+</body>
+</html>

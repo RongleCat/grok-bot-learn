@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fbf6ed;color:#171715;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{height:760px;padding:38px 48px 42px}.top{height:132px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d9d0c3}.title{font-size:42px;line-height:1.15;letter-spacing:-1.8px;font-weight:800}.bot{width:112px;height:112px;object-fit:contain;display:block}.rule{margin:26px 0 22px;background:#20201d;color:#fffdf7;border-radius:22px;min-height:70px;display:flex;align-items:center;justify-content:center;font-size:25px;font-weight:750;letter-spacing:.2px}.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative}.card{height:315px;background:#fffdf8;border:1px solid #d9d0c3;border-radius:24px;padding:25px 24px 20px;display:flex;flex-direction:column}.number{width:35px;height:35px;border-radius:50%;background:#d65b3b;color:#fffdf8;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;margin-bottom:15px}.card h2{font-size:22px;line-height:1.28;letter-spacing:-.5px;margin:0 0 17px;font-weight:800}.card ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}.card li{font-size:16px;line-height:1.45;padding-left:16px;position:relative}.card li:before{content:"";position:absolute;left:0;top:.57em;width:6px;height:6px;background:#d65b3b;border-radius:50%}.divider{height:1px;background:#ded5c8;margin:17px 0 13px}.em{color:#b84329;font-weight:750}.approval{margin-top:22px;border:1px solid #d9d0c3;background:#f2e7d5;border-radius:22px;height:82px;display:grid;grid-template-columns:1fr 1fr;align-items:center;text-align:center}.approval div{font-size:19px;font-weight:750;line-height:1.35}.approval div+div{border-left:1px solid #d1c3b2}.approval strong{color:#b84329;font-size:22px}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="top">
+<div class="title">只出草稿，绝不自动发送</div>
+<img class="bot" src="bots/galet-rouge.png">
+</header>
+<section class="rule">对外沟通必须严格执行“只输出草稿，动作在此停住”</section>
+<section class="flow">
+<article class="card">
+<div class="number">1</div>
+<h2>扫描发件箱建立个人文风档</h2>
+<ul>
+<li>读取近期 <span class="em">15 到 30 封已发邮件</span></li>
+<li>剔除签名与历史引用</li>
+<li>后续所有草稿都会强制遵循</li>
+</ul>
+</article>
+<article class="card">
+<div class="number">2</div>
+<h2>隔夜潜客挖掘</h2>
+<ul>
+<li>探测 CRM 真实字段</li>
+<li>近 90 天联系过的标 <span class="em">Skip Draft</span></li>
+<li>查无动态直接填“未找到经核实的近期动态”</li>
+</ul>
+<div class="divider"></div>
+<ul><li><span class="em">严禁编造</span></li></ul>
+</article>
+<article class="card">
+<div class="number">3</div>
+<h2>SDR 晨间触达流水线</h2>
+<ul>
+<li>每个工作日 07:00 自动处理 20 条线索</li>
+<li>草稿紧挨着放证据链接</li>
+<li>没有明确 URL 支撑就不让写入</li>
+</ul>
+<div class="divider"></div>
+<ul><li>不要发送邮件或将任何人加入序列</li></ul>
+</article>
+</section>
+<section class="approval">
+<div>人工确认 <strong>2 到 3 组样本</strong><br>后再跑全量</div>
+<div>邮件只放草稿箱或待审列<br>等<strong>人工点击发送</strong></div>
+</section>
+</main>
+</body>
+</html>

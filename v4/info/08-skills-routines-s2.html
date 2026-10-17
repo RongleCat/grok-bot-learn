@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>例程：设置、查看与测试</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#fff9f0;color:#20201d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.board{width:1200px;height:760px;padding:34px 48px 40px;display:flex;flex-direction:column}
+.top{height:112px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ded7cb}
+h1{margin:0;font-size:37px;letter-spacing:-1.2px;line-height:1.15;font-weight:750}
+.bot{width:108px;height:108px;object-fit:contain;display:block}
+.main{padding-top:24px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;position:relative}
+.main:before{content:"";position:absolute;left:15.7%;right:15.7%;top:71px;height:2px;background:#c7ded9;z-index:0}
+.step{height:290px;background:#fffdf8;border:1px solid #ded7cb;border-radius:24px;padding:18px 22px;position:relative;z-index:1}
+.number{height:38px;width:38px;border-radius:50%;background:#247d74;color:#fffdf8;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:750;margin-bottom:9px}
+.step h2,.mini h2{font-size:22px;line-height:1.25;margin:0 0 10px;font-weight:750;letter-spacing:-.4px}
+.step p,.mini p{margin:0;font-size:15px;line-height:1.4}
+.rule{height:1px;background:#e5ded2;margin:11px 0}
+.strong{font-weight:720;color:#a84e27}
+.bottom{display:grid;grid-template-columns:1.04fr .96fr;gap:18px;margin-top:18px}
+.mini{background:#fffdf8;border:1px solid #ded7cb;border-radius:23px;padding:18px 22px;height:204px}
+.mini h2{font-size:20px;margin-bottom:10px}
+.limits{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.limit{border-radius:14px;background:#f4efe5;padding:10px 12px;font-size:15px;line-height:1.38}
+.limit b{display:block;font-size:17px;color:#247d74;margin-bottom:3px}
+.schedule{display:grid;grid-template-columns:120px 1fr;gap:10px 14px;align-items:start}
+.tag{background:#e2f0ed;border-radius:12px;padding:7px 9px;font-size:15px;line-height:1.25;font-weight:700;text-align:center;color:#1f6059;white-space:nowrap}
+.note{margin-top:11px!important;font-size:15px!important;line-height:1.4!important}
+</style>
+</head>
+<body>
+<main class="board">
+  <header class="top">
+    <h1>例程：设置、查看与测试</h1>
+    <img class="bot" src="bots/capsule-vert.png" alt="">
+  </header>
+  <section class="main" aria-label="例程操作流程">
+    <article class="step">
+      <div class="number">1</div>
+      <h2>设置例程</h2>
+      <p>在聊天框发指令直接创建。</p>
+      <div class="rule"></div>
+      <p>手机端点击 Add routine，补齐指令发送即可创建。</p>
+      <div class="rule"></div>
+      <p>时区检查路径：<br>Settings → Bot → Timezone。</p>
+    </article>
+    <article class="step">
+      <div class="number">2</div>
+      <h2>查看与管理</h2>
+      <p>桌面端进入 Details，在例程列表能看运行时间或 Paused。</p>
+      <div class="rule"></div>
+      <p>点击具体例程可查：Instruction、When to run 与 Webhook。</p>
+      <div class="rule"></div>
+      <p>开关可随时 Pause 或 Resume；手机端状态与桌面端双向实时同步。</p>
+    </article>
+    <article class="step">
+      <div class="number">3</div>
+      <h2>测试例程</h2>
+      <p>在桌面端详情页点击底部的 Test 按钮即可手动触发。</p>
+      <div class="rule"></div>
+      <p>按钮状态变为 Running…，执行反馈直接打在聊天窗口中。</p>
+      <div class="rule"></div>
+      <p class="strong">测试执行的是真实操作。</p>
+      <p>涉及删改先用沙箱数据测试。</p>
+    </article>
+  </section>
+  <section class="bottom">
+    <article class="mini">
+      <h2>规格与限制</h2>
+      <div class="limits">
+        <div class="limit"><b>50 个</b>每个 Bot 最多创建</div>
+        <div class="limit"><b>20 次</b>系统保留最近运行记录</div>
+        <div class="limit"><b>5 分钟</b>定时例程最短触发间隔</div>
+        <div class="limit"><b>不可逆</b>删除例程，后续执行会永久终止</div>
+      </div>
+    </article>
+    <article class="mini">
+      <h2>计划调度</h2>
+      <div class="schedule">
+        <div class="tag">Auto-detect</div><p>自动跟随当前电脑时区</p>
+        <div class="tag">手动指定时区</div><p>手动下拉选择对应时区</p>
+      </div>
+      <p class="note">新建定时例程不会立刻首跑，必须等待下一个计划时间点。周末若需连续巡检，指令中必须明确强调“包括周末在内每天运行”。</p>
+    </article>
+  </section>
+</main>
+</body>
+</html>

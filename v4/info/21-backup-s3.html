@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>记忆管家</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fbf6ee;color:#1d1b18;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:36px 42px 42px}.top{height:125px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d9d0c3}.heading{display:flex;align-items:center;gap:22px}.bot{width:112px;height:112px;object-fit:contain;flex:none}.title{margin:0;font-size:39px;line-height:1;font-weight:780;letter-spacing:-1px}.lead{margin:13px 0 0;font-size:18px;line-height:1.45;font-weight:600;max-width:685px}.lead b{color:#a84332}.layout{display:grid;grid-template-columns:714px 1fr;gap:22px;padding-top:24px;height:557px}.workflow{display:flex;flex-direction:column;gap:13px}.section-title{margin:0;font-size:20px;line-height:1.1;font-weight:750}.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}.step{height:198px;border:1px solid #d8cfc2;border-radius:22px;background:#fffdf9;padding:20px 17px;position:relative}.num{width:32px;height:32px;border-radius:50%;background:#a84332;color:#fff;display:grid;place-items:center;font-size:16px;font-weight:750;margin-bottom:14px}.step h3{margin:0 0 10px;font-size:20px;line-height:1.25}.step p{margin:0;font-size:15px;line-height:1.55;color:#4b4540}.arrow{position:absolute;right:-10px;top:93px;width:20px;height:20px;border-top:2px solid #a84332;border-right:2px solid #a84332;transform:rotate(45deg);z-index:2}.step:last-child .arrow{display:none}.commit{height:83px;border:1px solid #a84332;border-radius:21px;background:#f5e6de;padding:17px 22px;display:flex;align-items:center;gap:18px}.commit strong{font-size:19px;white-space:nowrap;color:#8f3729}.commit span{font-size:16px;line-height:1.42;font-weight:600}.note{margin:0;padding:0 4px;font-size:15px;line-height:1.45;color:#5a5149}.side{display:flex;flex-direction:column;gap:13px}.memory{border:1px solid #d8cfc2;border-radius:22px;background:#fffdf9;padding:19px}.memory h2{margin:0 0 14px;font-size:20px;line-height:1.1}.layer{border-radius:15px;padding:14px 15px;margin-top:9px;background:#f4e7df}.layer.alt{background:#e8f0e7}.layer b{display:block;font-size:18px;margin-bottom:5px}.layer p{margin:0;font-size:15px;line-height:1.45}.rule{border:1px solid #d8cfc2;border-radius:22px;background:#fffdf9;padding:15px 19px}.rule h2{margin:0 0 7px;font-size:19px;line-height:1.1}.rule p{margin:0;font-size:15px;line-height:1.46}.rule p+p{margin-top:7px}.rule strong{color:#8f3729}@media print{body{print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="top">
+<div class="heading"><img class="bot" src="bots/goutte-rose.png" alt=""><div><h1 class="title">记忆管家</h1><p class="lead">把无形记忆转成私有 Git 仓库的纯文本快照</p></div></div>
+</header>
+<div class="layout">
+<section class="workflow" aria-label="归档规范与工作流">
+<h2 class="section-title">归档规范与工作流</h2>
+<div class="steps">
+<article class="step"><div class="num">1</div><h3>枚举名单</h3><p>圈定需要持久化备份的核心 Bot。</p><i class="arrow"></i></article>
+<article class="step"><div class="num">2</div><h3>调度下发指令</h3><p>各 Bot 读取自身配置与记忆，提炼后写入对应的 Markdown 文件。</p><i class="arrow"></i></article>
+<article class="step"><div class="num">3</div><h3>抓取验证入库</h3><p>扫描确认无明文 Token 后统一提交，打上日期标签，推送到远端私有仓库。</p></article>
+</div>
+<div class="commit"><strong>Bot 负责全量快照</strong><span>Git 负责增量追踪</span></div>
+<p class="note">Bot 每次直接全量覆盖写文件，历史变动交由 Git 引擎沉淀。</p>
+</section>
+<aside class="side">
+<section class="memory"><h2>记忆分层</h2><div class="layer"><b>共享层</b><p>账号共享记忆、公共 Skill 与插件配置<br>所有 Bot 均可读取</p></div><div class="layer alt"><b>专属层</b><p>Description 规则契约、专属独立记忆与 Routine 任务<br>单个 Bot 独占</p></div></section>
+<section class="rule"><h2>维护原则</h2><p>动态事实不长期堆在上下文，只记访问方式，用时回源抓取。</p><p>共用记忆须经人工审核或标准化业务流验证，防交叉感染。</p><p><strong>业务定义写进记忆，固定操作流程必须固化进 Skill 代码。</strong></p></section>
+</aside>
+</div>
+</main>
+</body>
+</html>

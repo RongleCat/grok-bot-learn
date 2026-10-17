@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>共享云电脑</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#f8f4ec;color:#20201d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:38px 48px 42px}.top{height:112px;display:flex;align-items:center;border-bottom:1px solid #d8d0c4}.top h1{margin:0;font-size:35px;letter-spacing:-1.2px;font-weight:760;line-height:1.18}.bot{width:108px;height:108px;object-fit:contain;margin-left:25px}.top-note{margin-left:auto;max-width:430px;font-size:16px;line-height:1.55;color:#5c594f;text-align:right}.grid{height:532px;padding-top:26px;display:grid;grid-template-columns:500px 1fr;gap:28px}.shared{position:relative;border:1px solid #cfc6b8;border-radius:25px;background:#fffdf9;padding:27px 30px}.eyebrow{font-size:16px;font-weight:700;color:#a14a34;letter-spacing:.08em}.shared h2{margin:12px 0 19px;font-size:28px;letter-spacing:-.6px}.rule{height:1px;background:#ddd5c8;margin-bottom:20px}.facts{display:grid;gap:12px}.fact{display:flex;align-items:flex-start;gap:12px;font-size:18px;line-height:1.45}.dot{flex:none;width:10px;height:10px;border-radius:50%;background:#a14a34;margin-top:8px}.shared .warning{position:absolute;bottom:29px;left:30px;right:30px;padding:15px 17px;border-radius:16px;background:#f5e6dc;font-size:17px;line-height:1.45;font-weight:650;color:#733421}.right{display:grid;grid-template-rows:1fr 1fr;gap:18px}.card{position:relative;border:1px solid #cfc6b8;border-radius:23px;background:#fffdf9;padding:21px 25px}.card h3{margin:0 0 14px;font-size:22px;letter-spacing:-.4px}.flow{display:flex;align-items:center;gap:10px}.step{min-height:76px;flex:1;border-radius:16px;padding:12px 13px;background:#edf1ec;font-size:16px;line-height:1.35;font-weight:620}.arrow{flex:none;width:21px;color:#a14a34;font-size:25px;text-align:center}.small{margin-top:14px;font-size:16px;line-height:1.45;color:#57564f}.take{display:grid;grid-template-columns:1.25fr 30px 1fr;align-items:center;gap:10px}.take .step{background:#f5e6dc}.take .result{background:#edf1ec}.settings{position:absolute;right:22px;bottom:17px;border:1px solid #d7cec2;border-radius:12px;padding:7px 10px;background:#fffaf3;font-size:15px;line-height:1.25;color:#535148;white-space:nowrap}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="top">
+<h1>共享云电脑的物理边界</h1>
+<img class="bot" src="bots/galet-encre.png" alt="">
+<div class="top-note">同账号所有 Bot 共用云电脑</div>
+</header>
+<section class="grid">
+<article class="shared">
+<div class="eyebrow">同账号所有 Bot</div>
+<h2>共用云电脑</h2>
+<div class="rule"></div>
+<div class="facts">
+<div class="fact"><i class="dot"></i><span>新建 Bot 无法隔离权限</span></div>
+<div class="fact"><i class="dot"></i><span>共用路径和登录态</span></div>
+<div class="fact"><i class="dot"></i><span>都能读 Cookie</span></div>
+</div>
+<div class="warning">输密码、两步验证或付款点 Take over 处理</div>
+</article>
+<section class="right">
+<article class="card">
+<h3>跨 Bot 协同依赖文件落盘</h3>
+<div class="flow">
+<div class="step">私聊天然隔离</div><div class="arrow">→</div><div class="step">交接要在<br>/workspace 存文件</div>
+</div>
+<div class="small">跨 Bot 协同依赖文件落盘</div>
+</article>
+<article class="card">
+<h3>输密码、两步验证或付款</h3>
+<div class="take">
+<div class="step">输密码<br>两步验证<br>付款</div><div class="arrow">→</div><div class="step result">Take over<br>处理</div>
+</div>
+<div class="small">切勿在聊天框发明文密码</div>
+<div class="settings">控制本地须单独授权 · 执行时弹窗确认</div>
+</article>
+</section>
+</section>
+</main>
+</body>
+</html>

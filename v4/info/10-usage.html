@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>额度与成本</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { width: 1200px; height: 760px; margin: 0; overflow: hidden; }
+  body {
+    background: #faf9f6;
+    color: #1d1b20;
+    font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  }
+  main { position: relative; width: 1200px; height: 760px; padding: 46px 60px 48px; }
+  h1 { margin: 0; font-size: 34px; line-height: 1.2; letter-spacing: -.8px; font-weight: 760; }
+  .intro { margin: 13px 0 0; color: #5d5961; font-size: 17px; line-height: 1.5; }
+  .bot { position: absolute; top: 28px; right: 62px; width: 108px; height: 108px; object-fit: contain; }
+  .formula {
+    margin-top: 28px; height: 108px; padding: 0 28px; border: 1px solid #d9d3e0; border-radius: 24px;
+    background: #f1edf7; display: grid; grid-template-columns: 130px 30px 180px 30px 250px 52px 170px; align-items: center; justify-content: center; column-gap: 12px;
+  }
+  .formula .term { min-width: 0; text-align: center; }
+  .formula strong { display: block; font-size: 20px; line-height: 1.25; font-weight: 750; white-space: nowrap; }
+  .formula span { display: block; margin-top: 7px; font-size: 15px; color: #625c69; white-space: nowrap; }
+  .operator { color: #6e4b9a; font-size: 30px; font-weight: 400; }
+  .arrowline { width: 52px; height: 2px; background: #6e4b9a; position: relative; }
+  .arrowline::after { content: ""; position: absolute; right: -1px; top: -5px; width: 10px; height: 10px; border-top: 2px solid #6e4b9a; border-right: 2px solid #6e4b9a; transform: rotate(45deg); }
+  .hint { margin: 16px 0 16px; font-size: 16px; color: #4d4852; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .step { min-height: 360px; border: 1px solid #dfdce0; border-radius: 23px; background: #fff; padding: 22px 20px 19px; position: relative; }
+  .number { width: 34px; height: 34px; border-radius: 50%; background: #6e4b9a; color: #fff; display: grid; place-items: center; font-size: 16px; font-weight: 700; }
+  h2 { margin: 16px 0 12px; font-size: 20px; line-height: 1.32; letter-spacing: -.25px; white-space: nowrap; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { position: relative; padding: 10px 0 10px 17px; border-top: 1px solid #eeeaf0; font-size: 15px; line-height: 1.43; color: #48434c; }
+  li::before { content: ""; position: absolute; left: 0; top: 17px; width: 6px; height: 6px; border-radius: 50%; background: #6e4b9a; }
+  .step:not(:last-child)::after { content: ""; position: absolute; right: -12px; top: 171px; z-index: 2; width: 8px; height: 8px; border-top: 2px solid #6e4b9a; border-right: 2px solid #6e4b9a; transform: rotate(45deg); background: #faf9f6; }
+  .step:not(:last-child)::before { content: ""; position: absolute; right: -16px; top: 175px; z-index: 1; width: 16px; height: 2px; background: #6e4b9a; }
+</style>
+</head>
+<body>
+<main>
+  <img class="bot" src="bots/triangle-violet.png" alt="">
+  <h1>额度与成本：让一周用量撑满一周</h1>
+  <p class="intro">省额度四步工作流：从止损到分流</p>
+  <section class="formula" aria-label="每周总消耗公式">
+    <div class="term"><strong>每周总消耗</strong></div>
+    <div class="operator">=</div>
+    <div class="term"><strong>Bot 唤醒的总次数</strong><span>降低唤醒频率</span></div>
+    <div class="operator">×</div>
+    <div class="term"><strong>每次唤醒时重读的上下文长度</strong><span>截断上下文长度</span></div>
+    <div class="arrowline"></div>
+    <div class="term"><strong>周额度撑满一周</strong></div>
+  </section>
+  <p class="hint">按照以下四个阶段依次配置</p>
+  <section class="steps" aria-label="省额度四步工作流">
+    <article class="step">
+      <div class="number">1</div>
+      <h2>安全底线</h2>
+      <ul>
+        <li>检查套餐与百分比状态</li>
+        <li>关闭无上限按量扣费</li>
+        <li>配置敏感操作人工拦截</li>
+        <li>熟悉紧急制动</li>
+      </ul>
+    </article>
+    <article class="step">
+      <div class="number">2</div>
+      <h2>交互习惯</h2>
+      <ul>
+        <li>单任务单会话</li>
+        <li>长资料强制落盘</li>
+        <li>提取核心事实，以 3 到 5 条要点输出</li>
+        <li>使用 Duplicate 重置臃肿会话</li>
+      </ul>
+    </article>
+    <article class="step">
+      <div class="number">3</div>
+      <h2>额度分流</h2>
+      <ul>
+        <li>确立主 Bot 调度定位</li>
+        <li>代码任务分流</li>
+        <li>多模态与音视频处理分流</li>
+      </ul>
+    </article>
+    <article class="step">
+      <div class="number">4</div>
+      <h2>定时任务改造</h2>
+      <ul>
+        <li>盘点并暂停无效例程</li>
+        <li>拆分检查与判断</li>
+        <li>写入强制沉默规则</li>
+      </ul>
+    </article>
+  </section>
+</main>
+</body>
+</html>

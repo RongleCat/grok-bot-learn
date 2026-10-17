@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#fff8ed;color:#201d19;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.page{height:760px;padding:38px 48px 42px;position:relative}
+.top{height:104px;display:flex;align-items:center;border-bottom:1px solid #dfd5c7}
+h1{margin:0;font-size:38px;line-height:1.14;letter-spacing:-1.3px;font-weight:760}
+.bot{width:106px;height:106px;object-fit:contain;margin-left:20px}
+.lead{margin-left:auto;width:365px;font-size:16px;line-height:1.52;color:#625b52;text-align:right}
+.grid{display:grid;grid-template-columns:1fr 1.47fr;gap:24px;margin-top:24px;height:510px}
+.card{border:1px solid #ddd2c4;border-radius:24px;background:#fffdf9;padding:20px 27px}
+.stay{border-top:6px solid #d79b43}
+.switch{border-top:6px solid #d76d5d}
+h2{font-size:24px;line-height:1.2;margin:0 0 13px;letter-spacing:-.5px}
+.copy{font-size:17px;line-height:1.55;margin:0;color:#3f3932}
+.rule{height:1px;background:#e5dbcf;margin:16px 0}
+.label{font-size:15px;font-weight:700;color:#8b5d20;margin:0 0 8px}
+.list{margin:0;padding:0;list-style:none;display:grid;gap:11px}
+.list li{font-size:16px;line-height:1.4;padding-left:20px;position:relative}
+.list li:before{content:"";position:absolute;left:0;top:.43em;width:8px;height:8px;border-radius:50%;background:#d79b43}
+.keep-note{margin-top:17px;padding:12px 16px;border-radius:15px;background:#fff2dc;font-size:16px;line-height:1.45;color:#573f22}
+.warning{background:#fff0ea;border:1px solid #f0c9bf;border-radius:16px;padding:11px 16px;font-size:16px;line-height:1.4;color:#723c35;margin-bottom:12px}
+.channels{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.channel{border:1px solid #e4d9ce;border-radius:16px;padding:10px 14px;min-height:102px}
+.channel h3{font-size:16px;line-height:1.25;margin:0 0 7px;font-weight:750}
+.channel p{font-size:15px;line-height:1.37;margin:0;color:#4d463f}
+.web{grid-column:span 2;min-height:64px;background:#f9f3e9}
+.end{margin-top:12px;border-top:1px solid #e5dbcf;padding-top:11px;font-size:16px;line-height:1.4;font-weight:650}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="top">
+    <h1>老订阅切换决策</h1>
+    <img class="bot" src="bots/goutte-rose.png">
+    <p class="lead">先看真实调用分布，再决定是否切换。</p>
+  </header>
+  <section class="grid">
+    <article class="card stay">
+      <h2>不主动切换</h2>
+      <p class="copy">原有套餐方案、价格与功能全部维持现状不变。</p>
+      <div class="rule"></div>
+      <p class="label">年付周期</p>
+      <ul class="list">
+        <li>完整保留到自然到期</li>
+        <li>后续若有变动也会提前通知</li>
+        <li>变动只在续订时生效</li>
+      </ul>
+      <div class="keep-note">保留老方案的用户，需确认自动续订状态符合预期，核心模型额度完好。</div>
+      <div class="rule"></div>
+      <p class="label">不建议换的人群</p>
+      <p class="copy">手里持有包含额外第三方模型额度的旧方案；只在 Cursor 里重度写代码、对 X 社交权益与视频生成完全不感兴趣。</p>
+    </article>
+    <article class="card switch">
+      <h2>确认切换</h2>
+      <div class="warning">网页端一旦确认完成便永久生效，联系客服也无法撤回或恢复老套餐。手机客户端目前不支持。</div>
+      <div class="channels">
+        <div class="channel web">
+          <h3>网页端直接购买的各种旧方案</h3>
+          <p>结账时系统自动取消旧订阅；官方自动按比例退款到原支付卡，无需额外人工操作。</p>
+        </div>
+        <div class="channel">
+          <h3>Apple：Grok / X Premium</h3>
+          <p>系统自动向 Apple 发起取消申请；由 Apple 最终决定退还金额。</p>
+        </div>
+        <div class="channel">
+          <h3>Apple：Cursor</h3>
+          <p>亲自前往「Apple ID → 订阅」手动取消，并向 Apple 客服申诉退款。</p>
+        </div>
+        <div class="channel">
+          <h3>Google Play 渠道</h3>
+          <p>系统切换后不会自动解约；在「支付和订阅」中手动取消自动续订。</p>
+        </div>
+        <div class="channel">
+          <h3>系统结算</h3>
+          <p>未消耗的时间按天折算退款至原支付方式；新套餐需要全额支付。</p>
+        </div>
+      </div>
+      <p class="end">确认旧订阅已彻底解除且原渠道收到退款，两端没有出现重复计费或通道冲突。</p>
+    </article>
+  </section>
+</main>
+</body>
+</html>

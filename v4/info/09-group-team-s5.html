@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>以共享文件系统替代对话历史</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fcf7ee;color:#20221f;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:38px 50px 42px}.head{height:86px;display:flex;align-items:center;justify-content:space-between}.head h1{margin:0;font-size:36px;letter-spacing:-1.4px;font-weight:750;line-height:1.16}.bot{width:112px;height:112px;object-fit:contain;display:block;margin-top:12px;margin-right:18px}.cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:16px}.card{height:124px;border:1px solid #dcd4c7;border-radius:23px;background:#fffdf8;padding:20px 24px}.card h2{font-size:18px;margin:0 0 10px;font-weight:750}.card p{font-size:16px;line-height:1.55;margin:0;color:#4c4e48}.card strong{color:#176d70}.pipeline{height:306px;margin-top:22px;border:1px solid #dcd4c7;border-radius:25px;background:#fffdf8;padding:20px 24px 18px}.pipeline-title{font-size:18px;font-weight:750;margin:0 0 15px}.flow{display:grid;grid-template-columns:1.02fr 54px 1.2fr 54px 1.2fr 54px 1.2fr;align-items:center}.step{height:184px;border-radius:20px;padding:17px 16px;background:#f5eee2;border:1px solid #e0d8ca;display:flex;flex-direction:column;justify-content:space-between}.step.teal{background:#edf7f5;border-color:#bddbd6}.num{font-size:15px;font-weight:800;color:#b75431;letter-spacing:.5px}.teal .num{color:#176d70}.step h3{font-size:20px;margin:7px 0 4px;line-height:1.28}.step p{font-size:15px;line-height:1.55;margin:0;color:#4c4e48}.arrow{height:2px;background:#b75431;position:relative;margin:0 11px}.arrow:after{content:"";position:absolute;right:-1px;top:-5px;width:10px;height:10px;border-top:2px solid #b75431;border-right:2px solid #b75431;transform:rotate(45deg)}.path{height:48px;margin-top:12px;border-radius:14px;background:#f1f6f4;color:#176d70;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:650;white-space:nowrap}.checks{height:76px;margin-top:20px;display:grid;grid-template-columns:186px 1fr 1fr 1fr;align-items:center;border:1px solid #dcd4c7;border-radius:22px;background:#fffdf8;padding:0 20px;gap:12px}.checks h2{font-size:18px;margin:0}.check{font-size:15px;line-height:1.42;padding-left:15px;position:relative}.check:before{content:"";position:absolute;left:0;top:5px;width:7px;height:7px;border-radius:50%;background:#176d70}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head">
+<h1>以共享文件系统替代对话历史</h1>
+<img class="bot" src="bots/goutte-rose.png" alt="">
+</header>
+<section class="cards" aria-label="共享与隔离">
+<article class="card"><h2>物理共享层</h2><p>同账号下所有 Bot 共用虚拟机、<strong>/workspace</strong> 目录、连接器与公共 Skill 库。</p></article>
+<article class="card"><h2>逻辑隔离层</h2><p>对话历史互不可见，Bot A 无法调取 Bot B 与用户的私人对话。</p></article>
+</section>
+<section class="pipeline" aria-label="文件交接流水线标准">
+<h2 class="pipeline-title">文件交接流水线标准</h2>
+<div class="flow">
+<article class="step"><span class="num">1. 派发任务</span><h3>主调度 Bot</h3><p>指定输出路径</p></article>
+<i class="arrow" aria-hidden="true"></i>
+<article class="step teal"><span class="num">2. 数据落盘</span><h3>专职 Bot A</h3><p>写入 data.json<br>仅返回文件绝对路径</p></article>
+<i class="arrow" aria-hidden="true"></i>
+<article class="step"><span class="num">3. 调度下发</span><h3>主调度 Bot</h3><p>附带输入路径</p></article>
+<i class="arrow" aria-hidden="true"></i>
+<article class="step teal"><span class="num">4. 读取与归档</span><h3>专职 Bot B</h3><p>读取 data.json<br>写入 output.md</p></article>
+</div>
+<div class="path">对话框只用来同步状态与路径</div>
+</section>
+<section class="checks" aria-label="工作流达标">
+<h2>工作流达标</h2>
+<div class="check">每个 Bot 都能独立读写<br>/workspace 下的固定文件</div>
+<div class="check">对话框只传输状态提示<br>与文件绝对路径</div>
+<div class="check">出现异常时，检查对应磁盘文件<br>即可复现定位</div>
+</section>
+</main>
+</body>
+</html>

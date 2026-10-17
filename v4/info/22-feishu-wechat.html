@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>接入飞书与微信</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#faf8f4;color:#20211f;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:42px 54px 32px;position:relative}.title{font-size:34px;line-height:1.15;letter-spacing:.5px;margin:0 0 15px;font-weight:750}.rose{position:absolute;right:58px;top:28px;width:104px;height:104px;object-fit:contain}.intro{width:100%;height:78px;background:#fff;border:1px solid #e7e1d8;border-radius:24px;padding:13px 28px;display:flex;align-items:center;gap:28px;margin-bottom:14px}.intro-label{color:#8f4d50;font-weight:750;font-size:17px;line-height:1.38;width:152px;flex:none}.intro-line{height:40px;width:1px;background:#e5ded5}.intro-text{font-size:17px;line-height:1.45;font-weight:550}.routes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;height:372px}.route{min-width:0;background:#fff;border:1px solid #e7e1d8;border-radius:24px;padding:18px 24px 16px;display:flex;flex-direction:column}.route h2{font-size:20px;line-height:1.35;margin:0 0 9px;font-weight:750}.pill{display:inline-block;align-self:flex-start;border-radius:999px;background:#f6e8e8;color:#8f4d50;padding:6px 12px;font-size:15px;font-weight:700;margin-bottom:9px;white-space:nowrap}.teal .pill{background:#e4f0ee;color:#35766f}.flow{display:flex;flex-direction:column;gap:6px}.step{min-height:45px;border:1px solid #eee9e2;border-radius:15px;padding:7px 13px;font-size:15px;line-height:1.35;background:#fdfcf9;display:flex;align-items:center;font-weight:550}.arrow{height:7px;position:relative;margin-left:25px;border-left:2px solid #b5aaa0}.arrow:after{content:"";position:absolute;left:-5px;bottom:-1px;width:7px;height:7px;border-right:2px solid #b5aaa0;border-bottom:2px solid #b5aaa0;transform:rotate(45deg)}.note{margin-top:auto;border-top:1px solid #eee9e2;padding-top:9px;color:#575853;font-size:15px;line-height:1.38}.note strong{color:#20211f}.bottom{margin-top:14px;height:50px;border-radius:18px;background:#20211f;color:#fff;display:flex;align-items:center;padding:0 23px;font-size:16px;font-weight:600;letter-spacing:.1px}.bottom b{color:#d7eeea;margin-right:15px;font-size:16px;white-space:nowrap}
+</style>
+</head>
+<body>
+<main class="page">
+<img class="rose" src="bots/goutte-rose.png" alt="">
+<h1 class="title">接入飞书与微信</h1>
+<section class="intro">
+<div class="intro-label">先按使用场景<br>选择接入通道</div>
+<div class="intro-line"></div>
+<div class="intro-text">团队办公协同、多 Bot 群聊派工　/　个人微信实时对话　/　微信聊天记录、图文与音频资产入库</div>
+</section>
+<section class="routes">
+<article class="route teal">
+<h2>飞书多 Bot 协同通道</h2>
+<div class="pill">团队办公协同、多 Bot 群聊派工</div>
+<div class="flow">
+<div class="step">飞书企业自建应用，独立机器人身份</div><div class="arrow"></div>
+<div class="step">云端电脑转发程序，飞书官方长连接</div><div class="arrow"></div>
+<div class="step">门铃触发例程 Webhook；群聊仅响应 @自己或@所有人</div>
+</div>
+<div class="note"><strong>高风险操作：</strong>卡片「同意」与「驳回」，完成二次授权。</div>
+</article>
+<article class="route">
+<h2>微信 ClawBot 插件通道</h2>
+<div class="pill">个人日常随身助理、移动端直接调度</div>
+<div class="flow">
+<div class="step">微信 ClawBot 插件，腾讯 iLink 接口</div><div class="arrow"></div>
+<div class="step">getupdates 长轮询，拉取新消息</div><div class="arrow"></div>
+<div class="step">Webhook 触发例程处理任务，sendmessage 回推文本</div>
+</div>
+<div class="note"><strong>激活条件：</strong>绑定后先发送一条文字，获得 context_token；仅响应绑定的用户。</div>
+</article>
+<article class="route teal">
+<h2>微信快捷指令收录通道</h2>
+<div class="pill">微信长篇讨论、图文与音频资产入库</div>
+<div class="flow">
+<div class="step">微信聊天记录合并转发给快捷指令</div><div class="arrow"></div>
+<div class="step">附件临时上传，获取下载链接</div><div class="arrow"></div>
+<div class="step">JSON 数据包经 Webhook 推送；解压后归纳入库</div>
+</div>
+<div class="note"><strong>收录前：</strong>需要保存的图片和文件，先等待在本地完全加载完成。</div>
+</article>
+</section>
+<div class="bottom"><b>共同原则</b>不需要公网 IP，不自建中转服务器；敏感凭证通过加密输入框交接。</div>
+</main>
+</body>
+</html>

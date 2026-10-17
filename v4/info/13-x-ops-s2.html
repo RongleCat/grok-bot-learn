@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5 个 Bot 协同体系</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#faf6ee;color:#20201d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:34px 42px 38px}.head{height:92px;display:flex;align-items:center;border-bottom:1px solid #ddd5c8}.title{font-size:34px;line-height:1.15;letter-spacing:-1.2px;font-weight:800}.head img{width:108px;height:108px;object-fit:contain;margin-left:18px;margin-top:10px}.content{height:596px;padding-top:22px;display:grid;grid-template-columns:304px 1fr;gap:24px}.card{background:#fffdf8;border:1px solid #ded7ca;border-radius:24px}.main{padding:24px 23px;position:relative}.main h2{font-size:21px;line-height:1.3;margin:0 0 12px;font-weight:800}.main p{font-size:16px;line-height:1.65;margin:0;color:#535049}.main strong{color:#20201d}.flow{margin-top:19px}.step{min-height:61px;border:1px solid #e2dbcf;border-radius:16px;padding:11px 14px;background:#fffaf0;font-size:16px;line-height:1.38;font-weight:700;display:flex;align-items:center}.step.gold{background:#fff1cf;border-color:#e8bd61}.step.teal{background:#eaf5f1;border-color:#9fc9bd}.arrow{height:20px;position:relative;margin-left:22px;border-left:2px solid #c9a756}.arrow:after{content:"";position:absolute;bottom:-1px;left:-5px;width:8px;height:8px;border-right:2px solid #c9a756;border-bottom:2px solid #c9a756;transform:rotate(45deg)}.side-note{position:absolute;bottom:23px;left:23px;right:23px;border-top:1px solid #e4ddd2;padding-top:14px;font-size:15px;line-height:1.5;color:#545049}.right{display:grid;grid-template-rows:50px 1fr 98px;gap:14px}.intro{padding:11px 20px;display:flex;align-items:center;font-size:16px;line-height:1.45}.intro b{color:#9a6512}.roles{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:14px}.role{padding:17px 17px 14px;min-height:0}.role h3{font-size:19px;line-height:1.25;margin:0 0 10px;font-weight:800}.role p{font-size:15px;line-height:1.52;margin:0;color:#56524b}.role.tall{grid-column:span 2}.num{display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;border-radius:50%;background:#d98a32;color:#fff;font-size:13px;margin-right:7px;vertical-align:2px}.route{padding:14px 19px;display:flex;align-items:center;gap:13px}.route-title{font-size:16px;font-weight:800;white-space:nowrap}.route-item{font-size:15px;line-height:1.35;background:#f2eee5;border-radius:13px;padding:8px 12px;white-space:nowrap}.route-arrow{color:#a2742d;font-size:19px;font-weight:700}.draft{color:#196f61;background:#eaf5f1;border:1px solid #a8cfc4}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head">
+<div class="title">5 个 Bot 协同体系</div>
+<img src="bots/hexagone-ambre.png" alt="">
+</header>
+<section class="content">
+<article class="main card">
+<h2>让专员各司其职</h2>
+<p>单个 Bot 兼顾调研、文案与复盘容易上下文混乱。</p>
+<div class="flow">
+<div class="step gold">作为这套团队的统一入口</div>
+<div class="arrow"></div>
+<div class="step">安排先后，传递来源、我的定位和必要上下文</div>
+<div class="arrow"></div>
+<div class="step teal">等真实回执后汇总</div>
+</div>
+<div class="side-note">同一账号下的所有 Bot 共享同一台云电脑，有各自独立的桌面会话、文件管理器与终端。</div>
+</article>
+<section class="right">
+<div class="intro card"><b>文件系统与网络完全相通：</b>前一个 Bot 存进工作目录的素材，后一个 Bot 能直接读取。</div>
+<div class="roles">
+<article class="role card"><h3><span class="num">1</span>情报总监</h3><p>追踪热门趋势与高互动爆款，找可靠来源和切入角度</p></article>
+<article class="role card"><h3><span class="num">2</span>AI新闻雷达</h3><p>从 AIHOT 筛选技术资讯并核对出处，过滤噪音</p></article>
+<article class="role card"><h3><span class="num">3</span>推文二创</h3><p>阅读原帖链接，撰写引用推文或回复并补充见解</p></article>
+<article class="role card"><h3><span class="num">4</span>短推成稿</h3><p>将事实素材写成口语化短推</p></article>
+<article class="role card tall"><h3><span class="num">5</span>X数据复盘</h3><p>读取发帖数据与 CSV，分析规律并输出后续试验动作</p></article>
+</div>
+<div class="route card">
+<div class="route-title">主 Bot 会自动调度</div><div class="route-item">找素材</div><div class="route-arrow">→</div><div class="route-item">短推成稿</div><div class="route-arrow">→</div><div class="route-item draft">返回草稿</div>
+</div>
+</section>
+</section>
+</main>
+</body>
+</html>

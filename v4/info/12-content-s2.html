@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>从选题到复盘</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fbf7ef;color:#20201e;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:34px 36px 36px}.head{height:101px;display:flex;align-items:center;gap:25px}.bot{width:112px;height:112px;object-fit:contain;flex:none}.title{font-size:38px;line-height:1;font-weight:800;letter-spacing:-1.5px}.flow{height:356px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}.card{border:1px solid #dfd7ca;border-radius:24px;background:#fffdf9;padding:23px 20px 18px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;left:20px;top:0;width:58px;height:5px;background:#e76f3c;border-radius:0 0 6px 6px}.card:nth-child(2):before,.card:nth-child(4):before{background:#377d95}.num{font-size:15px;line-height:1;color:#8a8175;font-weight:700;margin-bottom:17px}.name{font-size:25px;line-height:1.1;font-weight:800;letter-spacing:-.6px;margin-bottom:18px}.rule{height:1px;background:#eee7dc;margin-bottom:17px}.point{font-size:16px;line-height:1.54;margin:0 0 12px;color:#413e39}.point strong{font-weight:800;color:#20201e}.path{font-size:15px;line-height:1.4;color:#766f66;word-break:break-all;margin-top:14px}.bottom{height:203px;margin-top:20px;display:grid;grid-template-columns:1.14fr 1.86fr;gap:16px}.gate,.review{border:1px solid #dfd7ca;border-radius:24px;background:#fffdf9;padding:22px 24px}.gate{background:#fff4e9;border-color:#ebc8b6}.bottom-title{font-size:21px;font-weight:800;line-height:1.1;margin:0 0 14px}.gate p{font-size:16px;line-height:1.52;margin:0}.gate .em{font-weight:800;color:#a94720}.review{display:grid;grid-template-columns:180px 1fr;gap:23px}.review-side{border-right:1px solid #eee7dc;padding-right:21px}.review-side p{font-size:15px;line-height:1.5;color:#625d56;margin:0}.states{display:flex;align-items:center;height:100%;gap:8px}.state{border:1px solid #d7e2e4;color:#25657b;background:#f1f8f8;border-radius:16px;min-width:102px;padding:13px 10px;text-align:center;font-size:16px;font-weight:700;white-space:nowrap}.arrow{font-size:19px;color:#9b9287}.review-note{font-size:15px;line-height:1.48;color:#625d56;margin:10px 0 0}.no-wrap{white-space:nowrap}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head">
+<img class="bot" src="bots/squircle-orange.png" alt="">
+<h1 class="title">从选题到复盘</h1>
+</header>
+<section class="flow" aria-label="内容全流程">
+<article class="card">
+<div class="num">01</div>
+<div class="name">选题与情报</div>
+<div class="rule"></div>
+<p class="point">侦察 Bot 模拟检索或盯盘，把线索整理成卡片。</p>
+<p class="point"><strong>六组硬字段</strong>：来源与新鲜度、可见数据、作者分层、社区分层、适合理由与执行角度、动机拆解。</p>
+<p class="point">策划师挑出 3 个高价值选题，筛出 Brief。</p>
+<p class="path">01-inbox/ → 02-briefs/</p>
+</article>
+<article class="card">
+<div class="num">02</div>
+<div class="name">起草与文案</div>
+<div class="rule"></div>
+<p class="point">主语从“产品有什么”切成“对读者有什么用”。</p>
+<p class="point">让读者在前三秒看到明确信息增量。</p>
+<p class="point">前两句说清发生了什么，再写具体后果、使用场景、矛盾或尚未解决的问题。</p>
+<p class="path">02-briefs/ → 03-drafts/</p>
+</article>
+<article class="card">
+<div class="num">03</div>
+<div class="name">配图与视觉呈现</div>
+<div class="rule"></div>
+<p class="point">别让 AI 随手画概念图，满屏塑料感。</p>
+<p class="point"><strong>推文画像网站</strong>：推文整理、画像分析、视觉布局、前端代码。</p>
+<p class="point">本地预览检查首屏文案、卡片间距和手机端显示。</p>
+<p class="path">profile.md → design.md</p>
+</article>
+<article class="card">
+<div class="num">04</div>
+<div class="name">分发、复盘与审核</div>
+<div class="rule"></div>
+<p class="point">博主每天花 10 分钟看 <span class="no-wrap">04-review/</span> 里的稿件，补上一段个人体会。</p>
+<p class="point">内容发出后安排数据复盘师每周只读分析。</p>
+<p class="point">样本量少于 10 条时不妄下结论。</p>
+<p class="path">05-published/ → 06-analysis/</p>
+</article>
+</section>
+<section class="bottom">
+<article class="gate">
+<h2 class="bottom-title">绝对人闸</h2>
+<p>严禁在云电脑虚拟机内用浏览器发帖。</p>
+<p class="em">博主本人在本地真实设备上手动发布。</p>
+</article>
+<article class="review">
+<div class="review-side">
+<h2 class="bottom-title">错位流转</h2>
+<p>选题池按周定<br>初稿按日看<br>状态看板流转</p>
+</div>
+<div>
+<div class="states">
+<div class="state">待审</div><div class="arrow">→</div><div class="state">写作中</div><div class="arrow">→</div><div class="state">已定稿</div><div class="arrow">→</div><div class="state">已发布</div>
+</div>
+<p class="review-note">复盘数据能回溯到原始导出文件。</p>
+</div>
+</article>
+</section>
+</main>
+</body>
+</html>

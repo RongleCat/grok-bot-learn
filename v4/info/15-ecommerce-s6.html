@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>「1+12」多岗协同</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#f7f1e7;color:#20201d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.canvas{width:1200px;height:760px;padding:30px 48px 38px}
+.top{height:112px;display:flex;align-items:center;border-bottom:1px solid #d8cfc1}
+h1{font-size:36px;letter-spacing:-1.5px;line-height:1;margin:0;font-weight:750}
+.bot{width:108px;height:108px;object-fit:contain;margin-left:auto}
+.route{height:118px;display:grid;grid-template-columns:1fr 56px 1.28fr 56px 1fr;align-items:center;padding:14px 65px 10px}
+.node{height:78px;border:1px solid #d8cfc1;border-radius:22px;background:#fffdf8;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.node strong{font-size:21px;line-height:1.2;font-weight:720}.node span{font-size:15px;line-height:1.35;margin-top:5px;color:#59554f}
+.captain{background:#e9aa45;border-color:#d8932e}.captain span{color:#372615}
+.arrow{height:2px;background:#d8932e;position:relative;margin:0 12px}.arrow:after{content:"";position:absolute;right:-1px;top:-5px;width:10px;height:10px;border-top:2px solid #d8932e;border-right:2px solid #d8932e;transform:rotate(45deg)}
+.rule{height:54px;border:1px solid #d8cfc1;border-radius:18px;background:#fffdf8;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:650;letter-spacing:.1px}
+.grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:155px 155px;gap:14px;margin-top:14px}
+.card{border:1px solid #d8cfc1;border-radius:22px;background:#fffdf8;padding:17px 22px;display:grid;grid-template-columns:34px 1fr;column-gap:13px;overflow:hidden}
+.num{width:32px;height:32px;border-radius:50%;background:#e9aa45;color:#3b2917;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:760;grid-row:1 / span 2}
+.card h2{margin:2px 0 7px;font-size:21px;line-height:1.15;font-weight:750}.steps{font-size:16px;line-height:1.55;color:#3f3c37}.steps b{font-weight:750;color:#20201d}.bottom{height:58px;margin-top:14px;border:1px solid #d8cfc1;border-radius:18px;background:#20201d;color:#fffaf0;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:600;letter-spacing:.1px}
+</style>
+</head>
+<body>
+<main class="canvas">
+<header class="top">
+<h1>「1+12」多岗协同</h1>
+<img class="bot" src="bots/hexagone-ambre.png" alt="">
+</header>
+<section class="route" aria-label="协同架构">
+<div class="node"><strong>业务负责人</strong><span>只对接出海船长</span></div>
+<div class="arrow"></div>
+<div class="node captain"><strong>出海船长</strong><span>统筹调度 12 个业务岗位</span></div>
+<div class="arrow"></div>
+<div class="node"><strong>12 个业务岗位</strong><span>单线汇报，船长收拢结果</span></div>
+</section>
+<div class="rule">所有岗位严格禁止直接改动店铺后台，只输出待批清单供人工确认。</div>
+<section class="grid" aria-label="交接链">
+<article class="card"><div class="num">1</div><h2>巡检链</h2><div class="steps"><b>助理</b>上报异常与证据<br>派给数据或广告岗位做归因分析</div></article>
+<article class="card"><div class="num">2</div><h2>选品链</h2><div class="steps"><b>海盗</b>提交机会报告，<b>财务</b>测算单品利润<br>船长整理为立项建议书提报给人</div></article>
+<article class="card"><div class="num">3</div><h2>上新链</h2><div class="steps"><b>文案</b>出草稿，<b>设计</b>出图，<b>守门员</b>审核<br>船长终检后交给人确认，由人工在后台发布</div></article>
+<article class="card"><div class="num">4</div><h2>复盘链</h2><div class="steps">收齐各岗位经验，<b>复盘机器人</b>写周报并更新经验库<br>据此编排下周计划</div></article>
+</section>
+<div class="bottom">人只对接「出海船长」；由船长派活并收拢结果。</div>
+</main>
+</body>
+</html>

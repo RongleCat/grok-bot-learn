@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grok Bot 企业推荐安全基准</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#f8f7f3;color:#171714;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.canvas{width:1200px;height:760px;padding:44px 54px 42px;position:relative}
+.head{height:88px;display:flex;align-items:flex-start;justify-content:space-between;border-bottom:1px solid #dfddd4}
+h1{font-size:32px;letter-spacing:-.8px;margin:8px 0 0;font-weight:740}
+.bot{width:96px;height:96px;object-fit:contain;margin:-20px 7px 0 0}
+.flow{height:520px;padding-top:20px;padding-bottom:20px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:148px 148px 148px;gap:16px 22px;position:relative}
+.card{border:1px solid #dfddd4;border-radius:22px;background:#fffefa;padding:18px 25px;position:relative}
+.card:nth-child(odd){border-left:5px solid #b56e31}
+.card:nth-child(even){border-left:5px solid #456c64}
+.step{font-size:15px;line-height:1;color:#8a572c;font-weight:700;margin-bottom:10px}
+.card:nth-child(even) .step{color:#356059}
+h2{font-size:20px;line-height:1.2;margin:0 0 9px;font-weight:730}
+p{font-size:16px;line-height:1.55;margin:0;color:#4c4a43}
+.baseline{height:64px;border-radius:22px;background:#171714;color:#fffefa;display:flex;align-items:center;padding:0 29px;gap:28px}
+.baseline strong{font-size:18px;white-space:nowrap}
+.baseline span{font-size:16px;line-height:1.5;border-left:1px solid #66645c;padding-left:28px}
+</style>
+</head>
+<body>
+<main class="canvas">
+<header class="head">
+<h1>Grok Bot 企业推荐安全基准</h1>
+<img class="bot" src="bots/hexagone-ambre.png" alt="">
+</header>
+<section class="flow" aria-label="企业安全基准配置">
+<article class="card">
+<div class="step">01 管理控制</div>
+<h2>划分访问范围</h2>
+<p>启用 Grok Bot<br>Manage Group Access 按群组开放</p>
+</article>
+<article class="card">
+<div class="step">02 身份与 SSO</div>
+<h2>沿用现有 Cursor 账号体系</h2>
+<p>Cursor SSO 与 SCIM 完成分配<br>密码 + 手机二次验证</p>
+</article>
+<article class="card">
+<div class="step">03 网络与私网</div>
+<h2>网络控制严格化</h2>
+<p>仅团队允许列表<br>Team Setup Scripts 与 Team Secrets</p>
+</article>
+<article class="card">
+<div class="step">04 代理与企业网关</div>
+<h2>放行规则与 TLS 检查豁免</h2>
+<p>*.*.cursorvm.com<br>跳过 TLS 检查，关闭响应缓冲</p>
+</article>
+<article class="card">
+<div class="step">05 规则与审批</div>
+<h2>锁死审批开关</h2>
+<p>Enforce Auto-review 模式<br>高危操作设为 Ask first</p>
+</article>
+<article class="card">
+<div class="step">06 电脑生命周期</div>
+<h2>管理 Bot 电脑</h2>
+<p>重建 VMs、终止 VMs<br>删除虚拟机和数据</p>
+</article>
+</section>
+<section class="baseline">
+<strong>企业安全基准</strong>
+<span>在本地计算机上执行：Never allow　公开模板共享：保持关闭　智能体电子邮件：保持关闭</span>
+</section>
+</main>
+</body>
+</html>

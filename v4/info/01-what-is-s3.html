@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>适合与不适合的任务类型</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#faf6ee;color:#1f211f;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:36px 42px 38px}.hero{height:112px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #dcd6ca}.hero h1{margin:0;font-size:32px;letter-spacing:.5px;font-weight:760}.hero img{width:104px;height:auto;max-height:108px;object-fit:contain;display:block;margin-right:22px}.filter{height:152px;padding-top:20px}.filter-head{display:flex;align-items:baseline;gap:18px;margin-bottom:12px}.filter h2,.column h2{margin:0;font-size:20px;font-weight:750}.filter-head p{margin:0;font-size:15px;color:#55564f}.criteria{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.criterion{min-height:78px;border:1px solid #d9d4c9;border-radius:21px;background:#fffdf8;padding:15px 18px;display:flex;align-items:center;font-size:16px;line-height:1.5}.criterion b{color:#0b7775;font-size:20px;margin-right:11px}.compare{height:382px;display:grid;grid-template-columns:1fr 1fr;gap:18px}.column{border:1px solid #d9d4c9;border-radius:24px;background:#fffdf8;padding:21px 24px 18px}.good{border-top:5px solid #0b7775}.bad{border-top:5px solid #d85d3c}.column h2{margin-bottom:5px}.good h2{color:#086967}.bad h2{color:#bd4f31}.lead{margin:0 0 14px;font-size:15px;line-height:1.45;color:#4c4d47}.items{display:grid;gap:8px}.item{font-size:15px;line-height:1.35;display:grid;grid-template-columns:90px 1fr;gap:4px;align-items:start}.item strong{font-weight:750;color:#202220}.good .item strong{color:#086967}.bad .item strong{color:#bd4f31}.item span{color:#363832}.note{margin-top:12px;padding-top:11px;border-top:1px solid #e4dfd4;font-size:15px;line-height:1.35;color:#383934}.note b{color:#bd4f31}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="hero">
+<h1>适合与不适合的任务类型</h1>
+<img src="bots/capsule-vert.png" alt="">
+</header>
+<section class="filter">
+<div class="filter-head"><h2>任务过滤标准</h2><p>任务该不该交给 Grok Bot，直接看三条过滤标准</p></div>
+<div class="criteria">
+<div class="criterion"><b>01</b>能在网页端、终端或通过 API 完整跑通</div>
+<div class="criterion"><b>02</b>中间文件或最终报告能由人工直接核验</div>
+<div class="criterion"><b>03</b>高危敏感动作能停下来等人工弹窗批准</div>
+</div>
+</section>
+<section class="compare">
+<article class="column good">
+<h2>适合的任务</h2>
+<p class="lead">适合流程固定、高频重复且需跨工具调用的活</p>
+<div class="items">
+<div class="item"><strong>情报巡检</strong><span>定期访问固定官网、Changelog 或社媒出摘要表</span></div>
+<div class="item"><strong>线索清洗</strong><span>CRM 捞目标账户，结合公开信息起草外联信供审核</span></div>
+<div class="item"><strong>财务对账</strong><span>每周核对发票，标记缺票并催收</span></div>
+<div class="item"><strong>缺陷复现</strong><span>读 Issue 在预发布环境模拟复现，提取日志与截图</span></div>
+<div class="item"><strong>经营晨报</strong><span>每天汇总库存、订单与流量指标，揪出异常点</span></div>
+</div>
+</article>
+<article class="column bad">
+<h2>不适合的任务</h2>
+<p class="lead">别硬塞不匹配的活，容易白耗每周额度甚至失控</p>
+<div class="items">
+<div class="item"><strong>即时问答</strong><span>查报错、翻短文用普通网页模型几秒搞定，不用云电脑</span></div>
+<div class="item"><strong>本地写码</strong><span>断点调试与 Git 冲突放本地 Codex CLI 或 Claude Code</span></div>
+<div class="item"><strong>生活琐事</strong><span>管日历、买日用品缺乏企业级数据源，硬搬很别扭</span></div>
+<div class="item"><strong>无增量轮询</strong><span>每 5 分钟无条件刷新会空耗推理额度</span></div>
+<div class="item"><strong>高危操作</strong><span>群发邮件、对外发帖、扣款支付或删库，必须留人工闸门</span></div>
+</div>
+<p class="note"><b>人工闸门：</b>高危敏感动作能停下来等人工弹窗批准。</p>
+</article>
+</section>
+</main>
+</body>
+</html>

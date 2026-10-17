@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>多 Bot 协作</title>
+<style>
+*{box-sizing:border-box}
+html,body{width:1200px;height:760px;margin:0;overflow:hidden}
+body{background:#fff8ef;color:#201d19;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}
+.page{width:1200px;height:760px;padding:32px 36px 36px}
+.top{height:116px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ded4c7}
+h1{margin:0;font-size:38px;line-height:1.18;letter-spacing:-1.4px;font-weight:750}
+.bot{width:108px;height:108px;object-fit:contain;display:block;margin-right:16px}
+.lead{height:40px;margin:18px 0 14px;font-size:18px;line-height:1.45;font-weight:600;letter-spacing:.15px}
+.orange{color:#c84f14}
+.flow{height:180px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+.step{position:relative;background:#fffdf9;border:1px solid #ded4c7;border-radius:24px;padding:20px 22px}
+.step:not(:last-child):after{content:"";position:absolute;right:-19px;top:84px;width:18px;height:2px;background:#c84f14;z-index:2}
+.step:not(:last-child):before{content:"";position:absolute;right:-19px;top:80px;width:8px;height:8px;border-top:2px solid #c84f14;border-right:2px solid #c84f14;transform:rotate(45deg);z-index:3}
+.n{display:block;color:#c84f14;font-size:16px;line-height:1;font-weight:800;margin-bottom:12px}
+h2{font-size:22px;line-height:1.25;margin:0 0 10px;font-weight:750;letter-spacing:-.3px}
+.step p{margin:0;font-size:16px;line-height:1.58}
+.lower{height:308px;display:grid;grid-template-columns:1.12fr .88fr;gap:18px;margin-top:16px}
+.panel{background:#fffdf9;border:1px solid #ded4c7;border-radius:24px;padding:20px 22px;overflow:hidden}
+.panel h2{margin-bottom:15px}
+.table{border-top:1px solid #e7ded3}
+.row{display:grid;grid-template-columns:112px 1fr;padding:12px 0;border-bottom:1px solid #e7ded3;gap:12px}
+.role{font-size:16px;line-height:1.42;font-weight:750;color:#c84f14}
+.work{font-size:15px;line-height:1.48}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.block{border-radius:17px;background:#f7ede0;padding:13px 14px;min-height:93px}
+.block strong{display:block;font-size:16px;line-height:1.35;margin-bottom:6px}
+.block span{display:block;font-size:15px;line-height:1.45}
+.human{border:1px solid #d85b1a;background:#fff7f1;border-radius:18px;padding:15px 17px;font-size:16px;line-height:1.5;font-weight:650}
+.human b{color:#c84f14}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="top">
+<h1>多 Bot 协作：工单流转，人类审批</h1>
+<img class="bot" src="bots/squircle-orange.png" alt="">
+</header>
+<p class="lead">多 Bot 协作的核心是靠工单流转，<span class="orange">人类只做关键节点审批</span>。</p>
+<section class="flow" aria-label="SpaceXAI 产品团队多岗位协同">
+<article class="step">
+<span class="n">01</span>
+<h2>目标解耦</h2>
+<p>人类给大目标，主管 Bot 负责拆细并派发给模块开发 Bot。</p>
+</article>
+<article class="step">
+<span class="n">02</span>
+<h2>链条传递</h2>
+<p>复现 Bot 跑出验证包直接交接，排查 Bot 修复后提 PR。</p>
+</article>
+<article class="step">
+<span class="n">03</span>
+<h2>状态对齐</h2>
+<p>幕僚长 Bot 动态维护清单，发现卡片连续多天无提交就提醒主管检查。</p>
+</article>
+</section>
+<section class="lower">
+<article class="panel">
+<h2>独立团队轻量出海运作</h2>
+<div class="table">
+<div class="row"><div class="role">内容 Bot</div><div class="work">监测行业与竞品动态，起草博客并出多渠道分发草稿</div></div>
+<div class="row"><div class="role">销售外联 Bot</div><div class="work">检索线索并打分，每个工作日早晨生成 20 封邮件草稿</div></div>
+<div class="row"><div class="role">客户支持 Bot</div><div class="work">监听工单并对照知识库写内部建议</div></div>
+</div>
+</article>
+<article class="panel">
+<h2>人工把关</h2>
+<div class="mini">
+<div class="block"><strong>销售外联 Bot</strong><span>负责人早晨花 10 分钟过目批准</span></div>
+<div class="block"><strong>客户支持 Bot</strong><span>确认无误后一键转为公开回复</span></div>
+</div>
+<div class="human">排查 Bot 修复后提 PR，<b>停在人类 Code Review 节点等审批</b>。</div>
+</article>
+</section>
+</main>
+</body>
+</html>

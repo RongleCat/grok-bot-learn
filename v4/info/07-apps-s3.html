@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bot 专属邮箱</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#faf6ee;color:#1f211f;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:36px 48px 40px}.head{height:126px;display:flex;align-items:center;border-bottom:1px solid #dcd6ca}.icon{width:108px;height:108px;object-fit:contain;flex:none;margin-right:23px}.title{font-size:34px;line-height:1.15;letter-spacing:.5px;font-weight:760}.intro{margin-top:10px;font-size:17px;line-height:1.55;color:#55564f}.intro b{color:#1f211f}.content{display:grid;grid-template-columns:752px 1fr;gap:28px;padding-top:25px}.flow-card,.limits{border:1px solid #dcd6ca;border-radius:24px;background:#fffdf8}.flow-card{height:498px;padding:23px 26px}.section-label{font-size:16px;font-weight:750;color:#a64f18;letter-spacing:.4px}.steps{display:flex;align-items:stretch;gap:8px;margin-top:16px}.step{width:162px;min-height:210px;border:1px solid #e5ddd0;border-radius:20px;padding:18px 15px;background:#fffaf2}.step.orange{background:#fff0e4;border-color:#e6a26f}.num{font-size:15px;font-weight:760;color:#a64f18}.step h2{margin:13px 0 9px;font-size:21px;line-height:1.25}.step p{margin:0;font-size:15px;line-height:1.55;color:#484943}.arrow{align-self:center;width:17px;height:17px;border-top:2px solid #c66d2c;border-right:2px solid #c66d2c;transform:rotate(45deg);flex:none}.approval{margin-top:22px;border:1px solid #e5a46f;border-radius:19px;padding:17px 20px;background:#fff0e4}.approval strong{display:block;font-size:19px;line-height:1.35}.approval p{margin:7px 0 0;font-size:16px;line-height:1.45}.limits{height:498px;padding:24px 25px}.limits h2{margin:0 0 18px;font-size:22px}.rule{padding:13px 0;border-top:1px solid #e7e0d5}.rule:first-of-type{border-top:0}.rule b{display:block;font-size:16px;margin-bottom:4px}.rule span{display:block;font-size:15px;line-height:1.45;color:#50514b}.note{margin-top:17px;border-radius:16px;background:#f1eee6;padding:14px 15px;font-size:15px;line-height:1.45}.footline{font-size:15px;color:#64635d;margin-top:17px}.footline b{color:#a64f18}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head">
+<img class="icon" src="bots/squircle-orange.png" alt="">
+<div><div class="title">Bot 专属邮箱</div><div class="intro"><b>归属个人账户</b>　私聊与 Routines 可用　不可在 Slack 串或他人会话调用</div></div>
+</header>
+<section class="content">
+<article class="flow-card">
+<div class="section-label">认领与配置</div>
+<div class="steps">
+<div class="step"><div class="num">01　认领地址</div><h2>Connect apps<br>› Email</h2><p>创建地址，或发送<br>claim your email</p></div>
+<i class="arrow"></i>
+<div class="step"><div class="num">02　查询收信</div><h2>1 分钟后<br>可查</h2><p>对话中直接检索<br>内容只读，不执行指令</p></div>
+<i class="arrow"></i>
+<div class="step"><div class="num">03　起草回复</div><h2>Bot 只生成<br>草稿卡片</h2><p>可建 Routine 监听发件人<br>支持 *@example.com</p></div>
+<i class="arrow"></i>
+<div class="step orange"><div class="num">04　真正投递</div><h2>人工点击<br>「Send」</h2><p>点击前保持挂起</p></div>
+</div>
+<div class="approval"><strong>系统严禁无人值守静默外发</strong><p>屏幕弹出待审批卡片且点击前保持挂起，即为成功。</p></div>
+<div class="footline">团队须管理员在后台开启「Agent Email」；<b>个人可直接用。</b></div>
+</article>
+<aside class="limits">
+<h2>使用限制与安全</h2>
+<div class="rule"><b>唯一且永久生效</b><span>无法重命名或删除；注销账号也不释放</span></div>
+<div class="rule"><b>发信配额</b><span>单封最多 50 人；附件最多 10 个<br>单个 ≤10MB，总量 ≤25MB，禁 .exe</span></div>
+<div class="rule"><b>首次外联</b><span>限 1 位收件人且正文必带退订链接</span></div>
+<div class="rule"><b>退信或被标垃圾</b><span>直接停用</span></div>
+<div class="note">无独立收件箱与通知<br>Routine 不支持按主题筛选</div>
+</aside>
+</section>
+</main>
+</body>
+</html>

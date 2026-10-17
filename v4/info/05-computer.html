@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>共享云电脑：多个 Bot 如何协作</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { width: 1200px; height: 760px; margin: 0; overflow: hidden; }
+  body { background: #f8f6f1; color: #1d1e1b; font-family: PingFang SC, Noto Sans CJK SC, Microsoft YaHei, sans-serif; }
+  .page { width: 1200px; height: 760px; padding: 42px 56px 38px; position: relative; }
+  h1 { margin: 0; font-size: 34px; line-height: 1.2; letter-spacing: -1px; font-weight: 750; }
+  .bot { position: absolute; right: 58px; top: 28px; width: 112px; height: 112px; object-fit: contain; }
+  .intro { margin: 12px 0 30px; font-size: 18px; line-height: 1.5; color: #5b5b54; }
+  .flow { display: grid; grid-template-columns: 260px 62px 382px 62px 1fr; align-items: center; height: 344px; }
+  .bots { display: grid; gap: 14px; }
+  .card { background: #fffdfa; border: 1px solid #dedbd2; border-radius: 22px; }
+  .bot-card { min-height: 82px; padding: 17px 20px; display: flex; align-items: center; gap: 13px; }
+  .dot { width: 13px; height: 13px; border-radius: 50%; background: #d96c48; flex: 0 0 auto; }
+  .name { font-size: 20px; font-weight: 700; }
+  .desc { margin-top: 3px; font-size: 15px; color: #6a6961; }
+  .arrow { height: 2px; background: #d96c48; position: relative; margin: 0 14px; }
+  .arrow:after { content: ""; position: absolute; right: -1px; top: -5px; width: 10px; height: 10px; border-top: 2px solid #d96c48; border-right: 2px solid #d96c48; transform: rotate(45deg); }
+  .computer { min-height: 322px; padding: 24px; background: #fffdfa; border: 1px solid #d6d2c9; border-radius: 28px; }
+  .computer h2 { margin: 0 0 16px; font-size: 24px; }
+  .shared { border: 1px solid #c8ded6; background: #eff7f3; border-radius: 18px; padding: 16px 18px; }
+  .shared + .shared { margin-top: 12px; }
+  .shared strong { display: block; font-size: 18px; }
+  .shared span { display: block; margin-top: 5px; color: #4d655c; font-size: 15px; line-height: 1.4; }
+  .notice { margin-top: 14px; padding-top: 14px; border-top: 1px solid #e4e0d7; font-size: 16px; font-weight: 650; }
+  .outputs { display: grid; gap: 12px; }
+  .output { min-height: 88px; padding: 12px 16px; }
+  .output h3 { margin: 0 0 5px; color: #bd5636; font-size: 19px; }
+  .output p { margin: 0; font-size: 15px; line-height: 1.35; color: #53534e; }
+  .rule { margin-top: 28px; background: #1d1e1b; color: #fffdfa; border-radius: 24px; padding: 20px 28px; display: flex; align-items: center; gap: 28px; }
+  .rule-label { color: #f29b78; font-size: 17px; font-weight: 700; white-space: nowrap; }
+  .rule-text { font-size: 22px; font-weight: 700; letter-spacing: .1px; }
+  .rule-line { width: 1px; height: 32px; background: #66665f; }
+  .rule-small { font-size: 16px; color: #dedbd2; }
+  .bottom { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .bottom .card { padding: 17px 20px; min-height: 86px; }
+  .bottom strong { font-size: 17px; color: #bd5636; }
+  .bottom p { margin: 6px 0 0; font-size: 15px; line-height: 1.4; color: #56564f; }
+</style>
+</head>
+<body>
+<main class="page">
+  <h1>共享云电脑：多个 Bot 如何协作</h1>
+  <img class="bot" src="bots/goutte-rose.png" alt="">
+  <p class="intro">分 Bot 不等于建立安全隔离；协作全靠磁盘上的文件流转。</p>
+
+  <section class="flow" aria-label="共享云电脑协作结构">
+    <div class="bots">
+      <div class="card bot-card"><span class="dot"></span><div><div class="name">Bot A</div><div class="desc">整理员</div></div></div>
+      <div class="card bot-card"><span class="dot"></span><div><div class="name">Bot B</div><div class="desc">分析师</div></div></div>
+      <div class="card bot-card"><span class="dot"></span><div><div class="name">Bot C</div><div class="desc">设计师、工程师</div></div></div>
+    </div>
+    <div class="arrow"></div>
+    <div class="computer">
+      <h2>同一台云端计算机</h2>
+      <div class="shared"><strong>同一个 Linux 操作系统</strong><span>同一个 /workspace 工作根目录</span></div>
+      <div class="shared"><strong>同一块持久化磁盘</strong><span>共享同一个磁盘与文件系统</span></div>
+      <div class="notice">它们看不见彼此的会话记录</div>
+    </div>
+    <div class="arrow"></div>
+    <div class="outputs">
+      <div class="card output"><h3>文件交接</h3><p>上一棒写入具体文件<br>下一棒读取文件路径</p></div>
+      <div class="card output"><h3>统一目录</h3><p>/workspace/handoff/<br>Markdown 或 JSON 格式</p></div>
+      <div class="card output"><h3>共享权限</h3><p>任何一个 Bot 都能读写<br>/workspace 里的所有数据</p></div>
+    </div>
+  </section>
+
+  <section class="rule" aria-label="浏览器接管原则">
+    <div class="rule-label">登录验证铁律</div>
+    <div class="rule-text">移交屏幕，不交密码</div>
+    <div class="rule-line"></div>
+    <div class="rule-small">人工在云端浏览器输入凭据，Bot 复用当前已有的会话 Cookie。</div>
+  </section>
+
+  <section class="bottom">
+    <div class="card"><strong>协作时不做文件落地，只靠嘴说</strong><p>Bot 之间无法互相读取各自的会话记录。</p></div>
+    <div class="card"><strong>不要在会话中打印密钥</strong><p>密钥仅保存在机器本地，严禁提交到代码仓库。</p></div>
+  </section>
+</main>
+</body>
+</html>

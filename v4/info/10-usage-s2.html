@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fffaf3;color:#24211e;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.board{width:1200px;height:760px;padding:36px 48px 68px}.headline{height:96px;display:flex;align-items:center;justify-content:space-between;padding:0 18px 0 10px}.headline h1{margin:0;font-size:34px;letter-spacing:.5px;line-height:1.15;font-weight:750}.headline img{width:108px;height:108px;object-fit:contain;flex:none}.grid{height:522px;display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(3,162px);gap:18px}.card{border:1px solid #e8ddd1;border-radius:24px;background:#fffdf9;padding:19px 23px 18px;display:grid;grid-template-columns:38px 1fr;column-gap:14px;box-shadow:0 2px 8px rgba(64,43,23,.035)}.num{width:34px;height:34px;border-radius:12px;background:#ed7437;color:#fffaf3;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:750;line-height:1}.content{min-width:0}.content h2{margin:1px 0 10px;font-size:19px;line-height:1.15;font-weight:750}.rule{margin:0;display:grid;gap:5px;font-size:15px;line-height:1.28;color:#554d46}.rule div{white-space:nowrap}.rule b{color:#a74720;font-weight:700}.key{color:#ed7437;font-weight:700}
+</style>
+</head>
+<body>
+<main class="board">
+<header class="headline">
+<h1>高耗操作：六大陷阱</h1>
+<img src="bots/squircle-orange.png" alt="">
+</header>
+<section class="grid">
+<article class="card"><div class="num">1</div><div class="content"><h2>多 Bot 群聊</h2><div class="rule"><div><span class="key">费额度原因：</span>互相唤醒导致 token 翻倍空转</div><div><span class="key">避坑做法：</span>单主导 Bot 配 Subagents 派活</div><div>或人工单聊</div></div></div></article>
+<article class="card"><div class="num">2</div><div class="content"><h2>对话直接喂图与视频</h2><div class="rule"><div><span class="key">费额度原因：</span>历史帧常驻，每轮全量重读买单</div><div><span class="key">避坑做法：</span>终端命令行处理</div><div>Bot 只接百字内结构化文本</div></div></div></article>
+<article class="card"><div class="num">3</div><div class="content"><h2>全天高频轮询</h2><div class="rule"><div><span class="key">费额度原因：</span>15 分钟一次每周 672 次</div><div>多在确认无变动</div><div><span class="key">避坑做法：</span>收紧到工作时间，或改用系统脚本加 Webhook</div></div></div></article>
+<article class="card"><div class="num">4</div><div class="content"><h2>一条会话用到底</h2><div class="rule"><div><span class="key">费额度原因：</span>数十轮后单轮重读数十万 token</div><div><span class="key">避坑做法：</span>单任务单会话</div><div>定期总结并 Duplicate 重置</div></div></div></article>
+<article class="card"><div class="num">5</div><div class="content"><h2>无保护重试死循环</h2><div class="rule"><div><span class="key">费额度原因：</span>报错后连续自我尝试数十次</div><div><span class="key">避坑做法：</span><b>提示词强制设 2 次重试上限</b></div><div>失败立刻阻断问人工</div></div></div></article>
+<article class="card"><div class="num">6</div><div class="content"><h2>盲目开按量付费</h2><div class="rule"><div><span class="key">费额度原因：</span>死循环可能一夜产生高额账单</div><div><span class="key">避坑做法：</span><b>平时关闭按需付费</b></div><div>开启必须设严格低额月度上限</div></div></div></article>
+</section>
+</main>
+</body>
+</html>

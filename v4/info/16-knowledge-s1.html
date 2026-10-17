@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200, initial-scale=1">
+<title>三种自动化方案</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#f8f4eb;color:#20221f;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:38px 44px 40px}.head{height:118px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d9d2c6}.head h1{margin:0;font-size:42px;line-height:1;font-weight:760;letter-spacing:-1.5px}.head img{width:108px;height:108px;object-fit:contain;display:block;margin-right:8px}.grid{height:524px;padding-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{border:1px solid #d9d2c6;border-radius:24px;background:#fffdf8;padding:25px 25px 22px;position:relative;overflow:hidden}.num{width:40px;height:40px;border-radius:14px;background:#d8f0eb;color:#177e78;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:750;margin-bottom:18px}.card h2{font-size:24px;line-height:1.28;margin:0 0 18px;font-weight:750;letter-spacing:-.5px}.rule{height:1px;background:#e6e0d6;margin:0 0 19px}.group{margin:0 0 18px}.group:last-child{margin-bottom:0}.key{color:#177e78;font-size:15px;font-weight:700;margin:0 0 7px}.txt{font-size:16px;line-height:1.55;margin:0}.warning{border-radius:14px;background:#fff0e5;padding:12px 13px;color:#8a4c22;font-size:15px;line-height:1.42;font-weight:650}.path{position:absolute;bottom:22px;left:25px;right:25px;display:flex;align-items:center;gap:7px;font-size:15px;color:#4d554f}.path span{display:block;width:22px;height:2px;background:#b8c8c3;position:relative}.path span:after{content:"";position:absolute;right:-1px;top:-3px;border-left:6px solid #b8c8c3;border-top:4px solid transparent;border-bottom:4px solid transparent}.path b{color:#177e78;font-weight:700}.card.one .path{bottom:25px}.card.two .path{bottom:25px}.card.three .path{bottom:25px}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head"><h1>三种自动化方案</h1><img src="bots/nuage-turquoise.png" alt=""></header>
+<section class="grid">
+<article class="card one">
+<div class="num">01</div>
+<h2>单向入库</h2><div class="rule"></div>
+<div class="group"><p class="key">场景</p><p class="txt">网页、公众号与短视频</p></div>
+<div class="group"><p class="key">机制与鉴权</p><p class="txt">快捷指令带 Bearer 密钥<br>向 Webhook 发 POST 入库</p></div>
+<div class="warning">仅单向接收</div>
+<div class="path"><b>快捷指令</b><span></span><b>Webhook</b><span></span><b>入库</b></div>
+</article>
+<article class="card two">
+<div class="num">02</div>
+<h2>多模态入库</h2><div class="rule"></div>
+<div class="group"><p class="key">场景</p><p class="txt">微信记录、录音、截图多图</p></div>
+<div class="group"><p class="key">机制与鉴权</p><p class="txt">文本直传；文件走 filebin.net<br>临时网盘生成公网链接<br>Bot 解压入库</p></div>
+<div class="warning">网盘无密码勿传敏感内容<br>大包抽帧多耗 token</div>
+<div class="path"><b>文本／文件</b><span></span><b>公网链接</b><span></span><b>入库</b></div>
+</article>
+<article class="card three">
+<div class="num">03</div>
+<h2>微信双向</h2><div class="rule"></div>
+<div class="group"><p class="key">场景</p><p class="txt">发指令、查资料、调度 Bot</p></div>
+<div class="group"><p class="key">机制与鉴权</p><p class="txt">微信扫码绑定，iLink 配合<br>云端脚本监听并转 Webhook<br>回推纯文本</p></div>
+<div class="warning">需控制频次防空转消耗</div>
+<div class="path"><b>微信</b><span></span><b>云端脚本</b><span></span><b>Bot</b></div>
+</article>
+</section>
+</main>
+</body>
+</html>

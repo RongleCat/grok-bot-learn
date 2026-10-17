@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:1200px;height:760px;overflow:hidden}body{background:#f7f2e9;color:#1f201d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:42px 48px 40px}.hero{height:118px;position:relative;border-bottom:1px solid #d9d0c2}.hero h1{margin:7px 0 0;font-size:37px;line-height:1.2;letter-spacing:.5px;font-weight:750}.hero p{margin:13px 0 0;font-size:17px;line-height:1.45;color:#55534d}.bot{position:absolute;right:34px;top:-25px;width:108px;height:108px;object-fit:contain}.alert{margin-top:22px;height:54px;border:1px solid #d8c98e;border-radius:18px;background:#fffaf0;display:flex;align-items:center;padding:0 22px;font-size:16px;line-height:1.4;font-weight:600}.flow{margin-top:14px;display:flex;gap:10px;height:220px}.step{position:relative;flex:1;background:#fffdfa;border:1px solid #ddd4c8;border-radius:22px;padding:20px 18px 18px}.number{display:block;color:#a86b27;font-size:18px;line-height:1;font-weight:800;margin-bottom:13px}.step h2{font-size:22px;line-height:1.2;margin:0 0 12px;font-weight:750}.step p{font-size:15px;line-height:1.55;margin:0;color:#4c4b46}.step.reset{background:#fcf6ed;border-color:#d7bb91}.step.reset h2{color:#8a551d}.bottom{height:207px;margin-top:18px;display:grid;grid-template-columns:1.7fr 1fr;gap:18px}.matrix,.done{border:1px solid #ddd4c8;border-radius:22px;background:#fffdfa;padding:18px 20px}.matrix{display:grid;grid-template-columns:112px 1fr 1fr;grid-template-rows:30px repeat(4,31px);align-items:center;font-size:15px;line-height:1.25}.head{font-weight:750;color:#5a584f;border-bottom:1px solid #e6dfd4;height:30px;display:flex;align-items:flex-start}.cell{height:31px;border-bottom:1px solid #eee8df;display:flex;align-items:center}.matrix .cell:nth-last-child(-n+3){border-bottom:0}.op{font-weight:750}.done{padding:20px 23px}.done h2{margin:0 0 15px;font-size:21px;line-height:1.25}.done p{margin:0;font-size:16px;line-height:1.65}.done strong{color:#a86b27}.safe{margin-top:15px;padding-top:13px;border-top:1px solid #e6dfd4;font-size:15px!important;line-height:1.45!important;color:#55534d}.safe strong{color:#8a551d}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="hero">
+<h1>云端电脑与环境恢复</h1>
+<p>所有 Bot 共享同一台云端电脑。对话记录独立存在数据库，崩溃清空都不丢。</p>
+<img class="bot" src="bots/capsule-vert.png" alt="">
+</header>
+<div class="alert">提示 Reconnecting、Couldn't Reach Grok Bot's Computer 或 Bot failed to respond 时：</div>
+<section class="flow">
+<article class="step"><span class="number">01</span><h2>等 1 到 2 分钟点 Retry</h2><p>网络抖动<br>原样保留<br>无影响</p></article>
+<article class="step"><span class="number">02</span><h2>彻底退出应用</h2><p>Mac 按 Cmd+Q<br>Win/Linux 退出托盘<br>别只关窗口</p></article>
+<article class="step"><span class="number">03</span><h2>进设置 &gt; 计算机点更新</h2><p>备份未完或 Bot 工作时切勿中断<br>等备份完</p></article>
+<article class="step"><span class="number">04</span><h2>卡住点 Recover</h2><p>存现场建机<br>移除自装应用与环境<br>卡死损坏</p></article>
+<article class="step reset"><span class="number">05</span><h2>Reset 是最后<br>手段</h2><p>快照覆盖会丢未同步修改<br>连不上兜底</p></article>
+</section>
+<section class="bottom">
+<div class="matrix">
+<div class="head">操作</div><div class="head">现场保存</div><div class="head">环境影响</div>
+<div class="cell op">Retry</div><div class="cell">原样保留</div><div class="cell">无影响</div>
+<div class="cell op">Update</div><div class="cell">等备份完</div><div class="cell">全留软件；整机清自装包</div>
+<div class="cell op">Recover</div><div class="cell">存现场建机</div><div class="cell">移除自装应用与环境</div>
+<div class="cell op">Reset</div><div class="cell">快照覆盖</div><div class="cell">丢未同步修改</div>
+</div>
+<div class="done"><h2>电脑状态变绿显示已连接</h2><p>终端正常且配置完整就算修好。</p><p class="safe"><strong>Computer is low on disk space</strong> 时点 Go to Disk Saver，必须人工确认才删。</p></div>
+</section>
+</main>
+</body>
+</html>

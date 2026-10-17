@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-108 -108 216 216"><style>.r{fill:#f9f9f9}@media (prefers-color-scheme: dark){.r{fill:#0a0a0c}}.c{fill:#0a0a0c;stroke:#f9f9f9}@media (prefers-color-scheme: dark){.c{fill:#f9f9f9;stroke:#0a0a0c}}</style><mask id="yeux">
+    <circle r="100" fill="#fff" />
+    <path
+      d="M-9.3 -11.3A9.3 9.3 0 0 1 0 -20.6L0 -20.6A9.3 9.3 0 0 1 9.3 -11.3L9.3 11.3A9.3 9.3 0 0 1 0 20.6L0 20.6A9.3 9.3 0 0 1 -9.3 11.3Z"
+      transform="matrix(0.87,-0.33,0.45,0.84,21.42,-43.32)"
+    />
+    <path
+      d="M-9.3 -11.3A9.3 9.3 0 0 1 0 -20.6L0 -20.6A9.3 9.3 0 0 1 9.3 -11.3L9.3 11.3A9.3 9.3 0 0 1 0 20.6L0 20.6A9.3 9.3 0 0 1 -9.3 11.3Z"
+      transform="matrix(0.64,-0.06,0.45,0.84,62.98,-53.9)"
+    />
+  </mask><circle r="100" class="r"/><circle r="100" class="c" stroke-width="8" mask="url(#yeux)"/></svg>

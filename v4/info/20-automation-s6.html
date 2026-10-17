@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#f7f1e8;color:#20201e;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.canvas{width:1200px;height:760px;padding:34px 48px 42px}.head{height:116px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d9cec0}.head h1{margin:0;font-size:42px;line-height:1.16;letter-spacing:-1px;font-weight:760}.bot{width:108px;height:108px;object-fit:contain;display:block}.content{display:grid;grid-template-columns:548px 1fr;gap:28px;padding-top:26px}.card{background:#fffdfa;border:1px solid #d9cec0;border-radius:24px}.flow{height:502px;padding:23px 24px 20px}.card h2{font-size:20px;line-height:1.2;margin:0;font-weight:730}.steps{margin-top:18px;display:grid;gap:9px}.step{min-height:74px;border:1px solid #e1d8cc;border-radius:17px;padding:11px 14px;display:grid;grid-template-columns:31px 1fr;gap:11px;align-items:center;background:#fffdf9}.num{width:29px;height:29px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#d9654d;color:#fff;font-size:15px;font-weight:750}.step strong{display:block;font-size:16px;line-height:1.3;font-weight:740}.step span{display:block;font-size:15px;line-height:1.38;color:#595651;margin-top:2px}.end{margin-top:12px;border-radius:16px;background:#292824;color:#fff;padding:13px 16px;font-size:16px;line-height:1.42;font-weight:620}.right{height:502px;display:grid;grid-template-rows:284px 202px;gap:16px}.webhook{padding:22px 23px}.issues{margin-top:15px;display:grid;grid-template-columns:1fr 1fr;gap:9px}.issue{min-height:88px;border:1px solid #e2d7ca;border-radius:16px;padding:10px 12px}.issue b{display:block;color:#c6523c;font-size:18px;line-height:1.1}.issue p{margin:5px 0 0;font-size:15px;line-height:1.35;color:#47443f}.log{padding:20px 23px}.log-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}.log-item{border-radius:16px;background:#f3eadc;padding:12px 13px;font-size:15px;line-height:1.38}.log-item b{display:block;font-size:16px;margin-bottom:3px;color:#272521}.log-item:last-child{grid-column:1 / 3;background:#fae4db;border:1px solid #edc2b5}.code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px;white-space:nowrap}
+</style>
+</head>
+<body>
+<main class="canvas">
+<header class="head"><h1>失败兜底与容错策略</h1><img class="bot" src="bots/galet-rouge.png" alt=""></header>
+<section class="content">
+<article class="card flow">
+<h2>源不可用时：立刻阻断</h2>
+<div class="steps">
+<div class="step"><i class="num">1</i><div><strong>检查抓取内容体积</strong><span>为空、含 HTTP 错误码或少于 50 个字符</span></div></div>
+<div class="step"><i class="num">2</i><div><strong>判定为源不可用</strong><span>立刻终止后续分析流程</span></div></div>
+<div class="step"><i class="num">3</i><div><strong>追加一行错误记录</strong><span><span class="code">routine_errors.log</span>：时间戳、任务名、原因</span></div></div>
+<div class="step"><i class="num">4</i><div><strong>以退出状态结束本次 run</strong><span>不发报警，不用过往缓存伪造新数据</span></div></div>
+</div>
+<div class="end">Instruction 必须包含异常阻断声明</div>
+</article>
+<aside class="right">
+<section class="card webhook">
+<h2>Webhook 异常排查</h2>
+<div class="issues">
+<div class="issue"><b>401</b><p>查 Authorization: Bearer &lt;key&gt;<br>防空格换行或旧 Key</p></div>
+<div class="issue"><b>404</b><p>核对 URL 完整性<br>防桌面端误删注销</p></div>
+<div class="issue"><b>429</b><p>超并发上限<br>增加重试队列与指数退避</p></div>
+<div class="issue"><b>未执行</b><p>检查是否 Paused<br>或 Active 开关被关</p></div>
+</div>
+</section>
+<section class="card log">
+<h2>日志落盘防刷屏</h2>
+<div class="log-grid">
+<div class="log-item"><b>仅审批拦截</b>才弹卡片通知</div>
+<div class="log-item"><b>摘要写入</b><span class="code">docs/reports/YYYY-MM-DD.md</span></div>
+<div class="log-item"><b>单行日志追加</b><span class="code">workspace/run.log</span></div>
+</div>
+</section>
+</aside>
+</section>
+</main>
+</body>
+</html>

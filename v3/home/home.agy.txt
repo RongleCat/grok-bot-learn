@@ -1,0 +1,49 @@
+{
+ "title": "Grok Bot 上手指南",
+ "lead": "配有一台云电脑的专属 Bot。先跑通第一个任务，再把做顺的事变成定时例程和多 Bot 协作。",
+ "primary": "从第 1 章开始",
+ "secondary": "看案例",
+ "notice": "以 10 月 12 日起生效的 X 订阅规则为准，Plus 档不含 Grok Bot",
+ "partsTitle": "四个部分，按需查看",
+ "parts": [
+  {"tag": "第一篇 · 第 1–11 章", "name": "基础手册：快速上手", "desc": "讲清订阅方案、安装配置、派发任务、云电脑使用、记忆与额度管理。", "link": "/part1/01-what-is"},
+  {"tag": "第二篇 · 第 12–18 章", "name": "实战案例：场景参考", "desc": "覆盖自媒体、X 运营、代码研发、电商卖货、知识库整理与一人公司。", "link": "/part2/12-content"},
+  {"tag": "第三篇 · 第 19–22 章", "name": "进阶篇：自动化与系统化", "desc": "讲解多 Bot 协作、定时自动运行、环境备份，以及接入飞书和微信。", "link": "/part3/19-orchestration"},
+  {"tag": "第四篇 · 第 23–25 章", "name": "团队篇：配置岗位与协作", "desc": "介绍团队部署、按岗位分工、权限配置与常见问题排查。", "link": "/part4/23-enterprise"}
+ ],
+ "asksTitle": "你想用它做什么？",
+ "asks": [
+  {"q": "安装好并跑通第一个任务", "link": "/part1/03-install"},
+  {"q": "每天早上自动推送一份简报", "link": "/part1/08-skills-routines"},
+  {"q": "额度总在周末前用完", "link": "/part1/10-usage"},
+  {"q": "让多个 Bot 分工协作", "link": "/part1/09-group-team"},
+  {"q": "帮我打理 X 和自媒体账号", "link": "/part2/13-x-ops"},
+  {"q": "云电脑重置后找回配置与工具", "link": "/part3/21-backup"}
+ ],
+ "loopTitle": "从单次跑通到日常自动化",
+ "loop": [
+  {"k": "任务", "v": "交代清楚具体目标和交付结果"},
+  {"k": "调整", "v": "磨合一两轮，让 Bot 记住你的要求"},
+  {"k": "例程", "v": "保存为技能，定时或按事件自动运行"},
+  {"k": "团队", "v": "拆分给专职 Bot，由主 Bot 派活和检查"}
+ ],
+ "rolesTitle": "按角色查看",
+ "roles": [
+  {"name": "内容创作者", "desc": "找选题、写初稿、做配图，只出草稿不直接发布。", "link": "/part2/12-content"},
+  {"name": "工程师", "desc": "巡检代码仓库、协助审 PR，配合本地编程助手分工。", "link": "/part2/14-engineering"},
+  {"name": "电商卖家", "desc": "上架商品、制作商图，持续监控店铺与竞品动态。", "link": "/part2/15-ecommerce"},
+  {"name": "销售与 GTM", "desc": "调研潜在客户、起草开发信，由你确认后再发送。", "link": "/part2/17-gtm"},
+  {"name": "一人公司", "desc": "用一台云电脑和多个 Bot，独立打理公司各项业务。", "link": "/part2/18-solo"},
+  {"name": "团队管理者", "desc": "集中配置团队 Bot、成员权限、账号体系与企业内网。", "link": "/part4/23-enterprise"}
+ ],
+ "casesTitle": "实战案例",
+ "casesMore": "全部案例",
+ "cases": [
+  {"t": "用 Webhook 和快捷指令，把资料自动存入知识库", "a": "铁柱", "link": "/part2/16-knowledge"},
+  {"t": "五个 Bot 协作打理自媒体运营", "a": "Adrian Punk", "link": "/part2/12-content"},
+  {"t": "闲鱼上架商品、小红书做图与短视频制作", "a": "Miles Ma", "link": "/part2/15-ecommerce"},
+  {"t": "搭建一套亚马逊店铺日常运营 Bot", "a": "跨境电商卖家", "link": "/part2/15-ecommerce"},
+  {"t": "全天候自动值守的代码仓库运维台", "a": "Gipp", "link": "/part2/14-engineering"},
+  {"t": "在微信里发指令，直接打理 X 账号", "a": "社区作者", "link": "/part2/13-x-ops"}
+ ]
+}

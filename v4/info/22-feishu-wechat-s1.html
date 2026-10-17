@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#f7f2e9;color:#1f211d;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:46px 58px 42px}.hero{height:130px;position:relative;display:flex;align-items:flex-start}.hero h1{margin:15px 0 0;font-size:42px;letter-spacing:-1.5px;line-height:1.18;font-weight:760}.bot{position:absolute;right:20px;top:0;width:110px;height:110px;object-fit:contain}.principle{height:94px;border:1px solid #dfd6c6;border-radius:24px;background:#fffdfa;display:flex;align-items:center;padding:0 31px;gap:24px}.principle strong{font-size:24px;letter-spacing:-.3px;color:#a95c14;white-space:nowrap}.principle span{height:36px;width:1px;background:#ded5c7}.principle p{margin:0;font-size:18px;line-height:1.55;font-weight:560}.cards{margin-top:25px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{height:378px;border:1px solid #dfd6c6;border-radius:24px;background:#fffdfa;padding:27px 27px 24px;position:relative;overflow:hidden}.card::before{content:"";position:absolute;top:0;left:0;right:0;height:7px;background:#a95c14}.card h2{margin:8px 0 18px;font-size:24px;line-height:1.2;letter-spacing:-.4px}.rows{display:grid;gap:12px}.row{border-top:1px solid #ebe4d9;padding-top:12px}.row:first-child{border-top:0;padding-top:0}.k{display:block;margin-bottom:4px;color:#a95c14;font-size:15px;font-weight:700;letter-spacing:.5px}.v{display:block;font-size:16px;line-height:1.48;font-weight:520}.focus{margin-top:19px;padding:13px 14px;border-radius:14px;background:#f4eadb;font-size:16px;line-height:1.48;font-weight:650}.wechat .focus{margin-top:19px}.shortcut .focus{margin-top:19px}
+</style>
+</head>
+<body>
+<main class="page">
+<section class="hero">
+<h1>技术选型</h1>
+<img class="bot" src="bots/hexagone-ambre.png" alt="">
+</section>
+<section class="principle">
+<strong>共同前提</strong><span></span><p>三种接入方式全都不需要公网 IP</p>
+</section>
+<section class="cards">
+<article class="card">
+<h2>飞书多 Bot 通道</h2>
+<div class="rows">
+<div class="row"><span class="k">用于</span><span class="v">团队办公与群聊派工</span></div>
+<div class="row"><span class="k">走</span><span class="v">官方 WebSocket 长连接出站</span></div>
+<div class="row"><span class="k">支持</span><span class="v">富文本与卡片</span></div>
+</div>
+<div class="focus">群内仅响应 @ 保护额度</div>
+</article>
+<article class="card wechat">
+<h2>微信 ClawBot 通道</h2>
+<div class="rows">
+<div class="row"><span class="k">用于</span><span class="v">个人日常随身助理与调度</span></div>
+<div class="row"><span class="k">走</span><span class="v">iLink 长轮询</span></div>
+<div class="row"><span class="k">仅支持</span><span class="v">纯文本</span></div>
+</div>
+<div class="focus">靠白名单单聊避免无效唤醒</div>
+</article>
+<article class="card shortcut">
+<h2>微信快捷指令通道</h2>
+<div class="rows">
+<div class="row"><span class="k">用于</span><span class="v">图文与音频资产入库</span></div>
+<div class="row"><span class="k">走</span><span class="v">Webhook 单向推送并返回回执</span></div>
+<div class="row"><span class="k">触发</span><span class="v">按需触发</span></div>
+</div>
+<div class="focus">无消息不产生额外消耗</div>
+</article>
+</section>
+</main>
+</body>
+</html>

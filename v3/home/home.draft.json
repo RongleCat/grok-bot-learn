@@ -1,0 +1,49 @@
+{
+ "title": "Grok Bot 从 0 到 1",
+ "lead": "一个有名字、有职责、自带一台云电脑的 AI 同事。先把第一个 Bot 用起来，再把每次做成的事沉淀成例程和团队。",
+ "primary": "开始第 1 章",
+ "secondary": "看真实案例",
+ "notice": "方案以 10 月 12 日起的 X 统一订阅为准，Plus 档不含 Grok Bot",
+ "partsTitle": "四段路径，按你的目标进入",
+ "parts": [
+  {"tag": "第一篇 · 第 1–11 章", "name": "使用手册：先把 Bot 用起来", "desc": "方案、安装、交代任务、云电脑、记忆、连接应用、例程、群聊、额度和安全。", "link": "/part1/01-what-is"},
+  {"tag": "第二篇 · 第 12–18 章", "name": "案例篇：看别人怎么用", "desc": "自媒体、X 运营、工程研发、电商、知识入库、销售和一人公司。", "link": "/part2/12-content"},
+  {"tag": "第三篇 · 第 19–22 章", "name": "进阶篇：做成稳定的系统", "desc": "团队编排、可靠的自动化、备份恢复，接入飞书和微信。", "link": "/part3/19-orchestration"},
+  {"tag": "第四篇 · 第 23–25 章", "name": "落地篇：带进团队和岗位", "desc": "团队版与企业部署、按岗位组队、常见问题与排错。", "link": "/part4/23-enterprise"}
+ ],
+ "asksTitle": "你现在想让 Bot 帮你做什么？",
+ "asks": [
+  {"q": "装好它，先跑通一个任务", "link": "/part1/03-install"},
+  {"q": "每天早上自动推一份简报", "link": "/part1/08-skills-routines"},
+  {"q": "额度老是不到周末就用完", "link": "/part1/10-usage"},
+  {"q": "让几个 Bot 分工协作", "link": "/part1/09-group-team"},
+  {"q": "替我运营 X 和自媒体", "link": "/part2/13-x-ops"},
+  {"q": "电脑重置后工具全没了", "link": "/part3/21-backup"}
+ ],
+ "loopTitle": "做成一次，就让它每天都能做成",
+ "loop": [
+  {"k": "任务", "v": "交代一个有结果、能验收的真实任务"},
+  {"k": "复盘", "v": "修正一两轮，让 Bot 记住长期规则"},
+  {"k": "例程", "v": "存成技能，按时间或事件自动运行"},
+  {"k": "团队", "v": "拆给专职 Bot，主 Bot 派活和验收"}
+ ],
+ "rolesTitle": "你是谁？",
+ "roles": [
+  {"name": "内容创作者", "desc": "选题、起草、配图、分发，只出草稿不代发。", "link": "/part2/12-content"},
+  {"name": "工程师", "desc": "巡检仓库、审 PR，和本地 coding agent 分工。", "link": "/part2/14-engineering"},
+  {"name": "电商卖家", "desc": "上架商品、做图、盯店铺和竞品。", "link": "/part2/15-ecommerce"},
+  {"name": "销售与 GTM", "desc": "调研账户、起草外联，发出前等你点头。", "link": "/part2/17-gtm"},
+  {"name": "一人公司", "desc": "一台云电脑，一组 Bot，撑起一家小公司。", "link": "/part2/18-solo"},
+  {"name": "团队管理者", "desc": "团队 Bot、权限、身份和私有网络。", "link": "/part4/23-enterprise"}
+ ],
+ "casesTitle": "真实案例",
+ "casesMore": "全部案例",
+ "cases": [
+  {"t": "Webhook + 快捷指令，知识自动入库", "a": "铁柱", "link": "/part2/16-knowledge"},
+  {"t": "五个 Bot 撑起一个自媒体团队", "a": "Adrian Punk", "link": "/part2/12-content"},
+  {"t": "闲鱼上架、小红书做图、做短视频", "a": "Miles Ma", "link": "/part2/15-ecommerce"},
+  {"t": "从 0 到 1 搭一支亚马逊运营团队", "a": "跨境电商卖家", "link": "/part2/15-ecommerce"},
+  {"t": "24/7 值守的仓库运维台", "a": "Gipp", "link": "/part2/14-engineering"},
+  {"t": "微信里说一句，就能运营 X", "a": "社区作者", "link": "/part2/13-x-ops"}
+ ]
+}

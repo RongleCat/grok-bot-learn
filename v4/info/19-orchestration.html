@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>团队编排：1+N 星标中枢</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#faf9f6;color:#20201e;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.canvas{width:1200px;height:760px;padding:38px 54px 34px;position:relative}.eyebrow{color:#1f7187;font-size:16px;font-weight:700;letter-spacing:.06em;margin:0 0 6px}.title{font-size:33px;line-height:1.2;letter-spacing:.01em;margin:0;font-weight:800}.bot{position:absolute;right:63px;top:29px;width:112px;height:112px;object-fit:contain}.line{height:1px;background:#ddd9d2;margin:24px 0 20px}.flow{display:grid;grid-template-columns:200px 54px 302px 54px 1fr;align-items:center;height:216px}.card{background:#fffefd;border:1px solid #dedad2;border-radius:23px;padding:22px 24px;min-height:154px}.card h2{font-size:20px;margin:0 0 13px;line-height:1.25}.card p{font-size:16px;line-height:1.55;margin:0}.user{border-color:#d8d3ca}.chief{background:#edf7f8;border-color:#83bdc9;min-height:194px}.chief h2{color:#145e70;font-size:23px}.arrow{height:2px;background:#7a7974;position:relative;margin:0 12px}.arrow:after{content:"";position:absolute;right:-1px;top:-5px;width:10px;height:10px;border-top:2px solid #7a7974;border-right:2px solid #7a7974;transform:rotate(45deg)}.workers{display:grid;grid-template-columns:1fr 1fr;gap:12px}.worker{background:#fffefd;border:1px solid #dedad2;border-radius:19px;padding:15px 18px;height:91px}.worker strong{display:block;font-size:17px;margin-bottom:6px}.worker span{font-size:15px;line-height:1.35;color:#4f4e49}.handoff{margin-top:20px;background:#fffefd;border:1px solid #dedad2;border-radius:24px;height:163px;padding:20px 24px;display:grid;grid-template-columns:235px 1fr 250px;align-items:center;gap:23px}.handoff h2{font-size:20px;line-height:1.28;margin:0}.handoff p{font-size:15px;line-height:1.5;margin:8px 0 0;color:#53514c}.path{border:1px solid #83bdc9;background:#edf7f8;border-radius:18px;padding:18px 22px;text-align:center}.path b{display:block;font-size:18px;color:#145e70;margin-bottom:8px}.path span{font-size:15px;line-height:1.4}.log{font-size:16px;line-height:1.55}.guard{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px}.guardbox{border-radius:20px;padding:17px 22px;height:111px;border:1px solid #dedad2;background:#fffefd}.guardbox h3{font-size:17px;margin:0 0 9px}.guardbox p{font-size:15px;line-height:1.45;margin:0}.human{border-color:#83bdc9;background:#edf7f8}.human h3{color:#145e70}.smallarrow{font-size:22px;color:#1f7187;font-weight:700;text-align:center}
+.flow{height:240px}
+.worker{height:114px}
+</style>
+</head>
+<body>
+<main class="canvas">
+<p class="eyebrow">第 19 章</p>
+<h1 class="title">团队编排：1+N 星标中枢</h1>
+<img class="bot" src="bots/cercle-bleu.png" alt="">
+<div class="line"></div>
+<section class="flow" aria-label="主 Bot 与专职 Bot 协作流程">
+<div class="card user"><h2>用户目标</h2><p>日常需求统一发送给幕僚长</p></div>
+<div class="arrow"></div>
+<div class="card chief"><h2>主 Bot · 幕僚长</h2><p>需求拆解<br>任务分派<br>进度追踪与汇总汇报</p></div>
+<div class="arrow"></div>
+<div class="workers">
+<div class="worker"><strong>专职 Bot</strong><span>专项生产<br>深层检索</span></div>
+<div class="worker"><strong>专职 Bot</strong><span>单点计算<br>按规范编写</span></div>
+<div class="worker"><strong>专职 Bot</strong><span>如实向中枢报错</span></div>
+<div class="worker"><strong>主 Bot 输出</strong><span>五行内状态简报<br>待批卡片</span></div>
+</div>
+</section>
+<section class="handoff" aria-label="基于文件的交接">
+<div><h2>标准的交接介质</h2><p>文件系统是天然的高速数据总线</p></div>
+<div class="path"><b>/workspace/project-alpha/</b><span>上游生成结构化成果文件<br>前置 Bot 仅返回产出文件的绝对路径<br>下游 Bot 从本地磁盘读取文件继续加工</span></div>
+<div class="log"><b>决策与跳过动作全量落盘</b><br>分派决策、跳过原因与待批项写入<br><b>/workspace/state/chief_log.md</b></div>
+</section>
+<section class="guard" aria-label="章程与人闸">
+<div class="guardbox"><h3>章程：职责边界锁死</h3><p>Sources · Output · Approval · Failure · Never</p></div>
+<div class="guardbox human"><h3>一分钟可逆性：人闸底线</h3><p>对外通信、采购、删除操作必须暂停等待确认</p></div>
+</section>
+</main>
+</body>
+</html>

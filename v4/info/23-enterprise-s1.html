@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>团队版与企业版管理控制</title>
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fbf6ee;color:#24211e;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:34px 44px 38px}.head{height:104px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ded6cc}.head h1{margin:0;font-size:32px;letter-spacing:-1px;font-weight:780}.head img{width:106px;height:106px;object-fit:contain;display:block;margin:-3px 24px 0 0}.architecture{height:119px;display:grid;grid-template-columns:1.1fr .9fr;gap:16px;padding-top:16px}.card{border:1px solid #ded6cc;border-radius:22px;background:#fffdf9}.arch{padding:16px 20px;display:flex;align-items:center;gap:16px}.cloud{width:52px;height:52px;border-radius:17px;background:#dcece6;color:#166553;display:flex;align-items:center;justify-content:center;font-size:25px;flex:none}.arch strong{display:block;font-size:19px;line-height:1.35}.arch p{font-size:15px;line-height:1.45;margin:3px 0 0;color:#5c5550}.warn{padding:17px 21px;border-color:#ddcabd;background:#fff9f2}.warn strong{font-size:18px;display:block;margin-bottom:5px;color:#9a4e38}.warn p{margin:0;font-size:15px;line-height:1.45}.content{height:417px;display:grid;grid-template-columns:1.42fr .88fr;gap:18px;padding-top:16px}.controls{padding:18px 20px}.controls h2,.tiers h2,.outcome h2{font-size:18px;margin:0;font-weight:760}.steps{height:348px;margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:10px}.step{border:1px solid #e4ddd4;border-radius:16px;padding:12px 14px;background:#fffefa}.step-top{display:flex;align-items:center;gap:9px;margin-bottom:6px}.num{width:26px;height:26px;flex:none;border-radius:9px;background:#dcece6;color:#166553;text-align:center;line-height:26px;font-size:15px;font-weight:800}.step h3{font-size:16px;margin:0}.step ul{margin:0;padding-left:18px;font-size:15px;line-height:1.45}.step li{margin:2px 0}.side{display:grid;grid-template-rows:214px 187px;gap:16px}.tiers{padding:18px 18px 15px}.tier-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:13px}.tier{border-radius:15px;padding:12px 13px;min-height:128px}.team{background:#eaf3ef}.enterprise{background:#f9e8df}.tier strong{font-size:17px;display:block;margin-bottom:6px}.tier ul{font-size:15px;line-height:1.45;margin:0;padding-left:17px}.outcome{padding:16px 18px;background:#fffdf9}.outcome ul{margin:10px 0 0;padding:0;list-style:none;font-size:15px;line-height:1.45}.outcome li{padding-left:22px;position:relative;margin:4px 0}.outcome li:before{content:"✓";position:absolute;left:0;color:#166553;font-weight:800;font-size:17px}@media print{body{overflow:hidden}}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="head">
+<h1>团队版与企业版管理控制</h1>
+<img src="bots/galet-encre.png" alt="">
+</header>
+<section class="architecture">
+<div class="card arch"><div class="cloud">云端</div><div><strong>每位用户独享一台云端 Firecracker microVM</strong><p>本地发指令审批，代码与浏览器在云端跑</p></div></div>
+<div class="card warn"><strong>名下所有 Bot 共享这台虚机</strong><p>文件和登录态完全互通</p></div>
+</section>
+<section class="content">
+<section class="card controls">
+<h2>日常配置：仪表盘的四步</h2>
+<div class="steps">
+<article class="step"><div class="step-top"><span class="num">1</span><h3>划分权限与基础开关</h3></div><ul><li>Manage Group Access 勾选试点</li><li>本地执行设为 Never allow</li><li>Auto-add 选 All team 或指定群组</li></ul></article>
+<article class="step"><div class="step-top"><span class="num">2</span><h3>配置审批锁与规则</h3></div><ul><li>开启 Enforce Auto-review 模式</li><li>高危操作设为 Ask first</li><li>冲突时强制以 Ask first 为准</li></ul></article>
+<article class="step"><div class="step-top"><span class="num">3</span><h3>设置网络与密钥</h3></div><ul><li>网络选团队允许列表或加默认值</li><li>可关闭默认开启的 sudo</li><li>Team Secrets 最多 100 条</li></ul></article>
+<article class="step"><div class="step-top"><span class="num">4</span><h3>配置群组级策略</h3></div><ul><li>只能放宽、不能更严</li><li>网络按最严执行</li><li>权限按最宽生效</li></ul></article>
+</div>
+</section>
+<aside class="side">
+<section class="card tiers">
+<h2>两版权限</h2>
+<div class="tier-grid">
+<article class="tier team"><strong>团队版</strong><ul><li>全员默认开启</li><li>共享静态出口 IP</li><li>基础审计与团队规则</li></ul></article>
+<article class="tier enterprise"><strong>企业版</strong><ul><li>按组授权与 SCIM 2.0</li><li>sudo 和网络白名单</li><li>操作录制与 OpenTelemetry 导出</li></ul></article>
+</div>
+</section>
+<section class="card outcome">
+<h2>做到什么程度算好</h2>
+<ul><li>明确区分试点群组与未授权群组</li><li>团队规则与 Auto-review 规则已锁定</li><li>高危操作百分之百触发审批拦截</li></ul>
+</section>
+</aside>
+</section>
+</main>
+</body>
+</html>

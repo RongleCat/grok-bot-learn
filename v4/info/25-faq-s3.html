@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box}html,body{width:1200px;height:760px;margin:0;overflow:hidden}body{background:#fbf5ea;color:#1e1c18;font-family:"PingFang SC","Noto Sans CJK SC",sans-serif}.page{width:1200px;height:760px;padding:38px 48px 42px;position:relative}.top{height:116px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ded4c3}.top h1{margin:0;font-size:34px;line-height:1.16;letter-spacing:-1.2px;font-weight:750}.bot{width:106px;height:106px;object-fit:contain;display:block;margin-right:9px}.route{height:220px;padding-top:26px;display:flex;align-items:stretch;gap:12px}.step{height:158px;border:1px solid #ded4c3;background:#fffdf8;border-radius:22px;padding:18px 17px;width:251px}.step strong{display:block;font-size:19px;line-height:1.25;margin-bottom:12px}.step p{font-size:15px;line-height:1.55;margin:0;color:#514c43}.arrow{width:22px;align-self:center;height:2px;background:#c97820;position:relative;margin-top:-60px}.arrow:after{content:"";position:absolute;right:-1px;top:-4px;width:9px;height:9px;border-top:2px solid #c97820;border-right:2px solid #c97820;transform:rotate(45deg)}.note{width:255px;height:158px;background:#fff1dd;border:1px solid #e3b77d;border-radius:22px;padding:18px}.note strong{font-size:19px;display:block;margin-bottom:11px}.note p{margin:0;font-size:15px;line-height:1.55;color:#514c43}.diagnosis{height:294px;border:1px solid #ded4c3;border-radius:24px;background:#fffdf8;padding:18px 20px 20px}.diagnosis h2{font-size:20px;margin:0 0 14px;line-height:1.2}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}.issue{height:92px;border:1px solid #e5dccd;border-radius:16px;padding:12px 15px;display:grid;grid-template-columns:116px 1fr;column-gap:9px;align-items:start}.issue b{font-size:16px;line-height:1.45}.issue span{font-size:15px;line-height:1.45;color:#514c43}.issue .fix{grid-column:2;color:#a85517;font-weight:650}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#c97820;margin:0 7px 2px 0}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="top"><h1>例程管理与自动化排错</h1><img class="bot" src="bots/hexagone-ambre.png"></header>
+  <section class="route">
+    <article class="step"><strong>查状态与时区</strong><p>Details 确认非 Paused<br>手机看 Active</p><p>“设置 &gt; Bot &gt; Timezone”<br>手动选时区</p></article>
+    <i class="arrow"></i>
+    <article class="step"><strong>定时触发时机</strong><p>只等下个周期</p><p>即时测逻辑点 Test</p></article>
+    <i class="arrow"></i>
+    <article class="step"><strong>校验 Webhook</strong><p>POST 带 Authorization:<br>Bearer &lt;key&gt;</p><p>200 仅代表入队<br>结果去聊天窗口看</p></article>
+    <i class="arrow"></i>
+    <article class="note"><strong>收窄 Slack 触发</strong><p>必须限频道与过滤词</p><p>防闲聊几小时烧光配额</p></article>
+  </section>
+  <section class="diagnosis">
+    <h2><span class="dot"></span>手机端“运行历史”</h2>
+    <div class="grid">
+      <article class="issue"><b>无动静</b><span>Paused/未到点/时区偏差</span><span class="fix">查 Active，点 Test，校对 Timezone</span></article>
+      <article class="issue"><b>401/403</b><span>漏 Token/密钥重置/例程已删</span><span class="fix">重新复制 header 覆盖配置</span></article>
+      <article class="issue"><b>Slack 无回应</b><span>旧消息/频道或词未命中</span><span class="fix">只认新消息，核对频道白名单与短语</span></article>
+      <article class="issue"><b>配额消耗快</b><span>间隔过短/大群无过滤词</span><span class="fix">暂停例程，拉长间隔，限定运维频道</span></article>
+    </div>
+  </section>
+</main>
+</body>
+</html>
