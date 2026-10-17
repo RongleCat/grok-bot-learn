@@ -34,7 +34,7 @@ onBeforeUnmount(() => {
         <div ref="root" class="tz-mp" @mouseenter="enter" @mouseleave="leave">
           <button type="button" class="tz-link" :aria-expanded="open" aria-haspopup="true" @click="toggle">公众号「铁柱AGI」</button>
           <div v-show="open" class="tz-pop" role="dialog" aria-label="公众号「铁柱AGI」二维码">
-            <img :src="withBase('/qr-mp.png')" width="148" height="148" alt="公众号「铁柱AGI」二维码" />
+            <img :src="withBase('/mp-search.png')" width="720" height="262" alt="微信搜一搜：铁柱AGI" />
           </div>
         </div>
         <span class="tz-sep" aria-hidden="true"></span>
@@ -142,8 +142,9 @@ onBeforeUnmount(() => {
 .tz-pop img {
   display: block;
   max-width: none;
-  width: 148px;
-  height: 148px;
+  width: 300px;
+  height: auto;
+  border-radius: 6px;
 }
 .tz-note {
   margin: 0;
@@ -157,6 +158,17 @@ onBeforeUnmount(() => {
   }
   .tz-link {
     font-size: 13px;
+  }
+  .tz-pop {
+    left: 0;
+    transform: none;
+    padding: 8px;
+  }
+  .tz-pop::after {
+    left: 48px;
+  }
+  .tz-pop img {
+    width: min(260px, calc(100vw - 48px));
   }
 }
 </style>
