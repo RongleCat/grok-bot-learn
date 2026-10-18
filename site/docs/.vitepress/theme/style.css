@@ -623,3 +623,47 @@
     padding: 24px;
   }
 }
+
+.VPNavBarMenuLink[href='/group'],
+.tz-nav-pill {
+  display: inline-flex;
+  align-self: center;
+  align-items: center;
+  height: 32px;
+  margin-left: 8px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: #0a0a0c;
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 32px;
+  transition: background 0.2s;
+}
+.VPNavBarMenuLink[href='/group']:hover,
+.tz-nav-pill:hover {
+  background: #2a2a2e;
+}
+.tz-nav-pill {
+  margin: 0 4px 0 8px;
+  padding: 0 14px;
+  height: 30px;
+  font-size: 13px;
+  line-height: 30px;
+}
+@media (min-width: 768px) {
+  .tz-nav-pill {
+    display: none;
+  }
+}
+.VPNavScreenMenuLink[href='/group'] {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 12px 0;
+  border-bottom: 0;
+  border-radius: 999px;
+  background: #0a0a0c;
+  color: #fff !important;
+  font-weight: 600;
+}

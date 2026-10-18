@@ -158,6 +158,7 @@ export default defineConfig({
       { text: '案例库', link: '/cases/' },
       { text: '答疑群', link: '/group' }
     ],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/RongleCat/grok-bot-learn', ariaLabel: 'GitHub' }],
     sidebar,
     search: { provider: 'local' },
     outline: { label: '本页', level: [2, 3] },
