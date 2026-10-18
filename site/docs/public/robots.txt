@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /s/
 
-Sitemap: https://bot.tiezhu.si/sitemap.xml
+Sitemap: https://bot.fmcat.top/sitemap.xml

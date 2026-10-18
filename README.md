@@ -1,6 +1,6 @@
 # Grok Bot 新手指南
 
-https://bot.tiezhu.si 的源码，社区非官方新手指南，作者铁柱AGI（X @cgnot996）。
+https://bot.fmcat.top 的源码，社区非官方新手指南，作者铁柱AGI（X @cgnot996）。
 
 - 站点：VitePress，源文件在 `site/docs/`，信息图和案例图在 `site/docs/public/`
 - 构建：`cd site && npm install && npm run build`

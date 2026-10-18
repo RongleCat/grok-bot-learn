@@ -1,6 +1,6 @@
 import { chromium } from 'playwright'
 const S = '/workspace/grok-bot-learn/shots/'
-const base = 'https://bot.tiezhu.si'
+const base = 'https://bot.fmcat.top'
 const b = await chromium.launch()
 const p = await b.newPage({ viewport: { width: 1440, height: 900 } })
 await p.goto(base + '/', { waitUntil: 'networkidle' })

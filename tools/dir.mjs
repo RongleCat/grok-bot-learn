@@ -2,7 +2,7 @@ import { chromium } from 'playwright'
 const S = '/workspace/grok-bot-learn/shots/'
 const b = await chromium.launch()
 const p = await b.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 })
-await p.goto('https://bot.tiezhu.si/', { waitUntil: 'networkidle' })
+await p.goto('https://bot.fmcat.top/', { waitUntil: 'networkidle' })
 await p.waitForTimeout(3000)
 const o = await p.locator('.gh-orb').boundingBox()
 const c = { x: o.x - 20, y: o.y - 20, width: o.width + 40, height: o.height + 40 }

@@ -1,5 +1,7 @@
 const SCRIPT = 'https://cloud.umami.is/script.js'
 const SEND = 'https://gateway.umami.is/api/send'
+const HOME = 'https://bot.fmcat.top'
+const OLD = new Set(['bot.tiezhu.si', 'www.bot.tiezhu.si'])
 
 const MOVED = {
   '/guide/00-what-is': '/part1/01-what-is',
@@ -122,6 +124,9 @@ async function ranged(request, res) {
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url)
+    if (OLD.has(url.hostname)) {
+      return new Response(null, { status: 301, headers: { Location: HOME + url.pathname + url.search, 'Cache-Control': 'public, max-age=3600' } })
+    }
     const proto = request.headers.get('x-forwarded-proto') || url.protocol.replace(':', '')
     if (proto === 'http') {
       url.protocol = 'https:'
@@ -138,16 +143,11 @@ export default {
     if (/\.mp4$/i.test(url.pathname) && res.status === 200) {
       const r = request.headers.has('Range') && request.method === 'GET' ? await ranged(request, res) : { body: res.body, status: 200, headers: new Headers(res.headers) }
       r.headers.set('Accept-Ranges', 'bytes')
-      if (url.hostname === 'bot.tiezhu.si') r.headers.set('Strict-Transport-Security', 'max-age=31536000')
-      else if (url.hostname.endsWith('.pages.dev')) r.headers.set('X-Robots-Tag', 'noindex')
+      if (url.hostname.endsWith('.pages.dev')) r.headers.set('X-Robots-Tag', 'noindex')
       return new Response(r.body, { status: r.status, headers: r.headers })
     }
     const h = new Headers(res.headers)
-    if (url.hostname === 'bot.tiezhu.si') {
-      h.set('Strict-Transport-Security', 'max-age=31536000')
-    } else if (url.hostname.endsWith('.pages.dev')) {
-      h.set('X-Robots-Tag', 'noindex')
-    }
+    if (url.hostname.endsWith('.pages.dev')) h.set('X-Robots-Tag', 'noindex')
     return new Response(res.body, { status: res.status, statusText: res.statusText, headers: h })
   }
 }

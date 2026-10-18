@@ -2,7 +2,7 @@ import { defineConfig, type HeadConfig } from 'vitepress'
 import side from './sidebar.json'
 import seo from './seo.json'
 
-const SITE = 'https://bot.tiezhu.si'
+const SITE = 'https://bot.fmcat.top'
 const NAME = 'Grok Bot 新手指南'
 const HOME_TITLE = 'Grok Bot 新手指南：Grok Bot 中文教程与实战案例'
 const OG_IMAGE = `${SITE}/og-share.png`

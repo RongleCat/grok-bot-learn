@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-SITE="https://bot.tiezhu.si"
+SITE="https://bot.fmcat.top"
 ENV="$HOME/.agents/secrets/baidu.env"
 if [ ! -f "$ENV" ]; then
   echo "missing $ENV (needs BAIDU_PUSH_TOKEN from 百度搜索资源平台 > 普通收录 > API提交)" >&2
