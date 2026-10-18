@@ -113,13 +113,27 @@ export default defineConfig({
     } else {
       const seg = rel.split('/')[0]
       const first = (side as Record<string, string[][]>)[seg]?.[0]?.[1]
-      const part = names[seg] && first ? { name: names[seg], item: SITE + first } : seg === 'cases' && rel !== 'cases/index.md' ? { name: '案例库', item: SITE + '/cases/' } : null
+      const part = names[seg] && first ? { name: names[seg], item: SITE + first } : seg === 'cases' && rel !== 'cases/index.md' ? { name: '案例库', item: SITE + '/cases/' } : seg === 'ecosystem' && rel !== 'ecosystem/index.md' ? { name: '周边生态', item: SITE + '/ecosystem/' } : null
       const crumbs = [{ name: NAME, item: SITE + '/' }, ...(part ? [part] : []), { name: pageData.title, item: url }]
       graph.push({
         '@type': 'BreadcrumbList',
         itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item }))
       })
-      if (seg !== 'group.md' && seg !== 'xhs.md') {
+      if (rel === 'ecosystem/grok-bot-clipper.md') {
+        graph.push({
+          '@type': 'SoftwareApplication',
+          name: 'Grok Bot Clipper',
+          description: desc,
+          url,
+          applicationCategory: 'BrowserApplication',
+          operatingSystem: 'Chrome, Edge, Firefox',
+          softwareVersion: '0.4.0',
+          inLanguage: 'zh-CN',
+          image: OG_IMAGE,
+          author: AUTHOR,
+          sameAs: 'https://github.com/RongleCat/grok-bot-clipper'
+        })
+      } else if (seg !== 'group.md' && seg !== 'xhs.md' && seg !== 'ecosystem') {
         graph.push({
           '@type': 'TechArticle',
           headline: pageData.title,
@@ -156,6 +170,7 @@ export default defineConfig({
       { text: '进阶篇', link: '/part3/19-orchestration' },
       { text: '落地篇', link: '/part4/23-enterprise' },
       { text: '案例库', link: '/cases/' },
+      { text: '周边生态', link: '/ecosystem/', activeMatch: '^/ecosystem/' },
       { text: '答疑群', link: '/group' }
     ],
     socialLinks: [{ icon: 'github', link: 'https://github.com/RongleCat/grok-bot-learn', ariaLabel: 'GitHub' }],

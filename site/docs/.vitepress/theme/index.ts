@@ -2,6 +2,8 @@ import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import GrokOrb from './GrokOrb.vue'
 import Home from './Home.vue'
+import EcoIndex from './EcoIndex.vue'
+import ClipperLanding from './ClipperLanding.vue'
 import JoinCard from './JoinCard.vue'
 import DocEndCard from './DocEndCard.vue'
 import NavGroupPill from './NavGroupPill.vue'
@@ -24,6 +26,8 @@ export default {
     app.component('GrokOrb', GrokOrb)
     app.component('Home', Home)
     app.component('JoinCard', JoinCard)
+    app.component('EcoIndex', EcoIndex)
+    app.component('ClipperLanding', ClipperLanding)
     if (typeof window !== 'undefined') watchGroupClicks(router)
   }
 }

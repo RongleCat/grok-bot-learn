@@ -96,6 +96,29 @@ async function send(request) {
   })
 }
 
+async function ranged(request, res) {
+  const m = /^bytes=(\d*)-(\d*)$/.exec(request.headers.get('Range') || '')
+  const buf = new Uint8Array(await res.arrayBuffer())
+  const size = buf.byteLength
+  const h = new Headers(res.headers)
+  h.set('Accept-Ranges', 'bytes')
+  let start = m && m[1] !== '' ? Number(m[1]) : NaN
+  let end = m && m[2] !== '' ? Number(m[2]) : size - 1
+  if (m && m[1] === '' && m[2] !== '') {
+    start = Math.max(0, size - Number(m[2]))
+    end = size - 1
+  }
+  end = Math.min(end, size - 1)
+  if (!m || isNaN(start) || start > end || start >= size) {
+    h.set('Content-Range', `bytes */${size}`)
+    h.delete('Content-Length')
+    return { body: null, status: 416, headers: h }
+  }
+  h.set('Content-Range', `bytes ${start}-${end}/${size}`)
+  h.set('Content-Length', String(end - start + 1))
+  return { body: buf.subarray(start, end + 1), status: 206, headers: h }
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url)
@@ -112,6 +135,13 @@ export default {
     const to = moved(url.pathname)
     if (to) return Response.redirect(new URL(to, url.origin).toString(), 301)
     const res = await env.ASSETS.fetch(request)
+    if (/\.mp4$/i.test(url.pathname) && res.status === 200) {
+      const r = request.headers.has('Range') && request.method === 'GET' ? await ranged(request, res) : { body: res.body, status: 200, headers: new Headers(res.headers) }
+      r.headers.set('Accept-Ranges', 'bytes')
+      if (url.hostname === 'bot.tiezhu.si') r.headers.set('Strict-Transport-Security', 'max-age=31536000')
+      else if (url.hostname.endsWith('.pages.dev')) r.headers.set('X-Robots-Tag', 'noindex')
+      return new Response(r.body, { status: r.status, headers: r.headers })
+    }
     const h = new Headers(res.headers)
     if (url.hostname === 'bot.tiezhu.si') {
       h.set('Strict-Transport-Security', 'max-age=31536000')
