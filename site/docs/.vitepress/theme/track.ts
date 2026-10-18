@@ -21,7 +21,15 @@ function sourceOf(a: Element) {
   return 'link'
 }
 
-export function watchGroupClicks() {
+let here = ''
+
+export function watchGroupClicks(router: { onAfterRouteChange?: (to: string) => unknown }) {
+  here = location.pathname
+  const prev = router.onAfterRouteChange
+  router.onAfterRouteChange = (to: string) => {
+    here = new URL(to, location.href).pathname
+    return prev?.(to)
+  }
   document.addEventListener(
     'click',
     (e) => {
@@ -33,7 +41,7 @@ export function watchGroupClicks() {
       try {
         sessionStorage.setItem('tz-from', from)
       } catch {}
-      track('group-click', { from, page: location.pathname })
+      track('group-click', { from, page: here })
     },
     true
   )

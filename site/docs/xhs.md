@@ -3,6 +3,7 @@ title: 从零上手 Grok Bot
 description: 这是我建的 Grok Bot 社区非官方学习站，带完全小白搞懂这个自带云电脑的 AI 同事，从选订阅、装软件到交代日常任务，看这一页就能跟着做起来。
 sidebar: false
 aside: false
+outline: false
 prev: false
 next: false
 ---

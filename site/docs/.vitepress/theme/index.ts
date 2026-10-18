@@ -18,10 +18,10 @@ export default {
       'doc-footer-before': () => h(DocEndCard),
       'layout-bottom': () => h(SiteFooter)
     }),
-  enhanceApp({ app }) {
+  enhanceApp({ app, router }) {
     app.component('GrokOrb', GrokOrb)
     app.component('Home', Home)
     app.component('JoinCard', JoinCard)
-    if (typeof window !== 'undefined') watchGroupClicks()
+    if (typeof window !== 'undefined') watchGroupClicks(router)
   }
 }
