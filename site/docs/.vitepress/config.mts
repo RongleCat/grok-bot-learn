@@ -60,7 +60,7 @@ export default defineConfig({
   srcExclude: ['admin/**', 'advanced/**', 'appendix/**', 'core/**', 'guide/**', 'resources/**', 'start/**', 'zz-bots.md', 'cases/outdated.md'],
   sitemap: {
     hostname: SITE,
-    transformItems: (items) => items.filter((i) => !/404/.test(i.url)).map((i) => ({ ...i, changefreq: 'weekly', priority: i.url === '' || i.url === SITE + '/' ? 1.0 : 0.8 }))
+    transformItems: (items) => items.filter((i) => !/404/.test(i.url) && !/(^|\/)xhs$/.test(i.url)).map((i) => ({ ...i, changefreq: 'weekly', priority: i.url === '' || i.url === SITE + '/' ? 1.0 : 0.8 }))
   },
   transformPageData(pageData) {
     const rel = pageData.relativePath
@@ -119,7 +119,7 @@ export default defineConfig({
         '@type': 'BreadcrumbList',
         itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item }))
       })
-      if (seg !== 'group.md') {
+      if (seg !== 'group.md' && seg !== 'xhs.md') {
         graph.push({
           '@type': 'TechArticle',
           headline: pageData.title,
@@ -135,6 +135,7 @@ export default defineConfig({
         })
       }
     }
+    if (rel === 'xhs.md') head.unshift(['meta', { name: 'robots', content: 'noindex, follow' }])
     head.push(['script', { type: 'application/ld+json' }, JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })])
     return head
   },
@@ -154,7 +155,8 @@ export default defineConfig({
       { text: '案例篇', link: '/part2/12-content' },
       { text: '进阶篇', link: '/part3/19-orchestration' },
       { text: '落地篇', link: '/part4/23-enterprise' },
-      { text: '案例库', link: '/cases/' }
+      { text: '案例库', link: '/cases/' },
+      { text: '答疑群', link: '/group' }
     ],
     sidebar,
     search: { provider: 'local' },

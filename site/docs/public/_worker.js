@@ -106,6 +106,9 @@ export default {
     }
     if (url.pathname === '/s/a.js') return script(request, ctx)
     if (url.pathname === '/s/api/send') return send(request)
+    if (/^\/xhs\/?$/i.test(url.pathname) && url.pathname !== '/xhs') {
+      return Response.redirect(new URL('/xhs' + url.search, url.origin).toString(), 301)
+    }
     const to = moved(url.pathname)
     if (to) return Response.redirect(new URL(to, url.origin).toString(), 301)
     const res = await env.ASSETS.fetch(request)

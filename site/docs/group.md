@@ -26,8 +26,7 @@ next: false
 
 ## 怎么加入
 
-<div class="tz-join">
-<div class="tz-join-text">
+<JoinCard from="group">
 
 加我个人微信 `AI_Tiezhu`。
 
@@ -35,6 +34,8 @@ next: false
 
 也可以直接扫码加我。
 
-</div>
-<img class="tz-join-qr" src="/qr-wechat.png" width="168" height="168" alt="铁柱的个人微信二维码" />
-</div>
+从小红书过来的朋友，加微信时验证消息写「小红书」。
+
+</JoinCard>
+
+还没准备好？[先从第 1 章看起](/part1/01-what-is)

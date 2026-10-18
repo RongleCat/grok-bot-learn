@@ -74,6 +74,16 @@ const tints = ['#eaf3fe', '#fef1e4', '#e6f8ef', '#f1ebfe']
     </section>
 
     <section class="gh-sec">
+      <div class="gh-group" data-from="home">
+        <div>
+          <h2>{{ copy.groupTitle }}</h2>
+          <p>{{ copy.groupText }}</p>
+        </div>
+        <a class="gh-btn primary" :href="withBase('/group')">{{ copy.groupBtn }}</a>
+      </div>
+    </section>
+
+    <section class="gh-sec">
       <h2>{{ copy.loopTitle }}</h2>
       <ol class="gh-loop">
         <li v-for="(s, i) in copy.loop" :key="s.k">
