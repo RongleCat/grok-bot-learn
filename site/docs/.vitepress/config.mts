@@ -165,11 +165,18 @@ export default defineConfig({
   ],
   themeConfig: {
     nav: [
-      { text: '使用手册', link: '/part1/01-what-is' },
-      { text: '案例篇', link: '/part2/12-content' },
-      { text: '进阶篇', link: '/part3/19-orchestration' },
-      { text: '落地篇', link: '/part4/23-enterprise' },
+      {
+        text: '教程',
+        activeMatch: '^/part[1-4]/',
+        items: [
+          { text: '使用手册', link: '/part1/01-what-is', activeMatch: '^/part1/' },
+          { text: '案例篇', link: '/part2/12-content', activeMatch: '^/part2/' },
+          { text: '进阶篇', link: '/part3/19-orchestration', activeMatch: '^/part3/' },
+          { text: '落地篇', link: '/part4/23-enterprise', activeMatch: '^/part4/' }
+        ]
+      },
       { text: '案例库', link: '/cases/' },
+      { text: 'Bot 直聘', link: '/bots/', activeMatch: '^/bots/' },
       { text: '周边生态', link: '/ecosystem/', activeMatch: '^/ecosystem/' },
       { text: '答疑群', link: '/group' }
     ],

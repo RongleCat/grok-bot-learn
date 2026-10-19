@@ -4,6 +4,7 @@ import GrokOrb from './GrokOrb.vue'
 import Home from './Home.vue'
 import EcoIndex from './EcoIndex.vue'
 import ClipperLanding from './ClipperLanding.vue'
+import BotHire from './BotHire.vue'
 import JoinCard from './JoinCard.vue'
 import DocEndCard from './DocEndCard.vue'
 import NavGroupPill from './NavGroupPill.vue'
@@ -28,6 +29,7 @@ export default {
     app.component('JoinCard', JoinCard)
     app.component('EcoIndex', EcoIndex)
     app.component('ClipperLanding', ClipperLanding)
+    app.component('BotHire', BotHire)
     if (typeof window !== 'undefined') watchGroupClicks(router)
   }
 }
