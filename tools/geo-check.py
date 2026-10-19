@@ -244,7 +244,7 @@ def llms_report(site, sitemap_urls):
     rep['sections'] = len(re.findall(r'(?m)^##\s+\S', t))
     found = set(u.rstrip('/') for u in re.findall(r'\]\((https?://[^)\s]+)\)', t))
     rep['links'] = len(found)
-    norm = [u.rstrip('/') for u in sitemap_urls]
+    norm = [u.rstrip('/') for u in sitemap_urls if u.rstrip('/') != site]
     missing = [u for u in norm if u not in found and u.replace('.md', '') not in found and u + '.md' not in found]
     rep['missing_from_llms'] = missing
     rep['coverage'] = round(1 - len(missing) / max(len(norm), 1), 3)

@@ -332,7 +332,7 @@ export default defineConfig({
     outline: { label: '本页', level: [2, 3] },
     docFooter: { prev: '上一章', next: '下一章' },
     returnToTopLabel: '回到顶部',
-    lastUpdated: { text: '最后更新', formatOptions: { dateStyle: 'medium' } },
+    lastUpdated: { text: '最后更新', formatOptions: { dateStyle: 'medium', forceLocale: true } },
     sidebarMenuLabel: '目录'
   }
 })
