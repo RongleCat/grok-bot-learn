@@ -6,6 +6,7 @@
  "bots": [
   {
    "slug": "xiaowan",
+   "primary": true,
    "name": "赛博小晚",
    "desc": "理清混乱、澄清变量与搭结构，为你的IP打造和自媒体运营找准杠杆。",
    "lines": [

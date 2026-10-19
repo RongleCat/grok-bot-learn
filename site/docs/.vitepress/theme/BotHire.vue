@@ -3,6 +3,13 @@ import { ref } from 'vue'
 import data from './bots.json'
 
 const bots = data.bots
+const lead = bots.find((b) => 'primary' in b && b.primary) || bots[0]
+const rest = bots.filter((b) => b !== lead)
+const half = Math.ceil(rest.length / 2)
+const crowd = [...rest.slice(0, half), lead, ...rest.slice(half)].map((b, i) => {
+  const d = Math.abs(i - half)
+  return { b, k: d ? Math.max(0.8, 1.3 - d * 0.1) : 1.5, c: !d }
+})
 const said = ref<Record<string, string>>({})
 const open = ref('')
 const hop = ref<Record<string, number>>({})
@@ -47,9 +54,9 @@ function focus(slug: string) {
   <div class="hire">
     <section class="hire-hero">
       <div class="hire-crowd" aria-hidden="true">
-        <svg v-for="b in bots.slice(0, 5)" :key="b.slug" :viewBox="b.vb" class="hire-mini">
-          <path :d="b.head" :fill="b.color" />
-          <path v-for="(e, k) in b.eyes" :key="k" :d="e" fill="#fff" />
+        <svg v-for="m in crowd" :key="m.b.slug" :viewBox="m.b.vb" class="hire-mini" :class="{ c: m.c }" :style="{ '--k': m.k, '--t': m.b.color }">
+          <path :d="m.b.head" :fill="m.b.color" />
+          <path v-for="(e, k) in m.b.eyes" :key="k" :d="e" fill="#fff" />
         </svg>
       </div>
       <h1>{{ data.title }}</h1>
@@ -100,23 +107,22 @@ function focus(slug: string) {
   padding: 32px 0 48px;
 }
 .hire-crowd {
+  --u: min(52px, 8vw);
   display: flex;
+  justify-content: center;
   align-items: flex-end;
-  gap: 6px;
+  gap: min(6px, 0.9vw);
+  width: 100%;
 }
 .hire-mini {
-  width: 52px;
-  height: 52px;
+  flex: none;
+  width: calc(var(--u) * var(--k, 1));
+  height: calc(var(--u) * var(--k, 1));
   overflow: visible;
 }
-.hire-mini:nth-child(3) {
-  width: 76px;
-  height: 76px;
-}
-.hire-mini:nth-child(2),
-.hire-mini:nth-child(4) {
-  width: 62px;
-  height: 62px;
+.hire-mini.c {
+  margin: 0 min(6px, 0.9vw);
+  filter: drop-shadow(0 10px 14px color-mix(in srgb, var(--t) 30%, transparent));
 }
 .hire-hero h1 {
   margin: 24px 0 0;
