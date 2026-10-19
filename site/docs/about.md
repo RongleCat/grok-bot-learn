@@ -19,7 +19,7 @@ next: false
 
 ## 开源项目
 
-- [Grok Bot Clipper](https://github.com/RongleCat/grok-bot-clipper)：非官方 Grok Bot 浏览器插件，支持网页采集、截图、社交内容收集后发给你的 Bot。本站介绍页见 [插件介绍页](/ecosystem/grok-bot-clipper)。
+- [Grok Bot Clipper](https://github.com/RongleCat/grok-bot-clipper)：非官方 Grok Bot 浏览器插件，支持网页采集、截图、社交内容收集后发给你的 Bot。详见[本站介绍页](/ecosystem/grok-bot-clipper)。
 - [awesome-grok-bot](https://github.com/RongleCat/awesome-grok-bot)：中英双语 Grok Bot 资源合集。
 - [Grok App](https://grok-app.com)：本地 Grok Build 命令行的开源桌面工作台。
 
