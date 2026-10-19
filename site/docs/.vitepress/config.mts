@@ -13,7 +13,7 @@ const HOME_TITLE = 'Grok Bot 新手指南：Grok Bot 中文教程与实战案例
 const OG_IMAGE = `${SITE}/og-share.png`
 const AUTHOR_ID = SITE + '/#author'
 const SITE_ID = SITE + '/#website'
-const PERSON = { '@type': 'Person', '@id': AUTHOR_ID, name: '铁柱AGI', url: 'https://x.com/cgnot996', sameAs: ['https://x.com/cgnot996', 'https://github.com/RongleCat'], knowsAbout: ['Grok Bot', 'AI Agent'] }
+const PERSON = { '@type': 'Person', '@id': AUTHOR_ID, name: '铁柱AGI', url: SITE + '/about', sameAs: ['https://x.com/cgnot996', 'https://github.com/RongleCat'], knowsAbout: ['Grok Bot', 'AI Agent'] }
 const AUTHOR = { '@id': AUTHOR_ID }
 const DOCS = resolve(__dirname, '..')
 const LLMS_NOTE = '本文件是供 AI 助手与搜索引擎读取的站点索引。本站为社区非官方教程，作者铁柱AGI，与 xAI、Cursor 无隶属关系。'
@@ -129,7 +129,7 @@ export default defineConfig({
     L.push('## 案例库', '', ...cases.map((r) => line(r)), '')
     L.push('## Bot 直聘', '', `- [Bot 直聘](${SITE}/bots/): ${descs['bots/index.md'] || (bots as any).lead}`, ...(bots as any).bots.map((b: any) => `- [${b.name}](${b.url}): ${b.desc}`), '')
     L.push('## 周边生态', '', `- [周边生态](${SITE}/ecosystem/): ${descs['ecosystem/index.md'] || (eco as any).index.lead}`, `- [Grok Bot Clipper 浏览器插件](${SITE}/ecosystem/grok-bot-clipper): ${descs['ecosystem/grok-bot-clipper.md'] || (eco as any).clipper.lead}`, '')
-    L.push('## Optional', '', `- [答疑群](${SITE}/group): ${descs['group.md'] || ''}`, `- [GitHub 源码](https://github.com/RongleCat/grok-bot-learn)`, `- [铁柱AGI on X](https://x.com/cgnot996)`, '')
+    L.push('## Optional', '', `- [关于铁柱AGI](${SITE}/about): ${descs['about.md'] || ''}`, `- [答疑群](${SITE}/group): ${descs['group.md'] || ''}`, `- [GitHub 源码](https://github.com/RongleCat/grok-bot-learn)`, `- [铁柱AGI on X](https://x.com/cgnot996)`, '')
     writeFileSync(join(out, 'llms.txt'), L.join('\n'))
     const F: string[] = [`# ${NAME}`, '', `> ${descs.home}`, '', LLMS_FULL, '', LLMS_NOTE, '']
     for (const rel of docs) {
@@ -264,6 +264,8 @@ export default defineConfig({
             }))
           }
         }))
+      } else if (rel === 'about.md') {
+        graph.push(page('ProfilePage', { mainEntity: AUTHOR }))
       } else if (rel === 'cases/index.md') {
         graph.push(page('CollectionPage'))
       } else if (isDoc(rel)) {

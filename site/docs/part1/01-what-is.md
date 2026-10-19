@@ -11,7 +11,9 @@
 
 ![Grok Bot 是什么：一个自带电脑的 AI 同事](/info/01-what-is.png)
 
-## 产品机制：环境底座与思考模型拆分
+## Grok Bot 的底层运行机制是什么？ {#产品机制-环境底座与思考模型拆分}
+
+**Grok Bot 核心是将常驻云端的 Linux 底座与按需调度的思考模型拆分，配有终端、浏览器和持久文件，即便电脑关机合盖，后台任务照样能在云电脑中继续运行。**
 
 ![产品机制：环境底座与思考模型拆分](/info/01-what-is-s1.png)
 
@@ -28,7 +30,9 @@ xAI 与 Cursor 在 2026 年 8 月 11 日推出 Grok Bot，**核心是把环境�
 
 机制参考 [《1.1 Grok Bot 是什么：一页看懂》](https://jcng5q8n0f3z.feishu.cn/wiki/I04Gw3wEaisftUkBikxcg43rnpc)。
 
-## 共享云电脑的物理边界与接管机制
+## Grok Bot 共享云电脑如何隔离与接管？ {#共享云电脑的物理边界与接管机制}
+
+**同账号所有 Bot 共用云电脑且无法隔离路径与 Cookie，跨任务交接需在 /workspace 存文件，遇输密码或付款等操作可点击 Take over 手动接管。**
 
 ![共享云电脑的物理边界与接管机制](/info/01-what-is-s2.png)
 
@@ -41,7 +45,9 @@ xAI 与 Cursor 在 2026 年 8 月 11 日推出 Grok Bot，**核心是把环境�
 - 输密码、两步验证或付款点 Take over 处理，**切勿在聊天框发明文密码**。
 - 控制本地须单独授权。与本地隔离，去 Settings → General → Agent → Execution on Local Computer 开启，执行时弹窗确认。
 
-## 适合与不适合的任务类型
+## Grok Bot 适合与不适合做哪些任务？ {#适合与不适合的任务类型}
+
+**Grok Bot 适合流程固定、高频重复且需跨工具调用的任务，例如情报巡检与缺陷复现，但不适合即时问答、本地写码及无人工闸门的高危操作。**
 
 ![适合与不适合的任务类型](/info/01-what-is-s3.png)
 
@@ -191,6 +197,8 @@ Never: 在源系统可访问时，严禁依赖自身记忆给出概括
 - [第 6 章 记忆：让 Bot 越用越懂你](/part1/06-memory)
 - [第 7 章 连接应用：插件、邮箱与 Secrets](/part1/07-apps)
 - [第 11 章 权限、安全与人闸](/part1/11-safety)
+- [Grok 和 Grok Bot 有什么区别](/part1/grok-vs-grok-bot)
+- [第 2 章 方案与订阅：先选对档位](/part1/02-plans)
 
 ### 官方页面与文档
 

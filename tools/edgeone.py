@@ -30,7 +30,7 @@ cfg = {
 sec = [{'key': 'X-Content-Type-Options', 'value': 'nosniff'}, {'key': 'Referrer-Policy', 'value': 'strict-origin-when-cross-origin'}, {'key': 'X-Frame-Options', 'value': 'SAMEORIGIN'}]
 cfg['headers'][1]['headers'] += sec
 html = [{'key': 'Content-Type', 'value': 'text/html; charset=utf-8'}]
-for src in ['/', '/part1/:slug', '/part2/:slug', '/part3/:slug', '/part4/:slug', '/cases/:slug', '/cases/', '/bots/', '/ecosystem/', '/ecosystem/grok-bot-clipper', '/group', '/xhs']:
+for src in ['/', '/part1/:slug', '/part2/:slug', '/part3/:slug', '/part4/:slug', '/cases/:slug', '/cases/', '/bots/', '/ecosystem/', '/ecosystem/grok-bot-clipper', '/group', '/about', '/xhs']:
     cfg['headers'].append({'source': src, 'headers': html})
 cfg['headers'].append({'source': '/*.md', 'headers': [{'key': 'Content-Type', 'value': 'text/markdown; charset=utf-8'}]})
 cfg['headers'].append({'source': '/llms.txt', 'headers': [{'key': 'Content-Type', 'value': 'text/plain; charset=utf-8'}]})

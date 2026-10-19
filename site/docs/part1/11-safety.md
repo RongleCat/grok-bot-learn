@@ -289,6 +289,8 @@ Save the review to /workspace/state/reviews/YYYY-WW.md.
 
 ## 延伸阅读
 
+- 相关章节：[第 5 章 共享云电脑：文件、浏览器与接管](/part1/05-computer)
+- 相关章节：[第 25 章 常见问题与排错](/part4/25-faq)
 - 官方文档：[Grok Bot 安全](https://cursor.com/cn/docs/grok-bot/security)
 - 官方文档：[Grok Bot 安全常见问题](https://cursor.com/cn/docs/grok-bot/security-faq)
 - 官方文档：[面向 Teams 和企业版的 Grok Bot](https://cursor.com/cn/docs/grok-bot/teams)

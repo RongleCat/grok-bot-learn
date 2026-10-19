@@ -266,6 +266,8 @@ Webhook 异常排查：
 
 ## 延伸阅读
 
+- 相关章节：[第 8 章 技能与例程：把一次成功变成每天自动跑](/part1/08-skills-routines)
+- 相关章节：[第 10 章 额度与成本：让一周用量撑满一周](/part1/10-usage)
 - 官方文档：[《Cursor Help: Routines》](https://cursor.com/cn/help/grok-bot/routines)
 - 社区原文：[《4.3 触发器与自动化：定时、Webhook、在 X 上派活》](https://jcng5q8n0f3z.feishu.cn/wiki/HHmpwgN4qi86e0kgBvAc1156nkg)
 - 社区原文：[《Grok Bot Webhook + 快捷指令：知识自动入库流水线搭建》](https://jcng5q8n0f3z.feishu.cn/wiki/Kxtxw9gLBiqi0nkhZpCc7le5nrh)

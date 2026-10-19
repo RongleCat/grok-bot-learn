@@ -41,6 +41,8 @@ onBeforeUnmount(() => {
         <a class="tz-link" href="https://x.com/cgnot996" target="_blank" rel="noopener">X @cgnot996</a>
         <span class="tz-sep" aria-hidden="true"></span>
         <a class="tz-link" :href="withBase('/group')">答疑群</a>
+        <span class="tz-sep" aria-hidden="true"></span>
+        <a class="tz-link" :href="withBase('/about')">关于作者</a>
       </nav>
       <p class="tz-note">本站是社区非官方学习站，非 xAI 官方。</p>
     </div>

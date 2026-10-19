@@ -1,4 +1,5 @@
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /s/
 
@@ -18,6 +19,7 @@ User-agent: DuckAssistBot
 User-agent: Amazonbot
 User-agent: meta-externalagent
 User-agent: CCBot
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /s/
 

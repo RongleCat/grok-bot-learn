@@ -424,6 +424,11 @@ Do not send anything else after this until 7:00 the next day unless a task hits 
 
 ## 延伸阅读
 
+### 相关章节
+
+- [第 9 章 群聊与团队 Bot：从一个 Bot 到一组 Bot](/part1/09-group-team)
+- [第 24 章 按岗位组建你的 AI 团队](/part4/24-roles)
+
 ### 官方产品与文档
 - [Grok Bot 官方更新日志](https://x.ai/changelog/bot)
 - [Grok Bot 官方文档库](https://docs.x.ai/grok-bot/bots)

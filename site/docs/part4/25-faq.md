@@ -8,7 +8,9 @@
 
 ![常见问题与排错](/info/25-faq.png)
 
-## 登录与身份验证
+## Grok Bot 登录与绑定账号出问题怎么办？ {#登录与身份验证}
+
+**个人用户通过设置页面或专用链接关联授权，企业席位直接用 Grok 登录，若绑错需找人工客服，遇循环跳回可清 Cookie 用无痕模式认证。**
 
 ### 账号与订阅限制
 Grok Bot 依托 Cursor 运行，与 Grok 手机端付费墙及每周额度限制（Weekly SuperGrok Limit）无关。
@@ -39,7 +41,9 @@ Grok Bot 依托 Cursor 运行，与 Grok 手机端付费墙及每周额度限制
 请检查当前运行环境的网络连通性与 Cursor 身份验证状态，汇报当前登录的用户环境标识，但不要输出任何敏感 Token。
 ```
 
-## 云端电脑与环境恢复
+## Grok Bot 连不上云端电脑该如何恢复？ {#云端电脑与环境恢复}
+
+**遇到断连可先等两分钟重试或彻底重启应用，卡死时点 Recover 存现场重建，而会覆盖快照丢失未同步修改的 Reset 只能作最后兜底手段。**
 
 ![云端电脑与环境恢复](/info/25-faq-s2.png)
 
@@ -70,7 +74,9 @@ Grok Bot 依托 Cursor 运行，与 Grok 手机端付费墙及每周额度限制
 请检查当前云端计算机根目录与工作目录的磁盘占用情况，找出体积超过 200MB 的文件与缓存目录，列出清单供我确认，不要擅自执行任何删除命令。
 ```
 
-## 例程管理与自动化排错
+## Grok Bot 自动化例程不触发该怎么排错？ {#例程管理与自动化排错}
+
+**例程无动静先确认状态非暂停并校对时区与 Test 测试，Webhook 需带鉴权密钥且 200 仅代表入队，Slack 触发必须限定频道白名单与过滤词。**
 
 ![例程管理与自动化排错](/info/25-faq-s3.png)
 
@@ -266,6 +272,8 @@ Notion 报 Action needed 且 Okta SSO 拦截时，**必须用 Take over 在内�
 
 ## 延伸阅读
 
+- 相关章节：[第 5 章 共享云电脑：文件、浏览器与接管](/part1/05-computer)
+- 相关章节：[第 10 章 额度与成本：让一周用量撑满一周](/part1/10-usage)
 - [Grok Bot 常见问题官方解答](https://cursor.com/cn/help/grok-bot/faqs)
 - [Grok Bot 操作与排错指南](https://cursor.com/cn/help/grok-bot/how-to)
 - [Grok Bot 电脑环境管理与灾难恢复](https://cursor.com/cn/help/grok-bot/computer-recovery)

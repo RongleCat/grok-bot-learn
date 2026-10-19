@@ -12,7 +12,9 @@ Grok Bot 运行依托额度。**周用量耗尽且未配置按需保护，云端
 
 ![方案与订阅：先选对档位](/info/02-plans.png)
 
-## 统一订阅全貌：The X Subscription 的四档与免费档
+## 想用 Grok Bot 需要买哪个订阅套餐？ {#统一订阅全貌-the-x-subscription-的四档与免费档}
+
+**统一订阅分为 Plus、Premium、Super 与 Ultra 四档，因 Plus 档完全不含 Grok Bot，跑自动化任务起步必须选择每月 30 美元的 Premium 档。**
 
 ![统一订阅全貌：The X Subscription 的四档与免费档](/info/02-plans-s1.png)
 
@@ -49,7 +51,9 @@ Grok Bot 运行依托额度。**周用量耗尽且未配置按需保护，云端
 
 打开 Grok Bot 桌面客户端，**新建任务能分配云端环境执行，且账单显示为按月扣费的 Premium 状态**即合格。
 
-## 每周共享用量池：额度结算与多端共用机制
+## Grok Bot 每周用量池是如何结算的？ {#每周共享用量池-额度结算与多端共用机制}
+
+**订阅每周提供固定额度池并在多端实时同步，官方模型在网页端、Bot 与 Cursor 补全中按任务量和步数共用扣除，第三方模型则按标价单独扣费。**
 
 ![每周共享用量池：额度结算与多端共用机制](/info/02-plans-s2.png)
 
@@ -76,7 +80,9 @@ The X Subscription 每周给一个固定额度池，到期自动刷新。**Grok 
 
 **常规自动化把日均消耗稳在 10% 到 15%**。每周重置前一天留约 20% 缓冲，且没收到额度告急弹窗，节奏就算刚好。
 
-## 授权互通：Cursor 套餐与 SuperGrok 关联规则
+## Cursor 怎么关联 Grok 共享额度？ {#授权互通-cursor-套餐与-supergrok-关联规则}
+
+**Cursor 可直接关联 Grok 账号映射额度，绑定不改原套餐且无额外扣费，额度按两边最高档生效不累加，且配对后终身锁定无法解绑或转移。**
 
 ![授权互通：Cursor 套餐与 SuperGrok 关联规则](/info/02-plans-s3.png)
 
@@ -250,6 +256,9 @@ The X Subscription 统一大订阅在 2026 年 10 月 12 日上线。不主动�
 
 ## 延伸阅读
 
+- 相关章节：[Grok 和 Grok Bot 有什么区别](/part1/grok-vs-grok-bot)
+- 相关章节：[第 10 章 额度与成本：让一周用量撑满一周](/part1/10-usage)
+- 相关章节：[第 25 章 常见问题与排错](/part4/25-faq)
 - 官方文档：[方案和计费](https://cursor.com/cn/help/grok-bot/plans.md)
 - 官方文档：[为 Grok Bot 关联 SuperGrok](https://cursor.com/cn/help/grok-bot/supergrok.md)
 - 官方文档：[在移动端应用中订阅](https://cursor.com/cn/help/grok-bot/mobile-purchase.md)
