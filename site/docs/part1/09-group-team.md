@@ -272,6 +272,11 @@ Zach（@1999Zach22）以 1 船长带 12 岗位，**自动化闭环必须设待�
 
 ## 延伸阅读
 
+### 相关章节
+
+- [第 22 章 接入飞书与微信](/part3/22-feishu-wechat)
+- [第 24 章 按岗位组建你的 AI 团队](/part4/24-roles)
+
 ### 官方文档
 - [群组聊天与机器人间消息](https://cursor.com/cn/help/grok-bot/group-chats)
 - [团队 Bot](https://cursor.com/cn/help/grok-bot/team-bots)

@@ -295,6 +295,10 @@ Slack 插件是随对话实时调用的读写工具；Slack 触发器是例程�
 
 ## 延伸阅读
 
+### 相关章节
+
+- [第 20 章 可靠的自动化：定时、Webhook 与事件触发](/part3/20-automation)
+
 ### 官方文档
 
 - [《使用 Grok Bot》](https://cursor.com/cn/docs/grok-bot/work.md)

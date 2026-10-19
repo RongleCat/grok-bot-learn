@@ -185,6 +185,13 @@ Never: 在源系统可访问时，严禁依赖自身记忆给出概括
 
 ## 延伸阅读
 
+### 相关章节
+
+- [第 5 章 共享云电脑：文件、浏览器与接管](/part1/05-computer)
+- [第 6 章 记忆：让 Bot 越用越懂你](/part1/06-memory)
+- [第 7 章 连接应用：插件、邮箱与 Secrets](/part1/07-apps)
+- [第 11 章 权限、安全与人闸](/part1/11-safety)
+
 ### 官方页面与文档
 
 - [Grok Bot 快速入门指南](https://cursor.com/cn/docs/grok-bot/get-started)

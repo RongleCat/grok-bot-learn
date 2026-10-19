@@ -205,6 +205,10 @@ Never: 严禁修改我上传的任何源文件，在源系统可访问时严禁�
 
 ## 延伸阅读
 
+### 相关章节
+
+- [第 4 章 交代任务：消息、附件与一次好的交接](/part1/04-handoff)
+
 ### 官方页面
 - [Grok Bot 快速入门 (Get Started)](https://cursor.com/cn/docs/grok-bot/get-started)
 - [入职 (Onboarding)](https://cursor.com/cn/help/grok-bot/onboarding)

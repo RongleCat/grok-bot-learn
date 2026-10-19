@@ -32,3 +32,5 @@ PLAN.md
 *.pre-gcut.md
 *.err
 v4/group/err.txt
+.geo/
+site/.edgeone/
