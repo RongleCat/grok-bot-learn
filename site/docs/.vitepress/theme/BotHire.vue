@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import data from './bots.json'
+import { tidy } from './rich'
 
 const bots = data.bots
 const lead = bots.find((b) => 'primary' in b && b.primary) || bots[0]
@@ -61,7 +62,7 @@ function focus(slug: string) {
         </svg>
       </div>
       <h1>{{ data.title }}</h1>
-      <p>{{ data.lead }}</p>
+      <p class="tz-tidy">{{ tidy(data.lead) }}</p>
     </section>
     <div class="hire-grid">
       <article v-for="b in bots" :key="b.slug" class="hire-card" :style="{ '--tint': b.color }">

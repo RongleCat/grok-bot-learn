@@ -32,6 +32,7 @@ const friends = [
   { shape: 'capsule', color: 'violet', size: 40, x: 130, y: 95 }
 ]
 const tints = ['#eaf3fe', '#fef1e4', '#e6f8ef', '#f1ebfe']
+const segs = (s: string) => s.match(/[^，。；！？]+[，。；！？]*/g) || [s]
 </script>
 
 <template>
@@ -42,14 +43,14 @@ const tints = ['#eaf3fe', '#fef1e4', '#e6f8ef', '#f1ebfe']
         <GrokOrb :size="168" playful class="gh-orb" />
       </div>
       <h1>{{ copy.title }}</h1>
-      <p class="gh-lead">{{ copy.lead }}</p>
+      <p class="gh-lead"><span v-for="(t, i) in segs(copy.lead)" :key="i" class="gh-seg">{{ t }}</span></p>
       <div class="gh-actions">
         <a class="gh-btn primary" :href="withBase('/part1/01-what-is')">{{ copy.primary }}</a>
         <a class="gh-btn" :href="withBase('/cases/')">{{ copy.secondary }}</a>
       </div>
       <a class="gh-notice" :href="withBase('/part1/02-plans')">
         <span class="dot"></span>
-        <span>{{ copy.notice }}</span>
+        <span class="gh-notice-text"><span v-for="(t, i) in segs(copy.notice)" :key="i" class="gh-seg">{{ t }}</span></span>
         <span class="arrow">→</span>
       </a>
     </section>

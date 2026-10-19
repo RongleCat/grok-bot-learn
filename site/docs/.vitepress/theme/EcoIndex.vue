@@ -2,6 +2,7 @@
 import { withBase } from 'vitepress'
 import GrokOrb from './GrokOrb.vue'
 import copy from './ecosystem.json'
+import { tidy } from './rich'
 
 const c = copy.index
 const pages = ['/ecosystem/grok-bot-clipper']
@@ -20,7 +21,7 @@ const trio = [
         <GrokOrb v-for="(o, i) in trio" :key="i" :size="o.size" :shape="o.shape" :color="o.color" :playful="i === 1" />
       </div>
       <h1>{{ c.title }}</h1>
-      <p>{{ c.lead }}</p>
+      <p class="tz-tidy">{{ tidy(c.lead) }}</p>
     </section>
     <div class="eco-grid">
       <a v-for="(it, i) in c.items" :key="it.name" class="eco-card" :href="withBase(pages[i])">

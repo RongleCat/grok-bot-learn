@@ -3,7 +3,7 @@ import { withBase } from 'vitepress'
 import GrokOrb from './GrokOrb.vue'
 import copy from './ecosystem.json'
 import links from './links.json'
-import { rich } from './rich'
+import { rich, tidy } from './rich'
 import { track } from './track'
 
 const c = copy.clipper
@@ -40,8 +40,8 @@ const down = (from: string) => track('clipper-download', { from })
     <section class="cl-hero">
       <span class="cl-meta">{{ c.meta }}</span>
       <h1>Grok Bot Clipper</h1>
-      <p class="cl-slogan">{{ c.slogan }}</p>
-      <p class="cl-lead">{{ c.lead }}</p>
+      <p class="cl-slogan tz-tidy">{{ tidy(c.slogan) }}</p>
+      <p class="cl-lead tz-tidy">{{ tidy(c.lead) }}</p>
       <div class="cl-actions">
         <a class="cl-btn primary" :href="links.clipperDownload" target="_blank" rel="noopener" @click="down('hero')">
           <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
@@ -49,7 +49,7 @@ const down = (from: string) => track('clipper-download', { from })
         </a>
         <a class="cl-btn" :href="links.clipperRepo" target="_blank" rel="noopener">{{ c.source }}</a>
       </div>
-      <p class="cl-unofficial">{{ c.unofficial }}</p>
+      <p class="cl-unofficial tz-tidy">{{ tidy(c.unofficial) }}</p>
       <div class="cl-crew">
         <GrokOrb v-for="(o, i) in crew" :key="i" class="cl-bob" :style="{ animationDelay: `${i * 0.5}s` }" :size="o.size" :shape="o.shape" :color="o.color" :playful="i === 2" />
       </div>
@@ -57,7 +57,7 @@ const down = (from: string) => track('clipper-download', { from })
 
     <section class="cl-sec">
       <h2>{{ c.videoTitle }}</h2>
-      <p class="cl-sub">{{ c.videoLead }}</p>
+      <p class="cl-sub tz-tidy">{{ tidy(c.videoLead) }}</p>
       <div class="cl-videos">
         <figure v-for="(v, i) in videos" :key="v.src" class="cl-video">
           <div class="cl-frame">
@@ -729,6 +729,15 @@ const down = (from: string) => track('clipper-download', { from })
   .cl-btn {
     padding: 12px 22px;
     font-size: 15px;
+  }
+  .cl {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 360px) {
+  .cl-crew {
+    zoom: 0.44;
   }
 }
 </style>
