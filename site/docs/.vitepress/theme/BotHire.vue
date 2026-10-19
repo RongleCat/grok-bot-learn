@@ -4,7 +4,8 @@ import data from './bots.json'
 
 const bots = data.bots
 const lead = bots.find((b) => 'primary' in b && b.primary) || bots[0]
-const rest = bots.filter((b) => b !== lead)
+const side = 2
+const rest = bots.filter((b) => b !== lead).slice(0, side * 2)
 const half = Math.ceil(rest.length / 2)
 const crowd = [...rest.slice(0, half), lead, ...rest.slice(half)].map((b, i) => {
   const d = Math.abs(i - half)
