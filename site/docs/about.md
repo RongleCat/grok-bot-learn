@@ -15,7 +15,7 @@ next: false
 - 百万级项目 FDE 实施中，定期复盘经验。
 - 整理维护社区非官方教程「Grok Bot 新手指南」，源码开源在 [GitHub](https://github.com/RongleCat/grok-bot-learn)。
 - 持续分享 Grok Bot 使用技巧。
-- 建了一个付费的 AI Agent 答疑群，Grok Bot 是群里问得最多的话题，入群方式见 [答疑群](/group)。
+- 建了一个付费的 AI Agent 答疑群，Grok Bot 是群里问得最多的话题，入群方式见 [付费答疑群](/group)。
 
 ## 开源项目
 
@@ -42,7 +42,7 @@ next: false
 - X：[@cgnot996](https://x.com/cgnot996)
 - GitHub：[RongleCat](https://github.com/RongleCat)
 - 微信公众号：铁柱AGI
-- 联系方式：X 私信，或通过 [答疑群页面](/group) 加微信。
+- 联系方式：X 私信，或通过 [付费答疑群页面](/group) 加微信。
 
 ---
 

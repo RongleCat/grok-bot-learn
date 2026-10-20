@@ -1,12 +1,12 @@
 ---
-title: 答疑群
+title: 付费答疑群
 sidebar: false
 aside: false
 prev: false
 next: false
 ---
 
-# 答疑群
+# 付费答疑群
 
 我是铁柱。平时在公众号「铁柱AGI」写点东西，X 账号是 @cgnot996。
 
@@ -28,9 +28,11 @@ next: false
 
 <JoinCard from="group">
 
-加我个人微信 `AI_Tiezhu`。
+**这是付费群，不是免费群。**
 
-**微信加上后，我拉你进群**。
+加我个人微信 `AI_Tiezhu`，费用在微信里问。
+
+我本人通过后亲自拉你进群。
 
 也可以直接扫码加我。
 

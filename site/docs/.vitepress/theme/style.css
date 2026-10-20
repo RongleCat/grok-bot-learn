@@ -870,14 +870,14 @@ summary,
   }
   .VPNavBarTitle .title {
     gap: 8px;
-    font-size: 15px;
+    font-size: 14px;
   }
   .tz-nav-pill {
-    margin: 0 0 0 4px;
-    padding: 0 12px;
+    margin: 0 0 0 2px;
+    padding: 0 10px;
   }
 }
-@media (max-width: 359px) {
+@media (max-width: 374px) {
   .tz-nav-pill {
     display: none;
   }

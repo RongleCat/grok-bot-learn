@@ -1,12 +1,12 @@
 {
- "join_title": "加入我的答疑群",
- "join_text": "付费群，聊 AI Agent 与 Grok Bot。加微信 `AI_Tiezhu` 问费用，我拉你进群。",
+ "join_title": "加入我的付费答疑群",
+ "join_text": "这是付费群，聊 AI Agent 与 Grok Bot；加我个人微信 `AI_Tiezhu`，费用在微信里问，我加你后亲自拉你进群。",
  "join_xhs": "验证消息写「小红书」，我好知道你从哪来。",
  "copy_btn": "复制微信号",
  "copied": "已复制",
  "qr_hint": "微信内长按可识别，其他浏览器请复制微信号去微信添加。",
  "doc_end_generic": "这一章卡住了别死磕，群里常问的就是这类问题，欢迎来问。",
- "doc_end_btn": "来答疑群问问",
+ "doc_end_btn": "来付费答疑群问问",
  "doc_end": {
   "/part1/02-plans": "拿不准订阅该选哪一档？群里常问选档细节，随时来问我。",
   "/part1/05-computer": "云电脑搞不明白或被重置？群里常聊虚机配置，随时来问。",

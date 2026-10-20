@@ -129,7 +129,7 @@ export default defineConfig({
     L.push('## 案例库', '', ...cases.map((r) => line(r)), '')
     L.push('## Bot 直聘', '', `- [Bot 直聘](${SITE}/bots/): ${descs['bots/index.md'] || (bots as any).lead}`, ...(bots as any).bots.map((b: any) => `- [${b.name}](${b.url}): ${b.desc}`), '')
     L.push('## 周边生态', '', `- [周边生态](${SITE}/ecosystem/): ${descs['ecosystem/index.md'] || (eco as any).index.lead}`, `- [Grok Bot Clipper 浏览器插件](${SITE}/ecosystem/grok-bot-clipper): ${descs['ecosystem/grok-bot-clipper.md'] || (eco as any).clipper.lead}`, '')
-    L.push('## Optional', '', `- [关于铁柱AGI](${SITE}/about): ${descs['about.md'] || ''}`, `- [答疑群](${SITE}/group): ${descs['group.md'] || ''}`, `- [GitHub 源码](https://github.com/RongleCat/grok-bot-learn)`, `- [铁柱AGI on X](https://x.com/cgnot996)`, '')
+    L.push('## Optional', '', `- [关于铁柱AGI](${SITE}/about): ${descs['about.md'] || ''}`, `- [付费答疑群](${SITE}/group): ${descs['group.md'] || ''}`, `- [GitHub 源码](https://github.com/RongleCat/grok-bot-learn)`, `- [铁柱AGI on X](https://x.com/cgnot996)`, '')
     writeFileSync(join(out, 'llms.txt'), L.join('\n'))
     const F: string[] = [`# ${NAME}`, '', `> ${descs.home}`, '', LLMS_FULL, '', LLMS_NOTE, '']
     for (const rel of docs) {
@@ -326,7 +326,7 @@ export default defineConfig({
       { text: '案例库', link: '/cases/' },
       { text: 'Bot 直聘', link: '/bots/', activeMatch: '^/bots/' },
       { text: '周边生态', link: '/ecosystem/', activeMatch: '^/ecosystem/' },
-      { text: '答疑群', link: '/group' }
+      { text: '付费答疑群', link: '/group' }
     ],
     socialLinks: [{ icon: 'github', link: 'https://github.com/RongleCat/grok-bot-learn', ariaLabel: 'GitHub' }],
     sidebar,
