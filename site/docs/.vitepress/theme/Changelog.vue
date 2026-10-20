@@ -3,7 +3,7 @@ import { computed, ref } from 'vue'
 import data from './changelog.json'
 import { tidy } from './rich'
 
-type Item = { kind: 'pc' | 'mobile' | 'ours'; id: string; date: string; platform: string; version: string; url: string; title: string; points: string[]; summary: string }
+type Item = { kind: 'pc' | 'mobile' | 'ours'; id: string; date: string; platform: string; version: string; url: string; title: string; points: string[]; summary: string; full?: [string, string[]][] }
 
 const ui = data.ui
 const chip: Record<string, string> = { pc: 'PC', ios: 'iOS', android: 'Android' }
@@ -21,6 +21,15 @@ const counts = computed(() => ({ all: items.length, pc: items.filter((i) => i.ki
 const tab = ref('all')
 const limit = ref(16)
 const shown = computed(() => items.filter((i) => tab.value === 'all' || i.kind === tab.value))
+const groups = computed(() => {
+  const out: { m: string; start: number; items: Item[] }[] = []
+  shown.value.forEach((it, n) => {
+    const m = month(it.date)
+    if (!out.length || out[out.length - 1].m !== m) out.push({ m, start: n, items: [] })
+    out[out.length - 1].items.push(it)
+  })
+  return out
+})
 const md = (d: string) => `${+d.slice(5, 7)}月${+d.slice(8, 10)}日`
 const month = (d: string) => `${d.slice(0, 4)} 年 ${+d.slice(5, 7)} 月`
 function pick(k: string) {
@@ -49,26 +58,37 @@ function pick(k: string) {
     </div>
 
     <ol class="cl-line">
-      <template v-for="(it, n) in shown" :key="it.kind + it.id">
-        <li v-if="n === 0 || month(it.date) !== month(shown[n - 1].date)" v-show="n < limit" class="cl-month">{{ month(it.date) }}</li>
-        <li v-show="n < limit" :class="['cl-item', it.kind]">
-          <time :datetime="it.date">{{ md(it.date) }}</time>
-          <article class="cl-card">
-            <div class="cl-chips">
-              <img v-if="it.kind === 'ours'" class="cl-face" src="/bots/goutte-rose.svg" alt="" width="22" height="22" />
-              <span v-if="it.kind === 'ours'" class="cl-chip ours">我们的解读</span>
-              <span v-else class="cl-chip" :class="it.platform">{{ chip[it.platform] }}</span>
-              <span v-if="it.version" class="cl-ver">v{{ it.version }}</span>
-            </div>
-            <h2 class="tz-tidy">{{ tidy(it.title) }}</h2>
-            <ul v-if="it.points.length">
-              <li v-for="(p, k) in it.points" :key="k">{{ tidy(p.replace(/。$/, '')) }}</li>
-            </ul>
-            <p v-if="it.summary">{{ tidy(it.summary) }}</p>
-            <a :href="it.url" target="_blank" rel="noopener" :data-umami-event="it.kind === 'ours' ? 'changelog-tweet' : 'changelog-official'">{{ it.kind === 'ours' ? ui.tweet : ui.official }} ↗</a>
-          </article>
-        </li>
-      </template>
+      <li v-for="g in groups" v-show="g.start < limit" :key="g.m" class="cl-month">
+        <h3>{{ g.m }}</h3>
+        <ol class="cl-group">
+          <li v-for="(it, j) in g.items" v-show="g.start + j < limit" :key="it.kind + it.id" :class="['cl-item', it.kind]">
+            <time :datetime="it.date">{{ md(it.date) }}</time>
+            <article class="cl-card">
+              <div class="cl-chips">
+                <img v-if="it.kind === 'ours'" class="cl-face" src="/bots/goutte-rose.svg" alt="" width="22" height="22" />
+                <span v-if="it.kind === 'ours'" class="cl-chip ours">我们的解读</span>
+                <span v-else class="cl-chip" :class="it.platform">{{ chip[it.platform] }}</span>
+                <span v-if="it.version" class="cl-ver">v{{ it.version }}</span>
+              </div>
+              <h2 class="tz-tidy">{{ tidy(it.title) }}</h2>
+              <ul v-if="it.points.length">
+                <li v-for="(p, k) in it.points" :key="k">{{ tidy(p.replace(/。$/, '')) }}</li>
+              </ul>
+              <p v-if="it.summary">{{ tidy(it.summary) }}</p>
+              <details v-if="it.full && it.full.length" class="cl-full">
+                <summary>{{ ui.full }}</summary>
+                <div v-for="(sec, k) in it.full" :key="k" class="cl-sec">
+                  <h4 v-if="sec[0]">{{ sec[0] }}</h4>
+                  <ul>
+                    <li v-for="(x, q) in sec[1]" :key="q">{{ tidy(x) }}</li>
+                  </ul>
+                </div>
+              </details>
+              <a :href="it.url" target="_blank" rel="noopener" :data-umami-event="it.kind === 'ours' ? 'changelog-tweet' : 'changelog-official'">{{ it.kind === 'ours' ? ui.tweet : ui.official }} ↗</a>
+            </article>
+          </li>
+        </ol>
+      </li>
       <li v-if="!shown.length" class="cl-empty">{{ ui.empty }}</li>
     </ol>
     <div v-if="shown.length > limit" class="cl-more">
@@ -167,67 +187,89 @@ function pick(k: string) {
   padding: 0;
 }
 .cl-month {
-  margin: 28px 0 12px;
+  margin: 28px 0 0;
+}
+.cl-month h3 {
+  margin: 0 0 14px;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.04em;
+  line-height: 1.5;
   color: var(--vp-c-text-3);
+}
+.cl-group {
+  --date: 72px;
+  --rail: 32px;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cl-group::before {
+  content: '';
+  position: absolute;
+  left: calc(var(--date) + var(--rail) / 2 - 1px);
+  top: 28px;
+  bottom: 0;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--vp-c-divider);
 }
 .cl-item {
   position: relative;
   display: grid;
-  grid-template-columns: 76px 1fr;
-  gap: 20px;
+  grid-template-columns: var(--date) var(--rail) minmax(0, 1fr);
   padding-bottom: 16px;
+}
+.cl-item:last-child {
+  padding-bottom: 0;
 }
 .cl-item::before {
   content: '';
   position: absolute;
-  left: 88px;
-  top: 26px;
-  bottom: -2px;
-  width: 1px;
-  background: var(--vp-c-divider);
+  left: calc(var(--date) + var(--rail) / 2 - 6px);
+  top: 22px;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: var(--dot, var(--pc));
+  box-shadow: 0 0 0 4px var(--vp-c-bg);
+}
+.cl-item.mobile {
+  --dot: var(--mo);
+}
+.cl-item.ours {
+  --dot: var(--ours);
 }
 .cl-item time {
-  padding-top: 18px;
+  grid-column: 1;
+  padding-top: 17px;
+  padding-right: 4px;
   font-size: 14px;
   font-weight: 600;
+  line-height: 22px;
   text-align: right;
+  white-space: nowrap;
   color: var(--vp-c-text-2);
   font-variant-numeric: tabular-nums;
 }
 .cl-card {
-  position: relative;
-  margin-left: 12px;
+  grid-column: 3;
+  min-width: 0;
   padding: 16px 20px 18px;
   border: 1px solid var(--vp-c-divider);
   border-radius: 18px;
   background: var(--vp-c-bg);
 }
-.cl-card::before {
-  content: '';
-  position: absolute;
-  left: -19px;
-  top: 21px;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--dot, var(--pc));
-  box-shadow: 0 0 0 4px var(--vp-c-bg);
-}
-.cl-item.mobile .cl-card::before {
-  --dot: var(--mo);
-}
 .cl-item.ours .cl-card {
   border-color: color-mix(in srgb, var(--ours) 35%, transparent);
   background: linear-gradient(180deg, color-mix(in srgb, var(--ours) 7%, var(--vp-c-bg)), var(--vp-c-bg) 70%);
 }
-.cl-item.ours .cl-card::before {
-  --dot: var(--ours);
-}
 .cl-chips {
   display: flex;
+  height: 22px;
+  line-height: 22px;
   align-items: center;
   gap: 8px;
 }
@@ -271,7 +313,60 @@ function pick(k: string) {
 }
 .cl-card ul {
   margin: 8px 0 0;
-  padding-left: 1.1em;
+  padding-left: 1.2em;
+  list-style: disc;
+}
+.cl-card li::marker {
+  color: var(--vp-c-text-3);
+}
+.cl-full {
+  margin-top: 12px;
+  border-top: 1px dashed var(--vp-c-divider);
+  padding-top: 10px;
+}
+.cl-full summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #0a0a0c;
+  cursor: pointer;
+  list-style: none;
+}
+.cl-full summary::-webkit-details-marker {
+  display: none;
+}
+.cl-full summary::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.2s;
+}
+.cl-full[open] summary::after {
+  transform: translateY(1px) rotate(-135deg);
+}
+.cl-full summary:focus-visible {
+  outline: 2px solid #0a0a0c;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.cl-sec h4 {
+  margin: 14px 0 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.cl-sec ul {
+  margin-top: 4px;
+}
+.cl-sec li {
+  font-size: 15px;
+  line-height: 1.75;
 }
 .cl-card li,
 .cl-card p {
@@ -321,30 +416,33 @@ function pick(k: string) {
     padding: 16px 20px 72px;
   }
   .cl-tabs {
-    top: var(--vp-nav-height, 64px);
     margin: 0 -20px 4px;
     padding: 10px 20px;
   }
+  .cl-group {
+    --rail: 22px;
+  }
+  .cl-group::before {
+    left: 10px;
+    top: 11px;
+    bottom: 0;
+  }
   .cl-item {
-    grid-template-columns: 1fr;
-    gap: 6px;
-    padding-left: 18px;
+    grid-template-columns: var(--rail) minmax(0, 1fr);
+    row-gap: 8px;
   }
   .cl-item::before {
-    left: 4px;
-    top: 8px;
+    left: 5px;
+    top: 5px;
   }
   .cl-item time {
-    padding-top: 0;
+    grid-column: 2;
+    padding: 0;
     text-align: left;
   }
   .cl-card {
-    margin-left: 0;
+    grid-column: 2;
     padding: 14px 16px 16px;
-  }
-  .cl-card::before {
-    left: -18px;
-    top: -21px;
   }
   .cl-card h2 {
     font-size: 18px;
