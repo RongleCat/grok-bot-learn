@@ -36,5 +36,6 @@
  "ecosystem/grok-bot-clipper.md": "Grok Bot Clipper 是铁柱AGI 独立开发的非官方第三方扩展。你可以把网页选区、正文、截图、社媒内容和文件收进材料篮，发给自己的 Grok Bot 并在侧栏查看回复与追问。支持 Chrome、Edge 与 Firefox，提供实操演示视频和安装包下载。",
  "bots/index.md": "铁柱AGI公开自用的 Grok Bot 模板库，涵盖自媒体运营、推特调度、记忆备份、省额度与飞书接入等实用卡片。挑中直接导入即可上岗，帮你把琐事全搞定。",
  "part1/grok-vs-grok-bot.md": "Grok 是对话助手，Grok Bot 是在云电脑上替你干活的常驻 AI 同事。本文全面梳理两者的核心差异，提供详细功能对比表与实用场景指南，清晰说明何时用哪个。使用 Grok Bot 需要 Premium 及以上订阅，请注意 Plus 并不包含 Grok Bot 功能。",
- "about.md": "铁柱AGI 是 Grok Bot 重度用户，负责维护这个非官方中文教程站。目前已开源配套的 Grok Bot 浏览器插件与 Grok App，并制作上线了 9 个公开实战 Bot 模板，日常交流欢迎关注 X 账号 @cgnot996。"
+ "about.md": "铁柱AGI 是 Grok Bot 重度用户，负责维护这个非官方中文教程站。目前已开源配套的 Grok Bot 浏览器插件与 Grok App，并制作上线了 9 个公开实战 Bot 模板，日常交流欢迎关注 X 账号 @cgnot996。",
+ "changelog/index.md": "本页按日期汇总 Grok Bot 电脑端和 iOS、Android 手机端的官方更新中文摘要，并附铁柱在 X 上的更新解读。内容每天同步，以官方原文为准，带你省去啃英文日志的麻烦，第一时间搞懂每次版本迭代与功能升级。"
 }

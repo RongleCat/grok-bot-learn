@@ -5,6 +5,7 @@ import Home from './Home.vue'
 import EcoIndex from './EcoIndex.vue'
 import ClipperLanding from './ClipperLanding.vue'
 import BotHire from './BotHire.vue'
+import Changelog from './Changelog.vue'
 import JoinCard from './JoinCard.vue'
 import DocEndCard from './DocEndCard.vue'
 import NavGroupPill from './NavGroupPill.vue'
@@ -30,6 +31,7 @@ export default {
     app.component('EcoIndex', EcoIndex)
     app.component('ClipperLanding', ClipperLanding)
     app.component('BotHire', BotHire)
+    app.component('Changelog', Changelog)
     if (typeof window !== 'undefined') watchGroupClicks(router)
   }
 }

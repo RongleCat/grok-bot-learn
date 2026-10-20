@@ -4,6 +4,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import bots from './theme/bots.json'
 import eco from './theme/ecosystem.json'
+import changelog from './theme/changelog.json'
 import side from './sidebar.json'
 import seo from './seo.json'
 
@@ -129,6 +130,11 @@ export default defineConfig({
     L.push('## 案例库', '', ...cases.map((r) => line(r)), '')
     L.push('## Bot 直聘', '', `- [Bot 直聘](${SITE}/bots/): ${descs['bots/index.md'] || (bots as any).lead}`, ...(bots as any).bots.map((b: any) => `- [${b.name}](${b.url}): ${b.desc}`), '')
     L.push('## 周边生态', '', `- [周边生态](${SITE}/ecosystem/): ${descs['ecosystem/index.md'] || (eco as any).index.lead}`, `- [Grok Bot Clipper 浏览器插件](${SITE}/ecosystem/grok-bot-clipper): ${descs['ecosystem/grok-bot-clipper.md'] || (eco as any).clipper.lead}`, '')
+    {
+      const cl = changelog as any
+      const tag: Record<string, string> = { pc: 'PC', ios: 'iOS', android: 'Android' }
+      L.push('## 更新日志', '', `- [更新日志](${SITE}/changelog/): ${descs['changelog/index.md'] || cl.ui.lead}`, ...cl.official.slice(0, 12).map((e: any) => `- ${e.date} ${tag[e.platform]}${e.version ? ' v' + e.version : ''} [${e.title}](${e.url}): ${e.points.map((p: string) => p.replace(/。$/, '')).join('；')}`), ...cl.ours.map((t: any) => `- ${t.date} [${t.title}](${t.url}): ${t.summary}`), '')
+    }
     L.push('## Optional', '', `- [关于铁柱AGI](${SITE}/about): ${descs['about.md'] || ''}`, `- [付费答疑群](${SITE}/group): ${descs['group.md'] || ''}`, `- [GitHub 源码](https://github.com/RongleCat/grok-bot-learn)`, `- [铁柱AGI on X](https://x.com/cgnot996)`, '')
     writeFileSync(join(out, 'llms.txt'), L.join('\n'))
     const F: string[] = [`# ${NAME}`, '', `> ${descs.home}`, '', LLMS_FULL, '', LLMS_NOTE, '']
@@ -264,6 +270,14 @@ export default defineConfig({
             }))
           }
         }))
+      } else if (rel === 'changelog/index.md') {
+        const cl = changelog as any
+        const tag: Record<string, string> = { pc: 'PC', ios: 'iOS', android: 'Android' }
+        const all = [
+          ...cl.official.map((e: any) => ({ '@type': 'CreativeWork', name: `Grok Bot ${tag[e.platform]}${e.version ? ' ' + e.version : ''}：${e.title}`, description: e.points.map((p: string) => p.replace(/。$/, '')).join('；'), datePublished: e.date, url: e.url, inLanguage: 'zh-CN' })),
+          ...cl.ours.map((t: any) => ({ '@type': 'SocialMediaPosting', headline: t.title, description: t.summary, datePublished: t.date, url: t.url, author: AUTHOR }))
+        ].sort((a: any, b: any) => (a.datePublished < b.datePublished ? 1 : -1))
+        graph.push(page('CollectionPage', { dateModified: cl.updated, about: { '@type': 'SoftwareApplication', name: 'Grok Bot', applicationCategory: 'BusinessApplication' }, mainEntity: { '@type': 'ItemList', numberOfItems: all.length, itemListOrder: 'https://schema.org/ItemListOrderDescending', itemListElement: all.map((item, i) => ({ '@type': 'ListItem', position: i + 1, item })) } }))
       } else if (rel === 'about.md') {
         graph.push(page('ProfilePage', { mainEntity: AUTHOR }))
       } else if (rel === 'cases/index.md') {
@@ -326,6 +340,7 @@ export default defineConfig({
       { text: '案例库', link: '/cases/' },
       { text: 'Bot 直聘', link: '/bots/', activeMatch: '^/bots/' },
       { text: '周边生态', link: '/ecosystem/', activeMatch: '^/ecosystem/' },
+      { text: '更新日志', link: '/changelog/', activeMatch: '^/changelog/' },
       { text: '付费答疑群', link: '/group' }
     ],
     socialLinks: [{ icon: 'github', link: 'https://github.com/RongleCat/grok-bot-learn', ariaLabel: 'GitHub' }],

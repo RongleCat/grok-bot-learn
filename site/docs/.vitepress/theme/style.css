@@ -895,3 +895,8 @@ summary,
     padding-right: 24px !important;
   }
 }
+@media (min-width: 768px) and (max-width: 899px) {
+  .VPNavBarTitle .title span {
+    display: none;
+  }
+}
