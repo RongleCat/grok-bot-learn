@@ -6,6 +6,8 @@ import EcoIndex from './EcoIndex.vue'
 import ClipperLanding from './ClipperLanding.vue'
 import BotHire from './BotHire.vue'
 import Changelog from './Changelog.vue'
+import ToolIndex from './ToolIndex.vue'
+import ToolMeta from './ToolMeta.vue'
 import JoinCard from './JoinCard.vue'
 import DocEndCard from './DocEndCard.vue'
 import NavGroupPill from './NavGroupPill.vue'
@@ -32,6 +34,8 @@ export default {
     app.component('ClipperLanding', ClipperLanding)
     app.component('BotHire', BotHire)
     app.component('Changelog', Changelog)
+    app.component('ToolIndex', ToolIndex)
+    app.component('ToolMeta', ToolMeta)
     if (typeof window !== 'undefined') watchGroupClicks(router)
   }
 }

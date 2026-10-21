@@ -5,6 +5,7 @@ import { dirname, join, resolve } from 'node:path'
 import bots from './theme/bots.json'
 import eco from './theme/ecosystem.json'
 import changelog from './theme/changelog.json'
+import tools from './theme/tools.json'
 import side from './sidebar.json'
 import seo from './seo.json'
 
@@ -31,7 +32,7 @@ function gitDates(file: string) {
   return (dateCache[file] = { published: all[all.length - 1], modified: all[0] })
 }
 function isDoc(rel: string) {
-  return /^part[1-4]\//.test(rel) || (/^cases\//.test(rel) && rel !== 'cases/index.md')
+  return /^part[1-4]\//.test(rel) || (/^cases\//.test(rel) && rel !== 'cases/index.md') || (/^tools\//.test(rel) && rel !== 'tools/index.md')
 }
 function mdTitle(rel: string) {
   const src = readFileSync(join(DOCS, rel), 'utf8')
@@ -135,6 +136,10 @@ export default defineConfig({
       const tag: Record<string, string> = { pc: 'PC', ios: 'iOS', android: 'Android' }
       L.push('## 更新日志', '', `- [更新日志](${SITE}/changelog/): ${descs['changelog/index.md'] || cl.ui.lead}`, ...cl.official.slice(0, 12).map((e: any) => `- ${e.date} ${tag[e.platform]}${e.version ? ' v' + e.version : ''} [${e.title}](${e.url}): ${e.points.map((p: string) => p.replace(/。$/, '')).join('；')}`), ...cl.ours.map((t: any) => `- ${t.date} [${t.title}](${t.url}): ${t.summary}`), '')
     }
+    {
+      const tl = tools as any
+      L.push('## ' + tl.ui.title, '', `- [${tl.ui.title}](${SITE}/tools/): ${descs['tools/index.md'] || tl.ui.lead.replace(/\*\*/g, '')}`, ...tl.tools.map((t: any) => `- [${t.name}](${SITE}/tools/${t.id}): ${descs['tools/' + t.id + '.md'] || t.desc}`), '')
+    }
     L.push('## Optional', '', `- [关于铁柱AGI](${SITE}/about): ${descs['about.md'] || ''}`, `- [付费答疑群](${SITE}/group): ${descs['group.md'] || ''}`, `- [GitHub 源码](https://github.com/RongleCat/grok-bot-learn)`, `- [铁柱AGI on X](https://x.com/cgnot996)`, '')
     writeFileSync(join(out, 'llms.txt'), L.join('\n'))
     const F: string[] = [`# ${NAME}`, '', `> ${descs.home}`, '', LLMS_FULL, '', LLMS_NOTE, '']
@@ -210,7 +215,7 @@ export default defineConfig({
     } else {
       const seg = rel.split('/')[0]
       const first = (side as Record<string, string[][]>)[seg]?.[0]?.[1]
-      const part = names[seg] && first ? { name: names[seg], item: SITE + first } : seg === 'cases' && rel !== 'cases/index.md' ? { name: '案例库', item: SITE + '/cases/' } : seg === 'ecosystem' && rel !== 'ecosystem/index.md' ? { name: '周边生态', item: SITE + '/ecosystem/' } : null
+      const part = names[seg] && first ? { name: names[seg], item: SITE + first } : seg === 'cases' && rel !== 'cases/index.md' ? { name: '案例库', item: SITE + '/cases/' } : seg === 'tools' && rel !== 'tools/index.md' ? { name: (tools as any).ui.title, item: SITE + '/tools/' } : seg === 'ecosystem' && rel !== 'ecosystem/index.md' ? { name: '周边生态', item: SITE + '/ecosystem/' } : null
       const crumbs = [{ name: NAME, item: SITE + '/' }, ...(part ? [part] : []), { name: pageData.title, item: url }]
       graph.push({
         '@type': 'BreadcrumbList',
@@ -340,6 +345,7 @@ export default defineConfig({
       { text: '案例库', link: '/cases/' },
       { text: 'Bot 直聘', link: '/bots/', activeMatch: '^/bots/' },
       { text: '周边生态', link: '/ecosystem/', activeMatch: '^/ecosystem/' },
+      { text: '工具箱', link: '/tools/', activeMatch: '^/tools/' },
       { text: '更新日志', link: '/changelog/', activeMatch: '^/changelog/' },
       { text: '付费答疑群', link: '/group' }
     ],
