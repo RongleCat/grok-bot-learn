@@ -2,6 +2,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { withBase } from 'vitepress'
 import { useSidebar } from 'vitepress/theme'
+import friends from './friends.json'
 
 const { hasSidebar } = useSidebar()
 const open = ref(false)
@@ -43,6 +44,10 @@ onBeforeUnmount(() => {
         <a class="tz-link" :href="withBase('/group')">付费答疑群</a>
         <span class="tz-sep" aria-hidden="true"></span>
         <a class="tz-link" :href="withBase('/about')">关于作者</a>
+      </nav>
+      <nav v-if="friends.length" class="tz-friends" aria-label="友情链接">
+        <span>友情链接</span>
+        <a v-for="f in friends" :key="f.url" :href="f.url" target="_blank" rel="noopener">{{ f.name }}</a>
       </nav>
       <p class="tz-note">本站是社区非官方学习站，非 xAI 官方。</p>
     </div>
@@ -147,6 +152,26 @@ onBeforeUnmount(() => {
   width: 300px;
   height: auto;
   border-radius: 6px;
+}
+.tz-friends {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-size: 13px;
+  line-height: 20px;
+}
+.tz-friends span {
+  color: var(--vp-c-text-3);
+}
+.tz-friends a {
+  color: var(--vp-c-text-2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.tz-friends a:hover {
+  color: #2563eb;
 }
 .tz-note {
   margin: 0;
