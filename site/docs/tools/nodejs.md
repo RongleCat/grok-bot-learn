@@ -9,41 +9,36 @@ next: false
 
 <ToolMeta id="nodejs" />
 
-`Node.js` 与 `npm` 是多种前端及终端命令行工具的运行时基础。**用于支撑各类 Agent 工具的全局安装与环境执行。**
+Node.js 与 npm 是前端及各类 AI CLI 的执行基础，适合为 Bot 提供**现代命令行工具的运行环境**。
 
-## 前置条件
+## 发给 Bot 的提示词
 
-- **根据不同工具需求安装对应版本，如 Gemini CLI 需 20+，Pi 需 22.19+。**
-- 推荐使用 `nvm` 在用户目录下管理与安装最新版本。
+复制下方整段内容发送给你的 Grok Bot，它会在云电脑上自动安装并验证，遇到登录或配置密钥时会暂停等待你操作。
 
-## 安装
+<div class="tool-prompt">
 
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | bash
-source ~/.bashrc
-nvm install 22
-```
+````text
+请你在云电脑的用户目录下通过 nvm 安装 Node.js 22 和 npm。
 
-## 登录与授权
+1. 目标：安装 nvm 并使用其安装 Node.js 22。
+2. 参考命令：
+- 下载安装 nvm：curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | bash
+- 重载环境配置：source ~/.bashrc
+- 安装 Node.js 22：nvm install 22
+3. 密钥与授权原则：遇到登录、授权、填密钥等只能我来做的步骤时，请先停下，把授权链接或验证码原样发给我，或请我把密钥填进本地私密文件，不要让我把密钥贴进聊天，不要打印密钥。
+4. 常见坑及处理办法：
+- 执行 npm install -g 若报 EACCES 权限错误，切勿使用 sudo，改用 nvm 环境或使用 npm config set prefix ~/.local 并把 ~/.local/bin 加进 PATH。
+- 若环境中存在多个 Node 版本，使用 node -v 和 which node 确认当前使用的版本与路径。
+- 安装后若未找到命令，确认已执行 source ~/.bashrc。
+5. 安装完成标准：分别执行验证命令 node -v 和 npm -v，预期结果为正常输出 Node.js 的 22.x 版本号以及 npm 版本号。
+6. 执行完成后，用几句话向我汇报安装与验证结果。
+````
 
-**不需要登录。**
+</div>
 
-## 验证
+## 需要你自己做的事
 
-```bash
-node -v
-npm -v
-```
-
-## 常见坑与解决
-
-### 全局安装包报 `EACCES` 权限错误
-
-**改用 nvm 管理环境或设置 `npm config set prefix ~/.local` 并将 ~/.local/bin 加入 PATH。** 切勿使用 sudo 执行 npm 全局安装。
-
-### 多版本共存时执行版本不一致
-
-**在终端执行 node -v 和 which node 确认当前调用的具体路径。** 确保使用的版本满足工具依赖要求。
+- 无需准备外部账号或密钥
 
 ## 来源
 

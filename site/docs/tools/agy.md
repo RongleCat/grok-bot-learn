@@ -9,47 +9,35 @@ next: false
 
 <ToolMeta id="agy" />
 
-`agy` 是 Google 官方终端 Agent，支持通过 `--model` 指定模型与 `-p` 开展非交互输出。**它能直接读取视频文件，适合视频理解、长文写作与代码修改。**
+Google 官方终端 Agent，适合 **视频理解、长文写作与代码修改**，支持直接读取视频文件。
 
-## 前置条件
+## 发给 Bot 的提示词
 
-- **系统需运行在 Linux 环境且满足 glibc&gt;=2.28。**
-- 需拥有 Google 账号。
+复制下方整段内容发送给你的 Grok Bot，它会在云电脑上自动安装并验证，遇到登录或配置密钥时会暂停等待你操作。
 
-## 安装
+<div class="tool-prompt">
 
-```bash
-curl -fsSL https://antigravity.google/cli/install.sh | bash
-```
+````text
+你需要在云电脑上安装、配置并验证 Antigravity CLI（agy）。请按以下步骤执行：
 
-## 登录与授权
+1. 目标：完成 Antigravity CLI 的安装与环境配置，通过 Google OAuth 授权并验证可用性。
+2. 安装参考命令：运行 curl -fsSL https://antigravity.google/cli/install.sh | bash 完成安装。
+3. 登录与授权：在终端运行 agy。遇到 Google OAuth 登录时，终端会打印授权链接，请立刻停下，把授权链接原样发给我。等我在浏览器完成授权后，我会把验证码发给你，你再粘回终端继续。随后完成主题、服务条款与当前目录信任确认。不要让我把密钥或敏感信息发进聊天，不要在日志中打印密钥。
+4. 验证命令与预期结果：运行 agy --version，预期输出版本号；运行 agy -p "只回复 OK"，预期正常返回 OK。
+5. 常见坑及处理：
+- 若提示 agy: command not found，说明二进制在 ~/.local/bin 且未加入环境变量，执行 export PATH="$HOME/.local/bin:$PATH" 后重开终端。
+- 若云电脑出口 IP 变动导致 Google 报地区不支持或拒绝请求，需设置固定出口代理，例如设置 HTTPS_PROXY/ALL_PROXY 为 socks5h 地址，或编写同名包装脚本代理运行。
+- 非交互调用无法响应交互提问，必须先在交互模式下完成首次登录与目录信任。
+6. 汇报结果：完成后用几句话汇报 agy 版本、代理及非交互测试结果。
+````
 
-**首次运行 agy 时选择 Google OAuth。** 远程机器上会打印授权链接，在本地浏览器打开授权后将验证码粘回终端，随后完成主题、服务条款与目录信任确认。
+</div>
 
-```bash
-agy
-```
+## 需要你自己做的事
 
-## 验证
-
-```bash
-agy --version
-agy -p "只回复 OK"
-```
-
-## 常见坑与解决
-
-### 提示 `agy: command not found`
-
-**在终端执行 `export PATH="$HOME/.local/bin:$PATH"` 并重新打开终端。** 安装器默认将二进制文件放置在 `~/.local/bin`。
-
-### 提示所在地区不受支持或拒绝请求
-
-**配置固定出口代理让 agy 流量走海外 VPS。** 运行前将 `HTTPS_PROXY` 与 `ALL_PROXY` 设置为 `socks5h` 地址，或编写同名包装脚本自动开隧道。
-
-### 非交互调用卡住或报错
-
-**先在交互模式下完成首次登录与当前目录信任。** Bot 自身的 shell 无法在非交互模式下回答交互提问。
+- 准备 Google 账号
+- 点击 Bot 发送的授权链接完成验证并将验证码发回终端
+- 网络受限时准备固定出口代理
 
 ## 来源
 

@@ -9,48 +9,48 @@ next: false
 
 <ToolMeta id="gh" />
 
-`gh` 是 GitHub 官方命令行工具。**适合让 Bot 在云电脑上克隆私有仓库、推送代码、创建 PR 以及审查 Actions 任务。**
+GitHub 官方命令行工具，适合让 Bot 在**云电脑**上无缝克隆私有仓库、推送代码、创建 PR 并管理 Actions。
 
-## 前置条件
+## 发给 Bot 的提示词
 
-- **系统需预先安装 git。**
-- 参考官方 Linux 文档添加 apt 源后安装 `gh`。
+复制下方整段内容发送给你的 Grok Bot，它会在云电脑上自动安装并验证，遇到登录或配置密钥时会暂停等待你操作。
 
-## 安装
+<div class="tool-prompt">
 
-```bash
+````text
+你现在的目标是在云电脑上安装 GitHub CLI（gh），完成网页登录授权并配置 git 凭证。
+
+1. 请在终端执行参考安装命令：
 sudo apt-get install -y gh
-```
 
-## 登录与授权
-
-**运行 `gh auth login` 选择 GitHub.com、HTTPS 并通过浏览器设备码授权。** 随后运行 `gh auth setup-git` 将凭据绑定到 git 操作。
-
-```bash
+2. 登录与授权处理要求：
+执行参考登录命令：
 gh auth login
+在交互选项中选择 GitHub.com、HTTPS 以及通过浏览器登录。当终端输出一次性设备代码和验证链接时立即停下，把代码和链接原样发给我，由我在浏览器打开输入代码完成授权。严禁向我索要密码或 Token，不要打印敏感凭据。
+授权完成后，在终端执行参考命令使 git 使用 gh 凭证：
 gh auth setup-git
-```
 
-## 验证
-
-```bash
+3. 安装完成标准：
+在终端执行参考验证命令：
 gh --version
 gh auth status
-```
+预期结果：gh --version 正常输出版本号，gh auth status 显示当前登录账号状态正常。
 
-## 常见坑与解决
+4. 常见坑及处理办法：
+- 若推送修改 .github/workflows 的提交，必须补齐工作流权限，可执行 gh auth refresh -s workflow 刷新。
+- 在共用云电脑上提交代码时，使用 git -c user.name=... -c user.email=... commit 单独指定作者，避免修改全局配置。
+- 提交前检查 .gitignore，严防将密钥、日志或构建文件推送到公开仓库。
 
-### 推送包含工作流的提交失败
+5. 完成后请用几句话汇报 gh 的安装版本以及 auth status 的登录检测结果。
+````
 
-**执行 `gh auth refresh -s workflow` 为当前令牌补全权限。** 修改 `.github/workflows` 必须具备 workflow 权限。
+</div>
 
-### 共用机器污染全局 git 作者配置
+## 需要你自己做的事
 
-**提交代码时使用 git -c user.name=... -c user.email=... commit 临时指定作者。** 这样可避免覆盖全局凭据。
-
-### 敏感凭据与文件泄露
-
-**在推送前仔细检查 .gitignore 文件配置。** 杜绝将私密密钥、日志与构建产物推送到远程仓库。
+- 准备 GitHub 账号
+- 在浏览器打开授权链接并输入命令行给出的一次性代码
+- 如需修改工作流提交按需授权 workflow 权限
 
 ## 来源
 

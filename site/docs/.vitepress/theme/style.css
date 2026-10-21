@@ -900,3 +900,12 @@ summary,
     display: none;
   }
 }
+
+.vp-doc .tool-prompt div[class*='language-'] pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.vp-doc .tool-prompt div[class*='language-'] code {
+  font-size: 15px;
+  line-height: 1.75;
+}

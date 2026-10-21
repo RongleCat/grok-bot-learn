@@ -1,7 +1,7 @@
 {
  "ui": {
   "title": "Grok 云电脑工具箱",
-  "search": "搜索名称、标签或描述，例如 codex",
+  "search": "搜工具/词 如 codex",
   "all": "全部",
   "empty": "未找到匹配的工具",
   "count": "共 {n} 个工具",
@@ -15,7 +15,10 @@
   "src": "来源",
   "back": "返回目录",
   "note": "本页为社区非官方整理，与该工具厂商、xAI 均无隶属关系，命令以官方文档为准。",
-  "lead": "**这里收录 Bot 云电脑可接入的外部工具，为每个工具提供从安装到验证的完整流程。** 内容为非官方整理，具体以各工具官方文档为准。"
+  "lead": "每个工具均提供了一段可直接复制给 Grok Bot 的提示词，由 Bot 在云电脑上全自动完成安装与环境验证。**本指南为社区非官方整理**，最新变动请以官方文档为准。",
+  "promptTitle": "发给 Bot 的提示词",
+  "promptHint": "复制下方整段内容发送给你的 Grok Bot，它会在云电脑上自动安装并验证，遇到登录或配置密钥时会暂停等待你操作。",
+  "todoTitle": "需要你自己做的事"
  },
  "cats": [
   "编码 Agent",
@@ -38,38 +41,7 @@
     "写作"
    ],
    "desc": "Google 官方终端 Agent，支持直接读取视频与代码修改。",
-   "what": "`agy` 是 Google 官方终端 Agent，支持通过 `--model` 指定模型与 `-p` 开展非交互输出。**它能直接读取视频文件，适合视频理解、长文写作与代码修改。**",
-   "prereq": [
-    "**系统需运行在 Linux 环境且满足 glibc&gt;=2.28。**",
-    "需拥有 Google 账号。"
-   ],
-   "auth": "**首次运行 agy 时选择 Google OAuth。** 远程机器上会打印授权链接，在本地浏览器打开授权后将验证码粘回终端，随后完成主题、服务条款与目录信任确认。",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "提示 `agy: command not found`",
-     "a": "**在终端执行 `export PATH=\"$HOME/.local/bin:$PATH\"` 并重新打开终端。** 安装器默认将二进制文件放置在 `~/.local/bin`。"
-    },
-    {
-     "q": "提示所在地区不受支持或拒绝请求",
-     "a": "**配置固定出口代理让 agy 流量走海外 VPS。** 运行前将 `HTTPS_PROXY` 与 `ALL_PROXY` 设置为 `socks5h` 地址，或编写同名包装脚本自动开隧道。"
-    },
-    {
-     "q": "非交互调用卡住或报错",
-     "a": "**先在交互模式下完成首次登录与当前目录信任。** Bot 自身的 shell 无法在非交互模式下回答交互提问。"
-    }
-   ],
-   "install": [
-    "curl -fsSL https://antigravity.google/cli/install.sh | bash"
-   ],
-   "installAlt": [],
-   "authCmd": [
-    "agy"
-   ],
-   "verify": [
-    "agy --version",
-    "agy -p \"只回复 OK\""
-   ],
+   "what": "Google 官方终端 Agent，适合 **视频理解、长文写作与代码修改**，支持直接读取视频文件。",
    "src": [
     {
      "t": "Antigravity 官方文档：快速开始",
@@ -83,6 +55,13 @@
      "t": "Antigravity CLI 故障排查",
      "u": "https://antigravity.google/docs/cli/troubleshooting/"
     }
+   ],
+   "intro": "Google 官方终端 Agent，适合 **视频理解、长文写作与代码修改**，支持直接读取视频文件。",
+   "prompt": "你需要在云电脑上安装、配置并验证 Antigravity CLI（agy）。请按以下步骤执行：\n\n1. 目标：完成 Antigravity CLI 的安装与环境配置，通过 Google OAuth 授权并验证可用性。\n2. 安装参考命令：运行 curl -fsSL https://antigravity.google/cli/install.sh | bash 完成安装。\n3. 登录与授权：在终端运行 agy。遇到 Google OAuth 登录时，终端会打印授权链接，请立刻停下，把授权链接原样发给我。等我在浏览器完成授权后，我会把验证码发给你，你再粘回终端继续。随后完成主题、服务条款与当前目录信任确认。不要让我把密钥或敏感信息发进聊天，不要在日志中打印密钥。\n4. 验证命令与预期结果：运行 agy --version，预期输出版本号；运行 agy -p \"只回复 OK\"，预期正常返回 OK。\n5. 常见坑及处理：\n- 若提示 agy: command not found，说明二进制在 ~/.local/bin 且未加入环境变量，执行 export PATH=\"$HOME/.local/bin:$PATH\" 后重开终端。\n- 若云电脑出口 IP 变动导致 Google 报地区不支持或拒绝请求，需设置固定出口代理，例如设置 HTTPS_PROXY/ALL_PROXY 为 socks5h 地址，或编写同名包装脚本代理运行。\n- 非交互调用无法响应交互提问，必须先在交互模式下完成首次登录与目录信任。\n6. 汇报结果：完成后用几句话汇报 agy 版本、代理及非交互测试结果。",
+   "todo": [
+    "准备 Google 账号",
+    "点击 Bot 发送的授权链接完成验证并将验证码发回终端",
+    "网络受限时准备固定出口代理"
    ]
   },
   {
@@ -98,42 +77,7 @@
     "代码"
    ],
    "desc": "OpenAI 终端编码 Agent，消耗 ChatGPT 订阅额度改代码与生图。",
-   "what": "`codex` 是 OpenAI 官方终端编码 Agent，消耗 ChatGPT 订阅额度而非 API 余额。**适合在云电脑上修改代码、运行脚本、生成图片与审查图片。**",
-   "prereq": [
-    "**系统需安装 Node.js 与 npm。**",
-    "拥有 ChatGPT 账号，个人账号需在安全设置中开启设备码登录，企业工作区需管理员开启。"
-   ],
-   "auth": "**在云电脑上运行 `codex login --device-auth` 进行设备码登录。** 打开终端显示的授权链接并输入对应的一次性码即可完成验证。",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "codex exec 卡在等待标准输入",
-     "a": "**非交互调用时必须在命令末尾追加 `</dev/null`。** 否则程序会提示 `Reading additional input from stdin` 并持续等待。"
-    },
-    {
-     "q": "默认沙箱只读或在非 git 目录报错",
-     "a": "**写入文件需添加 `-s workspace-write -C 目标目录` 参数。** 若不在 git 仓库中运行需添加 `--skip-git-repo-check`。"
-    },
-    {
-     "q": "多台机器共用凭据导致 401 报错",
-     "a": "**每台机器必须各自执行 `codex login --device-auth` 独立登录。** 共用登录文件会导致令牌刷新互相挤掉。"
-    },
-    {
-     "q": "生图生成两张或找不到存储路径",
-     "a": "**提示词中需写明只生成一张并要求复制到当前目录。** 内置生图默认保存在 `~/.codex/generated_images` 路径下。"
-    }
-   ],
-   "install": [
-    "npm install -g @openai/codex@latest"
-   ],
-   "installAlt": [],
-   "authCmd": [
-    "codex login --device-auth"
-   ],
-   "verify": [
-    "codex login status",
-    "cd /tmp && codex exec --skip-git-repo-check \"只回复 OK\" </dev/null"
-   ],
+   "what": "OpenAI 官方终端编码 Agent，适合 **代码修改、脚本运行与生图审图**，可直接使用 ChatGPT 订阅额度。",
    "src": [
     {
      "t": "OpenAI Codex CLI 官方文档",
@@ -143,6 +87,13 @@
      "t": "openai/codex 官方仓库",
      "u": "https://github.com/openai/codex"
     }
+   ],
+   "intro": "OpenAI 官方终端编码 Agent，适合 **代码修改、脚本运行与生图审图**，可直接使用 ChatGPT 订阅额度。",
+   "prompt": "你需要在云电脑上安装、配置并验证 Codex CLI。请按以下步骤执行：\n\n1. 目标：使用 ChatGPT 订阅额度完成 Codex CLI 的全局安装与设备码授权，并通过非交互执行验证。\n2. 安装与登录参考命令：\n- 安装：npm install -g @openai/codex@latest\n- 登录：codex login --device-auth\n- 登录状态检查：codex login status\n3. 登录与授权：运行 codex login --device-auth 启动设备码登录。遇到终端输出授权链接与一次性码时立刻停下，将链接与验证码原样发给我，由我在浏览器完成确认。不要让我把密钥贴进聊天，不要打印密钥。\n4. 验证命令与预期结果：\n- 运行 codex login status，预期显示已成功登录。\n- 运行 cd /tmp && codex exec --skip-git-repo-check \"只回复 OK\" </dev/null，预期输出 OK。\n5. 常见坑及处理：\n- 非交互调用 codex exec 时必须在末尾加上 </dev/null，否则会一直等待标准输入。\n- 默认沙箱为只读，若需修改文件需添加 -s workspace-write -C 目标目录；在非 git 仓库执行需加 --skip-git-repo-check。\n- 严禁多台机器共用同一份登录文件，令牌刷新会互相挤掉导致 401 报错，每台机器必须各自运行 codex login --device-auth。\n- 生图结果默认保存在 ~/.codex/generated_images，如需生图请在提示词中要求复制到当前目录且明确只生成一张。\n6. 汇报结果：完成后用几句话汇报登录状态与验证执行情况。",
+   "todo": [
+    "准备 ChatGPT 账号并开启设备码登录（企业工作区需管理员开启）",
+    "在浏览器打开 Bot 发送的设备码链接并完成确认",
+    "确保云电脑具备 Node.js 与 npm 环境"
    ]
   },
   {
@@ -156,40 +107,19 @@
     "代码"
    ],
    "desc": "Anthropic 终端编码 Agent，适合代码库读取与多文件修改。",
-   "what": "`claude` 是 Anthropic 官方终端编码 Agent。**适合用于阅读代码库、多文件协同修改以及在终端执行命令。**",
-   "prereq": [
-    "**系统需为 Ubuntu 20.04+ 或 Debian 10+，且内存大于 4GB。**",
-    "所在地区需在 Anthropic 支持范围内。",
-    "拥有 Claude 订阅或 Anthropic Console 账号。",
-    "若使用 npm 安装需具备 Node.js 18+ 环境。"
-   ],
-   "auth": "**在项目目录下运行 claude 并按终端提示完成登录。** 后续非交互执行可直接使用 `claude -p`。",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "安装后提示 command not found",
-     "a": "**重新打开终端，或将 ~/.local/bin 手动添加进 PATH 环境变量。** 安装目录未生效会导致找不到命令。"
-    },
-    {
-     "q": "安装报错 syntax error 或 403",
-     "a": "**排查网络连接与所在地区是否受限。** 这类报错通常由网络或地区限制导致，可参考官方 Troubleshoot installation 文档。"
-    }
-   ],
-   "install": [
-    "curl -fsSL https://claude.ai/install.sh | bash"
-   ],
-   "installAlt": [],
-   "authCmd": [
-    "claude"
-   ],
-   "verify": [
-    "claude --version"
-   ],
+   "what": "Anthropic 官方终端编码 Agent，适合 **代码库阅读、多文件修改与命令执行**，支持后台自动更新。",
    "src": [
     {
      "t": "Claude Code 官方安装文档",
      "u": "https://code.claude.com/docs/en/setup"
     }
+   ],
+   "intro": "Anthropic 官方终端编码 Agent，适合 **代码库阅读、多文件修改与命令执行**，支持后台自动更新。",
+   "prompt": "你需要在云电脑上安装、配置并验证 Claude Code。请按以下步骤执行：\n\n1. 目标：在云电脑上安装 Anthropic 官方 Claude Code 并完成授权与版本验证。\n2. 安装与登录参考命令：\n- 原生安装（推荐）：curl -fsSL https://claude.ai/install.sh | bash\n- npm 方式（Node 18+，切勿使用 sudo）：npm install -g @anthropic-ai/claude-code\n- 登录：在项目目录下运行 claude\n3. 登录与授权：在项目目录执行 claude 启动登录。若终端提示登录链接或授权流程，请立刻停下，将授权链接原样发给我，由我在浏览器中完成授权。不要让我把密钥贴进聊天，不要打印密钥。\n4. 验证命令与预期结果：运行 claude --version，预期输出当前安装的版本号；后续非交互调用使用 claude -p。\n5. 常见坑及处理：\n- 若安装后提示 command not found，说明安装目录未进 PATH，请将 ~/.local/bin 加入 PATH 或重开终端。\n- 若安装命令报 syntax error near unexpected token '<' 或 403 错误，通常为网络或支持地区问题，需核对网络与地区设置。\n- 确保系统为 Ubuntu 20.04+ 或 Debian 10+ 且内存保持在 4GB 以上。\n6. 汇报结果：完成后用几句话汇报 Claude Code 的安装版本与就绪状态。",
+   "todo": [
+    "准备 Claude 订阅或 Anthropic Console 账号",
+    "在浏览器打开 Bot 发送的授权链接完成认证",
+    "确保云电脑系统满足 Ubuntu 20.04 或 Debian 10 以上且内存不少于 4GB"
    ]
   },
   {
@@ -202,33 +132,7 @@
     "gemini cli"
    ],
    "desc": "Google 开源终端 Agent，供付费与 Google Cloud 用户使用。",
-   "what": "`gemini` 是 Google 开源的终端 AI Agent。**适合付费档或 Google Cloud 项目用户在终端执行 AI 交互任务。**",
-   "prereq": [
-    "**系统需安装 Node.js 20+。**",
-    "需拥有付费档或 Google Cloud 项目账号，免费档与 Google One 用户请直接使用 `agy`。"
-   ],
-   "auth": "**使用前需配置 Google Cloud 项目或付费凭证。** 也可以不安装直接通过 `npx` 命令运行。",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "安装失败提示版本不兼容",
-     "a": "**先将系统的 Node.js 升级至 20 或更高版本。** Node.js 版本过低会导致安装流程中断。"
-    },
-    {
-     "q": "请求被拒提示所在地区不受支持",
-     "a": "**配置固定出口代理后再发起请求。** 地区不在 Gemini Code Assist 支持范围会被拦截，可接入固定出口代理转发流量。"
-    }
-   ],
-   "install": [
-    "npm install -g @google/gemini-cli"
-   ],
-   "installAlt": [],
-   "authCmd": [
-    "gemini"
-   ],
-   "verify": [
-    "gemini --version"
-   ],
+   "what": "Google 开源的终端 AI Agent，适合 **付费用户与 Google Cloud 项目用户** 进行终端交互与开发协作。",
    "src": [
     {
      "t": "Gemini CLI 官方安装文档",
@@ -238,6 +142,13 @@
      "t": "google-gemini/gemini-cli 官方仓库",
      "u": "https://github.com/google-gemini/gemini-cli"
     }
+   ],
+   "intro": "Google 开源的终端 AI Agent，适合 **付费用户与 Google Cloud 项目用户** 进行终端交互与开发协作。",
+   "prompt": "你需要在云电脑上安装、配置并验证 Gemini CLI。请按以下步骤执行：\n\n1. 目标：完成 Gemini CLI 的安装与认证，供付费或 Google Cloud 项目账号调用。\n2. 安装与登录参考命令：\n- 全局安装：npm install -g @google/gemini-cli\n- 免安装运行方式：npx\n- 登录：gemini\n3. 登录与授权：运行 gemini 触发登录流程。遇到终端打印的授权链接时请先停下，原样发给我，由我在浏览器完成认证。不要让我把密钥贴进聊天，不要打印密钥。\n4. 验证命令与预期结果：运行 gemini --version，预期成功输出版本号。\n5. 常见坑及处理：\n- 免费档与 Google One 用户已被 Antigravity CLI 取代，此类用户请直接使用 agy；本工具仅供付费或 Google Cloud 项目用户使用。\n- 系统必须运行 Node.js 20+，版本过低会导致安装失败，需先升级 Node。\n- 若地区不在 Gemini Code Assist 支持范围会被拒绝请求，可参考固定出口代理解决。\n6. 汇报结果：完成后用几句话汇报 Node 版本、Gemini CLI 安装版本及可用状态。",
+   "todo": [
+    "准备付费 Google 账号或 Google Cloud 项目账号",
+    "在浏览器打开 Bot 发送的授权链接完成认证",
+    "确保云电脑已安装 Node.js 20 及以上版本"
    ]
   },
   {
@@ -252,37 +163,7 @@
     "代码"
    ],
    "desc": "极简可扩展终端编码 Agent，仅提供读写改执行四个基础工具。",
-   "what": "`pi` 是由 Earendil Works 维护的极简终端编码 Agent，默认仅提供 `read`、`write`、`edit`、`bash` 四个基础工具。**支持通过扩展、技能、Pi 包以及 TypeScript SDK 进行高度自定义。**",
-   "prereq": [
-    "**系统需运行在 Node.js 22.19 或更新版本。**",
-    "可使用官方安装脚本或带 `--ignore-scripts` 的 npm 全局安装。"
-   ],
-   "auth": "**在项目目录运行 pi 并输入 `/login` 选择服务商以连接订阅或 API Key。** 也可以预先在环境中设置服务商的 API Key 环境变量。",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "安装后无法运行或停留在旧版本 0.73.1",
-     "a": "**旧包 @mariozechner/pi-coding-agent 已弃用，请迁移至 @earendil-works。** 老用户使用 `pi update` 可能需要连续执行两次。"
-    },
-    {
-     "q": "第三方 Pi 包存在安全隐患",
-     "a": "**安装第三方 Pi 包前务必先查看源码。** Pi 包具备执行扩展代码的权限。"
-    },
-    {
-     "q": "npm 安装后启动报错",
-     "a": "**检查并升级系统的 Node.js 版本至 22.19 及以上。** 系统 Node.js 低于该版本将无法运行。"
-    }
-   ],
-   "install": [
-    "curl -fsSL https://pi.dev/install.sh | sh"
-   ],
-   "installAlt": [
-    "npm install -g --ignore-scripts @earendil-works/pi-coding-agent"
-   ],
-   "authCmd": [
-    "pi"
-   ],
-   "verify": [],
+   "what": "极简且高度可扩展的终端编码 Agent，适合 **通过扩展、技能与提示模板深度定制** 专属开发工作流。",
    "src": [
     {
      "t": "Pi 官网",
@@ -296,6 +177,13 @@
      "t": "Pi 迁移公告",
      "u": "https://pi.dev/news/2026/5/7/pi-has-a-new-home"
     }
+   ],
+   "intro": "极简且高度可扩展的终端编码 Agent，适合 **通过扩展、技能与提示模板深度定制** 专属开发工作流。",
+   "prompt": "你需要在云电脑上安装、配置并验证 Pi Coding Agent。请按以下步骤执行：\n\n1. 目标：完成 Pi Coding Agent 的安装与基础配置，连接模型服务商并验证运行状态。\n2. 安装与升级参考命令：\n- 官方脚本安装：curl -fsSL https://pi.dev/install.sh | sh\n- npm 安装：npm install -g --ignore-scripts @earendil-works/pi-coding-agent\n- 升级命令：pi update\n- 登录：在项目目录运行 pi，并在交互界面内输入 /login\n3. 登录与授权：在项目目录运行 pi 并输入 /login 连接订阅或配置服务商 API Key；也可预先配置服务商环境变量。遇到需要填写密钥的步骤时请停下，请我将密钥填入本地私密文件或设置环境变量，不要让我把密钥贴进聊天，不要打印密钥。\n4. 验证命令与预期结果：安装完成后在项目目录启动 pi，预期能正常进入会话界面且自带 read、write、edit、bash 四项工具；后续升级可运行 pi update。\n5. 常见坑及处理：\n- 旧包 @mariozechner/pi-coding-agent 已弃用并停在 0.73.1，必须安装 @earendil-works/pi-coding-agent，旧用户升级可能需执行两次 pi update。\n- 系统 Node.js 需为 22.19 或更新版本，若使用 npm 方式需先自行升级 Node（官方脚本可顺带安装 Node）。\n- Pi 包可以执行扩展代码，安装任何第三方包前必须先查看源码。\n6. 汇报结果：完成后用几句话汇报 Pi 的安装方式、版本信息与服务商配置结果。",
+   "todo": [
+    "准备模型服务商的 API Key 或订阅账号",
+    "根据提示将 API Key 写入本地私密文件或配置为环境变量",
+    "若通过 npm 安装需确保 Node.js 版本达到 22.19 及以上"
    ]
   },
   {
@@ -309,38 +197,7 @@
     "代码"
    ],
    "desc": "Cursor 官方命令行 Agent，适合委托执行小范围代码修改。",
-   "what": "`agent` 是 Cursor 官方命令行 Agent。**适合在云电脑上执行小范围代码修改，从而节省 Bot 自身的决策额度。**",
-   "prereq": [
-    "**需拥有 Cursor 账号。**"
-   ],
-   "auth": "**在云电脑上设置 `NO_OPEN_BROWSER=1` 后执行 agent login 获取授权链接。** 在本地浏览器中打开链接完成登录，脚本或 CI 环境可直接配置 `CURSOR_API_KEY` 环境变量。",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "非交互运行时命令卡住等待",
-     "a": "**非交互调用时命令末尾必须追加 `</dev/null`。** 同时无人值守时必须携带 `--trust` 参数以跳过工作区信任确认。"
-    },
-    {
-     "q": "随手添加 `--model` 导致配置变动",
-     "a": "**避免随意添加 `--model` 参数。** 该参数会直接修改你在账号中设定的默认模型。"
-    },
-    {
-     "q": "找不到 agent 命令或连接失败",
-     "a": "**将 ~/.local/bin 加进 PATH，并在网络中放行 *.cursor.sh 与 *.cursorapi.com。** 确保命令路径生效且域名未被防火墙拦截。"
-    }
-   ],
-   "install": [
-    "curl https://cursor.com/install -fsS | bash"
-   ],
-   "installAlt": [],
-   "authCmd": [
-    "NO_OPEN_BROWSER=1 agent login",
-    "agent status"
-   ],
-   "verify": [
-    "agent --version",
-    "agent -p \"只回复 OK\" --trust --output-format text </dev/null"
-   ],
+   "what": "Cursor 官方命令行 Agent，适合 **在云电脑执行小范围代码修改**，将 Bot 额度留给全局决策。",
    "src": [
     {
      "t": "Cursor CLI 官方安装文档",
@@ -350,6 +207,13 @@
      "t": "Cursor CLI 官方认证文档",
      "u": "https://cursor.com/docs/cli/reference/authentication"
     }
+   ],
+   "intro": "Cursor 官方命令行 Agent，适合 **在云电脑执行小范围代码修改**，将 Bot 额度留给全局决策。",
+   "prompt": "你需要在云电脑上安装、配置并验证 Cursor CLI。请按以下步骤执行：\n\n1. 目标：完成 Cursor CLI 的安装与认证，支持在云电脑上进行非交互代码修改。\n2. 安装与登录参考命令：\n- 安装：curl https://cursor.com/install -fsS | bash\n- 登录：NO_OPEN_BROWSER=1 agent login\n- 状态查询：agent status\n3. 登录与授权：在终端运行 NO_OPEN_BROWSER=1 agent login 触发登录。终端打印授权链接时立刻停下，把链接原样发给我，由我在浏览器打开登录。若使用 CURSOR_API_KEY 环境变量，请让我填入本地私密文件或环境变量，不要让我把密钥贴进聊天，不要打印密钥。\n4. 验证命令与预期结果：\n- 运行 agent --version，预期输出版本号。\n- 在项目目录运行 agent -p \"只回复 OK\" --trust --output-format text </dev/null，预期输出 OK。\n5. 常见坑及处理：\n- 非交互调用时必须追加 </dev/null，避免卡在等待标准输入。\n- 无人值守执行必须加上 --trust，否则会卡在目录信任提问。\n- 绝不要随手加 --model，否则会修改账号内配置的默认模型。\n- 若提示找不到命令，将 ~/.local/bin 加入 PATH；若连不上服务器，放行 *.cursor.sh 与 *.cursorapi.com。\n6. 汇报结果：完成后用几句话汇报版本号、登录状态以及非交互测试执行结果。",
+   "todo": [
+    "准备 Cursor 账号或 CURSOR_API_KEY",
+    "在浏览器打开 Bot 发送的授权链接完成登录",
+    "确保云电脑网络放行 *.cursor.sh 与 *.cursorapi.com 域名"
    ]
   },
   {
@@ -365,43 +229,19 @@
     "api"
    ],
    "desc": "驱动网页端包装为 OpenAI 接口，本地调用生图与生视频。",
-   "what": "`muse2api` 是通过无头浏览器驱动 muse.ai 网页端的开源项目，默认运行在 `18610` 端口。**适合让 Bot 本地调用其兼容接口，消耗网页端免费额度进行生图、生视频与对话。**",
-   "prereq": [
-    "**环境需为 Debian 或 Ubuntu 且安装有 Chromium 与 Python 3.10+，或具备 Docker 环境。**",
-    "需拥有 muse.ai 账号。"
-   ],
-   "auth": "**在云电脑浏览器中登录 muse.ai 后，利用自带的 Chrome 扩展导入登录态。** 在扩展中填入服务地址与 `MUSE2API_KEY` 点击读取导入，会话约 48 小时自动续期。",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "导入时提示缺少核心 cookie `hatch_vml`",
-     "a": "**在同一浏览器打开 `https://muse.ai/api/session` 并刷新 muse.ai 页面后重试。** 这样即可补全所需会话凭据。"
-    },
-    {
-     "q": "视频生成时长设置无效",
-     "a": "**接口参数必须使用 `duration` 而非 `seconds`。** 传 `seconds` 会被忽略并默认设定为 6 秒，且需轮询 `/v1/videos/{task_id}` 获取异步结果。"
-    },
-    {
-     "q": "接口偶发报错或未生成媒体",
-     "a": "**此情况属于临时错误，执行退避重试即可。** 另外项目基于逆向网页端，密钥只保存在 `.env` 中且不要盲目在线升级。"
-    }
-   ],
-   "install": [
-    "git clone https://github.com/czg86389-hub/muse2api.git",
-    "cd muse2api",
-    "cp .env.example .env",
-    "docker compose up -d"
-   ],
-   "installAlt": [],
-   "authCmd": [],
-   "verify": [
-    "curl -s http://127.0.0.1:18610/v1/chat/completions -H \"Authorization: Bearer $MUSE2API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"muse-spark\",\"messages\":[{\"role\":\"user\",\"content\":\"只回复 OK\"}]}'"
-   ],
+   "what": "社区开源的 muse.ai 逆向封装项目，适合在**云电脑**上通过 OpenAI 兼容接口直接调用网页端免费额度进行对话、生图和生视频。",
    "src": [
     {
      "t": "muse2api 项目仓库（czg86389-hub）",
      "u": "https://github.com/czg86389-hub/muse2api"
     }
+   ],
+   "intro": "社区开源的 muse.ai 逆向封装项目，适合在**云电脑**上通过 OpenAI 兼容接口直接调用网页端免费额度进行对话、生图和生视频。",
+   "prompt": "你现在的目标是在云电脑上部署 muse2api 容器服务，并验证 OpenAI 兼容接口。\n\n1. 请在终端按顺序执行参考安装命令：\ngit clone https://github.com/czg86389-hub/muse2api.git\ncd muse2api\ncp .env.example .env\ndocker compose up -d\n\n2. 凭证与授权处理要求：\n执行 cp .env.example .env 后先停下，请我将 .env 中的 MUSE2API_KEY 修改为自定义随机密钥，不要让我把密钥贴进聊天，不要打印密钥。登录时请停下，等待我在云电脑浏览器登录 muse.ai，并在 chrome://extensions 开发者模式加载解压后的 extension 目录扩展，填入服务地址与 MUSE2API_KEY 完成登录态导入。\n\n3. 安装完成标准：\n导入登录态后，在终端执行参考验证命令：\ncurl -s http://127.0.0.1:18610/v1/chat/completions -H \"Authorization: Bearer $MUSE2API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"muse-spark\",\"messages\":[{\"role\":\"user\",\"content\":\"只回复 OK\"}]}'\n预期结果：接口正常返回包含 OK 的 JSON 格式响应。\n\n4. 常见坑及处理办法：\n- 扩展导入若提示缺少核心 cookie hatch_vml，先在同一浏览器打开 https://muse.ai/api/session 刷新 muse.ai，再重新导入。\n- 调用视频接口时，时长参数必须用 duration，传 seconds 会被忽略，默认 6 秒；视频为异步任务，需轮询 /v1/videos/{task_id}。\n- 若返回 Sorry, I ran into a problem 或未生成媒体，属于临时错误，执行退避重试。\n- 网页会话约 48 小时到期会自动续期，若长时间不用失效需重新导入。\n- 逆向项目存在封号与失效风险，更新前先检查代码改动，切勿一键在线升级。\n\n5. 完成后请用几句话汇报容器运行状态、端口监听情况及验证接口返回结果。",
+   "todo": [
+    "准备 muse.ai 账号并在云电脑浏览器中登录",
+    "在本地私密 .env 文件中设置自定义 MUSE2API_KEY",
+    "在浏览器加载仓库 extension 目录扩展并点击读取导入登录态"
    ]
   },
   {
@@ -416,34 +256,7 @@
     "腾讯"
    ],
    "desc": "腾讯 QQ 邮箱命令行工具，支持邮件收发、搜索与附件下载。",
-   "what": "`agently-cli` 是腾讯 QQ 邮箱推出的 Agent 邮箱命令行工具。**适合让 Bot 在云电脑上完成邮件收发、回复、转发、搜索以及附件下载。**",
-   "prereq": [
-    "**系统需安装 Node.js 与 npm。**"
-   ],
-   "auth": "**后台运行 `agently-cli auth login` 并将输出的原样链接在浏览器中打开完成授权。** 授权完成后命令会自动退出，切勿修改链接中的任何字符。",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "浏览器打开授权链接提示无效或失败",
-     "a": "**授权链接必须完整原样打开，禁止编码、拼接或添加空格。** 若失败超时切勿盲目重复重试，先排查具体报错。"
-    },
-    {
-     "q": "Bot 自行发信导致误发送",
-     "a": "**执行发信操作前必须先让人工核对收件人与正文。** 发送邮件属于对外操作，需严格确认。"
-    }
-   ],
-   "install": [
-    "npm install -g @tencent-qqmail/agently-cli",
-    "npx skills add https://agent.qq.com --skill -g -y"
-   ],
-   "installAlt": [],
-   "authCmd": [
-    "agently-cli auth login"
-   ],
-   "verify": [
-    "agently-cli auth status",
-    "agently-cli +me"
-   ],
+   "what": "腾讯 QQ 邮箱推出的官方命令行工具，适合让 Bot 在**云电脑**上高效收发邮件、检索历史邮件并下载附件。",
    "src": [
     {
      "t": "Agent 邮箱官网",
@@ -453,6 +266,13 @@
      "t": "agently-cli npm 包",
      "u": "https://www.npmjs.com/package/@tencent-qqmail/agently-cli"
     }
+   ],
+   "intro": "腾讯 QQ 邮箱推出的官方命令行工具，适合让 Bot 在**云电脑**上高效收发邮件、检索历史邮件并下载附件。",
+   "prompt": "你现在的目标是在云电脑上安装 agently-cli 及其技能包，并完成 Agent 邮箱授权验证。\n\n1. 请在终端按顺序执行参考安装命令：\nnpm install -g @tencent-qqmail/agently-cli\nnpx skills add https://agent.qq.com --skill -g -y\n\n2. 登录与授权处理要求：\n执行参考登录命令：\nagently-cli auth login\n该命令为交互式长命令，请将其置于后台运行。捕获到输出中的授权链接后立即停下，把原始链接原样发给我，不得对链接进行转义、拼接或添加空格。等待我在浏览器打开链接完成授权后，你再继续后续操作。\n\n3. 安装完成标准：\n授权完成后，在终端执行参考验证命令：\nagently-cli auth status\nagently-cli +me\n预期结果：agently-cli auth status 显示授权正常，agently-cli +me 成功输出当前绑定的邮箱地址。\n\n4. 常见坑及处理办法：\n- 授权链接被改动会导致授权失败，必须原样打开。\n- 授权超时或失败不要反复盲目重试，先查看具体报错排查原因。\n- 发送邮件属于对外操作，执行发信前必须向我确认收件人与正文。\n\n5. 完成后请用几句话汇报 CLI 与技能安装情况、授权状态及绑定的邮箱账号。",
+   "todo": [
+    "准备 QQ 邮箱或 Agent 邮箱账号",
+    "打开 Bot 发送的原始链接在浏览器中完成授权",
+    "在 Bot 实际发信前确认收件人及正文内容"
    ]
   },
   {
@@ -468,47 +288,19 @@
     "lark-cli"
    ],
    "desc": "飞书官方命令行工具，以用户身份操作云文档、多维表格与云盘。",
-   "what": "`lark-cli` 是飞书官方推出的命令行工具。**适合让 Bot 以个人用户身份直接操作飞书云文档、多维表格、云盘以及知识库。**",
-   "prereq": [
-    "**系统需安装 Node.js 与 npm。**",
-    "拥有飞书账号。"
-   ],
-   "auth": "**首次运行 lark-cli config init --new 配置凭据，再通过设备码登录。** 运行 `lark-cli auth login --no-wait --json --domain base,drive,docs,wiki` 获取链接与码，授权后执行 `lark-cli auth login --device-code` 提交该码。",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "提示设备码过期导致登录失败",
-     "a": "**使用相同的 `--domain` 参数重新发起登录命令获取新码。** 切勿直接复用已过期的旧设备码。"
-    },
-    {
-     "q": "执行特定模块命令提示无权限",
-     "a": "**在 `--domain` 参数中将所需能力一次性写全。** 若发起授权时漏填对应域，相应命令将无法调用。"
-    },
-    {
-     "q": "向导安装直接报错中断",
-     "a": "**确认系统中已正确安装 Node.js 与 npm。** 缺少 Node 环境会导致向导脚本无法执行。"
-    }
-   ],
-   "install": [
-    "npx @larksuite/cli@latest install",
-    "npx skills add larksuite/cli -y -g"
-   ],
-   "installAlt": [],
-   "authCmd": [
-    "lark-cli config init --new",
-    "lark-cli auth login --no-wait --json --domain base,drive,docs,wiki",
-    "lark-cli auth login --device-code '<device_code>'"
-   ],
-   "verify": [
-    "lark-cli --version",
-    "lark-cli auth status",
-    "lark-cli doctor"
-   ],
+   "what": "飞书官方命令行工具，适合让 Bot 以你的个人身份在**云电脑**上便捷操作飞书云文档、多维表格、云盘和知识库。",
    "src": [
     {
      "t": "larksuite/cli 官方仓库",
      "u": "https://github.com/larksuite/cli"
     }
+   ],
+   "intro": "飞书官方命令行工具，适合让 Bot 以你的个人身份在**云电脑**上便捷操作飞书云文档、多维表格、云盘和知识库。",
+   "prompt": "你现在的目标是在云电脑上安装飞书命令行工具 lark-cli 并完成用户授权。\n\n1. 请在终端按顺序执行参考安装命令：\nnpx @larksuite/cli@latest install\nnpx skills add larksuite/cli -y -g\n\n2. 凭证配置与登录处理要求：\n首次配置应用凭证时执行参考命令：\nlark-cli config init --new\n请停下并将终端给出的链接发给我，由我在浏览器完成应用凭证创建。\n用户登录时执行参考命令：\nlark-cli auth login --no-wait --json --domain base,drive,docs,wiki\n解析并提取返回结果中的 verification_url 和 device_code 原样发给我，随后停下；等待我在浏览器打开链接授权完成后，你再执行参考命令完成最终登录（将其中的 <device_code> 替换为实际设备码）：\nlark-cli auth login --device-code '<device_code>'\n整个过程不要向我索要密钥，不要打印密钥。\n\n3. 安装完成标准：\n登录完成后，在终端执行参考验证命令：\nlark-cli --version\nlark-cli auth status\nlark-cli doctor\n预期结果：lark-cli --version 正确输出版本号，lark-cli auth status 显示已登录，lark-cli doctor 诊断各项状态正常。\n\n4. 常见坑及处理办法：\n- 若环境未安装 Node.js 会导致安装失败，需确保已预装 Node.js 和 npm。\n- 设备码过期需使用相同 domain 重新发起命令生成新码，切勿复用旧码。\n- domain 参数必须写全所需权限（base,drive,docs,wiki），遗漏会导致相应模块缺少权限。\n\n5. 完成后请用几句话汇报 CLI 版本、auth status 登录状态及 doctor 诊断结果。",
+   "todo": [
+    "准备飞书账号并准备好 Node.js 环境",
+    "根据链接在浏览器中完成应用凭证初始化",
+    "打开验证链接输入 device_code 确认授权"
    ]
   },
   {
@@ -525,38 +317,7 @@
     "群聊"
    ],
    "desc": "利用长连接免公网接收飞书消息，实现群聊与私聊派发任务。",
-   "what": "基于飞书官方 Python SDK `lark-oapi` 的 WebSocket 长连接模式接收事件并转给 Bot。**适合无需公网 IP 和回调地址在云电脑上接收私聊或群聊 @ 消息并派活。**",
-   "prereq": [
-    "**需安装 Python 3 并使用 venv 虚拟环境。**",
-    "需在飞书开放平台创建企业自建应用并开启机器人能力。",
-    "需订阅 `im.message.receive_v1` 事件并选择长连接方式。",
-    "需开通 `im:message`、`im:message:send_as_bot`、`im:message.p2p_msg:readonly`、`im:message.group_at_msg:readonly`、`im:chat:readonly`、`im:resource` 权限。"
-   ],
-   "auth": "**代码中传入应用的 app_id 与 app_secret 建立客户端连接。** 凭证仅保存在本地私密文件中，严禁打印或贴入聊天窗口。",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "群内 @ 机器人收不到推送消息",
-     "a": "**检查并在开放平台补开 `im:message.group_at_msg:readonly` 权限。** 漏开此权限将无法接收群内 @ 事件。"
-    },
-    {
-     "q": "Debian 系统提示环境受外部管理且未安装 SDK",
-     "a": "**必须在 Python venv 虚拟环境内安装 lark-oapi 并运行脚本。** Debian 系统的 PEP 668 机制会限制全局安装。"
-    },
-    {
-     "q": "收到重复消息或多机器人互答死循环",
-     "a": "**代码中根据 `message_id` 进行去重并设置白名单与限频。** 此外群消息应仅处理 @ 本机器人的内容以防误触发。"
-    }
-   ],
-   "install": [
-    "python3 -m venv .venv",
-    "./.venv/bin/pip install lark-oapi requests"
-   ],
-   "installAlt": [],
-   "authCmd": [],
-   "verify": [
-    "./.venv/bin/python -c \"import lark_oapi; print('ok')\""
-   ],
+   "what": "基于飞书官方 Python SDK 的长连接消息方案，适合在无需公网 IP 的**云电脑**上实现事件监听与群聊机器人派活。",
    "src": [
     {
      "t": "飞书官方 Python SDK（larksuite/oapi-sdk-python）",
@@ -566,6 +327,13 @@
      "t": "飞书开放平台",
      "u": "https://open.feishu.cn/"
     }
+   ],
+   "intro": "基于飞书官方 Python SDK 的长连接消息方案，适合在无需公网 IP 的**云电脑**上实现事件监听与群聊机器人派活。",
+   "prompt": "你现在的目标是在云电脑上配置飞书官方 Python SDK 环境，使用 WebSocket 长连接模式接收消息。\n\n1. 请在终端按顺序执行参考安装命令：\npython3 -m venv .venv\n./.venv/bin/pip install lark-oapi requests\n\n2. 凭证与配置处理要求：\n配置飞书应用凭证时请停下，指导我将 App ID 与 App Secret 填入本地私密配置文件或环境变量中，不要让我把密钥贴进聊天，严禁在终端或日志中打印密钥。\n\n3. 安装完成标准：\n在终端执行参考验证命令：\n./.venv/bin/python -c \"import lark_oapi; print('ok')\"\n预期结果：终端正常输出 ok。\n随后使用 lark.EventDispatcherHandler.builder 注册 register_p2_im_message_receive_v1，并通过 lark.ws.Client 启动客户端，长连接成功建立且无报错。\n\n4. 常见坑及处理办法：\n- Debian 系统受 PEP 668 保护，必须通过 .venv 虚拟环境中的 python 和 pip 运行。\n- 飞书开放平台自建应用必须开启机器人能力，事件接收方式务必选择长连接，并订阅 im.message.receive_v1 事件。\n- 权限至少需开通 im:message、im:message:send_as_bot、im:message.p2p_msg:readonly、im:message.group_at_msg:readonly、im:chat:readonly、im:resource。缺少群 @ 权限将无法收到群消息。\n- 飞书推送同一条消息可能重复，必须根据 message_id 进行去重处理。\n- 多个机器人在同群互相回复会陷入死循环，必须配置白名单与限频机制，且群消息仅处理 @本机器人 的内容。\n\n5. 完成后请用几句话汇报虚拟环境建立情况、依赖安装状态及模块导入验证结果。",
+   "todo": [
+    "在飞书开放平台创建企业自建应用并开启机器人功能",
+    "配置长连接事件接收方式并开通所需消息权限",
+    "将 App ID 和 App Secret 存入云电脑本地私密文件"
    ]
   },
   {
@@ -581,44 +349,19 @@
     "api"
    ],
    "desc": "通过 OAuth 1.0a PIN 授权调用 X 官方接口发帖与传图。",
-   "what": "直接调用 X 官方开发者 API 进行发帖、传图与删帖。**适合让 Bot 在云电脑上实现自动化定时发帖，仅检索讨论建议直接用 Grok 搜索。**",
-   "prereq": [
-    "**需拥有 X 开发者账号并在控制台创建 App。**",
-    "App 权限需设定为 `Read and write`（若需私信加 `Direct message`）。",
-    "获取 `Consumer Key` 与 `Consumer Secret` 并存放于本地私密文件。"
-   ],
-   "auth": "**采用 OAuth 1.0a PIN 授权机制获取持久凭证。** 避免使用控制台生成的 2 小时易过期 OAuth 2.0 访问令牌。",
-   "steps": [
-    "使用 OAuth 1.0a HMAC-SHA1 签名向 POST https://api.x.com/oauth/request_token 发起请求并携带参数 `oauth_callback=oob`。",
-    "在浏览器中打开 https://api.x.com/oauth/authorize?oauth_token= 拼接返回令牌的地址，登录待发帖账号并授权。",
-    "在授权成功页面获取显示的 PIN 码。",
-    "携带 `oauth_verifier=PIN` 向 POST https://api.x.com/oauth/access_token 发起请求，保存返回的 `oauth_token` 与 `oauth_token_secret`。",
-    "请求 GET https://api.x.com/2/users/me 核对当前绑定的账号信息。",
-    "向 POST https://api.x.com/2/tweets 发送 JSON 正文 `{\"text\":\"...\"}` 发帖，配图需先上传媒体获取 `media_id` 填入 `media.media_ids`。"
-   ],
-   "pitfalls": [
-    {
-     "q": "修改应用权限后发帖报错 403",
-     "a": "**修改 App 权限后必须重新走一遍 PIN 授权流程。** 旧令牌不会自动同步新权限。"
-    },
-    {
-     "q": "接口请求返回 401 未授权",
-     "a": "**重新执行 PIN 授权并确认四个凭证与签名完整无误。** 401 通常由签名错误或凭据字段缺失导致。"
-    },
-    {
-     "q": "发帖计费超出预期",
-     "a": "**注意 X API 按调用计费且正文带链接推文更贵。** 具体费用以开发者控制台实时价格为准。"
-    }
-   ],
-   "install": [],
-   "installAlt": [],
-   "authCmd": [],
-   "verify": [],
+   "what": "基于 OAuth 1.0a PIN 授权的 X 官方接口调用方案，适合让 Bot 在**云电脑**上安全执行发帖、传图与删帖任务。",
    "src": [
     {
      "t": "X 官方文档：PIN-based OAuth",
      "u": "https://docs.x.com/resources/fundamentals/authentication/oauth-1-0a/pin-based-oauth"
     }
+   ],
+   "intro": "基于 OAuth 1.0a PIN 授权的 X 官方接口调用方案，适合让 Bot 在**云电脑**上安全执行发帖、传图与删帖任务。",
+   "prompt": "你现在的目标是在云电脑上通过 OAuth 1.0a PIN 模式完成 X API 授权与发帖能力验证。\n\n1. 参考请求流程：\n素材未提供预置 shell 命令，严禁编造素材之外的命令。请严格按照以下原生步骤实现授权与调用：\n- 第一步：使用 OAuth 1.0a HMAC-SHA1 签名向 POST https://api.x.com/oauth/request_token 发送请求，携带参数 oauth_callback=oob 获取临时令牌。\n- 第二步：拼装授权网址 https://api.x.com/oauth/authorize?oauth_token=返回的令牌 并原样发给我。\n- 第三步：收到我发回的 PIN 后，携带 oauth_verifier=PIN 向 POST https://api.x.com/oauth/access_token 请求获取 oauth_token 与 oauth_token_secret 并妥善保存。\n- 第四步：调用 GET https://api.x.com/2/users/me 核对账号信息。\n- 第五步：调用 POST https://api.x.com/2/tweets 发送推文，正文格式为 {\"text\":\"...\"}（若有配图先上传媒体获取 media_id 放入 media.media_ids）。\n\n2. 凭证与授权处理要求：\n开始前请停下，请我将 X 开发者后台生成的 Consumer Key 和 Consumer Secret 填入本地私密文件，不要让我贴进聊天，严禁打印密钥。第二步获取临时令牌后必须停下，把授权链接原样发给我，等待我在浏览器登录并把页面显示的 PIN 发回，不得自行伪造 PIN。\n\n3. 安装完成标准：\n调用 GET https://api.x.com/2/users/me 预期能正确返回当前授权用户的账号信息；调用 POST https://api.x.com/2/tweets 预期成功发布一条测试推文并返回推文 ID。\n\n4. 常见坑及处理办法：\n- 控制台直接生成的 OAuth 2.0 Access Token 有效期仅 2 小时，发帖必须使用 OAuth 1.0a。\n- 在开发者后台修改 App 权限后，旧令牌不会自动生效，必须重新走一遍 PIN 授权流程，否则发帖报 403。\n- 若请求报 401，多为签名算法错误或四个字段不完整，重新执行 PIN 流程获取完整凭据。\n- X API 按调用计费，正文含链接的推文费用更高，以控制台实时价格为准。\n\n5. 完成后请用几句话汇报账号核验结果及测试推文的发布结果。",
+   "todo": [
+    "在 X 开发者平台创建 App 并开启 Read and write 权限",
+    "将 Consumer Key 与 Consumer Secret 存入本地私密文件",
+    "在浏览器打开授权链接并把页面显示的 PIN 码发给 Bot"
    ]
   },
   {
@@ -634,39 +377,7 @@
     "pr"
    ],
    "desc": "GitHub 官方命令行工具，用于代码拉取推送与管理 PR。",
-   "what": "`gh` 是 GitHub 官方命令行工具。**适合让 Bot 在云电脑上克隆私有仓库、推送代码、创建 PR 以及审查 Actions 任务。**",
-   "prereq": [
-    "**系统需预先安装 git。**",
-    "参考官方 Linux 文档添加 apt 源后安装 `gh`。"
-   ],
-   "auth": "**运行 `gh auth login` 选择 GitHub.com、HTTPS 并通过浏览器设备码授权。** 随后运行 `gh auth setup-git` 将凭据绑定到 git 操作。",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "推送包含工作流的提交失败",
-     "a": "**执行 `gh auth refresh -s workflow` 为当前令牌补全权限。** 修改 `.github/workflows` 必须具备 workflow 权限。"
-    },
-    {
-     "q": "共用机器污染全局 git 作者配置",
-     "a": "**提交代码时使用 git -c user.name=... -c user.email=... commit 临时指定作者。** 这样可避免覆盖全局凭据。"
-    },
-    {
-     "q": "敏感凭据与文件泄露",
-     "a": "**在推送前仔细检查 .gitignore 文件配置。** 杜绝将私密密钥、日志与构建产物推送到远程仓库。"
-    }
-   ],
-   "install": [
-    "sudo apt-get install -y gh"
-   ],
-   "installAlt": [],
-   "authCmd": [
-    "gh auth login",
-    "gh auth setup-git"
-   ],
-   "verify": [
-    "gh --version",
-    "gh auth status"
-   ],
+   "what": "GitHub 官方命令行工具，适合让 Bot 在**云电脑**上无缝克隆私有仓库、推送代码、创建 PR 并管理 Actions。",
    "src": [
     {
      "t": "GitHub CLI Linux 安装文档",
@@ -676,6 +387,13 @@
      "t": "gh auth login 官方手册",
      "u": "https://cli.github.com/manual/gh_auth_login"
     }
+   ],
+   "intro": "GitHub 官方命令行工具，适合让 Bot 在**云电脑**上无缝克隆私有仓库、推送代码、创建 PR 并管理 Actions。",
+   "prompt": "你现在的目标是在云电脑上安装 GitHub CLI（gh），完成网页登录授权并配置 git 凭证。\n\n1. 请在终端执行参考安装命令：\nsudo apt-get install -y gh\n\n2. 登录与授权处理要求：\n执行参考登录命令：\ngh auth login\n在交互选项中选择 GitHub.com、HTTPS 以及通过浏览器登录。当终端输出一次性设备代码和验证链接时立即停下，把代码和链接原样发给我，由我在浏览器打开输入代码完成授权。严禁向我索要密码或 Token，不要打印敏感凭据。\n授权完成后，在终端执行参考命令使 git 使用 gh 凭证：\ngh auth setup-git\n\n3. 安装完成标准：\n在终端执行参考验证命令：\ngh --version\ngh auth status\n预期结果：gh --version 正常输出版本号，gh auth status 显示当前登录账号状态正常。\n\n4. 常见坑及处理办法：\n- 若推送修改 .github/workflows 的提交，必须补齐工作流权限，可执行 gh auth refresh -s workflow 刷新。\n- 在共用云电脑上提交代码时，使用 git -c user.name=... -c user.email=... commit 单独指定作者，避免修改全局配置。\n- 提交前检查 .gitignore，严防将密钥、日志或构建文件推送到公开仓库。\n\n5. 完成后请用几句话汇报 gh 的安装版本以及 auth status 的登录检测结果。",
+   "todo": [
+    "准备 GitHub 账号",
+    "在浏览器打开授权链接并输入命令行给出的一次性代码",
+    "如需修改工作流提交按需授权 workflow 权限"
    ]
   },
   {
@@ -691,38 +409,18 @@
     "自动化"
    ],
    "desc": "微软开源浏览器自动化库，驱动无头浏览器截图与抓取渲染页。",
-   "what": "`playwright` 是微软开源的浏览器自动化工具库。**适合编写脚本批量截屏、爬取需 JavaScript 渲染的网页以及进行页面回归检查以节省额度。**",
-   "prereq": [
-    "**系统需安装 Python 3 或 Node.js 环境。**",
-    "可单独安装 `chromium` 核心以节省磁盘空间。"
-   ],
-   "auth": "**不需要登录。**",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "Debian 安装报 `externally-managed-environment`",
-     "a": "**先创建 Python venv 虚拟环境再执行 pip 安装。** 系统自带 Python 受 PEP 668 保护禁止全局安装。"
-    },
-    {
-     "q": "无 root 权限时依赖安装报错",
-     "a": "**执行安装命令时去掉 `--with-deps` 参数。** 包含该参数会强制调用 sudo 安装系统依赖。"
-    }
-   ],
-   "install": [
-    "python3 -m venv ~/.venvs/pw",
-    "~/.venvs/pw/bin/pip install playwright",
-    "~/.venvs/pw/bin/python -m playwright install --with-deps chromium"
-   ],
-   "installAlt": [],
-   "authCmd": [],
-   "verify": [
-    "~/.venvs/pw/bin/python -m playwright --version"
-   ],
+   "what": "Playwright 是微软开源的自动化库，适合让 Bot 执行**批量网页截图与渲染抓取**，无需手动耗费浏览器交互额度。",
    "src": [
     {
      "t": "Playwright Python 官方文档",
      "u": "https://playwright.dev/python/docs/intro"
     }
+   ],
+   "intro": "Playwright 是微软开源的自动化库，适合让 Bot 执行**批量网页截图与渲染抓取**，无需手动耗费浏览器交互额度。",
+   "prompt": "请你在云电脑中为 Python 环境安装 Playwright 并下载 Chromium。\n\n1. 目标：完成 Playwright 及其依赖环境的安装与可用性验证。\n2. 参考命令：\n- 创建虚拟环境：python3 -m venv ~/.venvs/pw\n- 安装 Playwright：~/.venvs/pw/bin/pip install playwright\n- 安装依赖与 Chromium：~/.venvs/pw/bin/python -m playwright install --with-deps chromium\n3. 密钥与授权原则：遇到登录、授权、填密钥等只能我来做的步骤时，请先停下，把授权链接或验证码原样发给我，或请我把密钥填进本地私密文件，不要让我把密钥贴进聊天，不要打印密钥。\n4. 常见坑及处理办法：\n- Debian 系统的 Python 存在 PEP 668 保护，直接使用全局 pip install 会报 externally-managed-environment 错误，必须在上述 venv 虚拟环境中安装。\n- 命令中的 --with-deps 会调用 sudo 安装系统依赖，如果当前环境没有 root 权限导致失败，请去掉 --with-deps 重试。\n- 仅安装 chromium 浏览器，节省云电脑磁盘空间。\n5. 安装完成标准：执行验证命令 ~/.venvs/pw/bin/python -m playwright --version，预期结果为正常打印版本号。\n6. 执行完成后，用几句话向我汇报安装与验证结果。",
+   "todo": [
+    "确认云电脑具备 Python 3 环境",
+    "若缺少 root 权限需配合确认依赖安装状态"
    ]
   },
   {
@@ -737,37 +435,18 @@
     "音频"
    ],
    "desc": "开源命令行音视频下载工具，支持提取音频及多平台下载。",
-   "what": "`yt-dlp` 是支持上千个站点的开源命令行音视频下载器。**适合让 Bot 下载视频原片或抽取独立音频以供转写工具处理。**",
-   "prereq": [
-    "**系统需安装 Python 3.10+。**",
-    "音视频合并与转码需预先安装 `ffmpeg`。"
-   ],
-   "auth": "**不需要登录。** 遇到需校验或登录的站点可通过 `--cookies` 参数传入本地导出的 cookie 文件，严禁外传该文件。",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "下载后无法合并音视频文件",
-     "a": "**在系统中安装 ffmpeg 工具。** 缺少该依赖时程序仅能下载单路流而无法完成合并转码。"
-    },
-    {
-     "q": "目标站点调整导致解析下载失败",
-     "a": "**执行 `yt-dlp -U` 命令更新至最新版本。** 站点结构调整常导致旧版本解析规则失效，且注意仅下载有权使用的内容。"
-    }
-   ],
-   "install": [
-    "python3 -m venv ~/.venvs/ytdlp",
-    "~/.venvs/ytdlp/bin/pip install -U \"yt-dlp[default]\""
-   ],
-   "installAlt": [],
-   "authCmd": [],
-   "verify": [
-    "~/.venvs/ytdlp/bin/yt-dlp --version"
-   ],
+   "what": "yt-dlp 是支持上千个站点的命令行音视频下载工具，适合让 Bot **批量下载视频或抽取音频**以供后续转写处理。",
    "src": [
     {
      "t": "yt-dlp 官方仓库",
      "u": "https://github.com/yt-dlp/yt-dlp"
     }
+   ],
+   "intro": "yt-dlp 是支持上千个站点的命令行音视频下载工具，适合让 Bot **批量下载视频或抽取音频**以供后续转写处理。",
+   "prompt": "请你在云电脑中为 Python 环境安装最新版 yt-dlp。\n\n1. 目标：在专属虚拟环境中安装 yt-dlp[default] 并验证可用性。\n2. 参考命令：\n- 创建虚拟环境：python3 -m venv ~/.venvs/ytdlp\n- 安装工具：~/.venvs/ytdlp/bin/pip install -U \"yt-dlp[default]\"\n3. 密钥与授权原则：遇到登录、授权、填密钥等只能我来做的步骤时，请先停下，把授权链接或验证码原样发给我，或请我把密钥填进本地私密文件，不要让我把密钥贴进聊天，不要打印密钥。\n4. 常见坑及处理办法：\n- 若环境未安装 ffmpeg，则只能下载单路音视频流，无法执行流合并与转码操作。\n- 部分站点需要登录或校验，后续使用时可通过 --cookies 传入我导出的 cookie 文件，cookie 文件包含敏感信息切勿外传。\n- 站点改版导致下载失败时，可先执行 yt-dlp -U 尝试更新。\n- 严格遵守版权规范，只下载有权使用的内容。\n5. 安装完成标准：执行验证命令 ~/.venvs/ytdlp/bin/yt-dlp --version，预期结果为正常输出 yt-dlp 的版本号。\n6. 执行完成后，用几句话向我汇报安装与验证结果。",
+   "todo": [
+    "准备需要下载的目标媒体链接",
+    "若目标站点需登录鉴权，提前导出 cookie 文件备用"
    ]
   },
   {
@@ -783,41 +462,18 @@
     "剪辑"
    ],
    "desc": "开源音视频处理工具，支持转码、截帧、音频提取与字幕烧录。",
-   "what": "`ffmpeg` 是一套开源音视频多媒体处理工具。**适合用于音视频转码、画面压缩、指定时间截帧、抽取音频、字幕烧录与视频拼接。**",
-   "prereq": [
-    "**Debian 或 Ubuntu 系统需具备 sudo 权限以通过 apt 安装。**",
-    "烧录中文字幕前需确保已安装中文字体。"
-   ],
-   "auth": "**不需要登录。**",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "系统重置后命令失效",
-     "a": "**将 apt 安装命令写入工作目录的初始化恢复脚本中。** 云电脑环境重置可能会清空系统包。"
-    },
-    {
-     "q": "烧录中文字幕时文字显示为方块",
-     "a": "**在系统环境中安装中文字体包。** 缺少对应字库会导致字符无法正确渲染。"
-    },
-    {
-     "q": "处理大文件长时间阻塞终端",
-     "a": "**将转码任务放入后台执行并将输出重定向至日志文件。** 耗时较长的操作避免在前台阻塞进程。"
-    }
-   ],
-   "install": [
-    "sudo apt-get update",
-    "sudo apt-get install -y ffmpeg"
-   ],
-   "installAlt": [],
-   "authCmd": [],
-   "verify": [
-    "ffmpeg -version"
-   ],
+   "what": "FFmpeg 是多媒体底层处理的核心工具，适合让 Bot 完成**音视频转码、压缩、截帧与音频提取**。",
    "src": [
     {
      "t": "FFmpeg 官方下载页",
      "u": "https://ffmpeg.org/download.html"
     }
+   ],
+   "intro": "FFmpeg 是多媒体底层处理的核心工具，适合让 Bot 完成**音视频转码、压缩、截帧与音频提取**。",
+   "prompt": "请你在云电脑中使用系统包管理器安装 FFmpeg。\n\n1. 目标：在云电脑中完整部署 FFmpeg 工具链。\n2. 参考命令：\n- 更新软件源：sudo apt-get update\n- 安装软件包：sudo apt-get install -y ffmpeg\n3. 密钥与授权原则：遇到登录、授权、填密钥等只能我来做的步骤时，请先停下，把授权链接或验证码原样发给我，或请我把密钥填进本地私密文件，不要让我把密钥贴进聊天，不要打印密钥。\n4. 常见坑及处理办法：\n- 云电脑重置系统后通过 apt 安装的软件可能会丢失，建议将安装命令写入工作目录下的恢复脚本中。\n- 后续若需烧录中文字幕，必须提前安装中文字体，否则字幕会显示为方块乱码。\n- 大文件转码耗时长且占用较多资源，建议放后台运行并记录输出日志。\n5. 安装完成标准：执行验证命令 ffmpeg -version，预期结果为正常输出 FFmpeg 版本号及构建配置信息。\n6. 执行完成后，用几句话向我汇报安装与验证结果。",
+   "todo": [
+    "确认当前云电脑具备 sudo 权限",
+    "若有中文字幕烧录需求提前准备中文字体包"
    ]
   },
   {
@@ -836,34 +492,7 @@
     "lark-cli"
    ],
    "desc": "JavaScript 运行环境，为多个终端 Agent 工具提供依赖。",
-   "what": "`Node.js` 与 `npm` 是多种前端及终端命令行工具的运行时基础。**用于支撑各类 Agent 工具的全局安装与环境执行。**",
-   "prereq": [
-    "**根据不同工具需求安装对应版本，如 Gemini CLI 需 20+，Pi 需 22.19+。**",
-    "推荐使用 `nvm` 在用户目录下管理与安装最新版本。"
-   ],
-   "auth": "**不需要登录。**",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "全局安装包报 `EACCES` 权限错误",
-     "a": "**改用 nvm 管理环境或设置 `npm config set prefix ~/.local` 并将 ~/.local/bin 加入 PATH。** 切勿使用 sudo 执行 npm 全局安装。"
-    },
-    {
-     "q": "多版本共存时执行版本不一致",
-     "a": "**在终端执行 node -v 和 which node 确认当前调用的具体路径。** 确保使用的版本满足工具依赖要求。"
-    }
-   ],
-   "install": [
-    "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | bash",
-    "source ~/.bashrc",
-    "nvm install 22"
-   ],
-   "installAlt": [],
-   "authCmd": [],
-   "verify": [
-    "node -v",
-    "npm -v"
-   ],
+   "what": "Node.js 与 npm 是前端及各类 AI CLI 的执行基础，适合为 Bot 提供**现代命令行工具的运行环境**。",
    "src": [
     {
      "t": "nvm 官方仓库",
@@ -873,6 +502,11 @@
      "t": "Node.js 官网",
      "u": "https://nodejs.org/"
     }
+   ],
+   "intro": "Node.js 与 npm 是前端及各类 AI CLI 的执行基础，适合为 Bot 提供**现代命令行工具的运行环境**。",
+   "prompt": "请你在云电脑的用户目录下通过 nvm 安装 Node.js 22 和 npm。\n\n1. 目标：安装 nvm 并使用其安装 Node.js 22。\n2. 参考命令：\n- 下载安装 nvm：curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | bash\n- 重载环境配置：source ~/.bashrc\n- 安装 Node.js 22：nvm install 22\n3. 密钥与授权原则：遇到登录、授权、填密钥等只能我来做的步骤时，请先停下，把授权链接或验证码原样发给我，或请我把密钥填进本地私密文件，不要让我把密钥贴进聊天，不要打印密钥。\n4. 常见坑及处理办法：\n- 执行 npm install -g 若报 EACCES 权限错误，切勿使用 sudo，改用 nvm 环境或使用 npm config set prefix ~/.local 并把 ~/.local/bin 加进 PATH。\n- 若环境中存在多个 Node 版本，使用 node -v 和 which node 确认当前使用的版本与路径。\n- 安装后若未找到命令，确认已执行 source ~/.bashrc。\n5. 安装完成标准：分别执行验证命令 node -v 和 npm -v，预期结果为正常输出 Node.js 的 22.x 版本号以及 npm 版本号。\n6. 执行完成后，用几句话向我汇报安装与验证结果。",
+   "todo": [
+    "无需准备外部账号或密钥"
    ]
   },
   {
@@ -889,42 +523,19 @@
     "网络"
    ],
    "desc": "利用 SSH 动态转发搭建固定出口代理，解决服务地域限制问题。",
-   "what": "利用 OpenSSH 的动态端口转发在本地建立 SOCKS5 代理。**适合让特定命令行工具的流量经由受支持的海外 VPS 出口，解决地区限制拦截。**",
-   "prereq": [
-    "**需拥有一台处于受支持地区的海外 VPS。**",
-    "可使用 SSH 密钥免密登录 VPS，私钥权限需设为 `600`。"
-   ],
-   "auth": "**基于本地 SSH 密钥进行服务器连接认证。** 私钥需放置于本地私密目录，严禁对外泄露。",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "DNS 泄漏导致仍被目标服务识别地域",
-     "a": "**代理协议必须使用 `socks5h://127.0.0.1:1081` 而非 `socks5`。** 采用 `socks5h` 能确保域名解析一并走代理转发。"
-    },
-    {
-     "q": "SSH 隧道连接静默中断",
-     "a": "**连接命令中添加 -o ServerAliveInterval=30 参数保持心跳。** 并在包装脚本中执行命令前先校验隧道连通性。"
-    },
-    {
-     "q": "全局代理影响其他本地服务",
-     "a": "**仅对指定工具设置代理环境变量而不要开启全局代理。** 可编写包装脚本并在运行真实程序前临时导出 `HTTPS_PROXY` 与 `ALL_PROXY`。"
-    }
-   ],
-   "install": [
-    "ssh -fN -o ServerAliveInterval=30 -D 127.0.0.1:1081 user@your-vps"
-   ],
-   "installAlt": [],
-   "authCmd": [
-    "export HTTPS_PROXY=socks5h://127.0.0.1:1081 ALL_PROXY=socks5h://127.0.0.1:1081 NO_PROXY=localhost,127.0.0.1"
-   ],
-   "verify": [
-    "curl --proxy socks5h://127.0.0.1:1081 https://ifconfig.me"
-   ],
+   "what": "固定出口代理利用 SSH 动态端口转发搭建本地 SOCKS5 代理，适合让 Bot 在**访问受地域限制的服务**时保持稳定的出口 IP。",
    "src": [
     {
      "t": "OpenSSH ssh 手册（-D 动态转发）",
      "u": "https://man.openbsd.org/ssh"
     }
+   ],
+   "intro": "固定出口代理利用 SSH 动态端口转发搭建本地 SOCKS5 代理，适合让 Bot 在**访问受地域限制的服务**时保持稳定的出口 IP。",
+   "prompt": "请你在云电脑中建立 SSH 动态转发隧道并配置 SOCKS5 出口代理环境变量。\n\n1. 目标：开通基于 SSH 的固定出口 SOCKS5 代理隧道并配置网络代理环境。\n2. 参考命令：\n- 启动后台隧道：ssh -fN -o ServerAliveInterval=30 -D 127.0.0.1:1081 user@your-vps\n- 配置代理环境变量：export HTTPS_PROXY=socks5h://127.0.0.1:1081 ALL_PROXY=socks5h://127.0.0.1:1081 NO_PROXY=localhost,127.0.0.1\n3. 密钥与授权原则：遇到登录、授权、填密钥等只能我来做的步骤时（如连接 VPS 所需的 SSH 凭证），请先停下，请我将私钥填入本地私密文件并把权限设为 600，不要让我把私钥贴进聊天，不要打印密钥。\n4. 常见坑及处理办法：\n- 代理协议必须使用 socks5h 而不是 socks5，以确保 DNS 解析同步走代理。\n- 隧道可能因空闲断开，命令中需保留 -o ServerAliveInterval=30 保持心跳；也可以为特定工具编写包装脚本，在调用前检查隧道并在必要时拉起，同时支持环境变量开关绕过代理。\n- SSH 私钥必须存放在本地私密目录且权限设为 600。\n- 仅代理需要的工具，切勿开启全局代理，避免影响其他正常网络连接。\n5. 安装完成标准：执行验证命令 curl --proxy socks5h://127.0.0.1:1081 https://ifconfig.me，预期结果为返回你所连接的海外 VPS 实际出口 IP 地址。\n6. 执行完成后，用几句话向我汇报配置与验证结果。",
+   "todo": [
+    "准备一台受目标服务支持且可通过 SSH 密钥登录的海外 VPS",
+    "将 VPS 的 SSH 登录私钥存放在云电脑私密文件并设权限为 600",
+    "将命令中的 user@your-vps 替换为真实的 VPS 用户名及 IP"
    ]
   },
   {
@@ -940,32 +551,19 @@
     "model context protocol"
    ],
    "desc": "将外部服务或自定义 MCP 服务器接入 Grok，扩展工具调用能力。",
-   "what": "`MCP 连接器` 让 Grok 对话直接调用外部服务或自定义接口。**适合接入官方内置应用、预置第三方服务或自定义部署的 MCP 服务端工具。**",
-   "prereq": [
-    "**需拥有 Grok 账号，商业版与企业版需团队管理员在控制台开通权限。**",
-    "自定义服务端必须具备公网可访问地址与鉴权防护。"
-   ],
-   "auth": "**在 grok.com/connectors 点击 New Connector 完成对应服务的 OAuth 授权或填入 Custom 地址。** 自定义服务器需按需配置认证密钥，仅授予必要权限。",
-   "steps": [],
-   "pitfalls": [
-    {
-     "q": "本地部署的 MCP 服务无法被 Grok 连接",
-     "a": "**使用隧道服务将服务暴露至公网。** 运行在 `localhost` 的服务无法直接访问，需参考官方 Custom MCP Server Tunneling 进行内网穿透。"
-    },
-    {
-     "q": "自定义接口存在未授权访问风险",
-     "a": "**为自定义 MCP 服务器配置严格的鉴权机制。** 严禁将无保护的内部接口直接暴露在公网环境下。"
-    }
-   ],
-   "install": [],
-   "installAlt": [],
-   "authCmd": [],
-   "verify": [],
+   "what": "MCP 连接器打通了外部服务与模型的交互通道，适合让 Bot **直接调用外部工具与云端数据**完成复杂协同。",
    "src": [
     {
      "t": "Grok 官方文档：Connectors",
      "u": "https://docs.x.ai/grok/connectors"
     }
+   ],
+   "intro": "MCP 连接器打通了外部服务与模型的交互通道，适合让 Bot **直接调用外部工具与云端数据**完成复杂协同。",
+   "prompt": "请你指导我完成 Grok MCP 连接器的接入与配置。\n\n1. 目标：接入官方内置连接器、第三方 OAuth 连接器或自定义 MCP 服务器。\n2. 参考命令：本功能由平台原生提供，无需在云电脑终端执行命令行安装。\n3. 密钥与授权原则：遇到登录、授权、填密钥等只能我来做的步骤时，请先停下，指导我前往 grok.com/connectors 页面点击 New Connector 完成 OAuth 授权或填写 Custom MCP 服务器 URL 及认证信息，不要让我把密钥贴进聊天，不要打印密钥。\n4. 常见坑及处理办法：\n- MCP 服务器必须能从公网访问，直接运行在本机或云电脑 localhost 上的服务无法被 Grok 接入，必须使用隧道服务暴露公网地址。\n- 自定义 MCP 服务器必须做好鉴权机制，切勿将未受保护的内部接口裸露在公网。\n- 遵循最小权限原则，只勾选和授权必要的权限范围。\n- 若使用商业版或企业版账号，需先联系团队管理员在控制台开通连接器权限。\n5. 完成标准：在 grok.com/connectors 添加成功后，Grok 能够自动发现该服务器暴露的工具，并在对话中成功调用。\n6. 梳理完毕后，用几句话向我汇报配置流程与检查要点。",
+   "todo": [
+    "在浏览器中访问 grok.com/connectors 页面",
+    "准备待授权的第三方账号或公网可访问的自定义 MCP 服务器地址",
+    "商业版或企业版需确认管理员已在控制台开启连接器功能"
    ]
   }
  ]

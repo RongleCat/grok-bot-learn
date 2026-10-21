@@ -9,40 +9,37 @@ next: false
 
 <ToolMeta id="playwright" />
 
-`playwright` 是微软开源的浏览器自动化工具库。**适合编写脚本批量截屏、爬取需 JavaScript 渲染的网页以及进行页面回归检查以节省额度。**
+Playwright 是微软开源的自动化库，适合让 Bot 执行**批量网页截图与渲染抓取**，无需手动耗费浏览器交互额度。
 
-## 前置条件
+## 发给 Bot 的提示词
 
-- **系统需安装 Python 3 或 Node.js 环境。**
-- 可单独安装 `chromium` 核心以节省磁盘空间。
+复制下方整段内容发送给你的 Grok Bot，它会在云电脑上自动安装并验证，遇到登录或配置密钥时会暂停等待你操作。
 
-## 安装
+<div class="tool-prompt">
 
-```bash
-python3 -m venv ~/.venvs/pw
-~/.venvs/pw/bin/pip install playwright
-~/.venvs/pw/bin/python -m playwright install --with-deps chromium
-```
+````text
+请你在云电脑中为 Python 环境安装 Playwright 并下载 Chromium。
 
-## 登录与授权
+1. 目标：完成 Playwright 及其依赖环境的安装与可用性验证。
+2. 参考命令：
+- 创建虚拟环境：python3 -m venv ~/.venvs/pw
+- 安装 Playwright：~/.venvs/pw/bin/pip install playwright
+- 安装依赖与 Chromium：~/.venvs/pw/bin/python -m playwright install --with-deps chromium
+3. 密钥与授权原则：遇到登录、授权、填密钥等只能我来做的步骤时，请先停下，把授权链接或验证码原样发给我，或请我把密钥填进本地私密文件，不要让我把密钥贴进聊天，不要打印密钥。
+4. 常见坑及处理办法：
+- Debian 系统的 Python 存在 PEP 668 保护，直接使用全局 pip install 会报 externally-managed-environment 错误，必须在上述 venv 虚拟环境中安装。
+- 命令中的 --with-deps 会调用 sudo 安装系统依赖，如果当前环境没有 root 权限导致失败，请去掉 --with-deps 重试。
+- 仅安装 chromium 浏览器，节省云电脑磁盘空间。
+5. 安装完成标准：执行验证命令 ~/.venvs/pw/bin/python -m playwright --version，预期结果为正常打印版本号。
+6. 执行完成后，用几句话向我汇报安装与验证结果。
+````
 
-**不需要登录。**
+</div>
 
-## 验证
+## 需要你自己做的事
 
-```bash
-~/.venvs/pw/bin/python -m playwright --version
-```
-
-## 常见坑与解决
-
-### Debian 安装报 `externally-managed-environment`
-
-**先创建 Python venv 虚拟环境再执行 pip 安装。** 系统自带 Python 受 PEP 668 保护禁止全局安装。
-
-### 无 root 权限时依赖安装报错
-
-**执行安装命令时去掉 `--with-deps` 参数。** 包含该参数会强制调用 sudo 安装系统依赖。
+- 确认云电脑具备 Python 3 环境
+- 若缺少 root 权限需配合确认依赖安装状态
 
 ## 来源
 
