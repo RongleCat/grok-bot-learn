@@ -901,9 +901,15 @@ summary,
   }
 }
 
-.vp-doc .tool-prompt div[class*='language-'] pre {
-  white-space: pre-wrap;
+.vp-doc .tool-prompt div[class*='language-'] pre,
+.vp-doc .tool-prompt div[class*='language-'] code {
+  white-space: pre-wrap !important;
   word-break: break-word;
+  overflow-wrap: anywhere;
+}
+.vp-doc .tool-prompt div[class*='language-'] code {
+  display: block;
+  width: auto !important;
 }
 .vp-doc .tool-prompt div[class*='language-'] code {
   font-size: 15px;
