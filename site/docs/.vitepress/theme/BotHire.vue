@@ -86,6 +86,7 @@ function focus(slug: string) {
         </div>
         <h2>{{ b.name }}</h2>
         <p>{{ b.desc }}</p>
+        <a v-if="'by' in b" class="hire-by" :href="b.byUrl" target="_blank" rel="noopener">{{ b.by }}</a>
         <div class="hire-acts">
           <a class="hire-use" :href="b.url" target="_blank" rel="noopener" :data-umami-event="'bot-import'" :data-umami-event-bot="b.slug">{{ data.use }}</a>
           <a class="hire-post" :href="b.post" target="_blank" rel="noopener" :data-umami-event="'bot-post'" :data-umami-event-bot="b.slug">{{ data.post }}</a>
@@ -138,6 +139,15 @@ function focus(slug: string) {
   font-size: 17px;
   line-height: 1.7;
   color: var(--vp-c-text-2);
+}
+.hire-by {
+  margin-top: -4px;
+  font-size: 13px;
+  color: var(--vp-c-text-3);
+  text-decoration: none;
+}
+.hire-by:hover {
+  color: var(--vp-c-brand-1);
 }
 .hire-grid {
   display: grid;
