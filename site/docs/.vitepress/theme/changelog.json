@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21",
+ "updated": "2026-10-22",
  "ui": {
   "lead": "汇总 Grok Bot 电脑与手机端官方更新，附带铁柱在 X 上的更新解读。",
   "note": "官方条目为中文摘要，具体细节以官方原文为准。",
@@ -11,6 +11,44 @@
   "full": "查看完整中文翻译"
  },
  "official": [
+  {
+   "id": "ios-1.17.0",
+   "platform": "ios",
+   "version": "1.17.0",
+   "date": "2026-10-21",
+   "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+   "title": "优化应用连接界面设计",
+   "points": [
+    "优化 Connect Apps 界面的视觉与交互设计。"
+   ],
+   "full": [
+    [
+     "",
+     [
+      "优化了「Connect Apps」界面的设计"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "android-2026-10-19",
+   "platform": "android",
+   "version": "",
+   "date": "2026-10-19",
+   "url": "https://play.google.com/store/apps/details?id=ai.x.grok.bot&hl=en",
+   "title": "常规修复与性能提升",
+   "points": [
+    "修复已知问题，提升应用运行稳定性和流畅度。"
+   ],
+   "full": [
+    [
+     "",
+     [
+      "问题修复与改进"
+     ]
+    ]
+   ]
+  },
   {
    "id": "ios-1.16.0",
    "platform": "ios",
