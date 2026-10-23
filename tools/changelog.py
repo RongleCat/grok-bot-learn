@@ -101,10 +101,9 @@ def translate(items):
     prompt = TPROMPT + json.dumps([{'id': i['id'], 'sections': i['sections']} for i in items], ensure_ascii=False)
     for attempt in range(5):
         env = dict(os.environ)
-        if attempt >= 2:
-            env['GEMINI_FORCE_FILE_STORAGE'] = 'true'
+        env['GEMINI_FORCE_FILE_STORAGE'] = 'true'
         try:
-            r = subprocess.run(['agy', '--model', MODEL, '-p', prompt], capture_output=True, text=True, timeout=900, env=env)
+            r = subprocess.run(['agy', '--model', MODEL, '-p', prompt], capture_output=True, text=True, timeout=1200, env=env)
             t = r.stdout
             data = json.loads(t[t.find('{'):t.rfind('}') + 1])
             if all(i['id'] in data and all(len(data[i['id']].get(k, [])) == len(v) for k, v in i['sections'].items()) for i in items):
@@ -114,9 +113,18 @@ def translate(items):
     raise SystemExit('agy translate failed')
 
 
-def batches(items, cap=60):
-    out, cur, n = [], [], 0
+def batches(items, cap=40):
+    # Split oversized entries into per-section shards so agy stays under timeout.
+    shards = []
     for i in items:
+        total = sum(len(v) for v in i['sections'].values())
+        if total <= cap:
+            shards.append(i)
+            continue
+        for k, v in i['sections'].items():
+            shards.append({**i, 'sections': {k: v}, '_shard_of': i['id']})
+    out, cur, n = [], [], 0
+    for i in shards:
         c = sum(len(v) for v in i['sections'].values())
         if cur and n + c > cap:
             out.append(cur)
@@ -131,10 +139,9 @@ def summarize(items):
     prompt = PROMPT + json.dumps(payload, ensure_ascii=False)
     for attempt in range(4):
         env = dict(os.environ)
-        if attempt >= 2:
-            env['GEMINI_FORCE_FILE_STORAGE'] = 'true'
+        env['GEMINI_FORCE_FILE_STORAGE'] = 'true'
         try:
-            r = subprocess.run(['agy', '--model', MODEL, '-p', prompt], capture_output=True, text=True, timeout=600, env=env)
+            r = subprocess.run(['agy', '--model', MODEL, '-p', prompt], capture_output=True, text=True, timeout=900, env=env)
             t = r.stdout
             data = json.loads(t[t.find('{'):t.rfind('}') + 1])
             if all(i['id'] in data for i in items):
@@ -174,11 +181,15 @@ def main():
                              'title': res[r['id']]['title'], 'points': res[r['id']]['points'][:4], **({'full': have[r['id']]['full']} if r['id'] in have and have[r['id']].get('full') else {})}
         print(f'summarized {k + len(batch)}/{len(todo)}', file=sys.stderr)
     tl = [r for r in raw if '--retranslate' in args or not have[r['id']].get('full')]
-    with ThreadPoolExecutor(4) as ex:
+    order = {'新功能': 0, '改进': 1, '修复': 2, '': 3}
+    parts = {}
+    with ThreadPoolExecutor(2) as ex:
         for res in ex.map(translate, batches(tl)):
             for k, v in res.items():
-                have[k]['full'] = v
+                parts.setdefault(k, {}).update({lab: lines for lab, lines in v})
             print('translated', len(res), file=sys.stderr)
+    for k, merged in parts.items():
+        have[k]['full'] = [[a, merged[a]] for a, _ in sorted(merged.items(), key=lambda x: order.get(x[0], 9))]
     cur['official'] = sorted(have.values(), key=lambda e: (e['date'], e['version']), reverse=True)
     cur['updated'] = datetime.now(timezone.utc).strftime('%Y-%m-%d')
     json.dump(cur, open(OUT, 'w'), ensure_ascii=False, indent=1)
