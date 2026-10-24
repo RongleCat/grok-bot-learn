@@ -10,6 +10,8 @@ next: false
 <ToolMeta id="codex" />
 
 OpenAI 官方终端编码 Agent，适合 **代码修改、脚本运行与生图审图**，可直接使用 ChatGPT 订阅额度。
+适合需要修改代码、执行脚本与生图审图的 ChatGPT 订阅用户。
+
 
 ## 发给 Bot 的提示词
 
