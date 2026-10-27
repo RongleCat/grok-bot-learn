@@ -282,8 +282,8 @@ def drift(cur, base):
             out.append(('CRITICAL', u, '新增 noindex', b.get('robots'), c.get('robots')))
         if b.get('h1') and not c.get('h1'):
             out.append(('CRITICAL', u, 'H1 被移除', b.get('h1'), ''))
-        lost = set(b.get('schema_types', [])) - set(c.get('schema_types', []))
-        gain = set(c.get('schema_types', [])) - set(b.get('schema_types', []))
+        lost = set(b.get('schema_types') or []) - set(c.get('schema_types') or [])
+        gain = set(c.get('schema_types') or []) - set(b.get('schema_types') or [])
         if lost: out.append(('CRITICAL' if lost & (ARTICLE | {'BreadcrumbList', 'WebSite', 'Person', 'SoftwareApplication', 'VideoObject'}) else 'WARNING', u, '结构化数据类型被移除', sorted(lost), ''))
         if gain: out.append(('INFO', u, '新增结构化数据类型', '', sorted(gain)))
         if not lost and not gain and b.get('schema_hash') != c.get('schema_hash'): out.append(('INFO', u, '结构化数据内容有改动', '', ''))
