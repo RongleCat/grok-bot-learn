@@ -97,6 +97,9 @@ watch([q, cat], () => {
 .tl-blobs img.c {
   filter: drop-shadow(0 10px 14px rgba(10, 10, 12, 0.25));
 }
+.dark .tl-blobs img.c {
+  filter: invert(1) drop-shadow(0 10px 14px rgba(244, 244, 245, 0.2));
+}
 .tl-hero h1 {
   margin: 20px 0 0;
   font-size: clamp(34px, 6vw, 52px);
@@ -133,7 +136,7 @@ watch([q, cat], () => {
   transition: border-color 0.2s;
 }
 .tl-search:focus-within {
-  border-color: #0a0a0c;
+  border-color: var(--tz-c-hover-border);
 }
 .tl-search input {
   flex: 1;
@@ -170,15 +173,15 @@ watch([q, cat], () => {
   color: var(--vp-c-text-3);
 }
 .tl-tab:hover {
-  border-color: #0a0a0c;
+  border-color: var(--tz-c-hover-border);
 }
 .tl-tab.on {
-  border-color: #0a0a0c;
-  background: #0a0a0c;
-  color: #fff;
+  border-color: var(--tz-c-ink);
+  background: var(--tz-c-ink);
+  color: var(--tz-c-on-ink);
 }
 .tl-tab.on span {
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--tz-on-ink-muted);
 }
 .tl-count {
   margin: 12px 0 14px;
@@ -204,8 +207,8 @@ watch([q, cat], () => {
 }
 .tl-card:hover {
   transform: translateY(-3px);
-  border-color: #0a0a0c;
-  box-shadow: 0 18px 40px -24px rgba(10, 10, 12, 0.35);
+  border-color: var(--tz-c-hover-border);
+  box-shadow: var(--tz-shadow);
 }
 .tl-top {
   display: flex;

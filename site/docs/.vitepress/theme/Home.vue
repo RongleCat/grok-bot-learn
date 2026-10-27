@@ -31,7 +31,6 @@ const friends = [
   { shape: 'goutte', color: 'orange', size: 38, x: -120, y: -95 },
   { shape: 'capsule', color: 'violet', size: 40, x: 130, y: 95 }
 ]
-const tints = ['#eaf3fe', '#fef1e4', '#e6f8ef', '#f1ebfe']
 const segs = (s: string) => s.match(/[^，。；！？]+[，。；！？]*/g) || [s]
 </script>
 
@@ -58,7 +57,7 @@ const segs = (s: string) => s.match(/[^，。；！？]+[，。；！？]*/g) ||
     <section class="gh-sec">
       <h2>{{ copy.partsTitle }}</h2>
       <div class="gh-parts">
-        <a v-for="(p, i) in copy.parts" :key="p.name" class="gh-part" :style="{ background: tints[i] }" :href="withBase(p.link)">
+        <a v-for="(p, i) in copy.parts" :key="p.name" class="gh-part" :data-i="i" :href="withBase(p.link)">
           <GrokOrb :size="56" :shape="partSkins[i].shape" :color="partSkins[i].color" />
           <span class="tag">{{ p.tag }}</span>
           <strong>{{ p.name }}</strong>

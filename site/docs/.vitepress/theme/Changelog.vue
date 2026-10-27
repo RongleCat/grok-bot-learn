@@ -171,15 +171,15 @@ function pick(k: string) {
   color: var(--vp-c-text-3);
 }
 .cl-tab:hover {
-  border-color: #0a0a0c;
+  border-color: var(--tz-c-hover-border);
 }
 .cl-tab.on {
-  border-color: #0a0a0c;
-  background: #0a0a0c;
-  color: #fff;
+  border-color: var(--tz-c-ink);
+  background: var(--tz-c-ink);
+  color: var(--tz-c-on-ink);
 }
 .cl-tab.on span {
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--tz-on-ink-muted);
 }
 .cl-line {
   list-style: none;
@@ -294,7 +294,7 @@ function pick(k: string) {
   background: color-mix(in srgb, var(--mo) 10%, transparent);
 }
 .cl-chip.ours {
-  color: #d62f86;
+  color: var(--tz-badge-ours);
   background: color-mix(in srgb, var(--ours) 12%, transparent);
 }
 .cl-ver {
@@ -331,7 +331,7 @@ function pick(k: string) {
   font-size: 14px;
   font-weight: 600;
   line-height: 1.6;
-  color: #0a0a0c;
+  color: var(--tz-c-ink);
   cursor: pointer;
   list-style: none;
 }
@@ -351,7 +351,7 @@ function pick(k: string) {
   transform: translateY(1px) rotate(-135deg);
 }
 .cl-full summary:focus-visible {
-  outline: 2px solid #0a0a0c;
+  outline: 2px solid var(--tz-c-ink);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -386,7 +386,7 @@ function pick(k: string) {
   text-decoration: none;
 }
 .cl-card a:hover {
-  color: #0a0a0c;
+  color: var(--tz-c-ink);
   text-decoration: underline;
 }
 .cl-empty {
@@ -403,13 +403,13 @@ function pick(k: string) {
   height: 42px;
   padding: 0 22px;
   border-radius: 999px;
-  background: #0a0a0c;
-  color: #fff;
+  background: var(--tz-c-ink);
+  color: var(--tz-c-on-ink);
   font-size: 15px;
   font-weight: 600;
 }
 .cl-more button:hover {
-  background: #2a2a2e;
+  background: var(--tz-c-ink-2);
 }
 @media (max-width: 640px) {
   .cl {

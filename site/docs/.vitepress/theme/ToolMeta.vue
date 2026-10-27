@@ -29,6 +29,6 @@ const t = computed(() => data.tools.find((x) => x.id === props.id))
   text-decoration: none !important;
 }
 .tm:hover {
-  border-color: #0a0a0c;
+  border-color: var(--tz-c-hover-border);
 }
 </style>

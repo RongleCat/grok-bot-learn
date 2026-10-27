@@ -102,7 +102,7 @@ onBeforeUnmount(() => {
 }
 .tz-link:hover,
 .tz-link[aria-expanded='true'] {
-  color: #2563eb;
+  color: var(--tz-c-link);
 }
 .tz-sep {
   width: 1px;
@@ -120,7 +120,7 @@ onBeforeUnmount(() => {
   transform: translateX(-50%);
   width: max-content;
   padding: 10px;
-  background: #fff;
+  background: var(--vp-c-bg-elv);
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
@@ -133,7 +133,7 @@ onBeforeUnmount(() => {
   left: 50%;
   width: 10px;
   height: 10px;
-  background: #fff;
+  background: var(--vp-c-bg-elv);
   border-right: 1px solid var(--vp-c-divider);
   border-bottom: 1px solid var(--vp-c-divider);
   transform: translate(-50%, -5px) rotate(45deg);
@@ -171,7 +171,7 @@ onBeforeUnmount(() => {
   transition: color 0.2s;
 }
 .tz-friends a:hover {
-  color: #2563eb;
+  color: var(--tz-c-link);
 }
 .tz-note {
   margin: 0;

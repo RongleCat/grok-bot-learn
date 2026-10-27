@@ -84,8 +84,8 @@ const trio = [
 }
 .eco-card:hover {
   transform: translateY(-3px);
-  border-color: #0a0a0c;
-  box-shadow: 0 18px 40px -24px rgba(10, 10, 12, 0.35);
+  border-color: var(--tz-c-hover-border);
+  box-shadow: var(--tz-shadow);
 }
 .eco-card img {
   width: 100%;
@@ -105,10 +105,10 @@ const trio = [
   align-self: flex-start;
   padding: 2px 10px;
   border-radius: 999px;
-  background: #fef1e4;
+  background: var(--tz-eco-bg);
   font-size: 12px;
   font-weight: 600;
-  color: #b4560f;
+  color: var(--tz-eco-fg);
 }
 .eco-body strong {
   font-size: 22px;

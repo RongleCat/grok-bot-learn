@@ -85,7 +85,7 @@ export default defineConfig({
   lang: 'zh-CN',
   title: NAME,
   description: descs.home,
-  appearance: false,
+  appearance: true,
   cleanUrls: true,
   markdown: {
     config(md) {
@@ -351,6 +351,9 @@ export default defineConfig({
     ],
     socialLinks: [{ icon: 'github', link: 'https://github.com/RongleCat/grok-bot-learn', ariaLabel: 'GitHub' }],
     sidebar,
+    darkModeSwitchLabel: '外观',
+    lightModeSwitchTitle: '切换到浅色',
+    darkModeSwitchTitle: '切换到深色',
     search: { provider: 'local' },
     outline: { label: '本页', level: [2, 3] },
     docFooter: { prev: '上一章', next: '下一章' },

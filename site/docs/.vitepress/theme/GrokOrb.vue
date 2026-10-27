@@ -118,7 +118,7 @@ function dotAttrs(dot: BotFrame['dots'][number]) {
 </script>
 
 <template>
-  <svg ref="svg" class="grok-orb" :width="props.size" :height="props.size" :viewBox="`${-VB} ${-VB} ${VB * 2} ${VB * 2}`" role="img" aria-label="Grok Bot" @click="onClick">
+  <svg ref="svg" class="grok-orb" :data-ink="props.color" :width="props.size" :height="props.size" :viewBox="`${-VB} ${-VB} ${VB * 2} ${VB * 2}`" role="img" aria-label="Grok Bot" @click="onClick">
     <defs>
       <mask :id="maskId" maskUnits="userSpaceOnUse" :x="-VB" :y="-VB" :width="VB * 2" :height="VB * 2">
         <path :d="frame.bodyPath" fill="#fff" />
@@ -156,5 +156,8 @@ function dotAttrs(dot: BotFrame['dots'][number]) {
   cursor: pointer;
   display: block;
   overflow: visible;
+}
+.dark .grok-orb[data-ink='encre'] {
+  filter: invert(1);
 }
 </style>

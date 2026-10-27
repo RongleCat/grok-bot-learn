@@ -15,12 +15,12 @@ const crew = [
   { shape: 'squircle', color: 'bleu', size: 120 }
 ]
 const skins = [
-  { shape: 'squircle', color: 'bleu', tint: '#eaf3fe' },
-  { shape: 'goutte', color: 'violet', tint: '#f1ebfe' },
-  { shape: 'nuage', color: 'orange', tint: '#fef1e4' },
-  { shape: 'hexagone', color: 'vert', tint: '#e6f8ef' },
-  { shape: 'galet', color: 'rose', tint: '#fdeef3' },
-  { shape: 'cercle', color: 'encre', tint: '#f4f4f5' }
+  { shape: 'squircle', color: 'bleu' },
+  { shape: 'goutte', color: 'violet' },
+  { shape: 'nuage', color: 'orange' },
+  { shape: 'hexagone', color: 'vert' },
+  { shape: 'galet', color: 'rose' },
+  { shape: 'cercle', color: 'encre' }
 ]
 const extraSkins = [
   { shape: 'capsule', color: 'bleu' },
@@ -75,7 +75,7 @@ const down = (from: string) => track('clipper-download', { from })
       <h2>{{ c.featuresTitle }}</h2>
       <div class="cl-features">
         <div v-for="(f, i) in c.features" :key="f.k" class="cl-feature" :class="{ flip: i % 2 === 1 }">
-          <div class="cl-visual" :style="{ background: skins[i].tint }" aria-hidden="true">
+          <div class="cl-visual" :data-i="i" aria-hidden="true">
             <div v-if="i === 0" class="mk mk-page">
               <span class="ln w90"></span><span class="ln w70"></span>
               <span class="pick"><span class="ln w80"></span><span class="ln w60"></span></span>
@@ -222,18 +222,18 @@ const down = (from: string) => track('clipper-download', { from })
   background: var(--vp-c-bg-soft);
 }
 .cl-btn.primary {
-  background: #0a0a0c;
-  border-color: #0a0a0c;
-  color: #fff;
+  background: var(--tz-c-ink);
+  border-color: var(--tz-c-ink);
+  color: var(--tz-c-on-ink);
   box-shadow: 0 12px 28px -14px rgba(10, 10, 12, 0.6);
 }
 .cl-btn.primary:hover {
-  background: #2a2a2e;
+  background: var(--tz-c-ink-2);
 }
 .cl-btn.light {
-  background: #fff;
-  border-color: #fff;
-  color: #0a0a0c;
+  background: var(--tz-c-on-ink);
+  border-color: var(--tz-c-on-ink);
+  color: var(--tz-c-ink);
 }
 .cl-unofficial {
   margin: 16px 0 0;
@@ -291,13 +291,13 @@ const down = (from: string) => track('clipper-download', { from })
   display: flex;
   gap: 6px;
   padding: 10px 14px;
-  background: #f4f4f5;
+  background: var(--tz-chrome);
 }
 .cl-dots i {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #d9d9de;
+  background: var(--tz-chrome-dot);
 }
 .cl-frame video {
   display: block;
@@ -326,6 +326,24 @@ const down = (from: string) => track('clipper-download', { from })
 }
 .cl-feature.flip .cl-visual {
   order: 2;
+}
+.cl-visual[data-i='0'] { background: var(--tz-tint-1); }
+.cl-visual[data-i='1'] { background: var(--tz-tint-2); }
+.cl-visual[data-i='2'] { background: var(--tz-tint-3); }
+.cl-visual[data-i='3'] { background: var(--tz-tint-4); }
+.cl-visual[data-i='4'] { background: var(--tz-tint-5); }
+.cl-visual[data-i='5'] { background: var(--tz-tint-6); }
+.dark .mk-post .img {
+  background: linear-gradient(135deg, #6a4a32, #8a5a38);
+}
+.dark .mk-page .files span {
+  background: #6a3a4c;
+}
+.dark .mosaic {
+  background: repeating-conic-gradient(#6d5aa8 0 25%, #3d345c 0 50%) 0 0 / 12px 12px;
+}
+.dark .pick .ln {
+  background: #4d86c4;
 }
 .cl-visual {
   position: relative;
@@ -363,18 +381,18 @@ const down = (from: string) => track('clipper-download', { from })
   width: 62%;
   padding: 22px;
   border-radius: 18px;
-  background: #fff;
+  background: var(--tz-mk-bg);
   box-shadow: 0 18px 40px -26px rgba(10, 10, 12, 0.45);
 }
 .ln {
   display: block;
   height: 9px;
   border-radius: 6px;
-  background: #e7e7ea;
+  background: var(--tz-mk-line);
 }
 .ln.bold {
   height: 12px;
-  background: #cfcfd4;
+  background: var(--tz-mk-line-bold);
 }
 .w40 { width: 40%; }
 .w50 { width: 50%; }
@@ -450,10 +468,10 @@ const down = (from: string) => track('clipper-download', { from })
   width: 18px;
   height: 18px;
   border-radius: 6px;
-  background: #e7e7ea;
+  background: var(--tz-mk-line);
 }
 .mk-post .bar .on {
-  background: #0a0a0c;
+  background: var(--tz-c-ink);
 }
 .mk-basket {
   height: 190px;
@@ -466,7 +484,7 @@ const down = (from: string) => track('clipper-download', { from })
   width: 46%;
   height: 52px;
   border-radius: 12px;
-  background: #fff;
+  background: var(--tz-mk-bg);
   box-shadow: 0 12px 26px -18px rgba(10, 10, 12, 0.5);
 }
 .mk-basket .c1 { left: 6%; top: 0; transform: rotate(-8deg); }
@@ -529,20 +547,20 @@ const down = (from: string) => track('clipper-download', { from })
   gap: 8px;
   width: 40%;
   padding-left: 14px;
-  border-left: 1px solid #ececee;
+  border-left: 1px solid var(--tz-mk-split);
 }
 .bub {
   display: block;
   height: 24px;
   width: 90%;
   border-radius: 10px 10px 10px 2px;
-  background: #ececee;
+  background: var(--tz-mk-bub);
 }
 .bub.me {
   align-self: flex-end;
   width: 70%;
   border-radius: 10px 10px 2px 10px;
-  background: #0a0a0c;
+  background: var(--tz-c-ink);
 }
 .bub.s {
   width: 46%;
@@ -593,8 +611,8 @@ const down = (from: string) => track('clipper-download', { from })
   height: 34px;
   margin-bottom: 6px;
   border-radius: 50%;
-  background: #0a0a0c;
-  color: #fff;
+  background: var(--tz-c-ink);
+  color: var(--tz-c-on-ink);
   font-weight: 700;
   font-size: 15px;
 }
@@ -656,8 +674,8 @@ const down = (from: string) => track('clipper-download', { from })
   text-align: center;
   padding: 48px 32px 56px;
   border-radius: 32px;
-  background: #0a0a0c;
-  color: #fff;
+  background: var(--tz-c-ink);
+  color: var(--tz-c-on-ink);
 }
 .cl-end img {
   width: min(420px, 90%);
@@ -668,11 +686,11 @@ const down = (from: string) => track('clipper-download', { from })
 }
 .cl-end h2 {
   margin-top: 28px;
-  color: #fff;
+  color: var(--tz-c-on-ink);
 }
 .cl-end p {
   margin: 12px 0 28px;
-  color: #b5b5bb;
+  color: var(--tz-end-muted);
 }
 @media (max-width: 900px) {
   .cl-extras,
