@@ -5,8 +5,8 @@ import copy from './ecosystem.json'
 import { tidy } from './rich'
 
 const c = copy.index
-const pages = ['/ecosystem/grok-bot-clipper']
-const covers = ['/ecosystem/clipper-banner.webp']
+const pages = c.pages?.length ? c.pages : c.items.map(() => '/ecosystem/')
+const covers = c.covers?.length ? c.covers : c.items.map(() => '')
 const trio = [
   { shape: 'nuage', color: 'orange', size: 72 },
   { shape: 'cercle', color: 'encre', size: 104 },
@@ -24,8 +24,8 @@ const trio = [
       <p class="tz-tidy">{{ tidy(c.lead) }}</p>
     </section>
     <div class="eco-grid">
-      <a v-for="(it, i) in c.items" :key="it.name" class="eco-card" :href="withBase(pages[i])">
-        <img :src="withBase(covers[i])" :alt="it.name" width="1983" height="793" decoding="async" />
+      <a v-for="(it, i) in c.items" :key="it.name" class="eco-card" :href="withBase(pages[i] || '/ecosystem/')">
+        <img v-if="covers[i]" :src="withBase(covers[i])" :alt="it.name" width="1983" height="793" decoding="async" />
         <div class="eco-body">
           <span class="eco-tag">{{ it.tag }}</span>
           <strong>{{ it.name }}</strong>

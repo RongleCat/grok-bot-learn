@@ -1,0 +1,2 @@
+SUCCESS: 小铁柱落地页 /ecosystem/xiaotiezhu 已接上周边生态第二张卡片，构建通过，价格与已入库文案未改。
+验收 8 条均为 PASS，详见 SELF_CHECK.md。

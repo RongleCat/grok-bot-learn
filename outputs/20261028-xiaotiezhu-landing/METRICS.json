@@ -1,0 +1,10 @@
+{
+  "steps": {
+    "setup_sh": 0.08,
+    "npm_ci": 2,
+    "build_final": 6.66,
+    "playwright_screenshots": 7,
+    "click_flow": 2
+  },
+  "notes": "scripts/setup.sh is not in this repo (bash exit 127). npm ci in site/ added 130 packages in 2s. Final `npm run build` (vitepress v1.6.4) printed `build complete in 6.66s` and exited 0. ecosystem.json and links.json are unchanged from f0ede16. Prices read from JSON: plans 79 and 59, addon +20, themeNote contains 100."
+}

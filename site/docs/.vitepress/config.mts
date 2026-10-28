@@ -130,7 +130,7 @@ export default defineConfig({
     const cases = pages.filter((r) => r.startsWith('cases/')).sort((a, b) => (a === 'cases/index.md' ? -1 : b === 'cases/index.md' ? 1 : a.localeCompare(b)))
     L.push('## 案例库', '', ...cases.map((r) => line(r)), '')
     L.push('## Bot 直聘', '', `- [Bot 直聘](${SITE}/bots/): ${descs['bots/index.md'] || (bots as any).lead}`, ...(bots as any).bots.map((b: any) => `- [${b.name}](${b.url}): ${b.desc}`), '')
-    L.push('## 周边生态', '', `- [周边生态](${SITE}/ecosystem/): ${descs['ecosystem/index.md'] || (eco as any).index.lead}`, `- [Grok Bot Clipper 浏览器插件](${SITE}/ecosystem/grok-bot-clipper): ${descs['ecosystem/grok-bot-clipper.md'] || (eco as any).clipper.lead}`, '')
+    L.push('## 周边生态', '', `- [周边生态](${SITE}/ecosystem/): ${descs['ecosystem/index.md'] || (eco as any).index.lead}`, `- [Grok Bot Clipper 浏览器插件](${SITE}/ecosystem/grok-bot-clipper): ${descs['ecosystem/grok-bot-clipper.md'] || (eco as any).clipper.lead}`, `- [小铁柱](${SITE}/ecosystem/xiaotiezhu): ${descs['ecosystem/xiaotiezhu.md'] || (eco as any).xiaotiezhu.lead}`, '')
     {
       const cl = changelog as any
       const tag: Record<string, string> = { pc: 'PC', ios: 'iOS', android: 'Android' }
@@ -256,11 +256,31 @@ export default defineConfig({
           license: 'https://opensource.org/licenses/MIT',
           sameAs: 'https://github.com/RongleCat/grok-bot-clipper'
         })
+      } else if (rel === 'ecosystem/xiaotiezhu.md') {
+        const z = (eco as any).xiaotiezhu
+        graph.push(page('WebPage', { mainEntity: { '@id': url + '#service' } }))
+        graph.push({
+          '@type': 'Service',
+          '@id': url + '#service',
+          name: '小铁柱',
+          serviceType: '微信群助手',
+          description: desc,
+          url,
+          image: `${SITE}/ecosystem/xiaotiezhu-banner.webp`,
+          provider: AUTHOR,
+          offers: z.plans.map((p: { name: string; price: string; note: string }) => ({
+            '@type': 'Offer',
+            name: p.name,
+            price: p.price,
+            priceCurrency: 'CNY',
+            description: p.note
+          }))
+        })
       } else if (rel === 'ecosystem/index.md') {
         graph.push(page('CollectionPage', {
           mainEntity: {
             '@type': 'ItemList',
-            itemListElement: (eco as any).index.items.map((it: { name: string; desc: string }, i: number) => ({ '@type': 'ListItem', position: i + 1, name: it.name, description: it.desc, url: SITE + '/ecosystem/grok-bot-clipper' }))
+            itemListElement: (eco as any).index.items.map((it: { name: string; desc: string }, i: number) => ({ '@type': 'ListItem', position: i + 1, name: it.name, description: it.desc, url: SITE + ((eco as any).index.pages?.[i] || '/ecosystem/') }))
           }
         }))
       } else if (rel === 'bots/index.md') {
