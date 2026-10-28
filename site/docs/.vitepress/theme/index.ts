@@ -4,6 +4,7 @@ import GrokOrb from './GrokOrb.vue'
 import Home from './Home.vue'
 import EcoIndex from './EcoIndex.vue'
 import ClipperLanding from './ClipperLanding.vue'
+import XiaoTiezhuLanding from './XiaoTiezhuLanding.vue'
 import BotHire from './BotHire.vue'
 import Changelog from './Changelog.vue'
 import ToolIndex from './ToolIndex.vue'
@@ -32,6 +33,7 @@ export default {
     app.component('JoinCard', JoinCard)
     app.component('EcoIndex', EcoIndex)
     app.component('ClipperLanding', ClipperLanding)
+    app.component('XiaoTiezhuLanding', XiaoTiezhuLanding)
     app.component('BotHire', BotHire)
     app.component('Changelog', Changelog)
     app.component('ToolIndex', ToolIndex)
