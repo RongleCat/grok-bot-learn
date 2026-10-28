@@ -85,7 +85,7 @@ build complete in 6.66s.
 
 ### CHANGED_FILES.md 列出全部改动路径；改动已在任务分支
 
-PASS. 清单见 `outputs/20261028-xiaotiezhu-landing/CHANGED_FILES.md`。`git branch --show-current` 输出 `cursor/heavy-job-20261028-xiaotiezhu-landing-5ae6`。未推 `main`。
+PASS. 清单见 `outputs/20261028-xiaotiezhu-landing/CHANGED_FILES.md`。`git branch --show-current` 输出 `cursor/heavy-job-20261028-xiaotiezhu-landing-5ae6`。实现提交 `160de8bbc1d9ca5b878d717637b47b543acac63c` 已推到 `origin/cursor/heavy-job-20261028-xiaotiezhu-landing-5ae6`（`git status -sb` 显示与该远程跟踪分支一致）。未推 `main`。
 
 ### 未改价格数字与已入库文案关键句；未提交密钥
 
