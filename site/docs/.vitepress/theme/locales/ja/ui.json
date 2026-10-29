@@ -3,34 +3,34 @@
     "groupPill": "有料Q&Aグループ"
   },
   "footer": {
-    "mpBtn": "公式アカウント「鉄柱AGI」",
-    "mpDialog": "公式アカウント「鉄柱AGI」QRコード",
-    "mpAlt": "WeChat検索：鉄柱AGI",
+    "mpBtn": "公式アカウント「铁柱AGI」",
+    "mpDialog": "公式アカウント「铁柱AGI」QRコード",
+    "mpAlt": "WeChatで検索：铁柱AGI",
     "group": "有料Q&Aグループ",
-    "about": "著者について",
-    "friends": "相互リンク",
-    "note": "本サイトはコミュニティ非公式の学習サイトであり、xAI公式ではありません。"
+    "about": "作者について",
+    "friends": "リンク集",
+    "note": "当サイトはコミュニティによる非公式の学習サイトであり、xAI公式ではありません。"
   },
   "parts": {
-    "part1": "第1部 · ハンドブック",
-    "part2": "第2部 · ケース",
-    "part3": "第3部 · 応用",
-    "part4": "第4部 · 本番導入",
-    "cases": "ケース集"
+    "part1": "第1部 · 利用マニュアル",
+    "part2": "第2部 · 事例編",
+    "part3": "第3部 · 応用編",
+    "part4": "第4部 · 実践編",
+    "cases": "事例集"
   },
   "changelog": {
     "title": "更新履歴",
     "tabAll": "すべて",
     "tabPc": "PC",
     "tabMobile": "モバイル",
-    "tabOurs": "私たちの解説",
-    "chipOurs": "私たちの解説"
+    "tabOurs": "当サイトの解説",
+    "chipOurs": "当サイトの解説"
   },
   "xiaotiezhu": {
-    "title": "小鉄柱",
-    "joinHint": "QRで執事WeChatを追加し、小鉄柱を開通"
+    "title": "小铁柱",
+    "joinHint": "QRコードをスキャンしてサポート担当のWeChatを追加し、小铁柱を開通"
   },
   "join": {
-    "qrAlt": "鉄柱の個人WeChat QRコード"
+    "qrAlt": "铁柱の個人WeChat QRコード"
   }
 }

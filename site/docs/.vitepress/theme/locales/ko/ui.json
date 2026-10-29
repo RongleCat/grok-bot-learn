@@ -1,36 +1,36 @@
 {
   "nav": {
-    "groupPill": "유료 Q&A 그룹"
+    "groupPill": "유료 Q&A방"
   },
   "footer": {
-    "mpBtn": "공식계정「철주AGI」",
-    "mpDialog": "공식계정「철주AGI」 QR 코드",
-    "mpAlt": "WeChat 검색: 철주AGI",
-    "group": "유료 Q&A 그룹",
-    "about": "저자 소개",
-    "friends": "친구 링크",
-    "note": "본 사이트는 커뮤니티 비공식 학습 사이트이며 xAI 공식이 아닙니다."
+    "mpBtn": "공식 계정 「铁柱AGI」",
+    "mpDialog": "공식 계정 「铁柱AGI」 QR 코드",
+    "mpAlt": "WeChat 검색: 铁柱AGI",
+    "group": "유료 Q&A방",
+    "about": "제작자 소개",
+    "friends": "추천 링크",
+    "note": "본 사이트는 비공식 커뮤니티 학습 사이트이며, xAI 공식 사이트가 아닙니다."
   },
   "parts": {
-    "part1": "1편 · 사용 설명서",
-    "part2": "2편 · 사례",
-    "part3": "3편 · 고급",
-    "part4": "4편 · 실전",
+    "part1": "제1편 · 사용 설명서",
+    "part2": "제2편 · 사례편",
+    "part3": "제3편 · 심화편",
+    "part4": "제4편 · 실전 적용편",
     "cases": "사례 모음"
   },
   "changelog": {
-    "title": "업데이트 로그",
+    "title": "업데이트 내역",
     "tabAll": "전체",
     "tabPc": "PC",
     "tabMobile": "모바일",
-    "tabOurs": "우리의 해설",
-    "chipOurs": "우리의 해설"
+    "tabOurs": "자체 해설",
+    "chipOurs": "자체 해설"
   },
   "xiaotiezhu": {
-    "title": "소철주",
-    "joinHint": "QR로 집사 WeChat을 추가하고 소철주를 개통"
+    "title": "小铁柱",
+    "joinHint": "QR 코드를 스캔하여 매니저 WeChat을 추가하고 小铁柱를 활성화하세요"
   },
   "join": {
-    "qrAlt": "철주의 개인 WeChat QR 코드"
+    "qrAlt": "铁柱 개인 WeChat QR 코드"
   }
 }

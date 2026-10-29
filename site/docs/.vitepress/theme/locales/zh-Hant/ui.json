@@ -3,13 +3,13 @@
     "groupPill": "付費答疑群"
   },
   "footer": {
-    "mpBtn": "公眾號「鐵柱AGI」",
-    "mpDialog": "公眾號「鐵柱AGI」二維碼",
-    "mpAlt": "微信搜一搜：鐵柱AGI",
+    "mpBtn": "公眾號「铁柱AGI」",
+    "mpDialog": "公眾號「铁柱AGI」二維碼",
+    "mpAlt": "微信搜一搜：铁柱AGI",
     "group": "付費答疑群",
     "about": "關於作者",
     "friends": "友情連結",
-    "note": "本站是社區非官方學習站，非 xAI 官方。"
+    "note": "本站是社群非官方學習站，非 xAI 官方。"
   },
   "parts": {
     "part1": "第一篇 · 使用手冊",
@@ -22,15 +22,15 @@
     "title": "更新日誌",
     "tabAll": "全部",
     "tabPc": "PC",
-    "tabMobile": "行動端",
+    "tabMobile": "移動端",
     "tabOurs": "我們的解讀",
     "chipOurs": "我們的解讀"
   },
   "xiaotiezhu": {
-    "title": "小鐵柱",
-    "joinHint": "掃碼添加管家微信，開通小鐵柱"
+    "title": "小铁柱",
+    "joinHint": "掃碼新增管家微信，開通小铁柱"
   },
   "join": {
-    "qrAlt": "鐵柱的個人微信二維碼"
+    "qrAlt": "铁柱的個人微信二維碼"
   }
 }

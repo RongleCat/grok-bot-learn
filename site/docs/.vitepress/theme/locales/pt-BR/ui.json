@@ -1,36 +1,36 @@
 {
   "nav": {
-    "groupPill": "Grupo Q&A pago"
+    "groupPill": "Grupo pago de dúvidas"
   },
   "footer": {
-    "mpBtn": "Conta WeChat「铁柱AGI」",
-    "mpDialog": "QR code de「铁柱AGI」",
-    "mpAlt": "Buscar no WeChat: 铁柱AGI",
-    "group": "Grupo Q&A pago",
+    "mpBtn": "Conta oficial «铁柱AGI»",
+    "mpDialog": "QR Code da conta oficial «铁柱AGI»",
+    "mpAlt": "Pesquisar no WeChat: 铁柱AGI",
+    "group": "Grupo pago de dúvidas",
     "about": "Sobre o autor",
-    "friends": "Links",
-    "note": "Site comunitário de aprendizado não oficial; não afiliado à xAI."
+    "friends": "Links parceiros",
+    "note": "Este site é uma plataforma de aprendizado comunitária não oficial, não afiliada à xAI."
   },
   "parts": {
-    "part1": "Parte 1 · Manual",
-    "part2": "Parte 2 · Casos",
-    "part3": "Parte 3 · Avançado",
-    "part4": "Parte 4 · Produção",
-    "cases": "Biblioteca de casos"
+    "part1": "Parte 1 · Manual do Usuário",
+    "part2": "Parte 2 · Estudos de Caso",
+    "part3": "Parte 3 · Guia Avançado",
+    "part4": "Parte 4 · Aplicações Práticas",
+    "cases": "Biblioteca de Casos"
   },
   "changelog": {
-    "title": "Registro de alterações",
-    "tabAll": "Tudo",
+    "title": "Histórico de Atualizações",
+    "tabAll": "Todos",
     "tabPc": "PC",
     "tabMobile": "Mobile",
-    "tabOurs": "Nossa leitura",
-    "chipOurs": "Nossa leitura"
+    "tabOurs": "Nossa Análise",
+    "chipOurs": "Nossa Análise"
   },
   "xiaotiezhu": {
     "title": "小铁柱",
-    "joinHint": "Escaneie para adicionar o WeChat do mordomo e ativar 小铁柱"
+    "joinHint": "Escaneie o QR code para adicionar o assistente no WeChat e ativar o 小铁柱"
   },
   "join": {
-    "qrAlt": "QR code do WeChat pessoal de 铁柱"
+    "qrAlt": "QR Code do WeChat pessoal de 铁柱"
   }
 }
