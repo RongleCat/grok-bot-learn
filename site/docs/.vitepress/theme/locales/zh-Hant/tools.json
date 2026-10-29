@@ -1,599 +1,599 @@
 {
- "ui": {
-  "title": "Grok 雲電腦工具箱",
-  "search": "搜工具/詞 如 codex",
-  "all": "全部",
-  "empty": "未找到匹配的工具",
-  "count": "共 {n} 個工具",
-  "more": "檢視詳情",
-  "prereq": "前置條件",
-  "install": "安裝",
-  "auth": "登入與授權",
-  "verify": "驗證",
-  "steps": "操作步驟",
-  "pitfalls": "常見坑與解決",
-  "src": "来源",
-  "back": "返回目錄",
-  "note": "本頁為社群非官方整理，與該工具廠商、xAI 均無隸屬關係，命令以官方文件為準。",
-  "lead": "每個工具均提供了一段可直接複製給 Grok Bot 的提示詞，由 Bot 在雲電腦上全自動完成安裝與環境驗證。**本指南為社群非官方整理**，最新變動請以官方文件為準。",
-  "promptTitle": "發給 Bot 的提示詞",
-  "promptHint": "複製下方整段內容傳送給你的 Grok Bot，它會在雲電腦上自動安裝並驗證，遇到登入或配置金鑰時會暫停等待你操作。",
-  "todoTitle": "需要你自己做的事"
- },
- "cats": [
-  "編碼 Agent",
-  "模型/生成",
-  "通訊與釋出",
-  "資料抓取",
-  "基礎工具"
- ],
- "tools": [
-  {
-   "id": "agy",
-   "name": "Antigravity CLI（agy）",
-   "cat": "編碼 Agent",
-   "tags": [
-    "agy",
-    "antigravity",
-    "gemini",
-    "google",
-    "影片理解",
-    "寫作"
-   ],
-   "desc": "Google 官方終端 Agent，支援直接讀取影片與程式碼修改。",
-   "what": "Google 官方終端 Agent，適合 **影片理解、長文寫作與程式碼修改**，支援直接讀取影片檔案。",
-   "src": [
+  "ui": {
+    "title": "Grok 雲電腦工具箱",
+    "search": "搜工具/詞 如 codex",
+    "all": "全部",
+    "empty": "未找到匹配的工具",
+    "count": "共 {n} 個工具",
+    "more": "檢視詳情",
+    "prereq": "前置條件",
+    "install": "安裝",
+    "auth": "登入與授權",
+    "verify": "驗證",
+    "steps": "操作步驟",
+    "pitfalls": "常見坑與解決",
+    "src": "來源",
+    "back": "返回目錄",
+    "note": "本頁為社群非官方整理，與該工具廠商、xAI 均無隸屬關係，命令以官方文件為準。",
+    "lead": "每個工具均提供了一段可直接複製給 Grok Bot 的提示詞，由 Bot 在雲電腦上全自動完成安裝與環境驗證。**本指南為社群非官方整理**，最新變動請以官方文件為準。",
+    "promptTitle": "發給 Bot 的提示詞",
+    "promptHint": "複製下方整段內容傳送給你的 Grok Bot，它會在雲電腦上自動安裝並驗證，遇到登入或配置金鑰時會暫停等待你操作。",
+    "todoTitle": "需要你自己做的事"
+  },
+  "cats": [
+    "編碼 Agent",
+    "模型/生成",
+    "通訊與釋出",
+    "資料抓取",
+    "基礎工具"
+  ],
+  "tools": [
     {
-     "t": "Antigravity 官方文件：快速開始",
-     "u": "https://antigravity.google/docs/getting-started/"
+      "id": "agy",
+      "name": "Antigravity CLI（agy）",
+      "cat": "編碼 Agent",
+      "tags": [
+        "agy",
+        "antigravity",
+        "gemini",
+        "google",
+        "影片理解",
+        "寫作"
+      ],
+      "desc": "Google 官方終端 Agent，支援直接讀取影片與程式碼修改。",
+      "what": "Google 官方終端 Agent，適合 **影片理解、長文寫作與程式碼修改**，支援直接讀取影片檔案。",
+      "src": [
+        {
+          "t": "Antigravity 官方文件：快速開始",
+          "u": "https://antigravity.google/docs/getting-started/"
+        },
+        {
+          "t": "Antigravity CLI 官方倉庫",
+          "u": "https://github.com/google-antigravity/antigravity-cli"
+        },
+        {
+          "t": "Antigravity CLI 故障排查",
+          "u": "https://antigravity.google/docs/cli/troubleshooting/"
+        }
+      ],
+      "intro": "Google 官方終端 Agent，適合 **影片理解、長文寫作與程式碼修改**，支援直接讀取影片檔案。",
+      "prompt": "幫我在你的雲電腦上安裝配置 Antigravity CLI（https://antigravity.google/docs/getting-started/），以後影片理解、長文寫作與程式碼修改用它。需要登入或授權時停下來把連結發給我由我完成。",
+      "todo": [
+        "準備 Google 賬號。",
+        "在瀏覽器開啟 Bot 傳送的授權連結完成認證。"
+      ]
     },
     {
-     "t": "Antigravity CLI 官方倉庫",
-     "u": "https://github.com/google-antigravity/antigravity-cli"
+      "id": "codex",
+      "name": "Codex CLI",
+      "cat": "編碼 Agent",
+      "tags": [
+        "codex",
+        "openai",
+        "chatgpt",
+        "生圖",
+        "image",
+        "程式碼"
+      ],
+      "desc": "OpenAI 終端編碼 Agent，消耗 ChatGPT 訂閱額度改程式碼與生圖。",
+      "what": "OpenAI 官方終端編碼 Agent，適合 **程式碼修改、指令碼執行與生圖審圖**，可直接使用 ChatGPT 訂閱額度。",
+      "src": [
+        {
+          "t": "OpenAI Codex CLI 官方文件",
+          "u": "https://developers.openai.com/codex/cli"
+        },
+        {
+          "t": "openai/codex 官方倉庫",
+          "u": "https://github.com/openai/codex"
+        }
+      ],
+      "intro": "OpenAI 官方終端編碼 Agent，適合 **程式碼修改、指令碼執行與生圖審圖**，可直接使用 ChatGPT 訂閱額度。",
+      "prompt": "幫我在你的雲電腦上裝好 Codex CLI（https://developers.openai.com/codex/cli），用我的 ChatGPT 賬號登入，以後寫程式碼、跑指令碼和生圖用它。需要我授權時把連結發給我。",
+      "todo": [
+        "準備 ChatGPT 賬號並確認開啟裝置碼登入許可權。",
+        "在瀏覽器開啟 Bot 傳送的裝置碼連結完成確認。"
+      ]
     },
     {
-     "t": "Antigravity CLI 故障排查",
-     "u": "https://antigravity.google/docs/cli/troubleshooting/"
-    }
-   ],
-   "intro": "Google 官方終端 Agent，適合 **影片理解、長文寫作與程式碼修改**，支援直接讀取影片檔案。",
-   "prompt": "幫我在你的雲電腦上安裝配置 Antigravity CLI（https://antigravity.google/docs/getting-started/），以後影片理解、長文寫作與程式碼修改用它。需要登入或授權時停下來把連結發給我由我完成。",
-   "todo": [
-    "準備 Google 賬號。",
-    "在瀏覽器開啟 Bot 傳送的授權連結完成認證。"
-   ]
-  },
-  {
-   "id": "codex",
-   "name": "Codex CLI",
-   "cat": "編碼 Agent",
-   "tags": [
-    "codex",
-    "openai",
-    "chatgpt",
-    "生圖",
-    "image",
-    "程式碼"
-   ],
-   "desc": "OpenAI 終端編碼 Agent，消耗 ChatGPT 訂閱額度改程式碼與生圖。",
-   "what": "OpenAI 官方終端編碼 Agent，適合 **程式碼修改、指令碼執行與生圖審圖**，可直接使用 ChatGPT 訂閱額度。",
-   "src": [
-    {
-     "t": "OpenAI Codex CLI 官方文件",
-     "u": "https://developers.openai.com/codex/cli"
+      "id": "claude-code",
+      "name": "Claude Code",
+      "cat": "編碼 Agent",
+      "tags": [
+        "claude",
+        "anthropic",
+        "claude code",
+        "程式碼"
+      ],
+      "desc": "Anthropic 終端編碼 Agent，適合程式碼庫讀取與多檔案修改。",
+      "what": "Anthropic 官方終端編碼 Agent，適合 **程式碼庫閱讀、多檔案修改與命令執行**，支援後臺自動更新。",
+      "src": [
+        {
+          "t": "Claude Code 官方安裝文件",
+          "u": "https://code.claude.com/docs/en/setup"
+        }
+      ],
+      "intro": "Anthropic 官方終端編碼 Agent，適合 **程式碼庫閱讀、多檔案修改與命令執行**，支援後臺自動更新。",
+      "prompt": "幫我在你的雲電腦上裝好 Claude Code（https://code.claude.com/docs/en/setup），以後閱讀程式碼庫和多檔案修改用它。需要登入或授權時停下來把連結發給我由我完成。",
+      "todo": [
+        "準備 Claude 訂閱或 Anthropic Console 賬號。",
+        "在瀏覽器開啟 Bot 傳送的授權連結完成認證。"
+      ]
     },
     {
-     "t": "openai/codex 官方倉庫",
-     "u": "https://github.com/openai/codex"
-    }
-   ],
-   "intro": "OpenAI 官方終端編碼 Agent，適合 **程式碼修改、指令碼執行與生圖審圖**，可直接使用 ChatGPT 訂閱額度。",
-   "prompt": "幫我在你的雲電腦上裝好 Codex CLI（https://developers.openai.com/codex/cli），用我的 ChatGPT 賬號登入，以後寫程式碼、跑指令碼和生圖用它。需要我授權時把連結發給我。",
-   "todo": [
-    "準備 ChatGPT 賬號並確認開啟裝置碼登入許可權。",
-    "在瀏覽器開啟 Bot 傳送的裝置碼連結完成確認。"
-   ]
-  },
-  {
-   "id": "claude-code",
-   "name": "Claude Code",
-   "cat": "編碼 Agent",
-   "tags": [
-    "claude",
-    "anthropic",
-    "claude code",
-    "程式碼"
-   ],
-   "desc": "Anthropic 終端編碼 Agent，適合程式碼庫讀取與多檔案修改。",
-   "what": "Anthropic 官方終端編碼 Agent，適合 **程式碼庫閱讀、多檔案修改與命令執行**，支援後臺自動更新。",
-   "src": [
-    {
-     "t": "Claude Code 官方安裝文件",
-     "u": "https://code.claude.com/docs/en/setup"
-    }
-   ],
-   "intro": "Anthropic 官方終端編碼 Agent，適合 **程式碼庫閱讀、多檔案修改與命令執行**，支援後臺自動更新。",
-   "prompt": "幫我在你的雲電腦上裝好 Claude Code（https://code.claude.com/docs/en/setup），以後閱讀程式碼庫和多檔案修改用它。需要登入或授權時停下來把連結發給我由我完成。",
-   "todo": [
-    "準備 Claude 訂閱或 Anthropic Console 賬號。",
-    "在瀏覽器開啟 Bot 傳送的授權連結完成認證。"
-   ]
-  },
-  {
-   "id": "gemini-cli",
-   "name": "Gemini CLI",
-   "cat": "編碼 Agent",
-   "tags": [
-    "gemini",
-    "google",
-    "gemini cli"
-   ],
-   "desc": "Google 開源終端 Agent，供付費與 Google Cloud 使用者使用。",
-   "what": "Google 開源的終端 AI Agent，適合 **付費使用者與 Google Cloud 專案使用者** 進行終端互動與開發協作。",
-   "src": [
-    {
-     "t": "Gemini CLI 官方安裝文件",
-     "u": "https://geminicli.com/docs/get-started/installation/"
+      "id": "gemini-cli",
+      "name": "Gemini CLI",
+      "cat": "編碼 Agent",
+      "tags": [
+        "gemini",
+        "google",
+        "gemini cli"
+      ],
+      "desc": "Google 開源終端 Agent，供付費與 Google Cloud 使用者使用。",
+      "what": "Google 開源的終端 AI Agent，適合 **付費使用者與 Google Cloud 專案使用者** 進行終端互動與開發協作。",
+      "src": [
+        {
+          "t": "Gemini CLI 官方安裝文件",
+          "u": "https://geminicli.com/docs/get-started/installation/"
+        },
+        {
+          "t": "google-gemini/gemini-cli 官方倉庫",
+          "u": "https://github.com/google-gemini/gemini-cli"
+        }
+      ],
+      "intro": "Google 開源的終端 AI Agent，適合 **付費使用者與 Google Cloud 專案使用者** 進行終端互動與開發協作。",
+      "prompt": "幫我在你的雲電腦上安裝 Gemini CLI（https://geminicli.com/docs/get-started/installation/），以後終端互動和開發協作用它。需要登入或授權時停下來把連結發給我由我完成。",
+      "todo": [
+        "準備付費 Google 賬號或 Google Cloud 專案賬號。",
+        "在瀏覽器開啟 Bot 傳送的授權連結完成認證。"
+      ]
     },
     {
-     "t": "google-gemini/gemini-cli 官方倉庫",
-     "u": "https://github.com/google-gemini/gemini-cli"
-    }
-   ],
-   "intro": "Google 開源的終端 AI Agent，適合 **付費使用者與 Google Cloud 專案使用者** 進行終端互動與開發協作。",
-   "prompt": "幫我在你的雲電腦上安裝 Gemini CLI（https://geminicli.com/docs/get-started/installation/），以後終端互動和開發協作用它。需要登入或授權時停下來把連結發給我由我完成。",
-   "todo": [
-    "準備付費 Google 賬號或 Google Cloud 專案賬號。",
-    "在瀏覽器開啟 Bot 傳送的授權連結完成認證。"
-   ]
-  },
-  {
-   "id": "pi",
-   "name": "Pi Coding Agent",
-   "cat": "編碼 Agent",
-   "tags": [
-    "pi",
-    "pi coding agent",
-    "earendil",
-    "mario zechner",
-    "程式碼"
-   ],
-   "desc": "極簡可擴充套件終端編碼 Agent，僅提供讀寫改執行四個基礎工具。",
-   "what": "極簡且高度可擴充套件的終端編碼 Agent，適合 **透過擴充套件、技能與提示模板深度定製** 專屬開發工作流。",
-   "src": [
-    {
-     "t": "Pi 官網",
-     "u": "https://pi.dev"
+      "id": "pi",
+      "name": "Pi Coding Agent",
+      "cat": "編碼 Agent",
+      "tags": [
+        "pi",
+        "pi coding agent",
+        "earendil",
+        "mario zechner",
+        "程式碼"
+      ],
+      "desc": "極簡可擴充套件終端編碼 Agent，僅提供讀寫改執行四個基礎工具。",
+      "what": "極簡且高度可擴充套件的終端編碼 Agent，適合 **透過擴充套件、技能與提示模板深度定製** 專屬開發工作流。",
+      "src": [
+        {
+          "t": "Pi 官網",
+          "u": "https://pi.dev"
+        },
+        {
+          "t": "earendil-works/pi 官方倉庫",
+          "u": "https://github.com/earendil-works/pi"
+        },
+        {
+          "t": "Pi 遷移公告",
+          "u": "https://pi.dev/news/2026/5/7/pi-has-a-new-home"
+        }
+      ],
+      "intro": "極簡且高度可擴充套件的終端編碼 Agent，適合 **透過擴充套件、技能與提示模板深度定製** 專屬開發工作流。",
+      "prompt": "幫我在你的雲電腦上安裝 Pi Coding Agent（https://pi.dev），以後定製開發工作流和寫程式碼用它。需要填金鑰時請提醒我自己填。",
+      "todo": [
+        "準備對應模型服務商的 API Key。",
+        "收到提示後自行將金鑰寫入私密配置檔案。"
+      ]
     },
     {
-     "t": "earendil-works/pi 官方倉庫",
-     "u": "https://github.com/earendil-works/pi"
+      "id": "cursor-cli",
+      "name": "Cursor CLI",
+      "cat": "編碼 Agent",
+      "tags": [
+        "cursor",
+        "cursor-agent",
+        "agent",
+        "程式碼"
+      ],
+      "desc": "Cursor 官方命令列 Agent，適合委託執行小範圍程式碼修改。",
+      "what": "Cursor 官方命令列 Agent，適合 **在雲電腦執行小範圍程式碼修改**，將 Bot 額度留給全域性決策。",
+      "src": [
+        {
+          "t": "Cursor CLI 官方安裝文件",
+          "u": "https://cursor.com/docs/cli/installation"
+        },
+        {
+          "t": "Cursor CLI 官方認證文件",
+          "u": "https://cursor.com/docs/cli/reference/authentication"
+        }
+      ],
+      "intro": "Cursor 官方命令列 Agent，適合 **在雲電腦執行小範圍程式碼修改**，將 Bot 額度留給全域性決策。",
+      "prompt": "幫我在你的雲電腦上裝好 Cursor CLI（https://cursor.com/docs/cli/installation），以後小範圍程式碼修改用它。需要登入或授權時停下來把連結發給我由我完成。",
+      "todo": [
+        "準備 Cursor 賬號或相關授權憑證。",
+        "在瀏覽器開啟 Bot 傳送的授權連結完成登入。"
+      ]
     },
     {
-     "t": "Pi 遷移公告",
-     "u": "https://pi.dev/news/2026/5/7/pi-has-a-new-home"
-    }
-   ],
-   "intro": "極簡且高度可擴充套件的終端編碼 Agent，適合 **透過擴充套件、技能與提示模板深度定製** 專屬開發工作流。",
-   "prompt": "幫我在你的雲電腦上安裝 Pi Coding Agent（https://pi.dev），以後定製開發工作流和寫程式碼用它。需要填金鑰時請提醒我自己填。",
-   "todo": [
-    "準備對應模型服務商的 API Key。",
-    "收到提示後自行將金鑰寫入私密配置檔案。"
-   ]
-  },
-  {
-   "id": "cursor-cli",
-   "name": "Cursor CLI",
-   "cat": "編碼 Agent",
-   "tags": [
-    "cursor",
-    "cursor-agent",
-    "agent",
-    "程式碼"
-   ],
-   "desc": "Cursor 官方命令列 Agent，適合委託執行小範圍程式碼修改。",
-   "what": "Cursor 官方命令列 Agent，適合 **在雲電腦執行小範圍程式碼修改**，將 Bot 額度留給全域性決策。",
-   "src": [
-    {
-     "t": "Cursor CLI 官方安裝文件",
-     "u": "https://cursor.com/docs/cli/installation"
+      "id": "deepseek-harness",
+      "name": "DeepSeek Harness",
+      "cat": "編碼 Agent",
+      "tags": [
+        "deepseek",
+        "harness",
+        "dsh",
+        "外掛",
+        "程式碼",
+        "調研",
+        "定時任務",
+        "開源"
+      ],
+      "desc": "DeepSeek 開源外掛化 Agent，用於程式碼編寫、調研、辦公及定時任務。",
+      "what": "DeepSeek 官方開源的 **「一切皆外掛」架構 Agent**，提供桌面端與 Web UI。目前處於開發者預覽階段，適合用於 **程式碼編寫**、**調研分析**、**日常辦公** 與 **定時任務擴充套件**。",
+      "src": [
+        {
+          "t": "DeepSeek Harness 官方倉庫",
+          "u": "https://github.com/deepseek-ai/deepseek-harness"
+        },
+        {
+          "t": "DeepSeek Harness 官方文件",
+          "u": "https://deepseek-harness.github.io/deepseek-harness/"
+        },
+        {
+          "t": "DeepSeek Harness 官網介紹",
+          "u": "https://www.deepseek.com/en/harness/"
+        },
+        {
+          "t": "KinGao：DeepSeek Harness 接入參考",
+          "u": "https://x.com/KinGao476942/status/2111622701089759654"
+        },
+        {
+          "t": "KinGao：DeepSeek Harness 彙總帖",
+          "u": "https://x.com/KinGao476942/status/2115592603605557564"
+        }
+      ],
+      "intro": "DeepSeek 官方開源的 **「一切皆外掛」架構 Agent**，支援桌面端與 Web UI。目前處於開發者預覽階段，適合用於 **程式碼編寫**、**調研分析**、**日常辦公** 與 **定時任務擴充套件**。",
+      "prompt": "幫我在你的雲電腦上安裝配置 DeepSeek Harness（https://github.com/deepseek-ai/deepseek-harness），以後日常辦公、調研、寫程式碼和跑定時任務用它。需要配置 DeepSeek API Key 時請停下來提醒我自己填。",
+      "todo": [
+        "準備好 DeepSeek API Key",
+        "待 Bot 安裝完畢後，在設定中自行填入 API Key"
+      ]
     },
     {
-     "t": "Cursor CLI 官方認證文件",
-     "u": "https://cursor.com/docs/cli/reference/authentication"
-    }
-   ],
-   "intro": "Cursor 官方命令列 Agent，適合 **在雲電腦執行小範圍程式碼修改**，將 Bot 額度留給全域性決策。",
-   "prompt": "幫我在你的雲電腦上裝好 Cursor CLI（https://cursor.com/docs/cli/installation），以後小範圍程式碼修改用它。需要登入或授權時停下來把連結發給我由我完成。",
-   "todo": [
-    "準備 Cursor 賬號或相關授權憑證。",
-    "在瀏覽器開啟 Bot 傳送的授權連結完成登入。"
-   ]
-  },
-  {
-   "id": "deepseek-harness",
-   "name": "DeepSeek Harness",
-   "cat": "編碼 Agent",
-   "tags": [
-    "deepseek",
-    "harness",
-    "dsh",
-    "外掛",
-    "程式碼",
-    "調研",
-    "定時任務",
-    "開源"
-   ],
-   "desc": "DeepSeek 開源外掛化 Agent，用於程式碼編寫、調研、辦公及定時任務。",
-   "what": "DeepSeek 官方開源的 **「一切皆外掛」架構 Agent**，提供桌面端與 Web UI。目前處於開發者預覽階段，適合用於 **程式碼編寫**、**調研分析**、**日常辦公** 與 **定時任務擴充套件**。",
-   "src": [
-    {
-     "t": "DeepSeek Harness 官方倉庫",
-     "u": "https://github.com/deepseek-ai/deepseek-harness"
+      "id": "muse2api",
+      "name": "muse2api",
+      "cat": "模型/生成",
+      "tags": [
+        "muse",
+        "muse2api",
+        "生圖",
+        "影片",
+        "openai 相容",
+        "api"
+      ],
+      "desc": "驅動網頁端包裝為 OpenAI 介面，本地呼叫生圖與生影片。",
+      "what": "社群開源的 muse.ai 逆向封裝專案，適合在 **雲電腦** 上透過 OpenAI 相容介面直接呼叫網頁端免費額度進行對話、生圖和生影片。",
+      "src": [
+        {
+          "t": "muse2api 專案倉庫（czg86389-hub）",
+          "u": "https://github.com/czg86389-hub/muse2api"
+        }
+      ],
+      "intro": "社群開源的 muse.ai 逆向封裝專案，適合在 **雲電腦** 上透過 OpenAI 相容介面直接呼叫網頁端免費額度進行對話、生圖和生影片。",
+      "prompt": "幫我在你的雲電腦上部署 muse2api（https://github.com/czg86389-hub/muse2api），以後呼叫多模態介面進行對話、生圖和生影片用它。需要填金鑰時請提醒我自己填。",
+      "todo": [
+        "準備 muse.ai 賬號並在雲電腦瀏覽器中完成登入。",
+        "根據提示自行填入通訊金鑰與登入狀態資料。"
+      ]
     },
     {
-     "t": "DeepSeek Harness 官方文件",
-     "u": "https://deepseek-harness.github.io/deepseek-harness/"
+      "id": "agently-cli",
+      "name": "agently-cli（Agent 郵箱命令列）",
+      "cat": "通訊與釋出",
+      "tags": [
+        "郵件",
+        "email",
+        "agently",
+        "qq 郵箱",
+        "騰訊"
+      ],
+      "desc": "騰訊 QQ 郵箱命令列工具，支援郵件收發、搜尋與附件下載。",
+      "what": "騰訊 QQ 郵箱推出的官方命令列工具，適合讓 Bot 在 **雲電腦** 上收發郵件、檢索歷史郵件並下載附件。",
+      "src": [
+        {
+          "t": "Agent 郵箱官網",
+          "u": "https://agent.qq.com"
+        },
+        {
+          "t": "agently-cli npm 包",
+          "u": "https://www.npmjs.com/package/@tencent-qqmail/agently-cli"
+        }
+      ],
+      "intro": "騰訊 QQ 郵箱推出的官方命令列工具，適合讓 Bot 在 **雲電腦** 上收發郵件、檢索歷史郵件並下載附件。",
+      "prompt": "幫我在你的雲電腦上安裝 agently-cli（https://agent.qq.com），以後收發郵件、檢索歷史郵件和下載附件用它。需要登入或授權時停下來把連結發給我由我完成。",
+      "todo": [
+        "準備 QQ 郵箱或 Agent 郵箱賬號。",
+        "開啟 Bot 傳送的授權連結在瀏覽器中完成驗證。"
+      ]
     },
     {
-     "t": "DeepSeek Harness 官網介紹",
-     "u": "https://www.deepseek.com/en/harness/"
+      "id": "lark-cli",
+      "name": "飛書 CLI（lark-cli）",
+      "cat": "通訊與釋出",
+      "tags": [
+        "飛書",
+        "lark",
+        "feishu",
+        "多維表格",
+        "文件",
+        "lark-cli"
+      ],
+      "desc": "飛書官方命令列工具，以使用者身份操作雲文件、多維表格與雲盤。",
+      "what": "飛書官方命令列工具，適合讓 Bot 以個人身份在 **雲電腦** 上操作飛書雲文件、多維表格、雲盤和知識庫。",
+      "src": [
+        {
+          "t": "larksuite/cli 官方倉庫",
+          "u": "https://github.com/larksuite/cli"
+        }
+      ],
+      "intro": "飛書官方命令列工具，適合讓 Bot 以個人身份在 **雲電腦** 上操作飛書雲文件、多維表格、雲盤和知識庫。",
+      "prompt": "幫我在你的雲電腦上安裝配置飛書 CLI（https://github.com/larksuite/cli），以後操作飛書雲文件、多維表格和雲盤用它。需要登入或授權時停下來把連結發給我由我完成。",
+      "todo": [
+        "準備飛書個人賬號。",
+        "開啟驗證連結輸入終端給出的裝置碼確認授權。"
+      ]
     },
     {
-     "t": "KinGao：DeepSeek Harness 接入參考",
-     "u": "https://x.com/KinGao476942/status/2111622701089759654"
+      "id": "feishu-bot",
+      "name": "飛書機器人長連線",
+      "cat": "通訊與釋出",
+      "tags": [
+        "飛書",
+        "lark",
+        "feishu",
+        "機器人",
+        "bot",
+        "lark-oapi",
+        "群聊"
+      ],
+      "desc": "利用長連線免公網接收飛書訊息，實現群聊與私聊派發任務。",
+      "what": "基於飛書官方 Python SDK 的長連線訊息方案，適合在無需公網 IP 的 **雲電腦** 上實現事件監聽與群聊機器人協作。",
+      "src": [
+        {
+          "t": "飛書官方 Python SDK（larksuite/oapi-sdk-python）",
+          "u": "https://github.com/larksuite/oapi-sdk-python"
+        },
+        {
+          "t": "飛書開放平臺",
+          "u": "https://open.feishu.cn/"
+        }
+      ],
+      "intro": "基於飛書官方 Python SDK 的長連線訊息方案，適合在無需公網 IP 的 **雲電腦** 上實現事件監聽與群聊機器人協作。",
+      "prompt": "幫我在你的雲電腦上配置基於飛書 Python SDK（https://github.com/larksuite/oapi-sdk-python）的長連線機器人，以後接收群聊事件和派發任務用它。需要填金鑰時請提醒我自己填。",
+      "todo": [
+        "在飛書開放平臺建立企業自建應用並開啟長連線與機器人功能。",
+        "根據提示自行填入應用的 App ID 與 App Secret。"
+      ]
     },
     {
-     "t": "KinGao：DeepSeek Harness 彙總帖",
-     "u": "https://x.com/KinGao476942/status/2115592603605557564"
-    }
-   ],
-   "intro": "DeepSeek 官方開源的 **「一切皆外掛」架構 Agent**，支援桌面端與 Web UI。目前處於開發者預覽階段，適合用於 **程式碼編寫**、**調研分析**、**日常辦公** 與 **定時任務擴充套件**。",
-   "prompt": "幫我在你的雲電腦上安裝配置 DeepSeek Harness（https://github.com/deepseek-ai/deepseek-harness），以後日常辦公、調研、寫程式碼和跑定時任務用它。需要配置 DeepSeek API Key 時請停下來提醒我自己填。",
-   "todo": [
-    "準備好 DeepSeek API Key",
-    "待 Bot 安裝完畢後，在設定中自行填入 API Key"
-   ]
-  },
-  {
-   "id": "muse2api",
-   "name": "muse2api",
-   "cat": "模型/生成",
-   "tags": [
-    "muse",
-    "muse2api",
-    "生圖",
-    "影片",
-    "openai 相容",
-    "api"
-   ],
-   "desc": "驅動網頁端包裝為 OpenAI 介面，本地呼叫生圖與生影片。",
-   "what": "社群開源的 muse.ai 逆向封裝專案，適合在 **雲電腦** 上透過 OpenAI 相容介面直接呼叫網頁端免費額度進行對話、生圖和生影片。",
-   "src": [
-    {
-     "t": "muse2api 專案倉庫（czg86389-hub）",
-     "u": "https://github.com/czg86389-hub/muse2api"
-    }
-   ],
-   "intro": "社群開源的 muse.ai 逆向封裝專案，適合在 **雲電腦** 上透過 OpenAI 相容介面直接呼叫網頁端免費額度進行對話、生圖和生影片。",
-   "prompt": "幫我在你的雲電腦上部署 muse2api（https://github.com/czg86389-hub/muse2api），以後呼叫多模態介面進行對話、生圖和生影片用它。需要填金鑰時請提醒我自己填。",
-   "todo": [
-    "準備 muse.ai 賬號並在雲電腦瀏覽器中完成登入。",
-    "根據提示自行填入通訊金鑰與登入狀態資料。"
-   ]
-  },
-  {
-   "id": "agently-cli",
-   "name": "agently-cli（Agent 郵箱命令列）",
-   "cat": "通訊與釋出",
-   "tags": [
-    "郵件",
-    "email",
-    "agently",
-    "qq 郵箱",
-    "騰訊"
-   ],
-   "desc": "騰訊 QQ 郵箱命令列工具，支援郵件收發、搜尋與附件下載。",
-   "what": "騰訊 QQ 郵箱推出的官方命令列工具，適合讓 Bot 在 **雲電腦** 上收發郵件、檢索歷史郵件並下載附件。",
-   "src": [
-    {
-     "t": "Agent 郵箱官網",
-     "u": "https://agent.qq.com"
+      "id": "x-api",
+      "name": "X API 發帖（OAuth 1.0a PIN）",
+      "cat": "通訊與釋出",
+      "tags": [
+        "x",
+        "twitter",
+        "推特",
+        "發帖",
+        "oauth",
+        "api"
+      ],
+      "desc": "透過 OAuth 1.0a PIN 授權呼叫 X 官方介面發帖與傳圖。",
+      "what": "基於 OAuth 1.0a PIN 授權的 X 官方介面呼叫方案，適合讓 Bot 在 **雲電腦** 上安全執行發帖、傳圖與刪帖任務。",
+      "src": [
+        {
+          "t": "X 官方文件：PIN-based OAuth",
+          "u": "https://docs.x.com/resources/fundamentals/authentication/oauth-1-0a/pin-based-oauth"
+        }
+      ],
+      "intro": "基於 OAuth 1.0a PIN 授權的 X 官方介面呼叫方案，適合讓 Bot 在 **雲電腦** 上安全執行發帖、傳圖與刪帖任務。",
+      "prompt": "幫我在你的雲電腦上配置 X API 發帖（https://docs.x.com/resources/fundamentals/authentication/oauth-1-0a/pin-based-oauth），以後發帖、傳圖和管理推文用它。需要填金鑰時請提醒我自己填，需要登入授權時把連結發給我。",
+      "todo": [
+        "在 X 開發者平臺建立應用並開通讀寫許可權。",
+        "開啟授權連結並在收到頁面 PIN 碼後傳送給 Bot。"
+      ]
     },
     {
-     "t": "agently-cli npm 包",
-     "u": "https://www.npmjs.com/package/@tencent-qqmail/agently-cli"
-    }
-   ],
-   "intro": "騰訊 QQ 郵箱推出的官方命令列工具，適合讓 Bot 在 **雲電腦** 上收發郵件、檢索歷史郵件並下載附件。",
-   "prompt": "幫我在你的雲電腦上安裝 agently-cli（https://agent.qq.com），以後收發郵件、檢索歷史郵件和下載附件用它。需要登入或授權時停下來把連結發給我由我完成。",
-   "todo": [
-    "準備 QQ 郵箱或 Agent 郵箱賬號。",
-    "開啟 Bot 傳送的授權連結在瀏覽器中完成驗證。"
-   ]
-  },
-  {
-   "id": "lark-cli",
-   "name": "飛書 CLI（lark-cli）",
-   "cat": "通訊與釋出",
-   "tags": [
-    "飛書",
-    "lark",
-    "feishu",
-    "多維表格",
-    "文件",
-    "lark-cli"
-   ],
-   "desc": "飛書官方命令列工具，以使用者身份操作雲文件、多維表格與雲盤。",
-   "what": "飛書官方命令列工具，適合讓 Bot 以個人身份在 **雲電腦** 上操作飛書雲文件、多維表格、雲盤和知識庫。",
-   "src": [
-    {
-     "t": "larksuite/cli 官方倉庫",
-     "u": "https://github.com/larksuite/cli"
-    }
-   ],
-   "intro": "飛書官方命令列工具，適合讓 Bot 以個人身份在 **雲電腦** 上操作飛書雲文件、多維表格、雲盤和知識庫。",
-   "prompt": "幫我在你的雲電腦上安裝配置飛書 CLI（https://github.com/larksuite/cli），以後操作飛書雲文件、多維表格和雲盤用它。需要登入或授權時停下來把連結發給我由我完成。",
-   "todo": [
-    "準備飛書個人賬號。",
-    "開啟驗證連結輸入終端給出的裝置碼確認授權。"
-   ]
-  },
-  {
-   "id": "feishu-bot",
-   "name": "飛書機器人長連線",
-   "cat": "通訊與釋出",
-   "tags": [
-    "飛書",
-    "lark",
-    "feishu",
-    "機器人",
-    "bot",
-    "lark-oapi",
-    "群聊"
-   ],
-   "desc": "利用長連線免公網接收飛書訊息，實現群聊與私聊派發任務。",
-   "what": "基於飛書官方 Python SDK 的長連線訊息方案，適合在無需公網 IP 的 **雲電腦** 上實現事件監聽與群聊機器人協作。",
-   "src": [
-    {
-     "t": "飛書官方 Python SDK（larksuite/oapi-sdk-python）",
-     "u": "https://github.com/larksuite/oapi-sdk-python"
+      "id": "gh",
+      "name": "GitHub CLI（gh）",
+      "cat": "通訊與釋出",
+      "tags": [
+        "github",
+        "gh",
+        "git",
+        "倉庫",
+        "push",
+        "pr"
+      ],
+      "desc": "GitHub 官方命令列工具，用於程式碼拉取推送與管理 PR。",
+      "what": "GitHub 官方命令列工具，適合讓 Bot 在 **雲電腦** 上克隆私有倉庫、推送程式碼、建立 PR 並管理 Actions。",
+      "src": [
+        {
+          "t": "GitHub CLI Linux 安裝文件",
+          "u": "https://github.com/cli/cli/blob/trunk/docs/install_linux.md"
+        },
+        {
+          "t": "gh auth login 官方手冊",
+          "u": "https://cli.github.com/manual/gh_auth_login"
+        }
+      ],
+      "intro": "GitHub 官方命令列工具，適合讓 Bot 在 **雲電腦** 上克隆私有倉庫、推送程式碼、建立 PR 並管理 Actions。",
+      "prompt": "幫我在你的雲電腦上安裝 GitHub CLI（https://github.com/cli/cli/blob/trunk/docs/install_linux.md），以後管理程式碼倉庫、推送分支和提交 PR 用它。需要登入或授權時停下來把連結發給我由我完成。",
+      "todo": [
+        "準備 GitHub 賬號。",
+        "在瀏覽器開啟授權連結並輸入對應的一次性驗證碼。"
+      ]
     },
     {
-     "t": "飛書開放平臺",
-     "u": "https://open.feishu.cn/"
-    }
-   ],
-   "intro": "基於飛書官方 Python SDK 的長連線訊息方案，適合在無需公網 IP 的 **雲電腦** 上實現事件監聽與群聊機器人協作。",
-   "prompt": "幫我在你的雲電腦上配置基於飛書 Python SDK（https://github.com/larksuite/oapi-sdk-python）的長連線機器人，以後接收群聊事件和派發任務用它。需要填金鑰時請提醒我自己填。",
-   "todo": [
-    "在飛書開放平臺建立企業自建應用並開啟長連線與機器人功能。",
-    "根據提示自行填入應用的 App ID 與 App Secret。"
-   ]
-  },
-  {
-   "id": "x-api",
-   "name": "X API 發帖（OAuth 1.0a PIN）",
-   "cat": "通訊與釋出",
-   "tags": [
-    "x",
-    "twitter",
-    "推特",
-    "發帖",
-    "oauth",
-    "api"
-   ],
-   "desc": "透過 OAuth 1.0a PIN 授權呼叫 X 官方介面發帖與傳圖。",
-   "what": "基於 OAuth 1.0a PIN 授權的 X 官方介面呼叫方案，適合讓 Bot 在 **雲電腦** 上安全執行發帖、傳圖與刪帖任務。",
-   "src": [
-    {
-     "t": "X 官方文件：PIN-based OAuth",
-     "u": "https://docs.x.com/resources/fundamentals/authentication/oauth-1-0a/pin-based-oauth"
-    }
-   ],
-   "intro": "基於 OAuth 1.0a PIN 授權的 X 官方介面呼叫方案，適合讓 Bot 在 **雲電腦** 上安全執行發帖、傳圖與刪帖任務。",
-   "prompt": "幫我在你的雲電腦上配置 X API 發帖（https://docs.x.com/resources/fundamentals/authentication/oauth-1-0a/pin-based-oauth），以後發帖、傳圖和管理推文用它。需要填金鑰時請提醒我自己填，需要登入授權時把連結發給我。",
-   "todo": [
-    "在 X 開發者平臺建立應用並開通讀寫許可權。",
-    "開啟授權連結並在收到頁面 PIN 碼後傳送給 Bot。"
-   ]
-  },
-  {
-   "id": "gh",
-   "name": "GitHub CLI（gh）",
-   "cat": "通訊與釋出",
-   "tags": [
-    "github",
-    "gh",
-    "git",
-    "倉庫",
-    "push",
-    "pr"
-   ],
-   "desc": "GitHub 官方命令列工具，用於程式碼拉取推送與管理 PR。",
-   "what": "GitHub 官方命令列工具，適合讓 Bot 在 **雲電腦** 上克隆私有倉庫、推送程式碼、建立 PR 並管理 Actions。",
-   "src": [
-    {
-     "t": "GitHub CLI Linux 安裝文件",
-     "u": "https://github.com/cli/cli/blob/trunk/docs/install_linux.md"
+      "id": "playwright",
+      "name": "Playwright",
+      "cat": "資料抓取",
+      "tags": [
+        "playwright",
+        "瀏覽器",
+        "爬蟲",
+        "截圖",
+        "chromium",
+        "自動化"
+      ],
+      "desc": "微軟開源瀏覽器自動化庫，驅動無頭瀏覽器截圖與抓取渲染頁。",
+      "what": "Playwright 是微軟開源的自動化庫，適合讓 Bot 執行 **批次網頁截圖與渲染抓取**，無需手動耗費瀏覽器互動額度。",
+      "src": [
+        {
+          "t": "Playwright Python 官方文件",
+          "u": "https://playwright.dev/python/docs/intro"
+        }
+      ],
+      "intro": "Playwright 是微軟開源的自動化庫，適合讓 Bot 執行 **批次網頁截圖與渲染抓取**，無需手動耗費瀏覽器互動額度。",
+      "prompt": "幫我在你的雲電腦上安裝 Playwright（https://playwright.dev/python/docs/intro），以後網頁渲染、截圖和抓取任務用它。",
+      "todo": [
+        "確認雲電腦具備 Python 執行環境。"
+      ]
     },
     {
-     "t": "gh auth login 官方手冊",
-     "u": "https://cli.github.com/manual/gh_auth_login"
-    }
-   ],
-   "intro": "GitHub 官方命令列工具，適合讓 Bot 在 **雲電腦** 上克隆私有倉庫、推送程式碼、建立 PR 並管理 Actions。",
-   "prompt": "幫我在你的雲電腦上安裝 GitHub CLI（https://github.com/cli/cli/blob/trunk/docs/install_linux.md），以後管理程式碼倉庫、推送分支和提交 PR 用它。需要登入或授權時停下來把連結發給我由我完成。",
-   "todo": [
-    "準備 GitHub 賬號。",
-    "在瀏覽器開啟授權連結並輸入對應的一次性驗證碼。"
-   ]
-  },
-  {
-   "id": "playwright",
-   "name": "Playwright",
-   "cat": "資料抓取",
-   "tags": [
-    "playwright",
-    "瀏覽器",
-    "爬蟲",
-    "截圖",
-    "chromium",
-    "自動化"
-   ],
-   "desc": "微軟開源瀏覽器自動化庫，驅動無頭瀏覽器截圖與抓取渲染頁。",
-   "what": "Playwright 是微軟開源的自動化庫，適合讓 Bot 執行 **批次網頁截圖與渲染抓取**，無需手動耗費瀏覽器互動額度。",
-   "src": [
-    {
-     "t": "Playwright Python 官方文件",
-     "u": "https://playwright.dev/python/docs/intro"
-    }
-   ],
-   "intro": "Playwright 是微軟開源的自動化庫，適合讓 Bot 執行 **批次網頁截圖與渲染抓取**，無需手動耗費瀏覽器互動額度。",
-   "prompt": "幫我在你的雲電腦上安裝 Playwright（https://playwright.dev/python/docs/intro），以後網頁渲染、截圖和抓取任務用它。",
-   "todo": [
-    "確認雲電腦具備 Python 執行環境。"
-   ]
-  },
-  {
-   "id": "yt-dlp",
-   "name": "yt-dlp",
-   "cat": "資料抓取",
-   "tags": [
-    "yt-dlp",
-    "影片下載",
-    "youtube",
-    "bilibili",
-    "音訊"
-   ],
-   "desc": "開源命令列音影片下載工具，支援提取音訊及多平臺下載。",
-   "what": "yt-dlp 是支援上千個站點的命令列音影片下載工具，適合讓 Bot **批次下載影片或抽取音訊** 以供後續轉寫處理。",
-   "src": [
-    {
-     "t": "yt-dlp 官方倉庫",
-     "u": "https://github.com/yt-dlp/yt-dlp"
-    }
-   ],
-   "intro": "yt-dlp 是支援上千個站點的命令列音影片下載工具，適合讓 Bot **批次下載影片或抽取音訊** 以供後續轉寫處理。",
-   "prompt": "幫我在你的雲電腦上安裝 yt-dlp（https://github.com/yt-dlp/yt-dlp），以後批次下載音影片和提取音訊用它。",
-   "todo": [
-    "準備需要下載的目標媒體連結。",
-    "遇到需登入的站點時匯出對應 Cookie 檔案備用。"
-   ]
-  },
-  {
-   "id": "ffmpeg",
-   "name": "FFmpeg",
-   "cat": "基礎工具",
-   "tags": [
-    "ffmpeg",
-    "影片",
-    "音訊",
-    "轉碼",
-    "字幕",
-    "剪輯"
-   ],
-   "desc": "開源音影片處理工具，支援轉碼、截幀、音訊提取與字幕燒錄。",
-   "what": "FFmpeg 是多媒體底層處理的核心工具，適合讓 Bot 完成 **音影片轉碼、壓縮、截幀與音訊提取**。",
-   "src": [
-    {
-     "t": "FFmpeg 官方下載頁",
-     "u": "https://ffmpeg.org/download.html"
-    }
-   ],
-   "intro": "FFmpeg 是多媒體底層處理的核心工具，適合讓 Bot 完成 **音影片轉碼、壓縮、截幀與音訊提取**。",
-   "prompt": "幫我在你的雲電腦上安裝 FFmpeg（https://ffmpeg.org/download.html），以後處理音影片轉碼、剪輯、壓縮和截幀用它。",
-   "todo": [
-    "確認當前雲電腦具備基礎管理許可權。"
-   ]
-  },
-  {
-   "id": "nodejs",
-   "name": "Node.js 與 npm",
-   "cat": "基礎工具",
-   "tags": [
-    "node",
-    "nodejs",
-    "npm",
-    "nvm",
-    "環境",
-    "codex",
-    "gemini cli",
-    "pi",
-    "lark-cli"
-   ],
-   "desc": "JavaScript 執行環境，為多個終端 Agent 工具提供依賴。",
-   "what": "Node.js 與 npm 是前端及各類 AI CLI 的執行基礎，適合為 Bot 提供 **現代命令列工具的執行環境**。",
-   "src": [
-    {
-     "t": "nvm 官方倉庫",
-     "u": "https://github.com/nvm-sh/nvm"
+      "id": "yt-dlp",
+      "name": "yt-dlp",
+      "cat": "資料抓取",
+      "tags": [
+        "yt-dlp",
+        "影片下載",
+        "youtube",
+        "bilibili",
+        "音訊"
+      ],
+      "desc": "開源命令列音影片下載工具，支援提取音訊及多平臺下載。",
+      "what": "yt-dlp 是支援上千個站點的命令列音影片下載工具，適合讓 Bot **批次下載影片或抽取音訊** 以供後續轉寫處理。",
+      "src": [
+        {
+          "t": "yt-dlp 官方倉庫",
+          "u": "https://github.com/yt-dlp/yt-dlp"
+        }
+      ],
+      "intro": "yt-dlp 是支援上千個站點的命令列音影片下載工具，適合讓 Bot **批次下載影片或抽取音訊** 以供後續轉寫處理。",
+      "prompt": "幫我在你的雲電腦上安裝 yt-dlp（https://github.com/yt-dlp/yt-dlp），以後批次下載音影片和提取音訊用它。",
+      "todo": [
+        "準備需要下載的目標媒體連結。",
+        "遇到需登入的站點時匯出對應 Cookie 檔案備用。"
+      ]
     },
     {
-     "t": "Node.js 官網",
-     "u": "https://nodejs.org/"
-    }
-   ],
-   "intro": "Node.js 與 npm 是前端及各類 AI CLI 的執行基礎，適合為 Bot 提供 **現代命令列工具的執行環境**。",
-   "prompt": "幫我在你的雲電腦上安裝好 Node.js 與 npm（https://github.com/nvm-sh/nvm），以後執行前端專案和各類命令列工具用它。",
-   "todo": [
-    "確認雲電腦網路連通，無需準備外部賬號。"
-   ]
-  },
-  {
-   "id": "egress-proxy",
-   "name": "固定出口代理（SSH 隧道）",
-   "cat": "基礎工具",
-   "tags": [
-    "代理",
-    "proxy",
-    "socks",
-    "ssh",
-    "地區限制",
-    "vps",
-    "網路"
-   ],
-   "desc": "利用 SSH 動態轉發搭建固定出口代理，解決服務地域限制問題。",
-   "what": "固定出口代理利用 SSH 動態埠轉發搭建本地 SOCKS5 代理，適合讓 Bot 在 **訪問受地域限制的服務** 時保持穩定的出口 IP。",
-   "src": [
+      "id": "ffmpeg",
+      "name": "FFmpeg",
+      "cat": "基礎工具",
+      "tags": [
+        "ffmpeg",
+        "影片",
+        "音訊",
+        "轉碼",
+        "字幕",
+        "剪輯"
+      ],
+      "desc": "開源音影片處理工具，支援轉碼、截幀、音訊提取與字幕燒錄。",
+      "what": "FFmpeg 是多媒體底層處理的核心工具，適合讓 Bot 完成 **音影片轉碼、壓縮、截幀與音訊提取**。",
+      "src": [
+        {
+          "t": "FFmpeg 官方下載頁",
+          "u": "https://ffmpeg.org/download.html"
+        }
+      ],
+      "intro": "FFmpeg 是多媒體底層處理的核心工具，適合讓 Bot 完成 **音影片轉碼、壓縮、截幀與音訊提取**。",
+      "prompt": "幫我在你的雲電腦上安裝 FFmpeg（https://ffmpeg.org/download.html），以後處理音影片轉碼、剪輯、壓縮和截幀用它。",
+      "todo": [
+        "確認當前雲電腦具備基礎管理許可權。"
+      ]
+    },
     {
-     "t": "OpenSSH ssh 手冊（-D 動態轉發）",
-     "u": "https://man.openbsd.org/ssh"
-    }
-   ],
-   "intro": "固定出口代理利用 SSH 動態埠轉發搭建本地 SOCKS5 代理，適合讓 Bot 在 **訪問受地域限制的服務** 時保持穩定的出口 IP。",
-   "prompt": "幫我在你的雲電腦上配置基於 SSH 隧道的固定出口代理（https://man.openbsd.org/ssh），以後訪問受地域限制的服務用它。需要填伺服器地址和私鑰時請提醒我自己填。",
-   "todo": [
-    "準備一臺支援 SSH 金鑰登入的境外伺服器。",
-    "根據提示自行將登入私鑰與連線資訊寫入私密檔案。"
-   ]
-  },
-  {
-   "id": "mcp-connectors",
-   "name": "MCP 聯結器",
-   "cat": "基礎工具",
-   "tags": [
-    "mcp",
-    "connector",
-    "聯結器",
-    "gmail",
-    "google drive",
-    "model context protocol"
-   ],
-   "desc": "將外部服務或自定義 MCP 伺服器接入 Grok，擴充套件工具呼叫能力。",
-   "what": "MCP 聯結器打通了外部服務與模型的互動通道，適合讓 Bot **直接呼叫外部工具與雲端資料** 完成複雜協同。",
-   "src": [
+      "id": "nodejs",
+      "name": "Node.js 與 npm",
+      "cat": "基礎工具",
+      "tags": [
+        "node",
+        "nodejs",
+        "npm",
+        "nvm",
+        "環境",
+        "codex",
+        "gemini cli",
+        "pi",
+        "lark-cli"
+      ],
+      "desc": "JavaScript 執行環境，為多個終端 Agent 工具提供依賴。",
+      "what": "Node.js 與 npm 是前端及各類 AI CLI 的執行基礎，適合為 Bot 提供 **現代命令列工具的執行環境**。",
+      "src": [
+        {
+          "t": "nvm 官方倉庫",
+          "u": "https://github.com/nvm-sh/nvm"
+        },
+        {
+          "t": "Node.js 官網",
+          "u": "https://nodejs.org/"
+        }
+      ],
+      "intro": "Node.js 與 npm 是前端及各類 AI CLI 的執行基礎，適合為 Bot 提供 **現代命令列工具的執行環境**。",
+      "prompt": "幫我在你的雲電腦上安裝好 Node.js 與 npm（https://github.com/nvm-sh/nvm），以後執行前端專案和各類命令列工具用它。",
+      "todo": [
+        "確認雲電腦網路連通，無需準備外部賬號。"
+      ]
+    },
     {
-     "t": "Grok 官方文件：Connectors",
-     "u": "https://docs.x.ai/grok/connectors"
+      "id": "egress-proxy",
+      "name": "固定出口代理（SSH 隧道）",
+      "cat": "基礎工具",
+      "tags": [
+        "代理",
+        "proxy",
+        "socks",
+        "ssh",
+        "地區限制",
+        "vps",
+        "網路"
+      ],
+      "desc": "利用 SSH 動態轉發搭建固定出口代理，解決服務地域限制問題。",
+      "what": "固定出口代理利用 SSH 動態埠轉發搭建本地 SOCKS5 代理，適合讓 Bot 在 **訪問受地域限制的服務** 時保持穩定的出口 IP。",
+      "src": [
+        {
+          "t": "OpenSSH ssh 手冊（-D 動態轉發）",
+          "u": "https://man.openbsd.org/ssh"
+        }
+      ],
+      "intro": "固定出口代理利用 SSH 動態埠轉發搭建本地 SOCKS5 代理，適合讓 Bot 在 **訪問受地域限制的服務** 時保持穩定的出口 IP。",
+      "prompt": "幫我在你的雲電腦上配置基於 SSH 隧道的固定出口代理（https://man.openbsd.org/ssh），以後訪問受地域限制的服務用它。需要填伺服器地址和私鑰時請提醒我自己填。",
+      "todo": [
+        "準備一臺支援 SSH 金鑰登入的境外伺服器。",
+        "根據提示自行將登入私鑰與連線資訊寫入私密檔案。"
+      ]
+    },
+    {
+      "id": "mcp-connectors",
+      "name": "MCP 聯結器",
+      "cat": "基礎工具",
+      "tags": [
+        "mcp",
+        "connector",
+        "聯結器",
+        "gmail",
+        "google drive",
+        "model context protocol"
+      ],
+      "desc": "將外部服務或自定義 MCP 伺服器接入 Grok，擴充套件工具呼叫能力。",
+      "what": "MCP 聯結器打通了外部服務與模型的互動通道，適合讓 Bot **直接呼叫外部工具與雲端資料** 完成複雜協同。",
+      "src": [
+        {
+          "t": "Grok 官方文件：Connectors",
+          "u": "https://docs.x.ai/grok/connectors"
+        }
+      ],
+      "intro": "MCP 聯結器打通了外部服務與模型的互動通道，適合讓 Bot **直接呼叫外部工具與雲端資料** 完成複雜協同。",
+      "prompt": "幫我在你的雲電腦上接入 MCP 聯結器（https://docs.x.ai/grok/connectors），以後呼叫外部工具和同步雲端資料用它。需要第三方授權時把連結發給我，需要填金鑰時請提醒我自己填。",
+      "todo": [
+        "在瀏覽器訪問聯結器控制頁面並準備待連線賬號。",
+        "根據提示自行填入目標服務的地址或授權金鑰。"
+      ]
     }
-   ],
-   "intro": "MCP 聯結器打通了外部服務與模型的互動通道，適合讓 Bot **直接呼叫外部工具與雲端資料** 完成複雜協同。",
-   "prompt": "幫我在你的雲電腦上接入 MCP 聯結器（https://docs.x.ai/grok/connectors），以後呼叫外部工具和同步雲端資料用它。需要第三方授權時把連結發給我，需要填金鑰時請提醒我自己填。",
-   "todo": [
-    "在瀏覽器訪問聯結器控制頁面並準備待連線賬號。",
-    "根據提示自行填入目標服務的地址或授權金鑰。"
-   ]
-  }
- ]
+  ]
 }
