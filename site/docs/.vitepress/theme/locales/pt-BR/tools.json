@@ -1,0 +1,599 @@
+{
+ "ui": {
+  "title": "Caixa de Ferramentas para Computador em Nuvem do Grok",
+  "search": "Buscar ferramentas/termos, ex.: codex",
+  "all": "Todas",
+  "empty": "Nenhuma ferramenta correspondente encontrada",
+  "count": "Total de {n} ferramentas",
+  "more": "Ver detalhes",
+  "prereq": "Pré-requisitos",
+  "install": "Instalação",
+  "auth": "Login e autorização",
+  "verify": "Verificação",
+  "steps": "Passo a passo",
+  "pitfalls": "Problemas comuns e soluções",
+  "src": "Fonte",
+  "back": "Voltar ao sumário",
+  "note": "Esta página é uma compilação não oficial da comunidade, sem qualquer vínculo com os desenvolvedores das ferramentas ou com a xAI. Os comandos devem seguir a documentação oficial.",
+  "lead": "Cada ferramenta fornece um prompt pronto para ser copiado e enviado ao Grok Bot, para que o Bot conclua a instalação e a verificação do ambiente no computador em nuvem de forma totalmente automatizada. **Este guia é uma compilação comunitária não oficial**; consulte a documentação oficial para as alterações mais recentes.",
+  "promptTitle": "Prompt para enviar ao Bot",
+  "promptHint": "Copie todo o conteúdo abaixo e envie ao seu Grok Bot. Ele fará a instalação e a verificação automática no computador em nuvem, pausando para aguardar sua ação caso seja necessário fazer login ou configurar chaves.",
+  "todoTitle": "O que você precisa fazer"
+ },
+ "cats": [
+  "Agentes de Código",
+  "Modelos / Geração",
+  "Comunicação e Publicação",
+  "Coleta de Dados",
+  "Ferramentas Básicas"
+ ],
+ "tools": [
+  {
+   "id": "agy",
+   "name": "Antigravity CLI (agy)",
+   "cat": "Agentes de Código",
+   "tags": [
+    "agy",
+    "antigravity",
+    "gemini",
+    "google",
+    "compreensão de vídeo",
+    "escrita"
+   ],
+   "desc": "Agente de terminal oficial do Google, com suporte à leitura direta de vídeos e modificação de código.",
+   "what": "Agente de terminal oficial do Google, ideal para **compreensão de vídeo, redação de textos longos e modificação de código**, com suporte à leitura direta de arquivos de vídeo.",
+   "src": [
+    {
+     "t": "Documentação oficial do Antigravity: Guia de Início Rápido",
+     "u": "https://antigravity.google/docs/getting-started/"
+    },
+    {
+     "t": "Repositório oficial do Antigravity CLI",
+     "u": "https://github.com/google-antigravity/antigravity-cli"
+    },
+    {
+     "t": "Resolução de problemas do Antigravity CLI",
+     "u": "https://antigravity.google/docs/cli/troubleshooting/"
+    }
+   ],
+   "intro": "Agente de terminal oficial do Google, ideal para **compreensão de vídeo, redação de textos longos e modificação de código**, com suporte à leitura direta de arquivos de vídeo.",
+   "prompt": "Ajude-me a instalar e configurar o Antigravity CLI (https://antigravity.google/docs/getting-started/) no seu computador em nuvem. Use-o no futuro para compreensão de vídeo, redação de textos longos e modificação de código. Quando for necessário fazer login ou autorizar, pause e me envie o link para que eu mesmo conclua.",
+   "todo": [
+    "Prepare uma conta Google.",
+    "Abra o link de autorização enviado pelo Bot no navegador para concluir a autenticação."
+   ]
+  },
+  {
+   "id": "codex",
+   "name": "Codex CLI",
+   "cat": "Agentes de Código",
+   "tags": [
+    "codex",
+    "openai",
+    "chatgpt",
+    "geração de imagens",
+    "image",
+    "código"
+   ],
+   "desc": "Agente de código de terminal da OpenAI, consome a cota da assinatura do ChatGPT para modificar código e gerar imagens.",
+   "what": "Agente de código de terminal oficial da OpenAI, ideal para **modificação de código, execução de scripts e geração/revisão de imagens**, podendo usar diretamente a cota da assinatura do ChatGPT.",
+   "src": [
+    {
+     "t": "Documentação oficial do OpenAI Codex CLI",
+     "u": "https://developers.openai.com/codex/cli"
+    },
+    {
+     "t": "Repositório oficial de openai/codex",
+     "u": "https://github.com/openai/codex"
+    }
+   ],
+   "intro": "Agente de código de terminal oficial da OpenAI, ideal para **modificação de código, execução de scripts e geração/revisão de imagens**, podendo usar diretamente a cota da assinatura do ChatGPT.",
+   "prompt": "Ajude-me a instalar o Codex CLI (https://developers.openai.com/codex/cli) no seu computador em nuvem e faça login com minha conta do ChatGPT. Use-o no futuro para escrever código, rodar scripts e gerar imagens. Quando precisar da minha autorização, envie-me o link.",
+   "todo": [
+    "Prepare uma conta ChatGPT e confirme se a permissão de login por código de dispositivo está habilitada.",
+    "Abra o link do código de dispositivo enviado pelo Bot no navegador para concluir a confirmação."
+   ]
+  },
+  {
+   "id": "claude-code",
+   "name": "Claude Code",
+   "cat": "Agentes de Código",
+   "tags": [
+    "claude",
+    "anthropic",
+    "claude code",
+    "código"
+   ],
+   "desc": "Agente de código de terminal da Anthropic, ideal para leitura de bases de código e modificação de múltiplos arquivos.",
+   "what": "Agente de código de terminal oficial da Anthropic, ideal para **leitura de bases de código, modificação de múltiplos arquivos e execução de comandos**, com suporte a atualizações automáticas em segundo plano.",
+   "src": [
+    {
+     "t": "Documentação oficial de instalação do Claude Code",
+     "u": "https://code.claude.com/docs/en/setup"
+    }
+   ],
+   "intro": "Agente de código de terminal oficial da Anthropic, ideal para **leitura de bases de código, modificação de múltiplos arquivos e execução de comandos**, com suporte a atualizações automáticas em segundo plano.",
+   "prompt": "Ajude-me a instalar o Claude Code (https://code.claude.com/docs/en/setup) no seu computador em nuvem. Use-o no futuro para ler bases de código e modificar múltiplos arquivos. Quando for necessário fazer login ou autorizar, pause e envie-me o link para que eu mesmo conclua.",
+   "todo": [
+    "Prepare uma assinatura do Claude ou uma conta no Anthropic Console.",
+    "Abra o link de autorização enviado pelo Bot no navegador para concluir a autenticação."
+   ]
+  },
+  {
+   "id": "gemini-cli",
+   "name": "Gemini CLI",
+   "cat": "Agentes de Código",
+   "tags": [
+    "gemini",
+    "google",
+    "gemini cli"
+   ],
+   "desc": "Agente de terminal de código aberto do Google, voltado para usuários pagantes e do Google Cloud.",
+   "what": "Agente de IA de terminal de código aberto do Google, ideal para **usuários pagantes e de projetos do Google Cloud** realizarem interação no terminal e colaboração no desenvolvimento.",
+   "src": [
+    {
+     "t": "Documentação oficial de instalação do Gemini CLI",
+     "u": "https://geminicli.com/docs/get-started/installation/"
+    },
+    {
+     "t": "Repositório oficial de google-gemini/gemini-cli",
+     "u": "https://github.com/google-gemini/gemini-cli"
+    }
+   ],
+   "intro": "Agente de IA de terminal de código aberto do Google, ideal para **usuários pagantes e de projetos do Google Cloud** realizarem interação no terminal e colaboração no desenvolvimento.",
+   "prompt": "Ajude-me a instalar o Gemini CLI (https://geminicli.com/docs/get-started/installation/) no seu computador em nuvem. Use-o no futuro para interação no terminal e colaboração no desenvolvimento. Quando for necessário fazer login ou autorizar, pause e envie-me o link para que eu mesmo conclua.",
+   "todo": [
+    "Prepare uma conta Google paga ou uma conta de projeto do Google Cloud.",
+    "Abra o link de autorização enviado pelo Bot no navegador para concluir a autenticação."
+   ]
+  },
+  {
+   "id": "pi",
+   "name": "Pi Coding Agent",
+   "cat": "Agentes de Código",
+   "tags": [
+    "pi",
+    "pi coding agent",
+    "earendil",
+    "mario zechner",
+    "código"
+   ],
+   "desc": "Agente de código de terminal minimalista e extensível, oferecendo apenas quatro ferramentas básicas: ler, escrever, modificar e executar.",
+   "what": "Agente de código de terminal minimalista e altamente extensível, ideal para **personalizar profundamente fluxos de trabalho de desenvolvimento exclusivos por meio de extensões, habilidades e modelos de prompt**.",
+   "src": [
+    {
+     "t": "Site oficial do Pi",
+     "u": "https://pi.dev"
+    },
+    {
+     "t": "Repositório oficial de earendil-works/pi",
+     "u": "https://github.com/earendil-works/pi"
+    },
+    {
+     "t": "Comunicado de migração do Pi",
+     "u": "https://pi.dev/news/2026/5/7/pi-has-a-new-home"
+    }
+   ],
+   "intro": "Agente de código de terminal minimalista e altamente extensível, ideal para **personalizar profundamente fluxos de trabalho de desenvolvimento exclusivos por meio de extensões, habilidades e modelos de prompt**.",
+   "prompt": "Ajude-me a instalar o Pi Coding Agent (https://pi.dev) no seu computador em nuvem. Use-o no futuro para personalizar fluxos de trabalho de desenvolvimento e escrever código. Quando for necessário inserir chaves de API, avise-me para que eu mesmo as preencha.",
+   "todo": [
+    "Prepare a chave de API (API Key) do provedor de modelo correspondente.",
+    "Após receber o aviso, insira você mesmo a chave no arquivo de configuração confidencial."
+   ]
+  },
+  {
+   "id": "cursor-cli",
+   "name": "Cursor CLI",
+   "cat": "Agentes de Código",
+   "tags": [
+    "cursor",
+    "cursor-agent",
+    "agent",
+    "código"
+   ],
+   "desc": "Agente oficial de linha de comando do Cursor, ideal para delegar modificações de código em pequena escala.",
+   "what": "Agente oficial de linha de comando do Cursor, ideal para **executar modificações de código em pequena escala no computador em nuvem**, reservando a cota do Bot para decisões globais.",
+   "src": [
+    {
+     "t": "Documentação oficial de instalação do Cursor CLI",
+     "u": "https://cursor.com/docs/cli/installation"
+    },
+    {
+     "t": "Documentação oficial de autenticação do Cursor CLI",
+     "u": "https://cursor.com/docs/cli/reference/authentication"
+    }
+   ],
+   "intro": "Agente oficial de linha de comando do Cursor, ideal para **executar modificações de código em pequena escala no computador em nuvem**, reservando a cota do Bot para decisões globais.",
+   "prompt": "Ajude-me a instalar o Cursor CLI (https://cursor.com/docs/cli/installation) no seu computador em nuvem. Use-o no futuro para modificações de código em pequena escala. Quando for necessário fazer login ou autorizar, pause e envie-me o link para que eu mesmo conclua.",
+   "todo": [
+    "Prepare uma conta do Cursor ou as credenciais de autorização correspondentes.",
+    "Abra o link de autorização enviado pelo Bot no navegador para concluir o login."
+   ]
+  },
+  {
+   "id": "deepseek-harness",
+   "name": "DeepSeek Harness",
+   "cat": "Agentes de Código",
+   "tags": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "plugins",
+    "código",
+    "pesquisa",
+    "tarefas agendadas",
+    "código aberto"
+   ],
+   "desc": "Agente modular com plugins de código aberto da DeepSeek, utilizado para codificação, pesquisa, escritório e tarefas agendadas.",
+   "what": "Agente oficial de código aberto da DeepSeek com arquitetura **\"tudo é plugin\"**, oferecendo aplicativo para desktop e interface Web. Atualmente em fase de prévia para desenvolvedores, é ideal para **escrita de código**, **pesquisa e análise**, **trabalho de escritório diário** e **extensão de tarefas agendadas**.",
+   "src": [
+    {
+     "t": "Repositório oficial do DeepSeek Harness",
+     "u": "https://github.com/deepseek-ai/deepseek-harness"
+    },
+    {
+     "t": "Documentação oficial do DeepSeek Harness",
+     "u": "https://deepseek-harness.github.io/deepseek-harness/"
+    },
+    {
+     "t": "Apresentação oficial do DeepSeek Harness no site",
+     "u": "https://www.deepseek.com/en/harness/"
+    },
+    {
+     "t": "KinGao: Referência de integração do DeepSeek Harness",
+     "u": "https://x.com/KinGao476942/status/2111622701089759654"
+    },
+    {
+     "t": "KinGao: Publicação de resumo do DeepSeek Harness",
+     "u": "https://x.com/KinGao476942/status/2115592603605557564"
+    }
+   ],
+   "intro": "Agente oficial de código aberto da DeepSeek com arquitetura **\"tudo é plugin\"**, compatível com desktop e interface Web. Atualmente em fase de prévia para desenvolvedores, é ideal para **escrita de código**, **pesquisa e análise**, **trabalho de escritório diário** e **extensão de tarefas agendadas**.",
+   "prompt": "Ajude-me a instalar e configurar o DeepSeek Harness (https://github.com/deepseek-ai/deepseek-harness) no seu computador em nuvem. Use-o no futuro para trabalho de escritório, pesquisas, escrita de código e execução de tarefas agendadas. Quando for necessário configurar a DeepSeek API Key, pause e me avise para que eu mesmo preencha.",
+   "todo": [
+    "Prepare sua chave de API (API Key) da DeepSeek.",
+    "Após o Bot concluir a instalação, insira você mesmo a API Key nas configurações."
+   ]
+  },
+  {
+   "id": "muse2api",
+   "name": "muse2api",
+   "cat": "Modelos / Geração",
+   "tags": [
+    "muse",
+    "muse2api",
+    "geração de imagens",
+    "vídeo",
+    "compatível com openai",
+    "api"
+   ],
+   "desc": "Empacota a versão web como interface OpenAI para chamadas locais de geração de imagens e vídeos.",
+   "what": "Projeto comunitário de código aberto de encapsulamento reverso do muse.ai, ideal para usar cotas gratuitas da versão web no **computador em nuvem** por meio de uma interface compatível com OpenAI para conversação, geração de imagens e vídeos.",
+   "src": [
+    {
+     "t": "Repositório do projeto muse2api (czg86389-hub)",
+     "u": "https://github.com/czg86389-hub/muse2api"
+    }
+   ],
+   "intro": "Projeto comunitário de código aberto de encapsulamento reverso do muse.ai, ideal para usar cotas gratuitas da versão web no **computador em nuvem** por meio de uma interface compatível com OpenAI para conversação, geração de imagens e vídeos.",
+   "prompt": "Ajude-me a implantar o muse2api (https://github.com/czg86389-hub/muse2api) no seu computador em nuvem. Use-o no futuro para chamar interfaces multimodais de conversação, geração de imagens e vídeos. Quando for necessário inserir chaves, avise-me para que eu mesmo as preencha.",
+   "todo": [
+    "Prepare uma conta muse.ai e faça login no navegador do computador em nuvem.",
+    "Insira você mesmo a chave de comunicação e os dados de estado da sessão de login conforme as instruções."
+   ]
+  },
+  {
+   "id": "agently-cli",
+   "name": "agently-cli (Linha de Comando de E-mail do Agente)",
+   "cat": "Comunicação e Publicação",
+   "tags": [
+    "e-mail",
+    "email",
+    "agently",
+    "qq mail",
+    "tencent"
+   ],
+   "desc": "Ferramenta de linha de comando do Tencent QQ Mail, com suporte a envio/recebimento de e-mails, busca e download de anexos.",
+   "what": "Ferramenta oficial de linha de comando lançada pelo Tencent QQ Mail, ideal para permitir que o Bot envie e receba e-mails, pesquise no histórico e baixe anexos no **computador em nuvem**.",
+   "src": [
+    {
+     "t": "Site oficial do Agent Mail",
+     "u": "https://agent.qq.com"
+    },
+    {
+     "t": "Pacote npm do agently-cli",
+     "u": "https://www.npmjs.com/package/@tencent-qqmail/agently-cli"
+    }
+   ],
+   "intro": "Ferramenta oficial de linha de comando lançada pelo Tencent QQ Mail, ideal para permitir que o Bot envie e receba e-mails, pesquise no histórico e baixe anexos no **computador em nuvem**.",
+   "prompt": "Ajude-me a instalar o agently-cli (https://agent.qq.com) no seu computador em nuvem. Use-o no futuro para enviar/receber e-mails, pesquisar no histórico e baixar anexos. Quando for necessário fazer login ou autorizar, pause e envie-me o link para que eu mesmo conclua.",
+   "todo": [
+    "Prepare uma conta do QQ Mail ou do Agent Mail.",
+    "Abra o link de autorização enviado pelo Bot no navegador para concluir a verificação."
+   ]
+  },
+  {
+   "id": "lark-cli",
+   "name": "Feishu CLI (lark-cli)",
+   "cat": "Comunicação e Publicação",
+   "tags": [
+    "feishu",
+    "lark",
+    "feishu",
+    "bitable",
+    "documentos",
+    "lark-cli"
+   ],
+   "desc": "Ferramenta oficial de linha de comando do Feishu para gerenciar documentos na nuvem, tabelas multidimensionais e armazenamento em nuvem como usuário.",
+   "what": "Ferramenta oficial de linha de comando do Feishu, ideal para permitir que o Bot manipule documentos em nuvem, tabelas multidimensionais, armazenamento em nuvem e bases de conhecimento no **computador em nuvem** com sua identidade pessoal.",
+   "src": [
+    {
+     "t": "Repositório oficial de larksuite/cli",
+     "u": "https://github.com/larksuite/cli"
+    }
+   ],
+   "intro": "Ferramenta oficial de linha de comando do Feishu, ideal para permitir que o Bot manipule documentos em nuvem, tabelas multidimensionais, armazenamento em nuvem e bases de conhecimento no **computador em nuvem** com sua identidade pessoal.",
+   "prompt": "Ajude-me a instalar e configurar o CLI do Feishu (https://github.com/larksuite/cli) no seu computador em nuvem. Use-o no futuro para manipular documentos em nuvem do Feishu, tabelas multidimensionais e armazenamento em nuvem. Quando for necessário fazer login ou autorizar, pause e envie-me o link para que eu mesmo conclua.",
+   "todo": [
+    "Prepare uma conta pessoal do Feishu.",
+    "Abra o link de verificação e insira o código de dispositivo exibido no terminal para confirmar a autorização."
+   ]
+  },
+  {
+   "id": "feishu-bot",
+   "name": "Conexão Persistente de Bot do Feishu",
+   "cat": "Comunicação e Publicação",
+   "tags": [
+    "feishu",
+    "lark",
+    "feishu",
+    "robô",
+    "bot",
+    "lark-oapi",
+    "chat em grupo"
+   ],
+   "desc": "Usa conexões persistentes para receber mensagens do Feishu sem IP público, permitindo despachar tarefas em conversas privadas e grupos.",
+   "what": "Solução de mensagens por conexão persistente baseada no Python SDK oficial do Feishu, ideal para implementar escuta de eventos e colaboração de bots em chats de grupo no **computador em nuvem** sem IP público.",
+   "src": [
+    {
+     "t": "SDK oficial em Python do Feishu (larksuite/oapi-sdk-python)",
+     "u": "https://github.com/larksuite/oapi-sdk-python"
+    },
+    {
+     "t": "Plataforma Aberta do Feishu",
+     "u": "https://open.feishu.cn/"
+    }
+   ],
+   "intro": "Solução de mensagens por conexão persistente baseada no Python SDK oficial do Feishu, ideal para implementar escuta de eventos e colaboração de bots em chats de grupo no **computador em nuvem** sem IP público.",
+   "prompt": "Ajude-me a configurar um bot de conexão persistente baseado no Python SDK do Feishu (https://github.com/larksuite/oapi-sdk-python) no seu computador em nuvem. Use-o no futuro para receber eventos de chats em grupo e despachar tarefas. Quando for necessário inserir chaves de API, avise-me para que eu mesmo preencha.",
+   "todo": [
+    "Crie um aplicativo corporativo personalizado na Plataforma Aberta do Feishu e habilite os recursos de conexão persistente e de bot.",
+    "Insira você mesmo o App ID e o App Secret do aplicativo conforme as instruções."
+   ]
+  },
+  {
+   "id": "x-api",
+   "name": "Publicação via X API (OAuth 1.0a PIN)",
+   "cat": "Comunicação e Publicação",
+   "tags": [
+    "x",
+    "twitter",
+    "twitter",
+    "publicação",
+    "oauth",
+    "api"
+   ],
+   "desc": "Chama a API oficial do X via autorização OAuth 1.0a PIN para postar e enviar imagens.",
+   "what": "Solução para chamadas da API oficial do X baseada em autorização OAuth 1.0a PIN, ideal para permitir que o Bot execute com segurança publicações, envio de imagens e exclusão de posts no **computador em nuvem**.",
+   "src": [
+    {
+     "t": "Documentação oficial do X: OAuth baseado em PIN",
+     "u": "https://docs.x.com/resources/fundamentals/authentication/oauth-1-0a/pin-based-oauth"
+    }
+   ],
+   "intro": "Solução para chamadas da API oficial do X baseada em autorização OAuth 1.0a PIN, ideal para permitir que o Bot execute com segurança publicações, envio de imagens e exclusão de posts no **computador em nuvem**.",
+   "prompt": "Ajude-me a configurar a publicação via X API (https://docs.x.com/resources/fundamentals/authentication/oauth-1-0a/pin-based-oauth) no seu computador em nuvem. Use-a no futuro para postar, enviar imagens e gerenciar publicações. Quando for necessário inserir chaves, avise-me para que eu mesmo preencha; quando precisar de login e autorização, envie-me o link.",
+   "todo": [
+    "Crie um aplicativo na plataforma de desenvolvedores do X e habilite as permissões de leitura e escrita.",
+    "Abra o link de autorização e, após receber o código PIN na página, envie-o ao Bot."
+   ]
+  },
+  {
+   "id": "gh",
+   "name": "GitHub CLI (gh)",
+   "cat": "Comunicação e Publicação",
+   "tags": [
+    "github",
+    "gh",
+    "git",
+    "repositório",
+    "push",
+    "pr"
+   ],
+   "desc": "Ferramenta oficial de linha de comando do GitHub, utilizada para clonar/enviar código e gerenciar PRs.",
+   "what": "Ferramenta oficial de linha de comando do GitHub, ideal para permitir que o Bot clone repositórios privados, envie código, crie PRs e gerencie Actions no **computador em nuvem**.",
+   "src": [
+    {
+     "t": "Documentação de instalação do GitHub CLI para Linux",
+     "u": "https://github.com/cli/cli/blob/trunk/docs/install_linux.md"
+    },
+    {
+     "t": "Manual oficial do gh auth login",
+     "u": "https://cli.github.com/manual/gh_auth_login"
+    }
+   ],
+   "intro": "Ferramenta oficial de linha de comando do GitHub, ideal para permitir que o Bot clone repositórios privados, envie código, crie PRs e gerencie Actions no **computador em nuvem**.",
+   "prompt": "Ajude-me a instalar o GitHub CLI (https://github.com/cli/cli/blob/trunk/docs/install_linux.md) no seu computador em nuvem. Use-o no futuro para gerenciar repositórios de código, enviar branches e submeter PRs. Quando for necessário fazer login ou autorizar, pause e envie-me o link para que eu mesmo conclua.",
+   "todo": [
+    "Prepare uma conta do GitHub.",
+    "Abra o link de autorização no navegador e insira o código de uso único correspondente."
+   ]
+  },
+  {
+   "id": "playwright",
+   "name": "Playwright",
+   "cat": "Coleta de Dados",
+   "tags": [
+    "playwright",
+    "navegador",
+    "web scraping",
+    "captura de tela",
+    "chromium",
+    "automação"
+   ],
+   "desc": "Biblioteca de automação de navegador de código aberto da Microsoft, controla navegadores headless para capturas de tela e extração de páginas renderizadas.",
+   "what": "O Playwright é uma biblioteca de automação de código aberto da Microsoft, ideal para permitir que o Bot execute **capturas de tela em lote e extração de páginas renderizadas**, sem consumir manualmente a cota de interação do navegador.",
+   "src": [
+    {
+     "t": "Documentação oficial do Playwright Python",
+     "u": "https://playwright.dev/python/docs/intro"
+    }
+   ],
+   "intro": "O Playwright é uma biblioteca de automação de código aberto da Microsoft, ideal para permitir que o Bot execute **capturas de tela em lote e extração de páginas renderizadas**, sem consumir manualmente a cota de interação do navegador.",
+   "prompt": "Ajude-me a instalar o Playwright (https://playwright.dev/python/docs/intro) no seu computador em nuvem. Use-o no futuro para renderização de páginas web, capturas de tela e tarefas de extração/coleta.",
+   "todo": [
+    "Confirme se o computador em nuvem possui o ambiente de execução Python instalado."
+   ]
+  },
+  {
+   "id": "yt-dlp",
+   "name": "yt-dlp",
+   "cat": "Coleta de Dados",
+   "tags": [
+    "yt-dlp",
+    "download de vídeo",
+    "youtube",
+    "bilibili",
+    "áudio"
+   ],
+   "desc": "Ferramenta de linha de comando de código aberto para download de áudio e vídeo, compatível com extração de áudio e múltiplas plataformas.",
+   "what": "O yt-dlp é uma ferramenta de linha de comando para download de áudio e vídeo compatível com milhares de sites, ideal para permitir que o Bot **baixe vídeos em lote ou extraia áudio** para posterior transcrição ou processamento.",
+   "src": [
+    {
+     "t": "Repositório oficial do yt-dlp",
+     "u": "https://github.com/yt-dlp/yt-dlp"
+    }
+   ],
+   "intro": "O yt-dlp é uma ferramenta de linha de comando para download de áudio e vídeo compatível com milhares de sites, ideal para permitir que o Bot **baixe vídeos em lote ou extraia áudio** para posterior transcrição ou processamento.",
+   "prompt": "Ajude-me a instalar o yt-dlp (https://github.com/yt-dlp/yt-dlp) no seu computador em nuvem. Use-o no futuro para downloads em lote de áudio e vídeo e para extrair áudio.",
+   "todo": [
+    "Prepare os links de mídia de destino que deseja baixar.",
+    "Ao acessar sites que exigem login, exporte o arquivo de cookies correspondente para uso posterior."
+   ]
+  },
+  {
+   "id": "ffmpeg",
+   "name": "FFmpeg",
+   "cat": "Ferramentas Básicas",
+   "tags": [
+    "ffmpeg",
+    "vídeo",
+    "áudio",
+    "transcodificação",
+    "legendas",
+    "edição"
+   ],
+   "desc": "Ferramenta de processamento de áudio e vídeo de código aberto, com suporte a transcodificação, captura de frames, extração de áudio e embutimento de legendas.",
+   "what": "O FFmpeg é a ferramenta fundamental para processamento de multimídia, ideal para permitir que o Bot realize **transcodificação de áudio e vídeo, compressão, captura de quadros e extração de áudio**.",
+   "src": [
+    {
+     "t": "Página oficial de download do FFmpeg",
+     "u": "https://ffmpeg.org/download.html"
+    }
+   ],
+   "intro": "O FFmpeg é a ferramenta fundamental para processamento de multimídia, ideal para permitir que o Bot realize **transcodificação de áudio e vídeo, compressão, captura de quadros e extração de áudio**.",
+   "prompt": "Ajude-me a instalar o FFmpeg (https://ffmpeg.org/download.html) no seu computador em nuvem. Use-o no futuro para processamento de transcodificação de áudio e vídeo, edição, compressão e captura de frames.",
+   "todo": [
+    "Confirme se o computador em nuvem atual possui permissões básicas de administração."
+   ]
+  },
+  {
+   "id": "nodejs",
+   "name": "Node.js e npm",
+   "cat": "Ferramentas Básicas",
+   "tags": [
+    "node",
+    "nodejs",
+    "npm",
+    "nvm",
+    "ambiente",
+    "codex",
+    "gemini cli",
+    "pi",
+    "lark-cli"
+   ],
+   "desc": "Ambiente de execução JavaScript, fornece dependências para várias ferramentas de agentes de terminal.",
+   "what": "O Node.js e o npm são a base de execução para front-end e diversas CLIs de IA, ideais para fornecer ao Bot um **ambiente de execução para ferramentas modernas de linha de comando**.",
+   "src": [
+    {
+     "t": "Repositório oficial do nvm",
+     "u": "https://github.com/nvm-sh/nvm"
+    },
+    {
+     "t": "Site oficial do Node.js",
+     "u": "https://nodejs.org/"
+    }
+   ],
+   "intro": "O Node.js e o npm são a base de execução para front-end e diversas CLIs de IA, ideais para fornecer ao Bot um **ambiente de execução para ferramentas modernas de linha de comando**.",
+   "prompt": "Ajude-me a instalar o Node.js e o npm (https://github.com/nvm-sh/nvm) no seu computador em nuvem. Use-os no futuro para executar projetos front-end e diversas ferramentas de linha de comando.",
+   "todo": [
+    "Confirme se o computador em nuvem possui conexão com a internet; nenhuma conta externa é necessária."
+   ]
+  },
+  {
+   "id": "egress-proxy",
+   "name": "Proxy de Saída Fixo (Túnel SSH)",
+   "cat": "Ferramentas Básicas",
+   "tags": [
+    "proxy",
+    "proxy",
+    "socks",
+    "ssh",
+    "restrição geográfica",
+    "vps",
+    "rede"
+   ],
+   "desc": "Utiliza o encaminhamento dinâmico SSH para configurar um proxy de saída fixo, contornando restrições geográficas de serviços.",
+   "what": "O proxy de saída fixo utiliza o encaminhamento dinâmico de portas via SSH para criar um proxy SOCKS5 local, ideal para manter um IP de saída estável quando o Bot precisa **acessar serviços geograficamente restritos**.",
+   "src": [
+    {
+     "t": "Manual ssh do OpenSSH (encaminhamento dinâmico -D)",
+     "u": "https://man.openbsd.org/ssh"
+    }
+   ],
+   "intro": "O proxy de saída fixo utiliza o encaminhamento dinâmico de portas via SSH para criar um proxy SOCKS5 local, ideal para manter um IP de saída estável quando o Bot precisa **acessar serviços geograficamente restritos**.",
+   "prompt": "Ajude-me a configurar um proxy de saída fixo baseado em túnel SSH (https://man.openbsd.org/ssh) no seu computador em nuvem. Use-o no futuro para acessar serviços com restrições geográficas. Quando for necessário preencher o endereço do servidor e a chave privada, avise-me para que eu mesmo preencha.",
+   "todo": [
+    "Prepare um servidor remoto com suporte a login por chave SSH.",
+    "Insira você mesmo a chave privada de login e as informações de conexão no arquivo confidencial conforme as instruções."
+   ]
+  },
+  {
+   "id": "mcp-connectors",
+   "name": "Conectores MCP",
+   "cat": "Ferramentas Básicas",
+   "tags": [
+    "mcp",
+    "connector",
+    "conectores",
+    "gmail",
+    "google drive",
+    "model context protocol"
+   ],
+   "desc": "Conecta serviços externos ou servidores MCP personalizados ao Grok, expandindo a capacidade de chamada de ferramentas.",
+   "what": "Os conectores MCP abrem um canal de comunicação entre serviços externos e o modelo, ideais para permitir que o Bot **chame diretamente ferramentas externas e dados na nuvem** para executar colaborações complexas.",
+   "src": [
+    {
+     "t": "Documentação oficial do Grok: Connectors",
+     "u": "https://docs.x.ai/grok/connectors"
+    }
+   ],
+   "intro": "Os conectores MCP abrem um canal de comunicação entre serviços externos e o modelo, ideais para permitir que o Bot **chame diretamente ferramentas externas e dados na nuvem** para executar colaborações complexas.",
+   "prompt": "Ajude-me a integrar os conectores MCP (https://docs.x.ai/grok/connectors) no seu computador em nuvem. Use-os no futuro para chamar ferramentas externas e sincronizar dados da nuvem. Quando for necessária uma autorização de terceiros, envie-me o link; quando for necessário inserir chaves, avise-me para que eu mesmo preencha.",
+   "todo": [
+    "Acesse a página de gerenciamento dos conectores no navegador e prepare as contas que serão conectadas.",
+    "Insira você mesmo o endereço do serviço de destino ou a chave de autorização conforme as instruções."
+   ]
+  }
+ ]
+}

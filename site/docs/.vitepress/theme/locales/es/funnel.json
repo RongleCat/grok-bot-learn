@@ -1,0 +1,18 @@
+{
+ "join_title": "Únete a mi grupo de pago para resolver dudas",
+ "join_text": "Este es un grupo de pago donde hablamos de agentes de IA y Grok Bot. Agrega mi WeChat personal `AI_Tiezhu`; consulta el costo por WeChat y te uniré personalmente al grupo una vez que te acepte.",
+ "join_xhs": "Escribe «小红书» en el mensaje de verificación para que sepa de dónde vienes.",
+ "copy_btn": "Copiar ID de WeChat",
+ "copied": "Copiado",
+ "qr_hint": "En WeChat, mantén presionado para escanear. En otros navegadores, copia el ID de WeChat y búscalo en la aplicación.",
+ "doc_end_generic": "Si te quedas atascado en este capítulo, no te desgastes solo: este tipo de dudas surgen con frecuencia en el grupo, ven a preguntar.",
+ "doc_end_btn": "Preguntar en el grupo de pago de dudas",
+ "doc_end": {
+  "/part1/02-plans": "¿No sabes con seguridad qué plan de suscripción elegir? En el grupo solemos tratar los detalles de cada plan; pregúntame cuando quieras.",
+  "/part1/05-computer": "¿No entiendes la computadora en la nube o se restableció? En el grupo solemos hablar sobre la configuración de máquinas virtuales; pregúntame cuando quieras.",
+  "/part1/09-group-team": "¿Sin ideas para estructurar un equipo de bots? En el grupo solemos debatir cómo armar equipos; entra a charlar al grupo.",
+  "/part1/10-usage": "¿Siempre se te agota la cuota? En el grupo solemos debatir cómo planificar y ahorrar consumo; ven a preguntar.",
+  "/part3/19-orchestration": "¿Te cuesta entender la orquestación de múltiples bots? En el grupo solemos hablar sobre cómo armar equipos; pregúntame cuando quieras.",
+  "/part3/21-backup": "¿Temes perder tu configuración si se restablece la computadora en la nube? En el grupo solemos hablar sobre cómo recuperar herramientas; pregúntame cuando quieras."
+ }
+}

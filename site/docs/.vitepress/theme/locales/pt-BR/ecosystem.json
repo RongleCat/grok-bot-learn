@@ -1,0 +1,256 @@
+{
+ "index": {
+  "title": "Ecossistema",
+  "lead": "Aqui estão reunidas ferramentas úteis desenvolvidas em torno do Grok Bot.",
+  "items": [
+   {
+    "name": "Grok Bot Clipper",
+    "tag": "Extensão de Navegador",
+    "desc": "Empacote e organize seleções da web, capturas de tela e conteúdos de redes sociais, enviando diretamente para o seu Bot.",
+    "cta": "Ver extensão"
+   },
+   {
+    "name": "小铁柱",
+    "tag": "Assistente de Grupos do WeChat",
+    "desc": "Gerenciador automatizado para grupos do WeChat com resumos diários de conversas e destaques da web",
+    "cta": "Ver serviço"
+   }
+  ],
+  "pages": [
+   "/ecosystem/grok-bot-clipper",
+   "/ecosystem/xiaotiezhu"
+  ],
+  "covers": [
+   "/ecosystem/clipper-banner.webp",
+   "/ecosystem/xiaotiezhu-banner.webp"
+  ]
+ },
+ "clipper": {
+  "slogan": "Envie os melhores conteúdos do navegador diretamente para o seu Bot",
+  "lead": "Suporte a captura da web, screenshots, compartilhamento em redes sociais e organização em cesta de materiais. Conecte sua própria conta sem a necessidade de conectores locais.",
+  "download": "Baixar pacote de instalação",
+  "source": "Código aberto",
+  "meta": "v0.4.0 · Compatível com Chrome / Edge / Firefox",
+  "unofficial": "Extensão de terceiros desenvolvida de forma independente por 铁柱AGI, não sendo um produto oficial da xAI ou do Cursor.",
+  "videoTitle": "Demonstração prática dos recursos",
+  "videoLead": "Dois vídeos introdutórios para você conhecer rapidamente as funções mais usadas.",
+  "videos": [
+   {
+    "title": "Demonstração prática (Parte 1)"
+   },
+   {
+    "title": "Demonstração prática (Parte 2)"
+   }
+  ],
+  "featuresTitle": "O que você pode fazer com ela",
+  "features": [
+   {
+    "k": "Captura da web",
+    "v": "Colete seleções, textos, imagens ou tabelas, **preservando integralmente os links de origem e o contexto**."
+   },
+   {
+    "k": "Captura e anotação",
+    "v": "Suporte a seleção de área, tela visível e captura completa de página, **com liberdade para recortar, anotar e ocultar dados antes de enviar**."
+   },
+   {
+    "k": "Compartilhamento social",
+    "v": "No X, Xiaohongshu, Douyin e contas oficiais do WeChat, **selecione diretamente o Bot para receber**, mantendo texto, autor, engajamento e anexos."
+   },
+   {
+    "k": "Cesta de materiais",
+    "v": "Reúna várias páginas da web, capturas de tela e arquivos locais, **empacotando tudo em uma única tarefa para enviar ao Bot**."
+   },
+   {
+    "k": "Rascunho e pré-visualização de envio",
+    "v": "Edite instruções e anexos antes de enviar e **confirme pela pré-visualização os materiais finais que o Bot receberá**."
+   },
+   {
+    "k": "Conversa na barra lateral",
+    "v": "Sem sair da página atual, **veja respostas em Markdown diretamente na barra lateral e continue fazendo perguntas**."
+   }
+  ],
+  "extrasTitle": "Mais detalhes",
+  "extras": [
+   {
+    "k": "Seletor de Bot",
+    "v": "Suporta busca por pinyin e iniciais, permite favoritar itens frequentes e definir um Bot padrão."
+   },
+   {
+    "k": "Atalhos de teclado",
+    "v": "⌘⇧/Ctrl+Shift+7 captura de área, 8 salvar página da web, 9 comandos rápidos"
+   },
+   {
+    "k": "Suporte multilíngue",
+    "v": "Interface integrada em 55 idiomas e regiões, acompanhando o idioma padrão do seu navegador."
+   },
+   {
+    "k": "Pacote estruturado de materiais",
+    "v": "Geração automática de fontes numeradas e texto em Markdown, convertendo artigos longos em índices e anexos."
+   }
+  ],
+  "stepsTitle": "Instalação e uso",
+  "steps": [
+   {
+    "k": "Baixar pacote de instalação",
+    "v": "Acesse a documentação no Feishu e baixe o arquivo de instalação correspondente ao seu navegador."
+   },
+   {
+    "k": "Carregar extensão",
+    "v": "Consulte o guia da documentação e carregue a extensão na página de gerenciamento de extensões do navegador."
+   },
+   {
+    "k": "Autorizar conta",
+    "v": "Fixe na barra de ferramentas, abra e autorize sua própria conta do Grok Bot."
+   },
+   {
+    "k": "Coletar e enviar",
+    "v": "Selecione o Bot de destino para enviar os materiais coletados e visualize as respostas na barra lateral."
+   }
+  ],
+  "faqTitle": "Perguntas frequentes",
+  "faq": [
+   {
+    "q": "Esta é uma extensão oficial?",
+    "a": "Não. **Esta é uma extensão de terceiros desenvolvida de forma independente**, não sendo um produto oficial da xAI ou do Cursor."
+   },
+   {
+    "q": "É necessário um conector local ou criar um proxy próprio?",
+    "a": "Não. **Basta autorizar sua conta diretamente no navegador**, sem necessidade de configurar um servidor intermediário próprio."
+   },
+   {
+    "q": "Onde os dados são salvos? Há rastreamento ou telemetria?",
+    "a": "**A extensão não possui qualquer tipo de rastreamento ou telemetria**. Os dados e registros ficam armazenados no navegador atual e são enviados apenas para o serviço de Bot selecionado."
+   },
+   {
+    "q": "Quais navegadores são suportados?",
+    "a": "**Compatível com Chrome e Edge 120+**, além do Firefox para desktop 140+."
+   },
+   {
+    "q": "É possível capturar vídeos de todas as redes sociais?",
+    "a": "Não há garantia. **Não podemos garantir que todos os vídeos sejam capturados com sucesso**; caso não seja possível obter, isso será sinalizado claramente."
+   },
+   {
+    "q": "A extensão é de código aberto? Onde está o código-fonte?",
+    "a": "**O código é aberto no GitHub**. O código proprietário utiliza a licença MIT License, e códigos e recursos visuais de terceiros mantêm seus respectivos direitos."
+   }
+  ],
+  "endTitle": "Envie materiais da web para o seu Bot",
+  "endText": "Acesse a documentação no Feishu para baixar o pacote de instalação e experimente agora mesmo no navegador.",
+  "endBtn": "Baixar pacote de instalação"
+ },
+ "xiaotiezhu": {
+  "slogan": "Evite que o conhecimento valioso do grupo se perca: o gestor automatizado para comunidades de alto valor",
+  "lead": "O 小铁柱 é um assistente de gestão leve feito sob medida para comunidades do WeChat, resumindo periodicamente as discussões diárias e os principais pontos de destaque. Diga adeus à cansativa leitura manual de mensagens e consolide com facilidade os ativos digitais da sua comunidade.",
+  "meta": "Assistente de gestão de grupos do WeChat · Cobrança por grupo · Pronto para usar",
+  "unofficial": "Este serviço é oferecido pela comunidade 铁柱AGI e não é um produto oficial do WeChat",
+  "ctaPrimary": "Adicione no WeChat para consultar e ativar",
+  "ctaSecondary": "Ver exemplos de resumos de grupos",
+  "featuresTitle": "Recursos principais: Síntese automatizada, apresentação visual e retenção de longo prazo",
+  "features": [
+   {
+    "k": "Gestão no grupo e relatório diário",
+    "v": "Entrada discreta no grupo do WeChat, organizando automaticamente as conversas do grupo com base nas **tarefas de rotina** definidas, com **suporte a resumo diário das conversas** e exportação em imagem longa de alta resolução e layout limpo.",
+    "shot": "vip-card"
+   },
+   {
+    "k": "Painel web de resumos do grupo",
+    "v": "Gera resumos exclusivos em páginas web dedicadas, **extraindo tópicos centrais e ideias valiosas de forma estruturada**, sem que os membros precisem ler todo o histórico, permitindo **consulta rápida em múltiplos dispositivos** a qualquer hora.",
+    "shot": "digest-page"
+   },
+   {
+    "k": "Envio do resumo diário empacotado por e-mail",
+    "v": "**Suporte a resumo diário das conversas; envio do conteúdo diário empacotado para o e-mail indicado**, arquivando automaticamente os destaques e anexos das conversas para consolidar a base de conhecimento da equipe.",
+    "shot": "none"
+   },
+   {
+    "k": "Personalização de tema visual exclusivo para a comunidade",
+    "v": "**Adesão inicial com suporte a temas personalizados**, customizando cabeçalho do grupo, paleta de cores da marca e layout exclusivo; **alterações posteriores de tema: 100 yuans por versão**.",
+    "shot": "xiaowan-card"
+   }
+  ],
+  "pricingTitle": "Preços flexíveis e claros por grupo",
+  "pricingLead": "Cobrança transparente, faturamento mensal por grupo, sem taxas ocultas",
+  "plans": [
+   {
+    "name": "Plano Padrão para Grupo Único",
+    "price": "79",
+    "unit": "yuans/mês",
+    "note": "Convidar o 小铁柱 para 1 grupo: 79 yuans por mês"
+   },
+   {
+    "name": "Plano Promocional para Múltiplos Grupos",
+    "price": "59",
+    "unit": "yuans/grupo/mês",
+    "note": "Dois ou mais grupos: 59 yuans por grupo/mês"
+   }
+  ],
+  "addons": [
+   {
+    "name": "Resumo do grupo na web",
+    "price": "+20",
+    "note": "Adicionar o recurso \"Resumo do grupo na web\": +20 yuans por mês"
+   }
+  ],
+  "themeNote": "Adesão inicial com suporte a temas personalizados; alterações posteriores de tema: 100 yuans por versão",
+  "extrasTitle": "Serviços inclusos e garantias de operação",
+  "extras": [
+   {
+    "k": "Pronto para usar",
+    "v": "Sem necessidade de servidores ou ambientes de execução próprios, com suporte individual de um gestor dedicado: **basta adicionar ao grupo para começar a funcionar**."
+   },
+   {
+    "k": "Agendadores periódicos",
+    "v": "Configure livremente os horários das **tarefas de rotina** para envio de resumos e arquivamento, adaptando-se perfeitamente à rotina do grupo."
+   },
+   {
+    "k": "Garantia de privacidade e segurança",
+    "v": "Os dados ficam estritamente limitados ao processo de resumo e arquivamento do dia, sem qualquer vazamento ou disseminação, protegendo a segurança das informações da comunidade."
+   },
+   {
+    "k": "Suporte de gestor dedicado",
+    "v": "Durante o período de vigência do serviço, conte com suporte exclusivo para dúvidas e monitoramento de status, garantindo o funcionamento estável e confiável do 小铁柱."
+   }
+  ],
+  "stepsTitle": "Ativação rápida em 3 passos",
+  "steps": [
+   {
+    "k": "1. Adicionar o gestor para consulta",
+    "v": "Entre em contato com o gestor pelo WeChat para confirmar o número de grupos e as funções desejadas."
+   },
+   {
+    "k": "2. Confirmar configurações e tema",
+    "v": "Defina o estilo visual dos resumos do grupo e os horários das **tarefas de rotina**, concluindo a integração rapidamente."
+   },
+   {
+    "k": "3. Convidar o 小铁柱 para o grupo",
+    "v": "**Basta convidar o 小铁柱 para o grupo** para iniciar oficialmente; o gerenciamento automatizado e os relatórios diários começam de imediato."
+   }
+  ],
+  "faqTitle": "Perguntas frequentes",
+  "faq": [
+   {
+    "q": "Preciso preparar meu próprio servidor ou contas especiais para ativar o serviço?",
+    "a": "Não precisa de nada disso. O 小铁柱 opera em modelo totalmente gerenciado; você só precisa **convidar o 小铁柱 para o grupo** no WeChat, e nós cuidamos de toda a infraestrutura e operação."
+   },
+   {
+    "q": "Se eu tiver vários grupos, como funciona a cobrança?",
+    "a": "Convidar o 小铁柱 para 1 grupo: 79 yuans por mês; para dois ou mais grupos: 59 yuans por grupo/mês — quanto mais grupos, mais vantajoso."
+   },
+   {
+    "q": "Quais são as vantagens do resumo do grupo na web?",
+    "a": "Adicionar o recurso \"Resumo do grupo na web\": +20 yuans por mês. Além da imagem longa, os membros do grupo recebem um link exclusivo com índice estruturado, filtros por tópicos e leitura rápida."
+   },
+   {
+    "q": "Como funciona o processo de personalização de temas?",
+    "a": "A adesão inicial inclui suporte a temas personalizados; alterações posteriores de tema: 100 yuans por versão. Na ativação inicial, o gestor ajustará o esquema de cores, cabeçalho com o nome do grupo e o estilo de diagramação."
+   },
+   {
+    "q": "O envio dos resumos diários por e-mail tem custo adicional?",
+    "a": "Sem custo adicional. O serviço já inclui: suporte a resumo diário das conversas e envio do conteúdo diário empacotado para o e-mail indicado; basta informar o e-mail de destino no momento da ativação."
+   }
+  ],
+  "endTitle": "Deixe a organização repetitiva com o 小铁柱 e entregue o conteúdo de alto valor aos membros do grupo",
+  "endText": "O braço direito para grupos de alto valor no WeChat, dando adeus à sobrecarga de mensagens e ao esforço de rolar conversas. Adicione o gestor no WeChat agora mesmo e inicie a gestão automatizada da sua comunidade.",
+  "endBtn": "Adicione no WeChat para consultar e ativar"
+ }
+}

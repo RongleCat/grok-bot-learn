@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { withBase } from 'vitepress'
-import data from './tools.json'
+import dataRoot from './tools.json'
+import { useLocaleJson } from './i18n'
+const data = useLocaleJson(dataRoot as Record<string, unknown>, 'tools.json')
 
 const props = defineProps<{ id: string }>()
 const skin: Record<string, string> = { '编码 Agent': 'cercle-bleu', '模型/生成': 'goutte-rose', '通讯与发布': 'squircle-orange', '数据抓取': 'nuage-turquoise', '基础工具': 'hexagone-ambre' }
-const t = computed(() => data.tools.find((x) => x.id === props.id))
+const t = computed(() => (data.value as any).tools.find((x: any) => x.id === props.id))
 </script>
 
 <template>

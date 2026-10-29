@@ -1,0 +1,136 @@
+{
+ "part1": [
+  [
+   "Grok Bot이란 무엇인가",
+   "/ko/part1/01-what-is"
+  ],
+  [
+   "Grok과 Grok Bot의 차이점은 무엇인가요",
+   "/ko/part1/grok-vs-grok-bot"
+  ],
+  [
+   "플랜 및 구독",
+   "/ko/part1/02-plans"
+  ],
+  [
+   "설치, 로그인 및 첫 번째 Bot",
+   "/ko/part1/03-install"
+  ],
+  [
+   "작업 위임",
+   "/ko/part1/04-handoff"
+  ],
+  [
+   "공유 클라우드 컴퓨터",
+   "/ko/part1/05-computer"
+  ],
+  [
+   "메모리: 쓸수록 나를 더 잘 이해하는 Bot",
+   "/ko/part1/06-memory"
+  ],
+  [
+   "앱 연결",
+   "/ko/part1/07-apps"
+  ],
+  [
+   "스킬과 루틴",
+   "/ko/part1/08-skills-routines"
+  ],
+  [
+   "그룹 채팅과 팀 Bot",
+   "/ko/part1/09-group-team"
+  ],
+  [
+   "크레딧과 비용",
+   "/ko/part1/10-usage"
+  ],
+  [
+   "권한, 보안 및 휴먼 게이트",
+   "/ko/part1/11-safety"
+  ]
+ ],
+ "part2": [
+  [
+   "사례: 1인 미디어 및 콘텐츠 팀",
+   "/ko/part2/12-content"
+  ],
+  [
+   "사례: X에서 콘텐츠 제작 및 운영하기",
+   "/ko/part2/13-x-ops"
+  ],
+  [
+   "사례: 엔지니어링 및 R&D 팀",
+   "/ko/part2/14-engineering"
+  ],
+  [
+   "사례: 전자상거래 및 일상 실전 활용",
+   "/ko/part2/15-ecommerce"
+  ],
+  [
+   "사례: 지식 자동 수집 및 WeChat 연동",
+   "/ko/part2/16-knowledge"
+  ],
+  [
+   "사례: GTM, 세일즈 및 비서실장",
+   "/ko/part2/17-gtm"
+  ],
+  [
+   "케이스 스터디",
+   "/ko/part2/18-solo"
+  ]
+ ],
+ "part3": [
+  [
+   "팀 오케스트레이션",
+   "/ko/part3/19-orchestration"
+  ],
+  [
+   "신뢰할 수 있는 자동화",
+   "/ko/part3/20-automation"
+  ],
+  [
+   "백업 및 복구",
+   "/ko/part3/21-backup"
+  ],
+  [
+   "Feishu 및 WeChat 연동",
+   "/ko/part3/22-feishu-wechat"
+  ]
+ ],
+ "part4": [
+  [
+   "팀 플랜 및 엔터프라이즈 도입",
+   "/ko/part4/23-enterprise"
+  ],
+  [
+   "역할별 AI 팀 구축하기",
+   "/ko/part4/24-roles"
+  ],
+  [
+   "자주 묻는 질문과 문제 해결",
+   "/ko/part4/25-faq"
+  ]
+ ],
+ "cases": [
+  [
+   "X 화제 포스트 엄선 사례",
+   "/ko/cases/x-hot"
+  ],
+  [
+   "중국어 장문 엄선",
+   "/ko/cases/cn"
+  ],
+  [
+   "영문 심층 아티클 선집 (상)",
+   "/ko/cases/en1"
+  ],
+  [
+   "영문 심층 아티클 엄선 (하)",
+   "/ko/cases/en2"
+  ],
+  [
+   "철주의 실전 장문 글과 트윗",
+   "/ko/cases/tiezhu"
+  ]
+ ]
+}

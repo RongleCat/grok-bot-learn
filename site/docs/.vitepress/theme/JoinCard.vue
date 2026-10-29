@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { withBase } from 'vitepress'
-import copy from './funnel.json'
+import copyRoot from './funnel.json'
+import { useLocaleJson } from './i18n'
+const copy = useLocaleJson(copyRoot as Record<string, unknown>, 'funnel.json')
 import { track, lastFrom } from './track'
 
 const props = defineProps<{ from: string; xhs?: boolean }>()

@@ -1,0 +1,136 @@
+{
+ "part1": [
+  [
+   "O que é o Grok Bot",
+   "/pt-BR/part1/01-what-is"
+  ],
+  [
+   "Qual é a diferença entre o Grok e o Grok Bot",
+   "/pt-BR/part1/grok-vs-grok-bot"
+  ],
+  [
+   "Planos e Assinaturas",
+   "/pt-BR/part1/02-plans"
+  ],
+  [
+   ": Instalação, Login e o Primeiro Bot",
+   "/pt-BR/part1/03-install"
+  ],
+  [
+   "Delegando Tarefas",
+   "/pt-BR/part1/04-handoff"
+  ],
+  [
+   "Computador em Nuvem Compartilhado",
+   "/pt-BR/part1/05-computer"
+  ],
+  [
+   "Memória",
+   "/pt-BR/part1/06-memory"
+  ],
+  [
+   "Conectando Aplicativos",
+   "/pt-BR/part1/07-apps"
+  ],
+  [
+   "Habilidades e Rotinas",
+   "/pt-BR/part1/08-skills-routines"
+  ],
+  [
+   "Chats em Grupo e Bots de Equipe",
+   "/pt-BR/part1/09-group-team"
+  ],
+  [
+   "Cota e Custos",
+   "/pt-BR/part1/10-usage"
+  ],
+  [
+   ": Permissões, Segurança e Human-in-the-Loop",
+   "/pt-BR/part1/11-safety"
+  ]
+ ],
+ "part2": [
+  [
+   "Caso",
+   "/pt-BR/part2/12-content"
+  ],
+  [
+   "Estudo de caso",
+   "/pt-BR/part2/13-x-ops"
+  ],
+  [
+   "Casos de Uso",
+   "/pt-BR/part2/14-engineering"
+  ],
+  [
+   "Casos Práticos",
+   "/pt-BR/part2/15-ecommerce"
+  ],
+  [
+   "Estudo de caso",
+   "/pt-BR/part2/16-knowledge"
+  ],
+  [
+   "Caso de Uso",
+   "/pt-BR/part2/17-gtm"
+  ],
+  [
+   "Estudo de Caso",
+   "/pt-BR/part2/18-solo"
+  ]
+ ],
+ "part3": [
+  [
+   "Orquestração de equipe",
+   "/pt-BR/part3/19-orchestration"
+  ],
+  [
+   "Automação Confiável",
+   "/pt-BR/part3/20-automation"
+  ],
+  [
+   "Backup e Restauração",
+   "/pt-BR/part3/21-backup"
+  ],
+  [
+   ": Integração com Feishu e WeChat",
+   "/pt-BR/part3/22-feishu-wechat"
+  ]
+ ],
+ "part4": [
+  [
+   ": Versão Teams e Implementação Corporativa",
+   "/pt-BR/part4/23-enterprise"
+  ],
+  [
+   ": Monte sua Equipe de IA por Funções",
+   "/pt-BR/part4/24-roles"
+  ],
+  [
+   "Perguntas Frequentes e Solução de Problemas",
+   "/pt-BR/part4/25-faq"
+  ]
+ ],
+ "cases": [
+  [
+   "Seleção de Casos em Alta no X",
+   "/pt-BR/cases/x-hot"
+  ],
+  [
+   "Seleção de Artigos Longos em Chinês",
+   "/pt-BR/cases/cn"
+  ],
+  [
+   "Seleção de Artigos Longos em Inglês (Parte 1)",
+   "/pt-BR/cases/en1"
+  ],
+  [
+   "Destaques de Artigos Longos em Inglês (Parte 2)",
+   "/pt-BR/cases/en2"
+  ],
+  [
+   "Artigos práticos e tweets de Tiezhu",
+   "/pt-BR/cases/tiezhu"
+  ]
+ ]
+}

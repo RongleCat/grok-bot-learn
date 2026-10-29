@@ -1,0 +1,52 @@
+{
+ "title": "Guia para Iniciantes do Grok Bot",
+ "lead": "Um Bot exclusivo equipado com um computador na nuvem. Conclua a sua primeira tarefa e transforme os fluxos consolidados em rotinas agendadas e colaboração entre múltiplos Bots.",
+ "primary": "Começar pelo Capítulo 1",
+ "secondary": "Ver casos práticos",
+ "notice": "Sujeito às regras de assinatura do X vigentes a partir de 12 de outubro; o plano Plus não inclui o Grok Bot",
+ "partsTitle": "Quatro partes, consulte conforme necessário",
+ "parts": [
+  {"tag": "Parte 1 · Capítulos 1–11", "name": "Manual Básico: Primeiros Passos", "desc": "Explica planos de assinatura, instalação e configuração, atribuição de tarefas, uso do computador na nuvem, memória e gestão de limites.", "link": "/part1/01-what-is"},
+  {"tag": "Parte 2 · Capítulos 12–18", "name": "Casos Práticos: Cenários de Referência", "desc": "Abrange criação de conteúdo, gestão do X, desenvolvimento de código, e-commerce, organização de base de conhecimento e empresas individuais.", "link": "/part2/12-content"},
+  {"tag": "Parte 3 · Capítulos 19–22", "name": "Avançado: Automação e Sistematização", "desc": "Aborda colaboração entre múltiplos Bots, execuções automáticas agendadas, backup de ambiente e integração com Feishu e WeChat.", "link": "/part3/19-orchestration"},
+  {"tag": "Parte 4 · Capítulos 23–25", "name": "Para Equipes: Funções e Colaboração", "desc": "Apresenta implantação em equipe, divisão por funções, configuração de permissões e solução de problemas comuns.", "link": "/part4/23-enterprise"}
+ ],
+ "asksTitle": "O que você quer fazer com ele?",
+ "asks": [
+  {"q": "Instalar e concluir a primeira tarefa", "link": "/part1/03-install"},
+  {"q": "Receber um resumo automático toda manhã", "link": "/part1/08-skills-routines"},
+  {"q": "A cota sempre acaba antes do fim de semana", "link": "/part1/10-usage"},
+  {"q": "Fazer múltiplos Bots colaborarem entre si", "link": "/part1/09-group-team"},
+  {"q": "Gerenciar minhas contas no X e redes sociais", "link": "/part2/13-x-ops"},
+  {"q": "Recuperar configurações e ferramentas após reiniciar o computador na nuvem", "link": "/part3/21-backup"}
+ ],
+ "loopTitle": "Da execução inicial à automação diária",
+ "loop": [
+  {"k": "Tarefa", "v": "Defina com clareza o objetivo e os resultados esperados"},
+  {"k": "Ajuste", "v": "Faça uma ou duas rodadas de alinhamento para o Bot memorizar suas exigências"},
+  {"k": "Rotina", "v": "Salve como habilidade e execute automaticamente por agendamento ou evento"},
+  {"k": "Equipe", "v": "Distribua para Bots dedicados, com o Bot principal delegando e revisando"}
+ ],
+ "rolesTitle": "Explorar por função",
+ "roles": [
+  {"name": "Criador de Conteúdo", "desc": "Pesquisa pautas, redige rascunhos e gera imagens, entregando apenas rascunhos sem publicar diretamente.", "link": "/part2/12-content"},
+  {"name": "Engenheiro", "desc": "Inspeciona repositórios, auxilia na revisão de PRs e divide tarefas com assistentes de código locais.", "link": "/part2/14-engineering"},
+  {"name": "Vendedor de E-commerce", "desc": "Cadastra produtos, cria imagens promocionais e monitora continuamente a loja e os concorrentes.", "link": "/part2/15-ecommerce"},
+  {"name": "Vendas e GTM", "desc": "Pesquisa clientes em potencial, redige e-mails de prospecção e envia somente após sua confirmação.", "link": "/part2/17-gtm"},
+  {"name": "Empresa de Uma Pessoa Só", "desc": "Gerencie todas as operações da empresa de forma autônoma com um computador na nuvem e múltiplos Bots.", "link": "/part2/18-solo"},
+  {"name": "Gestor de Equipe", "desc": "Configure centralizadamente Bots da equipe, permissões, contas de usuário e intranet corporativa.", "link": "/part4/23-enterprise"}
+ ],
+ "casesTitle": "Casos Práticos",
+ "casesMore": "Todos os casos",
+ "cases": [
+  {"t": "Salvar materiais automaticamente na base de conhecimento usando Webhooks e Atalhos", "a": "铁柱", "link": "/part2/16-knowledge"},
+  {"t": "Cinco Bots colaborando na gestão de redes sociais", "a": "Adrian Punk", "link": "/part2/12-content"},
+  {"t": "Cadastro de produtos no Xianyu, criação de imagens no Xiaohongshu e produção de vídeos curtos", "a": "Miles Ma", "link": "/part2/15-ecommerce"},
+  {"t": "Criar um Bot para a operação diária de uma loja na Amazon", "a": "Vendedor de e-commerce internacional", "link": "/part2/15-ecommerce"},
+  {"t": "Painel de operações de repositório de código com monitoramento automático 24/7", "a": "Gipp", "link": "/part2/14-engineering"},
+  {"t": "Enviar comandos pelo WeChat para gerenciar diretamente a conta no X", "a": "Autor da comunidade", "link": "/part2/13-x-ops"}
+ ],
+ "groupTitle": "Venha para o meu grupo pago de dúvidas",
+ "groupText": "Se travar em algum tutorial, venha tirar dúvidas no grupo a qualquer momento. Este é um grupo pago; consulte o valor pelo WeChat.",
+ "groupBtn": "Conheça o grupo pago de suporte"
+}

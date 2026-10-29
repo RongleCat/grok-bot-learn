@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import data from './changelog.json'
+import dataRoot from './changelog.json'
+import { useLocaleJson } from './i18n'
+const data = useLocaleJson(dataRoot as Record<string, unknown>, 'changelog.json')
 import { tidy } from './rich'
 
 type Item = { kind: 'pc' | 'mobile' | 'ours'; id: string; date: string; platform: string; version: string; url: string; title: string; points: string[]; summary: string; full?: [string, string[]][] }
 
-const ui = data.ui
+const ui = computed(() => (data.value as any).ui)
 const chip: Record<string, string> = { pc: 'PC', ios: 'iOS', android: 'Android' }
 const tabs = [
   { k: 'all', t: '全部' },
@@ -14,8 +16,8 @@ const tabs = [
   { k: 'ours', t: '我们的解读' }
 ]
 const items: Item[] = [
-  ...data.official.map((e: any) => ({ kind: e.platform === 'pc' ? 'pc' : 'mobile', summary: '', ...e })),
-  ...data.ours.map((t: any) => ({ kind: 'ours', version: '', points: [], ...t }))
+  ...(data.value as any).official.map((e: any) => ({ kind: e.platform === 'pc' ? 'pc' : 'mobile', summary: '', ...e })),
+  ...(data.value as any).ours.map((t: any) => ({ kind: 'ours', version: '', points: [], ...t }))
 ].sort((a, b) => (a.date === b.date ? (a.kind === 'ours' ? -1 : b.kind === 'ours' ? 1 : 0) : a.date < b.date ? 1 : -1)) as Item[]
 const counts = computed(() => ({ all: items.length, pc: items.filter((i) => i.kind === 'pc').length, mobile: items.filter((i) => i.kind === 'mobile').length, ours: items.filter((i) => i.kind === 'ours').length }))
 const tab = ref('all')

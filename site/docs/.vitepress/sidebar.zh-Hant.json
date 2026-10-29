@@ -1,0 +1,136 @@
+{
+ "part1": [
+  [
+   "1. Grok Bot 是什麼",
+   "/zh-Hant/part1/01-what-is"
+  ],
+  [
+   "Grok 和 Grok Bot 有什麼區別",
+   "/zh-Hant/part1/grok-vs-grok-bot"
+  ],
+  [
+   "2. 方案與訂閱",
+   "/zh-Hant/part1/02-plans"
+  ],
+  [
+   "3. 安裝登入與第一個 Bot",
+   "/zh-Hant/part1/03-install"
+  ],
+  [
+   "4. 交代任務",
+   "/zh-Hant/part1/04-handoff"
+  ],
+  [
+   "5. 共享雲電腦",
+   "/zh-Hant/part1/05-computer"
+  ],
+  [
+   "6. 記憶",
+   "/zh-Hant/part1/06-memory"
+  ],
+  [
+   "7. 連線應用",
+   "/zh-Hant/part1/07-apps"
+  ],
+  [
+   "8. 技能與例程",
+   "/zh-Hant/part1/08-skills-routines"
+  ],
+  [
+   "9. 群聊與團隊 Bot",
+   "/zh-Hant/part1/09-group-team"
+  ],
+  [
+   "10. 額度與成本",
+   "/zh-Hant/part1/10-usage"
+  ],
+  [
+   "11. 許可權、安全與人閘",
+   "/zh-Hant/part1/11-safety"
+  ]
+ ],
+ "part2": [
+  [
+   "12. 自媒體與內容團隊",
+   "/zh-Hant/part2/12-content"
+  ],
+  [
+   "13. 在 X 上做內容與運營",
+   "/zh-Hant/part2/13-x-ops"
+  ],
+  [
+   "14. 工程與研發團隊",
+   "/zh-Hant/part2/14-engineering"
+  ],
+  [
+   "15. 電商與生活實操",
+   "/zh-Hant/part2/15-ecommerce"
+  ],
+  [
+   "16. 知識自動入庫與微信打通",
+   "/zh-Hant/part2/16-knowledge"
+  ],
+  [
+   "17. GTM、銷售與幕僚長",
+   "/zh-Hant/part2/17-gtm"
+  ],
+  [
+   "18. 一人公司與 AI 團隊",
+   "/zh-Hant/part2/18-solo"
+  ]
+ ],
+ "part3": [
+  [
+   "19. 團隊編排",
+   "/zh-Hant/part3/19-orchestration"
+  ],
+  [
+   "20. 可靠的自動化",
+   "/zh-Hant/part3/20-automation"
+  ],
+  [
+   "21. 備份與恢復",
+   "/zh-Hant/part3/21-backup"
+  ],
+  [
+   "22. 接入飛書與微信",
+   "/zh-Hant/part3/22-feishu-wechat"
+  ]
+ ],
+ "part4": [
+  [
+   "23. 團隊版與企業落地",
+   "/zh-Hant/part4/23-enterprise"
+  ],
+  [
+   "24. 按崗位組建你的 AI 團隊",
+   "/zh-Hant/part4/24-roles"
+  ],
+  [
+   "25. 常見問題與排錯",
+   "/zh-Hant/part4/25-faq"
+  ]
+ ],
+ "cases": [
+  [
+   "X 熱帖案例精選",
+   "/zh-Hant/cases/x-hot"
+  ],
+  [
+   "中文長文精選",
+   "/zh-Hant/cases/cn"
+  ],
+  [
+   "英文長文精選（上）",
+   "/zh-Hant/cases/en1"
+  ],
+  [
+   "英文長文精選（下）",
+   "/zh-Hant/cases/en2"
+  ],
+  [
+   "鐵柱的實戰長文與推文",
+   "/zh-Hant/cases/tiezhu"
+  ]
+ ]
+}

@@ -1,16 +1,22 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import data from './bots.json'
+import {computed, ref} from 'vue'
+import dataRoot from './bots.json'
+import { useLocaleJson } from './i18n'
+const data = useLocaleJson(dataRoot as Record<string, unknown>, 'bots.json')
 import { tidy } from './rich'
 
-const bots = data.bots
-const lead = bots.find((b) => 'primary' in b && b.primary) || bots[0]
+const bots = computed(() => (data.value as any).bots as any[])
+const lead = computed(() => bots.value.find((b) => 'primary' in b && b.primary) || bots.value[0])
 const side = 2
-const rest = bots.filter((b) => b !== lead).slice(0, side * 2)
-const half = Math.ceil(rest.length / 2)
-const crowd = [...rest.slice(0, half), lead, ...rest.slice(half)].map((b, i) => {
-  const d = Math.abs(i - half)
-  return { b, k: d ? Math.max(0.8, 1.3 - d * 0.1) : 1.5, c: !d }
+const crowd = computed(() => {
+  const list = bots.value
+  const L = list.find((b) => 'primary' in b && b.primary) || list[0]
+  const rest = list.filter((b) => b !== L).slice(0, side * 2)
+  const half = Math.ceil(rest.length / 2)
+  return [...rest.slice(0, half), L, ...rest.slice(half)].map((b, i) => {
+    const d = Math.abs(i - half)
+    return { b, k: d ? Math.max(0.8, 1.3 - d * 0.1) : 1.5, c: !d }
+  })
 })
 const said = ref<Record<string, string>>({})
 const open = ref('')
@@ -18,7 +24,7 @@ const hop = ref<Record<string, number>>({})
 const last: Record<string, number> = {}
 
 function speak(slug: string) {
-  const b = bots.find((x) => x.slug === slug)
+  const b = bots.value.find((x) => x.slug === slug)
   if (!b) return
   let i = Math.floor(Math.random() * b.lines.length)
   if (b.lines.length > 1 && i === last[slug]) i = (i + 1 + Math.floor(Math.random() * (b.lines.length - 1))) % b.lines.length

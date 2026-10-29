@@ -1,10 +1,13 @@
-<script setup lang="ts">
+<script setup lang="ts">import { computed } from 'vue'
+
 import { withBase } from 'vitepress'
 import GrokOrb from './GrokOrb.vue'
-import copy from './ecosystem.json'
+import copyRoot from './ecosystem.json'
+import { useLocaleJson } from './i18n'
+const copy = useLocaleJson(copyRoot as Record<string, unknown>, 'ecosystem.json')
 import { tidy } from './rich'
 
-const c = copy.index
+const c = computed(() => (copy.value as any).index)
 const pages = (c as { pages?: string[] }).pages?.length
   ? (c as { pages: string[] }).pages
   : ['/ecosystem/grok-bot-clipper']

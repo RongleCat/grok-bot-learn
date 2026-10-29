@@ -1,12 +1,15 @@
-<script setup lang="ts">
+<script setup lang="ts">import { computed } from 'vue'
+
 import { withBase } from 'vitepress'
 import GrokOrb from './GrokOrb.vue'
-import copy from './ecosystem.json'
+import copyRoot from './ecosystem.json'
+import { useLocaleJson } from './i18n'
+const copy = useLocaleJson(copyRoot as Record<string, unknown>, 'ecosystem.json')
 import links from './links.json'
 import { rich, tidy } from './rich'
 import { track } from './track'
 
-const c = copy.clipper
+const c = computed(() => (copy.value as any).clipper)
 const crew = [
   { shape: 'nuage', color: 'orange', size: 120 },
   { shape: 'goutte', color: 'violet', size: 112 },

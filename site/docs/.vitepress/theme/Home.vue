@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { withBase } from 'vitepress'
 import GrokOrb from './GrokOrb.vue'
-import copy from './home.json'
+import copyRoot from './home.json'
+import { useLocaleJson } from './i18n'
+const copy = useLocaleJson(copyRoot as Record<string, unknown>, 'home.json')
 
 const partSkins = [
   { shape: 'squircle', color: 'bleu' },

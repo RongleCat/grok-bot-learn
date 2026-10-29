@@ -1,0 +1,52 @@
+{
+ "title": "Grok Bot Beginner's Guide",
+ "lead": "A dedicated Bot equipped with a cloud computer. First get your initial task running, then turn smooth workflows into scheduled routines and multi-Bot collaboration.",
+ "primary": "Start from Chapter 1",
+ "secondary": "View Cases",
+ "notice": "Subject to X subscription rules effective October 12; the Plus tier does not include Grok Bot",
+ "partsTitle": "Four Parts, Read on Demand",
+ "parts": [
+  {"tag": "Part 1 · Chapters 1–11", "name": "Basics Manual: Quick Start", "desc": "Explains subscription plans, setup and configuration, task assignment, cloud computer usage, memory, and quota management.", "link": "/part1/01-what-is"},
+  {"tag": "Part 2 · Chapters 12–18", "name": "Practical Cases: Scenario Reference", "desc": "Covers social media, X operations, software engineering, e-commerce, knowledge base management, and solopreneur ventures.", "link": "/part2/12-content"},
+  {"tag": "Part 3 · Chapters 19–22", "name": "Advanced: Automation & Systematization", "desc": "Explains multi-Bot collaboration, scheduled automation, environment backups, and integration with Feishu and WeChat.", "link": "/part3/19-orchestration"},
+  {"tag": "Part 4 · Chapters 23–25", "name": "Team Edition: Roles & Collaboration", "desc": "Covers team deployment, role-based division of labor, permission settings, and troubleshooting common issues.", "link": "/part4/23-enterprise"}
+ ],
+ "asksTitle": "What do you want to do with it?",
+ "asks": [
+  {"q": "Install and run the first task", "link": "/part1/03-install"},
+  {"q": "Automatically push a briefing every morning", "link": "/part1/08-skills-routines"},
+  {"q": "Quota always runs out before the weekend", "link": "/part1/10-usage"},
+  {"q": "Have multiple Bots collaborate with divided tasks", "link": "/part1/09-group-team"},
+  {"q": "Help me manage X and social media accounts", "link": "/part2/13-x-ops"},
+  {"q": "Recover configs and tools after a cloud computer reset", "link": "/part3/21-backup"}
+ ],
+ "loopTitle": "From One-off Execution to Daily Automation",
+ "loop": [
+  {"k": "Task", "v": "Clearly specify concrete goals and deliverables"},
+  {"k": "Adjust", "v": "Iterate for a round or two so the Bot remembers your preferences"},
+  {"k": "Routine", "v": "Save as a skill to run automatically on schedule or by events"},
+  {"k": "Team", "v": "Delegate to specialized Bots, with the primary Bot assigning and verifying work"}
+ ],
+ "rolesTitle": "View by Role",
+ "roles": [
+  {"name": "Content Creator", "desc": "Brainstorm topics, draft copy, generate images—drafts only, no direct publishing.", "link": "/part2/12-content"},
+  {"name": "Engineer", "desc": "Inspect repositories, assist with PR reviews, and collaborate with local coding assistants.", "link": "/part2/14-engineering"},
+  {"name": "E-commerce Seller", "desc": "List products, create commercial images, and continuously monitor store and competitor dynamics.", "link": "/part2/15-ecommerce"},
+  {"name": "Sales & GTM", "desc": "Research prospects, draft outreach emails, and send only after your confirmation.", "link": "/part2/17-gtm"},
+  {"name": "Solopreneur", "desc": "Use one cloud computer and multiple Bots to independently run all company operations.", "link": "/part2/18-solo"},
+  {"name": "Team Manager", "desc": "Centrally configure team Bots, member permissions, account systems, and enterprise intranets.", "link": "/part4/23-enterprise"}
+ ],
+ "casesTitle": "Practical Cases",
+ "casesMore": "All Cases",
+ "cases": [
+  {"t": "Automatically save materials into a knowledge base using Webhooks and Shortcuts", "a": "Tiezhu", "link": "/part2/16-knowledge"},
+  {"t": "Five Bots collaborating to handle social media operations", "a": "Adrian Punk", "link": "/part2/12-content"},
+  {"t": "Listing products on Xianyu, image creation for Xiaohongshu, and short video production", "a": "Miles Ma", "link": "/part2/15-ecommerce"},
+  {"t": "Build an Amazon store daily operations Bot", "a": "Cross-border E-commerce Seller", "link": "/part2/15-ecommerce"},
+  {"t": "24/7 automated operations console for code repositories", "a": "Gipp", "link": "/part2/14-engineering"},
+  {"t": "Send commands in WeChat to directly manage X accounts", "a": "Community Author", "link": "/part2/13-x-ops"}
+ ],
+ "groupTitle": "Join My Paid Q&A Group",
+ "groupText": "If you get stuck following the tutorials, feel free to ask in the group anytime. This is a paid group; ask me on WeChat for the fee.",
+ "groupBtn": "Learn More About the Paid Q&A Group"
+}

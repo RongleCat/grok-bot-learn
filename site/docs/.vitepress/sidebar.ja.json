@@ -1,0 +1,136 @@
+{
+ "part1": [
+  [
+   "Grok Bot とは",
+   "/ja/part1/01-what-is"
+  ],
+  [
+   "Grok と Grok Bot の違いとは",
+   "/ja/part1/grok-vs-grok-bot"
+  ],
+  [
+   "プランとサブスクリプション",
+   "/ja/part1/02-plans"
+  ],
+  [
+   "インストール・ログインと最初の Bot",
+   "/ja/part1/03-install"
+  ],
+  [
+   "タスクの指示",
+   "/ja/part1/04-handoff"
+  ],
+  [
+   "共有クラウドコンピュータ",
+   "/ja/part1/05-computer"
+  ],
+  [
+   "メモリ：使うほどにあなたを理解するBotへ",
+   "/ja/part1/06-memory"
+  ],
+  [
+   "アプリケーション連携",
+   "/ja/part1/07-apps"
+  ],
+  [
+   "スキルとルーティン",
+   "/ja/part1/08-skills-routines"
+  ],
+  [
+   "グループチャットとチームBot",
+   "/ja/part1/09-group-team"
+  ],
+  [
+   "利用枠とコスト",
+   "/ja/part1/10-usage"
+  ],
+  [
+   "権限、セキュリティ、ヒューマンゲート",
+   "/ja/part1/11-safety"
+  ]
+ ],
+ "part2": [
+  [
+   "事例：個人メディアとコンテンツチーム",
+   "/ja/part2/12-content"
+  ],
+  [
+   "事例：Xでのコンテンツ制作と運用",
+   "/ja/part2/13-x-ops"
+  ],
+  [
+   "事例：エンジニアリング＆研究開発チーム",
+   "/ja/part2/14-engineering"
+  ],
+  [
+   "事例：EC・日常生活での実践",
+   "/ja/part2/15-ecommerce"
+  ],
+  [
+   "事例：ナレッジ自動取り込みと WeChat 連携",
+   "/ja/part2/16-knowledge"
+  ],
+  [
+   "ケーススタディ",
+   "/ja/part2/17-gtm"
+  ],
+  [
+   "事例：一人会社と AI チーム",
+   "/ja/part2/18-solo"
+  ]
+ ],
+ "part3": [
+  [
+   "チームオーケストレーション",
+   "/ja/part3/19-orchestration"
+  ],
+  [
+   "信頼性の高い自動化",
+   "/ja/part3/20-automation"
+  ],
+  [
+   "バックアップと復元",
+   "/ja/part3/21-backup"
+  ],
+  [
+   "FeishuとWeChatの連携",
+   "/ja/part3/22-feishu-wechat"
+  ]
+ ],
+ "part4": [
+  [
+   "チーム版とエンタープライズ導入",
+   "/ja/part4/23-enterprise"
+  ],
+  [
+   "役割ごとに AI チームを編成する",
+   "/ja/part4/24-roles"
+  ],
+  [
+   "よくある質問とトラブルシューティング",
+   "/ja/part4/25-faq"
+  ]
+ ],
+ "cases": [
+  [
+   "X 注目ポスト活用事例セレクション",
+   "/ja/cases/x-hot"
+  ],
+  [
+   "中国語長文セレクション",
+   "/ja/cases/cn"
+  ],
+  [
+   "英語長文セレクション（上）",
+   "/ja/cases/en1"
+  ],
+  [
+   "英語長文セレクション（下）",
+   "/ja/cases/en2"
+  ],
+  [
+   "铁柱の実践長文記事とツイート",
+   "/ja/cases/tiezhu"
+  ]
+ ]
+}

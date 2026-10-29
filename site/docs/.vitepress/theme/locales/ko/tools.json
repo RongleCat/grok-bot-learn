@@ -1,0 +1,599 @@
+{
+ "ui": {
+  "title": "Grok 클라우드 PC 툴박스",
+  "search": "도구/키워드 검색 (예: codex)",
+  "all": "전체",
+  "empty": "일치하는 도구를 찾을 수 없습니다",
+  "count": "총 {n}개의 도구",
+  "more": "자세히 보기",
+  "prereq": "사전 요구 사항",
+  "install": "설치",
+  "auth": "로그인 및 인증",
+  "verify": "검증",
+  "steps": "진행 단계",
+  "pitfalls": "자주 겪는 문제 및 해결 방법",
+  "src": "출처",
+  "back": "목록으로 돌아가기",
+  "note": "본 페이지는 커뮤니티 비공식 정리 자료이며, 해당 도구 개발사 및 xAI와 어떠한 제휴 관계도 없습니다. 명령어는 공식 문서를 기준으로 하시기 바랍니다.",
+  "lead": "각 도구마다 Grok Bot에게 바로 복사해 보낼 수 있는 프롬프트가 제공되며, Bot이 클라우드 PC에서 설치와 환경 검증을 전자동으로 완료합니다. **본 가이드는 커뮤니티 비공식 정리 자료**이므로 최신 변경 사항은 공식 문서를 참조하세요.",
+  "promptTitle": "Bot에게 보낼 프롬프트",
+  "promptHint": "아래 내용 전체를 복사하여 Grok Bot에게 전송하면, 클라우드 PC에서 자동으로 설치하고 검증합니다. 로그인이나 API 키 설정이 필요한 경우 일시 중지하고 사용자의 입력을 기다립니다.",
+  "todoTitle": "직접 수행해야 할 작업"
+ },
+ "cats": [
+  "코딩 Agent",
+  "모델/생성",
+  "통신 및 배포",
+  "데이터 수집",
+  "기본 도구"
+ ],
+ "tools": [
+  {
+   "id": "agy",
+   "name": "Antigravity CLI (agy)",
+   "cat": "코딩 Agent",
+   "tags": [
+    "agy",
+    "antigravity",
+    "gemini",
+    "google",
+    "동영상 이해",
+    "글쓰기"
+   ],
+   "desc": "Google 공식 터미널 Agent로, 동영상 직접 판독 및 코드 수정을 지원합니다.",
+   "what": "Google 공식 터미널 Agent로, **동영상 이해, 장문 작성 및 코드 수정**에 적합하며 동영상 파일을 직접 판독할 수 있습니다.",
+   "src": [
+    {
+     "t": "Antigravity 공식 문서: 빠른 시작",
+     "u": "https://antigravity.google/docs/getting-started/"
+    },
+    {
+     "t": "Antigravity CLI 공식 저장소",
+     "u": "https://github.com/google-antigravity/antigravity-cli"
+    },
+    {
+     "t": "Antigravity CLI 문제 해결",
+     "u": "https://antigravity.google/docs/cli/troubleshooting/"
+    }
+   ],
+   "intro": "Google 공식 터미널 Agent로, **동영상 이해, 장문 작성 및 코드 수정**에 적합하며 동영상 파일을 직접 판독할 수 있습니다.",
+   "prompt": "네 클라우드 PC에 Antigravity CLI(https://antigravity.google/docs/getting-started/)를 설치하고 설정해 줘. 앞으로 동영상 이해, 장문 작성, 코드 수정 작업에 사용할 거야. 로그인이나 인증이 필요하면 중단하고 링크를 보내줘. 내가 직접 완료할게.",
+   "todo": [
+    "Google 계정을 준비합니다.",
+    "브라우저에서 Bot이 보낸 인증 링크를 열어 인증을 완료합니다."
+   ]
+  },
+  {
+   "id": "codex",
+   "name": "Codex CLI",
+   "cat": "코딩 Agent",
+   "tags": [
+    "codex",
+    "openai",
+    "chatgpt",
+    "이미지 생성",
+    "image",
+    "코드"
+   ],
+   "desc": "ChatGPT 구독 크레딧을 사용하여 코드를 수정하고 이미지를 생성하는 OpenAI 터미널 코딩 Agent입니다.",
+   "what": "OpenAI 공식 터미널 코딩 Agent로, **코드 수정, 스크립트 실행, 이미지 생성 및 검수**에 적합하며 ChatGPT 구독 크레딧을 직접 사용할 수 있습니다.",
+   "src": [
+    {
+     "t": "OpenAI Codex CLI 공식 문서",
+     "u": "https://developers.openai.com/codex/cli"
+    },
+    {
+     "t": "openai/codex 공식 저장소",
+     "u": "https://github.com/openai/codex"
+    }
+   ],
+   "intro": "OpenAI 공식 터미널 코딩 Agent로, **코드 수정, 스크립트 실행, 이미지 생성 및 검수**에 적합하며 ChatGPT 구독 크레딧을 직접 사용할 수 있습니다.",
+   "prompt": "네 클라우드 PC에 Codex CLI(https://developers.openai.com/codex/cli)를 설치하고 내 ChatGPT 계정으로 로그인해 줘. 앞으로 코드 작성, 스크립트 실행, 이미지 생성에 사용할 거야. 내 인증이 필요하면 링크를 보내줘.",
+   "todo": [
+    "ChatGPT 계정을 준비하고 디바이스 코드 로그인 권한이 활성화되어 있는지 확인합니다.",
+    "브라우저에서 Bot이 보낸 디바이스 코드 링크를 열어 승인을 완료합니다."
+   ]
+  },
+  {
+   "id": "claude-code",
+   "name": "Claude Code",
+   "cat": "코딩 Agent",
+   "tags": [
+    "claude",
+    "anthropic",
+    "claude code",
+    "코드"
+   ],
+   "desc": "코드베이스 분석 및 다중 파일 수정에 적합한 Anthropic의 터미널 코딩 Agent입니다.",
+   "what": "Anthropic 공식 터미널 코딩 Agent로, **코드베이스 분석, 다중 파일 수정 및 명령어 실행**에 적합하며 백그라운드 자동 업데이트를 지원합니다.",
+   "src": [
+    {
+     "t": "Claude Code 공식 설치 문서",
+     "u": "https://code.claude.com/docs/en/setup"
+    }
+   ],
+   "intro": "Anthropic 공식 터미널 코딩 Agent로, **코드베이스 분석, 다중 파일 수정 및 명령어 실행**에 적합하며 백그라운드 자동 업데이트를 지원합니다.",
+   "prompt": "네 클라우드 PC에 Claude Code(https://code.claude.com/docs/en/setup)를 설치해 줘. 앞으로 코드베이스 분석과 다중 파일 수정에 사용할 거야. 로그인이나 인증이 필요하면 중단하고 링크를 보내줘. 내가 직접 완료할게.",
+   "todo": [
+    "Claude 구독 또는 Anthropic Console 계정을 준비합니다.",
+    "브라우저에서 Bot이 보낸 인증 링크를 열어 인증을 완료합니다."
+   ]
+  },
+  {
+   "id": "gemini-cli",
+   "name": "Gemini CLI",
+   "cat": "코딩 Agent",
+   "tags": [
+    "gemini",
+    "google",
+    "gemini cli"
+   ],
+   "desc": "유료 및 Google Cloud 사용자를 위한 Google 오픈소스 터미널 Agent입니다.",
+   "what": "Google 오픈소스 터미널 AI Agent로, **유료 사용자 및 Google Cloud 프로젝트 사용자**가 터미널 인터랙션 및 개발 협업을 진행하기에 적합합니다.",
+   "src": [
+    {
+     "t": "Gemini CLI 공식 설치 문서",
+     "u": "https://geminicli.com/docs/get-started/installation/"
+    },
+    {
+     "t": "google-gemini/gemini-cli 공식 저장소",
+     "u": "https://github.com/google-gemini/gemini-cli"
+    }
+   ],
+   "intro": "Google 오픈소스 터미널 AI Agent로, **유료 사용자 및 Google Cloud 프로젝트 사용자**가 터미널 인터랙션 및 개발 협업을 진행하기에 적합합니다.",
+   "prompt": "네 클라우드 PC에 Gemini CLI(https://geminicli.com/docs/get-started/installation/)를 설치해 줘. 앞으로 터미널 인터랙션과 개발 협업에 사용할 거야. 로그인이나 인증이 필요하면 중단하고 링크를 보내줘. 내가 직접 완료할게.",
+   "todo": [
+    "유료 Google 계정 또는 Google Cloud 프로젝트 계정을 준비합니다.",
+    "브라우저에서 Bot이 보낸 인증 링크를 열어 인증을 완료합니다."
+   ]
+  },
+  {
+   "id": "pi",
+   "name": "Pi Coding Agent",
+   "cat": "코딩 Agent",
+   "tags": [
+    "pi",
+    "pi coding agent",
+    "earendil",
+    "mario zechner",
+    "코드"
+   ],
+   "desc": "읽기, 쓰기, 수정, 실행 4가지 기본 도구만 제공하는 미니멀하고 확장 가능한 터미널 코딩 Agent입니다.",
+   "what": "미니멀하면서도 확장성이 뛰어난 터미널 코딩 Agent로, **확장 기능, 스킬 및 프롬프트 템플릿을 통한 심층 커스터마이징**으로 전용 개발 워크플로를 구축하기에 적합합니다.",
+   "src": [
+    {
+     "t": "Pi 공식 웹사이트",
+     "u": "https://pi.dev"
+    },
+    {
+     "t": "earendil-works/pi 공식 저장소",
+     "u": "https://github.com/earendil-works/pi"
+    },
+    {
+     "t": "Pi 이전 안내",
+     "u": "https://pi.dev/news/2026/5/7/pi-has-a-new-home"
+    }
+   ],
+   "intro": "미니멀하면서도 확장성이 뛰어난 터미널 코딩 Agent로, **확장 기능, 스킬 및 프롬프트 템플릿을 통한 심층 커스터마이징**으로 전용 개발 워크플로를 구축하기에 적합합니다.",
+   "prompt": "네 클라우드 PC에 Pi Coding Agent(https://pi.dev)를 설치해 줘. 앞으로 맞춤형 개발 워크플로 구축 및 코드 작성에 사용할 거야. API 키 입력이 필요하면 내가 직접 입력할 수 있도록 알려줘.",
+   "todo": [
+    "해당 모델 제공업체의 API Key를 준비합니다.",
+    "안내를 받은 후 비밀 설정 파일에 API 키를 직접 입력합니다."
+   ]
+  },
+  {
+   "id": "cursor-cli",
+   "name": "Cursor CLI",
+   "cat": "코딩 Agent",
+   "tags": [
+    "cursor",
+    "cursor-agent",
+    "agent",
+    "코드"
+   ],
+   "desc": "소규모 코드 수정을 위임하여 실행하기에 적합한 Cursor 공식 커맨드라인 Agent입니다.",
+   "what": "Cursor 공식 커맨드라인 Agent로, **클라우드 PC에서 소규모 코드 수정을 실행**하여 Bot의 사용량을 전체적인 의사 결정에 아낄 수 있습니다.",
+   "src": [
+    {
+     "t": "Cursor CLI 공식 설치 문서",
+     "u": "https://cursor.com/docs/cli/installation"
+    },
+    {
+     "t": "Cursor CLI 공식 인증 문서",
+     "u": "https://cursor.com/docs/cli/reference/authentication"
+    }
+   ],
+   "intro": "Cursor 공식 커맨드라인 Agent로, **클라우드 PC에서 소규모 코드 수정을 실행**하여 Bot의 사용량을 전체적인 의사 결정에 아낄 수 있습니다.",
+   "prompt": "네 클라우드 PC에 Cursor CLI(https://cursor.com/docs/cli/installation)를 설치해 줘. 앞으로 소규모 코드 수정에 사용할 거야. 로그인이나 인증이 필요하면 중단하고 링크를 보내줘. 내가 직접 완료할게.",
+   "todo": [
+    "Cursor 계정 또는 관련 인증 자격 증명을 준비합니다.",
+    "브라우저에서 Bot이 보낸 인증 링크를 열어 로그인을 완료합니다."
+   ]
+  },
+  {
+   "id": "deepseek-harness",
+   "name": "DeepSeek Harness",
+   "cat": "코딩 Agent",
+   "tags": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "플러그인",
+    "코드",
+    "리서치",
+    "예약 작업",
+    "오픈소스"
+   ],
+   "desc": "코드 작성, 리서치, 업무 및 예약 작업에 사용되는 DeepSeek 오픈소스 플러그인 기반 Agent입니다.",
+   "what": "DeepSeek 공식 오픈소스의 **'모든 것이 플러그인' 아키텍처 Agent**로, 데스크톱 앱 및 Web UI를 제공합니다. 현재 개발자 프리뷰 단계이며, **코드 작성**, **리서치 분석**, **일반 업무** 및 **예약 작업 확장**에 적합합니다.",
+   "src": [
+    {
+     "t": "DeepSeek Harness 공식 저장소",
+     "u": "https://github.com/deepseek-ai/deepseek-harness"
+    },
+    {
+     "t": "DeepSeek Harness 공식 문서",
+     "u": "https://deepseek-harness.github.io/deepseek-harness/"
+    },
+    {
+     "t": "DeepSeek Harness 공식 웹사이트 소개",
+     "u": "https://www.deepseek.com/en/harness/"
+    },
+    {
+     "t": "KinGao: DeepSeek Harness 연동 참고",
+     "u": "https://x.com/KinGao476942/status/2111622701089759654"
+    },
+    {
+     "t": "KinGao: DeepSeek Harness 요약 글",
+     "u": "https://x.com/KinGao476942/status/2115592603605557564"
+    }
+   ],
+   "intro": "DeepSeek 공식 오픈소스의 **'모든 것이 플러그인' 아키텍처 Agent**로, 데스크톱 앱 및 Web UI를 지원합니다. 현재 개발자 프리뷰 단계이며, **코드 작성**, **리서치 분석**, **일반 업무** 및 **예약 작업 확장**에 적합합니다.",
+   "prompt": "네 클라우드 PC에 DeepSeek Harness(https://github.com/deepseek-ai/deepseek-harness)를 설치하고 설정해 줘. 앞으로 일상 업무, 리서치, 코드 작성, 예약 작업 실행에 사용할 거야. DeepSeek API Key 설정이 필요하면 중단하고 내가 직접 입력할 수 있도록 알려줘.",
+   "todo": [
+    "DeepSeek API Key를 준비합니다.",
+    "Bot의 설치가 완료된 후 설정에서 API Key를 직접 입력합니다."
+   ]
+  },
+  {
+   "id": "muse2api",
+   "name": "muse2api",
+   "cat": "모델/생성",
+   "tags": [
+    "muse",
+    "muse2api",
+    "이미지 생성",
+    "비디오",
+    "openai 호환",
+    "api"
+   ],
+   "desc": "웹 버전을 구동하여 OpenAI 인터페이스로 래핑해 로컬에서 이미지 및 비디오 생성을 호출합니다.",
+   "what": "커뮤니티 오픈소스 muse.ai 리버스 엔지니어링 래핑 프로젝트로, **클라우드 PC**에서 OpenAI 호환 인터페이스를 통해 웹 버전의 무료 크레딧을 직접 호출하여 대화, 이미지 생성, 비디오 생성을 수행하기에 적합합니다.",
+   "src": [
+    {
+     "t": "muse2api 프로젝트 저장소 (czg86389-hub)",
+     "u": "https://github.com/czg86389-hub/muse2api"
+    }
+   ],
+   "intro": "커뮤니티 오픈소스 muse.ai 리버스 엔지니어링 래핑 프로젝트로, **클라우드 PC**에서 OpenAI 호환 인터페이스를 통해 웹 버전의 무료 크레딧을 직접 호출하여 대화, 이미지 생성, 비디오 생성을 수행하기에 적합합니다.",
+   "prompt": "네 클라우드 PC에 muse2api(https://github.com/czg86389-hub/muse2api)를 배포해 줘. 앞으로 멀티모달 인터페이스를 호출해 대화, 이미지 생성, 비디오 생성을 할 때 사용할 거야. 키 입력이 필요하면 내가 직접 입력할 수 있도록 알려줘.",
+   "todo": [
+    "muse.ai 계정을 준비하고 클라우드 PC 브라우저에서 로그인을 완료합니다.",
+    "안내에 따라 통신 키와 로그인 세션 데이터를 직접 입력합니다."
+   ]
+  },
+  {
+   "id": "agently-cli",
+   "name": "agently-cli (Agent 메일 커맨드라인)",
+   "cat": "통신 및 배포",
+   "tags": [
+    "메일",
+    "email",
+    "agently",
+    "qq 메일",
+    "텐센트"
+   ],
+   "desc": "텐센트 QQ 메일 커맨드라인 도구로, 메일 송수신, 검색 및 첨부파일 다운로드를 지원합니다.",
+   "what": "텐센트 QQ 메일에서 출시한 공식 커맨드라인 도구로, Bot이 **클라우드 PC**에서 메일을 송수신하고 이전 메일을 검색하며 첨부파일을 다운로드하기에 적합합니다.",
+   "src": [
+    {
+     "t": "Agent 메일 공식 웹사이트",
+     "u": "https://agent.qq.com"
+    },
+    {
+     "t": "agently-cli npm 패키지",
+     "u": "https://www.npmjs.com/package/@tencent-qqmail/agently-cli"
+    }
+   ],
+   "intro": "텐센트 QQ 메일에서 출시한 공식 커맨드라인 도구로, Bot이 **클라우드 PC**에서 메일을 송수신하고 이전 메일을 검색하며 첨부파일을 다운로드하기에 적합합니다.",
+   "prompt": "네 클라우드 PC에 agently-cli(https://agent.qq.com)를 설치해 줘. 앞으로 메일 송수신, 이전 메일 검색, 첨부파일 다운로드에 사용할 거야. 로그인이나 인증이 필요하면 중단하고 링크를 보내줘. 내가 직접 완료할게.",
+   "todo": [
+    "QQ 메일 또는 Agent 메일 계정을 준비합니다.",
+    "Bot이 보낸 인증 링크를 브라우저에서 열어 인증을 완료합니다."
+   ]
+  },
+  {
+   "id": "lark-cli",
+   "name": "Feishu CLI (lark-cli)",
+   "cat": "통신 및 배포",
+   "tags": [
+    "페이슈",
+    "lark",
+    "feishu",
+    "다차원 테이블",
+    "문서",
+    "lark-cli"
+   ],
+   "desc": "사용자 신분으로 클라우드 문서, 다차원 테이블(Bitable) 및 클라우드 드라이브를 다루는 Feishu 공식 커맨드라인 도구입니다.",
+   "what": "Feishu 공식 커맨드라인 도구로, Bot이 개인 신분으로 **클라우드 PC**에서 Feishu 클라우드 문서, 다차원 테이블, 클라우드 드라이브 및 지식 베이스를 다루기에 적합합니다.",
+   "src": [
+    {
+     "t": "larksuite/cli 공식 저장소",
+     "u": "https://github.com/larksuite/cli"
+    }
+   ],
+   "intro": "Feishu 공식 커맨드라인 도구로, Bot이 개인 신분으로 **클라우드 PC**에서 Feishu 클라우드 문서, 다차원 테이블, 클라우드 드라이브 및 지식 베이스를 다루기에 적합합니다.",
+   "prompt": "네 클라우드 PC에 Feishu CLI(https://github.com/larksuite/cli)를 설치하고 설정해 줘. 앞으로 Feishu 클라우드 문서, 다차원 테이블, 클라우드 드라이브를 다룰 때 사용할 거야. 로그인이나 인증이 필요하면 중단하고 링크를 보내줘. 내가 직접 완료할게.",
+   "todo": [
+    "Feishu 개인 계정을 준비합니다.",
+    "인증 링크를 열고 터미널에 표시된 디바이스 코드를 입력하여 승인을 완료합니다."
+   ]
+  },
+  {
+   "id": "feishu-bot",
+   "name": "Feishu 봇 롱 커넥션",
+   "cat": "통신 및 배포",
+   "tags": [
+    "페이슈",
+    "lark",
+    "feishu",
+    "봇",
+    "bot",
+    "lark-oapi",
+    "그룹 채팅"
+   ],
+   "desc": "공인 IP 없이 롱 커넥션을 통해 Feishu 메시지를 수신하여 그룹 및 1:1 대화에서 작업을 할당합니다.",
+   "what": "Feishu 공식 Python SDK 기반의 롱 커넥션 메시지 솔루션으로, 공인 IP가 필요 없는 **클라우드 PC**에서 이벤트 리스닝 및 그룹 채팅 봇 협업을 구현하기에 적합합니다.",
+   "src": [
+    {
+     "t": "Feishu 공식 Python SDK (larksuite/oapi-sdk-python)",
+     "u": "https://github.com/larksuite/oapi-sdk-python"
+    },
+    {
+     "t": "Feishu 오픈 플랫폼",
+     "u": "https://open.feishu.cn/"
+    }
+   ],
+   "intro": "Feishu 공식 Python SDK 기반의 롱 커넥션 메시지 솔루션으로, 공인 IP가 필요 없는 **클라우드 PC**에서 이벤트 리스닝 및 그룹 채팅 봇 협업을 구현하기에 적합합니다.",
+   "prompt": "네 클라우드 PC에 Feishu Python SDK(https://github.com/larksuite/oapi-sdk-python) 기반의 롱 커넥션 봇을 설정해 줘. 앞으로 그룹 채팅 이벤트를 수신하고 작업을 배분하는 데 사용할 거야. 키 입력이 필요하면 내가 직접 입력할 수 있도록 알려줘.",
+   "todo": [
+    "Feishu 오픈 플랫폼에서 자체 개발 앱을 생성하고 롱 커넥션 및 봇 기능을 활성화합니다.",
+    "안내에 따라 앱의 App ID와 App Secret을 직접 입력합니다."
+   ]
+  },
+  {
+   "id": "x-api",
+   "name": "X API 포스팅 (OAuth 1.0a PIN)",
+   "cat": "통신 및 배포",
+   "tags": [
+    "x",
+    "twitter",
+    "트위터",
+    "포스팅",
+    "oauth",
+    "api"
+   ],
+   "desc": "OAuth 1.0a PIN 인증을 통해 X 공식 API를 호출하여 트윗 및 이미지를 게시합니다.",
+   "what": "OAuth 1.0a PIN 인증 기반의 X 공식 API 호출 방식으로, Bot이 **클라우드 PC**에서 트윗 작성, 이미지 업로드, 게시물 삭제 작업을 안전하게 수행하기에 적합합니다.",
+   "src": [
+    {
+     "t": "X 공식 문서: PIN 기반 OAuth",
+     "u": "https://docs.x.com/resources/fundamentals/authentication/oauth-1-0a/pin-based-oauth"
+    }
+   ],
+   "intro": "OAuth 1.0a PIN 인증 기반의 X 공식 API 호출 방식으로, Bot이 **클라우드 PC**에서 트윗 작성, 이미지 업로드, 게시물 삭제 작업을 안전하게 수행하기에 적합합니다.",
+   "prompt": "네 클라우드 PC에 X API 포스팅(https://docs.x.com/resources/fundamentals/authentication/oauth-1-0a/pin-based-oauth)을 설정해 줘. 앞으로 트윗 작성, 이미지 업로드, 게시물 관리에 사용할 거야. 키 입력이 필요하면 내가 직접 입력할 수 있게 알려주고, 로그인 인증이 필요하면 링크를 보내줘.",
+   "todo": [
+    "X 개발자 플랫폼에서 앱을 생성하고 읽기/쓰기 권한을 활성화합니다.",
+    "인증 링크를 열고 페이지에 표시된 PIN 코드를 확인하여 Bot에게 전송합니다."
+   ]
+  },
+  {
+   "id": "gh",
+   "name": "GitHub CLI (gh)",
+   "cat": "통신 및 배포",
+   "tags": [
+    "github",
+    "gh",
+    "git",
+    "저장소",
+    "push",
+    "pr"
+   ],
+   "desc": "코드 pull/push 및 PR 관리를 위한 GitHub 공식 커맨드라인 도구입니다.",
+   "what": "GitHub 공식 커맨드라인 도구로, Bot이 **클라우드 PC**에서 비공개 저장소를 복제하고 코드를 푸시하며 PR 생성 및 Actions를 관리하기에 적합합니다.",
+   "src": [
+    {
+     "t": "GitHub CLI Linux 설치 문서",
+     "u": "https://github.com/cli/cli/blob/trunk/docs/install_linux.md"
+    },
+    {
+     "t": "gh auth login 공식 매뉴얼",
+     "u": "https://cli.github.com/manual/gh_auth_login"
+    }
+   ],
+   "intro": "GitHub 공식 커맨드라인 도구로, Bot이 **클라우드 PC**에서 비공개 저장소를 복제하고 코드를 푸시하며 PR 생성 및 Actions를 관리하기에 적합합니다.",
+   "prompt": "네 클라우드 PC에 GitHub CLI(https://github.com/cli/cli/blob/trunk/docs/install_linux.md)를 설치해 줘. 앞으로 코드 저장소 관리, 브랜치 푸시, PR 제출에 사용할 거야. 로그인이나 인증이 필요하면 중단하고 링크를 보내줘. 내가 직접 완료할게.",
+   "todo": [
+    "GitHub 계정을 준비합니다.",
+    "브라우저에서 인증 링크를 열고 해당 일회용 인증 코드를 입력합니다."
+   ]
+  },
+  {
+   "id": "playwright",
+   "name": "Playwright",
+   "cat": "데이터 수집",
+   "tags": [
+    "playwright",
+    "브라우저",
+    "크롤러",
+    "스크린샷",
+    "chromium",
+    "자동화"
+   ],
+   "desc": "헤드리스 브라우저를 구동하여 스크린샷 캡처 및 렌더링 페이지를 스크래핑하는 Microsoft 오픈소스 브라우저 자동화 라이브러리입니다.",
+   "what": "Playwright는 Microsoft 오픈소스 자동화 라이브러리로, 수동 브라우저 인터랙션 사용량을 소모하지 않고 Bot이 **대량 웹페이지 스크린샷 캡처 및 렌더링 스크래핑**을 수행하기에 적합합니다.",
+   "src": [
+    {
+     "t": "Playwright Python 공식 문서",
+     "u": "https://playwright.dev/python/docs/intro"
+    }
+   ],
+   "intro": "Playwright는 Microsoft 오픈소스 자동화 라이브러리로, 수동 브라우저 인터랙션 사용량을 소모하지 않고 Bot이 **대량 웹페이지 스크린샷 캡처 및 렌더링 스크래핑**을 수행하기에 적합합니다.",
+   "prompt": "네 클라우드 PC에 Playwright(https://playwright.dev/python/docs/intro)를 설치해 줘. 앞으로 웹페이지 렌더링, 스크린샷 캡처, 스크래핑 작업에 사용할 거야.",
+   "todo": [
+    "클라우드 PC에 Python 실행 환경이 갖추어져 있는지 확인합니다."
+   ]
+  },
+  {
+   "id": "yt-dlp",
+   "name": "yt-dlp",
+   "cat": "데이터 수집",
+   "tags": [
+    "yt-dlp",
+    "비디오 다운로드",
+    "youtube",
+    "bilibili",
+    "오디오"
+   ],
+   "desc": "오디오 추출 및 다중 플랫폼 다운로드를 지원하는 오픈소스 커맨드라인 오디오/비디오 다운로드 도구입니다.",
+   "what": "yt-dlp는 수천 개의 사이트를 지원하는 커맨드라인 오디오/비디오 다운로드 도구로, Bot이 향후 텍스트 변환 처리를 위해 **동영상을 대량 다운로드하거나 오디오를 추출**하기에 적합합니다.",
+   "src": [
+    {
+     "t": "yt-dlp 공식 저장소",
+     "u": "https://github.com/yt-dlp/yt-dlp"
+    }
+   ],
+   "intro": "yt-dlp는 수천 개의 사이트를 지원하는 커맨드라인 오디오/비디오 다운로드 도구로, Bot이 향후 텍스트 변환 처리를 위해 **동영상을 대량 다운로드하거나 오디오를 추출**하기에 적합합니다.",
+   "prompt": "네 클라우드 PC에 yt-dlp(https://github.com/yt-dlp/yt-dlp)를 설치해 줘. 앞으로 오디오/비디오 대량 다운로드 및 오디오 추출에 사용할 거야.",
+   "todo": [
+    "다운로드할 대상 미디어 링크를 준비합니다.",
+    "로그인이 필요한 사이트의 경우 해당 쿠키(Cookie) 파일을 내보내어 준비합니다."
+   ]
+  },
+  {
+   "id": "ffmpeg",
+   "name": "FFmpeg",
+   "cat": "기본 도구",
+   "tags": [
+    "ffmpeg",
+    "비디오",
+    "오디오",
+    "트랜스코딩",
+    "자막",
+    "편집"
+   ],
+   "desc": "트랜스코딩, 프레임 캡처, 오디오 추출, 자막 인코딩을 지원하는 오픈소스 오디오/비디오 처리 도구입니다.",
+   "what": "FFmpeg는 멀티미디어 로우 레벨 처리의 핵심 도구로, Bot이 **오디오/비디오 트랜스코딩, 압축, 프레임 캡처 및 오디오 추출**을 수행하기에 적합합니다.",
+   "src": [
+    {
+     "t": "FFmpeg 공식 다운로드 페이지",
+     "u": "https://ffmpeg.org/download.html"
+    }
+   ],
+   "intro": "FFmpeg는 멀티미디어 로우 레벨 처리의 핵심 도구로, Bot이 **오디오/비디오 트랜스코딩, 압축, 프레임 캡처 및 오디오 추출**을 수행하기에 적합합니다.",
+   "prompt": "네 클라우드 PC에 FFmpeg(https://ffmpeg.org/download.html)를 설치해 줘. 앞으로 오디오/비디오 트랜스코딩, 편집, 압축, 프레임 캡처 작업에 사용할 거야.",
+   "todo": [
+    "현재 클라우드 PC에 기본 관리자 권한이 있는지 확인합니다."
+   ]
+  },
+  {
+   "id": "nodejs",
+   "name": "Node.js 및 npm",
+   "cat": "기본 도구",
+   "tags": [
+    "node",
+    "nodejs",
+    "npm",
+    "nvm",
+    "환경",
+    "codex",
+    "gemini cli",
+    "pi",
+    "lark-cli"
+   ],
+   "desc": "다양한 터미널 Agent 도구의 종속성을 제공하는 JavaScript 런타임 환경입니다.",
+   "what": "Node.js와 npm은 프론트엔드 및 각종 AI CLI의 실행 기반으로, Bot에게 **현대적인 커맨드라인 도구 실행 환경**을 제공하기에 적합합니다.",
+   "src": [
+    {
+     "t": "nvm 공식 저장소",
+     "u": "https://github.com/nvm-sh/nvm"
+    },
+    {
+     "t": "Node.js 공식 웹사이트",
+     "u": "https://nodejs.org/"
+    }
+   ],
+   "intro": "Node.js와 npm은 프론트엔드 및 각종 AI CLI의 실행 기반으로, Bot에게 **현대적인 커맨드라인 도구 실행 환경**을 제공하기에 적합합니다.",
+   "prompt": "네 클라우드 PC에 Node.js와 npm(https://github.com/nvm-sh/nvm)을 설치해 줘. 앞으로 프론트엔드 프로젝트와 각종 커맨드라인 도구를 실행할 때 사용할 거야.",
+   "todo": [
+    "클라우드 PC의 네트워크 연결을 확인합니다. 외부 계정은 필요하지 않습니다."
+   ]
+  },
+  {
+   "id": "egress-proxy",
+   "name": "고정 아웃바운드 프록시 (SSH 터널)",
+   "cat": "기본 도구",
+   "tags": [
+    "프록시",
+    "proxy",
+    "socks",
+    "ssh",
+    "지역 제한",
+    "vps",
+    "네트워크"
+   ],
+   "desc": "SSH 동적 포트 포워딩으로 고정 아웃바운드 프록시를 구축하여 서비스 지역 제한 문제를 해결합니다.",
+   "what": "고정 아웃바운드 프록시는 SSH 동적 포트 포워딩을 활용해 로컬 SOCKS5 프록시를 구축하므로, Bot이 **지역 제한이 있는 서비스에 접근**할 때 안정적인 아웃바운드 IP를 유지하기에 적합합니다.",
+   "src": [
+    {
+     "t": "OpenSSH ssh 매뉴얼 (-D 동적 포트 포워딩)",
+     "u": "https://man.openbsd.org/ssh"
+    }
+   ],
+   "intro": "고정 아웃바운드 프록시는 SSH 동적 포트 포워딩을 활용해 로컬 SOCKS5 프록시를 구축하므로, Bot이 **지역 제한이 있는 서비스에 접근**할 때 안정적인 아웃바운드 IP를 유지하기에 적합합니다.",
+   "prompt": "네 클라우드 PC에 SSH 터널 기반 고정 아웃바운드 프록시(https://man.openbsd.org/ssh)를 설정해 줘. 앞으로 지역 제한이 있는 서비스에 접속할 때 사용할 거야. 서버 주소와 프라이빗 키 입력이 필요하면 내가 직접 입력할 수 있도록 알려줘.",
+   "todo": [
+    "SSH 키 로그인을 지원하는 해외 서버를 준비합니다.",
+    "안내에 따라 로그인 프라이빗 키와 접속 정보를 비밀 파일에 직접 입력합니다."
+   ]
+  },
+  {
+   "id": "mcp-connectors",
+   "name": "MCP 커넥터",
+   "cat": "기본 도구",
+   "tags": [
+    "mcp",
+    "connector",
+    "커넥터",
+    "gmail",
+    "google drive",
+    "model context protocol"
+   ],
+   "desc": "외부 서비스 또는 커스텀 MCP 서버를 Grok에 연결하여 도구 호출 기능을 확장합니다.",
+   "what": "MCP 커넥터는 외부 서비스와 모델 간의 상호작용 통로를 열어주어, Bot이 **외부 도구와 클라우드 데이터를 직접 호출**하여 복잡한 협업을 수행하기에 적합합니다.",
+   "src": [
+    {
+     "t": "Grok 공식 문서: Connectors",
+     "u": "https://docs.x.ai/grok/connectors"
+    }
+   ],
+   "intro": "MCP 커넥터는 외부 서비스와 모델 간의 상호작용 통로를 열어주어, Bot이 **외부 도구와 클라우드 데이터를 직접 호출**하여 복잡한 협업을 수행하기에 적합합니다.",
+   "prompt": "네 클라우드 PC에 MCP 커넥터(https://docs.x.ai/grok/connectors)를 연동해 줘. 앞으로 외부 도구를 호출하고 클라우드 데이터를 동기화할 때 사용할 거야. 제3자 인증이 필요하면 링크를 보내주고, 키 입력이 필요하면 내가 직접 입력할 수 있도록 알려줘.",
+   "todo": [
+    "브라우저에서 커넥터 관리 페이지에 접속하고 연결할 계정을 준비합니다.",
+    "안내에 따라 대상 서비스의 주소 또는 인증 키를 직접 입력합니다."
+   ]
+  }
+ ]
+}

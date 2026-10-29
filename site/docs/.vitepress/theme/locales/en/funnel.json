@@ -1,0 +1,18 @@
+{
+ "join_title": "Join My Paid Q&A Group",
+ "join_text": "This is a paid group discussing AI Agents and Grok Bot. Add my personal WeChat `AI_Tiezhu` to ask about fees; I will personally invite you to the group after adding you.",
+ "join_xhs": "Put 'Xiaohongshu' in your verification message so I know where you came from.",
+ "copy_btn": "Copy WeChat ID",
+ "copied": "Copied",
+ "qr_hint": "Long-press to identify in WeChat. For other browsers, please copy the WeChat ID and add me in WeChat.",
+ "doc_end_generic": "Stuck on this chapter? Don't struggle alone—these types of questions come up often in the group, feel free to ask.",
+ "doc_end_btn": "Ask in the Paid Q&A Group",
+ "doc_end": {
+  "/part1/02-plans": "Not sure which subscription tier to choose? Plan details are frequently discussed in the group—feel free to ask me anytime.",
+  "/part1/05-computer": "Confused about cloud computers or had yours reset? VM configurations are frequently discussed in the group—feel free to ask anytime.",
+  "/part1/09-group-team": "Stuck on how to set up a team Bot? We often discuss team setups in the group—come join the discussion.",
+  "/part1/10-usage": "Always running out of quota? We often discuss quota planning and how to save usage in the group—feel free to ask.",
+  "/part3/19-orchestration": "Confused about multi-Bot orchestration? We often discuss team setups in the group—feel free to ask me anytime.",
+  "/part3/21-backup": "Worried about losing configs after a cloud computer reset? We often discuss how to recover your tools in the group—feel free to ask anytime."
+ }
+}

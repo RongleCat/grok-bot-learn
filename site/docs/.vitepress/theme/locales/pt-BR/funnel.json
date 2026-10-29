@@ -1,0 +1,18 @@
+{
+ "join_title": "Participe do meu grupo pago de dúvidas",
+ "join_text": "Este é um grupo pago para conversar sobre AI Agents e Grok Bot. Adicione meu WeChat pessoal `AI_Tiezhu`; pergunte sobre os valores pelo WeChat e eu mesmo adicionarei você ao grupo.",
+ "join_xhs": "Escreva \"小红书\" na mensagem de verificação para que eu saiba de onde você veio.",
+ "copy_btn": "Copiar ID do WeChat",
+ "copied": "Copiado",
+ "qr_hint": "No WeChat, pressione e segure para ler o código; em outros navegadores, copie o ID do WeChat para adicionar pelo app.",
+ "doc_end_generic": "Travou neste capítulo? Não fique quebrando a cabeça sozinho: esse é o tipo de dúvida mais comum no grupo, venha perguntar.",
+ "doc_end_btn": "Tirar dúvidas no grupo pago",
+ "doc_end": {
+  "/part1/02-plans": "Em dúvida sobre qual plano de assinatura escolher? Sempre detalhamos as opções no grupo, fique à vontade para me perguntar.",
+  "/part1/05-computer": "Não está entendendo o computador na nuvem ou ele foi redefinido? Sempre falamos sobre configurações de VM no grupo, sinta-se livre para perguntar.",
+  "/part1/09-group-team": "Sem ideias de como montar um Bot de equipe? Sempre debatemos como estruturar equipes no grupo, venha conversar.",
+  "/part1/10-usage": "O limite de uso nunca é suficiente? Sempre discutimos no grupo como planejar cotas e economizar, venha tirar suas dúvidas.",
+  "/part3/19-orchestration": "Achando difícil orquestrar múltiplos Bots? Sempre conversamos sobre como estruturar equipes no grupo, fique à vontade para perguntar.",
+  "/part3/21-backup": "Com medo de perder as configurações se o computador na nuvem for redefinido? Sempre discutimos no grupo como recuperar suas ferramentas, fique à vontade para perguntar."
+ }
+}

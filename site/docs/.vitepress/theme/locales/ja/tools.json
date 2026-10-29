@@ -1,0 +1,599 @@
+{
+ "ui": {
+  "title": "Grok クラウドPC ツールボックス",
+  "search": "ツール/キーワード検索（例: codex）",
+  "all": "すべて",
+  "empty": "一致するツールが見つかりませんでした",
+  "count": "全 {n} 件のツール",
+  "more": "詳細を見る",
+  "prereq": "前提条件",
+  "install": "インストール",
+  "auth": "ログインと認証",
+  "verify": "検証",
+  "steps": "操作手順",
+  "pitfalls": "よくある落とし穴と対処法",
+  "src": "出典",
+  "back": "目次に戻る",
+  "note": "本ページはコミュニティによる非公式なまとめであり、各ツールの提供元や xAI との関係はありません。コマンドは公式ドキュメントを正としてください。",
+  "lead": "各ツールには Grok Bot にそのまま貼り付け可能なプロンプトが用意されており、Bot がクラウドPC上でインストールと環境検証を全自動で完了します。**本ガイドはコミュニティによる非公式なまとめ**です。最新の変更は公式ドキュメントをご確認ください。",
+  "promptTitle": "Bot に送信するプロンプト",
+  "promptHint": "以下の全文をコピーして Grok Bot に送信してください。クラウドPC上で自動的にインストールと検証を行い、ログインやAPIキー設定の際には一時停止して待機します。",
+  "todoTitle": "ユーザー自身で行うこと"
+ },
+ "cats": [
+  "コーディング Agent",
+  "モデル/生成",
+  "通信・配信",
+  "データ収集",
+  "基本ツール"
+ ],
+ "tools": [
+  {
+   "id": "agy",
+   "name": "Antigravity CLI（agy）",
+   "cat": "コーディング Agent",
+   "tags": [
+    "agy",
+    "antigravity",
+    "gemini",
+    "google",
+    "動画理解",
+    "執筆"
+   ],
+   "desc": "Google 公式のターミナル Agent。動画の直接読み込みやコード修正に対応。",
+   "what": "Google 公式のターミナル Agent。**動画理解、長文執筆、コード修正**に適しており、動画ファイルの直接読み込みに対応しています。",
+   "src": [
+    {
+     "t": "Antigravity 公式ドキュメント: クイックスタート",
+     "u": "https://antigravity.google/docs/getting-started/"
+    },
+    {
+     "t": "Antigravity CLI 公式リポジトリ",
+     "u": "https://github.com/google-antigravity/antigravity-cli"
+    },
+    {
+     "t": "Antigravity CLI トラブルシューティング",
+     "u": "https://antigravity.google/docs/cli/troubleshooting/"
+    }
+   ],
+   "intro": "Google 公式のターミナル Agent。**動画理解、長文執筆、コード修正**に適しており、動画ファイルの直接読み込みに対応しています。",
+   "prompt": "帮我在你的云电脑上安装配置 Antigravity CLI（https://antigravity.google/docs/getting-started/），以后视频理解、长文写作与代码修改用它。需要登录或授权时停下来把链接发给我由我完成。",
+   "todo": [
+    "Google アカウントを準備する。",
+    "ブラウザで Bot から送信された認証リンクを開き、認証を完了する。"
+   ]
+  },
+  {
+   "id": "codex",
+   "name": "Codex CLI",
+   "cat": "コーディング Agent",
+   "tags": [
+    "codex",
+    "openai",
+    "chatgpt",
+    "画像生成",
+    "image",
+    "コード"
+   ],
+   "desc": "OpenAI のターミナルコーディング Agent。ChatGPT サブスクリプション枠を消費してコード修正や画像生成を実行。",
+   "what": "OpenAI 公式のターミナルコーディング Agent。**コード修正、スクリプト実行、画像生成/確認**に適しており、ChatGPT サブスクリプション枠を直接利用できます。",
+   "src": [
+    {
+     "t": "OpenAI Codex CLI 公式ドキュメント",
+     "u": "https://developers.openai.com/codex/cli"
+    },
+    {
+     "t": "openai/codex 公式リポジトリ",
+     "u": "https://github.com/openai/codex"
+    }
+   ],
+   "intro": "OpenAI 公式のターミナルコーディング Agent。**コード修正、スクリプト実行、画像生成/確認**に適しており、ChatGPT サブスクリプション枠を直接利用できます。",
+   "prompt": "帮我在你的云电脑上装好 Codex CLI（https://developers.openai.com/codex/cli），用我的 ChatGPT 账号登录，以后写代码、跑脚本和生图用它。需要我授权时把链接发给我。",
+   "todo": [
+    "ChatGPT アカウントを準備し、デバイスコードログインが有効になっていることを確認する。",
+    "ブラウザで Bot から送信されたデバイスコードリンクを開き、確認を完了する。"
+   ]
+  },
+  {
+   "id": "claude-code",
+   "name": "Claude Code",
+   "cat": "コーディング Agent",
+   "tags": [
+    "claude",
+    "anthropic",
+    "claude code",
+    "コード"
+   ],
+   "desc": "Anthropic のターミナルコーディング Agent。コードベースの読み込みや複数ファイルの修正に適しています。",
+   "what": "Anthropic 公式のターミナルコーディング Agent。**コードベースの読み込み、複数ファイルの修正、コマンド実行**に適しており、バックグラウンドでの自動アップデートに対応しています。",
+   "src": [
+    {
+     "t": "Claude Code 公式インストールドキュメント",
+     "u": "https://code.claude.com/docs/en/setup"
+    }
+   ],
+   "intro": "Anthropic 公式のターミナルコーディング Agent。**コードベースの読み込み、複数ファイルの修正、コマンド実行**に適しており、バックグラウンドでの自動アップデートに対応しています。",
+   "prompt": "帮我在你的云电脑上装好 Claude Code（https://code.claude.com/docs/en/setup），以后阅读代码库和多文件修改用它。需要登录或授权时停下来把链接发给我由我完成。",
+   "todo": [
+    "Claude サブスクリプションまたは Anthropic Console アカウントを準備する。",
+    "ブラウザで Bot から送信された認証リンクを開き、認証を完了する。"
+   ]
+  },
+  {
+   "id": "gemini-cli",
+   "name": "Gemini CLI",
+   "cat": "コーディング Agent",
+   "tags": [
+    "gemini",
+    "google",
+    "gemini cli"
+   ],
+   "desc": "Google のオープンソースターミナル Agent。有料ユーザーおよび Google Cloud ユーザー向け。",
+   "what": "Google のオープンソースターミナル AI Agent。**有料ユーザーおよび Google Cloud プロジェクトユーザー**のターミナル操作や開発連携に適しています。",
+   "src": [
+    {
+     "t": "Gemini CLI 公式インストールドキュメント",
+     "u": "https://geminicli.com/docs/get-started/installation/"
+    },
+    {
+     "t": "google-gemini/gemini-cli 公式リポジトリ",
+     "u": "https://github.com/google-gemini/gemini-cli"
+    }
+   ],
+   "intro": "Google のオープンソースターミナル AI Agent。**有料ユーザーおよび Google Cloud プロジェクトユーザー**のターミナル操作や開発連携に適しています。",
+   "prompt": "帮我在你的云电脑上安装 Gemini CLI（https://geminicli.com/docs/get-started/installation/），以后终端交互和开发协作用它。需要登录或授权时停下来把链接发给我由我完成。",
+   "todo": [
+    "有料 Google アカウントまたは Google Cloud プロジェクトアカウントを準備する。",
+    "ブラウザで Bot から送信された認証リンクを開き、認証を完了する。"
+   ]
+  },
+  {
+   "id": "pi",
+   "name": "Pi Coding Agent",
+   "cat": "コーディング Agent",
+   "tags": [
+    "pi",
+    "pi coding agent",
+    "earendil",
+    "mario zechner",
+    "コード"
+   ],
+   "desc": "極めてシンプルで拡張可能なターミナルコーディング Agent。読み書き・修正・実行の基本4ツールのみを提供。",
+   "what": "極めてシンプルかつ高度に拡張可能なターミナルコーディング Agent。**拡張機能・スキル・プロンプトテンプレートによる専用開発ワークフローの高度なカスタマイズ**に適しています。",
+   "src": [
+    {
+     "t": "Pi 公式サイト",
+     "u": "https://pi.dev"
+    },
+    {
+     "t": "earendil-works/pi 公式リポジトリ",
+     "u": "https://github.com/earendil-works/pi"
+    },
+    {
+     "t": "Pi 移転のお知らせ",
+     "u": "https://pi.dev/news/2026/5/7/pi-has-a-new-home"
+    }
+   ],
+   "intro": "極めてシンプルかつ高度に拡張可能なターミナルコーディング Agent。**拡張機能・スキル・プロンプトテンプレートによる専用開発ワークフローの高度なカスタマイズ**に適しています。",
+   "prompt": "帮我在你的云电脑上安装 Pi Coding Agent（https://pi.dev），以后定制开发工作流和写代码用它。需要填密钥时请提醒我自己填。",
+   "todo": [
+    "利用するモデルプロバイダーの API Key を準備する。",
+    "案内が表示されたら、秘密設定ファイルに自身でキーを書き込む。"
+   ]
+  },
+  {
+   "id": "cursor-cli",
+   "name": "Cursor CLI",
+   "cat": "コーディング Agent",
+   "tags": [
+    "cursor",
+    "cursor-agent",
+    "agent",
+    "コード"
+   ],
+   "desc": "Cursor 公式コマンドライン Agent。小規模なコード修正の委譲に適しています。",
+   "what": "Cursor 公式コマンドライン Agent。Bot の利用枠を大局的な意思決定に残しつつ、**クラウドPC上で小規模なコード修正を実行する**のに適しています。",
+   "src": [
+    {
+     "t": "Cursor CLI 公式インストールドキュメント",
+     "u": "https://cursor.com/docs/cli/installation"
+    },
+    {
+     "t": "Cursor CLI 公式認証ドキュメント",
+     "u": "https://cursor.com/docs/cli/reference/authentication"
+    }
+   ],
+   "intro": "Cursor 公式コマンドライン Agent。Bot の利用枠を大局的な意思決定に残しつつ、**クラウドPC上で小規模なコード修正を実行する**のに適しています。",
+   "prompt": "帮我在你的云电脑上装好 Cursor CLI（https://cursor.com/docs/cli/installation），以后小范围代码修改用它。需要登录或授权时停下来把链接发给我由我完成。",
+   "todo": [
+    "Cursor アカウントまたは関連する認証資格情報を準備する。",
+    "ブラウザで Bot から送信された認証リンクを開き、ログインを完了する。"
+   ]
+  },
+  {
+   "id": "deepseek-harness",
+   "name": "DeepSeek Harness",
+   "cat": "コーディング Agent",
+   "tags": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "プラグイン",
+    "コード",
+    "調査",
+    "定期タスク",
+    "オープンソース"
+   ],
+   "desc": "DeepSeek のオープンソースプラグイン型 Agent。コーディング、調査、オフィス業務、定期タスクに対応。",
+   "what": "DeepSeek 公式オープンソースの**「すべてがプラグイン」アーキテクチャ Agent**。デスクトップ版と Web UI を提供。現在は開発者プレビュー段階であり、**コーディング**、**調査・分析**、**日常のオフィス業務**、**定期タスクの拡張**に適しています。",
+   "src": [
+    {
+     "t": "DeepSeek Harness 公式リポジトリ",
+     "u": "https://github.com/deepseek-ai/deepseek-harness"
+    },
+    {
+     "t": "DeepSeek Harness 公式ドキュメント",
+     "u": "https://deepseek-harness.github.io/deepseek-harness/"
+    },
+    {
+     "t": "DeepSeek Harness 公式サイト紹介",
+     "u": "https://www.deepseek.com/en/harness/"
+    },
+    {
+     "t": "KinGao: DeepSeek Harness 連携リファレンス",
+     "u": "https://x.com/KinGao476942/status/2111622701089759654"
+    },
+    {
+     "t": "KinGao: DeepSeek Harness まとめスレッド",
+     "u": "https://x.com/KinGao476942/status/2115592603605557564"
+    }
+   ],
+   "intro": "DeepSeek 公式オープンソースの**「すべてがプラグイン」アーキテクチャ Agent**。デスクトップ版と Web UI に対応。現在は開発者プレビュー段階であり、**コーディング**、**調査・分析**、**日常のオフィス業務**、**定期タスクの拡張**に適しています。",
+   "prompt": "帮我在你的云电脑上安装配置 DeepSeek Harness（https://github.com/deepseek-ai/deepseek-harness），以后日常办公、调研、写代码和跑定时任务用它。需要配置 DeepSeek API Key 时请停下来提醒我自己填。",
+   "todo": [
+    "DeepSeek API Key を準備する。",
+    "Bot のインストール完了後、設定画面で自身で API Key を入力する。"
+   ]
+  },
+  {
+   "id": "muse2api",
+   "name": "muse2api",
+   "cat": "モデル/生成",
+   "tags": [
+    "muse",
+    "muse2api",
+    "画像生成",
+    "動画",
+    "openai 互換",
+    "api"
+   ],
+   "desc": "Web版を駆動して OpenAI 互換インターフェースとしてラップし、ローカルから画像生成や動画生成を呼び出す。",
+   "what": "コミュニティによる muse.ai のリバースエンジニアリングラッパープロジェクト。**クラウドPC** 上で OpenAI 互換インターフェースを介し、Web版の無料枠を利用して対話、画像生成、動画生成を行うのに適しています。",
+   "src": [
+    {
+     "t": "muse2api プロジェクトリポジトリ（czg86389-hub）",
+     "u": "https://github.com/czg86389-hub/muse2api"
+    }
+   ],
+   "intro": "コミュニティによる muse.ai のリバースエンジニアリングラッパープロジェクト。**クラウドPC** 上で OpenAI 互換インターフェースを介し、Web版の無料枠を利用して対話、画像生成、動画生成を行うのに適しています。",
+   "prompt": "帮我在你的云电脑上部署 muse2api（https://github.com/czg86389-hub/muse2api），以后调用多模态接口进行对话、生图和生视频用它。需要填密钥时请提醒我自己填。",
+   "todo": [
+    "muse.ai アカウントを準備し、クラウドPCのブラウザでログインを完了する。",
+    "案内に従い、通信キーとログイン状態データを自身で入力する。"
+   ]
+  },
+  {
+   "id": "agently-cli",
+   "name": "agently-cli（Agent メールCLI）",
+   "cat": "通信・配信",
+   "tags": [
+    "メール",
+    "email",
+    "agently",
+    "qq メール",
+    "テンセント"
+   ],
+   "desc": "Tencent QQメールのコマンドラインツール。メール送受信、検索、添付ファイルダウンロードに対応。",
+   "what": "Tencent QQメールが提供する公式コマンドラインツール。Bot が **クラウドPC** 上でメールを送受信し、過去メールの検索や添付ファイルのダウンロードを行うのに適しています。",
+   "src": [
+    {
+     "t": "Agent メール公式サイト",
+     "u": "https://agent.qq.com"
+    },
+    {
+     "t": "agently-cli npm パッケージ",
+     "u": "https://www.npmjs.com/package/@tencent-qqmail/agently-cli"
+    }
+   ],
+   "intro": "Tencent QQメールが提供する公式コマンドラインツール。Bot が **クラウドPC** 上でメールを送受信し、過去メールの検索や添付ファイルのダウンロードを行うのに適しています。",
+   "prompt": "帮我在你的云电脑上安装 agently-cli（https://agent.qq.com），以后收发邮件、检索历史邮件和下载附件用它。需要登录或授权时停下来把链接发给我由我完成。",
+   "todo": [
+    "QQメールまたは Agent メールのアカウントを準備する。",
+    "Bot から送信された認証リンクをブラウザで開き、認証を完了する。"
+   ]
+  },
+  {
+   "id": "lark-cli",
+   "name": "Feishu CLI（lark-cli）",
+   "cat": "通信・配信",
+   "tags": [
+    "飛書",
+    "lark",
+    "feishu",
+    "多次元テーブル",
+    "ドキュメント",
+    "lark-cli"
+   ],
+   "desc": "Feishu 公式コマンドラインツール。ユーザー権限でクラウドドキュメント、多次元テーブル、クラウドドライブを操作。",
+   "what": "Feishu 公式コマンドラインツール。Bot が個人アカウントとして **クラウドPC** 上で Feishu クラウドドキュメント、多次元テーブル、クラウドドライブ、ナレッジベースを操作するのに適しています。",
+   "src": [
+    {
+     "t": "larksuite/cli 公式リポジトリ",
+     "u": "https://github.com/larksuite/cli"
+    }
+   ],
+   "intro": "Feishu 公式コマンドラインツール。Bot が個人アカウントとして **クラウドPC** 上で Feishu クラウドドキュメント、多次元テーブル、クラウドドライブ、ナレッジベースを操作するのに適しています。",
+   "prompt": "帮我在你的云电脑上安装配置飞书 CLI（https://github.com/larksuite/cli），以后操作飞书云文档、多维表格和云盘用它。需要登录或授权时停下来把链接发给我由我完成。",
+   "todo": [
+    "Feishu の個人アカウントを準備する。",
+    "認証リンクを開き、ターミナルに表示されたデバイスコードを入力して認証を完了する。"
+   ]
+  },
+  {
+   "id": "feishu-bot",
+   "name": "Feishu ボット常時接続",
+   "cat": "通信・配信",
+   "tags": [
+    "飛書",
+    "lark",
+    "feishu",
+    "ボット",
+    "bot",
+    "lark-oapi",
+    "グループチャット"
+   ],
+   "desc": "常時接続によりパブリックIP不要で Feishu のメッセージを受信し、グループチャットや個別チャットでのタスク割り振りを実現。",
+   "what": "Feishu 公式 Python SDK をベースとした常時接続メッセージング構成。パブリック IP のない **クラウドPC** 上でイベント監視やグループチャットボット連携を実現するのに適しています。",
+   "src": [
+    {
+     "t": "Feishu 公式 Python SDK（larksuite/oapi-sdk-python）",
+     "u": "https://github.com/larksuite/oapi-sdk-python"
+    },
+    {
+     "t": "Feishu オープンプラットフォーム",
+     "u": "https://open.feishu.cn/"
+    }
+   ],
+   "intro": "Feishu 公式 Python SDK をベースとした常時接続メッセージング構成。パブリック IP のない **クラウドPC** 上でイベント監視やグループチャットボット連携を実現するのに適しています。",
+   "prompt": "帮我在你的云电脑上配置基于飞书 Python SDK（https://github.com/larksuite/oapi-sdk-python）的长连接机器人，以后接收群聊事件和派发任务用它。需要填密钥时请提醒我自己填。",
+   "todo": [
+    "Feishu オープンプラットフォームでカスタム社内アプリを作成し、常時接続とボット機能を有効にする。",
+    "案内に従い、アプリの App ID と App Secret を自身で入力する。"
+   ]
+  },
+  {
+   "id": "x-api",
+   "name": "X API ポスト投稿（OAuth 1.0a PIN）",
+   "cat": "通信・配信",
+   "tags": [
+    "x",
+    "twitter",
+    "ツイッター",
+    "投稿",
+    "oauth",
+    "api"
+   ],
+   "desc": "OAuth 1.0a PIN 認証を利用して X 公式 API を呼び出し、ポスト投稿や画像添付を行う。",
+   "what": "OAuth 1.0a PIN 認証に基づく X 公式 API 呼び出し手法。Bot が **クラウドPC** 上でポスト投稿、画像添付、ポスト削除などのタスクを安全に実行するのに適しています。",
+   "src": [
+    {
+     "t": "X 公式ドキュメント: PIN-based OAuth",
+     "u": "https://docs.x.com/resources/fundamentals/authentication/oauth-1-0a/pin-based-oauth"
+    }
+   ],
+   "intro": "OAuth 1.0a PIN 認証に基づく X 公式 API 呼び出し手法。Bot が **クラウドPC** 上でポスト投稿、画像添付、ポスト削除などのタスクを安全に実行するのに適しています。",
+   "prompt": "帮我在你的云电脑上配置 X API 发帖（https://docs.x.com/resources/fundamentals/authentication/oauth-1-0a/pin-based-oauth），以后发帖、传图和管理推文用它。需要填密钥时请提醒我自己填，需要登录授权时把链接发给我。",
+   "todo": [
+    "X Developer Platform でアプリを作成し、読み書き（Read and Write）権限を有効にする。",
+    "認証リンクを開き、ページに表示された PIN コードを Bot に送信する。"
+   ]
+  },
+  {
+   "id": "gh",
+   "name": "GitHub CLI（gh）",
+   "cat": "通信・配信",
+   "tags": [
+    "github",
+    "gh",
+    "git",
+    "リポジトリ",
+    "push",
+    "pr"
+   ],
+   "desc": "GitHub 公式コマンドラインツール。コードのプル・プッシュや PR 管理に使用。",
+   "what": "GitHub 公式コマンドラインツール。Bot が **クラウドPC** 上でプライベートリポジトリのクローン、コードのプッシュ、PR 作成、Actions 管理を行うのに適しています。",
+   "src": [
+    {
+     "t": "GitHub CLI Linux インストールドキュメント",
+     "u": "https://github.com/cli/cli/blob/trunk/docs/install_linux.md"
+    },
+    {
+     "t": "gh auth login 公式マニュアル",
+     "u": "https://cli.github.com/manual/gh_auth_login"
+    }
+   ],
+   "intro": "GitHub 公式コマンドラインツール。Bot が **クラウドPC** 上でプライベートリポジトリのクローン、コードのプッシュ、PR 作成、Actions 管理を行うのに適しています。",
+   "prompt": "帮我在你的云电脑上安装 GitHub CLI（https://github.com/cli/cli/blob/trunk/docs/install_linux.md），以后管理代码仓库、推送分支和提交 PR 用它。需要登录或授权时停下来把链接发给我由我完成。",
+   "todo": [
+    "GitHub アカウントを準備する。",
+    "ブラウザで認証リンクを開き、対応するワンタイム確認コードを入力する。"
+   ]
+  },
+  {
+   "id": "playwright",
+   "name": "Playwright",
+   "cat": "データ収集",
+   "tags": [
+    "playwright",
+    "ブラウザ",
+    "クローラー",
+    "スクリーンショット",
+    "chromium",
+    "自動化"
+   ],
+   "desc": "Microsoft のオープンソースブラウザ自動化ライブラリ。ヘッドレスブラウザでスクリーンショット撮影や動的ページのスクレイピングを実行。",
+   "what": "Playwright は Microsoft のオープンソース自動化ライブラリです。手動でのブラウザ操作枠を消費することなく、Bot に **一括 Web スクリーンショット撮影や動的レンダリングページのスクレイピング** を実行させるのに適しています。",
+   "src": [
+    {
+     "t": "Playwright Python 公式ドキュメント",
+     "u": "https://playwright.dev/python/docs/intro"
+    }
+   ],
+   "intro": "Playwright は Microsoft のオープンソース自動化ライブラリです。手動でのブラウザ操作枠を消費することなく、Bot に **一括 Web スクリーンショット撮影や動的レンダリングページのスクレイピング** を実行させるのに適しています。",
+   "prompt": "帮我在你的云电脑上安装 Playwright（https://playwright.dev/python/docs/intro），以后网页渲染、截图和抓取任务用它。",
+   "todo": [
+    "クラウドPCに Python 実行環境が備わっていることを確認する。"
+   ]
+  },
+  {
+   "id": "yt-dlp",
+   "name": "yt-dlp",
+   "cat": "データ収集",
+   "tags": [
+    "yt-dlp",
+    "動画ダウンロード",
+    "youtube",
+    "bilibili",
+    "音声"
+   ],
+   "desc": "オープンソースのコマンドライン音声・動画ダウンロードツール。音声抽出や複数プラットフォームからのダウンロードに対応。",
+   "what": "yt-dlp は数千のサイトに対応するコマンドライン音声・動画ダウンロードツールです。後続の文字起こし処理などのため、Bot が **動画の一括ダウンロードや音声の抽出** を行うのに適しています。",
+   "src": [
+    {
+     "t": "yt-dlp 公式リポジトリ",
+     "u": "https://github.com/yt-dlp/yt-dlp"
+    }
+   ],
+   "intro": "yt-dlp は数千のサイトに対応するコマンドライン音声・動画ダウンロードツールです。後続の文字起こし処理などのため、Bot が **動画の一括ダウンロードや音声の抽出** を行うのに適しています。",
+   "prompt": "帮我在你的云电脑上安装 yt-dlp（https://github.com/yt-dlp/yt-dlp），以后批量下载音视频和提取音频用它。",
+   "todo": [
+    "ダウンロード対象のメディアリンクを準備する。",
+    "ログインが必要なサイトの場合は、対応する Cookie ファイルをエクスポートして用意しておく。"
+   ]
+  },
+  {
+   "id": "ffmpeg",
+   "name": "FFmpeg",
+   "cat": "基本ツール",
+   "tags": [
+    "ffmpeg",
+    "動画",
+    "音声",
+    "トランスコード",
+    "字幕",
+    "動画編集"
+   ],
+   "desc": "オープンソースの音声・動画処理ツール。トランスコード、フレーム切り出し、音声抽出、字幕焼き込みに対応。",
+   "what": "FFmpeg はマルチメディア基底処理のコアツールです。Bot による **音声・動画のトランスコード、圧縮、フレーム切り出し、音声抽出** に適しています。",
+   "src": [
+    {
+     "t": "FFmpeg 公式ダウンロードページ",
+     "u": "https://ffmpeg.org/download.html"
+    }
+   ],
+   "intro": "FFmpeg はマルチメディア基底処理のコアツールです。Bot による **音声・動画のトランスコード、圧縮、フレーム切り出し、音声抽出** に適しています。",
+   "prompt": "帮我在你的云电脑上安装 FFmpeg（https://ffmpeg.org/download.html），以后处理音视频转码、剪辑、压缩和截帧用它。",
+   "todo": [
+    "現在のクラウドPCに基本的な管理者権限があることを確認する。"
+   ]
+  },
+  {
+   "id": "nodejs",
+   "name": "Node.js と npm",
+   "cat": "基本ツール",
+   "tags": [
+    "node",
+    "nodejs",
+    "npm",
+    "nvm",
+    "環境",
+    "codex",
+    "gemini cli",
+    "pi",
+    "lark-cli"
+   ],
+   "desc": "JavaScript 実行環境。多数のターミナル Agent ツールの依存関係を提供。",
+   "what": "Node.js と npm はフロントエンドおよび各種 AI CLI の実行基盤です。Bot に **最新コマンドラインツールの実行環境** を提供するのに適しています。",
+   "src": [
+    {
+     "t": "nvm 公式リポジトリ",
+     "u": "https://github.com/nvm-sh/nvm"
+    },
+    {
+     "t": "Node.js 公式サイト",
+     "u": "https://nodejs.org/"
+    }
+   ],
+   "intro": "Node.js と npm はフロントエンドおよび各種 AI CLI の実行基盤です。Bot に **最新コマンドラインツールの実行環境** を提供するのに適しています。",
+   "prompt": "帮我在你的云电脑上安装好 Node.js 与 npm（https://github.com/nvm-sh/nvm），以后运行前端项目和各类命令行工具用它。",
+   "todo": [
+    "クラウドPCのネットワーク接続を確認する（外部アカウントの準備は不要）。"
+   ]
+  },
+  {
+   "id": "egress-proxy",
+   "name": "固定出口プロキシ（SSH トンネル）",
+   "cat": "基本ツール",
+   "tags": [
+    "プロキシ",
+    "proxy",
+    "socks",
+    "ssh",
+    "地域制限",
+    "vps",
+    "ネットワーク"
+   ],
+   "desc": "SSH ダイナミック転送を利用して固定出口プロキシを構築し、サービスの地域制限を解決。",
+   "what": "固定出口プロキシは SSH ダイナミックポート転送を利用してローカル SOCKS5 プロキシを構築します。Bot が **地域制限のあるサービスにアクセスする** 際に、安定した出口 IP を維持するのに適しています。",
+   "src": [
+    {
+     "t": "OpenSSH ssh マニュアル（-D ダイナミック転送）",
+     "u": "https://man.openbsd.org/ssh"
+    }
+   ],
+   "intro": "固定出口プロキシは SSH ダイナミックポート転送を利用してローカル SOCKS5 プロキシを構築します。Bot が **地域制限のあるサービスにアクセスする** 際に、安定した出口 IP を維持するのに適しています。",
+   "prompt": "帮我在你的云电脑上配置基于 SSH 隧道的固定出口代理（https://man.openbsd.org/ssh），以后访问受地域限制的服务用它。需要填服务器地址和私钥时请提醒我自己填。",
+   "todo": [
+    "SSH 秘密鍵ログインに対応した海外サーバーを1台準備する。",
+    "案内に従い、ログイン秘密鍵と接続情報を自身で秘密ファイルに書き込む。"
+   ]
+  },
+  {
+   "id": "mcp-connectors",
+   "name": "MCP コネクタ",
+   "cat": "基本ツール",
+   "tags": [
+    "mcp",
+    "connector",
+    "コネクタ",
+    "gmail",
+    "google drive",
+    "model context protocol"
+   ],
+   "desc": "外部サービスやカスタム MCP サーバーを Grok に接続し、ツール呼び出し能力を拡張。",
+   "what": "MCP コネクタは外部サービスとモデルの連携経路を開通させます。Bot が **外部ツールやクラウドデータを直接呼び出して** 複雑な連携タスクを完了するのに適しています。",
+   "src": [
+    {
+     "t": "Grok 公式ドキュメント: Connectors",
+     "u": "https://docs.x.ai/grok/connectors"
+    }
+   ],
+   "intro": "MCP コネクタは外部サービスとモデルの連携経路を開通させます。Bot が **外部ツールやクラウドデータを直接呼び出して** 複雑な連携タスクを完了するのに適しています。",
+   "prompt": "帮我在你的云电脑上接入 MCP 连接器（https://docs.x.ai/grok/connectors），以后调用外部工具和同步云端数据用它。需要第三方授权时把链接发给我，需要填密钥时请提醒我自己填。",
+   "todo": [
+    "ブラウザでコネクタ管理画面にアクセスし、接続対象のアカウントを準備する。",
+    "案内に従い、対象サービスのアドレスや認証キーを自身で入力する。"
+   ]
+  }
+ ]
+}

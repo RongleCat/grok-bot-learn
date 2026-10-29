@@ -1,0 +1,3108 @@
+{
+  "updated": "2026-10-29",
+  "ui": {
+    "lead": "Aggregating official desktop and mobile updates for Grok Bot, along with Tiezhu's update breakdowns on X.",
+    "note": "Official entries are Chinese summaries; refer to the original official posts for details.",
+    "official": "Official Post",
+    "tweet": "Tweet Breakdown",
+    "more": "Expand earlier updates",
+    "synced": "Synced to",
+    "empty": "No relevant updates found",
+    "full": "View full Chinese translation"
+  },
+  "official": [
+    {
+      "id": "ios-1.19.0",
+      "platform": "ios",
+      "version": "1.19.0",
+      "date": "2026-10-28",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "Routine Bug Fixes and Experience Improvements",
+      "points": [
+        "Fixed known issues to improve app stability and user experience."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Bug fixes and improvements"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.78.1",
+      "platform": "pc",
+      "version": "0.78.1",
+      "date": "2026-10-27",
+      "url": "https://x.ai/changelog/bot#v0.78.1",
+      "title": "New Shopping Cards and Subscription Management",
+      "points": [
+        "Products are displayed in a card carousel, supporting purchase initiation with end-to-end package tracking by the Bot.",
+        "Added subscription templates supporting expiration charge-prevention reminders, canceling unused subscriptions, and monitoring renewals.",
+        "Copying replies preserves headings, lists, and links without losing formatting when pasted into external apps.",
+        "Supports linking Shop Pay, which can be set as the Bot's preferred payment method."
+      ],
+      "full": [
+        [
+          "Improvements",
+          [
+            "App cards, plugin rows, sign-in errors, and connector errors relayed by the Bot now display the connector's name instead of internal IDs.",
+            "The Bot's browser types character-by-character and moves the mouse across every website it fills.",
+            "On sign-in pages for Cloudflare, Coinbase, Gusto, YouTube, Railway, Google Ads, Meta Ads, and TikTok for Business, the Bot recommends corresponding connectors.",
+            "In Slack, unlinked users receive notices about limited functionality and account linking guides, including in threads the Bot follows.",
+            "Where free trials were previously offered, Grok Bot now presents unified plan options: \"Get Grok Bot\" and \"See Unified Plans\".",
+            "When a connector requires permissions its connection cannot request, the Bot notes that reconnecting will not resolve the issue.",
+            "When setting up Grok Bot from X, the initial reply no longer waits for all X data to finish loading.",
+            "When asking the Bot what it can connect to, up to 3 recommended apps are prioritized.",
+            "The Bot applies multiple Page edits simultaneously; if any edit cannot be applied, the Page remains unchanged.",
+            "Secure Forms that only require a sign-in verification code arrive without extraneous explanations.",
+            "Bot computer settings list which running Bots will be stopped when updating the Bot computer.",
+            "Approval cards and draft cards no longer display older \"Allow\" rules that were removed to make room when the list was full.",
+            "\"Connect apps\" lists apps you connected through Grok under \"From Grok\", and each \"Connect\" button has uniform width.",
+            "The Vault toolbar stays on a single line with a \"More\" menu, and Vault settings use the same card styling as other settings.",
+            "\"Share\" at the top of Pages matches the \"Share\" button styling on Team Bots, and intro text in the share dialog wraps more evenly.",
+            "Staged attachments in the message box display more compactly.",
+            "Captions appear closer to images in the full-screen viewer.",
+            "The \"Add skills\" dialog no longer shows a \"Back\" button in its skill library step.",
+            "The \"Get Grok Bot for mobile\" menu item has shorter text in Portuguese.",
+            "Bot usage breakdown labels the summary row as \"Deleted bots, group chats and other people's bots\".",
+            "When your team restricts sharing, the share control displays \"Only team admins can share Bots.\" (Teams)",
+            "Team Pages appear under \"Library\" for each Bot that published them. (Teams)",
+            "Hovering over a Team Bot's \"Library\" row displays a \"Pin\" button, and pinned rows always display a pin icon. (Teams)",
+            "When a Team Bot trigger requires one of your connectors, it requests it in the trigger's Slack thread and @mentions you. (Teams)",
+            "On the team dashboard, \"Bot computers\" groups setup scripts, configuration files, and team secrets together, while the \"Security & compliance\" card includes Bot computer controls. (Teams)",
+            "The \"Status\" card on the team dashboard provides \"Download\" and \"Copy link\" actions for desktop apps. (Teams)",
+            "The Grok Bot management page displays \"Shared Bots\" along with \"Manage Shared Bots\" and \"Create Bot\". (Teams)"
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Clicking \"Copy\" on a reply preserves headings, lists, and links when pasted into Slack, Gmail, Docs, or Notion; selected text pastes as Markdown.",
+            "Scrolling through long conversations no longer jumps after resizing the window.",
+            "Specific running statuses display immediately, while generic statuses like \"Working on it\" and \"Thinking\" wait a moment first.",
+            "For greetings, thanks, or casual chat, the status displays as \"is on it\" or \"is working on it\".",
+            "Clicking \"Update\" installs your selected version, and open \"Update ready\" dialogs switch to the latest completed download.",
+            "The \"Update\" button displays \"Restarting…\" until restart begins; if restart is rejected, each \"Update\" button explains why.",
+            "Single-choice question cards bring back \"Something else\" so you can enter a custom answer.",
+            "Pressing Enter while composing characters with an IME in question cards no longer submits your answer.",
+            "Bot computer cards stay on \"Asleep\" during brief background wakeups, and switch to \"Waking up…\" immediately when you wake them.",
+            "The Bot can remove reactions added to your messages, and the reaction is removed from the chat accordingly.",
+            "Task lists and conversation titles refresh promptly when reconnecting, rather than remaining stale.",
+            "Delayed replies from a previous account no longer change or pin the primary Bot when switching accounts.",
+            "Clicking the current Bot in the sidebar closes any open Page.",
+            "The \"Drop files to add to chat\" overlay no longer gets stuck when Pages open or close during a file drag.",
+            "Diagrams on Pages wrap long labels instead of truncating them, and connectors link accurately to each node's connection points.",
+            "Pull request tags that fail to load status stay inline as plain text, and their hover card offers a \"Try again\" option.",
+            "The usage limit banner automatically dismisses when usage drops back below the limit.",
+            "Clicking \"Back\" from a connector returns to the previous screen and preserves your \"Vault\" tab.",
+            "After 10 minutes, connection cards ask \"Still signing in?\" rather than saying sign-in was not completed.",
+            "When a connector is briefly busy signing in, its connection card and Slack sign-in link continue to display normally.",
+            "Connector logins requiring prior setup explain what needs to be added and open the corresponding plugin page.",
+            "Signing into an already connected Google account reuses that account directly, showing a single reconnect card instead of multiple.",
+            "Google Calendar only asks you to reconnect when re-signing in can grant the missing permissions.",
+            "Connector tools remain in the list even if connectors change while the tool list is loading.",
+            "When a plugin is unavailable, the Bot explains directly rather than listing the entire directory.",
+            "Connection cards for Railway, Square, TradingView, and Google Ads only appear on their respective pages.",
+            "Plain-text Gmail drafts written by the Bot open as rich text for better readability on mobile and avoid hard line breaks when sent.",
+            "Gmail drafts and sends support attaching files from the Bot's computer in more scenarios.",
+            "The Bot automatically retries sending an email once if the mail server connection times out.",
+            "Slack connection links opened while signed into another account work properly after switching to the correct account and reconnecting.",
+            "Clicking \"Remove from Slack\" now disconnects Slack.",
+            "With \"Route traffic through this computer\" enabled, \"Settings\" explains when Grok Bot's computer is asleep and reconnects routing once it wakes.",
+            "With \"Route traffic through this computer\" enabled, pages no longer fail immediately when only connections to other hosts are refused.",
+            "Approved browser actions no longer fail on some Bot computers when pages have not changed.",
+            "Computer view automatically follows browser tabs that the Bot brings to the foreground.",
+            "When saving a file from the Bot's computer, \"Couldn't save this file\" is shown if the file was modified during download.",
+            "Files saved in other chats (such as Slack files uploaded to a Team Bot) can now be saved in new chats without failing.",
+            "When the Bot's computer repeatedly refuses to save, \"Reset\" and \"Recover\" keep the current disk instead of restoring an older backup.",
+            "Grok Bot starts the Bot's computer during account merges.",
+            "Triggers created in the first chat with a new Bot run according to your local time zone instead of UTC.",
+            "Saving twice to the same memory at the same time no longer overwrites each other.",
+            "When reference images cannot be read, image generation terminates with a clear error rather than silently ignoring them.",
+            "Total spend recorded by the Bot uses the correct currency, and other currencies are no longer counted as USD.",
+            "Bots using built-in code review tools act with your permissions and will never approve your own pull requests.",
+            "Order cards omit \"Ship to\" for orders that do not require shipping; orders submitted via shop connectors check out using the connector's native payment options.",
+            "For accounts unable to use the Tailscale plugin, it displays \"Not available yet\" instead of installing an unreachable plugin.",
+            "In \"Connect Apps\", single-character logos display fully inside their card tiles.",
+            "Under \"General\", unnamed accounts display \"Enter your name\" on the \"Account\" card.",
+            "Clicking a webhook trigger opens its details, including the webhook URL.",
+            "Emoji search correctly matches typed dotted I in Turkish.",
+            "Purchasing a subscription plan during desktop sign-in returns to the approval screen so the app can finish signing in.",
+            "Users belonging to multiple teams without a specific team selected can now use \"Share\". (Teams)",
+            "A Team Bot's \"Shared with your team\" list only displays Pages created by that Bot. (Teams)",
+            "\"Shared with you\" includes the most frequently used Bots in large teams when the list is too long to show all. (Teams)",
+            "Team Bot lists still load properly when an individual permission check times out, without failing completely. (Teams)",
+            "Users belonging to multiple teams without selecting one can publish public Bot templates if their team permissions allow. (Teams)",
+            "When requested, Team Bots perform Slack searches instead of refusing directly after stating they cannot open other conversations. (Teams)",
+            "Team Bots accurately explain where teammates' Slack channel listeners send reports. (Teams)",
+            "Team Bots inform admins that they can edit the Bot's name and avatar directly in a 1:1 chat with it. (Teams)",
+            "With \"Terminate Inactive Computers\" enabled, a Bot computer is considered inactive if no messages have been sent to any of its Bots for 30 consecutive days. (Enterprise)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "android-2026-10-27",
+      "platform": "android",
+      "version": "",
+      "date": "2026-10-27",
+      "url": "https://play.google.com/store/apps/details?id=ai.x.grok.bot&hl=en",
+      "title": "Routine Bug Fixes and Experience Improvements",
+      "points": [
+        "Fixed known issues to improve app stability and user experience."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Bug fixes and improvements"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.77.0",
+      "platform": "pc",
+      "version": "0.77.0",
+      "date": "2026-10-26",
+      "url": "https://x.ai/changelog/bot#v0.77.0",
+      "title": "Memory Import, Payment Management, and Q&A Cards",
+      "points": [
+        "Supports importing memory and preferences from other AI assistants for seamless context migration.",
+        "Integrates with 1Password to autofill login credentials without exposing passwords.",
+        "The Bot can guide multi-step questions on a single card and supports custom answers.",
+        "Vault adds a Payments tab to set preferred payment methods, with every charge still requiring approval."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Connect 1Password without sharing a vault: you approve each login in 1Password, and 1Password fills it into the Bot's browser without the Bot seeing it. Requires Grok Bot 0.68.0 or later.",
+            "\"Import Memory to Grok Bot\" in \"Settings\" imports preferences and context from other AI assistants into your primary Bot. Requires Grok Bot 0.75.2 or later.",
+            "The Bot can ask multiple questions on a step-by-step card and offer \"Your own answer\" when none of the options fit.",
+            "Tables in chat add a copy button for Slack-ready formatting or Markdown, and wide tables can open full-screen with zoom support.",
+            "\"Vault\" adds a \"Payments\" tab to choose the Bot's preferred payment method, with every purchase still requiring your approval.",
+            "Address fields in forms and \"Vault\" suggest streets as you type, and entering a ZIP code autofills city and state.",
+            "When Gmail is signed out (e.g. after Google revokes access), your primary Bot notifies you in chat with a reconnect option.",
+            "After connecting your first app, the Bot recommends a complementary app, such as Google Calendar after connecting Gmail.",
+            "Added \"Português (Portugal)\" to supported languages, and Brazilian Portuguese is now labeled \"Português (Brasil)\".",
+            "Right-click an emoji to pin it; pinned emojis appear first in quick reactions.",
+            "Page owners can delete Pages from the \"Library\", removing them from all shared members.",
+            "\"Order Concierge\" and \"Deal Watcher\" templates track orders, refunds, and returns, and monitor prices and coupons without making purchases without your confirmation.",
+            "The Bot can update names, hints, and card details for saved \"Vault\" items for you.",
+            "Custom MCP servers using private Certificate Authorities work once you approve the authority.",
+            "In 1:1 chats with a Team Bot, team members can ask it to message other Team Bots they have access to. (Teams)",
+            "In Slack, Team Bots can edit their own sent messages and remove reactions they added. (Teams)",
+            "Team admins can restrict Bot sharing to admins only, displaying \"Your admin has disabled Bot sharing\" on sharing controls. (Teams)",
+            "Enterprise audit logs record changes to team trusted CA certificates. (Enterprise)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Grok Bot introduces new fonts for text and code, including on Pages. Requires Grok Bot 0.68.0 or later.",
+            "In the app and Slack, Bot working statuses display as short phrases in your local language.",
+            "Connector buttons everywhere consistently display \"Connect\"; signed-out connectors show \"Not connected\"; and \"Your plugins\" offers \"Reconnect\" for plugins that stopped working. Requires Grok Bot 0.75.2 or later.",
+            "In \"Connect Apps\", clicking \"Add\" installs plugins and opens their login page in one step, and \"Add\" and \"Uninstall\" complete immediately upon saving. Requires Grok Bot 0.75.2 or later.",
+            "Plugins display \"Connecting…\" while signing in and \"Connected\" once finished.",
+            "Auto-review allows more reversible private actions to proceed without approval cards, and preserves approval state when only open tabs change.",
+            "Background tasks started in your own words no longer require Auto-review approval to begin.",
+            "In the app and Slack, Auto-review approval cards stay active for 30 minutes instead of 10.",
+            "\"Settings\" adds a \"Permissions\" section listing Auto-review rules under \"Always Ask\" and \"Allow without Asking\", each with its own \"Add Rule\" button. Requires Grok Bot 0.75.2 or later.",
+            "Auto-review rule cards in chat display each rule as a full sentence, noting older \"Allow\" rules removed to make space.",
+            "Approval cards label connectors by service name, including specific accounts when two account names are identical.",
+            "Dictation enters text into the message box in real time as you speak.",
+            "Email draft cards bring back a \"Discard\" button so you can discard drafts without sending.",
+            "Section headers in \"Settings\" (like \"Appearance\") now have a \"Copy link\" option, not just individual settings.",
+            "The command palette now displays each Bot's latest message and link text (instead of raw Markdown), with Ctrl-N and Ctrl-P cursor movement support on Mac.",
+            "Dock badge now counts unread conversations instead of unread messages.",
+            "Hovering over wide tables displays scroll arrows.",
+            "Vault entries add a \"Hints\" field to tell the Bot when to use each item.",
+            "Saved addresses, phones, and emails are grouped under \"Contact info\" in Vault, where a single contact can contain multiple emails and phone numbers.",
+            "The Bot prioritizes credentials and cards saved in Vault before attempting password managers or other payment methods.",
+            "Vault lists the Bot's own email first; passwords are masked when editing saved logins, and forms include a \"Remove\" option.",
+            "When an app you request isn't installed, the Bot checks the plugin directory and links to its page in \"Connect Apps\".",
+            "When the Bot hands over the Bot computer for you to sign into sites like Google, GitHub, or QuickBooks, it offers the connector and ends the handover once connected.",
+            "When an app connects directly without sign-in, the Bot continues your task in the same reply.",
+            "The Bot only removes or renames connectors when you explicitly ask.",
+            "Account rows for plugins indicate whether sign-in is pending or incomplete.",
+            "Plugin searches look up terms or retry in English when you specify app names in Chinese, Japanese, or Korean.",
+            "Slack message drafts display formatted previews and who will be notified, warning if Slack cannot confirm the channel.",
+            "In Slack, the Bot confirms what a reply addresses before taking action, and replies to follow-up questions within the thread in DMs.",
+            "In shared Slack conversations, the Bot verifies reading permissions for everyone before sending each message.",
+            "Unlinked users messaging the Bot in Slack DMs receive a \"Connect Slack account\" prompt.",
+            "When a safety filter blocks a Bot computer task, the Bot retries on another model before asking you to perform the step.",
+            "Browser screenshots saved by the Bot retain their full size (including full-page captures) rather than scaled-down copies.",
+            "Keys stored in system keyrings by apps on the Bot computer (such as Okta Verify keys) are preserved across Bot computer rebuilds.",
+            "The Bot pays in a fixed order without asking which wallet to use, and Link one-time cards are only offered in the US and Canada.",
+            "When asked what happens if an order goes wrong, the Bot only cites protection terms it read and will not promise refunds on its own.",
+            "When your X account does not have X Money enabled, the Bot provides a link to the \"Money\" tab on X.",
+            "When asking the Bot to schedule events without a connected calendar, it recommends Google Calendar first, or Outlook Calendar if you use Outlook.",
+            "When your plan does not include triggers, the Bot indicates which plans offer the feature.",
+            "Every email the Bot sends to another person from its own address now includes a one-click unsubscribe, not just the first.",
+            "The Bot no longer sends emails to addresses with permanent bounces.",
+            "Follow-ups sent to running cloud agents started by the Bot are delivered immediately.",
+            "Images on Pages fade in, and broken images display their descriptions.",
+            "File icons in chat and \"Library\" feature a new design.",
+            "Chat smoothly slides when opening or closing the details panel.",
+            "Dialog widths remain consistent, with wider panels for \"Connect Apps\" and shortcuts.",
+            "After connecting multiple apps, the bottom of the sidebar collapses \"Connect apps\" into an icon beside your name, no longer flashing open at startup.",
+            "A unified banner in \"Settings\" suggests consolidating multiple subscriptions into a single plan.",
+            "Plugins not permitted by team admins display \"Disabled by team admin\". (Teams)",
+            "Team admins can choose whether members can publish Bot templates publicly, team-only, or not at all. (Teams)"
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "1Password autofill recovers from more issues (such as sleeping extensions or expired approvals), and the Bot proceeds immediately once you approve.",
+            "On Windows and Linux, the Bot recognizes installed 1Password apps and prompts to connect.",
+            "Messages received by the server stay marked as delivered, and clicking \"Resend\" on messages labeled \"Not delivered yet\" sends them.",
+            "Chat stays stable when scrolling past tables and links or after zooming; dragging selections across wide tables auto-scrolls the table.",
+            "Desktop notifications dismiss automatically once you read a reply or the Bot stops waiting, showing the Bot's current name.",
+            "Answered questions stay answered, and unread counts no longer jump unexpectedly.",
+            "Opening a chat displays messages properly even if marking as read fails.",
+            "Sent images no longer flash gray after uploading, and camera photos retain their proper upright orientation.",
+            "Two messages sent in quick succession in long chats now both receive replies.",
+            "When one of your Bots wakes another to perform a task, questions asked by the second Bot are sent to the original chat.",
+            "Saved logins and card autofills are more reliable, including on subdomains and Shopify checkout pages, without misfilling unrelated fields.",
+            "Importing passwords from CSV skips login notes so long notes don't block imports; if Vault is full, it explains how many items couldn't fit.",
+            "Background tasks stop calling signed-out connectors and prompt you to reconnect.",
+            "Connection cards only appear when a connector explicitly needs sign-in, not for other errors.",
+            "Connection cards wait as long as the newly opened sign-in page stays open; if sign-in is rejected, it returns you to Grok Bot with an explanation.",
+            "Connector logins can be completed up to 1 hour after initiation.",
+            "When Google rate limits requests, Google apps stay connected; the Bot prompts to try again later rather than asking you to reconnect.",
+            "Google accounts without Gmail stay connected, and the Bot asks for an account that includes Gmail.",
+            "Adding a second Gmail or Google Drive account opens Google's account picker, and removing an account does not affect others.",
+            "Gmail replies quote the original message so Gmail threads conversations, signature logos stay inline, and Gmail auto-retries on read/send failures.",
+            "\"Ask first\" and \"Block\" rules for Gmail search and read still apply even when the Bot invokes them under other names.",
+            "After signing in via connection cards, the Bot resumes in more apps (such as QuickBooks, Zoho, and Workday); this also applies to team members in Team Bots.",
+            "Jira and Confluence requests find your site on the first try.",
+            "Requesting Vercel runtime logs beyond the plan retention period returns currently retained logs.",
+            "If a connector server refuses registration, \"Error\" displays instead of a broken login UI.",
+            "Clear prompts appear when connector access cards expire or are interrupted, and the Bot recognizes the action was not executed.",
+            "When background tasks need one of your apps, the Bot asks via an allow card in-app, or offers \"Allow once\" and \"Skip\" options in Slack.",
+            "In Slack, users without linked Grok Bot accounts cannot use the owner's logins or private data through the owner's Bot.",
+            "In Slack, the Bot still reads threads and channels properly even when the Slack connector is connected or connector lookup fails.",
+            "In Slack, messages sent without a specified conversation post once in the current conversation.",
+            "Retrying after a failed Slack conversation turn reads the full thread.",
+            "Slack triggers listening to messages recognize images attached to the messages that triggered them.",
+            "Unsaveable settings and sidebar changes revert to saved states, and folder changes from two devices no longer overwrite each other.",
+            "When usage fails to load, \"Usage & Billing\" retains the last reading and displays \"Try again\", even after restarting the app.",
+            "Grok Bot offers a \"Stop and Update\" option when the Bot is working and an update is available.",
+            "Template skills for Bots appear under \"Private skills\" labeled \"From template\".",
+            "Links inside Pages pointing to Grok Bot open in-app; opening Pages from \"Library\" shows saves completed while loading.",
+            "After being removed from a team, your personal Pages reappear in \"Library\".",
+            "Team members can view Pages shared with the team under \"Shared with your team\" in a Team Bot's \"Library\". (Teams)",
+            "Mentioning Bots with multi-word names opens the Bot properly.",
+            "Names, titles, and instructions no longer split emojis when truncated at length limits.",
+            "The full-screen media viewer title updates with the item currently shown on screen.",
+            "The Bot computer view exits \"Waking up\" once the screen is ready.",
+            "Taking control of the Bot computer to sign in with a security key pops up the security key prompt properly.",
+            "The Bot computer stays running under low memory and recovers faster after crashes, reducing conversation turn terminations from \"Couldn't Reach Grok Bot's Computer\".",
+            "Commands waiting for input on the Bot computer (such as package install prompts) finish cleanly without hanging.",
+            "The Bot's browser retains site logins after the last window closes, and Apple ID login forms autofill properly.",
+            "When \"Route traffic through this computer\" is enabled, standard http pages load properly, and the Bot alerts you if your computer is offline.",
+            "Commands running on your computer continue executing while files are copied to the computer.",
+            "Commits made by cloud agents preserve your co-author attribution line.",
+            "Clicking \"Reconnect\" on X Money starts a fresh sign-in.",
+            "The time zone picker now includes Europe/Kyiv.",
+            "In right-to-left languages, the close button in full-screen viewer avoids window control buttons without overlapping.",
+            "White connector logos remain clearly visible in light theme.",
+            "Accounts without Bots see \"Meet Grok Bot\" after account merging.",
+            "Clicking \"Back\" on an incomplete plugin sign-in displays \"Connect again\" instead of \"Reconnect\". Requires Grok Bot 0.75.2 or later.",
+            "\"Cumulative Spend\" charts scale adaptively based on displayed spend amounts. (Enterprise)",
+            "Linked team members in Team Bots use independent connectors and memories. (Teams)",
+            "Team Bots follow up with an answer if they acknowledged a request without answering immediately. (Teams)",
+            "Published Team Bots no longer display that everyone on the team can use them. (Teams)",
+            "Clicking \"Share\" on a Team Bot team access card grants team access. (Teams)",
+            "Notes saved about a member in other chats automatically sync over during 1:1 conversations with a Team Bot. (Teams)",
+            "Bot computer permission buttons are disabled when team members chat 1:1 with your Team Bot. (Teams)",
+            "Team members with tagged app accounts can complete sign-in via connection cards in Team Bots. (Teams)",
+            "Team Bots follow skill guidelines for connectors permitted by team members. (Teams)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.75.8",
+      "platform": "pc",
+      "version": "0.75.8",
+      "date": "2026-10-24",
+      "url": "https://x.ai/changelog/bot#v0.75.8",
+      "title": "Auto-Review Rule Cards and Connector Upgrades",
+      "points": [
+        "Adjust review rules directly within confirmation cards, with significantly fewer approval popups for safe actions.",
+        "New plugins installed while the Bot is running take effect immediately to call their new skills.",
+        "In private 1:1 chats, the Bot reads personal private files directly without asking every time.",
+        "Connector tool updates require no reconnect, with more reliable image and file transfers free of garbled data."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "In the app, the Bot can propose adding, editing, or deleting an Auto-review rule on cards requiring your confirmation. Requires Grok Bot 0.75.2 or later."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Auto-review performs a second check before showing an approval card, reducing approval cards for safe operations.",
+            "The Bot's status line displays immediately after you send a message, even for quick replies.",
+            "When background work finishes, the Bot completes your requested task—including steps specified to run after completion—and explains next steps, rather than acting independently or relying on other agents' approvals. Requires Grok Bot 0.75.2 or later.",
+            "Auto-review no longer treats saving or editing a Bot's own trigger as risky on its own.",
+            "Auto-review approval cards in Slack now match the in-app experience by explaining the action.",
+            "Scheduling uses your connected calendar (Google Calendar or Outlook Calendar), only proposing to connect when neither is connected.",
+            "In private conversations visible only to you, the Bot reads your own private files without asking first.",
+            "Plugins installed while the Bot is working can have their skills used immediately.",
+            "Members not on a Team Bot's share list (including team peers) cannot access it until the owner shares it with them. (Teams)"
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "When connectors like X add new tools or fields, the Bot uses them directly without requiring you to reconnect.",
+            "Expired connector logins display \"Authenticate\" instead of \"Connected\" in-app, matching the Bot's prompts. Requires Grok Bot 0.71.2 or later.",
+            "Images returned as files by connectors reach the Bot as images, and other binary files are no longer read as garbled text.",
+            "More X accounts support one-click connection to X Money; if your account cannot connect, the Bot explains accurately instead of prompting to log in.",
+            "When the Bot sends a message to Slack on your behalf (such as via a trigger), your phone does not receive notifications and unread badges do not increment.",
+            "In Slack, when a safety check blocks a Bot reply, the Bot gives the reason and suggests trying a different message.",
+            "For most accounts with \"Route traffic through this computer\" enabled, connection restores immediately once the Bot computer wakes.",
+            "Team Bot triggers can read Slack channels shared between you and the Bot, instead of rejecting every read attempt. (Teams)",
+            "When a Team Bot edits one of its own Slack messages, the message displays a subtle \"(edited)\" tag. (Teams)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.18.0",
+      "platform": "ios",
+      "version": "1.18.0",
+      "date": "2026-10-23",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "Bug Fixes and Experience Improvements",
+      "points": [
+        "Fixed known issues and improved app stability and user experience."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Bug fixes and improvements"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.75.5",
+      "platform": "pc",
+      "version": "0.75.5",
+      "date": "2026-10-23",
+      "url": "https://x.ai/changelog/bot#v0.75.5",
+      "title": "New Vault and Email Forwarding Features",
+      "points": [
+        "Settings adds Vault, allowing the Bot to save and autofill logins and payment info.",
+        "Refined Auto-review so clear instructions prompt fewer confirmation cards.",
+        "The Bot can forward inbox emails while fully preserving original formatting, images, and attachments.",
+        "Automated task limits increased to up to 300 runs per hour."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "The Bot can save your logins, cards, and contact info to \"Vault\" in \"Settings\" and autofill them during sign-in or checkout. Requires Grok Bot 0.75.2 or later.",
+            "The Bot can forward emails from its own inbox, preserving original formatting, images, and attachments. Requires Grok Bot 0.75.2 or later.",
+            "The Bot tracks who requested each message it posts in Slack, so anyone in the thread can ask who requested it.",
+            "For Halloween, you can choose a pumpkin shape when creating a Bot or changing its avatar. Requires Grok Bot 0.75.2 or later."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Auto-review asks for confirmation less frequently for actions you explicitly request in your own words.",
+            "After you reject an approval card, the Bot stops and will not retry the action until your next message.",
+            "Emails and Slack messages you ask the Bot to send go out once approved by Auto-review, while sends from triggers and other turns remain as pending drafts.",
+            "When the Bot hands over the Bot computer for you to sign into sites supporting connectors, it also provides the connector card.",
+            "Asking the Bot about your X account connects to X via your linked X account even if you removed the X plugin.",
+            "Connecting X also connects X Money using the same account; asking about your X Money balance, activity, or cards automatically installs X Money.",
+            "Total trigger runs per hour increased from 100 to 300, with up to 200 runs for a single trigger.",
+            "With \"Route traffic through this computer\" enabled, \"Settings\" shows how many sites were blocked due to resolving to private or VPN addresses.",
+            "Team members in 1:1 chats with a Team Bot can add reactions, quote messages with \"Add to chat\", and reply to cards. (Teams)",
+            "When requesting a connector or noting whose connector was used, Team Bots display connector names matching your plugin list (e.g. Google Slides). (Teams)",
+            "If your Grok Business seat does not yet cover Grok Bot, over-limit prompts guide you to contact your Grok Business admin to connect your team."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Auto-review falls back to approval cards less often, retries checks automatically on failure, and continues reviewing rather than halting on long chats.",
+            "Auto-review no longer approves actions you requested to stop before, like sending when you explicitly asked only to draft.",
+            "Asking the Bot for your X followers returns a clear answer that X does not provide this info, rather than guiding you to sign into X via browser.",
+            "After merging accounts, you can still manage Bots you created and share them with your team.",
+            "Plugins with multiple servers (like Salesforce) list each server on its own row so you can view and sign into each.",
+            "In Slack, the Bot replies normally to thread replies also sent to the channel, just like any other thread reply.",
+            "On a Team Bot's \"Share this Bot\" card, members managing the Bot via groups display their role as \"Manager\". (Teams)",
+            "Work handed off by Team Bots in shared chats can use connectors you allowed, and replies note whose connector was used. (Teams)",
+            "When a Team Bot trigger replies in a Slack thread, the Bot follows the thread and answers subsequent replies without needing an @mention. (Teams)",
+            "After resetting a conversation where the first message was blocked, sending new messages receives replies normally without errors."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "android-2026-10-23",
+      "platform": "android",
+      "version": "",
+      "date": "2026-10-23",
+      "url": "https://play.google.com/store/apps/details?id=ai.x.grok.bot&hl=en",
+      "title": "Bug Fixes and Experience Improvements",
+      "points": [
+        "Fixed known issues and improved app stability and user experience."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Bug fixes and improvements"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.75.2",
+      "platform": "pc",
+      "version": "0.75.2",
+      "date": "2026-10-22",
+      "url": "https://x.ai/changelog/bot#v0.75.2",
+      "title": "Pages Collaboration and Video Generation",
+      "points": [
+        "The Bot can create and collaboratively edit Pages for reports and dashboards.",
+        "The Bot supports generating videos directly from text prompts or uploaded images.",
+        "Chat cards refreshed across approvals, questions, tables, and files.",
+        "Personal Bot memory is shared across all chats and can only be modified by you."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "The Bot can build Pages (such as reports, memos, and dashboards), supporting co-editing with you or staying updated by the Bot.",
+            "The Bot can generate videos from text prompts or images you share.",
+            "You can pin pages, files, and links from \"Library\" to a top \"Pinned\" section, synced across your devices.",
+            "The \"Pages\" section of the dashboard lists Pages you've shared, where you can unshare or delete them.",
+            "Hover or focus on \"Library\" items to preview sender, time sent, and who can view the Page.",
+            "The Bot supports paying with Shop Pay: checking out via Shop in supported stores, or using one-time Shop cards in others.",
+            "You can connect X Money in one click from chat, connector pages, or checkout (signing into X first if not yet linked).",
+            "Page owners can share Pages with the entire organization or other teams within it. (Teams)",
+            "Team admins can restrict who can share Pages with everyone on the team. (Teams)",
+            "Team admins can enable link previews to display the name, description, color, and shape wherever Team Bot links are shared. (Teams)",
+            "Open the shortcuts panel with ⌘/, or from \"Help\", profile menus, and the command palette.",
+            "Type > at the start of a line in the input box to start a blockquote; press Backspace at the start of a quoted line to exit.",
+            "Reorder attachments in the input box by dragging or pressing Alt with arrow keys.",
+            "Connect Zoho CRM and select your account's regional data center before signing in.",
+            "Team admins can upload team icons that appear in workspace pickers and on Team Bots. (Teams)",
+            "Team Bot owners and admins can allow collaborators to create triggers in \"Configure\". (Teams)",
+            "Pages support capturing the mouse pointer and displaying full-screen.",
+            "The GitHub connector lists repositories, compares commits, lists PR commits, and reads branches and issue comments.",
+            "Built-in Gmail connection supports attachments in drafts and sends, reply all, forwarding with notes, and label colors.",
+            "The Bot can batch create, update, or delete multiple Google Calendar events in one step without time shifting on edits.",
+            "Triggers can read the Bot's inbox.",
+            "Tasks delegated by the Bot can generate images and videos for the chat.",
+            "In team or group chats, welcome messages for shared Team Bots include a \"Chat with me\" link, while owner-only Bots greet only their owner. (Teams)",
+            "Enterprise team admins can permanently delete members' Grok Bot data under \"Manage Member Computers and Data\" in \"Security & Compliance\" or via the Admin API. (Enterprise)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Cards in chat feature a fresh design spanning approval cards, question cards, files, links, and tables.",
+            "The Bot details panel uses a single-column layout, with click-to-edit profile info above \"Media\", \"Computer\", and \"Routines\" tabs.",
+            "Voice calls can now reference earlier call history and recent chats with the Bot.",
+            "The Bot opens and verifies links before sending, automatically filtering out broken links.",
+            "Auto-review approval cards describe actions in one sentence, identify app names and icons, and flag irreversible or sensitive changes.",
+            "When mentioning a service, the Bot displays that connector's card in its first reply.",
+            "When a connector logs you out or refuses sign-in, the Bot explains the specific reason (such as Google account restrictions) and how to resolve it.",
+            "When triggers encounter signed-out connectors, chat displays a \"Reconnect\" card for that connector up to once per day.",
+            "Before starting browser or desktop tasks that take several minutes, the Bot lets you know in advance that the task will take some time.",
+            "If you already provided a password or verification code in chat, the Bot uses it directly without refusing to proceed.",
+            "Pull requests, issues, and repositories mentioned in replies display as links.",
+            "When the Bot asks for a payment method, you can select directly on the card.",
+            "Content saved to memory by a personal Bot in one chat persists across all your chats with it, and only you can modify it.",
+            "Deleting a Bot permanently wipes its conversations, memories, triggers, and attachments, and removes its Slack app.",
+            "The first email the Bot sends to a new contact includes a one-click unsubscribe link.",
+            "In Slack, asking the Bot to investigate, research, or verify something returns thoroughly researched answers rather than brief quick replies.",
+            "Deleting an account lists what you will lose first; linking a unified Grok account offers merge options instead of failing with an error.",
+            "Source links in replies display as compact citation pills, and company names display as ticker pills.",
+            "Numeric columns in chat tables align by decimal points, with support for header subtitles, summary rows, and footnotes.",
+            "Files you send display as cards showing type, name, and size; hovering over captioned images offers \"Copy\" and \"Download\" options.",
+            "Clicking reactions displays them instantly, and messages no longer shift under the cursor.",
+            "\"Library\" opens faster for users with many Team Bots.",
+            "Team Bots shared with you open directly to their saved conversations. (Teams)",
+            "Browser logins wait up to 20 minutes with a \"Copy link\" option; clicking \"Reopen link\" resumes the login flow without starting over.",
+            "\"Connect Apps\" displays each plugin's native icon; configuring plugins with custom OAuth clients lists the callback URLs to register.",
+            "Webhook trigger menus display their URL and secret, keeping the secret hidden until you click to reveal."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Quickly scrolling up in long conversations no longer stutters before loading earlier messages.",
+            "Search results from earlier chat history now jump accurately to the corresponding message, even right after launching the app.",
+            "Desktop notifications show Bot replies as plain text with full links, skipping replies already read on other devices.",
+            "Voice calls recover automatically after drops or crashes, microphones re-engage on reconnect, and the Bot can still answer while you are muted.",
+            "Pressing Enter once sends recorded voice notes.",
+            "Shortcuts including ⌘F and the command palette work with Pages open, and opening the command palette no longer closes Pages.",
+            "Pressing \"Back\" with a Page open closes the Page and stays on the current Bot, rather than jumping to a previously viewed Bot.",
+            "The Page \"Share\" menu displays its current visibility status, even if changed on another device or console.",
+            "When messages fail to save, the app notes if it might be due to low disk space on your computer.",
+            "The desktop app now defaults to direct connections unless a system proxy is enabled, resolving loading issues on certain enterprise proxy networks.",
+            "When sign-in cannot connect, the app prompts to check your network rather than saying it stopped waiting for browser response.",
+            "Fresh installs or reinstalls of the desktop app automatically skip onboarding for accounts that already completed it.",
+            "Entering a follow-up keeps unhandled question cards unanswered rather than treating it as an answer.",
+            "Bots mentioned via @ in replies can be clicked to open that Bot's chat.",
+            "Toggling Bot tools applies the state you see at that moment, preventing stale lists from re-enabling disabled tools.",
+            "When creating a Bot or publishing a Bot template is rejected, the app displays the specific reason.",
+            "When the Bot renames a Page, Page cards and titles update immediately, and older Page cards open the latest version directly.",
+            "\"Connect Apps\" allows longer wait times for plugins instead of showing \"Couldn't refresh\", and built-in plugins no longer show an ineffective \"Uninstall\" option.",
+            "Purchasing credits, enabling auto-reload, and saving spend limits in the desktop app display confirmation or error alerts.",
+            "Reactions and card answers added while the Bot is working persist after its turn finishes.",
+            "Unhandled approvals leave a line in chat explaining what expired.",
+            "Large edits to Google Slides now sync in real time to live presentations.",
+            "Emails sent by the Bot via Gmail display your name and saved signature for that address, and reply drafts remain in the thread.",
+            "Bot images larger than ~3 MB can now be saved properly.",
+            "Trigger run results deliver to you properly even if you sent a message before the Bot finished handover.",
+            "Pausing and resuming triggers preserves your last choice, even when acting across two devices.",
+            "After account merges, the retained account preserves its Grok Bot email inbox and connector settings."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.17.0",
+      "platform": "ios",
+      "version": "1.17.0",
+      "date": "2026-10-21",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "Optimized App Connection UI Design",
+      "points": [
+        "Optimized the visual and interactive design of the Connect Apps interface."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Optimized the design of the \"Connect Apps\" interface"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "android-2026-10-19",
+      "platform": "android",
+      "version": "",
+      "date": "2026-10-19",
+      "url": "https://play.google.com/store/apps/details?id=ai.x.grok.bot&hl=en",
+      "title": "Routine Fixes and Performance Improvements",
+      "points": [
+        "Fixed known issues to improve app stability and smoothness."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Bug fixes and improvements"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.16.0",
+      "platform": "ios",
+      "version": "1.16.0",
+      "date": "2026-10-18",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "Button Fixes and Performance Optimizations",
+      "points": [
+        "Fixed an issue where the add button occasionally became grayed out and unavailable.",
+        "Improved overall app performance."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Fixed an issue where the \"+\" button was sometimes mistakenly grayed out",
+            "Improved overall app performance"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "android-2026-10-18",
+      "platform": "android",
+      "version": "",
+      "date": "2026-10-18",
+      "url": "https://play.google.com/store/apps/details?id=ai.x.grok.bot&hl=en",
+      "title": "Routine Fixes and Stability Improvements",
+      "points": [
+        "Fixed known issues and improved system stability."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Bug fixes and improvements"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.71.2",
+      "platform": "pc",
+      "version": "0.71.2",
+      "date": "2026-10-14",
+      "url": "https://x.ai/changelog/bot#v0.71.2",
+      "title": "Desktop Notification Improvements and Attachment Capacity Upgrades",
+      "points": [
+        "Supports uploading 250 MB files and 1 GB videos, with up to 20 attachments per message.",
+        "When using on desktop, Bot replies prioritize desktop popup notifications over mobile.",
+        "Plugin skill limit increased to 200, with auto-reconnect support for dropped voice calls.",
+        "Forms support prefilling known information, and sleeping Bot computers can be woken with a click."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "The Bot can send email using tagged addresses of its own (e.g. name+shop@), and triggers on that tag run only for its emails.",
+            "Forms the Bot asks you to fill can be prefilled with known fields, which you can edit before submitting.",
+            "While paid account merges are migrating data, \"Settings\" displays \"Your accounts are being merged\", and \"Contact Support\" if it takes longer than expected.",
+            "Team admins can turn off \"Messaging between Bots\" under \"Bot capabilities\" in the dashboard so team members' Bots cannot message or hand off work to other Bots. (Teams)",
+            "Enterprise team admins can recreate, terminate, or delete members' Grok Bot computers under \"Manage Bot Computers\" in the dashboard or via Admin API. (Enterprise)",
+            "When the Bot computer is low on disk space, the Bot alerts you once and lists the largest files, deleting them only with your consent."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "When using Grok Bot on Mac or Windows, Bot replies and questions notify you on desktop rather than mobile. Requires Grok Bot 0.70.2 or later.",
+            "You can attach files up to 250 MB and videos up to 1 GB; the Bot notes if a video is too large to view. Requires Grok Bot 0.70.2 or later.",
+            "Up to 20 attachments per message (up from 6), with notifications indicating attachment counts omitted over the 200 MB total limit.",
+            "Images created or captured by the Bot, as well as files generated by cloud agents it started, load in chat even while the Bot computer is asleep.",
+            "If voice chat drops, calls automatically reconnect to continue the same conversation rather than ending.",
+            "The Bot can use up to 200 skills from installed plugins (up from 24), so skills from plugins you add are no longer omitted.",
+            "Clicking the \"Computer is asleep\" preview wakes it in place when the Bot computer is asleep, replacing the separate \"Wake\" button.",
+            "Grok Bot opens while the Bot computer is still starting, without waiting behind the full-screen \"Setting up Grok Bot's computer\" screen.",
+            "Sending messages while the Bot computer wakes no longer shows \"Waiting to send…\" below messages or \"Waking your computer…\" in the input box.",
+            "The Bot can batch archive, move, delete, flag, or mark Outlook emails as read/unread in one step, without processing one by one.",
+            "At checkout, the Bot uses card details or photos you sent in chat, requesting only missing fields or verification codes via Secure Form.",
+            "When GitHub cannot access a repository, the Bot stops retrying and links you to the GitHub page to grant access.",
+            "Bot searches on X with date ranges, minimum likes/reposts, or filters unsupported by X now return posts instead of being rejected directly.",
+            "When the Bot uses a question card for selections, it no longer repeats the question and options in the adjacent message.",
+            "Email drafts from the Bot's own address show attachments as file cards, flagging if unsent, modified after adding, oversized, or un-scanned.",
+            "Account merges succeed when both accounts have files on the Bot computer, keeping both and appending \"(from transferred account)\" to conflicting filenames.",
+            "In Team Bot Slack settings, \"Connect\" jumps straight to Slack, \"Awaiting admin approval\" offers \"Resubmit\", and rejected requests show the time rejected. (Teams)",
+            "When a Team Bot requests to use your connected account, the card explains access only covers your own messages and cannot be used by others. (Teams)",
+            "Captions in the full-screen image viewer support formatting and clickable links, maintaining consistent sizing when paging through images.",
+            "In the Bot info panel, names display as plain text until hovered or clicked to rename, with screen readers announcing them as editable.",
+            "Rules under labels like \"Paused by your Ask first rule\" on approval cards appear as plain text without boxes or quotes.",
+            "Bot animated avatar transitions in the sidebar and chat activity rows are smoother.",
+            "When GitHub is not connected, the Bot offers a single \"Connect GitHub\" action rather than listing every GitHub tool.",
+            "Voice calls from mobile wake a sleeping Bot computer so the Bot can process what you said after the call."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "When the Bot computer is asleep, Grok Bot retains loaded content and shows \"Your computer is asleep\" instead of \"Couldn't refresh\" or connection errors.",
+            "When the Bot computer updates, running Bots reconnect to the new computer and resume work.",
+            "When the Bot computer fails to wake, the Bot notes it could not start rather than retrying indefinitely as if still starting.",
+            "Images and files shared by the Bot from the Bot computer still load in chat when the app cannot fetch them directly from the Bot computer.",
+            "Opening a file immediately after sending displays its contents rather than \"File unavailable\".",
+            "When server-side attachment uploads fail, Grok Bot shows \"Couldn't upload an attachment\" and preserves your draft, instead of prompting to check your network connection.",
+            "When your computer sleeps, the Bot treats it as disconnected within two minutes and prompts immediately, rather than waiting for command timeouts.",
+            "After Wi-Fi, VPN, or network changes, the Bot can run tasks on your computer immediately without treating it as unreachable.",
+            "Commands running on your computer continue through brief connection hiccups or long waits, without failing due to temporary unreachability.",
+            "If work was supposed to run on an offline computer, the Bot tells you rather than running it on another computer without asking.",
+            "Background jobs started by the Bot on your Mac (such as local servers) remain running after commands return.",
+            "Plugin and Auto-review settings changes continue syncing to the Bot computer upon reconnecting Grok Bot, without hanging until restart.",
+            "When the Bot requests to wait on a command longer than allowed, it receives a limit notice immediately instead of timing out.",
+            "When safety checks block a Bot reply, chat displays \"Blocked by a safety check\" and \"Try a different message\" instead of generic errors.",
+            "Tables in Bot replies stay within reply widths, with horizontal scrolling when more space is needed.",
+            "Attachments with the same name in a single message receive numbers (e.g. report.pdf (2)) so you can open or remove the right file.",
+            "On Windows, pasting text copied from lists into the input box stays inline without splitting into extra paragraphs.",
+            "On Windows and Linux, non-English characters and curly quotes remain intact when pasting text copied from chat into other apps.",
+            "Opening Grok Bot into a restored chat no longer flashes a \"Couldn't refresh\" banner above the input box.",
+            "Switching accounts or signing back in displays app loading screens instead of blank white windows.",
+            "Switching accounts when queued messages are canceled or rejected no longer places their text and attachments into the other account's input box.",
+            "Accounts without Grok Bot access complete setup smoothly and see only access notices, without setup or loading errors.",
+            "When your currently open Bot is deleted on another device, Grok Bot opens another of your Bots rather than showing a blank panel.",
+            "When deleting multiple Bots at once, remaining Bots delete properly if one fails, and warnings list only the failed Bot.",
+            "Unsaveable sidebar section changes stay put with \"Can't reach your computer\" and \"Retry\", saving once your computer becomes accessible.",
+            "In collapsed sidebars, Bot lists that fail to load display a warning icon with a retry option, rather than squishing text letter by letter.",
+            "Full-screen computer view no longer displays truncated subagent instruction snippets or \"Couldn't load subagents\" lines.",
+            "When Bot triggers fail to load, \"Couldn't load routines\" appears in the \"Routines\" section of its details panel.",
+            "When the details panel is open without a selected Bot, \"Couldn't load\" and \"Try again\" display if the primary Bot fails to load.",
+            "When Bot skills fail to load, the @ menu no longer displays a \"Couldn't load skills\" line.",
+            "Number shortcut badges in the sidebar no longer linger on screen after zooming with Cmd or Ctrl.",
+            "In collapsed sidebars, the \"More unreads\" button displays as a circle with a centered arrow.",
+            "Dragging Bots or sections in the sidebar announces their names and drop locations via screen readers.",
+            "Screen readers announce Bot replies even if they arrive after the \"Bot stopped\" prompt.",
+            "Tabbing to links and opening preview cards moves keyboard focus into the card.",
+            "If the Bot altered triggers during brief app disconnections, the \"Routines\" list updates automatically upon reconnecting without reloading.",
+            "After creating a primary Bot in onboarding, the \"Introducing your primary Bot\" picker no longer asks you to select again.",
+            "After responding to requests to use your computer, the Bot's sidebar item displays \"Allowed\", \"Denied\", or \"Expired\" instead of \"Permission required\".",
+            "Resuming speech after a pause in voice chat appends to current transcriptions without repeating, stripping noise tags.",
+            "Connector calls no longer time out after 1 minute: they wait up to 2 minutes for responses, extending even longer if progress is reported.",
+            "The Bot retrieves full parameters for connector tools from Grok, calling them accurately without guessing.",
+            "The Bot triggers X rate limits less often when searching or reading posts on X, and rate-limited calls no longer count toward your X reading quota.",
+            "The Bot succeeds on the first try when handling specific Stripe customers, invoices, subscriptions, or payments, without missing-parameter errors.",
+            "Clicking \"Stop\" also terminates the Bot's background subagents, so generated results no longer wake the Bot and pending approval cards expire.",
+            "When handing back the Bot computer via \"I'm done\" or \"Skip\", the Bot sends its answer in chat without occasional silence.",
+            "Scripts run by the Bot in its browser no longer error on extraneous or out-of-scope settings, completing browser tasks more reliably.",
+            "Secure Forms autofill fields across more websites (including iframes from other sites) without leaving them blank.",
+            "When triggers require website logins, they prompt you in chat at that step rather than stopping silently.",
+            "The Bot requests login credentials and multi-field details in a single Secure Form, rather than single-value secret request cards.",
+            "Screenshots, computer, and browser actions work normally without 1Password connected, without failing on saved-login checks.",
+            "Sending messages from another time zone updates the Bot's time zone for scheduling and reminders immediately, unless manually set under \"Timezone\" in \"Settings\".",
+            "Bots using any shape from the avatar editor (such as sparkles or stars) can be shared as templates without visual changes.",
+            "Emails sent to the Bot's own inbox preserve URLs for every link, allowing the Bot to open verification and sign-in links.",
+            "Emails sent to the Bot's own address deliver properly even with very long subjects, sender addresses, or thread references.",
+            "Selecting \"Disable drafts\" for a Bot sends emails directly from its address without popping up draft cards.",
+            "After the Bot claims an email address, opening \"Email\" or \"Plugins\" displays \"Connected\" instead of prompting to \"Connect\".",
+            "When you allow a Team Bot to use one of your plugins, its tools become available immediately without the Bot failing to find them. (Teams)",
+            "Plugins on Team Bots use settings entered by team admins (such as Datadog site) when lacking their own configuration. (Teams)",
+            "Team Bots still named \"New team bot\" without descriptions show as \"Draft\" rather than \"Published to your team\" until renamed or given descriptions. (Teams)",
+            "Grok Bot runs properly in your selected team as long as that team hasn't enabled \"Privacy Mode (Legacy)\", even if other teams you joined have.",
+            "Account merges migrating large numbers of Bots complete in one pass, without failing with \"Your account merge is taking longer than usual\".",
+            "When downloaded updates are revoked, the \"Restart to Update\" banner disappears and Grok Bot retains the current version, even after quitting on Mac.",
+            "Updates repeatedly downloading from scratch pause between retries and stop after errors, avoiding infinite retry loops.",
+            "When the update server returns an abnormal response, \"Settings\" displays \"The update server returned an invalid response\" instead of network issues.",
+            "Clicking \"Restart to Update\" shows \"Restarting…\" and waits up to two minutes for commands running on your computer to finish.",
+            "When updates replace app files while Grok Bot is running, reloading or recovering from crashes relaunches the app instead of showing a blank window.",
+            "In Linux deb and rpm installations, \"Update required\" links to the latest package, prioritizing it when package repositories have not synced.",
+            "On Windows and Linux, opening Grok Bot while it is still quitting reopens it once quit completes, rather than failing to respond.",
+            "GitHub tools remain available after interrupted connections, resuming work once reconnected without starting a new chat.",
+            "When Gmail cannot expand the full email thread, the Bot still answers based on the thread's first message.",
+            "Connectors still needing \"Allow\" authorization retain their names, so the Bot asks you for permission instead of reporting the connector not found.",
+            "The Bot retains connector tools while the Bot computer is sleeping, starting, or not yet created, without losing them in that turn."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.70.2",
+      "platform": "pc",
+      "version": "0.70.2",
+      "date": "2026-10-11",
+      "url": "https://x.ai/changelog/bot#v0.70.2",
+      "title": "Dedicated Bot Email and Log-in Free X Search",
+      "points": [
+        "The Bot can claim a dedicated email address to receive emails, generating draft cards for approval before sending.",
+        "Search X posts and profiles directly without linking an X account.",
+        "Connectors like Figma and Notion display as interactive cards within conversations.",
+        "Supports automatic reading of email verification codes, and web pages can be saved directly as PDFs."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "The Bot can claim its own email address to receive emails, with outgoing emails waiting for your approval on draft cards.",
+            "The Bot can search X and view posts and profiles without connecting an X account.",
+            "Connectors with apps (such as Figma, Notion, and Canva) display as interactive cards in chat.",
+            "The Bot can make payments using X Money or Stripe Link.",
+            "The Bot can find Bot templates matching your description and link them in chat.",
+            "On Mac, \"View Unread\" in the \"View\" menu filters the sidebar to show only Bots with unread messages.",
+            "Press Cmd+F or Ctrl+F on an open Page to search in the \"Find in page\" bar.",
+            "Rename Pages directly from their title, syncing the new name across all locations.",
+            "Shared Page title bars include a \"Download\" button to save PDFs, \"Try Grok Bot\" for visitors, and \"Share\" for owners.",
+            "Adding Glean prompts for a Glean MCP URL, connecting once you sign into Glean in the browser.",
+            "QuickBooks Online connection is now supported.",
+            "The Bot can save web pages as PDFs from its browser and send audio files like MP3, M4A, and WAV.",
+            "The full-screen video player adds a playback speed menu, and voice calls support 0.5x speed.",
+            "Team members can approve Auto-review requests (including \"Always allow\") directly in DMs with Team Bots. (Teams)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Before performing irreversible actions (like sending, posting, purchasing, or deleting), the Bot checks your message for approval.",
+            "Browser approval cards describe actions in plain language (e.g. \"Open a new tab in Grok Bot's browser\"), and saved \"Allow\" rules apply consistently across tools.",
+            "When multiple accounts are available for sending emails, the Bot asks which address to use and confirms the sender address after sending.",
+            "When verification codes or links arrive via email during login, the Bot reads them directly from connected Gmail, Outlook, or its own inbox without asking you.",
+            "After bank or brokerage connectors return data, the Bot asks for your consent before sharing it anywhere else.",
+            "The Bot acknowledges receipt of your message before starting long-running tasks.",
+            "Reactions display on message bubbles, the quick bar includes recent emojis, and each person shows only their latest reaction.",
+            "Reply quotes display quoted text and jump to the message on click, with an \"Add to chat\" button when text is selected.",
+            "When the Bot is working with nothing yet to report, 1:1 chats show only its animated avatar.",
+            "Uploading attachments shows a \"Sending…\" progress bar that fills as files upload.",
+            "Full-screen computer view opens in \"Watching\" state by default until you click \"Take control\".",
+            "When the Bot computer is asleep, the \"Computer\" tab shows a \"Wake\" button to wake it in place.",
+            "Computer settings distinguish \"Your computer\" from the Bot computer, and \"Updates\" shows only app updates.",
+            "Grok Bot's computer updates without showing status badges in the sidebar; notifications appear only if updates cause connection failures.",
+            "After saving a trigger, the Bot outlines what it does and where results go, sending results there on every run.",
+            "When you provide a connector link, the Bot automatically installs matching plugins from the directory.",
+            "\"Connect Apps\" prioritizes top-installed plugins, searches match plugin descriptions, and clear notices show when no results are found.",
+            "The Bot can wait for background commands on its computer to finish, displaying \"Waiting on results\".",
+            "When GitHub denies access to a repository or Vercel denies access to a team, the Bot suggests accessible alternatives or prompts you to reconnect.",
+            "Adding MCP servers on Tailscale private networks now explains that Grok Bot cannot reach the server yet and suggests exposing it with Tailscale Funnel.",
+            "Canvases and documents are now uniformly labeled as \"Page\".",
+            "Typing # in the input box no longer opens the pull request picker."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Connector failures reduced: the Bot fixes malformed parameters automatically and resolves Notion links and Slack channel names before sending.",
+            "When connectors rate-limit your account, the Bot waits out retry delays instead of calling repeatedly in loops.",
+            "After connecting 1Password, browser and computer actions auto-retry on brief connection errors rather than halting.",
+            "Slack, Gmail, and Outlook drafts auto-retry on temporary rate limits, alerting you if sending still fails.",
+            "Slack messages drafted by the Bot no longer turn into raw code blocks when sent.",
+            "Gmail drafts use your default sender address and signature, rather than referencing someone else's signature.",
+            "Bot emails with non-English names or subjects no longer bounce, replies stay in the thread, and small images in incoming mail are preserved.",
+            "When \"Agent email\" is disabled for your team or account, the Bot explains clearly rather than citing temporary issues.",
+            "Files and images sent by the Bot from its computer deliver to chat properly, appearing before any question cards.",
+            "Opening files while the Bot computer is asleep wakes it and opens the file.",
+            "When chats, pages, skills, triggers, or plugins fail to load, the app displays errors and \"Try again\" while retaining previously loaded content.",
+            "Search finds message text and attachment names across all chats (including the active chat).",
+            "Active chats mark as read when restarting the app, returning to your computer, or clicking the row again.",
+            "When the Bot searches the web or reads pages, chat and Slack show its actual activity (e.g. \"Digging around\") instead of \"Working in Cursor\".",
+            "The Bot's browser retains original filenames on downloads and relaunches properly after its profile directory is deleted.",
+            "Outlook displays an \"Authorize\" card when changes require elevated permissions, and the Bot stops retrying deleted or protected items.",
+            "All-day calendar events stay on correct dates, and the Bot checks your other calendars before reporting missing events.",
+            "Plugins installed from chat or web work directly on the Bot computer, and local plugins (like Xero) receive your configured settings properly.",
+            "Long messages show \"Show more\" immediately so chats don't jump when opening.",
+            "Publishing, sharing, deleting Bots, or adding from templates work even when the Bot computer is asleep or unreachable.",
+            "Switching chats or focusing windows no longer wakes sleeping computers.",
+            "Switching accounts loads in seconds, even when the other computer is asleep.",
+            "Pinned Bots sync between desktop and mobile.",
+            "Grok Bot prompts to reload or quit if windows repeatedly crash; white-screen windows after updates relaunch automatically.",
+            "The Bot no longer logs you out while repairing connectors, and signed-out connector accounts remain logged out.",
+            "When a model is unavailable in your region, the turn stops with an explanation and the Bot falls back to Grok.",
+            "In Slack, the Bot can reply to messages where it cannot read thread context, and asking teammates' Bots no longer adds them to your sidebar.",
+            "Connecting Slack from the grok.com dashboard directs you back to finish linking your Slack account.",
+            "In voice calls, the Bot gets today's date in your time zone accurately without accidentally using tomorrow's date.",
+            "On Linux, the app stays responsive during notifications and exits cleanly.",
+            "\"Usage & Billing\" displays your plan name under \"Current plan\", with usage meters labeling percentages as \"used\"."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.68.1",
+      "platform": "pc",
+      "version": "0.68.1",
+      "date": "2026-10-07",
+      "url": "https://x.ai/changelog/bot#v0.68.1",
+      "title": "Slide Presentations and Custom Chat Colors",
+      "points": [
+        "Collaborate with the Bot to build presentation slides and export them as presentation files.",
+        "1:1 chat bubbles match the Bot's accent color, which can be turned off anytime.",
+        "Bot computer screen upgraded to 1920×1200, with faster action and screenshot responses.",
+        "Email drafts support rich-text formatting and can search Gmail spam directly."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "In 1:1 chats with a Bot, your messages use that Bot's accent color; turn it off by setting \"Accent\" to \"Black\" under \"Settings\" → \"General\". Requires Grok Bot 0.64.0 or later.",
+            "The Bot can create presentations with you, offering sample slides to choose from and delivering them as PowerPoint files or Google Slides.",
+            "The Bot can send formatted emails from draft cards so recipients see headings, bold text, and lists.",
+            "The Bot can search your Gmail \"Spam\" folder and move emails back to your inbox.",
+            "Team Bots can mention Slack user groups to notify members, while @here and @channel still do not notify anyone. (Teams)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Typing / in the input box no longer opens the skills and actions menu.",
+            "The Bot runs faster on the Bot computer: actions respond faster, screenshots return quicker, and new windows eliminate a 5-second wait.",
+            "The Bot computer resolution increased from 1280 × 800 to 1920 × 1200, offering more screen space when watching actions or taking control.",
+            "In followed Slack threads, Team Bots remain quiet on unmentioned replies that do not need them, such as emoji-only replies. (Teams)"
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Gmail failures occur less often: sending and replying no longer error on missing tools, and the Bot waits for Google rate limits to clear.",
+            "Email drafts display as cards in chat, \"Send\" interrupted by \"Stop\" still sends successfully, and attachments retain filenames.",
+            "The Bot's browser recovers from crashed tabs, handles large file uploads, and abandons waits after pages hang for 25 seconds.",
+            "Clicking \"Stop\" or sending a new message terminates Bots stuck in unresponsive steps within ~30 seconds.",
+            "Secure Forms autofill into pages already opened by the Bot, and checkout card fields use Secure Form rather than screen handovers.",
+            "When X or Vercel requires you to re-sign in, the Bot shows a reconnect card rather than retrying or giving up.",
+            "If an app window crashes, Grok Bot reloads the window instead of leaving it blank."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.14.0",
+      "platform": "ios",
+      "version": "1.14.0",
+      "date": "2026-10-06",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "Faster Messaging and Onboarding Improvements",
+      "points": [
+        "Faster message delivery and noticeably quicker Bot reply response times.",
+        "Streamlined onboarding to start conversations faster.",
+        "Optimized information hierarchy on the Bot profile page."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Messages send faster, and your Bot begins replying more quickly.",
+            "Onboarding is faster so you can meet your first Bot and start chatting sooner.",
+            "Optimized the information hierarchy of your Bot's profile page."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.68.0",
+      "platform": "pc",
+      "version": "0.68.0",
+      "date": "2026-10-05",
+      "url": "https://x.ai/changelog/bot#v0.68.0",
+      "title": "Computer Device Management and Everyday Experience Improvements",
+      "points": [
+        "Added ability to remove idle computers in Settings for easy device management.",
+        "Right-click routines to quickly pause or edit; full-screen view loads faster.",
+        "Copying replies retains line breaks and links; large images and files no longer freeze the app.",
+        "Email drafts support sending from Gmail aliases, and the command palette searches plugins."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "\"Language\" in \"Settings\" adds Marathi, Tamil, Telugu, Swahili, and Hausa.",
+            "\"Settings\" → \"Computer\" displays \"Remove\" for your other computers, prompting you to restart Grok Bot to re-add removed computers.",
+            "Email drafts can be sent via verified Gmail \"send-as\" addresses, with a \"From\" selector when multiple addresses exist.",
+            "Searching in the command palette finds plugins, pressing Enter opens the plugin page."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Approval cards ask whether to allow the Bot by name and quote its instructions; \"Settings\" names saved rules \"Custom Rules\".",
+            "Notifications and per-Bot notification toggles now indicate that the Bot is waiting on you.",
+            "Right-clicking triggers in the details panel offers \"Pause\", \"Resume\", \"Test\", \"Edit\", and \"Delete\"; clicking a trigger no longer opens its details view.",
+            "Hovering over Pull Request links displays a preview card with its status and title rather than a plain tooltip.",
+            "Opening the Bot computer full-screen shows live screen immediately without a second \"Connecting\" screen.",
+            "The \"Unassigned\" section in the sidebar can be dragged or moved with \"Move up\" and \"Move down\" like custom sections."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Copying or saving large images or opening large JSON or Markdown files no longer freezes the app.",
+            "Switching chats no longer flashes empty history, and scrolled-up history remains when the app reconnects.",
+            "Gmail draft cards include your signature (with logo), displaying \"Couldn't send this draft\" if \"Send\" fails.",
+            "Copied replies retain line breaks and link URLs when pasted into email, Slack, or plain text.",
+            "Team Bots no longer appear in primary Bot pickers, showing \"Team Bots can't be a primary Bot\" if rejected. (Teams)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.67.0",
+      "platform": "pc",
+      "version": "0.67.0",
+      "date": "2026-10-02",
+      "url": "https://x.ai/changelog/bot#v0.67.0",
+      "title": "Connect Apps Hub and New Working Statuses",
+      "points": [
+        "Marketplace revamped into Connect Apps, with category filters and recommendations.",
+        "Status bar clearly displays progress like thinking it through or working on computer.",
+        "Approval cards clearly show blocking rules and offer direct jumps to edit settings.",
+        "Hardware acceleration enabled by default on Windows; fixed login port conflicts when connecting apps."
+      ],
+      "full": [
+        [
+          "Improvements",
+          [
+            "\"Marketplace\" is now renamed to \"Connect Apps\", with category tabs below search, \"Recommended for you\" highlighted, and Bot templates on web.",
+            "Bot statuses use new phrasing like \"Thinking it through\" and \"Working on your computer\" without the Bot name prefixed.",
+            "Approval cards indicate when \"Ask first\" pauses an action or \"Always allow\" added a rule, offering \"Edit rule\" to adjust in \"Settings\".",
+            "Connected Google accounts show their email address on connector cards and account lists instead of \"default\".",
+            "On Windows, \"Use hardware acceleration\" is now enabled by default like on Mac, preserving your previous selection.",
+            "Clicking \"Copy link\" on a Team Bot shares an x.ai link, and previously shared links continue working. (Teams)"
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Connecting apps succeeds even if another app occupies its sign-in port, and failure pages explain why.",
+            "Connector cards requiring re-login or adding a second account offer \"Authorize\" instead of \"Added\".",
+            "When Gmail reply-all fails, draft cards display \"Message not delivered\" rather than sent.",
+            "\"Stop\" in \"Settings\" stops all running chats to unblock \"Update\"; if \"Settings\" fails to load after updates, \"Restart\" is offered.",
+            "Trigger schedules no longer show non-repeating intervals, error messages show on pause/resume failures, and deleted triggers are labeled \"(deleted)\".",
+            "Dock badges no longer count unread messages from deleted Bots.",
+            "On Mac, \"Back\" and \"Forward\" buttons on Logitech mice work properly again.",
+            "Sidebar avatars no longer get stuck with one eye larger than the other.",
+            "When team admins disable \"Route traffic through this computer\", \"Settings\" → \"Computer\" shows a notice, and team settings offer \"Retry\" if loading fails. (Teams)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.66.0",
+      "platform": "pc",
+      "version": "0.66.0",
+      "date": "2026-10-02",
+      "url": "https://x.ai/changelog/bot#v0.66.0",
+      "title": "Primary Bot Task Proactivity and Update Improvements",
+      "points": [
+        "Starred primary Bots gain proactive assistance, identifying potential tasks and proposing to help.",
+        "Update downloads resume automatically after sleep; Mac prompts to move when running from temporary files.",
+        "The Bot aborts and alerts automatically if an action hangs, letting your next message continue seamlessly.",
+        "Mobile no longer sends duplicate push notifications for the same reply, completely stopping notifications for deleted chats."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Starred primary Bots now proactively discover work they can take off your hands and propose assistance. Requires Grok Bot 0.59.0 or later."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "In Slack threads, the Bot status bar displays what it is working on and stays visible through longer steps. (Teams)"
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Update downloads resume after your computer sleeps, and on Mac, copies run from disk images or Downloads offer \"Move to Applications\".",
+            "Bots stuck due to unresponsive commands or Bot computers stop with an explanation, and your next message picks up where it left off.",
+            "Mobile notifies only once per Bot reply, and never sends notifications for deleted Bot chats."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.13.1",
+      "platform": "ios",
+      "version": "1.13.1",
+      "date": "2026-10-01",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "Routine Bug Fixes and Stability Improvements",
+      "points": [
+        "Fixed known issues and improved system stability."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Bug fixes and improvements"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.65.0",
+      "platform": "pc",
+      "version": "0.65.0",
+      "date": "2026-09-30",
+      "url": "https://x.ai/changelog/bot#v0.65.0",
+      "title": "Team Bot Voice Calls and Automatic Updates",
+      "points": [
+        "Team members can make separate voice calls with a Team Bot, keeping conversations private.",
+        "Automatic updates are now enabled by default, restarting automatically when your computer is idle to complete upgrades.",
+        "Phone notifications are automatically silenced while viewing a Bot on desktop, and resume after leaving the computer.",
+        "Provides clear failure reasons or expired link notices when app connection fails, with one-click retry."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Team members can initiate voice chats with a Team Bot, and calls remain in their respective conversations with that Bot. (Teams)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "\"Automatic Updates\" is now enabled by default, so Grok Bot restarts while you are away to apply updates; turn it off in \"Settings\" → \"Updates\".",
+            "Phones ignore notifications for the Bot you are viewing on your computer, and resume notifications after your computer locks, sleeps, or goes idle.",
+            "The setup flow for Team Bots uses step-by-step card transitions without interleaved Bot messages, with each card displaying its step (e.g. \"Step 2 of 5\"). (Teams)"
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "When connecting an app, the login screen displays the failure reason or indicates that the link has expired; click \"Reopen\" or \"Retry\" to start a fresh login flow."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.64.0",
+      "platform": "pc",
+      "version": "0.64.0",
+      "date": "2026-09-30",
+      "url": "https://x.ai/changelog/bot#v0.64.0",
+      "title": "Direct Sending Without Drafts and Refreshed Bot Avatars",
+      "points": [
+        "Disable draft confirmation to allow Bots to send emails or Slack messages directly.",
+        "Updated visual appearance for Bots; avatar editor adds fun shapes including hearts, stars, and more.",
+        "Account credentials input is presented in a Secure Form popup, clearly displaying the target site's icon.",
+        "Team Bots support adding collaborators to jointly manage skills, plugins, and configurations."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Email and Slack draft cards now offer a \"Disable drafts for this Bot\" option so the Bot can send messages directly; ask the Bot to turn drafts back on anytime to restore them.",
+            "Creators of published Team Bots can add team members under \"Managers\"; added members can modify profiles, skills, plugins, secrets, and Slack apps. (Teams)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Bot avatars get a fresh look with larger eyes, and the avatar editor adds shapes including square, sparkle, clover, flower, heart, house, and star.",
+            "Links in Bot messages display website favicons next to the underlined link text.",
+            "When a Bot needs to log in or fill out another form, its chat card opens a Secure Form window displaying the site name and icon."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.13.0",
+      "platform": "ios",
+      "version": "1.13.0",
+      "date": "2026-09-29",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "Upgraded Reactions and Refined Haptic Feedback",
+      "points": [
+        "Optimized quick reaction interactions for snappier response and livelier visuals.",
+        "Improved vibration haptics and smoother photo browsing."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Reactions are more lively and easier to use.",
+            "Smarter haptic feedback and a smoother photo browsing experience."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.63.0",
+      "platform": "pc",
+      "version": "0.63.0",
+      "date": "2026-09-29",
+      "url": "https://x.ai/changelog/bot#v0.63.0",
+      "title": "Faster Web Browsing and Slack Approval Integration",
+      "points": [
+        "Pops up approval cards directly in Slack when review is required, preventing missed actions due to timeouts.",
+        "Optimized web interaction flows, significantly reducing wait times after the Bot clicks or submits forms.",
+        "Adding plugins from Marketplace that require authorization automatically triggers the login flow.",
+        "Fixed issues where the Bot did not reply with results after completing tasks and usage limit notices were inaccurate."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "In Slack threads, Bots requiring your approval send a \"Review an action\" card exclusively for you to handle, rather than abandoning the action. (Teams)",
+            "You can have a Team Bot message one of your own Bots in Slack, with replies sent privately back to your Grok Bot. (Teams)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Adding plugins from Marketplace that require login (such as Gmail) immediately starts the login flow instead of staying on \"Added\".",
+            "Bots browse web pages faster, waiting less time for pages to settle after each click or form submission.",
+            "Marketplace is more focused on plugins: featured Bots and Bot search results are no longer shown, and search placeholder text changed to \"Search plugins\".",
+            "For Team Bots you own that are ready to publish, \"Publish\" appears at the top of the details panel, replacing the previous \"Publish to team\" card. (Teams)"
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "In networks with TLS inspection proxies, Grok Bot can log in and connect properly using root certificates installed on your computer.",
+            "When you reach the usage limit included with your plan, Grok Bot displays a usage limit notification instead of \"Bot failed to respond\".",
+            "After indicating that it is working on your request and finishing the task, the Bot sends you the result rather than going silent.",
+            "\"Settings → Usage & Billing\" displays your plan's included usage and reset time instead of showing your plan has no quota.",
+            "The Bot preserves your configured voice, speed, and language instead of resetting to defaults.",
+            "In the \"Tasks\" tab of the Bot details panel, deleted or expired cloud agent runs are removed from the \"Coding\" list, and stalled states display \"Status unavailable\".",
+            "Bots created while the app is open immediately show their latest message preview and unread dot in the sidebar.",
+            "Team Bots with names containing characters unsupported by Slack (such as emoji or non-Latin characters) can still be added to Slack using a sanitized name compliant with Slack specifications. (Teams)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.62.0",
+      "platform": "pc",
+      "version": "0.62.0",
+      "date": "2026-09-28",
+      "url": "https://x.ai/changelog/bot#v0.62.0",
+      "title": "Message Quotes, Quick Lists, and Spellcheck",
+      "points": [
+        "Select text to quote it into the input box with one click for targeted contextual follow-ups.",
+        "Input box supports quick ordered and unordered lists with Tab level indentations.",
+        "Bot info page adds a Library tab, organizing shared files and links chronologically.",
+        "More instant notifications: mobile and desktop alert immediately as the Bot sends each message."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Select text in chat and press Cmd/Ctrl+L, or choose \"Add to prompt\", to quote that text in your next message.",
+            "Type - or 1. in the input box to start an unordered or ordered list; press Shift+Enter to add list items, Tab to indent levels, and Enter to send.",
+            "Grok Bot underlines misspelled words as you type, offering suggestions and an \"Add to Dictionary\" option in the context menu; turn it off via \"Check Spelling While Typing\".",
+            "On the dashboard's \"Manage Team Bots\" page, team admins can search by Bot or creator name and delete Team Bots created by team members. (Teams)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "The Bot's info panel adds a \"Library\" tab listing pages, files, and links it has shared, grouped by \"Today\", \"This week\", and \"Older\".",
+            "When 1Password is not connected, the Bot requests site credentials via in-chat forms, and only provides the \"Connect 1Password\" option if the 1Password app is installed.",
+            "A Team Bot's info panel displays the count of configured plugins, secrets, skills, and files, showing a \"Publish to team\" card once ready. (Teams)",
+            "When your Slack workspace requires admin approval, the \"Add to Slack\" dialog prompts you to \"Send request in Slack\" before displaying \"Awaiting admin approval\". (Teams)"
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "When the Bot prompts you to connect an app in chat, it automatically resumes the task after you complete the login.",
+            "Failed messages display \"Failed to send\" along with \"Resend\" and \"Delete\" options instead of remaining stuck on \"Not delivered yet\".",
+            "Desktop and mobile notifications arrive immediately as the Bot sends messages, rather than only alerting after it finishes working.",
+            "Emails sent by the Bot via Gmail are delivered to the intended recipients rather than the original recipient of a saved draft.",
+            "Deleted Bots release their screen reservations on shared Bot computers, so other Bots' browser actions no longer fail due to full screens.",
+            "When a Bot sends multiple images to Slack, all images are delivered successfully rather than only the first one.",
+            "When the Bot computer's browser restarts, the Bot maintains its login session on websites."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.61.0",
+      "platform": "pc",
+      "version": "0.61.0",
+      "date": "2026-09-26",
+      "url": "https://x.ai/changelog/bot#v0.61.0",
+      "title": "Team Bots Launch and Deep Slack Collaboration",
+      "points": [
+        "Publish Bots to your team so members can chat independently in-app or in Slack.",
+        "Team members use independent personal quotas and private memories across platforms without interference.",
+        "Deep Slack integration, supporting thread replies in channels and personal routine management.",
+        "Improved file delivery reliability, fixing rare instances of files getting lost when sent by Bots."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Team Bots allow you to publish a single Bot for your entire team; team members can chat with it in the app or in Slack, with each person having an independent conversation. (Teams)",
+            "Select \"Publish to Team\" from the Bot's \"Share\" menu to create a team copy while preserving chat history and memories, or choose \"Start fresh\"; your original Bot remains private. (Teams)",
+            "Creating a Team Bot guides you step-by-step with cards to configure plugins, secrets, skills, and files; the Bot remains visible only to you until you choose \"Publish to team\". (Teams)",
+            "Owners can edit a Team Bot's name, description, plugins, secrets, skills, files, and Slack app from details, or click \"Unpublish\" to recall it from team members. (Teams)",
+            "Team members can find Team Bots under \"Team Bots\" in \"New chat\", see added Bots in their sidebar, and receive greetings with \"Try asking\" suggestions. (Teams)",
+            "Team Bots will ask before using your connected plugins; selecting \"Always allow\" applies to that Bot or all Team Bots until you choose \"Clear connector preferences\". (Teams)",
+            "Team member usage with Team Bots counts against their individual quotas, and the Bot maintains private history for each person across the app, Slack, and triggers. (Teams)",
+            "Team Bots support Slack: replying in threads, reading joined channels, responding to workflow mentions, posting new messages, and fully preserving links, code, and table formatting. (Teams)",
+            "Ask Team Bots in Slack to set up, edit, pause, or delete your triggers; connect your Slack account under \"Settings → General → Team Bots\". (Teams)",
+            "Team admins can add Team Bots for the entire team or specific groups in the dashboard under \"Manage team bots\", and members cannot hide them. (Teams)"
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Files that the Bot indicates it is sending to you arrive reliably in the chat window instead of silently disappearing."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.60.0",
+      "platform": "pc",
+      "version": "0.60.0",
+      "date": "2026-09-26",
+      "url": "https://x.ai/changelog/bot#v0.60.0",
+      "title": "Outlook Drafts Support and Reply Optimizations",
+      "points": [
+        "Supports generating Outlook email drafts, which can be sent with one click after reviewing in chat.",
+        "Wide tables support horizontal scrolling in narrow windows without squished content.",
+        "Resolved text escaping anomalies, properly displaying paragraph line breaks, quotes, and end-of-line links.",
+        "Significantly improved reply reliability, resolving occasional silence after task completion."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Editable email drafts now support Outlook: preview new emails drafted by the Bot in chat, then choose \"Send email\" to send via your Outlook account."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "The sidebar's \"Marketplace\" button is now renamed to \"Connect apps\", displaying featured plugin icons beside it.",
+            "Wide tables in Bot messages maintain their complete layout in narrow windows with horizontal scrolling, instead of being compressed into tall, narrow columns.",
+            "Emoji reactions on messages now feature a brief popping animation when added."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Bot replies are more reliable and no longer end conversations silently, including after tool usage or when background tasks finish.",
+            "Bot messages properly display line breaks and quotation marks without extra backslashes, and trailing links correctly open target pages.",
+            "If a Bot cannot reply due to unpaid invoices or a plan lacking Grok Bot, the app and Slack explain the specific reason instead of showing generic error messages.",
+            "Searching Bots by name in \"New chat\", \"Search\", or \"@mentions\" finds Bots containing the entered text and prioritizes exact matches.",
+            "When an image provider rejects an avatar description, the avatar editor explains why and suggests rephrasing.",
+            "Creating a Bot from \"New chat\" reliably opens the new Bot instead of occasionally hanging after creation."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.59.0",
+      "platform": "pc",
+      "version": "0.59.0",
+      "date": "2026-09-25",
+      "url": "https://x.ai/changelog/bot#v0.59.0",
+      "title": "Centered Layout Optimization and Faster Bot Responses",
+      "points": [
+        "Centered layout for wide windows greatly improves comfort when reading long conversations and typing.",
+        "When messaging a busy Bot, the system prioritizes responding to your current conversation request.",
+        "Optimized memory and skill retrieval performance, eliminating stutters and fixing lost messages sent in quick succession.",
+        "Fixed long conversation history flickering and disappearing on load, keeping messages stably rendered."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Expired Auto-review cards offer an \"Always allow this in the future\" option to avoid prompting you for that action again.",
+            "Admins can store Team Secrets in the Grok Bot dashboard, which Team Setup scripts receive as environment variables. (Enterprise)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "When you message a busy Bot, it prioritizes replying to you before processing queued updates from other Bots, Cloud Agents, and background tasks.",
+            "In wide windows, the chat view and message input box remain centered in a single column, allowing wide tables in replies to expand horizontally.",
+            "Reaching usage or spend limits displays a full limit banner with buttons like \"Upgrade\", \"Set Spend Limit\", or \"Request Upgrade\" to request from admins.",
+            "Bots provide built-in action guidance for popular travel, food, shopping, and package delivery websites, offering direct links and step-by-step instructions."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "When sending multiple messages in rapid succession, the Bot responds to all messages (including the first one).",
+            "Bots with large numbers of memories or skills no longer pause for seconds before replying, and reliably save and forget memories.",
+            "When opening or reloading long chats, Bot replies stay continuously visible instead of flashing and disappearing.",
+            "When a Bot's computer temporarily disconnects or fails an automatic update, chat continues normally without disruptive dialog popups.",
+            "On Windows, downloaded updates install when quitting the app; on macOS, failed update installations retry automatically instead of remaining on older versions."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.12.0",
+      "platform": "ios",
+      "version": "1.12.0",
+      "date": "2026-09-24",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "Voice Call Startup Performance Improvements",
+      "points": [
+        "Optimized voice call startup performance for faster loading."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Improved performance when starting voice chats."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.58.0",
+      "platform": "pc",
+      "version": "0.58.0",
+      "date": "2026-09-22",
+      "url": "https://x.ai/changelog/bot#v0.58.0",
+      "title": "Redesigned Sidebar and Enhanced Connection Experience",
+      "points": [
+        "Refined sidebar layout with quick search and chat initiation at the top, and marketplace at the bottom.",
+        "Smoother reconnection after computer sleep or network switching, without disruptive full-width banners.",
+        "Clear cards show reasons when hitting limits or timeouts; tasks still complete after hanging up voice calls.",
+        "Maintains stable Bot sorting in sidebar; adds 5 European languages to interface options."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Select Czech, Danish, Finnish, Hungarian, or Norwegian Bokmål under \"Settings\" → \"Language\"; \"Follow System\" picks the language automatically when your computer uses it.",
+            "When \"Terminate Inactive Computers\" is enabled, members' Grok Bot computers idle for more than 30 days will be terminated. (Enterprise)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "The sidebar features circular \"Search\" and \"New chat\" buttons at the top and \"Marketplace\" at the bottom; click the Bot name in the chat header to open conversation details.",
+            "Grok Bot reconnects faster after waking from sleep or switching networks; brief reconnections or computer updates no longer display banners across the window.",
+            "Action Recording logs more Bot activity, including tool execution results and handoffs to subagents and cloud agents, redacting card numbers and access tokens. (Enterprise)",
+            "Screen readers speak more app content, including suggestions, new questions, and message authors; keyboard focus is clearly visible and remains within full-screen viewers."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "When a Bot cannot respond due to usage limits, rate limits, or timeouts, a card in chat explains the reason.",
+            "Anyone with Grok Bot access can play a Bot's voice memos without being prompted to upgrade plans.",
+            "Auto-review rules added while a Bot is working (such as via \"Always allow\") are saved properly.",
+            "If you hang up a voice call while the Bot is still processing your request, it finishes processing and posts the result in chat.",
+            "Bots can use plugins with labeled accounts when only a single labeled account is connected (such as a labeled Outlook account).",
+            "The sidebar preserves original Bot ordering after reload or restart; opening a Bot does not shift its position.",
+            "Voice calls use the microphone selected under \"Settings\" → \"Microphone\"; if unavailable, they fall back to the default microphone.",
+            "After restarting, the Bot reconnects to your local computer instead of reporting as disconnected."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.11.1",
+      "platform": "ios",
+      "version": "1.11.1",
+      "date": "2026-09-18",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "Voice Call Audio Optimizations and Fixes",
+      "points": [
+        "Fixed audio routing issues during voice calls.",
+        "Optimized audio processing performance in voice calls."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Fixed audio routing issues in voice chats.",
+            "Improved audio processing performance in voice chats."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.57.0",
+      "platform": "pc",
+      "version": "0.57.0",
+      "date": "2026-09-18",
+      "url": "https://x.ai/changelog/bot#v0.57.0",
+      "title": "New Projects Feature and Rich Link Previews",
+      "points": [
+        "Supports launching Projects, where Cloud Agents plan work and dispatch subtasks.",
+        "Supports previews for Notion, GitHub, and more, directly displaying real titles and content.",
+        "Voice memo playback syncs with word-by-word highlighted transcripts; click any word to jump.",
+        "Adds a collapsible Hidden Bots group in the sidebar, with snappier message sending feedback."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "When you make a request, the Bot can start a Project: a Cloud Agent that plans work and runs its own agents."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Link cards and previews use your connected accounts to display real titles for private Notion pages, GitHub issues and pull requests, and Slack messages.",
+            "Playing a Bot's voice memo highlights each transcribed word in sync with audio; click any word to jump to that timestamp.",
+            "The bottom of the sidebar features a collapsible \"Hidden Bots\" section; hidden Bot menus offer a \"Show in sidebar\" option to restore visibility.",
+            "Sent messages display as sent immediately, showing a miniature progress bar only if delivery to the Bot takes more than two seconds.",
+            "The Bot's sidebar menu removes \"Edit Profile\", \"Duplicate\", and template options; use \"View conversation details\" to edit profile info, and the share menu for templates.",
+            "Audit Logs record more Grok Bot activities, including Bot computers, group chats, templates, skills, plugins, triggers, and deleting or sharing Bots. (Enterprise)"
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Bots directly answer questions within their own knowledge base, no longer occasionally stopping without a response.",
+            "A Bot's browser maintains its connection when other Bots on the same Bot computer use the browser, waits longer for slow pages, and reconnects automatically if dropped.",
+            "The \"Waiting for you\" status for Bots in the sidebar clears automatically when no longer waiting, instead of getting stuck.",
+            "Sidebar previews for Bots display properly even when the latest message is a form, photo, widget, or approval request, rather than appearing blank."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.11.0",
+      "platform": "ios",
+      "version": "1.11.0",
+      "date": "2026-09-17",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "Draft Saving and Multi-Photo Previews",
+      "points": [
+        "Auto-saves drafts so unsent messages are never lost.",
+        "Tap photos for full-screen preview before sending.",
+        "Upgraded multi-photo display with collapsed stacks and grid view.",
+        "Optimized first-time sign-in speed."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Tap added photos to view them full-screen before sending.",
+            "Added draft saving: unsent message text is preserved when switching between chats.",
+            "Optimized multi-photo presentation in a single message: two photos stack, three or more fan out with a count badge (tap to view all in a grid); full-screen viewing shows loading or \"couldn't load\" states instead of a black screen.",
+            "Reduced time required for first-time sign-in."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.56.0",
+      "platform": "pc",
+      "version": "0.56.0",
+      "date": "2026-09-17",
+      "url": "https://x.ai/changelog/bot#v0.56.0",
+      "title": "GitHub Integration and Enhanced Spreadsheet Previews",
+      "points": [
+        "Significantly enhanced GitHub integration, supporting releases, tags, labels, and multi-file reviews.",
+        "Spreadsheet preview supports cell selection, arrow-key navigation, and copying up to 10,000 rows.",
+        "Approval cards summarize action intent in a single sentence; stopping a Bot also cancels related tasks.",
+        "Marketplace plugin connections and login statuses update instantly without waiting for UI refreshes."
+      ],
+      "full": [
+        [
+          "Improvements",
+          [
+            "Bots support GitHub releases, tags, labels, sub-issues, discussions, and collaborators, and can create branches and submit single pull request reviews spanning multiple files.",
+            "\"Review an action\" cards explain what the Bot wants to do in a single sentence, tucking specific commands and justifications behind \"View the full request\".",
+            "Spreadsheet preview supports selecting cells and ranges, moving with arrow keys, copying with Cmd/Ctrl+C, and displaying up to 10,000 rows.",
+            "When you tell a Bot to stop, it also stops other Bots it handed tasks to as well as Cloud Agents it launched."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "\"Marketplace\" updates immediately after plugins are connected, disconnected, removed, or logged in.",
+            "Triggers watching a specific GitHub pull request run only when events occur on that pull request.",
+            "When changing Bot avatar shape and color, every selection applies immediately even with rapid clicking.",
+            "One-time reminder triggers display \"Once\" along with the specific date and time.",
+            "Sleeping Bot computers will apply an administrator's latest Network Controls upon next wake-up. (Enterprise)"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.55.0",
+      "platform": "pc",
+      "version": "0.55.0",
+      "date": "2026-09-16",
+      "url": "https://x.ai/changelog/bot#v0.55.0",
+      "title": "Setup Checklist Refinements and Improved Form Autofill",
+      "points": [
+        "Refines setup checklist with recommended and optional steps, adding network settings and more.",
+        "Bot form autofill supports fields unlocked only after clicking, such as address inputs.",
+        "Optimized 1Password login detection to reduce unnecessary takeover prompts.",
+        "About dialog displays application build date and supports one-click version copying."
+      ],
+      "full": [
+        [
+          "Improvements",
+          [
+            "The Grok Bot dashboard's \"Setup Checklist\" groups steps into \"Recommended\" and \"Optional\", adding steps for plugins, Slack or Microsoft Teams, and network settings. (Teams)",
+            "The \"About\" dialog displays the build date of the current app, and \"Copy version info\" includes the build date as well."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "\"Disconnect\" in the built-in GitHub plugin works properly even if your Grok Bot computer is unavailable or running an older version.",
+            "When the Bot fills your chat form answers into web pages, it can populate fields that only unlock after clicking, such as address fields.",
+            "On login pages that retain filled fields during login, the Bot checks whether the 1Password sign-in succeeded rather than immediately handing screen control over to you."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.54.0",
+      "platform": "pc",
+      "version": "0.54.0",
+      "date": "2026-09-16",
+      "url": "https://x.ai/changelog/bot#v0.54.0",
+      "title": "Enhanced Quick Search and Photo Preview Improvements",
+      "points": [
+        "Search prioritizes Bots and settings; wrapping terms in quotes searches all messages.",
+        "HEIC/HEIF photos render directly as image previews rather than generic file attachments.",
+        "1Password supports more websites, autofilling one-time passcodes and passwords.",
+        "Bots created from templates greet you in the app's current language."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Organization admins can choose \"Delete VMs and Data\" under \"Manage selected\" to delete members' Grok Bot computers and stored data. (Enterprise)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "The search panel (Cmd/Ctrl+K) prioritizes matching Bots, settings, actions, and triggers ahead of messages; wrap search terms in quotes to view all matching messages.",
+            "Bots created from templates greet you in your app's language rather than always in English."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "HEIC and HEIF photos (such as from iPhones) render directly as images in conversations, the media viewer, and the \"Media\" tab, rather than as file attachments.",
+            "Bots support 1Password login on more sites, allowing 1Password to autofill one-time codes and passwords without manual entry.",
+            "The built-in GitHub plugin appears in \"Marketplace\" search results with a \"Connect\" button; its page lists included tools so you can disable individual tools.",
+            "Secret request cards explain why a save failed and keep your entered values for retrying."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.10.0",
+      "platform": "ios",
+      "version": "1.10.0",
+      "date": "2026-09-15",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "Long Chat Performance and Rendering Optimizations",
+      "points": [
+        "Optimized loading and scrolling performance in long chats.",
+        "Fixed Markdown table rendering issues.",
+        "Fixed photo carousel bugs and chat attachment menu alignment issues."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Improved performance in long chats",
+            "Fixed Markdown table rendering issues",
+            "Fixed photo carousel issues",
+            "Fixed positioning issues with the chat attachment menu"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.53.0",
+      "platform": "pc",
+      "version": "0.53.0",
+      "date": "2026-09-15",
+      "url": "https://x.ai/changelog/bot#v0.53.0",
+      "title": "1Password and File Uploads",
+      "points": [
+        "Connect 1Password on Mac so Bots can log into web pages on your behalf.",
+        "Bots can upload files to cloud drives or attach them to Gmail drafts.",
+        "Bot environment matches local time zone automatically for accurate web page clocks.",
+        "Click images to zoom in; press Esc or click outside to exit."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "On Mac, connect 1Password from Marketplace to let your Bot log in with saved credentials; unless you turn on \"Auto fill\", it asks you before every login.",
+            "Bots can upload files to Google Drive or OneDrive, or attach them to Gmail drafts."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Bot computers now adopt your local time zone so web content and system clocks match your location.",
+            "Click an opened photo to zoom in; press the \"Escape\" key, click the close button, or click outside the photo to close the viewer."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Stopping your Bot also stops everything still running on its Bot computer.",
+            "Bots can fill in login inputs properly even if partially off-screen.",
+            "Phone notifications now display your Bot's avatar.",
+            "You can now complete the Bitbucket connection flow within Grok Bot.",
+            "Bots created by other Bots now appear in your sidebar."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.52.0",
+      "platform": "pc",
+      "version": "0.52.0",
+      "date": "2026-09-15",
+      "url": "https://x.ai/changelog/bot#v0.52.0",
+      "title": "Routine Pausing and Sidebar Improvements",
+      "points": [
+        "Automated Routines can now be paused anytime and resumed later.",
+        "Collapsed sidebar adds a quick shortcut to Marketplace.",
+        "Fixed an issue where horizontal scrolling in code blocks scrolled the entire message.",
+        "Marketplace clearly displays GitHub account connection status."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "You can pause triggers and resume them whenever needed."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "The built-in GitHub connection in Marketplace now shows whether your account is connected, showing \"Connect GitHub\" when disconnected.",
+            "Sidebar entries no longer display the timestamp of the last message, and the collapsed sidebar adds a Marketplace shortcut."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "The Bot no longer sends duplicate confirmation messages after replying.",
+            "Clicks and typing on the Bot computer continue to work even when Grok Bot cannot inspect the page in advance.",
+            "Scrolling horizontally within code blocks no longer causes the entire message to slide.",
+            "The Bot's browser no longer prompts to save passwords after signing in.",
+            "Approval cards close automatically once their countdown expires.",
+            "Press \"Enter\" at the \"Update ready\" prompt to restart and apply updates."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.51.0",
+      "platform": "pc",
+      "version": "0.51.0",
+      "date": "2026-09-14",
+      "url": "https://x.ai/changelog/bot#v0.51.0",
+      "title": "Automatic Bot Creation & Avatar Customization",
+      "points": [
+        "The initial setup flow automatically creates your first Bot for a quick start.",
+        "Bots can now change their own names as well as avatar shape and color.",
+        "Support deleting automated routines and stopping all their subsequent scheduled runs.",
+        "Automatically reopens the last viewed Bot tab even after restarting the app."
+      ],
+      "full": [
+        [
+          "New features",
+          [
+            "The initial setup flow now automatically creates your first Bot for you.",
+            "You can delete triggers, which will also stop all their subsequent runs.",
+            "Your Bot can now change its own name and avatar shape and color."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Even after a restart, each Bot will reopen the tab you were last viewing."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Long conversations can now be scrolled all the way back up, or you can drag the scrollbar directly to the top.",
+            "New accounts correctly display your created Bots, and deleting the last Bot removes it from the list.",
+            "'Take over' now displays the actual screen your Bot is using."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.50.0",
+      "platform": "pc",
+      "version": "0.50.0",
+      "date": "2026-09-11",
+      "url": "https://x.ai/changelog/bot#v0.50.0",
+      "title": "Local Desktop Network Traffic Routing",
+      "points": [
+        "Added a network egress option in Settings to route Bot traffic through your local computer.",
+        "Keeps command details expanded when requesting access to your local computer so you can review them before responding."
+      ],
+      "full": [
+        [
+          "New features",
+          [
+            "Enable 'Route egress through this desktop' in 'Settings' to route the Bot's computer network traffic through your own computer instead of through the cloud."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "When requesting to use your computer, the system keeps commands and details expanded so you can review them before responding."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.49.0",
+      "platform": "pc",
+      "version": "0.49.0",
+      "date": "2026-09-11",
+      "url": "https://x.ai/changelog/bot#v0.49.0",
+      "title": "Code Repository Connections & Full-Screen Media Viewer",
+      "points": [
+        "Prompt cards allow connecting major code hosting platforms when a Bot needs repository access.",
+        "Clicking file paths in messages opens the corresponding file directly on the Bot's computer.",
+        "Images and videos support full-screen viewing with playback and download controls.",
+        "Search is consolidated into a unified list, and browser login sessions persist after Bot computer restarts."
+      ],
+      "full": [
+        [
+          "New features",
+          [
+            "When your Bot needs access to a code repository, a card prompts you to connect GitHub, GitLab, Bitbucket, or Azure DevOps; once authorized, the Bot proceeds.",
+            "Clicking a file path in a message opens that file directly from the Bot's computer."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Search results are now aggregated into a single list, showing relevant files, links, and triggers instantly as you type.",
+            "Images and videos can be opened in full screen, complete with download, close, and playback controls.",
+            "The Bot's computer preserves browser login sessions even after restarting.",
+            "Non-admin team members can also invite others to Grok Bot. (Teams)"
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Messages fully preserve paragraph and list line breaks.",
+            "Returning to Grok Bot happens automatically after connecting an external service; declining connection specifies the service name in the prompt.",
+            "Muted Bots no longer contribute to the Dock badge count."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.8.0",
+      "platform": "ios",
+      "version": "1.8.0",
+      "date": "2026-09-09",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "Message Text Selection & Notification Experience Improvements",
+      "points": [
+        "Message text can now be selected and copied freely.",
+        "Tapping notifications automatically switches to the corresponding account.",
+        "Added customizable notification sound settings.",
+        "Added a confirmation step when sharing a Bot as a template."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Added message text selection and copying",
+            "Added a confirmation step when sharing a Bot as a template",
+            "Added notification sound settings",
+            "Opening a notification now switches to the corresponding account first"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.48.0",
+      "platform": "pc",
+      "version": "0.48.0",
+      "date": "2026-09-09",
+      "url": "https://x.ai/changelog/bot#v0.48.0",
+      "title": "Multi-Account Switching & All-New Marketplace",
+      "points": [
+        "Support adding and quickly switching between multiple accounts, keeping data isolated.",
+        "Marketplace features a consolidated homepage with one-click Bot addition.",
+        "Marketplace supports instant search for plugins, Bots, and categories as you type."
+      ],
+      "full": [
+        [
+          "New features",
+          [
+            "Support adding multiple accounts and switching quickly in the account menu; each account keeps independent Bots and data on this computer.",
+            "You can now add Bots directly from Marketplace listing items.",
+            "Enterprise admins with 'Conversation Insights' can view the team's most frequent Grok Bot use cases on the Grok Bot page, along with a link to full granular details. (Enterprise)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Marketplace now uses a unified home page to showcase plugins and Bots, featuring curated picks, team-popular plugins, and category browsing.",
+            "Searching in Marketplace instantly finds matching plugins, Bots, and categories as you type."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Connectors using API keys now correctly show 'Connected' upon successful connection.",
+            "Visiting an expired Bot link shows an appropriate prompt, with a 'Back' button to return to Marketplace."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.46.0",
+      "platform": "pc",
+      "version": "0.46.0",
+      "date": "2026-09-09",
+      "url": "https://x.ai/changelog/bot#v0.46.0",
+      "title": "Conversation Renaming & Usage Limit Management",
+      "points": [
+        "Support right-clicking to rename chat conversations.",
+        "Usage & Billing supports viewing weekly usage and setting a monthly spending limit.",
+        "Chat interface issues warnings when approaching weekly limits.",
+        "Closed tabs no longer reload automatically when running out of memory."
+      ],
+      "full": [
+        [
+          "New features",
+          [
+            "Right-click a conversation to rename it."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "'Usage & Billing' now displays your weekly usage and plan, warns in chat when approaching weekly limits, and lets you set a monthly on-demand usage limit."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "After returning from adding a payment method, 'Usage & Billing' updates your on-demand limit accordingly.",
+            "After sending an email, link text in the draft email remains preserved.",
+            "When the Bot's computer runs out of memory, closed browser tabs stay closed rather than all reloading.",
+            "Lingering browser tabs no longer prompt you for security keys.",
+            "Your Bot accurately fills login forms even if page label texts appear in a different order."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.45.0",
+      "platform": "pc",
+      "version": "0.45.0",
+      "date": "2026-09-08",
+      "url": "https://x.ai/changelog/bot#v0.45.0",
+      "title": "Email & Slack Draft Review Support",
+      "points": [
+        "Bots can draft emails or Slack messages for review before sending or discarding.",
+        "New Bots proactively introduce themselves without leaving blank conversations.",
+        "No need to re-enter filled form contents after page navigations.",
+        "Enterprise admins can enforce Auto-review rules."
+      ],
+      "full": [
+        [
+          "New features",
+          [
+            "Your Bot can draft email or Slack message drafts for you to review, after which you can choose 'Send' or 'Discard'.",
+            "Enterprise admins can enforce Auto-review and add organization-wide Auto-Review Rules; team members will see a 'Required by your admin' badge. (Enterprise)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "After form submissions, your Bot auto-fills visible fields so you don't need to re-enter information after page redirects."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Newly created Bots proactively send introductions instead of leaving blank chats.",
+            "After resetting a Bot's computer, it is ready immediately once reconnected, and previously typed input is preserved.",
+            "Bots read every message from other Bots sequentially, even when receiving multiple messages while busy.",
+            "Linux installations via deb and rpm notify when updates are available and guide you to update via the package manager."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.44.0",
+      "platform": "pc",
+      "version": "0.44.0",
+      "date": "2026-09-06",
+      "url": "https://x.ai/changelog/bot#v0.44.0",
+      "title": "In-Chat Forms & Mac AutoFill",
+      "points": [
+        "Fill forms within chat for logins and other actions, allowing the Bot to complete web pages for you.",
+        "Hover over Bot messages to view sent timestamps directly.",
+        "Mac users can right-click text fields to use AutoFill.",
+        "Message box supports Tab indentation, and large file transfers no longer drop."
+      ],
+      "full": [
+        [
+          "New features",
+          [
+            "When your Bot requires actions like logging in, it asks via an in-chat form and fills pages for you, without needing to hand over the Bot's computer.",
+            "Hover over messages sent by your Bot to see their send time.",
+            "On Mac, right-click any text field to use 'AutoFill'."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Requests to use your computer are now shown directly in chat.",
+            "Before sending feedback on your behalf, your Bot asks if you need a response from the support team."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Pressing Tab inserts tabs in the message box, and multi-line pastes preserve indentation.",
+            "Brief connection hiccups no longer log you out or show your computer as disconnected.",
+            "Video and file transfers from the Bot's computer no longer stall after the first 4 MB.",
+            "Connection issue notices no longer block the login screen after you log out."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.41.0",
+      "platform": "pc",
+      "version": "0.41.0",
+      "date": "2026-09-04",
+      "url": "https://x.ai/changelog/bot#v0.41.0",
+      "title": "Bots in Marketplace & Verified Badges",
+      "points": [
+        "Marketplace adds a Bot section with category filtering, search, and dedicated landing pages.",
+        "Bots built by the official team display a Verified badge in Marketplace.",
+        "Plugin configurations support richer form controls like checkboxes and dropdowns.",
+        "Connecting state is clearly shown while connecting to computers until the screen is ready."
+      ],
+      "full": [
+        [
+          "New features",
+          [
+            "'Marketplace' now features addable Bots alongside plugins, complete with category browsing, search, and dedicated pages for each Bot.",
+            "Bots crafted by the Grok Bot team show a 'Verified' badge in 'Marketplace'."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "While the Bot's computer connects, 'Connecting' is continuously displayed until the screen is ready.",
+            "When Grok Bot access is restricted to specific groups, invite notices explain that the invite doesn't grant access and link to 'Manage Access'. (Enterprise)"
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Plugin settings display checkboxes, menus, and numeric inputs when needed, with saved secrets masked as dots.",
+            "Text entered when creating a Bot is preserved in that Bot's chat.",
+            "Pull request links retain the anchor text written for them."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.6.0",
+      "platform": "ios",
+      "version": "1.6.0",
+      "date": "2026-09-03",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "iPad Support & Formula/Chart Rendering",
+      "points": [
+        "Official support for iPad screen sizes and use cases.",
+        "Bot replies now support rendering LaTeX formulas and charts.",
+        "Optimized image viewer experience and voice dictation.",
+        "Overall performance improvements and smoother operation."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Support for iPad.",
+            "Bot replies support LaTeX and chart rendering.",
+            "Optimized image viewer.",
+            "Improved voice dictation support.",
+            "Performance improvements."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.40.0",
+      "platform": "pc",
+      "version": "0.40.0",
+      "date": "2026-09-03",
+      "url": "https://x.ai/changelog/bot#v0.40.0",
+      "title": "Enterprise General Availability & Support Menu Redesign",
+      "points": [
+        "Grok Bot is officially available to all Enterprise teams.",
+        "Added a Support submenu in the account menu, consolidating help and feedback.",
+        "Added Urdu, Thai, and Bengali interface languages.",
+        "Shows creation progress in the list when creating Bots without waiting on a loading screen."
+      ],
+      "full": [
+        [
+          "New features",
+          [
+            "Grok Bot is now available to all Enterprise teams, not just early-access organizations. (Enterprise)",
+            "Grok Bot now supports Urdu, Thai, and Bengali.",
+            "'Audit Logs' now record Bot creations, changes to Grok Bot access, and team setting modifications. (Enterprise)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Under 'Support' in the account menu, 'Help Center', 'Send Feedback', and 'About' are now grouped right beside 'Get Grok Bot for mobile'.",
+            "When creating a Bot, its row displays 'Creating…' while you stay in your current chat.",
+            "Card requests display 'Approve'; declined, failed, or expired requests show that no charge was incurred."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.39.0",
+      "platform": "pc",
+      "version": "0.39.0",
+      "date": "2026-09-03",
+      "url": "https://x.ai/changelog/bot#v0.39.0",
+      "title": "New Language Support & Greeting Localization",
+      "points": [
+        "New Bots proactively greet you based on your interface language setting.",
+        "Added Vietnamese and Indonesian, and improved Chinese dialect recognition.",
+        "Keeps displaying the last screen when reopening a Bot's computer until connected.",
+        "Pausing or deleting Routines also cancels pending runs."
+      ],
+      "full": [
+        [
+          "New features",
+          [
+            "Grok Bot now supports Vietnamese and Indonesian."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Newly created Bots greet you in the language currently configured in Grok Bot.",
+            "The 'Language' list displays each language's name in both the active language and its native script.",
+            "Plugin categories appear in your selected language.",
+            "Reopening a Bot's computer displays the last screen until reconnected successfully."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "When a Bot's computer restarts unable to read files, your Bot and its files remain intact.",
+            "Pausing or deleting triggers also cancels queued runs.",
+            "Account menus continue showing weekly usage and account details even if refreshing fails.",
+            "'Follow System' now accurately matches Cantonese, Traditional Chinese, or Simplified Chinese."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.38.0",
+      "platform": "pc",
+      "version": "0.38.0",
+      "date": "2026-09-03",
+      "url": "https://x.ai/changelog/bot#v0.38.0",
+      "title": "Sidebar Display Fixes & Group Permissions",
+      "points": [
+        "Fixed username display glitches in the sidebar and streamlined Enterprise group access settings."
+      ],
+      "full": [
+        [
+          "Improvements",
+          [
+            "'Manage Group Access' now sits next to the Grok Bot enable toggle, and saved group restrictions apply immediately upon re-enabling. (Enterprise)"
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "The sidebar retains your name even when your profile fails to load."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.37.0",
+      "platform": "pc",
+      "version": "0.37.0",
+      "date": "2026-09-03",
+      "url": "https://x.ai/changelog/bot#v0.37.0",
+      "title": "Initial Setup Onboarding & Template Share Menu",
+      "points": [
+        "Initial setup supports choosing everyday tools, including Cursor.",
+        "Added a template share menu at the top of chats to share, update, and view details.",
+        "Sending follow-up messages while a Bot is working still keeps execution activity visible.",
+        "Read chats remain read after app updates without repeated unread alerts."
+      ],
+      "full": [
+        [
+          "New features",
+          [
+            "'Setup' asks about tools you use daily, including Cursor.",
+            "Enterprise admins can check remaining Grok Bot trial days in 'Overview' on the dashboard. (Enterprise)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "The share menu in the chat header now includes 'Share as template', 'Update template', and 'View template details'."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Sending a follow-up message while the Bot is still working keeps the Bot's activity visible.",
+            "Read chats remain marked as read after updates.",
+            "Bots added from templates display their name only once in the sidebar.",
+            "'Allow once' works properly even when 'Execution on this computer' is set to 'Never allow'.",
+            "Security key prompts appear only one at a time and do not reappear after being dismissed.",
+            "Auto-review can request your approval for Mac automation commands.",
+            "Grok Bot works properly even when your team restricts who can use Cloud Agents."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.36.0",
+      "platform": "pc",
+      "version": "0.36.0",
+      "date": "2026-09-02",
+      "url": "https://x.ai/changelog/bot#v0.36.0",
+      "title": "Dedicated Routine Sessions & Execution Without Confirmation",
+      "points": [
+        "Routines open in dedicated standalone chats when running; close them to return to where you were.",
+        "Selecting 'Always allow' for local execution lets the Bot operate your computer without repeated prompts.",
+        "Right-click a Pull Request in chat to quickly copy its link.",
+        "Sidebar hiding restored to normal, hiding all checked Bots."
+      ],
+      "full": [
+        [
+          "New features",
+          [
+            "Right-click a Pull request in chat to copy its link."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Trigger runs open in a dedicated chat, and clicking 'Close Chat' returns you to where you were."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "'Always allow' under 'Execution on this computer' now lets Bots use your computer directly without asking each time.",
+            "'Hide from sidebar' hides all selected Bots."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.35.0",
+      "platform": "pc",
+      "version": "0.35.0",
+      "date": "2026-09-02",
+      "url": "https://x.ai/changelog/bot#v0.35.0",
+      "title": "Long-Running Tasks & Shared Bot Sync",
+      "points": [
+        "Bots run continuously on long tasks and multi-page browsing without early timeouts.",
+        "Reopening a shared Bot updates automatically to the latest version and its integrations.",
+        "Declined purchase requests stay declined, and unaddressed requests are marked as expired.",
+        "Team admins can send dedicated links to quickly invite members to Grok Bot."
+      ],
+      "full": [
+        [
+          "Improvements",
+          [
+            "Your Bot continues running on longer tasks and page-by-page browsing without interrupting early.",
+            "Team admins can send links that directly open 'Invite Your Team to Grok Bot'. (Teams)"
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Purchase requests you decline stay 'Declined', and unresponded requests are marked 'Expired'.",
+            "Reopening a shared Bot displays its latest version, including its integrations.",
+            "Triggers, feedback, and notifications stay within your selected team."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.34.0",
+      "platform": "pc",
+      "version": "0.34.0",
+      "date": "2026-09-01",
+      "url": "https://x.ai/changelog/bot#v0.34.0",
+      "title": "PR Status Cards & Creating Bots in Sidebar Groups",
+      "points": [
+        "PR links in chat display as cards showing number, title, and open/merged status.",
+        "Bots can create new Bots directly within specified sidebar groups.",
+        "Routines on shared Bots show specific descriptions rather than repeating names.",
+        "Bot avatars in the sidebar update immediately once changed."
+      ],
+      "full": [
+        [
+          "New features",
+          [
+            "Pull request links in messages now display number, title, and whether they are 'open', 'draft', 'merged', or 'closed'.",
+            "Your Bot can create new Bots inside sidebar groups."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Each trigger on a shared Bot now describes what it does instead of repeating its name."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "The 'New Bot' shortcut closes 'Search' first so they no longer overlap.",
+            "A Bot's avatar updates immediately in the sidebar as soon as it is changed.",
+            "Approving an expired purchase request prompts for a new one, and new purchase requests replace pending older ones."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.33.0",
+      "platform": "pc",
+      "version": "0.33.0",
+      "date": "2026-09-01",
+      "url": "https://x.ai/changelog/bot#v0.33.0",
+      "title": "Link Payments & Formatting/Reconnection Improvements",
+      "points": [
+        "Pay with saved cards directly via Link wallet when confirming purchases.",
+        "Fixed list numbering breaks across paragraphs, properly rendering line breaks in text and tables.",
+        "Conversations that failed to load due to connection errors now retry automatically.",
+        "Enterprise admins can assign permissions by group and initiate team trials from the console."
+      ],
+      "full": [
+        [
+          "New features",
+          [
+            "Enterprise admins can allow all team members to use Grok Bot, or restrict it to specific groups via 'Group Access'. (Enterprise)",
+            "Enterprise admins can start a Grok Bot trial for their team in the console, with Bot settings showing when the trial ends. (Enterprise)",
+            "When approving purchases, 'Pay with' allows selecting saved cards from your Link wallet."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Numbered lists maintain continuous numbering when paragraphs exist between items, and line breaks in messages and tables render properly.",
+            "Conversations that fail to load due to connection issues now retry automatically.",
+            "Grok Bot honors your account privacy settings when you are not part of a team.",
+            "Bots stay in place after being moved to other sidebar groups.",
+            "A notification appears when a trigger has been paused while you were away."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.32.0",
+      "platform": "pc",
+      "version": "0.32.0",
+      "date": "2026-09-01",
+      "url": "https://x.ai/changelog/bot#v0.32.0",
+      "title": "Input Method Typing Compatibility & Team Settings Refinement",
+      "points": [
+        "Fixed input method compatibility on remote desktop, supporting Chinese, Japanese, and Korean typing.",
+        "Team page provides setup onboarding, linking directly to getting started guides and usage stats once enabled."
+      ],
+      "full": [
+        [
+          "Improvements",
+          [
+            "The team page offers a 'Set up Grok Bot' option before enabling the team, and links to getting started guides and usage statistics afterward. (Teams)"
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Typing on the Bot's computer honors your input method, rendering Korean, Japanese, Chinese, and accented characters accurately as typed."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.31.0",
+      "platform": "pc",
+      "version": "0.31.0",
+      "date": "2026-09-01",
+      "url": "https://x.ai/changelog/bot#v0.31.0",
+      "title": "HTML Preview & Bot Limit Increase",
+      "points": [
+        "Directly preview Bot-generated HTML files with source code viewing and external link support.",
+        "Removed the Bot creation cap, now allowing more than 50 Bots.",
+        "Cloud Agents can open in web or Cursor and remember your preference.",
+        "Brand new onboarding flow that recommends matching Bots based on primary workflows."
+      ],
+      "full": [
+        [
+          "New features",
+          [
+            "New user onboarding asks about your primary work and recommends Bots suited for those tasks.",
+            "Team admins can invite the entire team to Grok Bot or select specific groups and members. (Teams)",
+            "'Setup Checklist' in the console guides admins through configuring plugins, Slack, GitHub, logins, and inviting team members. (Teams)",
+            "Opening a Bot-generated HTML file shows a preview with a 'Source' option to inspect code, and links within can open in the browser.",
+            "The Cloud Agent open button lets you choose 'Open in Web' or 'Open in Cursor', remembering your preference.",
+            "When a firewall or VPN blocks connections to the Bot's computer, Grok Bot displays an inaccessible notice with a 'Retry' option."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Support creating more than 50 Bots.",
+            "Hourly, interval, and daily triggers run on schedules calculated from creation time."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "When switching Bots, attached files and dictation input stay preserved in the originally initiated Bot.",
+            "Retrying a launch avoids restarting Bot-initiated Cloud Agents duplicate times, and the Bot is notified upon completion.",
+            "On Linux, links to open Grok Bot now launch the application properly.",
+            "On Windows, attached images now display thumbnails."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.30.0",
+      "platform": "pc",
+      "version": "0.30.0",
+      "date": "2026-08-28",
+      "url": "https://x.ai/changelog/bot#v0.30.0",
+      "title": "Bot Template Sharing and Link Payment Confirmation",
+      "points": [
+        "Support sharing Bots as templates, allowing others to add them to their list with one click via a link.",
+        "When a Bot initiates a purchase, a card displays the amount, and payment is completed via Link upon approval.",
+        "Support remotely approving tasks on the current computer from another signed-in computer.",
+        "Support pasting plain text using shortcuts, and automatically uploading images as files when pasted."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Share Bots as templates: Choose between team-only or anyone, allowing others to add their own copy via a link.",
+            "When your Bot needs to make a purchase, a card displays the amount for you to choose \"Allow\" or \"Deny\", after which Link completes the payment.",
+            "Team admins can configure whether members can share templates publicly or only within the team. (Teams)",
+            "\"Action Recording\" in the console logs members' Grok Bot actions to the team audit log. (Enterprise)",
+            "Grok Bot now supports Arabic, Ukrainian, Dutch, Greek, Afrikaans, and Hebrew, with right-to-left UI layouts for Arabic and Hebrew.",
+            "Support pasting unformatted text into the message box using Command-Shift-V or Ctrl-Shift-V.",
+            "You can approve tasks on one computer from another computer where your account is signed in.",
+            "Added a \"Personal Usage\" chart to enterprise usage settings showing your spend compared to last month and your usage limits. (Enterprise)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "\"Jump to\" now lists matching Bots above actions and messages.",
+            "\"Send Feedback\" now allows you to request a reply."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Pasting images attaches them as files, and the cursor remains in view after pasting long messages.",
+            "The Bot's browser automatically switches to its selected tab and reloads pages that failed to open."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.4.0",
+      "platform": "ios",
+      "version": "1.4.0",
+      "date": "2026-08-27",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "Chart Visualizations and Quick Bot Duplication",
+      "points": [
+        "Charts in Bot replies render directly as images.",
+        "Long press a Bot on the home screen to duplicate it directly.",
+        "Reduced memory usage for long conversations with smoother scrolling.",
+        "Support sending HEIC format images."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "The home list loads faster, long conversations use less memory, and chat scrolling is smoother.",
+            "Charts in Bot replies now render as images instead of showing raw code.",
+            "Long press a Bot in the home list to duplicate it.",
+            "Support adding HEIC format images as attachments."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.29.0",
+      "platform": "pc",
+      "version": "0.29.0",
+      "date": "2026-08-27",
+      "url": "https://x.ai/changelog/bot#v0.29.0",
+      "title": "Computer Permission Management and Mobile Reply Notifications",
+      "points": [
+        "Added a computer list in Settings to configure execution permissions individually for each device.",
+        "View Bot replies directly in mobile app push notifications.",
+        "The details panel supports drag-to-resize up to the chat area limit.",
+        "Fixed an issue where the Bot computer environment failed to start when belonging to multiple teams."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Added a \"Computer\" section in \"Settings\" listing your computers, allowing you to choose \"Always allow\", \"Ask every time\", or \"Never allow\" for actions on each computer.",
+            "Grok mobile app notifications can now display Bot replies."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "You can drag the details panel outward to widen it, up to the minimum width of the conversation area."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Bot computers now start properly when belonging to multiple teams."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.28.0",
+      "platform": "pc",
+      "version": "0.28.0",
+      "date": "2026-08-26",
+      "url": "https://x.ai/changelog/bot#v0.28.0",
+      "title": "New Multilingual Support and Link Optimizations",
+      "points": [
+        "Added support for Russian, Turkish, Italian, and Swedish, matching the system language.",
+        "Settings and plugin links sent by Bots directly display their real names.",
+        "Login wait time capped at 5 minutes, allowing immediate retry after timeout."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Grok Bot now supports Russian, Turkish, Italian, and Swedish, automatically matching your computer's system language."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Settings and plugin links sent by Bots now display the actual name of the setting or plugin."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Login automatically stops waiting after 5 minutes so you can try again."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.3.2",
+      "platform": "ios",
+      "version": "1.3.2",
+      "date": "2026-08-25",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "General Bug Fixes and Performance Optimizations",
+      "points": [
+        "Fixed known issues and improved system stability."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Bug fixes and improvements"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.27.0",
+      "platform": "pc",
+      "version": "0.27.0",
+      "date": "2026-08-25",
+      "url": "https://x.ai/changelog/bot#v0.27.0",
+      "title": "Expanded Subscription Access and Routine Integration",
+      "points": [
+        "Cursor Pro, SuperGrok, and X Premium+ users can now use it directly.",
+        "Webhook-triggered routines support reading request body content and responding.",
+        "Clear error notices and retry support when chats fail to load.",
+        "Team admin console clearly displays enabled status after setup."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Cursor Pro subscribers can now use Grok Bot; SuperGrok and X Premium+ subscribers with linked accounts can also use it."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "After teams complete Grok Bot setup, \"Admin setup\" in the console displays as \"Enabled\". (Teams)",
+            "Triggers started by Webhooks can now receive request bodies so Bots can take action based on sent content."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "If a conversation fails to load, Grok Bot displays a load failure notice with a \"Retry\" option."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.26.0",
+      "platform": "pc",
+      "version": "0.26.0",
+      "date": "2026-08-25",
+      "url": "https://x.ai/changelog/bot#v0.26.0",
+      "title": "App Menu Enhancements and Update Mechanism",
+      "points": [
+        "Added Settings, Check for Updates, and Restart to Update options to the menu bar.",
+        "Bots with unread messages are prioritized at the top of the search panel.",
+        "Bot environment upgrades clarify impact scope and preserve installed applications.",
+        "Optimized RTL language input and paragraph layout for bidirectional mixed text."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Added \"Settings…\", \"Check for Updates\", and \"Restart to Update\" (when an update is ready) to the app menu."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "When typing right-to-left languages such as Arabic and Hebrew, text starts on the right, and replies with mixed text directions layout each paragraph correctly.",
+            "Bots with unread messages appear first in the search panel.",
+            "\"Update Grok Bot's Computer\" clarifies when updates only affect the software environment the Bot runs in, preserving installed applications."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "When Grok Bot loads team lists for the first time, it prioritizes the team you selected at login.",
+            "Warnings, feedback, and \"About\" open above the \"Settings\" level.",
+            "The \"Update required\" screen covers the entire window when an update is needed."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.25.0",
+      "platform": "pc",
+      "version": "0.25.0",
+      "date": "2026-08-25",
+      "url": "https://x.ai/changelog/bot#v0.25.0",
+      "title": "Multiple-Choice Interactions and On-Demand Usage Limits",
+      "points": [
+        "Select multiple options and submit when Bots ask multiple-choice questions.",
+        "Individual plans can configure monthly on-demand limits in Usage & Billing.",
+        "Charts generated in chat can be downloaded directly as PNG images.",
+        "Click Bots mentioned in conversations to open them directly."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "When a Bot asks a question that supports multiple selections, select the desired options and click \"Submit\".",
+            "On individual plans, set monthly on-demand usage limits to \"None\", \"Fixed\", or \"Unlimited\" in \"Usage & Billing\".",
+            "GitHub triggers can monitor a single pull request (including closed status) and automatically remove it once merged or closed.",
+            "Download charts in chat as PNG images.",
+            "Click Bots mentioned in conversations to open them directly."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "When included usage allowance runs out, team members can upgrade to Premium seats in addition to Ultra and SuperGrok Heavy.",
+            "Confirming Bot deletion immediately removes it from the sidebar; if deletion fails, an alert is displayed."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Text pasted into the message input box retains plain text formatting, and text typed immediately after sending is fully preserved.",
+            "Messages starting with links now properly display following text while keeping links clickable.",
+            "Grok Bot properly applies the selected team in rules, \"Usage & Billing\", and \"Computers\"; if the current team becomes unavailable, it automatically switches to an accessible team.",
+            "\"Privacy Mode\" prevents conversations from remaining on the Bot's computer when storage is not needed.",
+            "Bot computers can now successfully complete file restoration, including files with long names."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.3.1",
+      "platform": "ios",
+      "version": "1.3.1",
+      "date": "2026-08-22",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "Basic Experience Improvements and Minor Fixes",
+      "points": [
+        "Fixed known issues and optimized basic user experience."
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Bug fixes and improvements"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.3",
+      "platform": "ios",
+      "version": "1.3",
+      "date": "2026-08-21",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "Fix White Screen on Launch and Optimize Dictation Experience",
+      "points": [
+        "Fixed launch white screen freeze issue and resolved large file and audio attachment errors",
+        "Redesigned voice dictation interactions for clearer recording and sending workflows",
+        "Supported sharing content directly from other apps and optimized plugin return logic",
+        "Optimized conversation experience, push notifications, and computer reconnection stability"
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Fixed launch white screen issue that prevented users from using the app",
+            "Fixed issues with large files and audio attachments",
+            "Redesigned voice dictation feature for clearer recording and sending",
+            "Allowed plugin integrations to return directly to the app after actions",
+            "Optimized chat, notification, and Bot computer reconnection experience",
+            "Added \"Haptics\" setting",
+            "Added support for sharing content from other apps"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.24.0",
+      "platform": "pc",
+      "version": "0.24.0",
+      "date": "2026-08-21",
+      "url": "https://x.ai/changelog/bot#v0.24.0",
+      "title": "Smart Voice Recognition and Direct Settings Links",
+      "points": [
+        "Voice input automatically detects spoken language without forcing system language.",
+        "Hover over settings or plugin titles to copy direct links with one click.",
+        "Right-click videos in conversations to save them locally.",
+        "Login flow prompts to choose a target team when belonging to multiple teams."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Hover over settings items or plugin titles and select \"Copy link\" to share direct links.",
+            "Right-click videos and select \"Save video…\" to save them.",
+            "Prompts you to select a team upon login if you belong to multiple teams.",
+            "Onboarding and access permission screens now show the currently signed-in email address with a \"Log out\" button."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Voice input automatically recognizes the language you speak instead of defaulting to the app or system language.",
+            "\"Sign out\" explains that this action will remove the account and its local data from this device, and your Bots and chat history will be restored upon signing back in."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "\"Today\" and \"Yesterday\" groups update properly after midnight, and attachments stay in the records for the day they were actually sent.",
+            "Links to Grok Bot now open the corresponding page rather than just bringing the window to the foreground.",
+            "If a message is sent to a Bot while a trigger is running, the trigger will run again afterwards."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.22.0",
+      "platform": "pc",
+      "version": "0.22.0",
+      "date": "2026-08-20",
+      "url": "https://x.ai/changelog/bot#v0.22.0",
+      "title": "Team Settings and UI Translation Fixes",
+      "points": [
+        "Fixed console team settings association and corrected multiple Spanish and French UI translations."
+      ],
+      "full": [
+        [
+          "Fixes",
+          [
+            "Properly applies the selected team when configuring Grok Bot in the console. (Teams)",
+            "Spanish and French translations for plugin counts, trigger schedules, and alert statuses are now accurately displayed."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.21.0",
+      "platform": "pc",
+      "version": "0.21.0",
+      "date": "2026-08-19",
+      "url": "https://x.ai/changelog/bot#v0.21.0",
+      "title": "Simplified & Traditional Chinese Support and Emoji Picker",
+      "points": [
+        "Added over ten interface languages in Appearance settings, including Simplified & Traditional Chinese, Japanese, and Korean.",
+        "Type a colon to quickly search and insert emojis.",
+        "Message attachments can be downloaded individually or all at once.",
+        "Automated routines support Webhook triggers with dedicated keys."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Select app language in \"Appearance\", supporting Simplified Chinese, Traditional Chinese, Japanese, Korean, Hindi, Spanish, Portuguese, French, German, and Polish.",
+            "Type \":\" in the message input box to choose emoji, or type a short name ending with \":\" to insert directly.",
+            "Triggers now support Webhook activation with independent \"Webhook URL\" and \"Webhook key\".",
+            "Download attachments via the message menu; use \"Download all\" when a message contains multiple attachments.",
+            "Enterprise admins can save \"Team Setup\" scripts in the console to run on every member's Bot computer. (Enterprise)",
+            "Enterprise admins can configure network access policies for team Bots in the console. (Enterprise)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Dictation follows system language; press Enter to stop recording.",
+            "Updating or rebuilding a Bot's computer explains that files and login states will be preserved, while installed apps and packages will be removed.",
+            "Opening \"Plugins\" displays your plugins, category filters, and a \"Team Plugins\" section."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "File search now properly finds files on the Bot's computer, showing \"Search unavailable\" when search cannot be performed.",
+            "Grok Bot reconnects to the Bot's computer after sleep or connection loss to ensure operations continue running properly.",
+            "Grok Bot prompts you to sign in again when login credentials expire."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.2",
+      "platform": "ios",
+      "version": "1.2",
+      "date": "2026-08-17",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "General Fixes and Stability Improvements",
+      "points": [
+        "Fixed known issues and improved system operational stability"
+      ],
+      "full": [
+        [
+          "",
+          [
+            "Bug fixes and improvements"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.20.0",
+      "platform": "pc",
+      "version": "0.20.0",
+      "date": "2026-08-14",
+      "url": "https://x.ai/changelog/bot#v0.20.0",
+      "title": "Quick Voice Dictation and Text Formatting",
+      "points": [
+        "Hold shortcut key for voice dictation, sending immediately after transcription.",
+        "When message replies fail, Grok Bot explains the reason in plain language.",
+        "Message replies now support underlines, subscripts/superscripts, and text highlights.",
+        "Support editing plugin default account names."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Press or hold ⌘D (Ctrl+D on Windows and Linux) to dictate in the message input box; once transcribed, \"Send message\" sends immediately.",
+            "Rename a plugin's default account via \"Edit default account\"."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "The Bot's computer now supports holding Shift, Ctrl, Alt, or Command keys during click, drag, and scroll operations.",
+            "When replies fail, Grok Bot explains the cause in plain, understandable terms.",
+            "Bots now immediately cancel, archive, or unarchive Cloud Agents based on your instructions."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Reply content now properly displays underline, subscript, superscript, and highlight formatting."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.19.0",
+      "platform": "pc",
+      "version": "0.19.0",
+      "date": "2026-08-14",
+      "url": "https://x.ai/changelog/bot#v0.19.0",
+      "title": "New Plan Management and Scroll-to-Bottom Button",
+      "points": [
+        "Added plan management in Settings with upgrade support when allowance is exhausted.",
+        "Added quick scroll-to-bottom button when scrolling up.",
+        "General settings support hardware acceleration, enabled by default on Mac.",
+        "UI unified with Bot terminology; input box permanently fixed at the bottom."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Added \"Manage Plan\" in \"Settings\" to display upgrade options for the current account.",
+            "When included usage allowance is exhausted, upgrade to Ultra or link a SuperGrok Heavy subscription.",
+            "When scrolling up, a \"Scroll to bottom\" button appears above the message input box.",
+            "Added \"Use hardware acceleration\" under \"Settings\" → \"General\" → \"System\", enabled by default on Mac with a \"Restart to Apply\" notice."
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Copy across \"Settings\", search, and confirmation dialogs has been unified from Agent to Bot.",
+            "The message input box remains pinned to the bottom even when chat history is empty.",
+            "Trigger Bot computer updates via \"Update Grok Bot's Computer\" in \"Settings\".",
+            "Requests to run commands on the Bot's computer hide the specific command by default until \"Show the command\" is selected."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "Clicking \"Help Center\" properly opens Grok Bot documentation.",
+            "Support pasting into the terminal on the Bot's computer using ⌘V.",
+            "Clicking \"Allow\", \"Never\", and \"Deny\" now clears stuck requests to run commands on the Bot's computer."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "ios-1.1",
+      "platform": "ios",
+      "version": "1.1",
+      "date": "2026-08-13",
+      "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+      "title": "Streamlined Bot Management and Enhanced Remote Control",
+      "points": [
+        "Simplified Bot creation and management with faster, clearer initial onboarding",
+        "Added more remote computer control options",
+        "Polished chat scrolling, message transitions, and home screen interactions",
+        "Fixed chat table formatting, background disconnections, and jumping text during sending"
+      ],
+      "full": [
+        [
+          "",
+          [
+            "First-run setup is faster, clearer, and more intuitive",
+            "Optimized chat scrolling, message transition animations, and home screen experience",
+            "Simplified Bot creation and management",
+            "Provided more control options for remote Bot computers",
+            "Clearly displays subscription plans, linked accounts, and usage",
+            "Added \"Send Feedback\" in \"Settings\" and optimized parts of the \"Settings\" interface",
+            "Fixed table misalignment in chat, Bot computer reconnection issues, background chats stopping updates, text jumping back after sending, and other minor bugs"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.18.0",
+      "platform": "pc",
+      "version": "0.18.0",
+      "date": "2026-08-12",
+      "url": "https://x.ai/changelog/bot#v0.18.0",
+      "title": "Support Early Free Trial Cancellation",
+      "points": [
+        "Support ending free trial early in Usage & Billing."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "End free trial early via \"Cancel Trial\" in \"Usage & Billing\"; this action forfeits all remaining trial credits."
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "pc-0.17.0",
+      "platform": "pc",
+      "version": "0.17.0",
+      "date": "2026-08-12",
+      "url": "https://x.ai/changelog/bot#v0.17.0",
+      "title": "New Routine Triggers and Security Review Optimizations",
+      "points": [
+        "Bots support routine triggers via Teams, Linear, etc.",
+        "Auto-review prompts for confirmation before executing unrequested tasks.",
+        "Team members support linking SuperGrok Heavy for usage.",
+        "Pull request links support setting a default open behavior."
+      ],
+      "full": [
+        [
+          "New Features",
+          [
+            "Members with Standard seats in self-serve teams can use Grok Bot with a linked SuperGrok Heavy subscription. (Teams)"
+          ]
+        ],
+        [
+          "Improvements",
+          [
+            "Your Bot can create triggers started by Microsoft Teams messages, Linear issues, Sentry alerts, or PagerDuty incidents.",
+            "Auto-review asks before your Bot runs tasks you did not request.",
+            "Pull request links open where you or your team choose; if neither is selected, they open on GitHub."
+          ]
+        ],
+        [
+          "Fixes",
+          [
+            "The account bar in the sidebar opens the account menu even during setup.",
+            "Your Bot stops showing working status once background tasks complete.",
+            "Connectors that stop responding time out after three minutes so your Bot can continue its task.",
+            "\"Update Grok Bot's Computer\" completes properly while preserving file permissions and shortcuts.",
+            "Selecting shapes or colors preserves images you added until you press \"Set avatar\"."
+          ]
+        ]
+      ]
+    }
+  ],
+  "ours": [
+    {
+      "id": "2114568582889914739",
+      "date": "2026-10-26",
+      "url": "https://x.com/cgnot996/status/2114568582889914739",
+      "title": "Grok Bot Adds Calling on Behalf Feature",
+      "summary": "Grok Bot can make phone calls to individuals or businesses on behalf of users to make requests, record replies, and return summaries. It is suitable for standard matters like restaurant bookings or rescheduling, following up on logistics, or asking about business hours, but must never be used for high-risk operations involving passwords, verification codes, ID numbers, or payment confirmations. Currently, this feature is not yet fully rolled out, and support for domestic calls remains unclear.",
+      "platform": "pc"
+    },
+    {
+      "id": "2113133985354354930",
+      "date": "2026-10-22",
+      "url": "https://x.com/cgnot996/status/2113133985354354930",
+      "title": "New Page Feature Launched",
+      "summary": "Can generate reports and dashboards that update alongside conversations, ideal for writing weekly reports and tracking business progress. A floating input box inside details allows continued conversation. Remember to update to the latest version before trying.",
+      "platform": "pc"
+    },
+    {
+      "id": "2112359410550862161",
+      "date": "2026-10-20",
+      "url": "https://x.com/cgnot996/status/2112359410550862161",
+      "title": "v0.71.2 Relaxed Attachment Limits & Notification Optimizations",
+      "summary": "Combines two minor versions: single file limit raised to 250MB and video to 1GB, no phone push notifications when active on desktop, and plugin skills limit increased to 200.",
+      "platform": "pc"
+    },
+    {
+      "id": "2112343243367330255",
+      "date": "2026-10-20",
+      "url": "https://x.com/cgnot996/status/2112343243367330255",
+      "title": "Troubleshooting When Shortcuts Cannot Find Bot",
+      "summary": "Shortcuts cannot find Grok Bot: update to iOS v1.16.0(23152) in its settings; if still missing, try restarting your phone.",
+      "platform": "ios"
+    },
+    {
+      "id": "2112328304170828230",
+      "date": "2026-10-20",
+      "url": "https://x.com/cgnot996/status/2112328304170828230",
+      "title": "One-Click Access to Voice Chat via Action Button",
+      "summary": "Assigning the Action button to Grok Bot's 'Start Voice Chat' enables one-click access to voice conversations, finally achieving the exact result I was trying to get with Shortcuts.",
+      "platform": "ios"
+    },
+    {
+      "id": "2109141694184935790",
+      "date": "2026-10-11",
+      "url": "https://x.com/cgnot996/status/2109141694184935790",
+      "title": "Workaround for Inaccessible Webhook Details",
+      "summary": "In 0.68.1, Webhook details cannot be opened. Ask the Bot directly in chat to send a quick link, and click it to view the URL and secret key.",
+      "platform": "pc"
+    }
+  ]
+}

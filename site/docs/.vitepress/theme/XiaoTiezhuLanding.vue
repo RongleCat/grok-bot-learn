@@ -1,13 +1,16 @@
-<script setup lang="ts">
+<script setup lang="ts">import { computed } from 'vue'
+
 import { withBase } from 'vitepress'
 import GrokOrb from './GrokOrb.vue'
 import JoinCard from './JoinCard.vue'
-import copy from './ecosystem.json'
+import copyRoot from './ecosystem.json'
+import { useLocaleJson } from './i18n'
+const copy = useLocaleJson(copyRoot as Record<string, unknown>, 'ecosystem.json')
 import links from './links.json'
 import { rich, tidy } from './rich'
 import { track } from './track'
 
-const c = copy.xiaotiezhu
+const c = computed(() => (copy.value as any).xiaotiezhu)
 const shots: Record<string, string> = {
   'digest-page': '/ecosystem/xiaotiezhu-digest-page.webp',
   'vip-card': '/ecosystem/xiaotiezhu-vip-preview.webp',

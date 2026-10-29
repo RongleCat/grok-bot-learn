@@ -1,0 +1,136 @@
+{
+ "part1": [
+  [
+   "Qué es Grok Bot",
+   "/es/part1/01-what-is"
+  ],
+  [
+   "¿Cuál es la diferencia entre Grok y Grok Bot?",
+   "/es/part1/grok-vs-grok-bot"
+  ],
+  [
+   "Planes y suscripciones",
+   "/es/part1/02-plans"
+  ],
+  [
+   ": Instalación, inicio de sesión y el primer Bot",
+   "/es/part1/03-install"
+  ],
+  [
+   "Asignar tareas",
+   "/es/part1/04-handoff"
+  ],
+  [
+   "Computadora en la nube compartida",
+   "/es/part1/05-computer"
+  ],
+  [
+   "Memoria",
+   "/es/part1/06-memory"
+  ],
+  [
+   "Conectar aplicaciones",
+   "/es/part1/07-apps"
+  ],
+  [
+   "Habilidades y rutinas",
+   "/es/part1/08-skills-routines"
+  ],
+  [
+   "Chats grupales y Team Bots",
+   "/es/part1/09-group-team"
+  ],
+  [
+   "Cuota y costes",
+   "/es/part1/10-usage"
+  ],
+  [
+   ": Permisos, seguridad y control humano",
+   "/es/part1/11-safety"
+  ]
+ ],
+ "part2": [
+  [
+   "Caso práctico",
+   "/es/part2/12-content"
+  ],
+  [
+   "Caso",
+   "/es/part2/13-x-ops"
+  ],
+  [
+   "Casos prácticos",
+   "/es/part2/14-engineering"
+  ],
+  [
+   "Casos prácticos",
+   "/es/part2/15-ecommerce"
+  ],
+  [
+   "Casos prácticos",
+   "/es/part2/16-knowledge"
+  ],
+  [
+   "Casos prácticos",
+   "/es/part2/17-gtm"
+  ],
+  [
+   "Caso de estudio",
+   "/es/part2/18-solo"
+  ]
+ ],
+ "part3": [
+  [
+   "Orquestación de equipos",
+   "/es/part3/19-orchestration"
+  ],
+  [
+   "Automatización confiable",
+   "/es/part3/20-automation"
+  ],
+  [
+   "Copia de seguridad y recuperación",
+   "/es/part3/21-backup"
+  ],
+  [
+   "Integración con Feishu y WeChat",
+   "/es/part3/22-feishu-wechat"
+  ]
+ ],
+ "part4": [
+  [
+   ": Edición Teams e Implementación Empresarial",
+   "/es/part4/23-enterprise"
+  ],
+  [
+   ": Estructura tu equipo de IA por puestos de trabajo",
+   "/es/part4/24-roles"
+  ],
+  [
+   "Preguntas frecuentes y resolución de problemas",
+   "/es/part4/25-faq"
+  ]
+ ],
+ "cases": [
+  [
+   "Selección de casos destacados en X",
+   "/es/cases/x-hot"
+  ],
+  [
+   "Selección de artículos largos en chino",
+   "/es/cases/cn"
+  ],
+  [
+   "Selección de lecturas profundas en inglés (Parte 1)",
+   "/es/cases/en1"
+  ],
+  [
+   "Selección de artículos extensos en inglés (Parte 2)",
+   "/es/cases/en2"
+  ],
+  [
+   "Publicaciones extensas y tweets prácticos de 铁柱",
+   "/es/cases/tiezhu"
+  ]
+ ]
+}

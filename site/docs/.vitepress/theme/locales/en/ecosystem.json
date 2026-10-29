@@ -1,0 +1,256 @@
+{
+ "index": {
+  "title": "Ecosystem",
+  "lead": "A collection of practical tools and extensions built around Grok Bot.",
+  "items": [
+   {
+    "name": "Grok Bot Clipper",
+    "tag": "Browser Extension",
+    "desc": "Package web selections, screenshots, and social content to deliver straight to your Bot.",
+    "cta": "View Extension"
+   },
+   {
+    "name": "小铁柱",
+    "tag": "WeChat Group Assistant",
+    "desc": "Automated operations manager for WeChat groups, providing daily chat digests and curated web summaries.",
+    "cta": "View Service"
+   }
+  ],
+  "pages": [
+   "/ecosystem/grok-bot-clipper",
+   "/ecosystem/xiaotiezhu"
+  ],
+  "covers": [
+   "/ecosystem/clipper-banner.webp",
+   "/ecosystem/xiaotiezhu-banner.webp"
+  ]
+ },
+ "clipper": {
+  "slogan": "Deliver great browser content straight to your Bot",
+  "lead": "Supports web clipping, screenshots, social sharing, and material basket packaging. Connect your own account with no local connector required.",
+  "download": "Download Package",
+  "source": "Source Code",
+  "meta": "v0.4.0 · Supports Chrome / Edge / Firefox",
+  "unofficial": "A third-party extension independently developed by 铁柱AGI, not an official product of xAI or Cursor.",
+  "videoTitle": "Hands-on Feature Demo",
+  "videoLead": "Two quick walk-through videos covering everyday features.",
+  "videos": [
+   {
+    "title": "Hands-on Demo (Part 1)"
+   },
+   {
+    "title": "Hands-on Demo (Part 2)"
+   }
+  ],
+  "featuresTitle": "What You Can Do With It",
+  "features": [
+   {
+    "k": "Web Clipping",
+    "v": "Clip selections, article text, images, or tables, **fully preserving source links and context**."
+   },
+   {
+    "k": "Screenshot & Annotation",
+    "v": "Supports area selection, visible viewport, and scrolling screenshots, with **free cropping, annotation, and redaction before sending**."
+   },
+   {
+    "k": "Social Sharing",
+    "v": "**Directly select a Bot to receive content** from X, Xiaohongshu, Douyin, and WeChat Official Accounts, retaining body text, author, metrics, and attachments."
+   },
+   {
+    "k": "Material Basket",
+    "v": "Collect multiple web pages, screenshots, and local files, **bundling them into a single task to send to your Bot**."
+   },
+   {
+    "k": "Draft & Send Preview",
+    "v": "Edit instructions and attachments before sending, **previewing and verifying the exact materials your Bot will receive**."
+   },
+   {
+    "k": "Sidebar Chat",
+    "v": "No need to leave the current page; **view Markdown responses directly in the sidebar and continue asking questions**."
+   }
+  ],
+  "extrasTitle": "More Details",
+  "extras": [
+   {
+    "k": "Bot Selector",
+    "v": "Supports Pinyin and initial search, allowing you to favorite frequently used bots and set a default Bot."
+   },
+   {
+    "k": "Keyboard Shortcuts",
+    "v": "⌘⇧/Ctrl+Shift+7 area screenshot, 8 save web page, 9 quick command"
+   },
+   {
+    "k": "Multi-language Support",
+    "v": "Built-in display for 55 languages and regions, matching your browser by default."
+   },
+   {
+    "k": "Structured Material Bundle",
+    "v": "Automatically generates numbered sources and Markdown body text, converting long articles into indexes and attachments."
+   }
+  ],
+  "stepsTitle": "Installation & Usage",
+  "steps": [
+   {
+    "k": "Download Package",
+    "v": "Go to the Feishu document and download the installation package for your browser."
+   },
+   {
+    "k": "Load Extension",
+    "v": "Follow the documentation guide to load the extension in your browser's extension management page."
+   },
+   {
+    "k": "Authorize Account",
+    "v": "Pin it to the toolbar, open it, and authorize your own Grok Bot account."
+   },
+   {
+    "k": "Clip & Send",
+    "v": "Select the target Bot, send the clipped materials, and view the reply in the sidebar."
+   }
+  ],
+  "faqTitle": "Frequently Asked Questions",
+  "faq": [
+   {
+    "q": "Is this an official extension?",
+    "a": "No. **This is a third-party extension independently developed by me**, not an official product of xAI or Cursor."
+   },
+   {
+    "q": "Does it require a local connector or self-hosted relay?",
+    "a": "No. **Simply authorize your account directly in the browser**—no self-hosted relay service needed."
+   },
+   {
+    "q": "Where is data stored? Is there any telemetry?",
+    "a": "**The extension has zero analytics telemetry**. Data and records are stored in your current browser and only sent to your chosen Bot service."
+   },
+   {
+    "q": "Which browsers are supported?",
+    "a": "**Supports Chrome and Edge 120+**, as well as Firefox desktop 140+."
+   },
+   {
+    "q": "Can videos from all social platforms be captured?",
+    "a": "Not guaranteed. **We cannot guarantee every video can be fetched successfully**; if unavailable, it will be clearly labeled."
+   },
+   {
+    "q": "Is the extension open source? Where is the source code?",
+    "a": "**The code is open-sourced on GitHub**. Proprietary code uses the MIT License, while third-party code and art assets retain their respective rights."
+   }
+  ],
+  "endTitle": "Deliver Web Materials to Your Bot",
+  "endText": "Go to the Feishu document to download the package and try it out in your browser right away.",
+  "endBtn": "Download Package"
+ },
+ "xiaotiezhu": {
+  "slogan": "Keep valuable chat insights afloat: the automated operations manager for high-value communities",
+  "lead": "小铁柱 is a lightweight operations assistant built specifically for WeChat communities, periodically summarizing daily discussions and key highlights. Say goodbye to tedious manual scrolling and easily accumulate your community's digital assets.",
+  "meta": "WeChat Group Operations Assistant · Per-group Pricing · Ready Out of the Box",
+  "unofficial": "This service is provided by the 铁柱AGI community and is not an official WeChat product",
+  "ctaPrimary": "Add WeChat to Inquire & Activate",
+  "ctaSecondary": "View Group Chat Summary Samples",
+  "featuresTitle": "Core Capabilities: Automated Extraction, Visual Presentation, and Long-Term Accumulation",
+  "features": [
+   {
+    "k": "Group Operations & Daily Digests",
+    "v": "Seamlessly joins WeChat groups to automatically organize conversations based on scheduled **routine tasks**, **supporting daily chat summaries** and generating high-res formatted long images.",
+    "shot": "vip-card"
+   },
+   {
+    "k": "Web-Based Chat Summary Dashboard",
+    "v": "Generates dedicated standalone web summaries, **structurally extracting key topics and valuable insights** so members can **browse quickly across devices** without scrolling through message history.",
+    "shot": "digest-page"
+   },
+   {
+    "k": "Daily Summaries Packaged to Email",
+    "v": "**Supports daily chat summaries; packages and emails daily chat content to designated inboxes**, automatically archiving chat highlights and attachments to build a solid team knowledge base.",
+    "shot": "none"
+   },
+   {
+    "k": "Custom Visual Themes for Communities",
+    "v": "**Custom theme included upon initial onboarding**, tailoring group headers, brand colors, and exclusive layouts; **subsequent theme changes: 100 RMB each**.",
+    "shot": "xiaowan-card"
+   }
+  ],
+  "pricingTitle": "Flexible and Clear Per-Group Pricing",
+  "pricingLead": "Transparent billing billed per group per month with no hidden fees",
+  "plans": [
+   {
+    "name": "Single Group Standard",
+    "price": "79",
+    "unit": "RMB/month",
+    "note": "Invite 小铁柱 to 1 group: 79 RMB/month"
+   },
+   {
+    "name": "Multi-Group Special",
+    "price": "59",
+    "unit": "RMB/group/month",
+    "note": "2 or more groups: 59 RMB per group/month"
+   }
+  ],
+  "addons": [
+   {
+    "name": "Web Chat Summary",
+    "price": "+20",
+    "note": "Add 'Web Chat Summary' feature: +20 RMB/month"
+   }
+  ],
+  "themeNote": "Custom theme included upon initial onboarding; subsequent theme changes: 100 RMB each",
+  "extrasTitle": "Service Inclusions & Reliability Guarantees",
+  "extras": [
+   {
+    "k": "Ready Out of the Box",
+    "v": "No server or runtime environment needed; a dedicated manager assists 1-on-1, **effective immediately upon adding to the group**."
+   },
+   {
+    "k": "Scheduled Triggers",
+    "v": "Freely set **routine task** schedule times for summary pushes and archiving, perfectly aligning with group activity routines."
+   },
+   {
+    "k": "Privacy & Security Guarantee",
+    "v": "Data is strictly confined to the daily summary and archiving process, never leaked or distributed, safeguarding community information security."
+   },
+   {
+    "k": "Dedicated Manager Support",
+    "v": "Enjoy dedicated customer service Q&A and status health checks throughout the service period to ensure 小铁柱 runs stably and reliably."
+   }
+  ],
+  "stepsTitle": "Quick Activation in Three Steps",
+  "steps": [
+   {
+    "k": "1. Add Manager to Inquire",
+    "v": "Contact the operations manager on WeChat to confirm the number of groups and desired features."
+   },
+   {
+    "k": "2. Confirm Configuration & Theme",
+    "v": "Finalize the summary visual style and **routine task** trigger times to complete fast onboarding."
+   },
+   {
+    "k": "3. Invite 小铁柱 to Group",
+    "v": "**Invite 小铁柱 to the group** for official delivery, and automated operations and daily digest services launch immediately."
+   }
+  ],
+  "faqTitle": "Frequently Asked Questions",
+  "faq": [
+   {
+    "q": "Do I need to prepare my own server or special accounts to activate the service?",
+    "a": "Not at all. 小铁柱 operates on a fully managed model: you only need to **invite 小铁柱 to the group** on WeChat, and we handle all environments and operations."
+   },
+   {
+    "q": "How are pricing rules calculated if I have multiple groups?",
+    "a": "Invite 小铁柱 to 1 group: 79 RMB/month; for 2 or more groups: 59 RMB per group/month—the more groups you have, the better the value."
+   },
+   {
+    "q": "What are the advantages of web-based chat summaries?",
+    "a": "Add 'Web Chat Summary' feature: +20 RMB/month. In addition to long images, group members get a dedicated link supporting structured outlines, topic filtering, and rapid browsing."
+   },
+   {
+    "q": "What is the process for theme customization?",
+    "a": "Custom theme included upon initial onboarding; subsequent theme changes: 100 RMB each. During initial onboarding, the manager will adjust color schemes, group headers, and layout styles for you."
+   },
+   {
+    "q": "Does emailing daily summaries cost extra?",
+    "a": "No extra fee. Included in the service: supports daily chat summaries; daily chat content is packaged and emailed to the designated inbox. Simply provide the recipient email upon activation."
+   }
+  ],
+  "endTitle": "Leave tedious organization to 小铁柱, deliver profound value to your members",
+  "endText": "A reliable manager for high-value WeChat groups—say goodbye to information overload and chat scrolling. Add the manager on WeChat now to unlock automated group operations immediately.",
+  "endBtn": "Add WeChat to Inquire & Activate"
+ }
+}

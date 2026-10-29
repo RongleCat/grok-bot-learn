@@ -1,24 +1,59 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue'
 import { withBase } from 'vitepress'
-import data from './tools.json'
+import dataRoot from './tools.json'
+import { useLocaleJson } from './i18n'
 import { tidy } from './rich'
 
-const ui = data.ui
+const data = useLocaleJson(dataRoot as Record<string, unknown>, 'tools.json')
+const ui = computed(() => (data.value as any).ui)
+const tools = computed(() => (data.value as any).tools as any[])
+const cats = computed(() => (data.value as any).cats as string[])
 const skin: Record<string, string> = {
   '编码 Agent': 'cercle-bleu',
   '模型/生成': 'goutte-rose',
   '通讯与发布': 'squircle-orange',
   '数据抓取': 'nuage-turquoise',
-  '基础工具': 'hexagone-ambre'
+  '基础工具': 'hexagone-ambre',
+  '編碼 Agent': 'cercle-bleu',
+  '資料抓取': 'nuage-turquoise',
+  '通訊與釋出': 'squircle-orange',
+  '基礎工具': 'hexagone-ambre',
+  'Coding Agents': 'cercle-bleu',
+  'Models & Generation': 'goutte-rose',
+  'Communication & Publishing': 'squircle-orange',
+  'Data Scraping': 'nuage-turquoise',
+  'Basic Tools': 'hexagone-ambre',
+  'コーディング Agent': 'cercle-bleu',
+  'モデル/生成': 'goutte-rose',
+  '通信・配信': 'squircle-orange',
+  'データ収集': 'nuage-turquoise',
+  '基本ツール': 'hexagone-ambre',
+  '코딩 Agent': 'cercle-bleu',
+  '모델/생성': 'goutte-rose',
+  '통신 및 배포': 'squircle-orange',
+  '데이터 수집': 'nuage-turquoise',
+  '기본 도구': 'hexagone-ambre',
+  'Agentes de código': 'cercle-bleu',
+  'Modelos/Generación': 'goutte-rose',
+  'Comunicación y publicación': 'squircle-orange',
+  'Extracción de datos': 'nuage-turquoise',
+  'Herramientas básicas': 'hexagone-ambre',
+  'Agentes de Código': 'cercle-bleu',
+  'Modelos / Geração': 'goutte-rose',
+  'Comunicação e Publicação': 'squircle-orange',
+  'Coleta de Dados': 'nuage-turquoise',
+  'Ferramentas Básicas': 'hexagone-ambre'
 }
+const rootCatById: Record<string, string> = Object.fromEntries((dataRoot as any).tools.map((t: any) => [t.id, t.cat as string]))
+const skinOf = (t: any) => skin[t.cat] || skin[rootCatById[t.id]] || 'cercle-bleu'
+
 const q = ref('')
 const cat = ref('all')
 const norm = (s: string) => s.toLowerCase().replace(/\s+/g, '')
-const hay = data.tools.map((t) => norm([t.id, t.name, t.desc, t.what, t.cat, ...t.tags].join(' ')))
 const hit = computed(() => {
   const k = norm(q.value)
-  return data.tools.filter((t, i) => (!k || hay[i].includes(k)))
+  return tools.value.filter((t) => !k || norm([t.id, t.name, t.desc, t.what, t.cat, ...t.tags].join(' ')).includes(k))
 })
 const shown = computed(() => hit.value.filter((t) => cat.value === 'all' || t.cat === cat.value))
 const count = (c: string) => (c === 'all' ? hit.value.length : hit.value.filter((t) => t.cat === c).length)
@@ -26,7 +61,7 @@ const plain = (s: string) => s.replace(/\*\*|`/g, '')
 onMounted(() => {
   const p = new URLSearchParams(location.search)
   if (p.get('q')) q.value = p.get('q') || ''
-  if (p.get('cat') && data.cats.includes(p.get('cat') || '')) cat.value = p.get('cat') || 'all'
+  if (p.get('cat') && cats.value.includes(p.get('cat') || '')) cat.value = p.get('cat') || 'all'
 })
 watch([q, cat], () => {
   const p = new URLSearchParams()
@@ -56,7 +91,7 @@ watch([q, cat], () => {
       </label>
       <div class="tl-tabs" role="tablist">
         <button type="button" role="tab" :aria-selected="cat === 'all'" :class="['tl-tab', { on: cat === 'all' }]" @click="cat = 'all'">{{ ui.all }}<span>{{ count('all') }}</span></button>
-        <button v-for="c in data.cats" :key="c" type="button" role="tab" :aria-selected="cat === c" :class="['tl-tab', { on: cat === c }]" @click="cat = c">
+        <button v-for="c in cats" :key="c" type="button" role="tab" :aria-selected="cat === c" :class="['tl-tab', { on: cat === c }]" @click="cat = c">
           <img :src="withBase(`/bots/${skin[c]}.svg`)" alt="" width="16" height="16" />{{ c }}<span>{{ count(c) }}</span>
         </button>
       </div>
@@ -66,7 +101,7 @@ watch([q, cat], () => {
     <div v-if="shown.length" class="tl-grid">
       <a v-for="t in shown" :id="t.id" :key="t.id" class="tl-card" :href="withBase(`/tools/${t.id}`)">
         <div class="tl-top">
-          <img :src="withBase(`/bots/${skin[t.cat]}.svg`)" alt="" width="28" height="28" />
+          <img :src="withBase(`/bots/${skinOf(t)}.svg`)" alt="" width="28" height="28" />
           <span class="tl-cat">{{ t.cat }}</span>
         </div>
         <strong>{{ t.name }}</strong>

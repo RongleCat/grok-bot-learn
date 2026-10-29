@@ -1,0 +1,136 @@
+{
+ "part1": [
+  [
+   "What Is Grok Bot",
+   "/en/part1/01-what-is"
+  ],
+  [
+   "What Is the Difference Between Grok and Grok Bot",
+   "/en/part1/grok-vs-grok-bot"
+  ],
+  [
+   "Plans and Subscriptions",
+   "/en/part1/02-plans"
+  ],
+  [
+   "Installation, Sign-In, and Your First Bot",
+   "/en/part1/03-install"
+  ],
+  [
+   "Assigning Tasks",
+   "/en/part1/04-handoff"
+  ],
+  [
+   "Shared Cloud Computer",
+   "/en/part1/05-computer"
+  ],
+  [
+   "Memory",
+   "/en/part1/06-memory"
+  ],
+  [
+   "Connecting Apps",
+   "/en/part1/07-apps"
+  ],
+  [
+   "Skills and Routines",
+   "/en/part1/08-skills-routines"
+  ],
+  [
+   "Group Chats & Team Bots",
+   "/en/part1/09-group-team"
+  ],
+  [
+   "Usage Limits & Costs",
+   "/en/part1/10-usage"
+  ],
+  [
+   "Permissions, Security, and Human Gates",
+   "/en/part1/11-safety"
+  ]
+ ],
+ "part2": [
+  [
+   "Case Study",
+   "/en/part2/12-content"
+  ],
+  [
+   "Case Study",
+   "/en/part2/13-x-ops"
+  ],
+  [
+   "Case Studies",
+   "/en/part2/14-engineering"
+  ],
+  [
+   "Case Studies",
+   "/en/part2/15-ecommerce"
+  ],
+  [
+   "Case Studies",
+   "/en/part2/16-knowledge"
+  ],
+  [
+   "Case Studies",
+   "/en/part2/17-gtm"
+  ],
+  [
+   "Case Study",
+   "/en/part2/18-solo"
+  ]
+ ],
+ "part3": [
+  [
+   "Team Orchestration",
+   "/en/part3/19-orchestration"
+  ],
+  [
+   "Reliable Automation",
+   "/en/part3/20-automation"
+  ],
+  [
+   "Backup and Recovery",
+   "/en/part3/21-backup"
+  ],
+  [
+   "Connecting Feishu and WeChat",
+   "/en/part3/22-feishu-wechat"
+  ]
+ ],
+ "part4": [
+  [
+   "Team and Enterprise Deployment",
+   "/en/part4/23-enterprise"
+  ],
+  [
+   "Building Your AI Team by Role",
+   "/en/part4/24-roles"
+  ],
+  [
+   "FAQ and Troubleshooting",
+   "/en/part4/25-faq"
+  ]
+ ],
+ "cases": [
+  [
+   "Selected Popular Cases on X",
+   "/en/cases/x-hot"
+  ],
+  [
+   "Curated In-Depth Articles",
+   "/en/cases/cn"
+  ],
+  [
+   "Selected In-Depth English Articles (Part 1)",
+   "/en/cases/en1"
+  ],
+  [
+   "Selected In-Depth English Articles (Part 2)",
+   "/en/cases/en2"
+  ],
+  [
+   "Tiezhu's Practical Long-form Articles and Tweet Collections",
+   "/en/cases/tiezhu"
+  ]
+ ]
+}

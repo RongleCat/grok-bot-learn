@@ -1014,14 +1014,20 @@ summary,
 .gh-part[data-i='2'] { background: var(--tz-tint-3); }
 .gh-part[data-i='3'] { background: var(--tz-tint-4); }
 
+/* 语言切换与主题切换并排：VitePress 默认仅 ≥1280px 显示 VPNavBarTranslations，
+   这里对齐 appearance 的 ≥960px 规则；960–1279 隐藏 Extra 内重复项。
+   <960px 继续用汉堡菜单内 Translations。 */
 @media (min-width: 960px) {
-  .VPNavBar .content-body > .VPNavBarAppearance {
+  .VPNavBar .content-body > .VPNavBarAppearance,
+  .VPNavBar .content-body > .VPNavBarTranslations,
+  .VPNavBar .content-body > .translations {
     display: flex !important;
     align-items: center;
   }
 }
 @media (min-width: 960px) and (max-width: 1279px) {
-  .VPNavBarExtra .item.appearance {
+  .VPNavBarExtra .item.appearance,
+  .VPNavBarExtra .group.translations {
     display: none;
   }
 }
