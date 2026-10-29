@@ -10,11 +10,18 @@
 |---|---|---|---|
 | 1 | CSS 切换器规则（≥960px 显示 VPNavBarTranslations / translations） | **PASS** | `site/docs/.vitepress/theme/style.css` L1017–1032：`@media (min-width: 960px)` 对 `.VPNavBar .content-body > .VPNavBarAppearance/.VPNavBarTranslations/.translations` 设 `display:flex !important`；960–1279 隐藏 `.VPNavBarExtra .group.translations` 与 `.item.appearance`。产物 `site/docs/.vitepress/dist/assets/style.CK8Kwh2Y.css` 含同规则（minify）。 |
 | 2 | locales 七语种全开 | **PASS** | `config.mts` `locales`：`root`（简体中文/zh-CN）、`zh-Hant`（/zh-Hant/）、`en`（/en/）、`ja`（/ja/）、`ko`（/ko/）、`es`（/es/）、`pt-BR`（/pt-BR/）；均有 label，非 root 均有 link。 |
-| 3 | stash@{0} seo-temp | **PASS** | 已核对 `git stash show -p --stat`：仅旧版 `config.mts` 骨架，已被当前七语种+hreflang 覆盖、无独有有用改动。说明见 `i18n-project/logs/stash-seo-temp-NOTE.md`；已 `git stash drop stash@{0}`（原对象 `0ae8bf3f801eb5eebfb9c125d353b6878eaaebd1`）。当前 `git stash list` 为空。 |
+| 3 | stash@{0} seo-temp | **PASS** | 已核对 `git stash show -p --stat`：仅旧版 `config.mts` 骨架，已被当前七语种+hreflang 覆盖、无独有有用改动。说明见 `i18n-project/logs/stash-seo-temp-NOTE.md`；已 `git stash drop stash@{0}`（原对象 `b0cb3ae6236d2893d830c1c9ba25e678f9213d9b`）。当前 `git stash list` 为空。 |
 | 4 | build | **PASS** | `cd site && npm run build` 退出码 0；`build complete in 36.47s`；dist HTML **428** 页。 |
-| 5 | commit | **PASS** | `0ae8bf3f801eb5eebfb9c125d353b6878eaaebd1`（short `2c39f16`）；message: `feat(i18n): 七语种全开、顶栏语言切换与主题并排`；author 学习站多语言工程 <i18n@bot.fmcat.top>。本地 ahead 1，未 push。 |
+| 5 | commit | **PASS** | feat 提交 `16d16b10bdfef6b46346d2e2e8db156e3e32f9aa`（short `16d16b1`）；message: `feat(i18n): 七语种全开、顶栏语言切换与主题并排`；author 学习站多语言工程 <i18n@bot.fmcat.top>。本文件若另有 sync 提交，feat hash 仍以本行准。本地未 push。 |
 | 6 | dist hreflang / og:locale 抽检 | **PASS** | 见下节。 |
 | 7 | 未 push / 未 deploy | **PASS** | 按任务要求未执行 `deploy.sh`、未 `git push`；等铁柱确认上线。 |
+
+## Commit
+
+- **feat hash**：`16d16b10bdfef6b46346d2e2e8db156e3e32f9aa`
+- **short**：`16d16b1`
+- **message**：`feat(i18n): 七语种全开、顶栏语言切换与主题并排`
+- **author**：学习站多语言工程 <i18n@bot.fmcat.top>
 
 ## dist 抽检片段
 
@@ -44,13 +51,6 @@
 
 ### `dist/part1/01-what-is.html`（根站手册）
 - 同上结构，og:locale=`zh_CN`
-
-## Commit
-
-- **hash**：`0ae8bf3f801eb5eebfb9c125d353b6878eaaebd1`
-- **short**：`0ae8bf3`
-- **message**：`feat(i18n): 七语种全开、顶栏语言切换与主题并排`
-- **author**：学习站多语言工程 <i18n@bot.fmcat.top>
 
 ## ENGINEERING
 
