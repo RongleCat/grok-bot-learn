@@ -774,6 +774,8 @@
 }
 
 .VPNavBarMenuLink[href='/group'],
+.VPNavBarMenuLink[href$='/group'],
+.VPNavBarMenuLink[href$='/group/'],
 .tz-nav-pill {
   display: inline-flex;
   align-self: center;
@@ -790,6 +792,8 @@
   transition: background 0.2s;
 }
 .VPNavBarMenuLink[href='/group']:hover,
+.VPNavBarMenuLink[href$='/group']:hover,
+.VPNavBarMenuLink[href$='/group/']:hover,
 .tz-nav-pill:hover {
   background: var(--tz-c-ink-2);
 }
@@ -805,7 +809,9 @@
     display: none;
   }
 }
-.VPNavScreenMenuLink[href='/group'] {
+.VPNavScreenMenuLink[href='/group'],
+.VPNavScreenMenuLink[href$='/group'],
+.VPNavScreenMenuLink[href$='/group/'] {
   display: flex;
   justify-content: center;
   margin-top: 20px;
