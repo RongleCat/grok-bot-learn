@@ -243,10 +243,10 @@ NEW ──> TRIAGED ──> REPRODUCED ──> BUILDING ──> TESTED ──> R
 
 ## 开箱即用：工程研发提示词库
 
-以下提示词均经过生产实践验证。你可以直接将其复制并配置到 Grok Bot 的 Bot Profile 或日常指令中：
+以下提示词均经过生产实践验证。直接复制发给 Bot 并让它记住；共享 Bot 写入详情 About：
 
 ### 1. 架构总控章程（Chief）
-**贴进主管 Bot 的 Profile Description**，用来把控流程和记录状态。
+**发给主管 Bot 并让它记住**（共享 Bot 写入详情 About），用来把控流程和记录状态。
 
 ::: details 1. 架构总控章程（Chief）
 ```text
@@ -380,7 +380,7 @@ NEW ──> TRIAGED ──> REPRODUCED ──> BUILDING ──> TESTED ──> R
 
 ### 7. 可逆性人闸与安全红线指令
 
-**直接贴到各 Bot 通用规则或 Profile Description 末尾**。
+**直接贴到各 Bot 的长期规则末尾**（个人 Bot 发在对话里让它记住，共享 Bot 写在详情 About）。
 
 ::: details 7. 可逆性人闸与安全红线指令
 ```text

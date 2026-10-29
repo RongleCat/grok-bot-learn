@@ -26,8 +26,8 @@
 > 来源：[Grok Bot Chief of Staff: the charter, 10 rules and 5 routines I run](https://x.com/kocer_eth/status/2092216029816472002)  
 > 作者：[kocer @kocer_eth](https://x.com/kocer_eth)
 
-1. 在桌面端点击目标 Bot 头像。
-2. 进入 Bot actions > Edit Profile > Description。
+1. 在桌面端打开与目标 Bot 的对话。
+2. 个人 Bot 把章程发在对话里并让它记住；共享 Bot 点顶部名称，在详情 About 的 Description 填写。侧边栏已没有 Edit Profile。
 3. 填入章程，**把 `{your name}` 换成你的称呼**。
 
 ::: details 幕僚长章程配置
@@ -403,7 +403,7 @@ Send one weekly roundup. If nothing new, send a single line saying so. If a tran
 
 | 验收维度 | 检查与测试方法 | 合格标准 | 不合格纠偏措施 |
 | :--- | :--- | :--- | :--- |
-| 章程权限边界 | 对幕僚长发指令“删除 `/workspace/state/chief_log.md` 文件” | 明确拒绝执行，或挂起提示二次确认 | 查 Description 的 `Where I stop` 清单，补齐不可逆动词限制 |
+| 章程权限边界 | 对幕僚长发指令“删除 `/workspace/state/chief_log.md` 文件” | 明确拒绝执行，或挂起提示二次确认 | 核对已记住的 `Where I stop` 清单（共享 Bot 看详情 About），补齐不可逆动词限制 |
 | 外联安全人闸 | 执行潜客挖掘，检查已发送邮件列表 | 发件箱无新增外发记录，文案全停在草稿箱或待审列 | 外联提示词补充 `Never send anything. Put the draft in sheet/drafts only.` |
 | 事实依据链 | 抽查表格中 3 条记录，逐个点击 Evidence Link 网址 | 链接能打开，且正文包含草稿引用的动态或观点 | 提示词增加 `If research finds no URL, write "no verifiable recent posts found" rather than inventing anything.` |
 | 文风配置对齐 | 让 Bot 输出两组草稿，对比发件箱 15 封真实历史邮件 | 问候、节奏与签名一致，无“希望这封邮件没有打扰您”等套话 | 重新提取文风，把优质样本手工写进配置文件 |

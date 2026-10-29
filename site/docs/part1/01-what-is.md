@@ -20,7 +20,7 @@
 xAI 与 Cursor 在 2026 年 8 月 11 日推出 Grok Bot，**核心是把环境底座与思考模型拆分**。
 
 - **底座（Harness）**：常驻云端，配有 Linux 终端、浏览器和持久文件。关机合盖，后台任务照常跑。
-- **模型（Brain）**：按需调度。2026 年 10 月 7 日默认切为 Claude Opus 5.5，可派生 Cursor Agent 协同编码。
+- **模型（Brain）**：按需调度，不绑定单一模型，也不能查看或指定。2026 年 10 月 7 日起任务可能路由到 Claude Opus 5.5 等模型，也可派生 Cursor Agent 协同编码。
 
 | 工具 | 运行环境 | 离线与协作 |
 | --- | --- | --- |
@@ -86,7 +86,7 @@ xAI 与 Cursor 在 2026 年 8 月 11 日推出 Grok Bot，**核心是把环境�
 | 产品 | 底座与门槛 | 特点与适用场景 |
 | --- | --- | --- |
 | Grok Bot | 共享 Linux 云电脑。2026-10-12 起执行 The X Subscription 统一方案（Premium $30/月、Super $100/月、Ultra $200/月），**Plus 档不含 Bot**；客户端 v0.70.2 支持独立邮箱与连接卡片 | 7×24 小时常驻，支持例程与技能，多 Bot 异步交接文件并调 X 平台检索。适合免运维、多岗位协同与巡检对账 |
-| OpenAI dots | 个人常驻云电脑，ChatGPT Pro 档包含 | 基于 GPT-6 Astra（2026-09-30 发布），常驻后台连 4000 多个插件，主打日常伴随与轻量代办 |
+| OpenAI dots | 个人常驻云电脑，ChatGPT Pro 与 Business Premium 包含首个 dot | 基于 GPT-6 Astra（dots 于 2026-09-29 上线），常驻后台连 4000 多个应用，主打日常伴随与轻量代办 |
 | Manus Cue | 独立云电脑，处于早期体验阶段 | 2026-09-29 铁柱上手体验；原生配独立协同邮箱、电话与钱包，自主跑腿注册与采购，自主权极高且伴随操作风险 |
 | Meta Muse | Meta 托管云端代理，诺鸭船长评测偏家庭生态 | 深度绑定 Meta 社交网络与硬件，适合家庭日常与社交辅助 |
 | Hermes | 本地或私有服务器，开源自建 | 自由更换开源模型，无商业额度限制。适合本地敏感数据流水线，**需自己动手配环境与排错** |
@@ -97,7 +97,7 @@ xAI 与 Cursor 在 2026 年 8 月 11 日推出 Grok Bot，**核心是把环境�
 
 ### 金尘马的情报总监（个人调研岗位）
 
-金尘马（@jinchenma_ai）在 Edit Profile 的 Description 写明长期岗位规则，定性为情报调研员。派单落实结果与来源、限制与格式及确认点五要素，检索 X 平台长文并区分视频帖，标明曝光数据，**无一手数据严禁编造**。
+金尘马（@jinchenma_ai）曾在 Edit Profile 的 Description 写明长期岗位规则（该菜单已移除，现行做法见第 3 章），定性为情报调研员。派单落实结果与来源、限制与格式及确认点五要素，检索 X 平台长文并区分视频帖，标明曝光数据，**无一手数据严禁编造**。
 
 首次纠偏格式后，指令 Bot 把流程沉淀为 Skill「AI 教程情报搜集」。
 
@@ -133,11 +133,11 @@ xAI 与 Cursor 在 2026 年 8 月 11 日推出 Grok Bot，**核心是把环境�
 - **Ultra 档**：$200/月（年付 $2000），50x 额度池，适合高频团队主力。
 - **$8/月（年付 $80）的 Plus 档不含 Bot 功能**，千万别选错。已有 Cursor 付费个人版或团队版、SuperGrok 订阅或 Grok Business 席位也能直接用。
 
-  桌面端支持 macOS、Windows、Linux，移动端支持 iPhone，装好后登录账号。
+  桌面端支持 macOS、Windows、Linux，移动端支持 iPhone、iPad 与 Android，装好后登录账号。
 
 ### 创建 Bot 并派发测试任务
 
-1. 侧边栏点 New → Create new agent，起名「竞品情报员」。打开 Edit Profile，在 Description 填入标准六行工作合同。
+1. 侧边栏点 **+**（或 Cmd+N）创建 Bot，起名「竞品情报员」。个人 Bot 已没有 Description，把下面六行发在对话里并让它记住；共享 Bot 写在详情 About 的 Description。
 ```text
 Own: 负责监控目标清单的每周功能更新与定价变动
 Sources: Notion 中的关注名单、目标官网 Changelog 页面
@@ -185,7 +185,7 @@ Never: 在源系统可访问时，严禁依赖自身记忆给出概括
 ## 做完怎么验收
 
 1. 侧边栏点 Bot 进聊天，发消息展开 **1920×1200 实时桌面**；去 Usage & Billing 确认方案是 Premium、Super 或 Ultra，进度条正常。
-2. Edit Profile 的 Description 须写齐职责、数据源、产出物、审批红线与缺数兜底（**六行硬约束**）。发死链测它，**必须如实报缺**，不瞎编数据。
+2. 六行合同须写齐职责、数据源、产出物、审批红线与缺数兜底（**六行硬约束**）。个人 Bot 发在对话里让它记住，共享 Bot 写在详情 About。发死链测它，**必须如实报缺**，不瞎编数据。
 3. Settings → General → Auto-review 里，把 `send`、`post`、`buy`、`delete`、`permissions` 设为 Ask first。测发信或删文件，**必须弹审批卡片等人工确认**。
 4. Routine 右键 Test run 跑通后合盖关软件。到点重开看提醒，进云电脑 `/workspace`，**确认 Markdown 或 CSV 按最新时间戳更新**。
 
@@ -207,7 +207,7 @@ Never: 在源系统可访问时，严禁依赖自身记忆给出概括
 - [Grok Bot 使用场景与典型角色](https://cursor.com/cn/docs/grok-bot/use-cases)
 - [面向团队版和企业版的 Grok Bot](https://cursor.com/cn/docs/grok-bot/teams)
 - [Grok Bot 方案与计费说明](https://cursor.com/cn/help/grok-bot/plans)
-- [团队 Bot 使用规范](https://cursor.com/cn/help/grok-bot/team-bots)
+- [团队 Bot 使用规范](https://cursor.com/cn/help/grok-bot/shared-bots.md)
 - [Grok Bot 安全架构与 Auto-review 规则](https://cursor.com/cn/docs/grok-bot/security)
 
 ### 社区实战与横向对比

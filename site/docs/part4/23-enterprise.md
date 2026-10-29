@@ -374,6 +374,6 @@ Linux 端可以通过包管理器锁定版本，或在 `/etc/apt/sources.list.d/
 - 官方文档：[将 Grok Bot 部署到你的组织](https://cursor.com/cn/docs/grok-bot/deployment)
 - 官方文档：[管理 Grok Bot 电脑](https://cursor.com/cn/docs/grok-bot/computers)
 - 官方帮助：[方案和计费](https://cursor.com/cn/help/grok-bot/plans)
-- 官方帮助：[团队 Bot](https://cursor.com/cn/help/grok-bot/team-bots)
-- 官方帮助：[连接插件](https://cursor.com/cn/help/grok-bot/connect-plugins)
+- 官方帮助：[团队 Bot](https://cursor.com/cn/help/grok-bot/shared-bots.md)
+- 官方帮助：[连接应用](https://cursor.com/cn/help/grok-bot/connect-apps.md)
 - 官方指南：[Grok Bot 安全架构说明](https://cursor.com/cn/docs/grok-bot/security)

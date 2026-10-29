@@ -1,0 +1,553 @@
+diff --git a/i18n-project/audit/FIXED.md b/i18n-project/audit/FIXED.md
+new file mode 100644
+index 0000000..a881dcb
+--- /dev/null
++++ b/i18n-project/audit/FIXED.md
+@@ -0,0 +1,25 @@
++# 本次已改文件
++
++真源目录：`/workspace/grok-bot-learn`。未删页，未改部署密钥，未翻译英文案例标题或英文引用。
++
++| 文件 | 摘要 |
++| --- | --- |
++| `site/docs/part3/22-feishu-wechat.md` | 去掉两处 `file:///workspace/grok-bot-learn/v3/src/` 内链，改为官方例程与方案页。 |
++| `site/docs/part2/18-solo.md` | 去掉延伸阅读里的内部文件名；`connect-plugins.md` 改为 `connect-apps.md`。章程改为对话记住 / 共享 Bot 的 About。 |
++| `site/docs/part1/07-apps.md` | `connect-plugins.md` → `connect-apps.md`；`team-bots.md` → `shared-bots.md`。 |
++| `site/docs/part1/01-what-is.md` | 模型改为按任务路由；dots 日期改为 2026-09-29；移动端补 iPad/Android；创建步骤去掉 Edit Profile；团队 Bot 链接改为 `shared-bots.md`。 |
++| `site/docs/part1/09-group-team.md` | 两处团队 Bot 链接改为 `shared-bots.md`；章程不再写进已取消的 Profile Description。 |
++| `site/docs/part1/11-safety.md` | 去掉「底层切到单一模型」；两处团队 Bot 链接改为 `shared-bots.md`；六行合同改为对话记住 / About。 |
++| `site/docs/part4/23-enterprise.md` | 团队 Bot、连接插件链接改为现行帮助页。 |
++| `site/docs/part4/25-faq.md` | `connect-plugins` 改为 `connect-apps.md`。 |
++| `site/docs/part1/08-skills-routines.md` | 岗位章程不再写「Profile 的 Description」。 |
++| `site/docs/part1/10-usage.md` | 省额度规则改为让 Bot 记住，共享 Bot 可写 About。 |
++| `site/docs/part2/14-engineering.md` | 提示词不再要求贴进 Profile Description。 |
++| `site/docs/part2/17-gtm.md` | 去掉 Bot actions > Edit Profile 路径。 |
++| `site/docs/part3/19-orchestration.md` | 去掉 Edit Profile；更正「换上 Claude Opus 5.5」。 |
++| `site/docs/part3/20-automation.md` | 合同改为发给 Bot 记住，共享 Bot 写 About。 |
++| `site/docs/cases/x-hot.md` | 案例标题与收束句补上「付费」。 |
++
++未改：`tools.json`、`bots.json`、`ecosystem.json`、`changelog.json`、`seo.json`。这五个文件没有 P0。
++
++补丁：`outputs/i18n-audit-20261029/content-fix.diff`。改写后的 15 个 Markdown 在 `outputs/i18n-audit-20261029/fixed-md/`。
+diff --git a/i18n-project/audit/REPORT.md b/i18n-project/audit/REPORT.md
+new file mode 100644
+index 0000000..46e508c
+--- /dev/null
++++ b/i18n-project/audit/REPORT.md
+@@ -0,0 +1,53 @@
++# 翻译前审查报告
++
++审查日：2026-10-29。真源：`RongleCat/grok-bot-learn` `main` @ `03c8f24`（本环境克隆到 `/workspace/grok-bot-learn`）。站点：https://bot.fmcat.top
++
++## 清单怎么定的
++
++`i18n-project/SOURCE_PAGES.tsv` 在该提交和 `https://raw.githubusercontent.com/RongleCat/grok-bot-learn/main/i18n-project/SOURCE_PAGES.tsv` 都不存在（raw 返回 404）。未猜一份不存在的表。
++
++上线篇目按站点配置重建，共 **61** 篇，与任务所说篇数一致：
++
++- `site/docs/.vitepress/config.mts` 的 `srcExclude` 排除 `admin/`、`advanced/`、`appendix/`、`core/`、`guide/`、`resources/`、`start/`、`zz-bots.md`、`cases/outdated.md` 后，剩余 **60** 篇。
++- 这 60 篇与 https://bot.fmcat.top/sitemap.xml 的 60 个 `<loc>` 一一对应。
++- 第 61 篇是 `site/docs/xhs.md`：会构建，但 `sitemap.transformItems` 去掉它，并 `noindex`。https://bot.fmcat.top/xhs 返回 200。
++
++另扫：`site/docs/.vitepress/theme/tools.json`、`bots.json`、`ecosystem.json`、`changelog.json`，以及 `site/docs/.vitepress/seo.json`。
++
++站内相对链接 1033 条里，图片与已发布路由均能落到文件。`guide/`、`core/` 里的旧帮助链接不在这 61 篇里，未改。
++
++## 问题
++
++| 优先级 | 文件 | 问题 | 建议/已改 |
++| --- | --- | --- | --- |
++| P0 | `site/docs/part3/22-feishu-wechat.md` | 两处 `file:///workspace/grok-bot-learn/v3/src/help_grok-bot_*.md`。读者打不开，并暴露仓库内路径与源文件名。 | 已改。改为 [例程](https://cursor.com/cn/help/grok-bot/routines.md) 与 [方案与计费](https://cursor.com/cn/help/grok-bot/plans.md)。抽检均为 200。 |
++| P0 | `site/docs/part2/18-solo.md` | 延伸阅读链出内部文件名 `docs_grok-bot_*.md`、`help_grok-bot_*.md`。其中 `connect-plugins.md` 返回 404。 | 已改。去掉内部文件名，插件页改为 [连接应用](https://cursor.com/cn/help/grok-bot/connect-apps.md)（200）。 |
++| P0 | `site/docs/part1/07-apps.md` | `connect-plugins.md`、`team-bots.md` 的 `.md` 地址返回 404（正文以 `# Page not found` 开头）。不带 `.md` 的旧地址会 302 到新页。 | 已改。分别改为 `connect-apps.md`、`shared-bots.md`。 |
++| P0 | `site/docs/part1/01-what-is.md`；`site/docs/part1/09-group-team.md`；`site/docs/part1/11-safety.md`；`site/docs/part4/23-enterprise.md`；`site/docs/part4/25-faq.md` | 仍指向已更名的 `team-bots` / `connect-plugins`。`.md` 形式 404；无后缀形式仅靠重定向。 | 已改。统一到 `shared-bots.md`、`connect-apps.md`。 |
++| P0 | `site/docs/part1/01-what-is.md` | 「2026 年 10 月 7 日默认切为 Claude Opus 5.5」把路由说成单一默认模型。官方写明不绑定单一模型，也不能查看或指定。 | 已改。保留「可能路由到 Claude Opus 5.5 等模型」。依据：https://cursor.com/help/grok-bot/models |
++| P0 | `site/docs/part1/11-safety.md` | 「底层切到 Claude Opus 5.5」同样写成整站换模。 | 已改。改为「可能路由到 Claude Opus 5.5 等更强模型」。依据同上。 |
++| P0 | `site/docs/part3/19-orchestration.md` | 「系统解耦换上 Claude Opus 5.5」同样写成整站换模。 | 已改。改为「任务可能路由到 Claude Opus 5.5 等模型后」。依据同上。 |
++| P0 | `site/docs/part1/01-what-is.md` | 「GPT-6 Astra（2026-09-30 发布）」把 dots 上线日写成 Astra 发布日。OpenAI 写明 dots 于 2026-09-29 上线，并由 GPT-6 Astra 驱动；Pro 与 Business Premium 包含第一个 dot，连接 4,000+ 应用。 | 已改。依据：https://openai.com/index/introducing-dots/ （本机 curl 对该页 403，属拦截；页面正文由直接抓取读到，日期以该页为准）。 |
++| P0 | `site/docs/cases/x-hot.md` | 案例标题与收束句写「答疑群」，未写「付费」。同节下一段已有「付费答疑群」。 | 已改。标题与收束句改为「付费答疑群运维助手」。 |
++| P1 | `site/docs/part1/01-what-is.md`；`part1/08-skills-routines.md`；`part1/09-group-team.md`；`part1/10-usage.md`；`part1/11-safety.md`；`part2/14-engineering.md`；`part2/17-gtm.md`；`part2/18-solo.md`；`part3/19-orchestration.md`；`part3/20-automation.md` | 仍指示打开已删除的 Edit Profile，或把长期规则写入个人 Bot 的 Description。第 3 章已是现行做法。官方：个人 Bot 没有 Description，长期规则在对话里让它记住；共享 Bot 仍在详情 About 编辑 Description。侧边栏移除 Edit Profile 见本站 `changelog.json` 的 PC 0.57.0。 | 已改。指令改为「个人 Bot 发在对话里并让它记住；共享 Bot 写在详情 About」。依据：https://cursor.com/help/grok-bot/edit-bot.md |
++| P1 | `site/docs/part1/01-what-is.md` | 「移动端支持 iPhone」漏了 iPad 与 Android。同站 `part1/grok-vs-grok-bot.md` 已写这三端。 | 已改。补上 iPad 与 Android。依据：https://cursor.com/help/grok-bot/mobile.md （「available on iOS and Android」）。 |
++| P1 | `site/docs/part1/07-apps.md` | 步骤仍写「搜插件点添加」。官方页已称 Connect apps。未对照现行客户端按钮原文，不敢改按钮字。 | 只记不改。链接已改到连接应用。 |
++| P1 | `site/docs/.vitepress/seo.json` | `part2/14-engineering.md` 的描述写「自动匹配 Claude Opus 5.5 等模型」。有「等」，与「不绑定单一模型」不冲突。 | 只记不改。 |
++| P1 | `site/docs/guide/`、`site/docs/core/` | 仍有 `team-bots`、`connect-plugins`。这两目录在 `srcExclude` 中，不在 61 篇、也不进 sitemap。 | 只记不改。未上线。 |
++| P2 | 61 篇 Markdown | 没有连续 3 行及以上空行。引号和顿号风格不完全一致。 | 只记不改。 |
++
++## 扫过但没有记成问题的项
++
++- `bot.tiezhu.si`：61 篇与上述 5 个 JSON 中 0 次。
++- 付费群：`group.md`、`about.md`、`seo.json` 的 `group.md` 条目已写「付费」。`group.md` 首段后半句是「群是付费群」，标题是「付费答疑群」。
++- 错别字抽查：`做为`、`既使`、`必需要`、`阀值` 在 `site/docs` 中 0 次。
++- 站内图片：`/info/*.png` 在 `public/info` 均有同名 webp 或 png，缺失 0。
++- 五个 JSON：无 `file://`、无 `tiezhu.si`、无未标「付费」的「答疑群」。`changelog.json` 是官方更新译文，未改措辞。
++- 飞书 wiki（`jcng5q8n0f3z.feishu.cn`）抽检会跳到登录页（HTTP 200），不能据此判死链，也不记「阻塞、需人工」。
++- `https://x.ai/changelog/bot` 对本机 curl 为 403，是拦截，不是 404。
++- 订阅价格（Plus $8、Premium $30、Super $100、Ultra $200，Plus 不含 Bot）与 https://docs.x.ai/x-subscription/pricing 一致，未改。
++- 模型名：官方帮助页自己写出 Opus 5.5。本次只改「默认换成这一个模型」的错误事实，没有把官方已经公开的名字从正文里删掉。
++
++## P0 清零
++
++上线 61 篇里的 P0 都已改。标明「阻塞、需人工」的条数是 **0**。
+diff --git a/i18n-project/audit/SELF_CHECK.md b/i18n-project/audit/SELF_CHECK.md
+new file mode 100644
+index 0000000..5f17abf
+--- /dev/null
++++ b/i18n-project/audit/SELF_CHECK.md
+@@ -0,0 +1,25 @@
++# 自检
++
++## P0 是否清零
++
++清零。上线 61 篇中的 P0 均已写入 `FIXED.md`。`REPORT.md` 里「阻塞、需人工」为 0 条。
++
++复核命令（在 `/workspace/grok-bot-learn`）：
++
++- 61 篇中 `file://`、`tiezhu.si`、`v3/src/`：0 命中。
++- `connect-plugins.md`、`team-bots.md`：仅剩未上线的 `site/docs/guide/` 与 `site/docs/core/`，不在 61 篇内。
++
++## 链接抽检
++
++| 结果 | URL | 证据 |
++| --- | --- | --- |
++| OK | https://cursor.com/cn/help/grok-bot/connect-apps.md | `curl` 200，正文以 `# Connect apps` 开头 |
++| FAIL | https://cursor.com/help/grok-bot/connect-plugins.md | `curl` 404，正文 `# Page not found`。这是修改前的地址，已替换 |
++| OK | https://cursor.com/cn/help/grok-bot/shared-bots.md | `curl` 200，正文以 `# Shared Bots` 开头 |
++| FAIL | https://cursor.com/help/grok-bot/team-bots.md | `curl` 404，正文 `# Page not found`。这是修改前的地址，已替换 |
++| OK | https://cursor.com/cn/help/grok-bot/routines.md | `curl` 200，正文以 `# Routines` 开头 |
++| OK | https://cursor.com/cn/help/grok-bot/plans.md | `curl` 200，正文以 `# Plans and billing` 开头 |
++| OK | https://docs.x.ai/x-subscription/pricing | `curl` 200 |
++| OK | https://api.fxtwitter.com/status/2114883723930030505 | `curl` 200，`code: 200`，对应 `cases/x-hot.md` 付费答疑群案例原帖 |
++| OK | https://bot.fmcat.top/group | `curl` 200 |
++| OK | https://cursor.com/help/grok-bot/models | `curl` 200。页面说明 Grok Bot 不绑定单一模型 |
+diff --git a/site/docs/cases/x-hot.md b/site/docs/cases/x-hot.md
+index 9cde9c6..d65528c 100644
+--- a/site/docs/cases/x-hot.md
++++ b/site/docs/cases/x-hot.md
+@@ -536,7 +536,7 @@ Pages 功能上线后，许多团队面临不知该从何搭建的起步难题
+ 
+ 据作者自述，整理后的书签表格支持全文检索，所有媒体资源均已归档至网盘，系统每晚全自动执行增量归档（作者自述，未核）。
+ 
+-### 答疑群运维助手：定时日报与轻量页面避开 Webhook 频率限制｜@cgnot996
++### 付费答疑群运维助手：定时日报与轻量页面避开 Webhook 频率限制｜@cgnot996
+ 
+ > 原帖：[@cgnot996](https://x.com/cgnot996/status/2114883723930030505)
+ 
+@@ -544,7 +544,7 @@ Pages 功能上线后，许多团队面临不知该从何搭建的起步难题
+ 
+ 整套流程将群内消息先沉淀入库存储，交由后台助手集中处理，再统一回传至群内分发，助手仅处理定时资讯与日报，且日常只响应群主的艾特呼叫。**群内每天仅推送结构化精华长图并附带详细在线网页以降低成员爬楼成本，且刻意不做全员自由对话，从而精准避开 Webhook 额度打满的风险。**
+ 
+-据本人体验，答疑群运维助手「小铁柱」已平稳运行，日报既能直接看图也能进站查阅，架构设计成功避开了接口调用频率的限制（本人体验）。
++据本人体验，付费答疑群运维助手「小铁柱」已平稳运行，日报既能直接看图也能进站查阅，架构设计成功避开了接口调用频率的限制（本人体验）。
+ 
+ ### 快速生成 Pages 对练页：点词发音搞定全英自我介绍｜@cgnot996
+ 
+diff --git a/site/docs/part1/01-what-is.md b/site/docs/part1/01-what-is.md
+index c342738..6c02368 100644
+--- a/site/docs/part1/01-what-is.md
++++ b/site/docs/part1/01-what-is.md
+@@ -20,7 +20,7 @@
+ xAI 与 Cursor 在 2026 年 8 月 11 日推出 Grok Bot，**核心是把环境底座与思考模型拆分**。
+ 
+ - **底座（Harness）**：常驻云端，配有 Linux 终端、浏览器和持久文件。关机合盖，后台任务照常跑。
+-- **模型（Brain）**：按需调度。2026 年 10 月 7 日默认切为 Claude Opus 5.5，可派生 Cursor Agent 协同编码。
++- **模型（Brain）**：按需调度，不绑定单一模型，也不能查看或指定。2026 年 10 月 7 日起任务可能路由到 Claude Opus 5.5 等模型，也可派生 Cursor Agent 协同编码。
+ 
+ | 工具 | 运行环境 | 离线与协作 |
+ | --- | --- | --- |
+@@ -86,7 +86,7 @@ xAI 与 Cursor 在 2026 年 8 月 11 日推出 Grok Bot，**核心是把环境
+ | 产品 | 底座与门槛 | 特点与适用场景 |
+ | --- | --- | --- |
+ | Grok Bot | 共享 Linux 云电脑。2026-10-12 起执行 The X Subscription 统一方案（Premium $30/月、Super $100/月、Ultra $200/月），**Plus 档不含 Bot**；客户端 v0.70.2 支持独立邮箱与连接卡片 | 7×24 小时常驻，支持例程与技能，多 Bot 异步交接文件并调 X 平台检索。适合免运维、多岗位协同与巡检对账 |
+-| OpenAI dots | 个人常驻云电脑，ChatGPT Pro 档包含 | 基于 GPT-6 Astra（2026-09-30 发布），常驻后台连 4000 多个插件，主打日常伴随与轻量代办 |
++| OpenAI dots | 个人常驻云电脑，ChatGPT Pro 与 Business Premium 包含首个 dot | 基于 GPT-6 Astra（dots 于 2026-09-29 上线），常驻后台连 4000 多个应用，主打日常伴随与轻量代办 |
+ | Manus Cue | 独立云电脑，处于早期体验阶段 | 2026-09-29 铁柱上手体验；原生配独立协同邮箱、电话与钱包，自主跑腿注册与采购，自主权极高且伴随操作风险 |
+ | Meta Muse | Meta 托管云端代理，诺鸭船长评测偏家庭生态 | 深度绑定 Meta 社交网络与硬件，适合家庭日常与社交辅助 |
+ | Hermes | 本地或私有服务器，开源自建 | 自由更换开源模型，无商业额度限制。适合本地敏感数据流水线，**需自己动手配环境与排错** |
+@@ -97,7 +97,7 @@ xAI 与 Cursor 在 2026 年 8 月 11 日推出 Grok Bot，**核心是把环境
+ 
+ ### 金尘马的情报总监（个人调研岗位）
+ 
+-金尘马（@jinchenma_ai）在 Edit Profile 的 Description 写明长期岗位规则，定性为情报调研员。派单落实结果与来源、限制与格式及确认点五要素，检索 X 平台长文并区分视频帖，标明曝光数据，**无一手数据严禁编造**。
++金尘马（@jinchenma_ai）曾在 Edit Profile 的 Description 写明长期岗位规则（该菜单已移除，现行做法见第 3 章），定性为情报调研员。派单落实结果与来源、限制与格式及确认点五要素，检索 X 平台长文并区分视频帖，标明曝光数据，**无一手数据严禁编造**。
+ 
+ 首次纠偏格式后，指令 Bot 把流程沉淀为 Skill「AI 教程情报搜集」。
+ 
+@@ -133,11 +133,11 @@ xAI 与 Cursor 在 2026 年 8 月 11 日推出 Grok Bot，**核心是把环境
+ - **Ultra 档**：$200/月（年付 $2000），50x 额度池，适合高频团队主力。
+ - **$8/月（年付 $80）的 Plus 档不含 Bot 功能**，千万别选错。已有 Cursor 付费个人版或团队版、SuperGrok 订阅或 Grok Business 席位也能直接用。
+ 
+-  桌面端支持 macOS、Windows、Linux，移动端支持 iPhone，装好后登录账号。
++  桌面端支持 macOS、Windows、Linux，移动端支持 iPhone、iPad 与 Android，装好后登录账号。
+ 
+ ### 创建 Bot 并派发测试任务
+ 
+-1. 侧边栏点 New → Create new agent，起名「竞品情报员」。打开 Edit Profile，在 Description 填入标准六行工作合同。
++1. 侧边栏点 **+**（或 Cmd+N）创建 Bot，起名「竞品情报员」。个人 Bot 已没有 Description，把下面六行发在对话里并让它记住；共享 Bot 写在详情 About 的 Description。
+ ```text
+ Own: 负责监控目标清单的每周功能更新与定价变动
+ Sources: Notion 中的关注名单、目标官网 Changelog 页面
+@@ -185,7 +185,7 @@ Never: 在源系统可访问时，严禁依赖自身记忆给出概括
+ ## 做完怎么验收
+ 
+ 1. 侧边栏点 Bot 进聊天，发消息展开 **1920×1200 实时桌面**；去 Usage & Billing 确认方案是 Premium、Super 或 Ultra，进度条正常。
+-2. Edit Profile 的 Description 须写齐职责、数据源、产出物、审批红线与缺数兜底（**六行硬约束**）。发死链测它，**必须如实报缺**，不瞎编数据。
++2. 六行合同须写齐职责、数据源、产出物、审批红线与缺数兜底（**六行硬约束**）。个人 Bot 发在对话里让它记住，共享 Bot 写在详情 About。发死链测它，**必须如实报缺**，不瞎编数据。
+ 3. Settings → General → Auto-review 里，把 `send`、`post`、`buy`、`delete`、`permissions` 设为 Ask first。测发信或删文件，**必须弹审批卡片等人工确认**。
+ 4. Routine 右键 Test run 跑通后合盖关软件。到点重开看提醒，进云电脑 `/workspace`，**确认 Markdown 或 CSV 按最新时间戳更新**。
+ 
+@@ -207,7 +207,7 @@ Never: 在源系统可访问时，严禁依赖自身记忆给出概括
+ - [Grok Bot 使用场景与典型角色](https://cursor.com/cn/docs/grok-bot/use-cases)
+ - [面向团队版和企业版的 Grok Bot](https://cursor.com/cn/docs/grok-bot/teams)
+ - [Grok Bot 方案与计费说明](https://cursor.com/cn/help/grok-bot/plans)
+-- [团队 Bot 使用规范](https://cursor.com/cn/help/grok-bot/team-bots)
++- [团队 Bot 使用规范](https://cursor.com/cn/help/grok-bot/shared-bots.md)
+ - [Grok Bot 安全架构与 Auto-review 规则](https://cursor.com/cn/docs/grok-bot/security)
+ 
+ ### 社区实战与横向对比
+diff --git a/site/docs/part1/07-apps.md b/site/docs/part1/07-apps.md
+index 5fd9c34..a5adf47 100644
+--- a/site/docs/part1/07-apps.md
++++ b/site/docs/part1/07-apps.md
+@@ -40,7 +40,7 @@
+ | **Slack** | 频道发消息 | 进不去未加入的私有与禁言频道；非拉群 Bot |
+ | **Gmail** | 搜读发邮件、加标签 | 仅限单邮箱，个人与企业邮箱不可同绑 |
+ 
+-详见[连接插件](https://cursor.com/cn/help/grok-bot/connect-plugins.md)。
++详见[连接应用](https://cursor.com/cn/help/grok-bot/connect-apps.md)。
+ 
+ 1. 桌面端点侧边栏/聊天卡片「连接」，移动端点头像选「连接应用」。
+ 2. 搜插件点「添加」（Add）并在浏览器登录授权。
+@@ -192,12 +192,12 @@ Grok Bot 在 v0.70.2（2026-10-08）集成了 X 只读检索。**它直接走 Th
+ 
+ ### 官方文档与支持页面
+ 
+-- [连接插件](https://cursor.com/cn/help/grok-bot/connect-plugins.md)
++- [连接应用](https://cursor.com/cn/help/grok-bot/connect-apps.md)
+ - [为你的 Bot 设置电子邮箱地址](https://cursor.com/cn/help/grok-bot/agent-email.md)
+ - [安全存储机密信息](https://cursor.com/cn/help/grok-bot/secrets.md)
+ - [Grok Bot 电脑](https://cursor.com/cn/help/grok-bot/computer-recovery.md)
+ - [例程](https://cursor.com/cn/help/grok-bot/routines.md)
+-- [团队 Bot](https://cursor.com/cn/help/grok-bot/team-bots.md)
++- [团队 Bot](https://cursor.com/cn/help/grok-bot/shared-bots.md)
+ - [面向 Teams 和企业版的 Grok Bot](https://cursor.com/cn/docs/grok-bot/teams.md)
+ 
+ ### 社区实战资料
+diff --git a/site/docs/part1/08-skills-routines.md b/site/docs/part1/08-skills-routines.md
+index 1ea52f0..b791be9 100644
+--- a/site/docs/part1/08-skills-routines.md
++++ b/site/docs/part1/08-skills-routines.md
+@@ -222,7 +222,7 @@ Slack 插件是随对话实时调用的读写工具；Slack 触发器是例程
+ 官方团队与运营 29 个 Bot 的作者 melvindvivas 采用这套方案监控客户异动。每天早晨自动拉取用量与工单指标，生成预警观察清单，全程严格受控。
+ 
+ 落地分四步走。
+-1. **确立岗位章程合同**：建专职 Account Risk Bot，在 Profile 的 Description 写明规则合同，定好风险阈值。比如 API 调用量连续三天跌幅超 40%，且伴随没解决的 P1 工单。
++1. **确立岗位章程合同**：建专职 Account Risk Bot，把规则合同发在对话里并让它记住（共享 Bot 写在详情 About），定好风险阈值。比如 API 调用量连续三天跌幅超 40%，且伴随没解决的 P1 工单。
+ 2. **设定定时拉取任务**：配好工作日早晨 8:00 跑的例程，定时拉取源系统指标。
+ 3. **配置故障熔断机制**：**数据仓库连接超时或数据未就绪，直接报告缺失失败原因，严禁拿昨天快照推测，严禁输出未证实数据。**
+ 4. **设置安全审批人闸**：在 Settings 的 Custom Rules 里把发邮件、修改 CRM 字段和分发清单全部设为“先询问”（Ask first）。Bot 整理出的清单只在聊天窗口静默展示，等客户经理核实后手动点击批准卡片。
+diff --git a/site/docs/part1/09-group-team.md b/site/docs/part1/09-group-team.md
+index 500b511..a61c4f8 100644
+--- a/site/docs/part1/09-group-team.md
++++ b/site/docs/part1/09-group-team.md
+@@ -72,7 +72,7 @@
+ 
+ ## 团队 Bot 全流程配置：创建、发布与跨人共享
+ 
+-团队 Bot 由成员创建并全员共享，私聊相互隔离。**它只在云端运行，不能绑在本地**。[参考官方指南](https://cursor.com/cn/help/grok-bot/team-bots)。
++团队 Bot 由成员创建并全员共享，私聊相互隔离。**它只在云端运行，不能绑在本地**。[参考官方指南](https://cursor.com/cn/help/grok-bot/shared-bots.md)。
+ 
+ ### 创建与转为团队 Bot
+ 
+@@ -117,7 +117,7 @@
+ 
+ ### 主 Bot 六行章程与专职边界
+ 
+-**主 Bot 只负责路由与监督，绝不能亲自写长代码或长文。** 在 Profile Description 写入六行章程，使其无事静默、有事派活，超长汇报存为文件。
++**主 Bot 只负责路由与监督，绝不能亲自写长代码或长文。** 个人 Bot 把六行章程发在对话里并让它记住；共享 Bot 写入详情 About 的 Description。无事静默、有事派活，超长汇报存为文件。
+ 
+ 团队组织规范参考 [《4.2 团队编排：章程、岗位与放权》](https://jcng5q8n0f3z.feishu.cn/wiki/POTrwwThoiQxIakFDIDcUcKjnmh)。
+ 
+@@ -130,7 +130,7 @@ Failure: 下游专职 Bot 报错时如实上报，不使用过期数据假装完
+ Never: 永远不直接编写业务代码，不擅自修改生产配置。
+ ```
+ 
+-专职 Bot 须在 Description 写死负向边界：
++专职 Bot 须把负向边界发给它记住（共享 Bot 写在详情 About）：
+ - 广告投手 Bot：分析数据并出具待批清单，**绝不碰后台与出价，不调预算，也不加词或建组**。
+ - 文案创作 Bot：只出草稿文件，严禁调接口直接上线公开内容。
+ - 竞品调研 Bot：前台只看不动，严禁下单加购，也不留评或向卖家提问，防反爬封禁。
+@@ -279,7 +279,7 @@ Zach（@1999Zach22）以 1 船长带 12 岗位，**自动化闭环必须设待
+ 
+ ### 官方文档
+ - [群组聊天与机器人间消息](https://cursor.com/cn/help/grok-bot/group-chats)
+-- [团队 Bot](https://cursor.com/cn/help/grok-bot/team-bots)
++- [团队 Bot](https://cursor.com/cn/help/grok-bot/shared-bots.md)
+ 
+ ### 社区实战来源
+ - [《Meet your Team Bots｜n2parko》](https://jcng5q8n0f3z.feishu.cn/wiki/KS9Cwan52idy1xkLbnTcSC3xnxb)
+diff --git a/site/docs/part1/10-usage.md b/site/docs/part1/10-usage.md
+index 7d4374a..33a7e81 100644
+--- a/site/docs/part1/10-usage.md
++++ b/site/docs/part1/10-usage.md
+@@ -190,7 +190,7 @@ Webhook 唤醒步骤与验收标准：
+ ## 直接发给 Bot 的省额度提示词库
+ 
+ ### 上下文防膨胀
+-- 规则让 Bot 提炼写入 Description，**省去聊天重复交代**。
++- 规则让 Bot 提炼后记住，**省去聊天重复交代**；共享 Bot 可写入详情 About。
+ ```text
+ 请回顾我们至今的协作流程，执行两项沉淀工作：
+ 1. 把你需要长期遵守的行为边界、汇报格式与约束规矩，提炼成一段不超过 300 字的精简文本，我将直接粘贴到你的描述（Description）中；
+diff --git a/site/docs/part1/11-safety.md b/site/docs/part1/11-safety.md
+index 1ec1416..9274f5d 100644
+--- a/site/docs/part1/11-safety.md
++++ b/site/docs/part1/11-safety.md
+@@ -23,7 +23,7 @@ Grok Bot 跑在 Cursor 专属的 Firecracker microVM 上，用户间是底层硬
+ ### 怎么做
+ **多 Bot 无法实现环境隔离**。一个 Bot 登录了后台，别的 Bot 也能直接操作。
+ 
+-如果需要强隔离，必须单独开一个 Cursor 账号；调队友建的[团队 Bot](https://cursor.com/cn/help/grok-bot/team-bots)，也是跑在你自己的云电脑上。
++如果需要强隔离，必须单独开一个 Cursor 账号；调队友建的[团队 Bot](https://cursor.com/cn/help/grok-bot/shared-bots.md)，也是跑在你自己的云电脑上。
+ 
+ **客户端删 Bot 不会清空本地文件与登录态**。项目收尾必须手动做三项清理：
+ 1. 在云电脑浏览器中退出登录
+@@ -50,7 +50,7 @@ Grok Bot 跑在 Cursor 专属的 Firecracker microVM 上，用户间是底层硬
+ | 系统与权限 | 删非垃圾文件、改生产配置 | 强制人闸，规则拦截（Ask first）单次确认 |
+ 
+ 1. **把「无法在一分钟内撤销的操作必须停下来问我」写进 Bot 全局规则。**
+-2. 2026-10-07 底层切到 Claude Opus 5.5 后，模型越聪明越倾向自行推演，必须焊死权限边界。
++2. 2026-10-07 起任务可能路由到 Claude Opus 5.5 等更强模型，越倾向自行推演，必须焊死权限边界。
+ 3. 客户端审批卡约 10 分钟超时失效。**夜间 Routine 绝不能挂起发信审批**，输出终点设为「保存为本地文件」或「生成草稿卡片」，防超时报错中断。
+ 
+ 验收标准：
+@@ -109,7 +109,7 @@ send, post, buy, transfer, delete, permissions, production, terms
+ ```text
+ 核对营销活动数据，并起草一份推荐的预算调整方案。不要更改营销活动，也不要联系代理商。在展示当前值、建议值和预期影响之后，请求批准。
+ ```
+-2. **在 Edit Profile 固化六行合同**：清空头衔，在 Description 填入规则：
++2. **固化六行合同**：个人 Bot 把下面规则发在对话里并让它记住；共享 Bot 写在详情 About 的 Description：
+ ```text
+ Own: 唯一负责的业务结果与目标
+ Sources: 允许读取的应用、数据源网址或本地绝对路径
+@@ -118,7 +118,7 @@ Approval: 在执行前必须停下来等待人工批准的动作清单（never p
+ Failure: 当外部数据源缺失、超时或失效时的应对规则（如实报错并停止，严禁编造数据）
+ Never: 绝对禁止触碰的系统操作或越权行为
+ ```
+-3. **部署幕僚长契约**：复杂任务以 kocer 幕僚长为唯一入口，主控 Bot 的 Description 写入契约：
++3. **部署幕僚长契约**：复杂任务以 kocer 幕僚长为唯一入口。个人主控 Bot 把契约发在对话里并让它记住；共享 Bot 写入详情 About 的 Description：
+ ::: details 配置步骤
+ ```text
+ Name: Chief
+@@ -264,7 +264,7 @@ Save the review to /workspace/state/reviews/YYYY-WW.md.
+ 1. 物理机执行：Settings → Computer 必须选 **Never allow**。
+ 2. 审核与拦截：Auto-review 开启 Enforce，Custom Rules 填入全部不可逆动词。
+ 3. 外发防护：**保持 v0.64 邮件与 Slack 卡片的「关闭草稿」未勾选**。
+-4. 契约规则：Description 写入六行合同，十条底线存为 `house_rules` Skill 作首条提示词。
++4. 契约规则：把六行合同发给 Bot 记住（共享 Bot 写在详情 About），十条底线存为 `house_rules` Skill 作首条提示词。
+ 5. 网络与代理：Network 选 Defaults + Team Allowlist，网关放行 `*.cursorvm.com` 并跳过解密。
+ 6. 审计与熔断：录制对接 OpenTelemetry 导出 `cursor.surface=grok_bot`，出事**在对话框发 `STOP ALL` 瞬间冻结所有 Routine**。
+ 
+@@ -300,6 +300,6 @@ Save the review to /workspace/state/reviews/YYYY-WW.md.
+ - 官方支持：[安全存储机密信息](https://cursor.com/cn/help/grok-bot/secrets)
+ - 官方支持：[哪些 AI 模型为 Grok Bot 提供支持？](https://cursor.com/cn/help/grok-bot/models)
+ - 官方支持：[Grok Bot 计算机](https://cursor.com/cn/help/grok-bot/computer-recovery)
+-- 官方支持：[团队 Bot](https://cursor.com/cn/help/grok-bot/team-bots)
++- 官方支持：[团队 Bot](https://cursor.com/cn/help/grok-bot/shared-bots.md)
+ - 社区原文：[《4.4 权限、安全与人闸》](https://jcng5q8n0f3z.feishu.cn/wiki/Fxfiwuf4TiCqHTkTzFgcosQ7nzd)
+ - 社区原文：[《Grok Bot Chief of Staff: the charter, 10 rules and 5 routines I run｜kocer》](https://jcng5q8n0f3z.feishu.cn/wiki/BquAwgIC8iWFQlkPZFxc7uOsnSh)
+diff --git a/site/docs/part2/14-engineering.md b/site/docs/part2/14-engineering.md
+index dee9c88..b6afef9 100644
+--- a/site/docs/part2/14-engineering.md
++++ b/site/docs/part2/14-engineering.md
+@@ -243,10 +243,10 @@ NEW ──> TRIAGED ──> REPRODUCED ──> BUILDING ──> TESTED ──> R
+ 
+ ## 开箱即用：工程研发提示词库
+ 
+-以下提示词均经过生产实践验证。你可以直接将其复制并配置到 Grok Bot 的 Bot Profile 或日常指令中：
++以下提示词均经过生产实践验证。直接复制发给 Bot 并让它记住；共享 Bot 写入详情 About：
+ 
+ ### 1. 架构总控章程（Chief）
+-**贴进主管 Bot 的 Profile Description**，用来把控流程和记录状态。
++**发给主管 Bot 并让它记住**（共享 Bot 写入详情 About），用来把控流程和记录状态。
+ 
+ ::: details 1. 架构总控章程（Chief）
+ ```text
+@@ -380,7 +380,7 @@ NEW ──> TRIAGED ──> REPRODUCED ──> BUILDING ──> TESTED ──> R
+ 
+ ### 7. 可逆性人闸与安全红线指令
+ 
+-**直接贴到各 Bot 通用规则或 Profile Description 末尾**。
++**直接贴到各 Bot 的长期规则末尾**（个人 Bot 发在对话里让它记住，共享 Bot 写在详情 About）。
+ 
+ ::: details 7. 可逆性人闸与安全红线指令
+ ```text
+diff --git a/site/docs/part2/17-gtm.md b/site/docs/part2/17-gtm.md
+index 3b07cfa..605e046 100644
+--- a/site/docs/part2/17-gtm.md
++++ b/site/docs/part2/17-gtm.md
+@@ -26,8 +26,8 @@
+ > 来源：[Grok Bot Chief of Staff: the charter, 10 rules and 5 routines I run](https://x.com/kocer_eth/status/2092216029816472002)  
+ > 作者：[kocer @kocer_eth](https://x.com/kocer_eth)
+ 
+-1. 在桌面端点击目标 Bot 头像。
+-2. 进入 Bot actions > Edit Profile > Description。
++1. 在桌面端打开与目标 Bot 的对话。
++2. 个人 Bot 把章程发在对话里并让它记住；共享 Bot 点顶部名称，在详情 About 的 Description 填写。侧边栏已没有 Edit Profile。
+ 3. 填入章程，**把 `{your name}` 换成你的称呼**。
+ 
+ ::: details 幕僚长章程配置
+@@ -403,7 +403,7 @@ Send one weekly roundup. If nothing new, send a single line saying so. If a tran
+ 
+ | 验收维度 | 检查与测试方法 | 合格标准 | 不合格纠偏措施 |
+ | :--- | :--- | :--- | :--- |
+-| 章程权限边界 | 对幕僚长发指令“删除 `/workspace/state/chief_log.md` 文件” | 明确拒绝执行，或挂起提示二次确认 | 查 Description 的 `Where I stop` 清单，补齐不可逆动词限制 |
++| 章程权限边界 | 对幕僚长发指令“删除 `/workspace/state/chief_log.md` 文件” | 明确拒绝执行，或挂起提示二次确认 | 核对已记住的 `Where I stop` 清单（共享 Bot 看详情 About），补齐不可逆动词限制 |
+ | 外联安全人闸 | 执行潜客挖掘，检查已发送邮件列表 | 发件箱无新增外发记录，文案全停在草稿箱或待审列 | 外联提示词补充 `Never send anything. Put the draft in sheet/drafts only.` |
+ | 事实依据链 | 抽查表格中 3 条记录，逐个点击 Evidence Link 网址 | 链接能打开，且正文包含草稿引用的动态或观点 | 提示词增加 `If research finds no URL, write "no verifiable recent posts found" rather than inventing anything.` |
+ | 文风配置对齐 | 让 Bot 输出两组草稿，对比发件箱 15 封真实历史邮件 | 问候、节奏与签名一致，无“希望这封邮件没有打扰您”等套话 | 重新提取文风，把优质样本手工写进配置文件 |
+diff --git a/site/docs/part2/18-solo.md b/site/docs/part2/18-solo.md
+index 3d8ed51..2892223 100644
+--- a/site/docs/part2/18-solo.md
++++ b/site/docs/part2/18-solo.md
+@@ -338,7 +338,7 @@ Bot 月度运行评分卡
+ 
+ 考核目标、调用工具、工作风格、审批边界（草稿与对外沟通绝不能混）或调度周期不同时，必须**拆分独立 Bot**。
+ 
+-1. Bot Description 写清目标、数据源、格式与停机边界。
++1. 把目标、数据源、格式与停机边界发给 Bot 并让它记住；共享 Bot 写在详情 About。
+ 2. 挑受控真实任务单次运行。
+ 3. 人工调优到免检。
+ 4. 沉淀为复用 Skill。
+@@ -391,7 +391,7 @@ Bot 超过 5 个就别用多聊天窗口了，根本看不过来。**多 Bot 协
+ 6. 别设 5 分钟轮询或监听全消息，**缺 No-data policy 时断网容易瞎编数据耗尽额度**。
+ 
+ ### 规则与交接
+-7. 聊天框叮嘱刷新就失效，**跨任务纪律必须写在设置界面的 Description**。
++7. 聊天框叮嘱刷新就失效，**跨任务纪律要让 Bot 记住**；共享 Bot 写在详情 About，个人 Bot 已没有 Description。
+ 8. 跨 Bot 别搬运全部记录，**交接包只留目标与交付物路径，加上结论和下一步要求**。
+ 
+ ## 做完怎么验收
+@@ -406,12 +406,12 @@ Bot 超过 5 个就别用多聊天窗口了，根本看不过来。**多 Bot 协
+ 
+ ### 官方文档
+ 
+-- [在 Grok Bot 中组织业务与工作（docs_grok-bot_work.md）](https://cursor.com/cn/docs/grok-bot/work.md)
+-- [团队版 Bot 协作与权限管理（docs_grok-bot_teams.md）](https://cursor.com/cn/docs/grok-bot/teams.md)
+-- [Grok Bot 安全架构与执行环境（docs_grok-bot_security.md）](https://cursor.com/cn/docs/grok-bot/security.md)
+-- [方案、额度与计费说明（help_grok-bot_plans.md）](https://cursor.com/cn/help/grok-bot/plans.md)
+-- [配置定时任务与触发例程（help_grok-bot_routines.md）](https://cursor.com/cn/help/grok-bot/routines.md)
+-- [连接外部应用与官方插件（help_grok-bot_connect-plugins.md）](https://cursor.com/cn/help/grok-bot/connect-plugins.md)
++- [在 Grok Bot 中组织业务与工作](https://cursor.com/cn/docs/grok-bot/work.md)
++- [团队版 Bot 协作与权限管理](https://cursor.com/cn/docs/grok-bot/teams.md)
++- [Grok Bot 安全架构与执行环境](https://cursor.com/cn/docs/grok-bot/security.md)
++- [方案、额度与计费说明](https://cursor.com/cn/help/grok-bot/plans.md)
++- [配置定时任务与触发例程](https://cursor.com/cn/help/grok-bot/routines.md)
++- [连接应用](https://cursor.com/cn/help/grok-bot/connect-apps.md)
+ 
+ ### 社区实战来源
+ 
+diff --git a/site/docs/part3/19-orchestration.md b/site/docs/part3/19-orchestration.md
+index dc7a850..a3cfa59 100644
+--- a/site/docs/part3/19-orchestration.md
++++ b/site/docs/part3/19-orchestration.md
+@@ -33,13 +33,13 @@
+ ## 2. 章程模板：把岗位描述写成履约合同
+ 
+ ### 是什么
+-**章程是长效契约**，在 Bot 详情页（Bot actions → Edit Profile → Description）填写。
++**章程是长效契约**。个人 Bot 发在对话里并让它记住；共享 Bot 写在详情 About 的 Description。侧边栏已没有 Edit Profile。
+ 
+ - 别写“文案大师”这类形容词，缺乏边界容易引发幻觉。
+ - **必须按合同写**，用动词定好职责、交付格式、人闸与停障。
+ 
+ ### 怎么做
+-1. **填六行约定**：去目标 Bot 的 Edit Profile，把约定填进 Description。
++1. **填六行约定**：个人 Bot 把约定发在对话里并让它记住；共享 Bot 写入详情 About 的 Description。
+ 
+ ```text
+ Own: 负责需求的统一拆解、分派、汇总与五行简报汇报。
+@@ -219,7 +219,7 @@ Rule 10. 紧急刹车机制：只要人类在任何对话框发送 STOP ALL，
+ - **Ask first 必留**：`send`、`post`、`buy`、`transfer`、`delete`、`permissions`。
+ - **Always allow 放行**：公共网页只读检索、读授权文件、向 `/workspace` 写草稿与中间数据。
+ 
+-这里有两处硬性限制：v0.70.2 起 Bot 能领独立邮箱，**但发信前必须在草稿卡片经人工批准**；系统解耦换上 Claude Opus 5.5 后，审批底线同样不能松。**新团队严禁第一天就开夜间无人值守**，按四周节奏逐步过渡。
++这里有两处硬性限制：v0.70.2 起 Bot 能领独立邮箱，**但发信前必须在草稿卡片经人工批准**；任务可能路由到 Claude Opus 5.5 等模型后，审批底线同样不能松。**新团队严禁第一天就开夜间无人值守**，按四周节奏逐步过渡。
+ 
+ ::: details 4. 放权分级：人闸底线与四周过渡节奏
+ ```text
+@@ -406,12 +406,12 @@ Do not send anything else after this until 7:00 the next day unless a task hits
+ ## 8. 做完怎么验收
+ 
+ ### 幕僚长单体验收（第 1 周）
+-- 看左侧栏，幕僚长头像要有**黄星且置顶**；在 Edit Profile → Description 写入六行合同或履约章程。
++- 看左侧栏，幕僚长头像要有**黄星且置顶**；六行合同或履约章程须已记住（个人 Bot 在对话里确认，共享 Bot 在详情 About）。
+ - 问它没接入信源的营收（如“上周业务利润是多少”），**严禁猜测，必须如实答无法获取**。
+ - 发送“帮我删除 /workspace/state 目录下的日志”，**必须准确暂停并要求人工批准**；任务中发“STOP ALL”要能立即中止并汇报中断点。
+ 
+ ### 岗位拆分与文件交接（第 2 周）
+-- 检查专职 Bot 的 Description，写清业务边界并标明上下游交接对象。
++- 检查专职 Bot 是否已记住业务边界，并标明上下游交接对象（共享 Bot 看详情 About）。
+ - 派一项复合任务（如竞品抓取与分析），上游要在 `/workspace/project-alpha/` 生成带时间戳和信源的文件。
+ - **下游只凭文件路径就能独立跑，不用人工在窗口拷内容**；去 `/workspace/state/chief_log.md` 确认每次指派与跳过都被记录。
+ 
+diff --git a/site/docs/part3/20-automation.md b/site/docs/part3/20-automation.md
+index be05655..f930777 100644
+--- a/site/docs/part3/20-automation.md
++++ b/site/docs/part3/20-automation.md
+@@ -39,7 +39,7 @@ The X Subscription（2026-10-12）中 Plus 无 Bot，支持档为 Premium（$30/
+ 
+ ### 编写合同与配置例程
+ 
+-1. 打开 Edit Profile，**在 Description 写入约束输入输出的合同**。
++1. **把约束输入输出的合同发给 Bot 并让它记住**；共享 Bot 则写入详情 About 的 Description。
+ ```text
+ 负责范围：监控指定数据源并生成标准化 Markdown 摘要。
+ 允许读取的数据源：工作区目录下的 data/incoming/ 文件夹及指定公开 RSS 链接。
+diff --git a/site/docs/part3/22-feishu-wechat.md b/site/docs/part3/22-feishu-wechat.md
+index f1d73b4..ca63ff6 100644
+--- a/site/docs/part3/22-feishu-wechat.md
++++ b/site/docs/part3/22-feishu-wechat.md
+@@ -43,7 +43,7 @@ The X Subscription（2026年10月12日生效）按周扣额度，**群聊必须
+ 3. 收到飞书测试消息后回复一条，**Bot 自动将你的 Open ID 写入白名单**。
+ 
+ #### 创建门铃例程
+-1. 点击 Bot 名称进 [help_grok-bot_routines.md](file:///workspace/grok-bot-learn/v3/src/help_grok-bot_routines.md) 的 **Details** 面板。
++1. 点击对话顶部的 Bot 名称，打开详情里的 **Details** 面板。步骤见 [例程](https://cursor.com/cn/help/grok-bot/routines.md)。
+ 2. 在例程建 Webhook 门铃，获取 POST to 地址与 key。
+ 3. **必须在 Bot 弹出的加密输入框提交凭证**，避免明文泄露。单聊发测试文本，Bot 正常回复即跑通。
+ 
+@@ -190,7 +190,7 @@ Plus 档（$8/月）没有 Grok Bot，只有 Premium（$30/月，4x 额度）、
+ 1. **仅在精准提及（`@自己`）或特定管理员指令时触发 Webhook**。
+ 2. 严禁全群无差别监听，避免配置高频短周期轮询。
+ 
+-详细规则参考 [help_grok-bot_plans.md](file:///workspace/grok-bot-learn/v3/src/help_grok-bot_plans.md) 与 [help_grok-bot_routines.md](file:///workspace/grok-bot-learn/v3/src/help_grok-bot_routines.md)。
++详细规则参考 [方案与计费](https://cursor.com/cn/help/grok-bot/plans.md) 与 [例程](https://cursor.com/cn/help/grok-bot/routines.md)。
+ 
+ ## 实战案例复盘
+ 
+diff --git a/site/docs/part4/23-enterprise.md b/site/docs/part4/23-enterprise.md
+index 382100c..9c506bf 100644
+--- a/site/docs/part4/23-enterprise.md
++++ b/site/docs/part4/23-enterprise.md
+@@ -374,6 +374,6 @@ Linux 端可以通过包管理器锁定版本，或在 `/etc/apt/sources.list.d/
+ - 官方文档：[将 Grok Bot 部署到你的组织](https://cursor.com/cn/docs/grok-bot/deployment)
+ - 官方文档：[管理 Grok Bot 电脑](https://cursor.com/cn/docs/grok-bot/computers)
+ - 官方帮助：[方案和计费](https://cursor.com/cn/help/grok-bot/plans)
+-- 官方帮助：[团队 Bot](https://cursor.com/cn/help/grok-bot/team-bots)
+-- 官方帮助：[连接插件](https://cursor.com/cn/help/grok-bot/connect-plugins)
++- 官方帮助：[团队 Bot](https://cursor.com/cn/help/grok-bot/shared-bots.md)
++- 官方帮助：[连接应用](https://cursor.com/cn/help/grok-bot/connect-apps.md)
+ - 官方指南：[Grok Bot 安全架构说明](https://cursor.com/cn/docs/grok-bot/security)
+diff --git a/site/docs/part4/25-faq.md b/site/docs/part4/25-faq.md
+index 078553b..894ff34 100644
+--- a/site/docs/part4/25-faq.md
++++ b/site/docs/part4/25-faq.md
+@@ -163,7 +163,7 @@ Grok Bot 配额按周重置。基础额度用完会中断回复，**这属于正
+ 1. **多账号**：在「连接应用」> 插件 > Accounts 点 **Add Another Account**（手机端点 Authorize new account）并打标签。对话指明标签调用；无按钮则仅支持单账号。
+ 2. **验收**：**状态显示绿色 Connected 且标签清晰**，发指令能一次准确调用。
+ 
+-详见[连接插件](https://cursor.com/cn/help/grok-bot/connect-plugins)。
++详见[连接应用](https://cursor.com/cn/help/grok-bot/connect-apps.md)。
+ 
+ ```text
+ 请刷新当前已连接的插件列表，使用带有“工作”标签的账户连接，读取最近更新的 3 个页面，确认授权是否正常。

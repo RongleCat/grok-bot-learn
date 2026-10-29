@@ -43,7 +43,7 @@ The X Subscription（2026年10月12日生效）按周扣额度，**群聊必须�
 3. 收到飞书测试消息后回复一条，**Bot 自动将你的 Open ID 写入白名单**。
 
 #### 创建门铃例程
-1. 点击 Bot 名称进 [help_grok-bot_routines.md](file:///workspace/grok-bot-learn/v3/src/help_grok-bot_routines.md) 的 **Details** 面板。
+1. 点击对话顶部的 Bot 名称，打开详情里的 **Details** 面板。步骤见 [例程](https://cursor.com/cn/help/grok-bot/routines.md)。
 2. 在例程建 Webhook 门铃，获取 POST to 地址与 key。
 3. **必须在 Bot 弹出的加密输入框提交凭证**，避免明文泄露。单聊发测试文本，Bot 正常回复即跑通。
 
@@ -190,7 +190,7 @@ Plus 档（$8/月）没有 Grok Bot，只有 Premium（$30/月，4x 额度）、
 1. **仅在精准提及（`@自己`）或特定管理员指令时触发 Webhook**。
 2. 严禁全群无差别监听，避免配置高频短周期轮询。
 
-详细规则参考 [help_grok-bot_plans.md](file:///workspace/grok-bot-learn/v3/src/help_grok-bot_plans.md) 与 [help_grok-bot_routines.md](file:///workspace/grok-bot-learn/v3/src/help_grok-bot_routines.md)。
+详细规则参考 [方案与计费](https://cursor.com/cn/help/grok-bot/plans.md) 与 [例程](https://cursor.com/cn/help/grok-bot/routines.md)。
 
 ## 实战案例复盘
 

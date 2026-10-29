@@ -338,7 +338,7 @@ Bot 月度运行评分卡
 
 考核目标、调用工具、工作风格、审批边界（草稿与对外沟通绝不能混）或调度周期不同时，必须**拆分独立 Bot**。
 
-1. Bot Description 写清目标、数据源、格式与停机边界。
+1. 把目标、数据源、格式与停机边界发给 Bot 并让它记住；共享 Bot 写在详情 About。
 2. 挑受控真实任务单次运行。
 3. 人工调优到免检。
 4. 沉淀为复用 Skill。
@@ -391,7 +391,7 @@ Bot 超过 5 个就别用多聊天窗口了，根本看不过来。**多 Bot 协
 6. 别设 5 分钟轮询或监听全消息，**缺 No-data policy 时断网容易瞎编数据耗尽额度**。
 
 ### 规则与交接
-7. 聊天框叮嘱刷新就失效，**跨任务纪律必须写在设置界面的 Description**。
+7. 聊天框叮嘱刷新就失效，**跨任务纪律要让 Bot 记住**；共享 Bot 写在详情 About，个人 Bot 已没有 Description。
 8. 跨 Bot 别搬运全部记录，**交接包只留目标与交付物路径，加上结论和下一步要求**。
 
 ## 做完怎么验收
@@ -406,12 +406,12 @@ Bot 超过 5 个就别用多聊天窗口了，根本看不过来。**多 Bot 协
 
 ### 官方文档
 
-- [在 Grok Bot 中组织业务与工作（docs_grok-bot_work.md）](https://cursor.com/cn/docs/grok-bot/work.md)
-- [团队版 Bot 协作与权限管理（docs_grok-bot_teams.md）](https://cursor.com/cn/docs/grok-bot/teams.md)
-- [Grok Bot 安全架构与执行环境（docs_grok-bot_security.md）](https://cursor.com/cn/docs/grok-bot/security.md)
-- [方案、额度与计费说明（help_grok-bot_plans.md）](https://cursor.com/cn/help/grok-bot/plans.md)
-- [配置定时任务与触发例程（help_grok-bot_routines.md）](https://cursor.com/cn/help/grok-bot/routines.md)
-- [连接外部应用与官方插件（help_grok-bot_connect-plugins.md）](https://cursor.com/cn/help/grok-bot/connect-plugins.md)
+- [在 Grok Bot 中组织业务与工作](https://cursor.com/cn/docs/grok-bot/work.md)
+- [团队版 Bot 协作与权限管理](https://cursor.com/cn/docs/grok-bot/teams.md)
+- [Grok Bot 安全架构与执行环境](https://cursor.com/cn/docs/grok-bot/security.md)
+- [方案、额度与计费说明](https://cursor.com/cn/help/grok-bot/plans.md)
+- [配置定时任务与触发例程](https://cursor.com/cn/help/grok-bot/routines.md)
+- [连接应用](https://cursor.com/cn/help/grok-bot/connect-apps.md)
 
 ### 社区实战来源
 

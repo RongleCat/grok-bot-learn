@@ -23,7 +23,7 @@ Grok Bot 跑在 Cursor 专属的 Firecracker microVM 上，用户间是底层硬
 ### 怎么做
 **多 Bot 无法实现环境隔离**。一个 Bot 登录了后台，别的 Bot 也能直接操作。
 
-如果需要强隔离，必须单独开一个 Cursor 账号；调队友建的[团队 Bot](https://cursor.com/cn/help/grok-bot/team-bots)，也是跑在你自己的云电脑上。
+如果需要强隔离，必须单独开一个 Cursor 账号；调队友建的[团队 Bot](https://cursor.com/cn/help/grok-bot/shared-bots.md)，也是跑在你自己的云电脑上。
 
 **客户端删 Bot 不会清空本地文件与登录态**。项目收尾必须手动做三项清理：
 1. 在云电脑浏览器中退出登录
@@ -50,7 +50,7 @@ Grok Bot 跑在 Cursor 专属的 Firecracker microVM 上，用户间是底层硬
 | 系统与权限 | 删非垃圾文件、改生产配置 | 强制人闸，规则拦截（Ask first）单次确认 |
 
 1. **把「无法在一分钟内撤销的操作必须停下来问我」写进 Bot 全局规则。**
-2. 2026-10-07 底层切到 Claude Opus 5.5 后，模型越聪明越倾向自行推演，必须焊死权限边界。
+2. 2026-10-07 起任务可能路由到 Claude Opus 5.5 等更强模型，越倾向自行推演，必须焊死权限边界。
 3. 客户端审批卡约 10 分钟超时失效。**夜间 Routine 绝不能挂起发信审批**，输出终点设为「保存为本地文件」或「生成草稿卡片」，防超时报错中断。
 
 验收标准：
@@ -109,7 +109,7 @@ send, post, buy, transfer, delete, permissions, production, terms
 ```text
 核对营销活动数据，并起草一份推荐的预算调整方案。不要更改营销活动，也不要联系代理商。在展示当前值、建议值和预期影响之后，请求批准。
 ```
-2. **在 Edit Profile 固化六行合同**：清空头衔，在 Description 填入规则：
+2. **固化六行合同**：个人 Bot 把下面规则发在对话里并让它记住；共享 Bot 写在详情 About 的 Description：
 ```text
 Own: 唯一负责的业务结果与目标
 Sources: 允许读取的应用、数据源网址或本地绝对路径
@@ -118,7 +118,7 @@ Approval: 在执行前必须停下来等待人工批准的动作清单（never p
 Failure: 当外部数据源缺失、超时或失效时的应对规则（如实报错并停止，严禁编造数据）
 Never: 绝对禁止触碰的系统操作或越权行为
 ```
-3. **部署幕僚长契约**：复杂任务以 kocer 幕僚长为唯一入口，主控 Bot 的 Description 写入契约：
+3. **部署幕僚长契约**：复杂任务以 kocer 幕僚长为唯一入口。个人主控 Bot 把契约发在对话里并让它记住；共享 Bot 写入详情 About 的 Description：
 ::: details 配置步骤
 ```text
 Name: Chief
@@ -264,7 +264,7 @@ Save the review to /workspace/state/reviews/YYYY-WW.md.
 1. 物理机执行：Settings → Computer 必须选 **Never allow**。
 2. 审核与拦截：Auto-review 开启 Enforce，Custom Rules 填入全部不可逆动词。
 3. 外发防护：**保持 v0.64 邮件与 Slack 卡片的「关闭草稿」未勾选**。
-4. 契约规则：Description 写入六行合同，十条底线存为 `house_rules` Skill 作首条提示词。
+4. 契约规则：把六行合同发给 Bot 记住（共享 Bot 写在详情 About），十条底线存为 `house_rules` Skill 作首条提示词。
 5. 网络与代理：Network 选 Defaults + Team Allowlist，网关放行 `*.cursorvm.com` 并跳过解密。
 6. 审计与熔断：录制对接 OpenTelemetry 导出 `cursor.surface=grok_bot`，出事**在对话框发 `STOP ALL` 瞬间冻结所有 Routine**。
 
@@ -300,6 +300,6 @@ Save the review to /workspace/state/reviews/YYYY-WW.md.
 - 官方支持：[安全存储机密信息](https://cursor.com/cn/help/grok-bot/secrets)
 - 官方支持：[哪些 AI 模型为 Grok Bot 提供支持？](https://cursor.com/cn/help/grok-bot/models)
 - 官方支持：[Grok Bot 计算机](https://cursor.com/cn/help/grok-bot/computer-recovery)
-- 官方支持：[团队 Bot](https://cursor.com/cn/help/grok-bot/team-bots)
+- 官方支持：[团队 Bot](https://cursor.com/cn/help/grok-bot/shared-bots.md)
 - 社区原文：[《4.4 权限、安全与人闸》](https://jcng5q8n0f3z.feishu.cn/wiki/Fxfiwuf4TiCqHTkTzFgcosQ7nzd)
 - 社区原文：[《Grok Bot Chief of Staff: the charter, 10 rules and 5 routines I run｜kocer》](https://jcng5q8n0f3z.feishu.cn/wiki/BquAwgIC8iWFQlkPZFxc7uOsnSh)

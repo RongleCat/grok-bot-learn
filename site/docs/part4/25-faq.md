@@ -163,7 +163,7 @@ Grok Bot 配额按周重置。基础额度用完会中断回复，**这属于正
 1. **多账号**：在「连接应用」> 插件 > Accounts 点 **Add Another Account**（手机端点 Authorize new account）并打标签。对话指明标签调用；无按钮则仅支持单账号。
 2. **验收**：**状态显示绿色 Connected 且标签清晰**，发指令能一次准确调用。
 
-详见[连接插件](https://cursor.com/cn/help/grok-bot/connect-plugins)。
+详见[连接应用](https://cursor.com/cn/help/grok-bot/connect-apps.md)。
 
 ```text
 请刷新当前已连接的插件列表，使用带有“工作”标签的账户连接，读取最近更新的 3 个页面，确认授权是否正常。

@@ -39,7 +39,7 @@ The X Subscription（2026-10-12）中 Plus 无 Bot，支持档为 Premium（$30/
 
 ### 编写合同与配置例程
 
-1. 打开 Edit Profile，**在 Description 写入约束输入输出的合同**。
+1. **把约束输入输出的合同发给 Bot 并让它记住**；共享 Bot 则写入详情 About 的 Description。
 ```text
 负责范围：监控指定数据源并生成标准化 Markdown 摘要。
 允许读取的数据源：工作区目录下的 data/incoming/ 文件夹及指定公开 RSS 链接。

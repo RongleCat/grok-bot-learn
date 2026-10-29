@@ -1,0 +1,11 @@
+{
+  "steps": {
+    "setup": 5,
+    "locate_repo_and_page_list": 180,
+    "link_and_fact_audit": 720,
+    "edit_sources": 240,
+    "verify_urls": 40,
+    "write_reports": 20
+  },
+  "notes": "SOURCE_PAGES.tsv not in RongleCat/grok-bot-learn main@03c8f24 (raw 404). Audited 60 sitemap pages plus xhs.md. Feishu wiki checks hit a login wall (HTTP 200), not counted as dead. x.ai changelog and openai.com/index/introducing-dots returned 403 to curl; dots date taken from the page body fetched earlier (2026-09-29). Local grok-bot-learn commit c787e58 on cursor/i18n-audit-20261029; push denied 403 for cursor[bot]. Seconds are wall-clock estimates for this run, not a profiler."
+}

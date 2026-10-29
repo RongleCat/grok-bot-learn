@@ -72,7 +72,7 @@
 
 ## 团队 Bot 全流程配置：创建、发布与跨人共享
 
-团队 Bot 由成员创建并全员共享，私聊相互隔离。**它只在云端运行，不能绑在本地**。[参考官方指南](https://cursor.com/cn/help/grok-bot/team-bots)。
+团队 Bot 由成员创建并全员共享，私聊相互隔离。**它只在云端运行，不能绑在本地**。[参考官方指南](https://cursor.com/cn/help/grok-bot/shared-bots.md)。
 
 ### 创建与转为团队 Bot
 
@@ -117,7 +117,7 @@
 
 ### 主 Bot 六行章程与专职边界
 
-**主 Bot 只负责路由与监督，绝不能亲自写长代码或长文。** 在 Profile Description 写入六行章程，使其无事静默、有事派活，超长汇报存为文件。
+**主 Bot 只负责路由与监督，绝不能亲自写长代码或长文。** 个人 Bot 把六行章程发在对话里并让它记住；共享 Bot 写入详情 About 的 Description。无事静默、有事派活，超长汇报存为文件。
 
 团队组织规范参考 [《4.2 团队编排：章程、岗位与放权》](https://jcng5q8n0f3z.feishu.cn/wiki/POTrwwThoiQxIakFDIDcUcKjnmh)。
 
@@ -130,7 +130,7 @@ Failure: 下游专职 Bot 报错时如实上报，不使用过期数据假装完
 Never: 永远不直接编写业务代码，不擅自修改生产配置。
 ```
 
-专职 Bot 须在 Description 写死负向边界：
+专职 Bot 须把负向边界发给它记住（共享 Bot 写在详情 About）：
 - 广告投手 Bot：分析数据并出具待批清单，**绝不碰后台与出价，不调预算，也不加词或建组**。
 - 文案创作 Bot：只出草稿文件，严禁调接口直接上线公开内容。
 - 竞品调研 Bot：前台只看不动，严禁下单加购，也不留评或向卖家提问，防反爬封禁。
@@ -279,7 +279,7 @@ Zach（@1999Zach22）以 1 船长带 12 岗位，**自动化闭环必须设待�
 
 ### 官方文档
 - [群组聊天与机器人间消息](https://cursor.com/cn/help/grok-bot/group-chats)
-- [团队 Bot](https://cursor.com/cn/help/grok-bot/team-bots)
+- [团队 Bot](https://cursor.com/cn/help/grok-bot/shared-bots.md)
 
 ### 社区实战来源
 - [《Meet your Team Bots｜n2parko》](https://jcng5q8n0f3z.feishu.cn/wiki/KS9Cwan52idy1xkLbnTcSC3xnxb)

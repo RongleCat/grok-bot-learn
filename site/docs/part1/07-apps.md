@@ -40,7 +40,7 @@
 | **Slack** | 频道发消息 | 进不去未加入的私有与禁言频道；非拉群 Bot |
 | **Gmail** | 搜读发邮件、加标签 | 仅限单邮箱，个人与企业邮箱不可同绑 |
 
-详见[连接插件](https://cursor.com/cn/help/grok-bot/connect-plugins.md)。
+详见[连接应用](https://cursor.com/cn/help/grok-bot/connect-apps.md)。
 
 1. 桌面端点侧边栏/聊天卡片「连接」，移动端点头像选「连接应用」。
 2. 搜插件点「添加」（Add）并在浏览器登录授权。
@@ -192,12 +192,12 @@ Grok Bot 在 v0.70.2（2026-10-08）集成了 X 只读检索。**它直接走 Th
 
 ### 官方文档与支持页面
 
-- [连接插件](https://cursor.com/cn/help/grok-bot/connect-plugins.md)
+- [连接应用](https://cursor.com/cn/help/grok-bot/connect-apps.md)
 - [为你的 Bot 设置电子邮箱地址](https://cursor.com/cn/help/grok-bot/agent-email.md)
 - [安全存储机密信息](https://cursor.com/cn/help/grok-bot/secrets.md)
 - [Grok Bot 电脑](https://cursor.com/cn/help/grok-bot/computer-recovery.md)
 - [例程](https://cursor.com/cn/help/grok-bot/routines.md)
-- [团队 Bot](https://cursor.com/cn/help/grok-bot/team-bots.md)
+- [团队 Bot](https://cursor.com/cn/help/grok-bot/shared-bots.md)
 - [面向 Teams 和企业版的 Grok Bot](https://cursor.com/cn/docs/grok-bot/teams.md)
 
 ### 社区实战资料
