@@ -2,10 +2,11 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { withBase } from 'vitepress'
 import dataRoot from './tools.json'
-import { useLocaleJson } from './i18n'
+import { useLocaleJson, useLocalePath } from './i18n'
 import { tidy } from './rich'
 
 const data = useLocaleJson(dataRoot as Record<string, unknown>, 'tools.json')
+const localePath = useLocalePath()
 const ui = computed(() => (data.value as any).ui)
 const tools = computed(() => (data.value as any).tools as any[])
 const cats = computed(() => (data.value as any).cats as string[])
@@ -99,7 +100,7 @@ watch([q, cat], () => {
 
     <p class="tl-count">{{ ui.count.replace('{n}', String(shown.length)) }}</p>
     <div v-if="shown.length" class="tl-grid">
-      <a v-for="t in shown" :id="t.id" :key="t.id" class="tl-card" :href="withBase(`/tools/${t.id}`)">
+      <a v-for="t in shown" :id="t.id" :key="t.id" class="tl-card" :href="localePath(`/tools/${t.id}`)">
         <div class="tl-top">
           <img :src="withBase(`/bots/${skinOf(t)}.svg`)" alt="" width="28" height="28" />
           <span class="tl-cat">{{ t.cat }}</span>

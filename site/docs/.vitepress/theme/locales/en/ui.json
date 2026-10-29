@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "groupPill": "Paid Q&A Group"
+  },
+  "footer": {
+    "mpBtn": "WeChat OA「铁柱AGI」",
+    "mpDialog": "WeChat OA「铁柱AGI」 QR code",
+    "mpAlt": "WeChat search: 铁柱AGI",
+    "group": "Paid Q&A Group",
+    "about": "About the Author",
+    "friends": "Friends",
+    "note": "Community unofficial learning site, not affiliated with xAI."
+  },
+  "parts": {
+    "part1": "Part 1 · Handbook",
+    "part2": "Part 2 · Cases",
+    "part3": "Part 3 · Advanced",
+    "part4": "Part 4 · Production",
+    "cases": "Case Library"
+  },
+  "changelog": {
+    "title": "Changelog",
+    "tabAll": "All",
+    "tabPc": "PC",
+    "tabMobile": "Mobile",
+    "tabOurs": "Our Take",
+    "chipOurs": "Our Take"
+  },
+  "xiaotiezhu": {
+    "title": "小铁柱",
+    "joinHint": "Scan to add butler WeChat and enable 小铁柱"
+  },
+  "join": {
+    "qrAlt": "铁柱's personal WeChat QR code"
+  }
+}

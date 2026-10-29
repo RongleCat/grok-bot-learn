@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "groupPill": "付费答疑群"
+  },
+  "footer": {
+    "mpBtn": "公众号「铁柱AGI」",
+    "mpDialog": "公众号「铁柱AGI」二维码",
+    "mpAlt": "微信搜一搜：铁柱AGI",
+    "group": "付费答疑群",
+    "about": "关于作者",
+    "friends": "友情链接",
+    "note": "本站是社区非官方学习站，非 xAI 官方。"
+  },
+  "parts": {
+    "part1": "第一篇 · 使用手册",
+    "part2": "第二篇 · 案例篇",
+    "part3": "第三篇 · 进阶篇",
+    "part4": "第四篇 · 落地篇",
+    "cases": "案例库"
+  },
+  "changelog": {
+    "title": "更新日志",
+    "tabAll": "全部",
+    "tabPc": "PC",
+    "tabMobile": "移动端",
+    "tabOurs": "我们的解读",
+    "chipOurs": "我们的解读"
+  },
+  "xiaotiezhu": {
+    "title": "小铁柱",
+    "joinHint": "扫码添加管家微信，开通小铁柱"
+  },
+  "join": {
+    "qrAlt": "铁柱的个人微信二维码"
+  }
+}

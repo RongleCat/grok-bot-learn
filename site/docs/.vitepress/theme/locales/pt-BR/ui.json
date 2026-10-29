@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "groupPill": "Grupo Q&A pago"
+  },
+  "footer": {
+    "mpBtn": "Conta WeChat「铁柱AGI」",
+    "mpDialog": "QR code de「铁柱AGI」",
+    "mpAlt": "Buscar no WeChat: 铁柱AGI",
+    "group": "Grupo Q&A pago",
+    "about": "Sobre o autor",
+    "friends": "Links",
+    "note": "Site comunitário de aprendizado não oficial; não afiliado à xAI."
+  },
+  "parts": {
+    "part1": "Parte 1 · Manual",
+    "part2": "Parte 2 · Casos",
+    "part3": "Parte 3 · Avançado",
+    "part4": "Parte 4 · Produção",
+    "cases": "Biblioteca de casos"
+  },
+  "changelog": {
+    "title": "Registro de alterações",
+    "tabAll": "Tudo",
+    "tabPc": "PC",
+    "tabMobile": "Mobile",
+    "tabOurs": "Nossa leitura",
+    "chipOurs": "Nossa leitura"
+  },
+  "xiaotiezhu": {
+    "title": "小铁柱",
+    "joinHint": "Escaneie para adicionar o WeChat do mordomo e ativar 小铁柱"
+  },
+  "join": {
+    "qrAlt": "QR code do WeChat pessoal de 铁柱"
+  }
+}

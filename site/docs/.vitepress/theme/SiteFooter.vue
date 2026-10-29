@@ -1,8 +1,14 @@
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { withBase } from 'vitepress'
 import { useSidebar } from 'vitepress/theme'
 import friends from './friends.json'
+import uiRoot from './ui.json'
+import { useLocaleJson, useLocalePath } from './i18n'
+
+const ui = useLocaleJson(uiRoot as Record<string, unknown>, 'ui.json')
+const t = computed(() => (ui.value as any).footer)
+const localePath = useLocalePath()
 
 const { hasSidebar } = useSidebar()
 const open = ref(false)
@@ -33,23 +39,23 @@ onBeforeUnmount(() => {
     <div class="tz-inner">
       <nav class="tz-links">
         <div ref="root" class="tz-mp" @mouseenter="enter" @mouseleave="leave">
-          <button type="button" class="tz-link" :aria-expanded="open" aria-haspopup="true" @click="toggle">公众号「铁柱AGI」</button>
-          <div v-show="open" class="tz-pop" role="dialog" aria-label="公众号「铁柱AGI」二维码">
-            <img :src="withBase('/mp-search.png')" width="720" height="262" alt="微信搜一搜：铁柱AGI" />
+          <button type="button" class="tz-link" :aria-expanded="open" aria-haspopup="true" @click="toggle">{{ t.mpBtn }}</button>
+          <div v-show="open" class="tz-pop" role="dialog" :aria-label="t.mpDialog">
+            <img :src="withBase('/mp-search.png')" width="720" height="262" :alt="t.mpAlt" />
           </div>
         </div>
         <span class="tz-sep" aria-hidden="true"></span>
         <a class="tz-link" href="https://x.com/cgnot996" target="_blank" rel="noopener">X @cgnot996</a>
         <span class="tz-sep" aria-hidden="true"></span>
-        <a class="tz-link" :href="withBase('/group')">付费答疑群</a>
+        <a class="tz-link" :href="localePath('/group')">{{ t.group }}</a>
         <span class="tz-sep" aria-hidden="true"></span>
-        <a class="tz-link" :href="withBase('/about')">关于作者</a>
+        <a class="tz-link" :href="localePath('/about')">{{ t.about }}</a>
       </nav>
-      <nav v-if="friends.length" class="tz-friends" aria-label="友情链接">
-        <span>友情链接</span>
+      <nav v-if="friends.length" class="tz-friends" :aria-label="t.friends">
+        <span>{{ t.friends }}</span>
         <a v-for="f in friends" :key="f.url" :href="f.url" target="_blank" rel="noopener">{{ f.name }}</a>
       </nav>
-      <p class="tz-note">本站是社区非官方学习站，非 xAI 官方。</p>
+      <p class="tz-note">{{ t.note }}</p>
     </div>
   </footer>
 </template>

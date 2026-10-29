@@ -66,8 +66,13 @@ const copy = useLocaleJson(rootCopy, 'home.json')
 | `theme/ecosystem.json` | `theme/locales/<locale>/ecosystem.json` |
 | `theme/changelog.json` | `theme/locales/<locale>/changelog.json` |
 | `theme/funnel.json` | `theme/locales/<locale>/funnel.json` |
+| `theme/ui.json` | `theme/locales/<locale>/ui.json`（导航 pill / 页脚 / 篇章徽章 / Changelog 筛选标题 / 小铁柱标题 / JoinCard alt） |
 | `.vitepress/seo.json` | 暂无 locale 覆盖机制，SEO 描述按语种写在各页 frontmatter `description` |
 | `.vitepress/sidebar.json` | 各语种 sidebar 通过 `config.mts` 的 `locales.<key>.themeConfig.sidebar` 配置 |
+
+### UI 字符串与内部链接
+
+可见 UI 短文案走 `theme/ui.json` + `theme/locales/<locale>/ui.json`，组件用 `useLocaleJson`；内部链接用 `useLocalePath()`（`localePath`）按当前语种加前缀（zh-CN 根站无前缀）。
 
 ## 禁止翻译的内容
 
@@ -143,6 +148,6 @@ cd site && npm run dev
 ## 六语种接线状态（2026-10-29）
 
 - 全部非 root 语种（zh-Hant/en/ja/ko/es/pt-BR）已有完整 `sidebar.<locale>.json` + `config.mts` nav/sidebar。
-- 主题 JSON 经 `useLocaleJson` 读取 `theme/locales/<locale>/`。
+- 主题 JSON 经 `useLocaleJson` 读取 `theme/locales/<locale>/`；**UI 字符串走 theme/locales + localePath**（`ui.json`）。
 - 语言切换：桌面右上角与主题切换并排（≥960px）；移动端在汉堡菜单。
 - **未 push / 未 deploy**；上线策略由铁柱选定后执行。见 `logs/all-locales-wire-SELF_CHECK.md`。

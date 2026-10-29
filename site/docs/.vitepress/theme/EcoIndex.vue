@@ -3,9 +3,10 @@
 import { withBase } from 'vitepress'
 import GrokOrb from './GrokOrb.vue'
 import copyRoot from './ecosystem.json'
-import { useLocaleJson } from './i18n'
-const copy = useLocaleJson(copyRoot as Record<string, unknown>, 'ecosystem.json')
+import { useLocaleJson, useLocalePath } from './i18n'
 import { tidy } from './rich'
+const copy = useLocaleJson(copyRoot as Record<string, unknown>, 'ecosystem.json')
+const localePath = useLocalePath()
 
 const c = computed(() => (copy.value as any).index)
 const pages = (c as { pages?: string[] }).pages?.length
@@ -31,7 +32,7 @@ const trio = [
       <p class="tz-tidy">{{ tidy(c.lead) }}</p>
     </section>
     <div class="eco-grid">
-      <a v-for="(it, i) in c.items" :key="it.name" class="eco-card" :href="withBase(pages[i] || pages[0])">
+      <a v-for="(it, i) in c.items" :key="it.name" class="eco-card" :href="localePath(pages[i] || pages[0])">
         <img :src="withBase(covers[i] || covers[0])" :alt="it.name" width="1983" height="793" decoding="async" />
         <div class="eco-body">
           <span class="eco-tag">{{ it.tag }}</span>

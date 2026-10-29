@@ -1,10 +1,14 @@
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { withBase } from 'vitepress'
 import copyRoot from './funnel.json'
+import uiRoot from './ui.json'
 import { useLocaleJson } from './i18n'
-const copy = useLocaleJson(copyRoot as Record<string, unknown>, 'funnel.json')
 import { track, lastFrom } from './track'
+
+const copy = useLocaleJson(copyRoot as Record<string, unknown>, 'funnel.json')
+const ui = useLocaleJson(uiRoot as Record<string, unknown>, 'ui.json')
+const joinUi = computed(() => (ui.value as any).join)
 
 const props = defineProps<{ from: string; xhs?: boolean }>()
 const done = ref(false)
@@ -13,19 +17,19 @@ let io: IntersectionObserver | null = null
 let timer: ReturnType<typeof setTimeout> | undefined
 
 function fallback(text: string) {
-  const t = document.createElement('textarea')
-  t.value = text
-  t.setAttribute('readonly', '')
-  t.style.position = 'fixed'
-  t.style.opacity = '0'
-  document.body.appendChild(t)
-  t.select()
-  t.setSelectionRange(0, text.length)
+  const el = document.createElement('textarea')
+  el.value = text
+  el.setAttribute('readonly', '')
+  el.style.position = 'fixed'
+  el.style.opacity = '0'
+  document.body.appendChild(el)
+  el.select()
+  el.setSelectionRange(0, text.length)
   let ok = false
   try {
     ok = document.execCommand('copy')
   } catch {}
-  document.body.removeChild(t)
+  document.body.removeChild(el)
   return ok
 }
 
@@ -72,7 +76,7 @@ onBeforeUnmount(() => {
       <button type="button" class="tz-copy" :class="{ done }" @click="copyId">{{ done ? copy.copied : copy.copy_btn }}</button>
     </div>
     <div ref="qr" class="tz-join-side">
-      <img class="tz-join-qr" :src="withBase('/qr-wechat.png')" width="168" height="168" alt="铁柱的个人微信二维码" />
+      <img class="tz-join-qr" :src="withBase('/qr-wechat.png')" width="168" height="168" :alt="joinUi.qrAlt" />
       <p class="tz-qr-hint">{{ copy.qr_hint }}</p>
     </div>
   </div>

@@ -1,28 +1,41 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import dataRoot from './changelog.json'
-import { useLocaleJson } from './i18n'
-const data = useLocaleJson(dataRoot as Record<string, unknown>, 'changelog.json')
+import uiRoot from './ui.json'
+import { useLocaleJson, useLocaleSeg, bcp47 } from './i18n'
 import { tidy } from './rich'
+
+const data = useLocaleJson(dataRoot as Record<string, unknown>, 'changelog.json')
+const uiPack = useLocaleJson(uiRoot as Record<string, unknown>, 'ui.json')
+const seg = useLocaleSeg()
 
 type Item = { kind: 'pc' | 'mobile' | 'ours'; id: string; date: string; platform: string; version: string; url: string; title: string; points: string[]; summary: string; full?: [string, string[]][] }
 
 const ui = computed(() => (data.value as any).ui)
+const clUi = computed(() => (uiPack.value as any).changelog)
 const chip: Record<string, string> = { pc: 'PC', ios: 'iOS', android: 'Android' }
-const tabs = [
-  { k: 'all', t: '全部' },
-  { k: 'pc', t: 'PC' },
-  { k: 'mobile', t: '移动端' },
-  { k: 'ours', t: '我们的解读' }
-]
-const items: Item[] = [
-  ...(data.value as any).official.map((e: any) => ({ kind: e.platform === 'pc' ? 'pc' : 'mobile', summary: '', ...e })),
-  ...(data.value as any).ours.map((t: any) => ({ kind: 'ours', version: '', points: [], ...t }))
-].sort((a, b) => (a.date === b.date ? (a.kind === 'ours' ? -1 : b.kind === 'ours' ? 1 : 0) : a.date < b.date ? 1 : -1)) as Item[]
-const counts = computed(() => ({ all: items.length, pc: items.filter((i) => i.kind === 'pc').length, mobile: items.filter((i) => i.kind === 'mobile').length, ours: items.filter((i) => i.kind === 'ours').length }))
+const tabs = computed(() => [
+  { k: 'all', t: clUi.value.tabAll },
+  { k: 'pc', t: clUi.value.tabPc },
+  { k: 'mobile', t: clUi.value.tabMobile },
+  { k: 'ours', t: clUi.value.tabOurs }
+])
+const items = computed(() => {
+  const d = data.value as any
+  return [
+    ...d.official.map((e: any) => ({ kind: e.platform === 'pc' ? 'pc' : 'mobile', summary: '', ...e })),
+    ...d.ours.map((t: any) => ({ kind: 'ours', version: '', points: [], ...t }))
+  ].sort((a: Item, b: Item) => (a.date === b.date ? (a.kind === 'ours' ? -1 : b.kind === 'ours' ? 1 : 0) : a.date < b.date ? 1 : -1)) as Item[]
+})
+const counts = computed(() => ({
+  all: items.value.length,
+  pc: items.value.filter((i) => i.kind === 'pc').length,
+  mobile: items.value.filter((i) => i.kind === 'mobile').length,
+  ours: items.value.filter((i) => i.kind === 'ours').length
+}))
 const tab = ref('all')
 const limit = ref(16)
-const shown = computed(() => items.filter((i) => tab.value === 'all' || i.kind === tab.value))
+const shown = computed(() => items.value.filter((i) => tab.value === 'all' || i.kind === tab.value))
 const groups = computed(() => {
   const out: { m: string; start: number; items: Item[] }[] = []
   shown.value.forEach((it, n) => {
@@ -32,8 +45,14 @@ const groups = computed(() => {
   })
   return out
 })
-const md = (d: string) => `${+d.slice(5, 7)}月${+d.slice(8, 10)}日`
-const month = (d: string) => `${d.slice(0, 4)} 年 ${+d.slice(5, 7)} 月`
+const md = (d: string) => {
+  const dt = new Date(d + 'T12:00:00')
+  return new Intl.DateTimeFormat(bcp47(seg.value), { month: 'short', day: 'numeric' }).format(dt)
+}
+const month = (d: string) => {
+  const dt = new Date(d + 'T12:00:00')
+  return new Intl.DateTimeFormat(bcp47(seg.value), { year: 'numeric', month: 'long' }).format(dt)
+}
 function pick(k: string) {
   tab.value = k
   limit.value = 16
@@ -48,7 +67,7 @@ function pick(k: string) {
         <img class="c" src="/bots/goutte-rose.svg" alt="" width="64" height="64" />
         <img src="/bots/triangle-violet.svg" alt="" width="44" height="44" />
       </div>
-      <h1>更新日志</h1>
+      <h1>{{ clUi.title }}</h1>
       <p class="tz-tidy">{{ tidy(ui.lead) }}</p>
       <p class="cl-meta">{{ ui.synced }} {{ data.updated }} · {{ ui.note }}</p>
     </section>
@@ -68,7 +87,7 @@ function pick(k: string) {
             <article class="cl-card">
               <div class="cl-chips">
                 <img v-if="it.kind === 'ours'" class="cl-face" src="/bots/goutte-rose.svg" alt="" width="22" height="22" />
-                <span v-if="it.kind === 'ours'" class="cl-chip ours">我们的解读</span>
+                <span v-if="it.kind === 'ours'" class="cl-chip ours">{{ clUi.chipOurs }}</span>
                 <span v-else class="cl-chip" :class="it.platform">{{ chip[it.platform] }}</span>
                 <span v-if="it.version" class="cl-ver">v{{ it.version }}</span>
               </div>

@@ -4,13 +4,17 @@ import { withBase } from 'vitepress'
 import GrokOrb from './GrokOrb.vue'
 import JoinCard from './JoinCard.vue'
 import copyRoot from './ecosystem.json'
-import { useLocaleJson } from './i18n'
-const copy = useLocaleJson(copyRoot as Record<string, unknown>, 'ecosystem.json')
+import uiRoot from './ui.json'
 import links from './links.json'
+import { useLocaleJson, useLocalePath } from './i18n'
 import { rich, tidy } from './rich'
 import { track } from './track'
+const copy = useLocaleJson(copyRoot as Record<string, unknown>, 'ecosystem.json')
+const uiPack = useLocaleJson(uiRoot as Record<string, unknown>, 'ui.json')
+const localePath = useLocalePath()
 
 const c = computed(() => (copy.value as any).xiaotiezhu)
+const xtUi = computed(() => (uiPack.value as any).xiaotiezhu)
 const shots: Record<string, string> = {
   'digest-page': '/ecosystem/xiaotiezhu-digest-page.webp',
   'vip-card': '/ecosystem/xiaotiezhu-vip-preview.webp',
@@ -40,11 +44,11 @@ const go = (from: string) => track('xiaotiezhu-cta', { from })
     <section class="xt-hero">
       <img class="xt-avatar" :src="withBase('/ecosystem/xiaotiezhu-avatar.webp')" alt="" width="120" height="120" decoding="async" />
       <span class="xt-meta">{{ c.meta }}</span>
-      <h1>小铁柱</h1>
+      <h1>{{ xtUi.title }}</h1>
       <p class="xt-slogan tz-tidy">{{ tidy(c.slogan) }}</p>
       <p class="xt-lead tz-tidy">{{ tidy(c.lead) }}</p>
       <div class="xt-actions">
-        <a class="xt-btn primary" :href="withBase(links.xiaotiezhuWechat)" @click="go('hero')">{{ c.ctaPrimary }}</a>
+        <a class="xt-btn primary" :href="localePath(links.xiaotiezhuWechat)" @click="go('hero')">{{ c.ctaPrimary }}</a>
         <a class="xt-btn" :href="links.xiaotiezhuSample" target="_blank" rel="noopener">{{ c.ctaSecondary }}</a>
       </div>
       <p class="xt-unofficial tz-tidy">{{ tidy(c.unofficial) }}</p>
@@ -134,10 +138,10 @@ const go = (from: string) => track('xiaotiezhu-cta', { from })
       <div class="xt-end">
         <h2>{{ c.endTitle }}</h2>
         <p>{{ c.endText }}</p>
-        <a class="xt-btn light" :href="withBase(links.xiaotiezhuWechat)" @click="go('end')">{{ c.endBtn }}</a>
+        <a class="xt-btn light" :href="localePath(links.xiaotiezhuWechat)" @click="go('end')">{{ c.endBtn }}</a>
         <div class="xt-join">
           <JoinCard from="xiaotiezhu">
-            <p class="xt-join-hint">扫码添加管家微信，开通小铁柱</p>
+            <p class="xt-join-hint">{{ xtUi.joinHint }}</p>
           </JoinCard>
         </div>
       </div>

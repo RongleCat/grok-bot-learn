@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { withBase } from 'vitepress'
 import GrokOrb from './GrokOrb.vue'
 import copyRoot from './home.json'
-import { useLocaleJson } from './i18n'
+import { useLocaleJson, useLocalePath } from './i18n'
 const copy = useLocaleJson(copyRoot as Record<string, unknown>, 'home.json')
+const localePath = useLocalePath()
 
 const partSkins = [
   { shape: 'squircle', color: 'bleu' },
@@ -46,10 +46,10 @@ const segs = (s: string) => s.match(/[^，。；！？]+[，。；！？]*/g) ||
       <h1>{{ copy.title }}</h1>
       <p class="gh-lead"><span v-for="(t, i) in segs(copy.lead)" :key="i" class="gh-seg">{{ t }}</span></p>
       <div class="gh-actions">
-        <a class="gh-btn primary" :href="withBase('/part1/01-what-is')">{{ copy.primary }}</a>
-        <a class="gh-btn" :href="withBase('/cases/')">{{ copy.secondary }}</a>
+        <a class="gh-btn primary" :href="localePath('/part1/01-what-is')">{{ copy.primary }}</a>
+        <a class="gh-btn" :href="localePath('/cases/')">{{ copy.secondary }}</a>
       </div>
-      <a class="gh-notice" :href="withBase('/part1/02-plans')">
+      <a class="gh-notice" :href="localePath('/part1/02-plans')">
         <span class="dot"></span>
         <span class="gh-notice-text"><span v-for="(t, i) in segs(copy.notice)" :key="i" class="gh-seg">{{ t }}</span></span>
         <span class="arrow">→</span>
@@ -59,7 +59,7 @@ const segs = (s: string) => s.match(/[^，。；！？]+[，。；！？]*/g) ||
     <section class="gh-sec">
       <h2>{{ copy.partsTitle }}</h2>
       <div class="gh-parts">
-        <a v-for="(p, i) in copy.parts" :key="p.name" class="gh-part" :data-i="i" :href="withBase(p.link)">
+        <a v-for="(p, i) in copy.parts" :key="p.name" class="gh-part" :data-i="i" :href="localePath(p.link)">
           <GrokOrb :size="56" :shape="partSkins[i].shape" :color="partSkins[i].color" />
           <span class="tag">{{ p.tag }}</span>
           <strong>{{ p.name }}</strong>
@@ -71,7 +71,7 @@ const segs = (s: string) => s.match(/[^，。；！？]+[，。；！？]*/g) ||
     <section class="gh-sec">
       <h2>{{ copy.asksTitle }}</h2>
       <div class="gh-asks">
-        <a v-for="a in copy.asks" :key="a.q" class="gh-ask" :href="withBase(a.link)">{{ a.q }}<span>→</span></a>
+        <a v-for="a in copy.asks" :key="a.q" class="gh-ask" :href="localePath(a.link)">{{ a.q }}<span>→</span></a>
       </div>
     </section>
 
@@ -81,7 +81,7 @@ const segs = (s: string) => s.match(/[^，。；！？]+[，。；！？]*/g) ||
           <h2>{{ copy.groupTitle }}</h2>
           <p>{{ copy.groupText }}</p>
         </div>
-        <a class="gh-btn primary" :href="withBase('/group')">{{ copy.groupBtn }}</a>
+        <a class="gh-btn primary" :href="localePath('/group')">{{ copy.groupBtn }}</a>
       </div>
     </section>
 
@@ -100,7 +100,7 @@ const segs = (s: string) => s.match(/[^，。；！？]+[，。；！？]*/g) ||
     <section class="gh-sec">
       <h2>{{ copy.rolesTitle }}</h2>
       <div class="gh-roles">
-        <a v-for="(r, i) in copy.roles" :key="r.name" class="gh-role" :href="withBase(r.link)">
+        <a v-for="(r, i) in copy.roles" :key="r.name" class="gh-role" :href="localePath(r.link)">
           <GrokOrb :size="44" :shape="roleSkins[i].shape" :color="roleSkins[i].color" />
           <strong>{{ r.name }}</strong>
           <span class="desc">{{ r.desc }}</span>
@@ -111,11 +111,11 @@ const segs = (s: string) => s.match(/[^，。；！？]+[，。；！？]*/g) ||
     <section class="gh-sec">
       <div class="gh-head">
         <h2>{{ copy.casesTitle }}</h2>
-        <a :href="withBase('/cases/')">{{ copy.casesMore }} →</a>
+        <a :href="localePath('/cases/')">{{ copy.casesMore }} →</a>
       </div>
       <ol class="gh-cases">
         <li v-for="(c, i) in copy.cases" :key="c.t">
-          <a :href="withBase(c.link)">
+          <a :href="localePath(c.link)">
             <span class="n">{{ String(i + 1).padStart(2, '0') }}</span>
             <span class="t">{{ c.t }}</span>
             <span class="a">{{ c.a }}</span>

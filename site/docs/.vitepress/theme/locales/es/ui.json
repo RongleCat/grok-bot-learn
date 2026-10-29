@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "groupPill": "Grupo Q&A de pago"
+  },
+  "footer": {
+    "mpBtn": "Cuenta WeChat「铁柱AGI」",
+    "mpDialog": "Código QR de「铁柱AGI」",
+    "mpAlt": "Buscar en WeChat: 铁柱AGI",
+    "group": "Grupo Q&A de pago",
+    "about": "Sobre el autor",
+    "friends": "Enlaces",
+    "note": "Sitio de aprendizaje comunitario no oficial; no afiliado a xAI."
+  },
+  "parts": {
+    "part1": "Parte 1 · Manual",
+    "part2": "Parte 2 · Casos",
+    "part3": "Parte 3 · Avanzado",
+    "part4": "Parte 4 · Producción",
+    "cases": "Biblioteca de casos"
+  },
+  "changelog": {
+    "title": "Registro de cambios",
+    "tabAll": "Todo",
+    "tabPc": "PC",
+    "tabMobile": "Móvil",
+    "tabOurs": "Nuestra lectura",
+    "chipOurs": "Nuestra lectura"
+  },
+  "xiaotiezhu": {
+    "title": "小铁柱",
+    "joinHint": "Escanea para añadir WeChat del mayordomo y activar 小铁柱"
+  },
+  "join": {
+    "qrAlt": "Código QR de WeChat personal de 铁柱"
+  }
+}

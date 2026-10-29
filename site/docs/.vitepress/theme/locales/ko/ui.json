@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "groupPill": "유료 Q&A 그룹"
+  },
+  "footer": {
+    "mpBtn": "공식계정「철주AGI」",
+    "mpDialog": "공식계정「철주AGI」 QR 코드",
+    "mpAlt": "WeChat 검색: 철주AGI",
+    "group": "유료 Q&A 그룹",
+    "about": "저자 소개",
+    "friends": "친구 링크",
+    "note": "본 사이트는 커뮤니티 비공식 학습 사이트이며 xAI 공식이 아닙니다."
+  },
+  "parts": {
+    "part1": "1편 · 사용 설명서",
+    "part2": "2편 · 사례",
+    "part3": "3편 · 고급",
+    "part4": "4편 · 실전",
+    "cases": "사례 모음"
+  },
+  "changelog": {
+    "title": "업데이트 로그",
+    "tabAll": "전체",
+    "tabPc": "PC",
+    "tabMobile": "모바일",
+    "tabOurs": "우리의 해설",
+    "chipOurs": "우리의 해설"
+  },
+  "xiaotiezhu": {
+    "title": "소철주",
+    "joinHint": "QR로 집사 WeChat을 추가하고 소철주를 개통"
+  },
+  "join": {
+    "qrAlt": "철주의 개인 WeChat QR 코드"
+  }
+}
