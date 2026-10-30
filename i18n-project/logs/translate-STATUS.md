@@ -1,5 +1,85 @@
 # 翻译进度
 
+- 更新时间：2026-10-30 10:36 (Asia/Singapore)
+- 状态：**UI locale key 巡检有实质改动**（补 changelog ours 新条目 id 2115752949276123606；未 push/deploy）
+
+| 语种 | 正文 SOURCE_PAGES | UI JSON (home/funnel/ui 等) | chrome ui.json | tools.prompt | changelog ours |
+|---|---|---|---|---|---|
+| zh-Hant | 61/61 | 齐 | 齐 | 齐 | **本轮补 1 条** |
+| en | 61/61 | 齐 | 齐 | 齐 | **本轮补 1 条** |
+| ja | 61/61 | 齐 | 齐 | 齐 | **本轮补 1 条** |
+| ko | 61/61 | 齐 | 齐 | 齐 | **本轮补 1 条** |
+| es | 61/61 | 齐 | 齐 | 齐 | **本轮补 1 条** |
+| pt-BR | 61/61 | 齐 | 齐 | 齐 | **本轮补 1 条** |
+
+## 本轮巡检（routine 学习站 UI locale key 巡检）
+- 对比 root：`home.json` / `funnel.json` / `ui.json` / `ecosystem.json` / `tools.json` / `bots.json` / `changelog.json`；六语种覆盖文件
+- **新 key**：`changelog.json` `ours[0]`（id `2115752949276123606`，2026-10-29「上线购物卡、Pages和Vault」）六语种此前缺译；root mtime 2026-10-30 10:23
+- `friends.json` / `links.json`：无 locale 覆盖（友链品牌名 + URL；属预期）
+- JoinCard / NavGroupPill / SiteFooter：已用 `useLocaleJson`，无硬编码「付费答疑群」
+- 付费语义抽检：ui.nav.groupPill / footer.group / funnel.join_title → 付費 / Paid / 有料 / 유료 / pago **PASS**
+- group.md 六语种抽检：**PASS**（无简体短语残留）
+- **缺口修复**：六语种 `locales/*/changelog.json` 在 `ours` 头部插入译好的新条目（zh-Hant=OpenCC s2twp；en/ja/ko/es/pt-BR=agy gemini-3.8-flash-high）
+
+### 抽检 PASS
+- en title: Shopping Cards, Pages, and Vault Launched
+- ja title: ショッピングカード、Pages、Vault が登場
+- ko title: 쇼핑 카드, Pages 및 Vault 출시
+- es title: Lanzamiento de tarjetas de compras, Pages y Vault
+- pt-BR title: Lançamento de cards de compras, Pages e Vault
+- zh-Hant title: 上線購物卡、Pages和Vault
+- ui/funnel 付费语义 + group.md：六语种 PASS
+
+## 产出路径
+- 改动文件：
+  - `site/docs/.vitepress/theme/locales/zh-Hant/changelog.json`
+  - `site/docs/.vitepress/theme/locales/en/changelog.json`
+  - `site/docs/.vitepress/theme/locales/ja/changelog.json`
+  - `site/docs/.vitepress/theme/locales/ko/changelog.json`
+  - `site/docs/.vitepress/theme/locales/es/changelog.json`
+  - `site/docs/.vitepress/theme/locales/pt-BR/changelog.json`
+- 正文：`site/docs/<locale>/`
+- UI：`site/docs/.vitepress/theme/locales/<locale>/`
+
+---
+
+# 翻译进度
+
+- 更新时间：2026-10-30 09:48 (Asia/Singapore)
+- 状态：**NO_CHANGE**（UI locale key 巡检无新 key、无硬编码抽出、无简体残留；未改 locale 文件、未 push/deploy）
+
+| 语种 | 正文 SOURCE_PAGES | UI JSON (home/funnel/ui 等) | chrome ui.json | tools.prompt | changelog official |
+|---|---|---|---|---|---|
+| zh-Hant | 61/61 | 齐 | 齐 | 齐 | 齐 |
+| en | 61/61 | 齐 | 齐 | 齐 | 齐 |
+| ja | 61/61 | 齐 | 齐 | 齐 | 齐 |
+| ko | 61/61 | 齐 | 齐 | 齐 | 齐 |
+| es | 61/61 | 齐 | 齐 | 齐 | 齐 |
+| pt-BR | 61/61 | 齐 | 齐 | 齐 | 齐 |
+
+## 本轮巡检（routine 学习站 UI locale key 巡检）
+- 对比 root：`home.json` / `funnel.json` / `ui.json` / `ecosystem.json` / `tools.json` / `bots.json` / `changelog.json`；六语种 `theme/locales/<loc>/` 覆盖文件
+- **缺 key：无**（各文件 key/leaf 与 root 一致）
+- `friends.json` / `links.json`：无 locale 覆盖（友链品牌名 + URL；SiteFooter / Clipper 直接 import，属预期）
+- 上一轮 STATUS 2026-10-29 22:59 之后：root JSON mtime 均早于或等于对应 locale（home/funnel/ui/bots/changelog/ecosystem/tools **无工程新增 key**）
+- JoinCard.vue / NavGroupPill.vue / SiteFooter.vue：已用 `useLocaleJson`（funnel.json / ui.json），无硬编码「付费答疑群」；Home.vue / DocEndCard.vue 同样走 locale JSON
+- 付费语义抽检：ui.nav.groupPill / footer.group / funnel.join_title / home.groupTitle → 付費 / Paid / 有料 / 유료 / pago（de pago / pago）齐全
+- group.md 六语种抽检：**PASS**（无简体短语残留；专名 铁柱AGI / 小红书 / AI_Tiezhu / 小铁柱 按 DO_NOT_TRANSLATE 保留）
+- SAME_AS_ROOT CJK：仅品牌名（小铁柱、铁柱、冬青）或繁简同形字，非缺译
+
+### 抽检 PASS
+- zh-Hant/en/ja/ko/es/pt-BR：`ui.json` groupPill；`funnel.json` join_title；`home.json` groupBtn
+- group.md：`site/docs/{zh-Hant,en,ja,ko,es,pt-BR}/group.md` + 根站 `site/docs/group.md`
+
+## 产出路径
+- 改动文件：无
+- 正文：`site/docs/<locale>/`
+- UI：`site/docs/.vitepress/theme/locales/<locale>/`
+
+---
+
+# 翻译进度
+
 - 更新时间：2026-10-29 22:59 (Asia/Singapore)
 - 状态：**UI locale key 巡检有实质改动**（补 ko changelog 简体残留 + en/ja/es tools.prompt + zh-Hant ui.src；未 push/deploy）
 
