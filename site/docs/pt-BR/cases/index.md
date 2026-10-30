@@ -6,7 +6,7 @@ Projetos reais criados por autores da comunidade e pela equipe oficial usando o 
 
 Aqui você encontra **aplicações práticas e reais** para dominar o Grok Bot. Veja como usá-lo na defesa de privacidade, criação autônoma de sites para renda extra e gestão colaborativa de bases de conhecimento. São casos reais da linha de frente, acompanhados das publicações originais para você seguir passo a passo.
 
-74 artigos incluídos
+75 artigos incluídos
 
 ## [Seleção de Artigos Longos em Chinês](/cases/cn)
 

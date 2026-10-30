@@ -735,3 +735,13 @@ Faltavam canais eficientes de assimetria de informação no negócio de materiai
 Ele integrou o Grok Bot ao seu fluxo de trabalho, **utilizando a colaboração de múltiplos Bots para ler e dissecar notícias sobre políticas governamentais**. Com isso, passou a garimpar nichos promissores em materiais digitais, miniaplicativos e sites independentes.
 
 Segundo relato do autor, a coordenação entre múltiplos Bots tem funcionado muito bem após a introdução do Grok Bot (relato do autor, não verificado).
+
+### Criar painel de tráfego e SEO no Pages com relatório diário automático por chat privado｜@cgnot996
+
+> Post original: [@cgnot996](https://x.com/cgnot996/status/2113133985354354930)
+
+O site de aprendizado (https://bot.fmcat.top) precisa acompanhar de perto o tráfego e o desempenho de SEO diariamente, querendo usar o Pages para criar um painel acessível diretamente e que possa enviar os pontos principais para a conversa após a atualização automática diária.
+
+Ele primeiro atualizou o Grok Bot para a versão mais recente e **pediu diretamente ao Bot de manutenção do site de aprendizado para criar um painel de tráfego e SEO com o Pages**. Após ajustar os estilos e fazer perguntas adicionais na caixa de entrada flutuante da página de detalhes, configurou uma tarefa agendada diária para buscar os dados de visualização de ontem e a verificação de SEO de hoje, sobrescrevendo a mesma página do Pages e enviando automaticamente na conversa o link do painel com 2～3 frases de destaques.
+
+Segundo a experiência própria, basta uma frase para criar o painel, que agora é atualizado automaticamente todos os dias e reportado por chat privado (experiência própria).
