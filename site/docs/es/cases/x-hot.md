@@ -656,3 +656,83 @@ Tras la buena acogida de los resúmenes diarios de 小铁柱 en su propio grupo 
 Primero integró la función de boletines en el grupo de consultas de Xiaowan y, **a continuación, utilizó Grok Bot para construir una landing page promocional de «小铁柱», enlazándola en los alrededores del sitio de aprendizaje**. En ella explica con claridad la posibilidad de contratar el servicio para generar resúmenes diarios en grupos, manteniendo la supervisión humana para asegurar la calidad final de la entrega.
 
 Según la experiencia del autor, se completó con éxito la integración en el grupo de Xiaowan y se habilitó el acceso a la landing page (experiencia propia; conversión comercial no verificada).
+
+### Instalar una app de empleo para emparejar 2 millones de vacantes según el CV y postular con revisión humana｜@colindotj
+
+> Publicación original: [@colindotj](https://x.com/colindotj/status/2115806633099923887)
+
+Buscaba utilizar un bot para optimizar la coincidencia laboral y el envío preciso de solicitudes, en lugar de postular masiva y ciegamente con su currículum.
+
+Instaló Get Hired 2027, **haciendo coincidir las vacantes con el currículum individual y sometiéndolas a revisión humana tras reescribirlas**. Si se requiere un servicio de postulación automática adicional, se debe activar mediante suscripción.
+
+Según el autor, permite buscar entre unos 2 millones de vacantes activas y 28 000 pasantías, con soporte para el envío de solicitudes (declarado por el autor/producto, no verificado).
+
+### Pegar un prompt de contratación con puntuación multidimensional para filtrar bots del marketplace y conservar los 5 mejores｜@Mahaximus_
+
+> Publicación original: [@Mahaximus_](https://x.com/Mahaximus_/status/2115822798975201473)
+
+Con la gran cantidad de bots en el marketplace, a menudo resulta difícil saber cuál instalar primero para satisfacer las necesidades reales.
+
+Primero evaluó la plantilla actual y **luego pegó un prompt de contratación para calificar los bots candidatos según compatibilidad, ahorro de tiempo y seguridad**. Durante el proceso, identificó activamente los riesgos de permisos, descartó estrictamente las opciones inferiores a 7 puntos y finalmente conservó solo los 5 mejores.
+
+Según compartió el autor, ha proporcionado un prompt de contratación listo para pegar junto con los umbrales de puntuación (plantilla del autor, no verificada).
+
+### Usar Pages con una página por proyecto para crear un índice maestro y un heartbeat en días laborables｜@Michael_Fenech_
+
+> Publicación original: [@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2115774649598705774)
+
+Al avanzar en múltiples proyectos en paralelo, el progreso clave suele quedar enterrado en el flujo de los chats, lo que provoca olvidos y pérdida de seguimiento.
+
+Estableció un modelo de gestión de «una Page por proyecto» junto con un índice maestro, **siguiendo estrictamente el principio de leer antes de escribir y configurando un heartbeat en días laborables con notificaciones únicamente ante bloqueos**. Todo el avance del proyecto incluye además un estándar de siete pasos para el cierre, evitando la dispersión de información.
+
+Según compartió el autor, ha proporcionado un prompt de CoS listo para pegar y el método de gestión de proyectos con Pages (plantilla del autor, no verificada).
+
+### Construir un Sales OS de 13 roles coordinados mediante MCP y con filtro humano previo al contacto｜@romanbuildsaas
+
+> Publicación original: [@romanbuildsaas](https://x.com/romanbuildsaas/status/2115845620388802697)
+
+El equipo necesitaba una fuerza de ventas y llamadas salientes capaz de coordinar transiciones fluidas, en lugar de depender de un único bot multifuncional difícil de controlar.
+
+Publicó como código abierto el framework Sales OS, **en el que unos 13 roles específicos colaboran y se traspasan tareas mediante el protocolo MCP**. El sistema estipula que durante la noche solo se generen borradores y que, antes de contactar efectivamente a los clientes, todo deba pasar por un riguroso filtro de revisión humana.
+
+Según el autor, ha liberado como código abierto la plantilla completa del equipo de llamadas salientes (efecto de conversión no verificado).
+
+### Crear un skill y una CLI para que Codex liste todos los bots y distribuya tareas｜@cgnot996
+
+> Publicación original: [@cgnot996](https://x.com/cgnot996/status/2115722202712789476)
+
+Quería que Claude/GPT/Codex actuara como comandante en jefe, dividiendo tareas complejas para asignarlas a múltiples Grok Bot que trabajaran en colaboración.
+
+Creó una herramienta skill+cli **para listar en Codex todos los bots de dicha cuenta, asignándoles tareas y recopilando resultados de forma individual**. Toda la solución de orquestación admite además la ampliación entre cuentas.
+
+Según la experiencia personal, ya ha sido probado internamente en un grupo de pago de consultas, permitiendo listar todos los bots y asignarles tareas (experiencia personal).
+
+### Crear un bot autofinanciado con puntuación de cinco anillos y una primera orden diaria para recuperar la cuota mensual｜@BrianRoemmele
+
+> Publicación original: [@BrianRoemmele](https://x.com/BrianRoemmele/status/2115907771178885469)
+
+A menudo se duda de si la cuota mensual de las herramientas de IA realmente vale la pena, por lo que se buscaba impulsar al bot a emprender de forma proactiva acciones con potencial de monetización.
+
+Primero hizo que el bot leyera publicaciones públicas para mapear sus habilidades personales y, **tras evaluar temas mediante una puntuación de cinco anillos, impulsó cada día una acción para lograr la primera orden**. Los pasos clave deben aprobarse explícitamente y, al calcular los resultados, solo se contabilizan los ingresos reales.
+
+Según el autor, ha creado un bot dedicado a «recuperar la cuota mensual» (ingresos reales no verificados).
+
+### Estructurar una línea de tiempo práctica del flujo completo para integrar Grok Bot en el uso diario｜@Rasmic
+
+> Publicación original: [@Rasmic](https://x.com/Rasmic/status/2115934131041296822)
+
+Buscaba comprender cómo los usuarios reales conectan en profundidad e integran Grok Bot en todo su flujo de trabajo y vida diaria.
+
+Publicó su práctica real en forma de cronograma en video, **cubriendo aspectos técnicos como fine-tuning, REA, Glide, rstack y finanzas**. Al mismo tiempo, extendió su implementación a la creación de contenido, edición de video, asuntos del hogar y gestión de homelab, entre muchas otras áreas.
+
+Según el autor, ya está profundamente integrado en su flujo de trabajo (video no revisado sección por sección, no verificado).
+
+### Coordinar múltiples Grok Bot para leer noticias sobre políticas y detectar oportunidades en recursos digitales｜@DongQingAsk
+
+> Publicación original: [@DongQingAsk](https://x.com/DongQingAsk/status/2115715262163091499)
+
+Al gestionar un negocio de recursos digitales, faltaban canales eficaces para aprovechar asimetrías de información y no se sabía de dónde extraer pistas de negocio viables.
+
+Integró Grok Bot en su flujo de trabajo, **apoyándose en la colaboración de múltiples bots para leer y desglosar noticias sobre políticas**. Con ello profundizó en la búsqueda de pequeñas oportunidades concretas como recursos digitales, miniaplicaciones y sitios web independientes.
+
+Según el autor, la coordinación entre múltiples bots funciona muy bien tras incorporar Grok Bot (declarado por el autor, no verificado).

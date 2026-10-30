@@ -6,7 +6,7 @@ Real-world projects built by community contributors and the official team using 
 
 Here you'll find **practical, hands-on use cases** showcasing how people master Grok Bot. See how it handles privacy defense, autonomous side-hustle site building, and collaborative knowledge base management. All are firsthand, real-world cases with original posts linked so you can follow along right away.
 
-Includes 66 articles
+Includes 74 articles
 
 ## [Curated Chinese Long-form Articles](/cases/cn)
 

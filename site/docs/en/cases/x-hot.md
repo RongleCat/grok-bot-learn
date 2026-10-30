@@ -655,3 +655,83 @@ After the 小铁柱 Daily received positive feedback in his own paid Q&A group, 
 He first integrated group chat daily brief capabilities into the Xiaowan Q&A group, **then built a promotional landing page for "小铁柱" using Grok Bot, linking it to the learning site's perimeter ecosystem.** It clearly indicates that the bot can be hired to publish group daily briefs, while maintaining human oversight over final delivery quality.
 
 In personal experience, the integration into the Xiaowan group and the landing page launch were completed smoothly (personal experience; commercial conversion unverified).
+
+### Install Job Search App to Match 2 Million Positions by Resume with Human-Reviewed Applications｜@colindotj
+
+> Original Post: [@colindotj](https://x.com/colindotj/status/2115806633099923887)
+
+Wanting to use a Bot for accurate job matching and targeted applications, rather than blindly mass-submitting resumes.
+
+He installed Get Hired 2027, **matching positions against personal resumes and submitting rewritten materials for human review.** If further automated application submission services are needed, they can be unlocked via subscription.
+
+According to the author, it can search approximately 2 million active openings and 28,000 internships with application submission support (author/product claim, unverified).
+
+### Paste Hiring Prompts to Score Marketplace Bots Multi-Dimensionally and Retain the Top Five｜@Mahaximus_
+
+> Original Post: [@Mahaximus_](https://x.com/Mahaximus_/status/2115822798975201473)
+
+With a vast number of Bots in the marketplace, it is often unclear which one to prioritize installing to meet actual needs.
+
+He first took stock of the existing roster, **then pasted hiring prompts to score candidate Bots on fit, time savings, and safety.** The process proactively flagged permission risks, strictly eliminating any options scoring below 7 to retain only the top five.
+
+According to the author, ready-to-paste hiring prompts and scoring thresholds have been provided (author's template, unverified).
+
+### Use Pages for One Page per Project to Build a Master Index and Workday Heartbeats｜@Michael_Fenech_
+
+> Original Post: [@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2115774649598705774)
+
+When juggling multiple projects in parallel, critical progress easily gets buried in chat streams and forgotten or lost.
+
+He established a "one Page per project" management model paired with a master index, **strictly following the read-before-write principle while setting workday heartbeats and notifying only when blocked.** The entire project lifecycle is also supported by a 7-step project closeout protocol to prevent information fragmentation.
+
+According to the author, ready-to-paste CoS prompts and the Pages project management methodology have been provided (author's template, unverified).
+
+### Build a 13-Role Sales OS Handed Off via MCP with Human Gates for Outreach｜@romanbuildsaas
+
+> Original Post: [@romanbuildsaas](https://x.com/romanbuildsaas/status/2115845620388802697)
+
+The team needed an outbound and sales squad capable of smooth handoffs, rather than relying solely on a single, hard-to-control jack-of-all-trades Bot.
+
+He open-sourced the Sales OS framework, **coordinating handoffs across approximately 13 specialized roles via the MCP protocol.** The system dictates that only drafts are generated at night, and any actual outreach to customers must pass through a strict human gate review.
+
+According to the author, the complete outbound squad template has been open-sourced (conversion results unverified).
+
+### Build a Skill and CLI to Let Codex List All Bots and Dispatch Tasks｜@cgnot996
+
+> Original Post: [@cgnot996](https://x.com/cgnot996/status/2115722202712789476)
+
+Wanting Claude/GPT/Codex to serve as the chief commander, breaking down complex tasks and dispatching them across multiple Grok Bots for collaborative execution.
+
+He built a skill+cli tool **to list all Bots under the account in Codex and individually dispatch and retrieve tasks.** The entire dispatching architecture also supports scaling across accounts.
+
+In personal experience, it has been tested internally in a paid Q&A group, successfully listing all Bots and dispatching tasks (personal experience).
+
+### Build a Self-Paying Bot to Earn Back Monthly Fees via 5-Ring Scoring and Daily First Orders｜@BrianRoemmele
+
+> Original Post: [@BrianRoemmele](https://x.com/BrianRoemmele/status/2115907771178885469)
+
+Often debating whether monthly fees for AI tools are worthwhile, and wanting to drive the Bot to proactively advance monetizable actions.
+
+He first had the Bot read public posts to map personal skills, **advancing one first-order action daily after 5-ring topic scoring.** Critical milestones require explicit approval by name, and performance calculations count only realized revenue.
+
+According to the author, a dedicated Bot for "earning back monthly fees" has been built (actual revenue unverified).
+
+### Map Out an End-to-End Practical Timeline to Embed Grok Bot into Daily Applications｜@Rasmic
+
+> Original Post: [@Rasmic](https://x.com/Rasmic/status/2115934131041296822)
+
+Wanting to understand how real-world users deeply connect and embed Grok Bot throughout their daily work and personal life workflows.
+
+He shared his hands-on practices via a video timeline, **covering technical areas such as fine-tuning, REA, Glide, rstack, and personal finance.** At the same time, he extended his practices to content creation, video editing, household management, homelab maintenance, and more.
+
+According to the author, it has been deeply integrated into the workflow (video not reviewed segment by segment, unverified).
+
+### Coordinate Multiple Grok Bots to Read Policy News and Mine Digital Product Opportunities｜@DongQingAsk
+
+> Original Post: [@DongQingAsk](https://x.com/DongQingAsk/status/2115715262163091499)
+
+Lacking effective channels for information advantage when running a digital products business, making it difficult to uncover viable commercial leads.
+
+He integrated Grok Bot into his workflow, **leveraging multi-Bot collaboration to read and deconstruct policy news.** Through this, he deeply mines specific niche opportunities such as digital products, mini-programs, and standalone websites.
+
+According to the author, multi-Bot coordination works smoothly after adopting Grok Bot (author's claim, unverified).
