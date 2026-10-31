@@ -1,5 +1,7 @@
 # Chapter 2 Plans and Subscriptions: Choosing the Right Tier First
 
+**You can pay directly with Alipay now.** When subscribing to X or Grok on the web, selecting Mainland China, Hong Kong, Macao, or Taiwan as your billing region allows you to choose Alipay or UnionPay as payment methods, charged in RMB converted from the USD price (both share this payment system). There is currently no official announcement, and some accounts may still be part of a gradual rollout; please refer to the real-time display on the checkout page for actual availability.
+
 Beginners often run into three pitfalls when purchasing:
 - Buying the cheapest entry-level plan, only to open the client and find no agent entry point.
 - **Cursor subscriptions and SuperGrok weekly quotas do not stack; the system only recognizes the higher one.**
@@ -41,7 +43,7 @@ Calculated by usage per dollar (Plus as baseline 1, Premium ~1.07, Super ~1.2, U
 2. Log in with your work X or Grok account.
 3. Select the Premium tier ($30/month; the community previously saw a 50% off first month $15 promotion; subject to the checkout page).
 4. **Choose monthly billing instead of annual billing right away**, making it easier to change tiers or tools at any time.
-5. Pay using a supported international credit card, debit card, or web-based Apple Pay or Google Pay.
+5. Pay using supported international credit cards, debit cards, or web Apple Pay and Google Pay; if you select Mainland China, Hong Kong, Macao, or Taiwan as your billing region, Alipay and UnionPay payment options will also appear on the checkout page.
 6. Open the Grok Bot client, log in, and verify that the main interface has unlocked agent creation and execution permissions.
 
 For detailed analysis, see [Unified X Subscription Explained: How New Users Should Choose, and Should Existing Subscribers Switch? Explained in One Article](https://jcng5q8n0f3z.feishu.cn/wiki/Myw6wFW8EicOiRkoEAXcVJqinee) and [Tiezhu's Post Collection ①: Activation, Plans, and Quotas](https://jcng5q8n0f3z.feishu.cn/wiki/PCZIw5IqgiZLjTkXqNncpxannpc).
@@ -264,3 +266,4 @@ After injecting the prompt, **the Bot must explicitly reply and confirm adherenc
 - Official documentation: [Grok Bot Models](https://cursor.com/cn/help/grok-bot/models.md)
 - Community practical guide: [Unified X Subscription Explained: How New Users Should Choose, and Should Existing Subscribers Switch? Explained in One Article](https://jcng5q8n0f3z.feishu.cn/wiki/Myw6wFW8EicOiRkoEAXcVJqinee)
 - Community practical collection: [Tiezhu's Post Collection ①: Activation, Plans, and Quotas](https://jcng5q8n0f3z.feishu.cn/wiki/PCZIw5IqgiZLjTkXqNncpxannpc)
+- Media verification: [Following Musk's SpaceXAI acquisition of Cursor, Grok now supports China UnionPay and Alipay payments (IT Home, 2026-10-31)](https://www.ithome.com/1/020/504.htm)

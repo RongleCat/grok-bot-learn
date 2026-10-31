@@ -1,5 +1,7 @@
 # Capítulo 2 Planos e Assinaturas: Escolha o Nível Certo Primeiro
 
+**Agora você pode pagar diretamente com Alipay.** Ao assinar o X ou o Grok pela web, se selecionar a China continental, Hong Kong, Macau ou Taiwan como região de cobrança, você poderá escolher Alipay ou UnionPay como método de pagamento, sendo cobrado em RMB convertido a partir do valor em USD (ambos compartilham o mesmo sistema de pagamento). No momento, não há anúncio oficial e algumas contas ainda podem estar em fase de testes graduais; consulte a disponibilidade real conforme exibida em tempo real na página de checkout.
+
 Iniciantes costumam enfrentar três armadilhas comuns na hora da contratação:
 - Comprar o plano de entrada mais barato e, ao abrir o cliente, não encontrar o acesso aos agentes.
 - **A assinatura do Cursor e a cota semanal do SuperGrok não se acumulam; o sistema considera apenas o plano mais alto.**
@@ -42,7 +44,7 @@ Calculado pelo uso por dólar (com Plus como base 1, Premium cerca de 1,07, Supe
 2. Faça login com a conta do X ou do Grok usada para trabalho.
 3. Selecione o plano Premium (US$ 30/mês; a comunidade já viu promoções com 50% de desconto no primeiro mês por US$ 15, sujeito ao que constar na página de checkout).
 4. **Escolha o pagamento mensal em vez de marcar o anual diretamente**, facilitando a troca de nível ou de ferramenta a qualquer momento.
-5. Pague com um cartão de crédito ou débito internacional aceito, ou via Apple Pay / Google Pay na web.
+5. Pague com cartões de crédito ou débito internacionais aceitos, ou pelo Apple Pay e Google Pay na web; se selecionar a China continental, Hong Kong, Macau ou Taiwan como região de cobrança, as opções de pagamento com Alipay e UnionPay também aparecerão na página de checkout.
 6. Abra o cliente do Grok Bot, faça login e confirme se a tela inicial liberou as permissões para criar e executar agentes.
 
 Para uma análise detalhada, consulte [Análise da Assinatura Unificada do X: Como Novos Usuários Devem Escolher e se Assinantes Antigos Devem Migrar? Tudo Explicado](https://jcng5q8n0f3z.feishu.cn/wiki/Myw6wFW8EicOiRkoEAXcVJqinee) e [Coletânea de Posts do 铁柱 ①: Ativação, Planos e Cotas](https://jcng5q8n0f3z.feishu.cn/wiki/PCZIw5IqgiZLjTkXqNncpxannpc).
@@ -265,3 +267,4 @@ Após injetar o prompt, **o Bot deve responder claramente confirmando a conformi
 - Documentação oficial: [Modelos do Grok Bot](https://cursor.com/cn/help/grok-bot/models.md)
 - Análise prática da comunidade: [Análise da Assinatura Unificada do X: Como Novos Usuários Devem Escolher e se Assinantes Antigos Devem Migrar? Tudo Explicado](https://jcng5q8n0f3z.feishu.cn/wiki/Myw6wFW8EicOiRkoEAXcVJqinee)
 - Coletânea prática da comunidade: [Coletânea de Posts do 铁柱 ①: Ativação, Planos e Cotas](https://jcng5q8n0f3z.feishu.cn/wiki/PCZIw5IqgiZLjTkXqNncpxannpc)
+- Verificação da imprensa: [Após a SpaceXAI de Musk adquirir a Cursor, o Grok passa a aceitar pagamentos com UnionPay e Alipay da China (IT Home, 2026-10-31)](https://www.ithome.com/1/020/504.htm)

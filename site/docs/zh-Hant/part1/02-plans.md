@@ -1,5 +1,7 @@
 # 第 2 章 方案與訂閱：先選對檔位
 
+**目前可以直接支付寶。** 在網頁端開通 X 或 Grok 訂閱時，將賬單地區選擇為中國大陸、中國香港、中國澳門或中國臺灣，即可在支付方式中選用支付寶或銀聯，按美元價格折算人民幣扣費（兩者共用該支付系統）。目前官方尚未釋出正式公告，部分賬號可能仍在灰度測試中，實際可用情況請以結賬頁實時顯示為準。
+
 新手選購常遇到三處坑點。
 - 買最便宜的入門套餐，開啟客戶端找不到智慧體入口。
 - **Cursor 訂閱與 SuperGrok 每週額度不累加，系統只認更高一側。**
@@ -42,7 +44,7 @@ Grok Bot 執行依託額度。**周用量耗盡且未配置按需保護，雲端
 2. 登入工作用的 X 或 Grok 賬戶。
 3. 選 Premium 檔（$30/月；社群曾見首月 5 折 $15 活動，以結賬頁為準）。
 4. **選月付不要直接勾年付**，方便隨時換檔或換工具。
-5. 用支援的國際信用卡、簽帳金融卡或網頁端 Apple Pay、Google Pay 付款。
+5. 使用支援的國際信用卡、簽帳金融卡，或網頁端 Apple Pay、Google Pay 付款；若將賬單地區選擇為中國大陸、中國香港、中國澳門或中國臺灣，結賬頁還會出現支付寶與銀聯付款選項。
 6. 開啟 Grok Bot 客戶端登入，確認主介面已解鎖智慧體建立與執行許可權。
 
 詳細解讀見 [《大一統 X 訂閱解讀：新使用者怎麼選，老訂閱要不要切換？一文講清楚》](https://jcng5q8n0f3z.feishu.cn/wiki/Myw6wFW8EicOiRkoEAXcVJqinee) 與 [《鐵柱推文合集①：開通、套餐與額度》](https://jcng5q8n0f3z.feishu.cn/wiki/PCZIw5IqgiZLjTkXqNncpxannpc)。
@@ -265,3 +267,4 @@ The X Subscription 統一大訂閱在 2026 年 10 月 12 日上線。不主動�
 - 官方文件：[Grok Bot 模型](https://cursor.com/cn/help/grok-bot/models.md)
 - 社群實操解讀：[《大一統 X 訂閱解讀：新使用者怎麼選，老訂閱要不要切換？一文講清楚》](https://jcng5q8n0f3z.feishu.cn/wiki/Myw6wFW8EicOiRkoEAXcVJqinee)
 - 社群實操合集：[《鐵柱推文合集①：開通、套餐與額度》](https://jcng5q8n0f3z.feishu.cn/wiki/PCZIw5IqgiZLjTkXqNncpxannpc)
+- 媒體核實：[馬斯克 SpaceXAI 收購 Cursor 後，Grok 已支援中國銀聯和支付寶付款（IT之家，2026-10-31）](https://www.ithome.com/1/020/504.htm)

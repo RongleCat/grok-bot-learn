@@ -1,5 +1,7 @@
 # 第 2 章 方案与订阅：先选对档位
 
+**目前可以直接支付宝。** 在网页端开通 X 或 Grok 订阅时，将账单地区选择为中国大陆、中国香港、中国澳门或中国台湾，即可在支付方式中选用支付宝或银联，按美元价格折算人民币扣费（两者共用该支付系统）。目前官方尚未发布正式公告，部分账号可能仍在灰度测试中，实际可用情况请以结账页实时显示为准。
+
 新手选购常遇到三处坑点。
 - 买最便宜的入门套餐，打开客户端找不到智能体入口。
 - **Cursor 订阅与 SuperGrok 每周额度不累加，系统只认更高一侧。**
@@ -42,7 +44,7 @@ Grok Bot 运行依托额度。**周用量耗尽且未配置按需保护，云端
 2. 登录工作用的 X 或 Grok 账户。
 3. 选 Premium 档（$30/月；社区曾见首月 5 折 $15 活动，以结账页为准）。
 4. **选月付不要直接勾年付**，方便随时换档或换工具。
-5. 用支持的国际信用卡、借记卡或网页端 Apple Pay、Google Pay 付款。
+5. 使用支持的国际信用卡、借记卡，或网页端 Apple Pay、Google Pay 付款；若将账单地区选择为中国大陆、中国香港、中国澳门或中国台湾，结账页还会出现支付宝与银联付款选项。
 6. 打开 Grok Bot 客户端登录，确认主界面已解锁智能体创建与运行权限。
 
 详细解读见 [《大一统 X 订阅解读：新用户怎么选，老订阅要不要切换？一文讲清楚》](https://jcng5q8n0f3z.feishu.cn/wiki/Myw6wFW8EicOiRkoEAXcVJqinee) 与 [《铁柱推文合集①：开通、套餐与额度》](https://jcng5q8n0f3z.feishu.cn/wiki/PCZIw5IqgiZLjTkXqNncpxannpc)。
@@ -264,4 +266,5 @@ The X Subscription 统一大订阅在 2026 年 10 月 12 日上线。不主动�
 - 官方文档：[在移动端应用中订阅](https://cursor.com/cn/help/grok-bot/mobile-purchase.md)
 - 官方文档：[Grok Bot 模型](https://cursor.com/cn/help/grok-bot/models.md)
 - 社区实操解读：[《大一统 X 订阅解读：新用户怎么选，老订阅要不要切换？一文讲清楚》](https://jcng5q8n0f3z.feishu.cn/wiki/Myw6wFW8EicOiRkoEAXcVJqinee)
+- 媒体核实：[马斯克 SpaceXAI 收购 Cursor 后，Grok 已支持中国银联和支付宝付款（IT之家，2026-10-31）](https://www.ithome.com/1/020/504.htm)
 - 社区实操合集：[《铁柱推文合集①：开通、套餐与额度》](https://jcng5q8n0f3z.feishu.cn/wiki/PCZIw5IqgiZLjTkXqNncpxannpc)
