@@ -6,7 +6,7 @@ Proyectos reales creados por autores de la comunidad y el equipo oficial con Gro
 
 Aquí encontrarás **métodos prácticos y aplicables** de cómo la comunidad aprovecha Grok Bot al máximo. Descubre cómo defender derechos de privacidad, crear sitios web de forma autónoma para proyectos paralelos y gestionar bases de conocimiento de forma colaborativa. Todos son casos reales de primera línea, acompañados de las publicaciones originales, listos para abrir y seguir paso a paso.
 
-75 artículos incluidos
+85 artículos incluidos
 
 ## [Selección de artículos extensos en chino](/cases/cn)
 

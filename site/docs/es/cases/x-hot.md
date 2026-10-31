@@ -746,3 +746,103 @@ El sitio de aprendizaje (https://bot.fmcat.top) necesita monitorear a diario las
 Primero actualizó Grok Bot a la versión más reciente y **le pidió directamente al Bot de mantenimiento del sitio de aprendizaje crear un panel de visitas y SEO con Pages**. Tras continuar ajustando los estilos y haciendo consultas adicionales en el cuadro de entrada flotante de la página de detalles, configuró una tarea programada diaria para extraer los datos de visitas de ayer y la verificación de SEO de hoy para sobrescribir la misma Pages, enviando automáticamente en el chat el enlace al panel junto con 2～3 frases con los puntos clave.
 
 Según la experiencia personal, basta una sola frase para crear el panel, que ahora se actualiza a diario de forma automática y envía reportes por chat privado (experiencia personal).
+
+### Instalar un atajo de código abierto y mantener presionado el botón de acción para que el Bot lea la pantalla y responda preguntas｜@everestchris6
+
+> Publicación original: [@everestchris6](https://x.com/everestchris6/status/2116183923747422477)
+
+Desea que el Bot identifique rápidamente desde el móvil el contenido que aparece en pantalla y resuelva dudas al instante o desglose de manera estructurada contenidos extensos.
+
+Instala un atajo de código abierto para iPhone en el móvil y autoriza los permisos necesarios; **al encontrar videos, publicaciones o artículos largos, mantiene presionado el botón de acción para preguntar al Bot**, manteniendo una revisión humana obligatoria si el contenido se va a distribuir externamente.
+
+Según relata el autor, el atajo es de código abierto y afirma admitir visualización de videos, lectura de publicaciones y consultas en la red (según el autor, no verificado).
+
+### Recopilar una colección de más de 50 casos de Reddit como banco de inspiración para la implementación diaria｜@heizolshao
+
+> Publicación original: [@heizolshao](https://x.com/heizolshao/status/2116002071635722606)
+
+Desea conocer cómo la gente común puede utilizar Grok Bot a fondo en su día a día para resolver problemas reales, más allá de tareas rutinarias como limpiar la bandeja de entrada.
+
+El autor revisó y organizó sistemáticamente el catálogo de Article, **seleccionó 3 escenarios similares cercanos a su propio negocio para profundizar en ellos y añadió filtros humanos al replicarlos**, implementándolos en una página independiente tras verificar su idoneidad real.
+
+Según la recopilación del autor, se han reunido cerca de 55 casos reales de Reddit para obtener inspiración (entradas no verificadas individualmente).
+
+### Formar un equipo con estructura de siete roles para desglosar el flujo de delegación y colaboración entre múltiples Bot｜@0xMortyx
+
+> Publicación original: [@0xMortyx](https://x.com/0xMortyx/status/2116220802970288295)
+
+Desea seguir la filosofía de ingeniería oficial dividiendo operaciones complejas entre múltiples Bot especializados para su gestión colaborativa, en lugar de depender de un único Bot multiusos para todo el proceso.
+
+El autor estableció una estructura de siete roles que abarca jefe de gabinete, investigación, ingeniería, revisión, documentación, operaciones y memoria; **el jefe de gabinete se encarga únicamente de planificar y delegar, mientras que los entregables de los especialistas deben pasar obligatoriamente por Reviewer**, y finalmente Memory Manager escribe de manera unificada el conocimiento consolidado en la base de conocimiento.
+
+Según la recopilación del autor, este flujo de trabajo se ha convertido en una configuración de siete roles lista para copiar y pegar (recopilado por el autor, no verificado).
+
+### Usar tarjetas con gráficos actualizadas a diario en Pages para monitorizar visualmente el tráfico y las tendencias de SEO del sitio de aprendizaje｜@cgnot996
+
+> Publicación original: [@cgnot996](https://x.com/cgnot996/status/2116043968605774138)
+
+Cansado de los informes diarios de texto sin formato en Markdown, busca utilizar páginas de Pages para consultar gráficos de datos y tendencias a largo plazo de forma más visual.
+
+Asignó al Bot del sitio de aprendizaje la actualización diaria de la página de Pages, **colocando de forma centralizada en la página tarjetas de datos de tráfico y SEO, permitiendo abrir cada tarjeta para consultar tendencias cuando se requiera profundizar**.
+
+Según la experiencia propia, la página de Pages incluye datos y gráficos intuitivos, y basta con hacer clic en una tarjeta para conocer con facilidad el rendimiento del sitio (experiencia propia).
+
+### Configurar un canal de estado en Instabox para mostrar el progreso de trabajo de los Bot en una oficina 3D｜@btcup99
+
+> Publicación original: [@btcup99](https://x.com/btcup99/status/2116065264332898556)
+
+Desea visualizar de forma tangible en cualquier momento las tareas que ejecuta cada Bot, superando el método de monitorización basado únicamente en revisar tediosos registros de terminal.
+
+El autor definió un canal de estado de Instabox, **exigiendo que cada Bot informe automáticamente al iniciar y finalizar su turno, y delegó las instrucciones de montaje en un Bot de construcción**, mientras que un humano verifica periódicamente la concordancia entre los estados reportados y las tareas reales.
+
+Según explica el autor, la publicación original incluye un tutorial de montaje en dos pasos e imágenes de los resultados reales (implementación no verificada).
+
+### Configurar servicios compartidos como skills globales para acortar la cadena de llamadas y evitar la división excesiva｜@cgnot996
+
+> Publicación original: [@cgnot996](https://x.com/cgnot996/status/2116149130091528521)
+
+Detectó que muchas capacidades de uso común se dividían en exceso en Bot independientes, lo que provocaba cadenas de llamadas excesivamente largas y pérdidas innecesarias en la comunicación A2A.
+
+Analizó e identificó servicios compartidos reutilizables (como Muse2API), **configurándolos directamente como skills invocables globalmente y estandarizando su forma de llamada**, reduciendo así de forma drástica la ruta de invocación.
+
+Según la experiencia propia, se defiende priorizar convertir los servicios compartidos de alta frecuencia en skills en lugar de crear nuevos Bot a ciegas (experiencia propia; no incluye guía para ahorrar cuota).
+
+### Configurar una rutina matutina para desglosar automáticamente investigaciones de vanguardia y generar videos breves tras revisión humana｜@Austin_Way
+
+> Publicación original: [@Austin_Way](https://x.com/Austin_Way/status/2116214683242037633)
+
+Desea analizar automáticamente cada día un resultado de investigación en áreas de vanguardia y convertirlo rápidamente en videos cortos para su difusión pública.
+
+A partir del proyecto de código abierto daily-research-report en GitHub, definió áreas de investigación y una rutina matutina: **el programa genera primero un informe de investigación en texto de forma automática, y el contenido del video final debe someterse a revisión humana antes de publicarse**.
+
+Según relata el autor, ha liberado en código abierto el repositorio del proyecto y mostró los resultados generados por la rutina matutina (video no visto, no verificado).
+
+### Combinar la entrega mediante herdr para que la flota de Grok envíe instrucciones reproducibles a Claude local｜@NixFred
+
+> Publicación original: [@NixFred](https://x.com/NixFred/status/2116242670549188894)
+
+Busca utilizar Claude Code en local como las manos ejecutoras sobre el terreno, mientras emplea la flota de Grok Bot en la nube para el mando de alto nivel y la asignación de tareas.
+
+Tras analizar la arquitectura del sistema en la primera entrega de la serie, **primero probó con éxito la entrega de tareas con un solo Bot mediante herdr y, tras confirmar que cada comando se reproducía de forma estable**, expandió el flujo de manera gradual a toda la flota.
+
+Según relata el autor, ha publicado una serie de diez artículos analizando todo el sistema (comandos no reproducidos uno a uno).
+
+### Construir un tablero visual de tareas estilo estación espacial para gestionar cientos de Agent en la nube mediante Bot centrales｜@choopyplug1
+
+> Publicación original: [@choopyplug1](https://x.com/choopyplug1/status/2116308816677470700)
+
+Al enfrentarse a un sistema multi-Agent, necesita un tablero visual de tareas intuitivo, flujos de aprobación en un clic y facilidad de conexión en caliente mediante MCP.
+
+El autor construyó un tablero visual de oficina estilo estación espacial para centralizar estados y registros; **los procesos clave de aprobación incorporan sin excepción filtros humanos, y los Bot recién añadidos se registran dinámicamente mediante el protocolo MCP**.
+
+Según relata el autor, actualmente gestiona y coordina 200+ agent en la nube mediante 6 Bot centrales (según el autor, no verificado).
+
+### Suscribirse a alertas de monitorización del sistema para activar automáticamente Agent en la nube que reproduzcan errores y envíen PR｜@0xGhostyx
+
+> Publicación original: [@0xGhostyx](https://x.com/0xGhostyx/status/2116179951577710671)
+
+Desea transformar automáticamente las alertas de error del sistema generadas en Sentry y Slack en PR de código que los desarrolladores puedan revisar directamente.
+
+Conectó Slack, Datadog, Sentry y PlanetScale, **escribió una routine para suscribirse periódicamente a eventos de alerta y activar cloud agent para intentar reproducir el problema**, y los PR generados son revisados finalmente por humanos antes de fusionarse.
+
+Según relata el autor, el equipo genera actualmente alrededor de 2000 PR al mes mediante este flujo (declarado/no verificado).

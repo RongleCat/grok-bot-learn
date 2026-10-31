@@ -745,3 +745,103 @@ The Learning Site (https://bot.fmcat.top) needs to closely monitor daily traffic
 He first updated Grok Bot to the latest version, then **directly asked the Learning Site maintenance Bot to create a traffic and SEO dashboard using Pages**. After fine-tuning styles and asking follow-up questions in the floating input box on the details page, he set up a daily scheduled task to pull yesterday's traffic data and today's SEO check to overwrite the same Pages, automatically pushing the dashboard link along with 2～3 key highlights into the chat.
 
 Based on personal experience, a dashboard can be generated with just a single prompt; it now updates daily and reports via DM automatically (personal experience).
+
+### Install open-source Shortcut and long-press Action button to let Bot read screen and answer questions｜@everestchris6
+
+> Original post: [@everestchris6](https://x.com/everestchris6/status/2116183923747422477)
+
+Wanted to quickly enable Bot on mobile to recognize on-screen content and instantly answer questions or structure long-form content.
+
+Install the open-source iPhone Shortcut on the phone and grant necessary permissions. **When encountering videos, posts, or long articles, directly press and hold the Action button to ask Bot questions**, maintaining strict human review if distributing content externally.
+
+According to the author's account, the Shortcut has been open-sourced and reportedly supports watching videos, reading posts, and web lookups (author's account, unverified).
+
+### Compile 50+ Reddit cases as a daily inspiration pool for implementation｜@heizolshao
+
+> Original post: [@heizolshao](https://x.com/heizolshao/status/2116002071635722606)
+
+Wanted to learn how ordinary users deeply leverage Grok Bot in daily practice to solve real-world problems beyond routine operations like clearing inboxes.
+
+The author systematically browsed and curated the Article directory, **selecting 3 similar scenarios close to their own business to explore deeply while adding human gates during replication**, deploying them onto dedicated pages only after verifying they were truly suitable.
+
+According to the author's compilation, around 55 real Reddit cases have been collected for inspiration (entries not individually verified).
+
+### Form a 7-role team to break down multi-Bot delegation and merge collaboration workflows｜@0xMortyx
+
+> Original post: [@0xMortyx](https://x.com/0xMortyx/status/2116220802970288295)
+
+Hoped to follow official engineering philosophy by breaking complex tasks down across multiple specialized Bots for collaborative execution, rather than relying on a single all-purpose Bot for the entire workflow.
+
+The author established a 7-role roster comprising Chief of Staff, Research, Engineering, Review, Documentation, Operations, and Memory, **where the Chief of Staff is solely responsible for planning and delegation, deliverables from specialists must be submitted to Reviewer for inspection**, and finally Memory Manager writes accumulated insights back into the knowledge base.
+
+According to the author's compilation, this workflow has been converted into ready-to-copy-paste 7-role configurations (compiled by author, unverified).
+
+### Track learning site traffic and SEO trends visually with daily-updated Pages chart cards｜@cgnot996
+
+> Original post: [@cgnot996](https://x.com/cgnot996/status/2116043968605774138)
+
+Grew tired of routine plain-text Markdown reports, hoping to switch to Pages to view data charts and long-term trends more visually.
+
+He tasked the learning site Bot with updating Pages daily, **placing traffic and SEO data cards centrally on the page, where clicking a card reveals trends whenever deeper insight is needed**.
+
+Per personal experience, Pages include intuitive data and charts, making it easy to track site performance simply by clicking the cards (personal experience).
+
+### Configure Instabox status channel to drive 3D office displaying Bot work progress｜@btcup99
+
+> Original post: [@btcup99](https://x.com/btcup99/status/2116065264332898556)
+
+Wanted to visually see what task each Bot is executing at any time, moving away from monitoring methods that rely solely on tedious terminal log scrolling.
+
+The author defined an Instabox status channel, **requiring each Bot to report automatically when starting and finishing work, and handing the setup instructions to a builder Bot for execution**, while humans periodically sample and verify consistency between reported status and actual tasks.
+
+According to the author's introduction, the original post provides a two-step setup tutorial and actual effect screenshots (implementation unverified).
+
+### Configure shared services as global skills to shorten call chains and avoid over-splitting｜@cgnot996
+
+> Original post: [@cgnot996](https://x.com/cgnot996/status/2116149130091528521)
+
+Noticed that many generic capabilities were being overly split into standalone Bots, resulting in lengthy invocation chains and unnecessary A2A communication overhead.
+
+He sorted out and identified reusable shared services (such as Muse2API), **directly configuring them as globally invocable skills with standardized call patterns**, thereby significantly shortening call paths.
+
+Per personal experience, he advocates prioritizing turning high-frequency shared services into skills rather than blindly spinning up new Bots (personal experience; does not involve quota-saving tactics).
+
+### Set up morning routine to auto-break down cutting-edge research and produce concise videos with human review｜@Austin_Way
+
+> Original post: [@Austin_Way](https://x.com/Austin_Way/status/2116214683242037633)
+
+Hoped to automatically break down a cutting-edge research paper daily and quickly turn it into short videos for external publication.
+
+Configured research domains and a morning routine based on the open-source daily-research-report project on GitHub: **the program automatically generates text research reports first, and final video content must pass human review before publishing**.
+
+According to the author's account, the related project repository has been open-sourced and results produced by the morning routine were demonstrated (video not watched, unverified).
+
+### Combine herdr delivery to let Grok fleet dispatch reproducible commands to local Claude｜@NixFred
+
+> Original post: [@NixFred](https://x.com/NixFred/status/2116242670549188894)
+
+Wanted local Claude Code to serve as the hands-on execution layer while using the cloud Grok Bot fleet for top-level command and task assignment.
+
+After outlining the system architecture in the first installment of the serialized series, **he first got a single Bot delivering tasks via herdr, and once all commands were confirmed to be stably reproducible**, gradually expanded across the entire fleet.
+
+According to the author's account, a 10-part serialized series has been launched to break down the entire system (commands not individually reproduced).
+
+### Build space station visual task board using core Bots to manage hundreds of cloud Agents｜@choopyplug1
+
+> Original post: [@choopyplug1](https://x.com/choopyplug1/status/2116308816677470700)
+
+When facing multi-Agent systems, there was a need for an intuitive visual task board, one-click approval workflows, and convenient MCP hot-plugging capabilities.
+
+The author built a space station office visual board to aggregate status and logs, **wiring human gates into all critical approval workflows, while newly joined Bots are dynamically registered via the MCP protocol**.
+
+According to the author's account, 6 core Bots are currently scheduling and managing 200+ cloud agents (author's account, unverified).
+
+### Subscribe to system monitoring alerts to auto-trigger cloud Agents to reproduce issues and submit PRs｜@0xGhostyx
+
+> Original post: [@0xGhostyx](https://x.com/0xGhostyx/status/2116179951577710671)
+
+Wanted system error alerts surfacing in Sentry and Slack to be automatically transformed into code PRs ready for developer review.
+
+Connected Slack, Datadog, Sentry, and PlanetScale, **writing routines to periodically subscribe to alert events and trigger cloud agents to attempt reproduction**, with generated PRs ultimately gated by human review before merging.
+
+According to the author's relay, the team currently generates around 2000 PRs per month through this workflow (relayed / unverified).
