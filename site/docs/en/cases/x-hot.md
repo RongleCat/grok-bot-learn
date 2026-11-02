@@ -845,3 +845,133 @@ Wanted system error alerts surfacing in Sentry and Slack to be automatically tra
 Connected Slack, Datadog, Sentry, and PlanetScale, **writing routines to periodically subscribe to alert events and trigger cloud agents to attempt reproduction**, with generated PRs ultimately gated by human review before merging.
 
 According to the author's relay, the team currently generates around 2000 PRs per month through this workflow (relayed / unverified).
+
+### Build a 3D dashboard to monitor multi-Bot status and quota consumption in real time｜@0xCodila
+
+> Original post: [@0xCodila](https://x.com/0xCodila/status/2116960213206966317)
+
+Wanted to see clearly whether each Bot is running properly in real time, without having to troubleshoot one by one to see which is quietly eating up usage quota.
+
+Quickly set up a 3D dashboard following the author's 6-step prompt, **connecting ntfy to aggregate each Bot's division of labor and quota consumption in one place**. It is recommended to validate the workflow on a single floor first before expanding the team, while periodically spot-checking status reports for accuracy.
+
+According to the author's account, setup takes about 2 minutes with a single prompt, and Super usage remains below 1% (author's account, unverified).
+
+### Run a LinkedIn lead-generation content pipeline and calendar reviews with Grok Bot｜@paolo_scales
+
+> Original post: [@paolo_scales](https://x.com/paolo_scales/status/2116561137244282986)
+
+Wanted to use Grok Bot to consistently produce LinkedIn lead-generation content without devolving into hollow, self-indulgent posts.
+
+First inject business context and a dedicated brand voice, **running through research insights, narrative angles, and long-form drafts step-by-step in Article mode**. Schedule content production on a calendar with regular retrospectives, and ensure all posts involving key metrics or external commitments undergo human review before publication.
+
+According to the author's account, this pipeline generated approximately 3.24 million impressions over the past 90 days (author's account, unverified).
+
+### Orchestrate a solo cross-border multi-channel growth fleet managing 22 Bot roles｜@kkkeric_ai
+
+> Original post: [@kkkeric_ai](https://x.com/kkkeric_ai/status/2116726197111648426)
+
+A solo founder wanted to manage multilingual social media, SEO, backlinks, video, and competitor monitoring simultaneously, facing severe bandwidth constraints.
+
+Shifting away from managing project by project, **the author organized 22 Bots into functional roles for collaboration and prioritized replicating a single growth line**. Daily quality sampling relies on the Skill provided at the end of the post, outbound publishing is strictly vetted by human review, and broadcast blasts across group chats are used with caution.
+
+According to the author's account, this solo-operated fleet publishes roughly 200 posts per week across more than 20 channels in 5 languages (author's account, unverified).
+
+### Chain 11 Bots to automate cold email drafting with full human approval for sending｜@remoduzk
+
+> Original post: [@remoduzk](https://x.com/remoduzk/status/2116730731271426432)
+
+Wanted to accelerate cold email follow-up cadence without losing leads due to broken handoffs when prospects reply.
+
+First draft a clear operating brief to standardize operational procedures, **chaining multiple Bots sequentially along the business workflow to automate background research and draft generation**. All outbound emails must enter a unified human approval stage, and follow-up timeliness is spot-checked periodically to prevent dropped leads.
+
+According to the author, 8 Bots are currently running in production, and outbound sending must be approved by a human (conversion unverified).
+
+### Configure six Pages prompt suites to upgrade static doc libraries into automated reports｜@maestrooth
+
+> Original post: [@maestrooth](https://x.com/maestrooth/status/2116619589140578691)
+
+Wanted to use Pages as daily operational reports to drive decisions, rather than letting it devolve into a filing cabinet cluttered with static materials.
+
+After creating a Pages space, **load six standardized prompt suites covering revenue, pipeline, competitors, and more, while connecting trusted data sources**. Prioritize establishing a daily closed loop with high-frequency morning briefings, and enforce strict human review for board presentations and policy-level deliverables.
+
+According to the author, this setup provides reusable prompt suites directly covering six core scenarios (results unverified).
+
+### Test open-source Grok Bot Anywhere and verify cross-platform desktop experience｜@cgnot996
+
+> Original post: [@cgnot996](https://x.com/cgnot996/status/2116697913707598017)
+
+Wanted to quickly invoke a near-native Grok Bot experience on any computer without wrestling with complex environment setups.
+
+Following the open-source Grok Bot Anywhere project, **the author prioritized validating desktop wake-up and core interactions in a Mac environment**. Because low-level details such as Windows context menu integration are still being ironed out, users looking to try it are advised to join the group and wait for stable releases.
+
+Per personal experience, the Mac version runs smoothly, but the Windows experience falls short of expectations by about 60% (personal account, unverified).
+
+### Establish a post-reading routine and force second-brain insights into active projects｜@suraj_sharma14
+
+> Original post: [@suraj_sharma14](https://x.com/suraj_sharma14/status/2116613678942310627)
+
+Wanted to absorb high-value insights from vast streams of posts without letting bookmarks become a black hole of unread content.
+
+Establish a consistent daily reading routine with strict filtering criteria, **saving quality content to a second brain and mandating at least one actionable takeaway applied to an active project**. Replace passive bookmarking with explicit closed-loop rules to ensure external insights translate into actual business outcomes.
+
+According to the author, this workflow has evolved into a stable, repeatable personal daily routine (results unverified).
+
+### Assign a Bot to compare prices and screen TVs on the web to simplify gift-giving｜@cgnot996
+
+> Original post: [@cgnot996](https://x.com/cgnot996/status/2116345449359777974)
+
+Wanted to send home appliances as a housewarming gift to a friend, but lacked TV-selection knowledge and wanted a hands-off approach.
+
+Clearly communicate the budget cap and core requirements to the Bot, allowing human observation of the execution process at any point. **Assign the Bot to autonomously compare prices and filter TV models on the web**, while reserving the final purchase decision for manual confirmation and checkout.
+
+Per personal experience, the full shopping and comparison workflow can now be handled by the Bot (personal account).
+
+### Connect a VM browser with domestic e-commerce for product tracking and price comparison｜@cgnot996
+
+> Original post: [@cgnot996](https://x.com/cgnot996/status/2116696347604881857)
+
+Wanted to operate domestic e-commerce and local lifestyle platforms directly from home to handle product selection and price tracking.
+
+Log into accounts like JD.com within a virtual machine browser, optionally integrating domestic MCP tools such as Amap or Luckin Coffee as needed. **Task the Bot with comparing products and tracking daily prices on the web**, while checkout and payment must be manually verified and executed by a human.
+
+Per personal experience, web-based comparison and tracking run smoothly, though the checkout and payment step is not yet integrated (personal account).
+
+### Build a 5-step lead pipeline to filter social media prospects with human approval｜@thekuchh
+
+> Original post: [@thekuchh](https://x.com/thekuchh/status/2116928763434848579)
+
+Wanted to proactively uncover potential business opportunities on social platforms like X and Reddit, while strictly avoiding mindless spam that annoys users.
+
+Predefine source boundaries and demand descriptions, letting the Bot score and triage leads as Hot, Warm, or Skip. **Generated reply drafts must enter a human approval queue and receive sign-off before being sent**, with the option to offer lightweight, low-risk services first against a pricing sheet.
+
+According to the author's account, the system captured 17 qualified leads and closed 5 deals within 3 days of launch, saving about 20 hours per week (author's account, unverified).
+
+### Delegate account registrations to Bot with human-set passwords kept outside the vault｜@cgnot996
+
+> Original post: [@cgnot996](https://x.com/cgnot996/status/2116748314859520112)
+
+Wanted to use Bot email addresses to register accounts across platforms automatically, but worried that auto-generated passwords locked in the vault could not be viewed.
+
+Supports using built-in system email or Gmail to let the Bot handle registration flows. **Passwords must be set by a human or accounts registered manually before handing over, and must never live only in the Bot vault.** If mistakenly saved and lost, promptly reset and recover credentials via the website's official 'Forgot Password' flow.
+
+Based on personal pitfall experience, once passwords enter the vault they cannot be read directly, leaving official site recovery as the only recourse (personal account).
+
+### Chain a 4-Bot handoff pipeline with human gates for seamless 24/7 routines｜@0xchromium
+
+> Original post: [@0xchromium](https://x.com/0xchromium/status/2116998967838089513)
+
+Wanted an end-to-end automated handoff across the entire lifecycle: reading data, solution design, placing orders, and deploying systems.
+
+Clearly define deliverables for four roles—Ed, Dex, Roy, and Dev—with isolated independent memories, running early routines in read-only mode. **Resolutely place human approval gates at critical milestones such as placing orders and deploying systems**, ensuring the automated handoff chain stays secure and fully under control.
+
+According to relays, the entire chain can be configured in about 55 minutes, achieving a 24-hour routine cycle without extra prompting (relayed, unverified).
+
+### Define the initial 5% of goals and delegate weekly task decomposition to a manager Bot｜@bonnyxen
+
+> Original post: [@bonnyxen](https://x.com/bonnyxen/status/2117031267422150892)
+
+Wanted to hand over an entire week's complex workflows to a manager Bot for autonomous decomposition, avoiding micromanaging and delegating tasks item by item.
+
+Humans focus on the first 5% to define delivery objectives and acceptance criteria, setting up a collaborative structure where a manager Bot oversees 9 sub-bots. **First organize a multi-Bot dry run to align execution details**, intervening with human review only at final acceptance milestones.
+
+According to the author's account, a single prompt coordinated 9 direct reports to complete 41 tasks in 47 minutes total (author's account, unverified).

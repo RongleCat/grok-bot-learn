@@ -846,3 +846,133 @@ Desea transformar automáticamente las alertas de error del sistema generadas en
 Conectó Slack, Datadog, Sentry y PlanetScale, **escribió una routine para suscribirse periódicamente a eventos de alerta y activar cloud agent para intentar reproducir el problema**, y los PR generados son revisados finalmente por humanos antes de fusionarse.
 
 Según relata el autor, el equipo genera actualmente alrededor de 2000 PR al mes mediante este flujo (declarado/no verificado).
+
+### Construir un panel 3D para monitorizar en tiempo real el estado y el consumo de cuota de múltiples Bot｜@0xCodila
+
+> Publicación original: [@0xCodila](https://x.com/0xCodila/status/2116960213206966317)
+
+Desea comprobar en tiempo real si cada Bot sigue activo y funcionando correctamente, sin tener que investigar uno por uno quién está consumiendo la cuota en exceso.
+
+A partir de los prompts de 6 pasos ofrecidos por el autor, construye con rapidez un panel 3D y **conecta ntfy para centralizar y resumir el estado de tareas y el consumo de cuota de cada Bot**. Se recomienda validar el flujo primero en una sola planta antes de expandir el equipo, además de verificar periódicamente si los estados reportados son fidedignos.
+
+Según relata el autor, el montaje se completa en unos 2 minutos por prompt y el consumo de Super es inferior al 1 % (declaración del autor, sin verificar).
+
+### Implementar un flujo de contenidos de captación en LinkedIn y revisión de calendario con Grok Bot｜@paolo_scales
+
+> Publicación original: [@paolo_scales](https://x.com/paolo_scales/status/2116561137244282986)
+
+Desea generar contenido constante en LinkedIn para captar clientes con Grok Bot, pero sin caer en publicaciones vacías y autorreferenciales.
+
+Primero inyecta el contexto de negocio y el tono de marca exclusivo, y **ejecuta paso a paso en modo Article la investigación, los ángulos de enfoque y los borradores extensos**. Estructura la producción de contenido en un calendario con revisiones periódicas, exigiendo revisión humana obligatoria antes de publicar cualquier post con datos clave o compromisos externos.
+
+Según afirma el autor, este flujo generó cerca de 3,24 millones de impresiones en los últimos 90 días (declaración del autor, sin verificar).
+
+### Orquestar una flota de crecimiento multicanal con 22 puestos de Bot a cargo de una sola persona｜@kkkeric_ai
+
+> Publicación original: [@kkkeric_ai](https://x.com/kkkeric_ai/status/2116726197111648426)
+
+Gestionar en solitario redes sociales multilingües, SEO, backlinks, videos y monitorización de la competencia supone una sobrecarga extrema de energía.
+
+En lugar de avanzar por proyectos aislados, **organiza 22 Bot en escuadrones por funciones operativas y valida primero una sola línea de crecimiento antes de replicarla**. Aprovecha a diario la Skill mencionada al final del texto para hacer muestreos de calidad, aplica una estricta revisión humana a las publicaciones externas y evita saturar los chats grupales con difusiones masivas.
+
+Según relata el autor, una sola persona coordinando esta flota logra publicar unas 200 piezas semanales en más de 20 canales y en 5 idiomas (declaración del autor, sin verificar).
+
+### Encadenar 11 Bot para redactar correos en frío con revisión humana obligatoria en todos los envíos｜@remoduzk
+
+> Publicación original: [@remoduzk](https://x.com/remoduzk/status/2116730731271426432)
+
+Desea acelerar el ritmo de seguimiento de correos en frío, pero teme perder oportunidades comerciales si la respuesta del cliente no se gestiona a tiempo.
+
+Primero redacta un operating brief detallado para estandarizar los criterios operativos, y **conecta múltiples Bot en la cadena de negocio para investigar antecedentes y generar borradores de forma automática**. Todos los correos salientes deben pasar obligatoriamente por una etapa de aprobación humana, mientras se supervisan periódicamente los tiempos de respuesta para evitar descuidos.
+
+Según el autor, actualmente hay 8 Bot operando en producción y los envíos externos requieren aprobación humana sin excepción (conversión no verificada).
+
+### Configurar seis conjuntos de instrucciones en Pages para convertir documentos estáticos en informes automatizados｜@maestrooth
+
+> Publicación original: [@maestrooth](https://x.com/maestrooth/status/2116619589140578691)
+
+Busca utilizar Pages como un informe diario para fundamentar decisiones, evitando que se convierta en un mero archivador de documentos estáticos.
+
+Tras crear un espacio en Pages, **carga directamente seis conjuntos de instrucciones estandarizadas para ingresos, pipelines y competencia, conectándolos a fuentes de datos fiables**. Prioriza consolidar el informe matutino de alta frecuencia para cerrar el ciclo diario, mientras incorpora una revisión humana rigurosa para informes destinados a juntas directivas o decisiones normativas.
+
+Según explica el autor, la solución proporciona directamente un paquete de instrucciones reutilizables que cubre seis escenarios principales (resultados no verificados).
+
+### Probar el proyecto de código abierto Grok Bot Anywhere y evaluar su experiencia multiplataforma｜@cgnot996
+
+> Publicación original: [@cgnot996](https://x.com/cgnot996/status/2116697913707598017)
+
+Desea disfrutar en cualquier ordenador de una experiencia cercana a la versión nativa de Grok Bot sin lidiar con configuraciones complejas.
+
+Siguiendo de cerca el proyecto de código abierto Grok Bot Anywhere, **valida prioritariamente en Mac la invocación de escritorio y las interacciones básicas**. Dado que aún se están corrigiendo detalles de bajo nivel como el menú contextual en Windows, se recomienda a quienes deseen probarlo unirse a la comunidad y esperar el lanzamiento de una versión estable.
+
+Según la experiencia propia, la versión de Mac ya funciona de forma fluida, pero la experiencia en Windows solo alcanza alrededor del 60 % de lo esperado (declaración personal, sin verificar).
+
+### Crear una rutina de lectura para trasladar obligatoriamente ideas del segundo cerebro a proyectos activos｜@suraj_sharma14
+
+> Publicación original: [@suraj_sharma14](https://x.com/suraj_sharma14/status/2116613678942310627)
+
+Busca extraer aprendizajes de gran valor entre publicaciones masivas, evitando que los marcadores se conviertan en un agujero negro que nunca se consulta.
+
+Establece una rutina diaria de lectura con criterios estrictos de filtrado, **deposita el contenido de valor en su segundo cerebro y exige aplicar al menos una acción concreta a sus proyectos activos**. Sustituye el guardado casual por reglas claras de ciclo cerrado, garantizando que el aprendizaje externo se transforme en resultados comerciales reales.
+
+Según el autor, este flujo ya se ha consolidado como una rutina personal estable y reproducible (resultados no verificados).
+
+### Delegar en el Bot la comparación de precios y selección de televisores para resolver un regalo｜@cgnot996
+
+> Publicación original: [@cgnot996](https://x.com/cgnot996/status/2116345449359777974)
+
+Quería regalar un electrodoméstico a un amigo por su mudanza, pero no sabía cómo elegir un televisor y deseaba delegar la tarea por completo.
+
+Comunica con claridad el límite presupuestario y los requisitos clave al Bot, permitiendo supervisar el proceso en cualquier momento. **Asigna al Bot la tarea de comparar precios en la web y filtrar los mejores modelos de forma autónoma**, reservando la decisión final de compra y el pago a la confirmación humana.
+
+Según la experiencia propia, todo el proceso de comparación y selección puede ser delegado con éxito en el Bot (declaración personal).
+
+### Usar el navegador de una máquina virtual para conectar con plataformas de comercio electrónico y monitorizar precios｜@cgnot996
+
+> Publicación original: [@cgnot996](https://x.com/cgnot996/status/2116696347604881857)
+
+Busca gestionar plataformas de comercio electrónico y servicios locales desde un solo lugar para filtrar productos y monitorizar precios.
+
+Inicia sesión en plataformas como JD en el navegador de una máquina virtual, con opción de conectar herramientas MCP locales según sea necesario. **Asigna al Bot la comparación de productos en la web y el seguimiento diario de fluctuaciones de precios**, dejando el pago final estrictamente bajo verificación humana manual.
+
+Según la experiencia propia, la comparación y el rastreo de precios en la web funcionan con fluidez, aunque el proceso de pago aún no está integrado (declaración personal).
+
+### Construir un flujo de cinco pasos para captar oportunidades en redes sociales con aprobación humana｜@thekuchh
+
+> Publicación original: [@thekuchh](https://x.com/thekuchh/status/2116928763434848579)
+
+Desea captar proactivamente oportunidades comerciales en redes sociales como X y Reddit, evitando el envío indiscriminado de mensajes molestos.
+
+Define previamente las fuentes y descriptores de demanda para que el Bot clasifique y califique los prospectos en caliente, templado o descartado. **Los borradores de respuesta generados deben pasar por una cola de aprobación humana antes de enviarse**, permitiendo además ofrecer servicios ligeros de bajo riesgo según la lista de precios.
+
+Según relata el autor, en 3 días captó 17 prospectos cualificados y cerró 5 pedidos, ahorrando unas 20 horas semanales (declaración del autor, sin verificar).
+
+### Delegar el registro de cuentas en el Bot manteniendo el control humano de contraseñas fuera del vault｜@cgnot996
+
+> Publicación original: [@cgnot996](https://x.com/cgnot996/status/2116748314859520112)
+
+Desea usar el correo del Bot para registrar cuentas en diversas plataformas de forma automática, pero teme no poder consultar las contraseñas generadas al quedar bloqueadas en el vault.
+
+Permite emplear el correo del sistema o Gmail para que el Bot gestione el proceso de alta. **Las contraseñas deben ser establecidas personalmente por un humano o registrarse previamente antes de delegar la cuenta, evitando estrictamente que residan solo en el vault del Bot**. Si se guardan por error y no se pueden recuperar, es necesario restablecerlas de inmediato mediante la opción oficial de recuperación en el sitio web.
+
+Según la experiencia propia tras un percance, una vez que la contraseña entra al vault no se puede leer directamente y debe recuperarse a través del sitio web (declaración personal).
+
+### Encadenar cuatro Bot con filtros humanos para garantizar un flujo continuo en rutinas diarias｜@0xchromium
+
+> Publicación original: [@0xchromium](https://x.com/0xchromium/status/2116998967838089513)
+
+Busca automatizar por completo la cadena de relevos desde la recopilación de datos y el diseño técnico hasta la realización de pedidos y el despliegue en producción.
+
+Define con precisión los entregables y aísla la memoria de cuatro roles (Ed, Dex, Roy y Dev), ejecutando las primeras rutinas en modo solo lectura. **Establece filtros de aprobación humana indispensables en pasos críticos como la emisión de pedidos o el despliegue del sistema**, garantizando que la transición automatizada sea segura y controlada.
+
+Según se relata, todo el flujo se configura en unos 55 minutos y puede operar en ciclos continuos durante 24 horas sin requerir prompts adicionales (relatado, sin verificar).
+
+### Definir el 5 % inicial de los objetivos y delegar en un Bot gestor el desglose de tareas semanales｜@bonnyxen
+
+> Publicación original: [@bonnyxen](https://x.com/bonnyxen/status/2117031267422150892)
+
+Desea delegar en un Bot gestor el desglose autónomo de flujos de trabajo semanales complejos, evitando asignar tareas a cada subordinado de forma minuciosa.
+
+El humano se concentra en el 5 % inicial para definir objetivos de entrega y criterios de aceptación, estructurando una organización donde un Bot gestor lidera a 9 subordinados. **Organiza primero simulaciones de prueba entre múltiples Bot para alinear los detalles de ejecución**, interviniendo manualmente solo en la fase final de aceptación.
+
+Según relata el autor, bastó una sola instrucción para coordinar a 9 subordinados y completar 41 tareas en un tiempo total de 47 minutos (declaración del autor, sin verificar).
