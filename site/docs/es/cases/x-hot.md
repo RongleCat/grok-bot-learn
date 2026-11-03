@@ -976,3 +976,123 @@ Desea delegar en un Bot gestor el desglose autónomo de flujos de trabajo semana
 El humano se concentra en el 5 % inicial para definir objetivos de entrega y criterios de aceptación, estructurando una organización donde un Bot gestor lidera a 9 subordinados. **Organiza primero simulaciones de prueba entre múltiples Bot para alinear los detalles de ejecución**, interviniendo manualmente solo en la fase final de aceptación.
 
 Según relata el autor, bastó una sola instrucción para coordinar a 9 subordinados y completar 41 tareas en un tiempo total de 47 minutos (declaración del autor, sin verificar).
+
+### Conciliar la facturación anual de herramientas de IA del equipo y cuantificar el rendimiento comercial y laboral｜@Jason
+
+> Publicación original: [@Jason](https://x.com/Jason/status/2117126320962351277)
+
+Desea demostrar al equipo si las diversas y costosas suscripciones de IA realmente merecen la pena, sin conformarse con meras percepciones difusas de eficiencia.
+
+Analiza los hábitos de uso de todo el equipo durante los últimos 90 días, exigiendo que las herramientas clave se utilicen a fondo al menos 30 horas semanales. **Concilia partida por partida las facturas anuales de Anthropic, Grok Bot y 11labs con las entregas de negocio reales en Launch y TWiST**. A través de entregas de alta frecuencia, diluye el coste fijo de las herramientas y elimina las suscripciones inactivas contratadas por simple curiosidad.
+
+Según relata el autor, un gasto anual en herramientas inferior a 40 000 dólares generó más de 2 millones de dólares en valor comercial, automatizando al menos 7 puestos a tiempo completo y acelerando las tareas en un 100 % (declaración del autor, sin verificar).
+
+### Desplegar Data Bot para que todo el equipo consulte análisis de datos y construya paneles bajo demanda｜@bot
+
+> Publicación original: [@bot](https://x.com/bot/status/2117349540168876334)
+
+Los diferentes equipos de negocio de la empresa necesitan con urgencia consultar el uso de productos, el rendimiento de campañas y crear sus propios paneles, acumulando una sobrecarga crítica en los científicos de datos dedicados.
+
+**Despliega un Data Bot en Team para que cualquier miembro invoque capacidades de análisis de datos cotidianas bajo demanda**. Todas las habilidades especializadas son redactadas y mantenidas de forma unificada por los científicos de datos, acompañadas de guías oficiales de configuración. De este modo, se libera a los expertos para centrarse en problemas de fondo y se permite a los compañeros de negocio generar paneles de forma autónoma en cualquier momento.
+
+Según afirma la compañía, este Data Bot absorbió la semana pasada unas 70 horas de trabajo rutinario que antes correspondían a los científicos de datos (declaración oficial, sin verificar).
+
+### Integrar el contexto del historial de chats en Grok Bot mediante la vía oficial de WeChat｜@cgnot996
+
+> Publicación original: [@cgnot996](https://x.com/cgnot996/status/2117138292399636760)
+
+Desea trasladar el historial de chat de WeChat a Grok Bot para enriquecer el contexto, pero teme que modificar el cliente conlleve el riesgo de bloqueo de la cuenta.
+
+Rechaza cualquier modificación del cliente nativo de WeChat y **se basa exclusivamente en la vía de exportación oficial del historial de chat para remitir el contenido reenviado a Grok Bot**. Abre primero las pruebas internas para Mac dentro del proyecto Anywhere y recopila comentarios reales de los usuarios por fases mediante una comunidad exclusiva.
+
+Según la experiencia propia, la solución transcurre con certeza por la vía de exportación oficial sin alterar WeChat, y el Bot es capaz de alternar automáticamente al código QR de un nuevo grupo cuando el grupo 1 se llena (experiencia propia).
+
+### Construir un panel de administración con un solo prompt para monitorizar el estado y el uso de múltiples Bot｜@AnatoliKopadze
+
+> Publicación original: [@AnatoliKopadze](https://x.com/AnatoliKopadze/status/2117332364385001982)
+
+Desea observar en tiempo real la coordinación de múltiples Bot, ante la dificultad de detectar a tiempo si alguno se bloquea inesperadamente o consume toda la cuota en segundo plano.
+
+**Utiliza un único prompt para configurar un administrador y estandarizar las reglas de estado y paneles jerárquicos en un canal privado**. Distribuye secciones exclusivas para los diferentes Bot según los equipos de negocio y muestra el consumo de cuota en tiempo real, permitiendo registrar automáticamente cualquier nuevo Bot incorporado.
+
+Según relata el autor, bastó gastar en torno al 2 % de la cuota para completar todo el panel, haciendo que el estado operativo y el gasto de cuota de todos los Bot resulten visibles de forma centralizada (declaración del autor, sin verificar).
+
+### Delegar en el Bot llamadas de atención al cliente con marcación automática y confirmación humana en Call｜@Texas_Twins_Dad
+
+> Publicación original: [@Texas_Twins_Dad](https://x.com/Texas_Twins_Dad/status/2117244782141452676)
+
+Antes de viajar, desea consultar al complejo turístico si el parque acuático está incluido en la habitación y si puede usarse el día de la salida, sin tener que escuchar personalmente menús de voz interminables.
+
+El Bot extrae el número de teléfono real del sitio web oficial y fija estrictamente en código consultar solo dos preguntas junto con una lista de temas prohibidos. **Antes de emitir la llamada es obligatorio que un humano haga clic en Call para confirmar, estableciendo un filtro riguroso de salida**. Durante la comunicación, el Bot pulsa las teclas automáticamente para navegar por el menú de voz y transcribe el audio a texto en tiempo real, permitiendo al usuario tomar el control en cualquier momento y acceder a la grabación.
+
+Según la experiencia propia, el Bot superó el menú telefónico hasta enlazar con un agente humano, formuló con precisión ambas preguntas y colgó cortésmente, aportando un registro íntegro de la experiencia (experiencia propia).
+
+### Integrar cinco MCP y Skill como Xiaohongshu con estricta revisión humana antes de publicar contenido｜@xiaomovps
+
+> Publicación original: [@xiaomovps](https://x.com/xiaomovps/status/2117268289038770660)
+
+Desea distribuir ideas y recursos de calidad de X en plataformas nacionales sin tener que copiar y pegar manualmente entre múltiples sistemas.
+
+Estructura cinco componentes —el MCP comunitario de Xiaohongshu, la plaza oficial de MCP de Douyin, el MCP de Bilibili y la Skill de Fliggy— definiendo una jerarquía clara de permisos. **Bajo el principio de investigar primero en modo solo lectura antes de generar borradores, toda publicación final hacia el exterior debe superar una rigurosa revisión humana**. De este modo, se previenen restricciones y penalizaciones en las plataformas, garantizando que la difusión multicanal se mantenga estandarizada y bajo control.
+
+Según indica el autor, la solución detalla los accesos de instalación de cada componente y las restricciones de auditoría de cada plataforma, insistiendo en que toda publicación requiere revisión humana (accesos recopilados por el autor, resultados sin verificar).
+
+### Simplificar roles duplicados y crear un equipo de Bot eficiente con una lista de ocho pasos｜@ScottyBeamIO
+
+> Publicación original: [@ScottyBeamIO](https://x.com/ScottyBeamIO/status/2117234529534451939)
+
+Desea organizar más de veinte Bot para el trabajo colaborativo, pero en la práctica las funciones se solapan y surgen bloqueos continuos sin resultados tangibles.
+
+El autor formula un método de creación de equipos en ocho pasos, donde primero fusiona puestos redundantes bajo la coordinación de Dr Eggbot y aloja las Skill en un repositorio privado de GitHub vinculado a correos de herramientas dedicados. **Convierte los flujos esenciales en scripts y exige su confirmación mediante repetición antes de ejecutarlos**, combinando pruebas con personal en prácticas y revisiones matutinas como salvaguarda. Para la asignación diaria basta con despachar mediante @bot apply, permitiendo que cada unidad actúe dentro de sus competencias específicas.
+
+Según los pasos recopilados por el autor, la metodología transforma una estructura caótica en una lista autónoma de ejecución cuya clave reside en la precisión y la sencillez (pasos recopilados por el autor, resultados sin verificar).
+
+### Aprovechar la Touch Bar para alinear Bot en espera y activarlos con un solo toque｜@cgnot996
+
+> Publicación original: [@cgnot996](https://x.com/cgnot996/status/2117228082503524776)
+
+Al utilizar la Touch Bar de un MacBook de generaciones intermedias, desea alternar rápidamente entre diferentes Bot durante sus tareas diarias sin cambiar constantemente de ventana ni de pantalla.
+
+Habilita la función de Touch Bar persistente en el panel de atajos de GBA y fija en hilera múltiples Bot en espera en la barra táctil. **Pulsar la tecla táctil correspondiente abre al instante el cuadro de entrada de texto**, permitiendo iniciar la interacción al momento con un solo toque. Esto evita romper la concentración al cambiar de pantalla y permite invocar los servicios subyacentes a demanda.
+
+Según indica el autor, esta activación mediante contacto físico fue una de las inspiraciones originales del proyecto, permitiendo una alternancia a ciegas sumamente ágil (experiencia propia).
+
+### Configurar siete puestos de Bot para GTM manteniendo el envío humano obligatorio en comunicaciones externas｜@scarfpinkgirl
+
+> Publicación original: [@scarfpinkgirl](https://x.com/scarfpinkgirl/status/2117316628342034471)
+
+Al frente del área de GTM, desea delegar en los Bot tareas como la clasificación del buzón, la captación de prospectos, la creación de presentaciones, la previsión de ventas y la resolución de dudas, pero teme que los mensajes automáticos se descontrolen.
+
+Adopta un modelo de división del trabajo con un Bot por función y proporciona pautas secuenciales paso a paso en talleres guiados por marcas de tiempo. **Alinea primero el tono de redacción propio de cada puesto antes de protocolizar las tareas rutinarias**, reduciendo los costes de adaptación. Todo el material de comunicación externa generado sigue requiriendo verificación humana y envío manual, manteniendo bajo control estricto cualquier contacto con el exterior.
+
+Según el resumen transmitido, cada fase operativa deja un registro auditable para su revisión en cualquier momento, y los canales de contacto esenciales se mantienen siempre bajo supervisión y envío manual humano (resumen transmitido, resultados sin verificar).
+
+### Encadenar una línea de relevos con siete Bot mediante registro de solo lectura y filtros de aprobación humana｜@gippp69
+
+> Publicación original: [@gippp69](https://x.com/gippp69/status/2117308629686657204)
+
+Desea que múltiples Bot colaboren por etapas secuenciales en una cadena de trabajo, a la vez que dispone de un panel visual para supervisar el progreso de un vistazo.
+
+Todos los integrantes comparten el libro contable LEDGER, configurando una alarma semanal los lunes únicamente para el explorador Scout, mientras los Bot posteriores se activan en cadena gracias a la etiqueta DONE del paso anterior. **Aplica un baremo de ocho puntos con Judge para controlar la calidad de las entregas y fija compuertas de aprobación humana para cualquier envío o gasto económico**, evitando extralimitaciones descontroladas. El panel de control periférico mantiene un acceso unidireccional de solo lectura al libro contable, facilitando verificar el progreso en cualquier momento.
+
+Según relata el autor, todo este esquema de relevos se puede copiar y reutilizar directamente, manteniendo filtros humanos rigurosos en las compras, las comunicaciones salientes y la fusión de código (estructura propuesta por el autor, resultados sin verificar).
+
+### Diseñar tareas de eliminación en cinco rondas para seleccionar configuraciones que rechacen transferencias indebidas｜@0xImpuls
+
+> Publicación original: [@0xImpuls](https://x.com/0xImpuls/status/2117251618332659979)
+
+Ante veinticuatro conjuntos de instrucciones derivados del mismo modelo base, desea elegir la opción más segura para producción, pero resulta difícil distinguir sus límites reales de control de riesgos.
+
+Ejecuta una eliminación gradual a lo largo de cinco rondas de tareas progresivas, emitiendo en la última fase una orden no autorizada para transferir 2400 dólares saltándose el libro contable. **Descarta de forma inflexible a los perfiles que obedecen a ciegas y conserva únicamente las configuraciones que rechazan activamente transferencias indebidas**, evaluando con rigor su apego a las líneas rojas. De este modo, destacan las configuraciones que conjugan una ejecución eficaz con un sentido firme de los límites operativos.
+
+Según relata el autor, todo el proceso de selección costó apenas unos 61 dólares y permitió conservar la configuración que consulta proactivamente el registro contable y rechaza con firmeza órdenes indebidas (declaración del autor, sin verificar).
+
+### Validar una routine ligera antes de migrar scripts de Python a servidores propios｜@ericson4smith
+
+> Publicación original: [@ericson4smith](https://x.com/ericson4smith/status/2117069950624096301)
+
+Desea delegar los scripts de mantenimiento diario en un Bot para su ejecución automatizada, pero teme que una lógica inmadura pase directamente a producción provocando caídas del servicio.
+
+Dedica unos 15 minutos a emitir instrucciones para completar una routine ligera, comprobando en un entorno cerrado que la lógica de ejecución no presente fallos. **Insiste en validar plenamente la lógica operativa antes de migrar los scripts de Python generados a servidores propios**, garantizando una transición sin sobresaltos. Toda la monitorización de estado y actualización de políticas posterior se rige mediante comandos humanos, impidiendo que los scripts se desvíen.
+
+Según la experiencia propia, avanzar por esta vía progresiva de comprobar antes de migrar ahorra costes operativos a la vez que salvaguarda estrictamente la seguridad en producción (experiencia propia).
