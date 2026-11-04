@@ -1096,3 +1096,143 @@ Desea delegar los scripts de mantenimiento diario en un Bot para su ejecución a
 Dedica unos 15 minutos a emitir instrucciones para completar una routine ligera, comprobando en un entorno cerrado que la lógica de ejecución no presente fallos. **Insiste en validar plenamente la lógica operativa antes de migrar los scripts de Python generados a servidores propios**, garantizando una transición sin sobresaltos. Toda la monitorización de estado y actualización de políticas posterior se rige mediante comandos humanos, impidiendo que los scripts se desvíen.
 
 Según la experiencia propia, avanzar por esta vía progresiva de comprobar antes de migrar ahorra costes operativos a la vez que salvaguarda estrictamente la seguridad en producción (experiencia propia).
+
+### Delegar en Grok Bot llamadas de atención al cliente de banda ancha y rechazar tres ventas adicionales para reducir la tarifa｜@petergyang
+
+> Publicación original: [@petergyang](https://x.com/petergyang/status/2117638801296380159)
+
+Desea negociar una reducción de tarifa con el servicio de atención al cliente de su proveedor de banda ancha, pero no quiere soportar las largas esperas, cortesías vacías ni el bombardeo de ventas.
+
+Asigna la función nativa de llamadas de Grok Bot para comunicarse con atención al cliente, respondiendo con soltura a los saludos y presionando a la baja con las tarifas reducidas de la competencia. **Rechaza con cortesía tres ofertas consecutivas de venta adicional y solo transfiere la llamada a escucha humana cuando llega la confirmación de cláusulas críticas.**
+
+Según relata el autor, esta llamada le permitió rebajar casi 500 dólares en su factura anual de Internet (declaración del autor, sin verificar el vídeo fragmento a fragmento).
+
+### Encadenar evaluaciones cruzadas multimodelo para volcar doscientas páginas de notas de lenguajes en un tablero DAG｜@LH
+
+> Publicación original: [@LH](https://x.com/LH/status/2117484142753648831)
+
+Desea ordenar los complejos apuntes de diseño de lenguajes de programación acumulados durante años, pero la maraña de conceptos entrelazados dificulta desglosarlos en tareas de ejecución claras.
+
+Entrega las 200 páginas de notas a Opus para una estructuración inicial, y luego recurre a Claude, ChatGPT y Gemini para realizar evaluaciones cruzadas que verifiquen la coherencia mutua. **Aplica ordenamiento topológico para transformar automáticamente los temas válidos seleccionados y montarlos de forma unificada en un tablero DAG actualizado en tiempo real.**
+
+Según afirma el autor, este flujo logró reactivar ideas de diseño de lenguajes largamente postergadas y convertirlas en tareas ejecutables (el progreso corresponde a la declaración del autor, sin verificar).
+
+### Montar una canalización de Agent para equipos multinacionales con rechazo bajo 8 puntos y filtro humano de reproducciones｜@gregisenberg
+
+> Publicación original: [@gregisenberg](https://x.com/gregisenberg/status/2117734977312047537)
+
+Desea coordinar eficientemente a un equipo de 50 personas distribuido en 12 países para impulsar productos, buscando acortar los constantes ciclos de negociación desde la concepción hasta el lanzamiento.
+
+Comunica los requisitos mediante voz a Grok Bot para generar especificaciones automáticas e importarlas a Linear, extrayendo reseñas de la competencia para trabajar en paralelo con worktree durante la noche y producir múltiples propuestas. **Establece compuertas estrictas de calidad y monitorización, rechazando directamente cualquier evaluación global inferior a 8 puntos y forzando la revisión de 20 reproducciones si la conversión de un paso del embudo cae más del 10 %.**
+
+Según relata el autor, el equipo ya se ha habituado a dialogar y colaborar con Agent en el día a día (el flujo incluye compuertas de control de calidad explícitas, cifras concretas de impacto sin verificar).
+
+### Vincular WorkBuddy y la CLI de Feishu para verificar mensajes de WeChat y reenviar la publicación original｜@0xlangeai
+
+> Publicación original: [@0xlangeai](https://x.com/0xlangeai/status/2117582319473102854)
+
+Desea comprobar con rapidez la autenticidad de capturas de anuncios oficiales compartidas en chats grupales de WeChat, sin tener que alternar entre el móvil y el ordenador buscando fuentes primarias.
+
+Transfiere los registros de chat de WeChat a WorkBuddy en el ordenador para que Grok Bot rastree en sentido inverso la publicación original oficial y compruebe su veracidad. **Emplea la CLI de Feishu para volcar la conclusión de la verificación y el enlace al tuit oficial en el flujo de trabajo, cerrando el traspaso automático entre herramientas.**
+
+Según la experiencia propia, la cadena de traspaso bidireccional se ha completado con éxito a modo de demostración (los pasos operativos se remiten al hilo original, permisos locales no verificados por terceros).
+
+### Estandarizar los tres archivos MAP, RULES y CHECK exigiendo que el Bot entregue pruebas al finalizar｜@distortgeekin
+
+> Publicación original: [@distortgeekin](https://x.com/distortgeekin/status/2117610598959595881)
+
+Desea delegar entregas complejas en el Bot de manera autónoma, pero le frustra que cometa errores reiterados y reporte haber terminado sin aportar ninguna evidencia.
+
+Exige que el Bot estudie detenidamente las directrices de los tres archivos MAP.md, RULES.md y CHECK.md antes de comenzar a trabajar. **Establece una compuerta humana obligatoria con aportación de pruebas en la entrega, exigiendo que el Bot presente justificantes de ejecución verificables al asegurar que ha finalizado.**
+
+Según relata el autor, este mecanismo se ha consolidado en una plantilla técnica reutilizable (método transmitido a partir de terceros, impacto real sin verificar).
+
+### Desplegar un flujo automatizado de vídeos cortos con Opus limitando la supervisión humana a las características del tema｜@Charles77xixi
+
+> Publicación original: [@Charles77xixi](https://x.com/Charles77xixi/status/2117437607428657179)
+
+Desea lanzar con rapidez una red de vídeos cortos en Douyin partiendo desde cero seguidores, sin tener que consumir jornadas enteras en las complejas fases de producción.
+
+Delega la cadena íntegra —verificación, guion, síntesis de voz, gráficos animados y análisis de métricas— en el agent de Opus. **Concentra la intervención humana en un único control de calidad, filtrando y supervisando exclusivamente las características esenciales de los temas candidatos en la fase inicial.**
+
+Según relata el autor, publicó más de 40 vídeos en 13 días acumulando unas 370 000 reproducciones, con un pico individual de 231 000 y más de 7000 compartidos (declaración del autor, sin verificar).
+
+### Planificar la reforma integral estancia por estancia con fotos reales y seleccionar una lista reducida de artesanos locales｜@adamtaggart
+
+> Publicación original: [@adamtaggart](https://x.com/adamtaggart/status/2117744381923082414)
+
+Desea emprender la remodelación de su vivienda completa, pero carece de propuestas espaciales estancia por estancia y le resulta difícil evaluar a los contratistas y proveedores de materiales locales.
+
+Combina fotografías del estado real y estilos temáticos para deducir propuestas de reforma habitación por habitación según el plano, recopilando enlaces de compra de mobiliario y valoraciones de proveedores locales de madera y piedra. **Entrega la lista reducida de contratistas locales al seguimiento humano, encargándose el propio propietario de llamar por teléfono para verificar y coordinar.**
+
+Según afirma el autor, siguiendo este plan logró contactar telefónicamente con uno de los albañiles e iniciar la colaboración (quien casualmente era oyente de su programa; el impacto corresponde a la declaración del autor, sin verificar).
+
+### Configurar la inspección semanal Systems Check de cinco pasos para equipos multi-Bot con aprobación en solo lectura｜@Michael_Fenech_
+
+> Publicación original: [@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2117591623324320072)
+
+Desea que un equipo compuesto por múltiples Bot colabore con alta eficacia, sin tener que afrontar las complejidades de mantenimiento causadas por el desfase de configuraciones y conectores caídos.
+
+Realiza la auditoría semanal en estricto modo de solo lectura para revisar rutinas, conectores, duplicidad de tareas y correcciones de anomalías. **Genera como máximo 7 propuestas de ajuste respaldadas por pruebas para 9 categorías de problemas típicos, exigiendo aprobación humana obligatoria antes de ejecutar cualquier cambio.**
+
+Según indica el autor, ha estructurado un conjunto de prompts programables para ejecutarse cada lunes; el impacto operativo concreto no ha sido verificado.
+
+### Replicar el minijuego poteto e investigar los mecanismos de incrustación de X Player Card｜@cgnot996
+
+> Publicación original: [@cgnot996](https://x.com/cgnot996/status/2117469746795000237)
+
+Desea comprender las mecánicas del popular minijuego poteto en la comunidad y verificar la viabilidad técnica de su interacción incrustada dentro de la plataforma X.
+
+Asigna a Grok Bot el análisis especializado de X Player Card y de los mecanismos de páginas web integradas, desgranando una a una las reglas de renderizado y restricciones de carga en los contenedores del servicio. **Tras asimilar las especificaciones de la tarjeta y las dinámicas de interacción, recreó manualmente un minijuego independiente.**
+
+Según las pruebas del propio autor, no solo construyó de forma autónoma un minijuego plenamente jugable, sino que comprendió a fondo los problemas típicos de carga incrustada en X; la experiencia interactiva puede probarse en fxtwitter.
+
+### Orquestar un flujo mayorista inmobiliario de cinco Bot prohibiendo estrictamente su contacto hacia el exterior｜@SabreWright
+
+> Publicación original: [@SabreWright](https://x.com/SabreWright/status/2117671884980404707)
+
+Desea automatizar la prospección de listas y las ofertas de tasación en el sector mayorista inmobiliario, pero teme que los mensajes erróneos de los bots causen graves fricciones con los clientes.
+
+Estructura una plantilla modular de cinco Bot con 8 KPI de evaluación, extrayendo listas los lunes y jueves para redactar borradores de oferta al 50 % del ARV. **Define una línea roja de seguridad estricta que prohíbe a cualquier Bot contactar directamente con clientes en el exterior, exigiendo que todo borrador pase por revisión y validación humana.**
+
+Según relata el autor, tanto la plantilla de funciones como la lista de áreas prohibidas se pueden copiar y pegar directamente (el impacto comercial real no ha sido verificado).
+
+### Montar un flujo de trabajo de diez puestos en Grok City estableciendo compuertas humanas en cada gasto｜@de1lymoon
+
+> Publicación original: [@de1lymoon](https://x.com/de1lymoon/status/2117708562424320136)
+
+Desea generar contenido a gran escala con alta frecuencia diaria, sin desgastarse en la tediosa ejecución cotidiana ni arriesgarse a costes descontrolados.
+
+Desglosa la producción diaria de contenidos en diez puestos independientes, desde la monitorización por radar hasta la contabilidad final, afirmando activar 64 workers colaborativos en el flujo. **Establece compuertas humanas obligatorias antes de cualquier acción crítica como la publicación definitiva o el gasto económico, prohibiendo desembolsar fondos o difundir contenidos sin aprobación.**
+
+Según relata el autor, tras implementar la canalización solo requirió cuatro confirmaciones manuales a lo largo del día (la calidad concreta de la ejecución no ha sido verificada).
+
+### Configurar listas de antirresponsabilidades y prohibir que Lead redacte textos para clarificar la división de tareas｜@0xMorlex
+
+> Publicación original: [@0xMorlex](https://x.com/0xMorlex/status/2117693929449529680)
+
+Desea reconducir a su equipo de múltiples Bot tras el caos de trabajar de forma desordenada, sin que el solapamiento de funciones y responsabilidades provoque constantes reprocesos.
+
+Incorpora a Dr Eggbot para estandarizar un tono uniforme en todas las tareas y delimita listas claras de antirresponsabilidades para cada rol. **Delega el desglose de tareas por completo en el rol Lead, incorporando la instrucción never-write-copy para impedir estrictamente que Lead redacte textos.**
+
+Según relata el autor, durante la primera semana se duplicó la redacción de textos consumiendo en vano unos 3 días de tokens; tras este acotamiento la colaboración del equipo recuperó el orden (impacto sin verificar).
+
+### Coordinar nueve Bot nocturnos activados al generar archivos y exigir aprobación humana obligatoria para gastar｜@MyWestLord
+
+> Publicación original: [@MyWestLord](https://x.com/MyWestLord/status/2117631960159793419)
+
+Desea aprovechar la capacidad informática ociosa durante la noche para avanzar de forma autónoma en desarrollo y prospección externa, sin que las tareas giren en el vacío ni generen facturas imprevistas.
+
+Moviliza a nueve Bot nocturnos para gestionar de forma coordinada el desarrollo y los contactos externos, archivando y reiniciando el contexto de inmediato al alcanzar el 98 % de capacidad. **Activa la siguiente fase de la tarea únicamente tras la generación de un archivo físico, estipulando además que cualquier operación que implique un gasto económico requiere aprobación humana para ejecutarse.**
+
+Según relata el autor, en una sola noche completó de forma autónoma 400 publicaciones, fusionó el PR #142, envió 36 mensajes directos y efectuó 16 entregas (cifras sin verificar).
+
+### Encadenar la cadena de crecimiento de cinco Bot con SpaceXAI y Jenna centralizando aprobaciones en Slack｜@0xchromium
+
+> Publicación original: [@0xchromium](https://x.com/0xchromium/status/2117648073174446577)
+
+Desea articular un proceso de crecimiento integral de extremo a extremo para eventos presenciales y prospección de listas, sin tener que alinear repetidamente el contexto de los requisitos en cada punto de colaboración.
+
+Conecta en un ciclo cerrado desde la detección de tendencias, planificación del evento e inscripciones en Luma hasta la prospección de contactos, integrando previamente el brief de requisitos esenciales en la configuración de cada Bot. **Canaliza las decisiones clave de comunicación externa a Slack para su aprobación humana, impidiendo avanzar de forma efectiva sin el visto bueno.**
+
+Según relata el autor, en las transferencias posteriores ya no fue necesario explicar repetidamente el brief (demostración sin verificar).

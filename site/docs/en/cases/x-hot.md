@@ -1095,3 +1095,143 @@ Wanted to entrust daily maintenance scripts to Bot automation, but worried that 
 Spend about 15 minutes issuing prompts to run lightweight routine tasks, thoroughly verifying execution logic in an end-to-end closed loop. **Insist on validating logic before migrating the generated Python scripts to self-hosted servers**, ensuring a smooth operational transition. All subsequent status monitoring and policy updates remain driven by human commands, preventing runaway scripts.
 
 Per personal experience, following this gradual 'prove first, migrate later' path saved operational overhead while firmly safeguarding production stability (personal experience).
+
+### Have Grok Bot Call Broadband Support and Reject Three Consecutive Upsells to Negotiate Rates｜@petergyang
+
+> Original post: [@petergyang](https://x.com/petergyang/status/2117638801296380159)
+
+Wanting to negotiate lower rates with a broadband provider's customer service, without enduring long wait times, pleasantries, and aggressive upsell pitches.
+
+He tasked Grok Bot's native phone calling feature to dial customer support, handle initial pleasantries with ease, and leverage competitors' lower prices to drive down the fee. **It politely rejected all three consecutive upsells, switching back to human listening only when confirming critical terms.**
+
+According to the author's account, this single call helped him slash nearly $500 off his annual internet bill (author's claim, video not verified segment by segment).
+
+### Chain Multi-Model Cross-Evaluations to Route 200 Pages of Language Notes into a DAG Board｜@LH
+
+> Original post: [@LH](https://x.com/LH/status/2117484142753648831)
+
+Seeking to organize complex programming language design notes accumulated over years, but struggling to untangle intertwined concepts into clear, actionable tasks.
+
+The 200 pages of notes were handed to Opus for initial structuring, followed by Claude, ChatGPT, and Gemini conducting cross-evaluations to verify all-pair consistency. **Topological sorting automatically converted the filtered valid topics and mounted them into a continuously updated DAG board.**
+
+According to the author, this pipeline successfully advanced long-dormant language design concepts into executable tasks (progress is author's claim, unverified).
+
+### Build a Multinational Agent Pipeline with an 8-Point Rejection Gate and Funnel Replay Reviews｜@gregisenberg
+
+> Original post: [@gregisenberg](https://x.com/gregisenberg/status/2117734977312047537)
+
+Looking to coordinate a 50-person team across 12 countries to advance products efficiently, while compressing back-and-forth iteration cycles from idea to launch.
+
+Requirements were dictated via voice to Grokbot, automatically generating specifications imported into Linear, while scraping competitor reviews and using parallel worktrees overnight to produce multiple alternatives. **Strict quality and monitoring gates were established, rejecting outputs scoring below 8 in comprehensive reviews and mandating reviews of 20 session replays if any single funnel conversion drops over 10%.**
+
+According to the author's account, the team has grown more accustomed to conversational collaboration with agents in daily workflows (process includes explicit QA gates; specific outcome figures unverified).
+
+### Connect WorkBuddy with Feishu CLI to Verify WeChat Messages and Return Original Posts｜@0xlangeai
+
+> Original post: [@0xlangeai](https://x.com/0xlangeai/status/2117582319473102854)
+
+Wanting to quickly verify the authenticity of official announcement screenshots in WeChat group chats, without toggling back and forth between phone and computer to locate primary sources.
+
+On desktop, WeChat chat histories were forwarded to WorkBuddy, which directed Grok Bot to reverse-search official posts for verification. **Using Feishu CLI, the verified conclusions and original post links were written back into the workflow, completing automated cross-tool handoffs.**
+
+Based on personal experience, the bidirectional handoff pipeline was successfully demonstrated (operational steps follow the original long post; local permissions not verified on this machine).
+
+### Standardize MAP and CHECK Files Requiring Bots to Submit Proof upon Task Completion｜@distortgeekin
+
+> Original post: [@distortgeekin](https://x.com/distortgeekin/status/2117610598959595881)
+
+Hoping to let Bots handle complex deliverables autonomously, but constantly frustrated by repeated blunders and groundless claims of task completion.
+
+Bots were required to study three rule files—MAP.md, RULES.md, and CHECK.md—before beginning work. **A mandatory proof-of-work human gate was established at delivery, requiring the Bot to produce verifiable execution evidence whenever claiming completion.**
+
+According to the author's retelling, this mechanism has formed a reusable engineering template (method recounted from others; actual results unverified).
+
+### Deploy an Opus Short Video Pipeline with Human Oversight Limited to Topic Characteristics｜@Charles77xixi
+
+> Original post: [@Charles77xixi](https://x.com/Charles77xixi/status/2117437607428657179)
+
+Aiming to rapidly launch a Douyin short video matrix from zero followers, without spending entire days bogged down in tedious production and execution.
+
+The entire pipeline—fact-checking, scripting, voiceover synthesis, motion graphics, and analytics reviews—was handed over to an Opus agent. **Human effort was condensed into a single quality checkpoint, strictly filtering and controlling the core characteristics of candidate topics upfront.**
+
+According to the author's account, publishing over 40 videos in 13 days accumulated roughly 370,000 views, with the top video reaching 231,000 views and over 7,000 shares (author's claim, unverified).
+
+### Plan Whole-House Renovations Room by Room with Real Photos and Shortlist Local Craftsmen｜@adamtaggart
+
+> Original post: [@adamtaggart](https://x.com/adamtaggart/status/2117744381923082414)
+
+Looking to renovate an entire home, but lacking room-by-room spatial plans and struggling to vet local material suppliers and contractors.
+
+Combining actual photos and style themes, renovation proposals were derived room by room following the floor plan, while automatically compiling furniture purchasing links and reviews for local stone and timber suppliers. **The shortlisted local contractor leads were handed off for human follow-up, with the homeowner personally placing phone calls to verify and connect.**
+
+According to the author, this approach successfully reached one of the masons by phone to establish contact (who happened to be a show viewer; outcome is author's claim, unverified).
+
+### Configure a 5-Step Weekly Systems Check for Multi-Bot Teams with Read-Only Approval｜@Michael_Fenech_
+
+> Original post: [@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2117591623324320072)
+
+Wanting to keep a multi-Bot team collaborating efficiently, without dealing with operational headaches from configuration drift and connector failures.
+
+The weekly audit operated entirely in read-only mode, cataloging routines, connectors, duplicate tasks, and error corrections. **It generated at most 7 evidence-backed remediation recommendations across 9 typical issue categories, requiring human approval before applying any changes.**
+
+According to the author, a prompt suite has been assembled that can be scheduled to rerun every Monday (specific maintenance outcomes unverified).
+
+### Recreate the poteto Mini-Game and Investigate X Player Card Embedding Mechanics｜@cgnot996
+
+> Original post: [@cgnot996](https://x.com/cgnot996/status/2117469746795000237)
+
+Wanting to learn the gameplay mechanics of the community-favorite poteto mini-game, while testing the feasibility of embedding interactive gameplay directly inside X.
+
+Grok Bot was assigned to investigate the X Player Card and web embedding mechanisms, unpacking container rendering rules and loading constraints step by step. **After clarifying card specifications and interactive mechanisms, the author personally coded and recreated an independent playable mini-game.**
+
+Based on personal testing, the author not only built a fully playable mini-game independently but also resolved typical loading issues with X embedding, with interactive previews viewable via fxtwitter.
+
+### Orchestrate a 5-Bot Real Estate Wholesaling Pipeline and Strictly Forbid Outbound Bot Contact｜@SabreWright
+
+> Original post: [@SabreWright](https://x.com/SabreWright/status/2117671884980404707)
+
+Looking to automate lead pulling, valuation, and offer drafting for real estate wholesaling, without triggering customer relation disasters from rogue automated messages.
+
+A plug-and-play roster of five Bots was structured with an 8-point KPI checklist, scheduled to pull lead lists every Monday and Thursday and prepare 50% ARV offer drafts. **Clear safety red lines were established, strictly forbidding any Bot from contacting clients directly and mandating that all drafts be vetted by human reviewers.**
+
+According to the author's account, the complete roster and restricted boundaries are ready to copy and paste (actual business outcomes unverified).
+
+### Build a 10-Role Grok City Workflow Pipeline and Set Human Gates for Spending Actions｜@de1lymoon
+
+> Original post: [@de1lymoon](https://x.com/de1lymoon/status/2117708562424320136)
+
+Aiming to drive large-scale content production at high frequency within a single day, without draining energy on tedious execution or risking runaway expenditures.
+
+Daily content operations were divided across ten distinct roles from radar monitoring to final accounting, reportedly deploying 64 workers in coordinated handoffs. **Mandatory human gates were established prior to publishing content or spending funds, strictly prohibiting any expense or outbound post without prior human approval.**
+
+According to the author's account, running the entire pipeline required only 4 manual confirmation clicks throughout the day (specific execution quality unverified).
+
+### Define Anti-Responsibility Lists and Restrict Lead from Writing Copy to Clarify Roles｜@0xMorlex
+
+> Original post: [@0xMorlex](https://x.com/0xMorlex/status/2117693929449529680)
+
+Seeking to bring a multi-Bot team back on track from chaotic silos, without suffering repeated rework caused by overlapping responsibilities.
+
+Dr Eggbot was introduced to enforce a unified voice across tasks, while explicit anti-responsibility lists were defined for every role. **Task decomposition was delegated entirely to the Lead role, with a strict never-write-copy constraint prohibiting Lead from writing copy.**
+
+According to the author's account, duplicate copy generation had previously burned through roughly three days worth of tokens in the first week, and team collaboration regained order only after enforcing these boundaries (outcomes unverified).
+
+### Schedule Nine Night-Shift Bots to Wake on File Output with Mandatory Human Approval for Spending｜@MyWestLord
+
+> Original post: [@MyWestLord](https://x.com/MyWestLord/status/2117631960159793419)
+
+Hoping to leverage idle overnight compute to autonomously advance development builds and outreach, without letting tasks loop in a vacuum or run up unexpected bills.
+
+Nine night-shift Bots were mobilized to handle development and outreach concurrently, archiving and resetting context once memory usage hit 98%. **Downstream tasks were awakened only after physical files were written to disk, while mandating human approval before any spending action could proceed.**
+
+According to the author's account, a single overnight run yielded 400 posts, merged PR #142, sent 36 direct messages, and completed 16 deliveries (reported figures unverified).
+
+### Chain the SpaceXAI Jenna 5-Bot Growth Loop with Human Approvals in Slack｜@0xchromium
+
+> Original post: [@0xchromium](https://x.com/0xchromium/status/2117648073174446577)
+
+Wanting to establish an end-to-end growth funnel for live events and contact outreach, without repeatedly realigning project context across collaboration stages.
+
+A closed loop was chained together spanning trend scanning, event planning, Luma registrations, and list outreach, with core project briefs pre-embedded directly into each Bot configuration. **Key outreach decisions were piped into Slack for human approval, blocking further execution until explicitly approved.**
+
+According to the author's retelling, subsequent handoffs no longer require re-explaining the brief (demo unverified).
