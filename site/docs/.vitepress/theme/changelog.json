@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03",
+ "updated": "2026-11-04",
  "ui": {
   "lead": "汇总 Grok Bot 电脑与手机端官方更新，附带铁柱在 X 上的更新解读。",
   "note": "官方条目为中文摘要，具体细节以官方原文为准。",
@@ -11,6 +11,25 @@
   "full": "查看完整中文翻译"
  },
  "official": [
+  {
+   "id": "android-2026-11-04",
+   "platform": "android",
+   "version": "",
+   "date": "2026-11-04",
+   "url": "https://play.google.com/store/apps/details?id=ai.x.grok.bot&hl=en",
+   "title": "常规修复与体验优化",
+   "points": [
+    "修复已知问题，提升应用稳定性。"
+   ],
+   "full": [
+    [
+     "",
+     [
+      "问题修复与改进"
+     ]
+    ]
+   ]
+  },
   {
    "id": "ios-1.19.0",
    "platform": "ios",

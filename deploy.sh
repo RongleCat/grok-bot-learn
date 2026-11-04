@@ -3,6 +3,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 set -a
 source "$HOME/.agents/secrets/cloudflare.env"
+[ -f "$HOME/.agents/secrets/edgeone.env" ] && source "$HOME/.agents/secrets/edgeone.env"
 [ -f "$HOME/.agents/secrets/seo.env" ] && source "$HOME/.agents/secrets/seo.env"
 set +a
 PROJECT="${PROJECT:-tiezhu-grokbot}"
