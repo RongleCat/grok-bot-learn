@@ -420,7 +420,7 @@ export default defineConfig({
     const cases = pages.filter((r) => r.startsWith('cases/')).sort((a, b) => (a === 'cases/index.md' ? -1 : b === 'cases/index.md' ? 1 : a.localeCompare(b)))
     L.push('## 案例库', '', ...cases.map((r) => line(r)), '')
     L.push('## Bot 直聘', '', `- [Bot 直聘](${SITE}/bots/): ${descs['bots/index.md'] || (bots as any).lead}`, ...(bots as any).bots.map((b: any) => `- [${b.name}](${b.url}): ${b.desc}`), '')
-    L.push('## 周边生态', '', `- [周边生态](${SITE}/ecosystem/): ${descs['ecosystem/index.md'] || (eco as any).index.lead}`, `- [Grok Bot Clipper 浏览器插件](${SITE}/ecosystem/grok-bot-clipper): ${descs['ecosystem/grok-bot-clipper.md'] || (eco as any).clipper.lead}`, `- [小铁柱](${SITE}/ecosystem/xiaotiezhu): ${descs['ecosystem/xiaotiezhu.md'] || (eco as any).xiaotiezhu.lead}`, '')
+    L.push('## 周边生态', '', `- [周边生态](${SITE}/ecosystem/): ${descs['ecosystem/index.md'] || (eco as any).index.lead}`, `- [Grok Bot Clipper 浏览器插件](${SITE}/ecosystem/grok-bot-clipper): ${descs['ecosystem/grok-bot-clipper.md'] || (eco as any).clipper.lead}`, '')
     {
       const cl = changelog as any
       const tag: Record<string, string> = { pc: 'PC', ios: 'iOS', android: 'Android' }
@@ -546,28 +546,6 @@ export default defineConfig({
           offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
           license: 'https://opensource.org/licenses/MIT',
           sameAs: 'https://github.com/RongleCat/grok-bot-clipper'
-        })
-      } else if (rel === 'ecosystem/xiaotiezhu.md') {
-        const x = (eco as any).xiaotiezhu
-        graph.push(page('WebPage', { mainEntity: { '@id': url + '#service' } }))
-        graph.push({
-          '@type': 'Service',
-          '@id': url + '#service',
-          name: '小铁柱',
-          description: desc,
-          url,
-          provider: AUTHOR,
-          areaServed: 'CN',
-          serviceType: '微信群运维助手',
-          image: `${SITE}/ecosystem/xiaotiezhu-banner.webp`,
-          offers: x.plans.map((p: { name: string; price: string; unit: string; note: string }) => ({
-            '@type': 'Offer',
-            name: p.name,
-            description: p.note,
-            price: p.price,
-            priceCurrency: 'CNY',
-            unitText: p.unit
-          }))
         })
       } else if (rel === 'ecosystem/index.md') {
         graph.push(page('CollectionPage', {

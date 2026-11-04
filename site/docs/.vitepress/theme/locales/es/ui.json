@@ -26,10 +26,6 @@
     "tabOurs": "Nuestro análisis",
     "chipOurs": "Nuestro análisis"
   },
-  "xiaotiezhu": {
-    "title": "小铁柱",
-    "joinHint": "Escanea el código QR para añadir al asistente en WeChat y activar 小铁柱"
-  },
   "join": {
     "qrAlt": "Código QR del WeChat personal de 铁柱"
   }

@@ -26,10 +26,6 @@
     "tabOurs": "当サイトの解説",
     "chipOurs": "当サイトの解説"
   },
-  "xiaotiezhu": {
-    "title": "小铁柱",
-    "joinHint": "QRコードをスキャンしてサポート担当のWeChatを追加し、小铁柱を開通"
-  },
   "join": {
     "qrAlt": "铁柱の個人WeChat QRコード"
   }
