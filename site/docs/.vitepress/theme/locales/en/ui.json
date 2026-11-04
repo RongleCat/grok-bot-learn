@@ -26,10 +26,6 @@
     "tabOurs": "Our Take",
     "chipOurs": "Our Take"
   },
-  "xiaotiezhu": {
-    "title": "小铁柱",
-    "joinHint": "Scan the QR code to add the assistant on WeChat and activate 小铁柱"
-  },
   "join": {
     "qrAlt": "Personal WeChat QR code of 铁柱"
   }
