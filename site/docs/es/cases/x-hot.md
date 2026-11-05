@@ -1236,3 +1236,193 @@ Desea articular un proceso de crecimiento integral de extremo a extremo para eve
 Conecta en un ciclo cerrado desde la detección de tendencias, planificación del evento e inscripciones en Luma hasta la prospección de contactos, integrando previamente el brief de requisitos esenciales en la configuración de cada Bot. **Canaliza las decisiones clave de comunicación externa a Slack para su aprobación humana, impidiendo avanzar de forma efectiva sin el visto bueno.**
 
 Según relata el autor, en las transferencias posteriores ya no fue necesario explicar repetidamente el brief (demostración sin verificar).
+
+### Orquestar un ejército de seis Bot para crear en la nube y desde cero un sitio de vídeo con IA listo para producción｜@KinGao476942
+
+> Publicación original: [@KinGao476942](https://x.com/KinGao476942/status/2117853896580456514)
+
+Desea crear desde cero un sitio web completo de vídeo con IA que cuente con registro de usuarios, facturación de saldo y pagos con Stripe, sin pasar todo el día frente al ordenador escribiendo código complejo de frontend y backend.
+
+Configura un Bot principal para coordinar y distribuir descripciones de puesto estándar entre seis roles especializados, permitiendo al desarrollador gestionar tareas interfuncionales a través del móvil mediante conversación. **Delega la codificación compleja y la integración de interfaces en los Bot de cada rol, reservando la intervención humana únicamente para definir los límites del negocio y aprobar el lanzamiento en los hitos clave.**
+
+Según afirma el autor, completar todo el flujo tomó entre 3 y 5 horas (plazo declarado por el autor, sin verificar), y las cifras de nuevos seguidores e ingresos también corresponden a declaraciones propias no verificadas.
+
+### Coordinar un equipo de asistentes Claude en paralelo para impulsar el lanzamiento de productos digitales｜@aiedge_
+
+> Publicación original: [@aiedge_](https://x.com/aiedge_/status/2118005624479052232)
+
+Al preparar el lanzamiento de un nuevo producto digital, busca avanzar al mismo tiempo en el estudio de la competencia, los textos de conversión y la página de ventas, sin perder la concentración al alternar continuamente en una sola ventana de chat.
+
+Emplea una sesión de gestión para supervisar el avance general y asigna tareas especializadas a múltiples subagentes helper independientes. **Aprovecha Side Chat para que los subagentes elaboren contenidos específicos en paralelo, mientras la sesión principal se concentra en marcar el ritmo global y unificar los resultados.**
+
+Según la experiencia personal del autor, coordinar varios asistentes en paralelo acelera notablemente los preparativos del lanzamiento, aunque el nivel de compatibilidad depende de cada suscripción (sin verificar).
+
+### Asignar ocho Agent para renderizar una animación sin conexión de 83 segundos mediante código puro de three.js｜@0xMovez
+
+> Publicación original: [@0xMovez](https://x.com/0xMovez/status/2117987052419428576)
+
+Desea generar un cortometraje de animación vectorial en 3D que funcione por completo sin conexión y únicamente mediante código, sin recurrir a modelos de generación de vídeo.
+
+Con el respaldo de Fable 5.5, ocho Agent colaboran en la programación con código puro de three.js para renderizar 39 tomas de guion gráfico (cerca de 1992 fotogramas) e integrar voz sintética. **Desacopla cada plano del metraje para que los ocho Agent programen en paralelo, ensamblando al final un único archivo HTML independiente.**
+
+Según relata el autor, el proceso completo tomó unas 3 horas para renderizar los 83 segundos de animación (datos de horas de trabajo y metraje final declarados por el autor, sin verificar).
+
+### Construir un flujo automatizado de cinco pasos con WorkBuddy para publicar en WeChat Official Account｜@liyue_ai
+
+> Publicación original: [@liyue_ai](https://x.com/liyue_ai/status/2117945151431864391)
+
+Gestionar una WeChat Official Account implica un laborioso proceso diario de búsqueda de temas, recopilación de material, maquetación y publicación, donde la redacción manual tradicional exige demasiado tiempo para mantener un ritmo diario estable.
+
+Configura WorkBuddy para que inicie la selección de temas de forma automática a las 8:30 h, consulte secuencialmente las bases de datos de apoyo, elabore el borrador preliminar y aplique el formato HTML correspondiente. **Delega la pesada labor de investigación inicial y el formateo en la canalización automatizada, limitando la intervención humana a la revisión final y la autorización de la publicación.**
+
+Según declara el autor, antes dedicaba un promedio de 4.5h por artículo, mientras que con esta canalización el esfuerzo humano se reserva casi exclusivamente para perfeccionar el borrador y dar el visto bueno a la publicación (declaración del autor, sin verificar).
+
+### Organizar un catálogo de nueve zonas para Bot y asignar tareas con precisión mediante un Prompt maestro｜@czzzzzzJ_
+
+> Publicación original: [@czzzzzzJ_](https://x.com/czzzzzzJ_/status/2117827405838487818)
+
+Ante una gran variedad de Bot y sin saber qué perfil elegir según cada necesidad, busca sentar una arquitectura base para explorar casos reales sin caer en herramientas dispersas y desordenadas.
+
+Estructura 100 dinámicas prácticas en nueve zonas funcionales, monta una base estándar de cuatro elementos y define un Prompt maestro en la cúspide como nodo coordinador. **Restringe rigurosamente al gestor central para que solo analice requisitos y asigne tareas, impidiéndole exceder sus funciones para generar directamente entregables de negocio.**
+
+Según declara el autor, el catálogo de nueve zonas y sus respectivas dinámicas han sido probados en la práctica (catálogo y pruebas prácticas declarados por el autor, sin verificar; la zona de acceso a potencia de cálculo carece de promoción oficial).
+
+### Estructurar un equipo de ingeniería en Grok Bot: jefe de personal, especialistas, Skill y Routine｜@0xsmerkzz
+
+> Publicación original: [@0xsmerkzz](https://x.com/0xsmerkzz/status/2118073227826147530)
+
+Desea utilizar Grok Bot como una verdadera organización colaborativa con división de tareas, superando el uso básico de una ventana de chat orientada a intercambios informales.
+
+Examina en profundidad las funciones de base oficiales y organiza el equipo siguiendo estrictamente el orden jerárquico de «jefe de personal → especialistas de negocio → Skill → Routine». **Aplica un esquema estandarizado para asentar capacidades especializadas y flujos de trabajo automatizados, transformando conversaciones desestructuradas en una orquestación operativa estable.**
+
+Según el tutorial del autor, este planteamiento de ingeniería clarifica la colaboración entre múltiples Bot, aunque el rendimiento operativo de cada puesto responde a un diseño didáctico (resultados sin verificar).
+
+### Desplegar un Agent de doble vía para búsqueda bibliográfica científica con plantillas de prompts para agilizar propuestas de tesis｜@DrRabbitAI
+
+> Publicación original: [@DrRabbitAI](https://x.com/DrRabbitAI/status/2117952642593017862)
+
+Al preparar proyectos y propuestas de tesis de posgrado, los investigadores necesitan mapear con rapidez la literatura científica puntera sin pasar semanas revisando manualmente repositorios académicos artículo por artículo.
+
+Diseña una estructura de doble vía que combina un Agent integrado conectado directamente a bases de datos académicas con el acceso autónomo a API de búsqueda, apoyado en plantillas estructuradas de prompts para distintos contextos. **Desglosa líneas amplias de investigación en órdenes de búsqueda progresivas para que el Agent localice artículos clave y extraiga las ideas metodológicas principales.**
+
+Según la demostración del autor, este flujo permite identificar con rapidez artículos de alta relevancia en presentaciones de propuestas de tesis; tanto el volumen de publicaciones localizadas como la precisión corresponden a declaraciones del autor (sin verificar).
+
+### Crear un paquete de contratación de Bot para captación en frío y ayudar a agencias de marketing gastronómico a cerrar clientes de alto valor｜@0xNotFounder
+
+> Publicación original: [@0xNotFounder](https://x.com/0xNotFounder/status/2117900255400222808)
+
+Una agencia de marketing para restaurantes busca ampliar a escala la captación de clientes en frío sin malgastar el costoso esfuerzo del equipo comercial en contactos iniciales a ciegas.
+
+Elabora descripciones de rendimiento y plantillas estandarizadas de prompts de contratación para un Bot de captación, delegando totalmente en él la prospección y las primeras interacciones de acercamiento. **Interviene el equipo humano únicamente cuando el Bot consolida el contacto y valida el interés, permitiendo que especialistas continúen con propuestas a medida y llamadas telefónicas en profundidad.**
+
+Según traslada el autor a partir del testimonio del interesado, la agencia logró contratos de clientes por £3,500 al mes y alcanzó un 35×ROI (datos transmitidos por el autor a partir de declaraciones, sin verificar).
+
+### Vincular ocho archivos centrales con Opus para cerrar el ciclo de planificación, implementación y validación en navegador｜@beamnxw
+
+> Publicación original: [@beamnxw](https://x.com/beamnxw/status/2117972857632227765)
+
+Al iterar software en solitario, un desarrollador independiente busca mantener un ritmo ágil sin desorientarse entre la definición de requisitos, la codificación y la validación en pantalla.
+
+Sintetiza y gestiona ocho archivos centrales de especificación, repartiendo con claridad los roles de PLANNER, BUILDER y EVALUATOR en distintas sesiones. **Estandariza el contexto con el mismo conjunto de ocho archivos para que los agentes se coordinen por turnos entre sesiones y ejecuten la validación automatizada en el navegador.**
+
+Según relata el autor, este método estructura de manera eficaz las iteraciones individuales de desarrollo, aunque las mejoras de productividad y el rendimiento práctico no han sido verificados.
+
+### Configurar un Bot de compras para recopilar cupones de reembolso y llamar a tiendas locales para comparar precios mínimos｜@BrianRoemmele
+
+> Publicación original: [@BrianRoemmele](https://x.com/BrianRoemmele/status/2118061832208547855)
+
+Antes de adquirir productos de importe elevado, el comprador busca averiguar el precio final definitivo con todos los descuentos posibles, sin revisar minuciosamente las condiciones de reembolso ni perder el tiempo llamando a establecimientos uno por uno.
+
+Encarga a un Bot de compras rastrear cupones y vías de reembolso por toda la red, además de realizar llamadas directas y autónomas a comercios locales para contrastar el stock y los precios mínimos rebajados. **Automatiza con el Bot la búsqueda de promociones ocultas y las llamadas de consulta a tiendas físicas, consolidando con precisión el desembolso neto final.**
+
+Según la comunicación promocional oficial, este flujo agiliza notablemente el proceso comparativo de compras, aunque el ahorro efectivo obtenido y la calidad del servicio telefónico no han sido verificados.
+
+### Delimitar el alcance y las restricciones de llamadas del Bot para atención al cliente en EE. UU.｜@MTSlive
+
+> Publicación original: [@MTSlive](https://x.com/MTSlive/status/2118053076737417240)
+
+Desea recurrir a un Bot para gestionar llamadas rutinarias con servicios de atención al cliente en EE. UU., pero teme que unos límites funcionales ambiguos deriven en errores operativos.
+
+Recopila la información oficial divulgada sobre las capacidades telefónicas del asistente, detallando los supuestos de soporte aplicables en EE. UU. y las autorizaciones previas necesarias. **Define con exactitud el alcance de la tarea y el marco de autorización antes de emitir órdenes de llamada por voz**, impidiendo que el Bot asuma compromisos no autorizados o se desoriente en interacciones de voz complejas.
+
+Según traslada el autor, esta funcionalidad de llamadas delegadas solo se encuentra disponible para supuestos específicos en EE. UU., de modo que la tasa efectiva de comunicación y la solvencia en las respuestas no han sido verificadas.
+
+### Integrar el probador virtual Try On con modificaciones en lenguaje natural y compra en la misma pantalla｜@XFreeze
+
+> Publicación original: [@XFreeze](https://x.com/XFreeze/status/2118094931285954644)
+
+Al adquirir prendas de vestir, busca comprobar de inmediato el efecto real sobre su propio cuerpo sin alternar sucesivamente entre páginas de catálogo, probadores y pasarelas de pago.
+
+Prueba la función preliminar de Try On subiendo un único selfi y retocando estilos, siluetas y cortes directamente mediante lenguaje natural. **Unifica el probador virtual a partir de un selfi, la modificación mediante lenguaje natural y el pago final en un flujo continuo sobre la misma pantalla**, acortando de forma radical el recorrido desde la selección hasta la conversión.
+
+Según datos oficiales, esta prestación de prueba y compraventa sigue en fase preliminar y no se ha implementado de modo general; los detalles visuales de la grabación original no han sido verificados en profundidad.
+
+### Extraer rasgos de estilo y contrastar datos para redactar artículos extensos con Muse｜@7998l201
+
+> Publicación original: [@7998l201](https://x.com/7998l201/status/2117804037214998562)
+
+Busca reproducir el estilo distintivo de un autor determinado en publicaciones y textos extensos, sin que el resultado derive en clichés intrascendentes o hechos inventados.
+
+Reúne ejemplos variados de publicaciones abiertas para aislar 10 patrones de redacción esenciales con citas del contenido original. **Aplica como doble directriz en Muse la pauta de estilo y una tabla comparativa de hechos contrastados**, dejando en manos de la revisión humana la comprobación final de los datos clave.
+
+Según explica el autor, analizó más de 20 textos y seleccionó 12 para conformar el repositorio de estilo; si bien probó directamente la generación, la regularidad del sistema en conjunto no ha sido verificada.
+
+### Estandarizar la selección de herramientas para Bot mediante una auditoría de siete pasos para evitar el raspado web ineficiente｜@Michael_Fenech_
+
+> Publicación original: [@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2117944195470316014)
+
+Al extraer información, busca la alternativa más ligera posible, pero tropieza con frecuencia con que el Bot pasa por alto conectores disponibles y recurre de inmediato a navegadores pesados para raspar páginas.
+
+Define un proceso de auditoría de siete fases listo para que el jefe de personal lo ejecute, evaluando prioridades entre costes de API, procesos de autenticación y extracción directa. **Habilita el raspado mediante navegador web exclusivamente cuando se comprueba que no existen conectores estructurados**, erradicando consultas poco eficientes y gasto innecesario de recursos.
+
+Según el autor, este método de auditoría sirve para homogeneizar los criterios de adopción técnica en el equipo, tratándose de una propuesta metodológica cuyo impacto cuantitativo no ha sido verificado.
+
+### Actualizar GBA a la versión 0.1.2 para renovar la barra flotante en macOS y el reenvío a WeChat｜@cgnot996
+
+> Publicación original: [@cgnot996](https://x.com/cgnot996/status/2117788537072583063)
+
+Desea activar Grok Bot cómodamente en el escritorio de macOS para interactuar en sesiones sin tener que alternar entre WeChat y el resto de ventanas de trabajo.
+
+Con la actualización 0.1.2 de Grok Bot Anywhere (GBA), revisa a fondo el circuito de reenvío, los avisos de avance de tareas y el campo flotante global de texto. **Agrupa el acceso de entrada en una barra flotante nativa que reenvía el contenido directamente a WeChat**, mitigando la fricción de cambiar de ventana.
+
+Según su experiencia personal, la agilidad de respuesta en la ventana flotante de macOS y las pausas en el reenvío a WeChat quedaron corregidas, mejoras ya incorporadas en la versión 0.1.2.
+
+### Coordinar más de 60 Bot para automatizar por completo las operaciones de una empresa unipersonal｜@notaboutdollar
+
+> Publicación original: [@notaboutdollar](https://x.com/notaboutdollar/status/2118079664237301901)
+
+Busca gestionar el ciclo completo de una empresa unipersonal con un gasto mínimo en personal, sin verse desbordado por los trámites cotidianos de desarrollo, operaciones y contabilidad.
+
+Estructura la cadena de valor según responsabilidades y crea un equipo virtual con perfiles de COO, desarrollo, CRM, gestión de redes sociales y CFO. **Delega las principales líneas operativas en distintos Bot mediante directrices minuciosas por función para trabajar coordinadamente**, estableciendo puntos de validación en las etapas decisivas.
+
+Según declara el autor, el proyecto mantiene toda la operativa activa coordinando más de 60 Bot con un coste mensual de R$1400, aunque los resultados de producción reales y la conversión no han sido verificados.
+
+### Delegar en Bot el diseño, desarrollo y mantenimiento continuo de la web oficial del producto y el portal de aprendizaje｜@cgnot996
+
+> Publicación original: [@cgnot996](https://x.com/cgnot996/status/2117860145225154782)
+
+Desea actualizar y evolucionar de forma continua su web oficial de producto y la plataforma de aprendizaje, pero cuenta con poco tiempo personal para compaginar el rediseño diario con las tareas de mantenimiento.
+
+Establece un contexto de proyecto unificado y delega por completo tanto el sitio web grok-app.com como la plataforma formativa bot.fmcat.top en Bot. **Encomienda el diseño de páginas, las iteraciones de código y la supervisión rutinaria en producción a un mismo Bot en ciclo cerrado**, prescindiendo de crear a mano plantillas de frontend.
+
+Según la experiencia personal del autor, ambas páginas operan de manera estable bajo el control de Bot, si bien el autor matiza que el grado de rigor metodológico aún dista del estándar de Kin.
+
+### Vincular AGENTS.md y worktree mediante Grok Build para integrarlos en la canalización de CI｜@de1lymoon
+
+> Publicación original: [@de1lymoon](https://x.com/de1lymoon/status/2118056714561900964)
+
+Busca utilizar Build para que los Bot programen código en paralelo a imagen de un equipo de ingenieros, evitando la falta de orden multitarea y la desarticulación con las comprobaciones automáticas.
+
+Establece las directrices técnicas en el archivo AGENTS.md en la raíz del proyecto, planificando tareas antes de aislar ramas paralelas de desarrollo con worktree. **Coordina de manera unificada la ejecución de grok -p CI para automatizar validaciones y compilaciones**, velando por la calidad de las confirmaciones y consolidando el balance final.
+
+Según señala el autor, este flujo técnico se encuentra en fase de pruebas beta, por lo que la estabilidad real del trabajo simultáneo con múltiples ramas no ha sido verificada.
+
+### Configurar un correo dedicado con plus-alias e implementar compuertas de aprobación humana para envíos salientes｜@0xShoopy
+
+> Publicación original: [@0xShoopy](https://x.com/0xShoopy/status/2117993417430925414)
+
+Desea incorporar la gestión de recibos financieros, boletines de actualidad y borradores de publicaciones a sus tareas automatizadas diarias, eludiendo el riesgo de reputación por envíos imprevistos.
+
+Habilita un buzón de correo independiente y exclusivo para el Bot, aplicando plus-alias para etiquetar temáticas y clasificar las rutas de entrada. **Establece una estricta fase de elaboración de borradores con compuertas de validación humana previa para cualquier comunicación saliente**, impidiendo que ningún mensaje se envíe al exterior sin aprobación manual.
+
+Según indica el autor, los prompts íntegros están accesibles en las respuestas del hilo y operan como rutinas individuales, sin que se hayan comprobado una a una las tasas de acierto en cada fase.

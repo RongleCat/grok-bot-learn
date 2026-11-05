@@ -1235,3 +1235,193 @@ Wanting to establish an end-to-end growth funnel for live events and contact out
 A closed loop was chained together spanning trend scanning, event planning, Luma registrations, and list outreach, with core project briefs pre-embedded directly into each Bot configuration. **Key outreach decisions were piped into Slack for human approval, blocking further execution until explicitly approved.**
 
 According to the author's retelling, subsequent handoffs no longer require re-explaining the brief (demo unverified).
+
+### Orchestrate a Six-Role Bot Army to Build a Production AI Video Site in the Cloud from Scratch｜@KinGao476942
+
+> Original post: [@KinGao476942](https://x.com/KinGao476942/status/2117853896580456514)
+
+The developer wanted to build a complete AI video website from scratch featuring user registration, quota billing, and Stripe payments, without being tethered to a computer manually coding the tedious frontend and backend stack.
+
+A master Bot was configured to coordinate and dispatch standard job descriptions across six specialized roles, allowing the developer to orchestrate cross-functional tasks entirely via mobile conversations. **Tedious coding and interface integration were delegated to the individual role Bots, while the human only defined business boundaries and gave final approval at key launch milestones.**
+
+According to the author, running through the entire end-to-end process took approximately 3 to 5 hours (author-reported timeline / unverified), and related follower growth and revenue figures were also self-reported and unverified.
+
+### Coordinate a Claude Assistant Team in Parallel Threads to Launch Digital Products｜@aiedge_
+
+> Original post: [@aiedge_](https://x.com/aiedge_/status/2118005624479052232)
+
+When preparing to launch a new digital product, the creator wanted to advance competitor research, conversion copywriting, and sales page construction in parallel without losing focus by constantly switching within a single chat window.
+
+A manager session was established to oversee overall progress and assign dedicated helper subagents to tackle specific tasks independently. **By leveraging Side Chat to have each subagent generate deliverables in parallel, the main session focused solely on pacing the overall workflow and merging results.**
+
+Based on personal experience, running multiple assistants in parallel significantly speeds up launch preparations, though feature support levels vary across subscription tiers (unverified).
+
+### Assign Eight Agents to Render an 83-Second Offline Animation with Pure three.js Code｜@0xMovez
+
+> Original post: [@0xMovez](https://x.com/0xMovez/status/2117987052419428576)
+
+The creator wanted to produce a 3D vector animation short that plays completely offline purely through code, without calling any video generation models.
+
+Powered by Fable 5.5, eight Agents collaborated to write pure three.js code, rendering 39 storyboard shots across roughly 1,992 frames and configuring synthesized voice audio. **By decoupling the storyboard shots across the eight Agents for parallel coding, the workflow ultimately assembled and exported a single standalone HTML file.**
+
+According to the author's account, the entire process took about 3 hours to render an 83-second animation (work hours and finished footage data are self-reported / unverified).
+
+### Build a Five-Step Automated Publishing Pipeline for WeChat Official Account with WorkBuddy｜@liyue_ai
+
+> Original post: [@liyue_ai](https://x.com/liyue_ai/status/2117945151431864391)
+
+Operating a WeChat Official Account involves an exhaustive daily grind of topic scouting, material organization, typesetting, and publishing, where traditional manual drafting takes too long to sustain consistent daily updates.
+
+WorkBuddy was configured to automatically initiate topic selection at 8:30 AM every morning, sequentially querying reference databases, drafting the initial copy, and converting it into formatted HTML layouts. **By offloading heavy preliminary research and formatting assembly to the automated pipeline, human involvement is reserved strictly for final review and publishing approval.**
+
+According to the author's account, a single manuscript previously averaged around 4.5h to produce, whereas this pipeline leaves human effort almost entirely for editorial refinement and publishing sign-off (self-reported / unverified).
+
+### Organize a Nine-Zone Bot Town Playbook and Dispatch Tasks with a Master Prompt｜@czzzzzzJ_
+
+> Original post: [@czzzzzzJ_](https://x.com/czzzzzzJ_/status/2117827405838487818)
+
+Faced with an overwhelming variety of Bots and unsure how to select roles on demand, the creator wanted to establish a foundational architecture to explore practical scenarios without descending into fragmented chaos.
+
+One hundred practical playbooks were categorized across nine functional zones alongside a standardized four-piece foundational stack, with a top-level master prompt configured as the dispatch hub. **The master prompt is strictly constrained to analyzing requirements and delegating tasks, never overstepping to directly execute concrete business deliverables.**
+
+According to the author's account, the nine-zone directory and individual workflows have undergone hands-on testing (catalog and test results self-reported / unverified; the computing power access zone has no official promotion).
+
+### Build an Engineered Grok Bot Team: Chief of Staff, Specialists, Skills, and Routines｜@0xsmerkzz
+
+> Original post: [@0xsmerkzz](https://x.com/0xsmerkzz/status/2118073227826147530)
+
+The author wanted to utilize Grok Bot as an organized team with clear division of labor and collaboration, rather than treating it merely as a casual, single-window chat interface.
+
+By systematically auditing official underlying capabilities, the team was organized strictly following the hierarchy of "Chief of Staff → Business Specialist → Skill → Routine". **Using a single standardized tier to institutionalize dedicated capabilities and automated workflows solidifies unstructured chats into steady-state business orchestration.**
+
+According to the author's tutorial, this engineering architecture streamlines multi-Bot coordination, though hands-on performance for each role reflects tutorial design (outcomes unverified).
+
+### Deploy a Dual-Path Academic Literature Retrieval Agent with Prompts to Accelerate Thesis Proposals｜@DrRabbitAI
+
+> Original post: [@DrRabbitAI](https://x.com/DrRabbitAI/status/2117952642593017862)
+
+During graduation thesis defense prep and project proposal stages, graduate researchers need to rapidly survey cutting-edge literature without spending weeks sifting through paper repositories one by one.
+
+The author designed a dual-track architecture pairing an integrated Agent directly connected to academic databases with an autonomous search API integration, complemented by structured multi-scenario prompt templates. **Broad research topics are decomposed into progressive search instructions, allowing the Agent to retrieve targeted key papers and extract core methodological takeaways.**
+
+According to the author's demonstration, this solution quickly surfaced highly relevant papers during a thesis proposal showcase; the number of retrieved papers and claimed accuracy are based on author claims (unverified).
+
+### Create an Outreach Bot Hiring Package to Help a Restaurant Agency Close High-Ticket Clients｜@0xNotFounder
+
+> Original post: [@0xNotFounder](https://x.com/0xNotFounder/status/2117900255400222808)
+
+A restaurant marketing agency wanted to scale cold outreach acquisition without wasting expensive sales reps' time on blind preliminary icebreaking.
+
+The agency customized job performance profiles and standardized hiring package prompts for an outreach Bot, delegating prospect discovery and initial engagement entirely to the Bot. **Human team members step in only after the Bot establishes contact and qualifies interest, following up with tailored proposals and in-depth phone calls.**
+
+According to the author's relay of the practitioner's account, the agency secured client retainers of £3,500 per month and achieved a 35×ROI (relayed claims / unverified).
+
+### Connect Eight Core Files with Opus to Complete Planning, Implementation, and Browser Acceptance｜@beamnxw
+
+> Original post: [@beamnxw](https://x.com/beamnxw/status/2117972857632227765)
+
+When iterating software products solo, an indie developer wanted to sustain agile development cycles without descending into chaos between requirements planning, code implementation, and UI acceptance.
+
+The developer distilled and maintained eight core specification files, clearly assigning PLANNER, BUILDER, and EVALUATOR roles across multiple sessions. **Using this shared eight-file asset standardizes context, enabling agents in different sessions to relay sequentially and complete automated acceptance directly in the browser.**
+
+According to the author's account, this workflow effectively disciplines solo development iterations, though specific efficiency metrics and practical gains remain unverified.
+
+### Configure a Shopping Bot to Gather Coupons and Call Local Stores to Compare Bottom Prices｜@BrianRoemmele
+
+> Original post: [@BrianRoemmele](https://x.com/BrianRoemmele/status/2118061832208547855)
+
+Before purchasing big-ticket items, consumers want to determine the lowest bottom-line price after all discounts without manually sifting through rebate terms or calling brick-and-mortar stores one by one.
+
+The shopping Bot searches web-wide for available coupons and cashback channels, autonomously calling local merchants to verify inventory and discounted bottom-line prices. **Offloading hidden perks discovery and physical store phone inquiries to the automated Bot workflow aggregates final net expenditures cleanly.**
+
+According to official promotional statements, this solution dramatically streamlines shopping comparison pipelines, though actual savings and phone calling experiences remain unverified.
+
+### Clarify Functional Boundaries and Call Restrictions for US Bot Phone Agent Capabilities｜@MTSlive
+
+> Original post: [@MTSlive](https://x.com/MTSlive/status/2118053076737417240)
+
+Users want to delegate mundane tasks to Bot by having it place calls to US customer service lines, but worry that vague capability boundaries could cause unexpected errors.
+
+The author summarized officially disclosed calling capabilities, detailing applicable US-specific service scenarios and required prerequisite permissions. **Strictly defining task scopes and authorization boundaries before issuing voice calling instructions prevents the Bot from making unauthorized commitments or getting lost during complex voice interactions.**
+
+According to the author's summary, this calling feature is currently limited to select US service scenarios, and actual call connection rates and conversational reliability remain unverified.
+
+### Connect Try On Virtual Fitting with Natural Language Restyling and On-Screen Checkout｜@XFreeze
+
+> Original post: [@XFreeze](https://x.com/XFreeze/status/2118094931285954644)
+
+Shoppers want to preview how clothes look on their actual bodies in real time without constantly toggling between browsing, fitting, and checkout pages.
+
+Testing the pre-release Try On feature, the user uploaded a single selfie and used natural language to tweak styles, silhouettes, and cuts directly. **Consolidating selfie virtual fitting, natural language restyling, and final purchase into a closed loop on the same screen dramatically compresses the browsing-to-conversion funnel.**
+
+According to official statements, this virtual try-on and shopping feature is still in pre-release and not yet fully rolled out; demo video details from the original post remain unverified.
+
+### Extract Writing Style Profiles and Anchor Hard Facts to Draft Long-Form Content with Muse｜@7998l201
+
+> Original post: [@7998l201](https://x.com/7998l201/status/2117804037214998562)
+
+Creators want to emulate a specific author's distinctive tone to write posts and long-form articles without generating empty clichés or fabricated facts.
+
+By broadly sampling publicly reposted content, the author distilled 10 core writing traits backed by verbatim evidence. **Feeding both the style profile and a hard-fact reference sheet as dual constraints into Muse leaves human reviewers responsible for final verification of key facts.**
+
+According to the author's account, over 20 articles were sampled and 12 curated into a feature library; while generation performance was tested firsthand, overall stability remains unverified.
+
+### Standardize Bot Tool Selection with a Seven-Step Audit to Replace Inefficient Browser Scraping｜@Michael_Fenech_
+
+> Original post: [@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2117944195470316014)
+
+Developers want the lightest possible method to extract data, but frequently encounter Bots bypassing ready-made connectors to resort to brute-force browser scraping.
+
+The author formalized a seven-step tool selection audit that can be executed directly by the Chief of Staff, prioritizing and weighing API, authentication, and web-scraping costs. **Browser scraping is permitted only after confirming that structured connectors are unavailable, eliminating inefficient invocations and wasted resources.**
+
+According to the author, this audit methodology standardizes technical selection for the team as a methodological framework, though specific optimization gains and returns remain unverified.
+
+### Upgrade GBA to 0.1.2 to Overhaul macOS Floating Input and WeChat Forwarding｜@cgnot996
+
+> Original post: [@cgnot996](https://x.com/cgnot996/status/2117788537072583063)
+
+Users wanted to seamlessly invoke Grok Bot on the macOS desktop without fragmented context-switching between WeChat and desktop workspaces.
+
+In Grok Bot Anywhere (GBA) version 0.1.2, forwarding pipelines, task progress indicators, and the global floating input bar were thoroughly overhauled. **Unifying the input portal into a native floating window and forwarding seamlessly to WeChat drastically reduces screen-switching friction.**
+
+Based on personal experience, macOS floating input responsiveness and WeChat forwarding lag have been resolved, and these improvements have shipped in version 0.1.2.
+
+### Orchestrate 60+ Bots to Automate End-to-End Operations for a One-Person Company｜@notaboutdollar
+
+> Original post: [@notaboutdollar](https://x.com/notaboutdollar/status/2118079664237301901)
+
+An entrepreneur wanted to run a closed-loop solo enterprise at minimal labor costs without drowning in development, operations, and financial chores.
+
+The business workflow was decomposed into role-based responsibilities, establishing a virtual roster covering COO, development, CRM, social media publishing, and CFO functions. **Delegating core business pipelines entirely to specialized Bots using granular role instructions drives collaborative execution, backed by staged checkpoints at key milestones.**
+
+According to the author's account, orchestrating 60+ Bots sustains full operational flow while keeping monthly costs at R$1400, though actual output and conversion performance remain unverified.
+
+### Entrust Bot to Fully Design, Develop, and Maintain Product Websites and Learning Hubs｜@cgnot996
+
+> Original post: [@cgnot996](https://x.com/cgnot996/status/2117860145225154782)
+
+The creator wanted to continuously iterate personal product landing pages and learning portals, but struggled with limited bandwidth to juggle daily revamps and maintenance.
+
+By consolidating unified context and project specifications, management of the grok-app.com official site and the bot.fmcat.top learning hub was handed over entirely to Bot. **Handling UI design, code iteration, and live routine inspections within a single Bot eliminates the need to manually build frontend scaffolding.**
+
+Based on personal experience, both sites are currently maintained steadily by Bot, though the author notes the process is not yet as rigorous as Kin's methodology.
+
+### Connect AGENTS.md and worktree via Grok Build to Integrate into CI Pipelines｜@de1lymoon
+
+> Original post: [@de1lymoon](https://x.com/de1lymoon/status/2118056714561900964)
+
+Developers wanted to use Build to let Bots develop code in parallel like an engineering squad, while avoiding chaotic multi-task coordination and disconnects from automated verification.
+
+An AGENTS.md file in the project root defines development guidelines, planning tasks before leveraging worktree to isolate multiple branches for parallel development. **Centrally dispatching grok -p CI to execute automated verification and builds safeguards commit quality and consolidates final merges.**
+
+According to the author, this engineering pipeline is currently in beta testing, and actual stability across concurrent multi-branch workflows remains unverified.
+
+### Set Up a Dedicated Mailbox and plus-alias Pipeline with Human Approval Gates for Outbound Content｜@0xShoopy
+
+> Original post: [@0xShoopy](https://x.com/0xShoopy/status/2117993417430925414)
+
+The creator wanted to automate daily routines for financial receipt archiving, industry digests, and tweet drafts without taking on reputational risks from accidental outbound sends.
+
+A dedicated standalone mailbox was registered for the Bot, using plus-alias routing to separate operational tags for targeted forwarding. **Enforcing strict draft generation and human approval gates on all outbound content ensures nothing is sent without manual review.**
+
+According to the author, the complete prompts are published in the replies and run as personal routines, though precise match rates across individual pipeline stages have not been independently verified.
