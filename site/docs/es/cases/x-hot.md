@@ -1426,3 +1426,53 @@ Desea incorporar la gestión de recibos financieros, boletines de actualidad y b
 Habilita un buzón de correo independiente y exclusivo para el Bot, aplicando plus-alias para etiquetar temáticas y clasificar las rutas de entrada. **Establece una estricta fase de elaboración de borradores con compuertas de validación humana previa para cualquier comunicación saliente**, impidiendo que ningún mensaje se envíe al exterior sin aprobación manual.
 
 Según indica el autor, los prompts íntegros están accesibles en las respuestas del hilo y operan como rutinas individuales, sin que se hayan comprobado una a una las tasas de acierto en cada fase.
+
+### Aplicar el flujo de sustitución en seis pasos para evitar conflictos y acumulación de reglas｜@Michael_Fenech_
+
+> Publicación original: [@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2118306331514019882)
+
+Desea optimizar de forma continua las instrucciones y rutinas de sus Bot, evitando que las reglas nuevas se acumulen sobre las antiguas y generen posibles conflictos o sobrecostes de procesamiento.
+
+El autor configuró un procedimiento de mantenimiento de seis pasos para el Bot Chief of Staff: sustituir reglas existentes en lugar de apilar instrucciones, buscar versiones obsoletas o contradictorias en los recursos accesibles, proponer el traslado de archivos superados a un archivo fechado sin borrar ni archivar nada sin aprobación previa, mantener un índice de versiones como única fuente de verdad, verificar tras cada cambio aprobado las instrucciones que realmente se cargan señalando lo no inspeccionable, y emitir un informe detallando sustituciones, reglas activas, conflictos y autorizaciones pendientes. **Limitar la actualización de instrucciones a la sustitución estricta de reglas con auditoría de conflictos y validación de archivos cargados en ciclo cerrado** evita el crecimiento descontrolado de directrices.
+
+Según el autor, este flujo busca impedir que se lean reglas caducadas junto con las nuevas; la auditoría mensual propuesta es una sugerencia personal que nunca debe programarse sin aprobación expresa, no se realizaron mediciones reales de costes y el ahorro efectivo no ha sido verificado.
+
+### Vincular el botón de acción del iPhone a apps del sistema para llamadas, suscripciones y compras｜@ScottyBeamIO
+
+> Publicación original: [@ScottyBeamIO](https://x.com/ScottyBeamIO/status/2118329482842866011)
+
+Desea activar un asistente en el iPhone con una sola pulsación para resolver gestiones cotidianas, eludiendo las limitaciones del asistente nativo y la fragmentación entre aplicaciones.
+
+Asigna el botón de acción del iPhone mediante Atajos directamente al chat de voz de Grok Bot y concede acceso en los ajustes de Grok Bot a las aplicaciones nativas (Calendario, Recordatorios, Contactos, Ubicación, Alarmas y Casa). Asimismo, establece una lista de seis usos: realizar llamadas para reservas o gestiones con operadoras, ejecutar la plantilla "Find unused subscriptions" para suprimir servicios no utilizados, comparar precios de productos sin comprar de inmediato, y habilitar un correo propio para resúmenes semanales de boletines cada viernes. **Iniciar el chat de voz mediante el botón de acción y autorizar de forma individual las apps del sistema centraliza llamadas, control de suscripciones, comparativas y resúmenes en comandos unificados**.
+
+Según indica el autor, Grok Bot debe permanecer abierto en primer plano para poder comunicarse con estas apps nativas, y la lista responde a una configuración particular sin constituir una garantía oficial de cobertura global; además, el autor advierte expresamente sobre la función Vault: el Bot no accede al número de tarjeta, pero los datos guardados se autorrellenan en el pago sin confirmación, por lo que desaconseja guardar la tarjeta si se exige autorización en cada compra, sin que la eficacia real de las llamadas haya sido verificada.
+
+### Personalizar formas y colores con el editor de avatares de GBA y sincronizarlos con Grok Bot｜@cgnot996
+
+> Publicación original: [@cgnot996](https://x.com/cgnot996/status/2118573037851414910)
+
+Desea personalizar el avatar y la apariencia visual de sus Bot en el escritorio, superando la rigidez de los ajustes oficiales y la expiración de funciones temáticas temporales.
+
+Tras la versión 0.1.3 (véase [publicación original de #177](https://x.com/cgnot996/status/2118304718204395884)), que habilitó la sincronización del avatar configurado en Grok Bot hacia GBA y añadió el diseño festivo de calabaza de Halloween, Grok Bot Anywhere (GBA) v0.1.4 incorporó un editor integral de avatares. En GBA, el usuario selecciona el Bot, accede a "Más" -> "Modificar avatar" y elige la forma geométrica y cualquier color deseado. **Definir la forma y colores personalizados desde el editor de avatares de GBA permite reflejar los cambios visuales de forma sincronizada en Grok Bot**.
+
+Según relata el autor, en la versión 0.79.2 de Grok Bot ya no es posible seleccionar el avatar de calabaza de Halloween (quienes lo configuraron con anterioridad lo conservan si no lo sustituyen), si bien la retirada en la 0.79.2 es una afirmación del autor no constatada en registros oficiales; el enlace de descarga no se facilitó en la publicación (mencionado solo en anuncios de la comunidad de lanzamiento) y la fidelidad de renderizado en diferentes plataformas no ha sido verificada.
+
+### Crear un equipo de cinco Bot bajo el principio de tarea única y validación limpia en tres ejecuciones｜@hammertime_one
+
+> Publicación original: [@hammertime_one](https://x.com/hammertime_one/status/2118399503510196279)
+
+Desea delegar operaciones multitarea complejas en agentes de software, evitando concentrar múltiples cometidos en un único Bot para eludir errores en cascada y pérdidas de control.
+
+Tras analizar las guías de mayor repercusión, el autor recopiló consensos fundamentales: un cometido y una sola restricción por Bot, considerar las instrucciones como contratos contractuales, desvincular al creador del revisor, prohibir la programación de rutinas defectuosas, exigir autorización humana para publicar, enviar, gastar o borrar, y aplicar la prueba de tres ejecuciones limpias (supervisión, corrección única y ejecución autónoma) antes de automatizar calendarios. También subraya que todos los Bot comparten el mismo equipo y sesiones web, existiendo el aislamiento únicamente en las directrices; el autor propone un equipo de cinco perfiles: Chief of Staff, Researcher, Writer, Reviewer y Publisher, donde solo el Reviewer valida y el Publisher nunca actúa sin consentimiento humano directo. **Asignar funciones individuales acotadas y segregar la creación de la revisión tras superar tres pruebas sin fallos garantiza una automatización ordenada**.
+
+Según señala el autor, esta propuesta constituye una síntesis metodológica de terceros y no una reproducción de laboratorio; en el texto no se citan los títulos ni enlaces de las guías aludidas, el autor resalta que no existen tasas de fallo objetivas publicadas en el sector y la plantilla de cinco agentes es una recomendación propia, por lo que la estabilidad real de la colaboración entre múltiples agentes no ha sido verificada.
+
+### Gestionar la bóveda de Obsidian con un Bot dedicado y compuertas humanas para borrar o enlazar｜@Jackywine
+
+> Publicación original: [@Jackywine](https://x.com/Jackywine/status/2118562780383216113)
+
+Desea organizar miles de notas y enlaces no resueltos en su repositorio de Obsidian mediante asistencia automatizada, eludiendo alteraciones involuntarias o la degradación de su base de conocimiento personal.
+
+Bajo la premisa de "el archivo antes que la aplicación (file over app)", implementa un Bot exclusivo para la administración de la bóveda junto con habilidades complementarias. La producción del modelo se aísla de manera estricta en el directorio `AI outputs/` para no mezclarla con notas manuscritas; la habilidad de notas huérfanas funciona por defecto en modo diagnóstico de solo lectura, requiriendo validación humana ante operaciones críticas como eliminar ficheros o enlazar masivamente. El autor facilitó el repositorio de extensiones [jackywine-digital-garden-skills](https://github.com/Jackywine/jackywine-digital-garden-skills) y la página de instalación [x.ai/bot](https://x.ai/bot/gdq_d-d9OCnnREs3VwGdV). **Restringir el Bot del repositorio a funciones diagnósticas en modo lectura aislando salidas y exigiendo aprobación previa para borrados y enlaces protege la información**.
+
+Según el autor, la descripción del título sobre un "segundo cerebro evolutivo y totalmente automatizado" constituye una aspiración conceptual y no una cualidad probada, los datos cuantitativos (5661 notas, unas 5488 en Markdown y alrededor de 8000 enlaces pendientes) proceden de diagnósticos de su bóveda privada, los comandos de instalación no fueron probados en entornos locales y los resultados prácticos en bóvedas de distinta envergadura no han sido verificados.
