@@ -1425,3 +1425,44 @@ The creator wanted to automate daily routines for financial receipt archiving, i
 A dedicated standalone mailbox was registered for the Bot, using plus-alias routing to separate operational tags for targeted forwarding. **Enforcing strict draft generation and human approval gates on all outbound content ensures nothing is sent without manual review.**
 
 According to the author, the complete prompts are published in the replies and run as personal routines, though precise match rates across individual pipeline stages have not been independently verified.
+
+### Rule Replacement and Version Index Audit | @Michael_Fenech_
+
+> Original post: [@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2118306331514019882)
+
+Scenario: Prevent overlapping and conflicting rules when updating Grok Bot instructions.
+Method: The author proposes a 6-step method: full replacement instead of appending; conflict scanning; archiving old versions (deletion/archival requires personal approval); maintaining a single source of truth and version index; verifying actual loading after approval while flagging untestable items; and reporting replacements, active rules, conflicts, and pending approvals. Proposes monthly audits.
+Boundary: The author notes higher token consumption; scheduling without approval is strictly prohibited; token consumption has not been independently tested by this site.
+
+### iPhone Voice Shortcut Direct Access and App Checklist | @ScottyBeamIO
+
+> Original post: [@ScottyBeamIO](https://x.com/ScottyBeamIO/status/2118329482842866011)
+
+Scenario: Trigger Grok Bot and orchestrate system apps via the iPhone Action Button.
+Method: Path: Settings → Action Button → Shortcuts → Grok Bot → Start voice chat; authorize apps individually under Connected Apps in settings. Use cases listed by the author include proxy calls, unused subscription cancellation templates, price comparison without immediate purchase, and Friday digests via its own email.
+Boundary: Grok Bot must remain running on the phone. Author Vault warning: the bot cannot see card numbers, but saved cards autofill at checkout; do not save cards if per-transaction approval is needed. Regional availability and permissions vary by situation; this is not an unconditional official commitment.
+
+### Multi-Role Collaboration Structure and Manual Approval Safeguards | @hammertime_one
+
+> Original post: [@hammertime_one](https://x.com/hammertime_one/status/2118399503510196279)
+
+Scenario: Build a multi-bot team to divide and handle complex workflows.
+Method: Synthesizing 7 guides, the author proposes: one bot, one job, one constraint; prompt as contract; separate production from review. Recommends a 5-role team: Chief of Staff, Researcher, Writer, Reviewer, Publisher. Complete 3 clean runs before scheduling.
+Boundary: Synthesis by the author, not experimental replication. Publishing, sending, spending, and deleting strictly require manual approval. All bots share a single computer, and work boundaries must be clearly defined in instructions. Failure rates are not publicly reported according to the author.
+
+### Obsidian Local Knowledge Vault Management and Output Isolation | @Jackywine
+
+> Original post: [@Jackywine](https://x.com/Jackywine/status/2118562780383216113)
+
+Scenario: Manage thousands of Markdown notes using a dedicated Grok Bot.
+Method: Adhering to "file over app", the author deploys a vault manager bot. AI outputs are strictly isolated inside `AI outputs/`, never mixed directly into manual notes. Public resources include the [Prompt Template](https://x.ai/bot/gdq_d-d9OCnnREs3VwGdV), [Garden Skill](https://github.com/Jackywine/jackywine-digital-garden-skills), and [Obsidian Skill](https://github.com/kepano/obsidian-skills).
+Boundary: Strictly read-only diagnosis; orphan note skill defaults to read-only; note deletion and batch link addition require manual approval. Full automation claims reflect author statements and are unverified by this site.
+
+### GBA Desktop Assistant Avatar Sync and Appearance Customization | @cgnot996
+
+> Original post: [@cgnot996](https://x.com/cgnot996/status/2118573037851414910)
+> Second link: [@cgnot996](https://x.com/cgnot996/status/2118304718204395884)
+
+Scenario: Sync and customize assistant avatars via Grok Bot Anywhere (GBA).
+Method: According to the author's releases, v0.1.3 enables syncing avatars configured in Grok Bot, while v0.1.4 introduces an avatar editor. Path: select Bot → More → Change avatar, allowing custom shapes and arbitrary colors.
+Boundary: Versions and features follow the author's release statements. Normal rendering on Grok Bot is the author's claim and has not been verified by this site.

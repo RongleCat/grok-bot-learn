@@ -1425,3 +1425,44 @@ Desejo de integrar arquivamento de comprovantes financeiros, resumos de mercado 
 Criou-se uma conta de e-mail exclusiva para o Bot, empregando o recurso plus-alias para categorizar marcadores operacionais e direcionar as mensagens. **A imposição de travas estritas de geração de rascunhos e aprovação humana mandatória para qualquer envio externo** impede que conteúdos sejam disparados sem checagem manual prévia.
 
 Segundo o autor, os prompts completos foram disponibilizados nas respostas e funcionam como rotinas pessoais, embora as taxas de assertividade nas etapas do fluxo não tenham sido verificadas item a item.
+
+### Substituição de regras e auditoria de índice de versão｜@Michael_Fenech_
+
+> Post original: [@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2118306331514019882)
+
+Cenário: Evitar sobreposição e conflito de regras ao atualizar instruções no Grok Bot.
+Método: O autor propõe um método em 6 etapas: substituição total em vez de anexar; detecção de conflitos; arquivamento de versões antigas (exclusão/arquivamento exige aprovação pessoal); manutenção de fonte única de verdade e índice de versões; verificação de carregamento após aprovação com marcação de itens não verificáveis; e relatório de substituições, regras ativas, conflitos e pendências. Propõe auditorias mensuais.
+Limites: O autor indica maior consumo de tokens; o agendamento sem aprovação é estritamente proibido; o consumo não foi verificado de forma independente por este site.
+
+### Atalho de voz direto no iPhone e checklist de aplicativos｜@ScottyBeamIO
+
+> Post original: [@ScottyBeamIO](https://x.com/ScottyBeamIO/status/2118329482842866011)
+
+Cenário: Acionar o Grok Bot e coordenar aplicativos do sistema pelo Botão de Ação do iPhone.
+Método: Caminho: Ajustes → Botão de Ação → Atalhos → Grok Bot → Iniciar conversa por voz; autorizar aplicativos individualmente em Apps Conectados nos ajustes. Os casos de uso listados pelo autor incluem chamadas por procuração, cancelamento de assinaturas sem uso por modelo, comparação de preços sem compra e resumos semanais via e-mail próprio.
+Limites: O app precisa continuar rodando no celular. Alerta de Vault do autor: o bot não vê números de cartão, mas cartões salvos preenchem automaticamente no checkout; não salve cartões se exigir aprovação por compra. Disponibilidade regional e permissões variam; não é compromisso oficial incondicional.
+
+### Estrutura de colaboração multifunção e salvaguardas de aprovação manual｜@hammertime_one
+
+> Post original: [@hammertime_one](https://x.com/hammertime_one/status/2118399503510196279)
+
+Cenário: Criar equipe multi-bot para dividir fluxos de trabalho complexos.
+Método: Sintetizando 7 guias, o autor propõe: um bot por função com uma única restrição; prompt como contrato; separação entre produção e revisão. Sugere equipe de 5 funções: Chefe de Gabinete, Pesquisador, Redator, Revisor e Publicador. Concluir 3 execuções limpas antes de agendar.
+Limites: Síntese do autor, não uma replicação experimental. Publicar, enviar mensagens, gastar dinheiro e excluir exigem aprovação manual obrigatória. Todos os bots compartilham um único computador, e os limites de trabalho devem ser claramente definidos nas instruções. Taxas de falha não divulgadas (afirmação do autor).
+
+### Gerenciamento de cofre local no Obsidian e isolamento de saídas｜@Jackywine
+
+> Post original: [@Jackywine](https://x.com/Jackywine/status/2118562780383216113)
+
+Cenário: Gerenciar milhares de notas em Markdown com o Grok Bot.
+Método: Seguindo o princípio de "arquivos acima de aplicativos", o autor designa um bot administrador. As saídas de IA são isoladas estritamente na pasta `AI outputs/`, sem mistura com notas manuais. Recursos públicos: [Modelo de prompt](https://x.ai/bot/gdq_d-d9OCnnREs3VwGdV), [Skill de jardim digital](https://github.com/Jackywine/jackywine-digital-garden-skills) e [Skill do Obsidian](https://github.com/kepano/obsidian-skills).
+Limites: Diagnóstico estritamente somente leitura; organização de notas órfãs é somente leitura por padrão, exigindo aprovação pessoal para exclusão ou adição em lote de links. A automação total é relato do autor não verificado por este site.
+
+### Sincronização de avatar e personalização visual no GBA Desktop｜@cgnot996
+
+> Post original: [@cgnot996](https://x.com/cgnot996/status/2118573037851414910)
+> Segundo link: [@cgnot996](https://x.com/cgnot996/status/2118304718204395884)
+
+Cenário: Sincronizar e personalizar avatares de assistentes pelo Grok Bot Anywhere (GBA).
+Método: Segundo publicações do autor, a v0.1.3 permite sincronizar avatares configurados no Grok Bot, e a v0.1.4 adiciona um editor de avatares. Caminho: selecionar Bot → Mais → Modificar avatar, permitindo escolher formas e cores personalizadas.
+Limites: Versões e recursos seguem os anúncios do autor. A renderização normal no Grok Bot é declaração do autor não verificada por este site.

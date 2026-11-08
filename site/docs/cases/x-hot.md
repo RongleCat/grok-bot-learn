@@ -1424,3 +1424,44 @@ Pages 功能上线后，许多团队面临不知该从何搭建的起步难题�
 为 Bot 申请专属独立邮箱，利用 plus-alias 区分业务标签进行针对性路由分流。**对所有准备外发的内容严格执行生成草稿与人工确认闸门**，未经人审绝不直接向外发出。
 
 据作者称完整提示词已在回复区公开，目前作为个人例程运转，各环节具体命中率未逐条核实。
+
+### 规则替换与版本索引审计｜@Michael_Fenech_
+
+> 原帖：[@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2118306331514019882)
+
+场景：更新 Grok Bot 指令时，避免新旧规则重叠与冲突。
+做法：作者提出六步法：全量替换而非追加；排查冲突；归档旧版（删除或归档需本人批准）；维护单一真源与版本索引；批准后核验实际加载并标出不可检项；报告替换、生效、冲突与待批准项。提议月度审计。
+边界：作者表示该流程可能增加 Token 消耗；未经审批严禁排程执行；本站未独立实测消耗。
+
+### iPhone 语音快捷直连与应用清单｜@ScottyBeamIO
+
+> 原帖：[@ScottyBeamIO](https://x.com/ScottyBeamIO/status/2118329482842866011)
+
+场景：通过 iPhone 操作按钮与系统 App 调度 Grok Bot。
+做法：路径为设置 → 操作按钮 → 快捷指令 → Grok Bot → 开始语音聊天；在设置连接 App 中逐项授权。作者列出的用法包括代打电话、模板取消闲置订阅、比价不买及自备邮箱周五汇总。
+边界：手机需保持运行该 App。作者发出 Vault 警告：Bot 看不到卡号，但结账会自动填已存卡；若需逐笔批准请勿存卡。地区权限因情况而异，非无条件官方承诺。
+
+### 多角色协作编制与人工审批底线｜@hammertime_one
+
+> 原帖：[@hammertime_one](https://x.com/hammertime_one/status/2118399503510196279)
+
+场景：构建多 Bot 团队以分治复杂流程。
+做法：作者综合七份指南提出：一个 Bot 只做一件事且设一条限制；Prompt 即合同；制作与审核分离。建议配置参谋长、研究员、作者、审阅者、发布者五人团队；净跑通三轮后再排程。
+边界：属作者综合归纳而非实验复现。发布、发送、花钱与删除均须人工批准；所有 Bot 共享同一台电脑，须在指令中明确工作边界；作者称业界未公布失败率。
+
+### Obsidian 本地知识库管库与输出隔离｜@Jackywine
+
+> 原帖：[@Jackywine](https://x.com/Jackywine/status/2118562780383216113)
+
+场景：借助 Grok Bot 管理数千篇 Markdown 笔记。
+做法：作者遵循“文件优先于软件”，配置管库 Bot；AI 产出统一隔离存放在 `AI outputs/` 目录，不与手写笔记混杂。公开资源见[提示词模板](https://x.ai/bot/gdq_d-d9OCnnREs3VwGdV)、[花园 Skill](https://github.com/Jackywine/jackywine-digital-garden-skills) 及 [Obsidian Skill](https://github.com/kepano/obsidian-skills)。
+边界：坚持只读诊断；孤儿笔记整理默认只读，删除与批量加链必须本人审批；全自动效果系作者自述，本站未验证。
+
+### GBA 桌面助手头像同步与外观定制｜@cgnot996
+
+> 原帖：[@cgnot996](https://x.com/cgnot996/status/2118573037851414910)
+> 第二链接：[@cgnot996](https://x.com/cgnot996/status/2118304718204395884)
+
+场景：通过 Grok Bot Anywhere (GBA) 同步与编辑助手头像。
+做法：作者发布 v0.1.3 支持 Grok Bot 配置头像后同步；v0.1.4 进一步提供头像编辑器，操作路径为选择 Bot → 更多 → 修改头像，可自选形状与任意颜色。
+边界：版本与功能基于作者发布口径。作者自述 Grok Bot 端能正常渲染，本站未独立实测。

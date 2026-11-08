@@ -1426,3 +1426,44 @@ Desea incorporar la gestión de recibos financieros, boletines de actualidad y b
 Habilita un buzón de correo independiente y exclusivo para el Bot, aplicando plus-alias para etiquetar temáticas y clasificar las rutas de entrada. **Establece una estricta fase de elaboración de borradores con compuertas de validación humana previa para cualquier comunicación saliente**, impidiendo que ningún mensaje se envíe al exterior sin aprobación manual.
 
 Según indica el autor, los prompts íntegros están accesibles en las respuestas del hilo y operan como rutinas individuales, sin que se hayan comprobado una a una las tasas de acierto en cada fase.
+
+### Reemplazo de reglas y auditoría de índice de versiones｜@Michael_Fenech_
+
+> Publicación original: [@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2118306331514019882)
+
+Escenario: Evitar solapamientos y conflictos de reglas al actualizar instrucciones en Grok Bot.
+Método: El autor propone un método de 6 pasos: reemplazo completo en lugar de anexar; detección de conflictos; archivado de versiones anteriores (la eliminación o archivado requiere aprobación personal); mantenimiento de una única fuente de verdad e índice de versiones; verificación de carga tras aprobación señalando partes no verificables; y reporte de sustituciones, reglas activas, conflictos y elementos pendientes. Propone auditorías mensuales.
+Límites: El autor señala mayor consumo de tokens; programar tareas sin aprobación está estrictamente prohibido; el consumo no ha sido verificado de forma independiente por este sitio.
+
+### Acceso directo por voz en iPhone y lista de aplicaciones｜@ScottyBeamIO
+
+> Publicación original: [@ScottyBeamIO](https://x.com/ScottyBeamIO/status/2118329482842866011)
+
+Escenario: Activar Grok Bot y coordinar aplicaciones del sistema mediante el botón de acción del iPhone.
+Método: Ruta: Ajustes → Botón de acción → Atajos → Grok Bot → Iniciar chat de voz; autorización individual en aplicaciones conectadas dentro de ajustes. Los casos de uso listados por el autor incluyen llamadas delegadas, plantillas para cancelar suscripciones sin uso, comparación de precios sin compra y resúmenes semanales vía correo propio.
+Límites: La app debe permanecer abierta en el teléfono. Advertencia de Vault del autor: el bot no ve los números de tarjeta, pero las tarjetas guardadas se completan automáticamente al pagar; evite guardarlas si requiere aprobación por compra. La disponibilidad regional y permisos varían según el caso; no constituye una promesa oficial incondicional.
+
+### Estructura de colaboración multirrol y salvaguarda de aprobación manual｜@hammertime_one
+
+> Publicación original: [@hammertime_one](https://x.com/hammertime_one/status/2118399503510196279)
+
+Escenario: Crear un equipo multi-bot para dividir flujos de trabajo complejos.
+Método: Sintetizando 7 guías, el autor propone: un bot por tarea y con una sola restricción; el prompt actúa como contrato; separar producción y revisión. Sugiere un equipo de 5 roles: Jefe de Gabinete, Investigador, Redactor, Revisor y Publicador. Completar 3 ejecuciones limpias antes de programar.
+Límites: Síntesis del autor y no una replicación experimental. Publicar, enviar mensajes, gastar dinero y eliminar requieren aprobación manual obligatoria. Todos los bots comparten una única computadora, y se deben definir límites de trabajo claros en las instrucciones. Tasas de fallo no publicadas según el autor.
+
+### Gestión de bóveda local en Obsidian y aislamiento de salidas｜@Jackywine
+
+> Publicación original: [@Jackywine](https://x.com/Jackywine/status/2118562780383216113)
+
+Escenario: Gestionar miles de notas en Markdown mediante Grok Bot.
+Método: Siguiendo el principio de "archivos sobre aplicaciones", el autor asigna un bot administrador. Las salidas de IA se aíslan estrictamente en la carpeta `AI outputs/`, sin mezclarse con las notas manuales. Recursos públicos: [Plantilla de prompt](https://x.ai/bot/gdq_d-d9OCnnREs3VwGdV), [Skill de jardín digital](https://github.com/Jackywine/jackywine-digital-garden-skills) y [Skill de Obsidian](https://github.com/kepano/obsidian-skills).
+Límites: Diagnóstico estrictamente de solo lectura; la gestión de notas huérfanas es de solo lectura por defecto, requiriendo aprobación personal para eliminar o añadir enlaces masivos. La automatización total es afirmación del autor no verificada por este sitio.
+
+### Sincronización de avatar y personalización visual en GBA Desktop｜@cgnot996
+
+> Publicación original: [@cgnot996](https://x.com/cgnot996/status/2118573037851414910)
+> Segundo enlace: [@cgnot996](https://x.com/cgnot996/status/2118304718204395884)
+
+Escenario: Sincronizar y editar avatares de asistentes mediante Grok Bot Anywhere (GBA).
+Método: Según los lanzamientos del autor, v0.1.3 permite sincronizar avatares configurados en Grok Bot, y v0.1.4 añade un editor de avatares. Ruta: seleccionar Bot → Más → Modificar avatar, permitiendo elegir formas y colores personalizados.
+Límites: Las versiones y características corresponden a las declaraciones del autor. La correcta renderización en Grok Bot es afirmación del autor no comprobada independientemente por este sitio.

@@ -1424,3 +1424,44 @@ Pages 功能上線後，許多團隊面臨不知該從何搭建的起步難題�
 為 Bot 申請專屬獨立郵箱，利用 plus-alias 區分業務標籤進行針對性路由分流。**對所有準備外發的內容嚴格執行生成草稿與人工確認閘門**，未經人審絕不直接向外發出。
 
 據作者稱完整提示詞已在回覆區公開，目前作為個人例程運轉，各環節具體命中率未逐條核實。
+
+### 規則替換與版本索引審計｜@Michael_Fenech_
+
+> 原帖：[@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2118306331514019882)
+
+場景：更新 Grok Bot 指令時，避免新舊規則重疊與衝突。
+做法：作者提出六步法：全量替換而非追加；排查衝突；歸檔舊版（刪除或歸檔需本人批准）；維護單一真源與版本索引；批准後核驗實際加載並標出不可檢項；報告替換、生效、衝突與待批准項。提議月度審計。
+邊界：作者表示該流程可能增加 Token 消耗；未經審批嚴禁排程執行；本站未獨立實測消耗。
+
+### iPhone 語音快捷直連與應用清單｜@ScottyBeamIO
+
+> 原帖：[@ScottyBeamIO](https://x.com/ScottyBeamIO/status/2118329482842866011)
+
+場景：透過 iPhone 操作按鈕與系統 App 調度 Grok Bot。
+做法：路徑為設定 → 操作按鈕 → 快捷指令 → Grok Bot → 開始語音聊天；在設定連接 App 中逐項授權。作者列出的用法包括代打電話、範本取消閒置訂閱、比價不買及自備信箱週五彙總。
+邊界：手機需保持運行該 App。作者發出 Vault 警告：Bot 看不到卡號，但結帳會自動填已存卡；若需逐筆批准請勿存卡。地區權限因情況而異，非無條件官方承諾。
+
+### 多角色協作編制與人工審批底線｜@hammertime_one
+
+> 原帖：[@hammertime_one](https://x.com/hammertime_one/status/2118399503510196279)
+
+場景：構建多 Bot 團隊以分治複雜流程。
+做法：作者綜合七份指南提出：一個 Bot 只做一件事且設一條限制；Prompt 即合同；製作與審核分離。建議配置參謀長、研究員、作者、審閱者、發布者五人團隊；淨跑通三輪後再排程。
+邊界：屬作者綜合歸納而非實驗復現。發布、發送、花錢與刪除均須人工批准；所有 Bot 共享同一台電腦，須在指令中明確工作邊界；作者稱業界未公布失敗率。
+
+### Obsidian 本地知識庫管庫與輸出隔離｜@Jackywine
+
+> 原帖：[@Jackywine](https://x.com/Jackywine/status/2118562780383216113)
+
+場景：借助 Grok Bot 管理數千篇 Markdown 筆記。
+做法：作者遵循「文件優先於軟體」，配置管庫 Bot；AI 產出統一隔離存放在 `AI outputs/` 目錄，不與手寫筆記混雜。公開資源見[提示詞範本](https://x.ai/bot/gdq_d-d9OCnnREs3VwGdV)、[花園 Skill](https://github.com/Jackywine/jackywine-digital-garden-skills) 及 [Obsidian Skill](https://github.com/kepano/obsidian-skills)。
+邊界：堅持唯讀診斷；孤兒筆記整理預設唯讀，刪除與批次加鏈必須本人審批；全自動效果係作者自述，本站未驗證。
+
+### GBA 桌面助手頭像同步與外觀自訂｜@cgnot996
+
+> 原帖：[@cgnot996](https://x.com/cgnot996/status/2118573037851414910)
+> 第二連結：[@cgnot996](https://x.com/cgnot996/status/2118304718204395884)
+
+場景：透過 Grok Bot Anywhere (GBA) 同步與編輯助手頭像。
+做法：作者發布 v0.1.3 支援 Grok Bot 設定頭像後同步；v0.1.4 進一步提供頭像編輯器，操作路徑為選擇 Bot → 更多 → 修改頭像，可自選形狀與任意顏色。
+邊界：版本與功能基於作者發布口徑。作者自述 Grok Bot 端能正常渲染，本站未獨立實測。
