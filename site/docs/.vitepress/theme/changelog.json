@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11",
+ "updated": "2026-11-12",
  "ui": {
   "lead": "汇总 Grok Bot 电脑与手机端官方更新，附带铁柱在 X 上的更新解读。",
   "note": "官方条目为中文摘要，具体细节以官方原文为准。",
@@ -11,6 +11,82 @@
   "full": "查看完整中文翻译"
  },
  "official": [
+  {
+   "id": "ios-1.25.0",
+   "platform": "ios",
+   "version": "1.25.0",
+   "date": "2026-11-11",
+   "url": "https://apps.apple.com/us/app/grok-bot/id6794501026",
+   "title": "问题修复与体验优化",
+   "points": [
+    "修复已知问题并提升整体稳定性。"
+   ],
+   "full": [
+    [
+     "",
+     [
+      "问题修复与改进"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "pc-1.0.1",
+   "platform": "pc",
+   "version": "1.0.1",
+   "date": "2026-11-11",
+   "url": "https://x.ai/changelog/bot#v1.0.1",
+   "title": "支持加入线上会议与调节语音语速",
+   "points": [
+    "Bot 可通过链接加入线上会议实时答疑，并在会后发送总结。",
+    "语音通话与菜单新增 0.5 至 2 倍速调节，支持切换音色。",
+    "团队版 Bot 可接入 Microsoft Teams 并支持共享连接器。",
+    "对话中的超宽表格可向侧边留白展开，提升排版阅读体验。"
+   ],
+   "full": [
+    [
+     "新功能",
+     [
+      "在 Team、Enterprise 和 Ultra 方案中，Bot 可以通过链接加入 Google Meet、Zoom 或 Microsoft Teams 通话，在会议聊天中作答，并在会后发送总结。",
+      "团队 Bot 可以加入 Microsoft Teams：团队管理员开启该功能，所有者或 Manager 连接 Bot，并由 Teams 管理员审批通过。(Teams)",
+      "团队管理员开启「Allow Shared Logins」后，所有者和 Manager 可以将自己的应用登录信息作为共享连接器进行共享。(Teams)",
+      "团队成员教给团队 Bot 的内容会保留在「Review learnings」下，直到所有者或 Manager 审批通过。(Teams)",
+      "团队管理员可以通过「Bot sharing」限制谁可以共享 Bot。(Teams)",
+      "Bot 的「Voice」菜单提供 0.5x 至 2x 的「Speed」滑块以及每种声音的卡片，通话设置中也显示相同的控件。",
+      "已过期的订单卡片提供「Check price again」，可向 Bot 请求一张新的订单卡片。"
+     ]
+    ],
+    [
+     "改进",
+     [
+      "回复中的宽表格会展开至消息旁的空白区域。",
+      "对回复点踩后会直接显示感谢，不再询问原因。",
+      "「Send Feedback」中包含「Include additional device diagnostics」选项，除非手动勾选，否则默认保持关闭。",
+      "新建 Bot 耗时比平时更长时，会显示「Still creating」而非直接报错失败，且输入框中的输入内容会得到保留。",
+      "当团队管理员停用连接器后，其「Connect」按钮会显示为「Disabled by team admin」。",
+      "侧边栏底部的「Update」按钮保持为圆形图标，其悬停提示显示为「Restart to update」。",
+      "在消息框中输入 -> 会转换为箭头。",
+      "整个应用中的巴西葡萄牙语表述更加通顺自然。",
+      "团队成员在团队 Bot 的「Pages」中发表的评论能够传达给 Bot。(Teams)",
+      "团队 Bot 上的自定义 MCP 连接器会显示为对所有人共享，且不提供「Share my account」选项。(Teams)",
+      "在无需汇报任何内容的对话轮次中，Bot 不再发送仅表示已完成的消息。"
+     ]
+    ],
+    [
+     "修复",
+     [
+      "Bot 的电脑上不超过 250 MB 的文件不再会导致回复失败。",
+      "按 Escape 键仅关闭最上层的对话框或菜单，且在搜索框为空时按一次 Escape 键即可关闭「Connect Apps」。",
+      "在对话框中按 Cmd+Enter 或 Ctrl+Enter 不再会发送其背后的聊天消息。",
+      "在「Connect Apps」中点击插件上的「Connected」即可打开该插件。",
+      "「Configure」中的团队 Bot 账户列表不再卡在加载状态。(Teams)",
+      "名称和预览不再会在 emoji 中间被截断。",
+      "已结束的通话卡片在展开时其文字仅显示一次。",
+      "在 Linux 上，AppImage 安装后会在任务栏中显示其图标。"
+     ]
+    ]
+   ]
+  },
   {
    "id": "android-2026-11-09",
    "platform": "android",
@@ -3371,6 +3447,14 @@
   }
  ],
  "ours": [
+  {
+   "id": "2120675179512955002",
+   "date": "2026-11-12",
+   "url": "https://x.com/cgnot996/status/2120675179512955002",
+   "title": "Grok Bot 1.0 更新",
+   "summary": "Grok Bot 1.0 升级了会议助手、团队协作、主动工作以及网页操作、文档和 PPT 等执行能力。推文指出，会议助手目前支持 Zoom、Google Meet 和 Teams，对国内常用的飞书和腾讯会议多少有些水土不服，而团队协作需要 Team 或 Enterprise 账号，国内能用上团队订阅的人并不多。相比前两者，作者更关注主动发现任务与跟进进度的主动工作以及任务执行能力，期待 Bot 能更主动、更稳定地把事情做完。",
+   "platform": "pc"
+  },
   {
    "id": "2120326711825084846",
    "date": "2026-11-11",

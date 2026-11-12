@@ -11,7 +11,7 @@ next: false
 
 Google 开源的终端 AI Agent，适合 **付费用户与 Google Cloud 项目用户** 进行终端交互与开发协作。
 
-结论是：该工具仅用于供付费用户与 Google Cloud 项目用户进行终端交互与开发协作。
+结论是：据社区非官方整理，Gemini CLI 是 Google 开源的终端 AI Agent，适合付费用户与 Google Cloud 项目用户进行终端交互与开发协作，使用前提是用户需要自己准备付费 Google 账号或 Google Cloud 项目账号，并在需要登录或授权时由用户在浏览器完成认证。
 
 ## 发给 Bot 的提示词
 
