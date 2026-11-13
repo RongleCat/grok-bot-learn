@@ -11,7 +11,7 @@ next: false
 
 Anthropic 官方终端编码 Agent，适合 **代码库阅读、多文件修改与命令执行**，支持后台自动更新。
 
-结论是：Claude Code适合代码库阅读、多文件修改与命令执行，支持后台自动更新。
+结论是：据社区非官方整理，Claude Code 是 Anthropic 官方终端编码 Agent，适合代码库阅读、多文件修改与命令执行并支持后台自动更新，使用前提是用户需准备 Claude 订阅或 Anthropic Console 账号，且由 Bot 在云电脑安装验证时若遇登录或授权暂停需由用户在浏览器中完成认证。
 
 ## 发给 Bot 的提示词
 
