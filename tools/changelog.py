@@ -71,6 +71,9 @@ def fetch_android():
         return []
     d = datetime.strptime(m.group(1), '%b %d, %Y').strftime('%Y-%m-%d')
     notes = [x.strip() for x in strip((n.group(1) if n else '').replace('<br>', '\n')).split('\n') if x.strip()]
+    if not notes:
+        print(f'fetch_android skipped empty notes date={d}', file=sys.stderr)
+        return []
     return [{'id': f'android-{d}', 'platform': 'android', 'version': '', 'date': d, 'url': PLAY, 'title': '', 'sections': {'Notes': notes}}]
 
 
