@@ -87,7 +87,7 @@ PROMPT = """你在给一个非官方的 Grok Bot 中文学习站写更新日志�
 """
 
 
-SECTION = {'New': '新功能', 'Improved': '改进', 'Fixed': '修复', 'Notes': ''}
+SECTION = {'New': '新功能', 'Improved': '改进', 'Fixed': '修复', 'Notes': '', 'Removed': '移除'}
 
 TPROMPT = """把下面 Grok Bot 官方英文更新记录完整翻译成简体中文。要求：
 - 逐条忠实翻译，不删、不并、不加，条目数量和顺序与原文完全一致
@@ -184,7 +184,7 @@ def main():
                              'title': res[r['id']]['title'], 'points': res[r['id']]['points'][:4], **({'full': have[r['id']]['full']} if r['id'] in have and have[r['id']].get('full') else {})}
         print(f'summarized {k + len(batch)}/{len(todo)}', file=sys.stderr)
     tl = [r for r in raw if '--retranslate' in args or not have[r['id']].get('full')]
-    order = {'新功能': 0, '改进': 1, '修复': 2, '': 3}
+    order = {'新功能': 0, '改进': 1, '修复': 2, '移除': 3, '': 4}
     parts = {}
     with ThreadPoolExecutor(2) as ex:
         for res in ex.map(translate, batches(tl)):
